@@ -1,0 +1,69 @@
+{
+  "id": "top-nav-footer",
+  "name": "Top Nav + Footer",
+  "description": "Horizontal nav with main content and a persistent footer. Used for marketing sites, documentation with ToC footer.",
+  "layout": "stack",
+  "atoms": "_flex _col _h[100vh]",
+  "config": {
+    "regions": [
+      "header",
+      "body",
+      "footer"
+    ],
+    "grid": {
+      "areas": [
+        [
+          "header"
+        ],
+        [
+          "body"
+        ],
+        [
+          "footer"
+        ]
+      ]
+    },
+    "nav": {
+      "position": "top"
+    },
+    "header": {
+      "height": "52px",
+      "sticky": true
+    },
+    "body": {
+      "scroll": true
+    },
+    "footer": {
+      "height": "auto",
+      "sticky": false
+    }
+  },
+  "configurable": {
+    "nav": {
+      "positions": [
+        "top",
+        "left"
+      ],
+      "modes": [
+        "full"
+      ]
+    },
+    "header": {
+      "toggleable": true
+    },
+    "footer": {
+      "toggleable": true
+    },
+    "sizing": {
+      "headerHeight": {
+        "min": 36,
+        "max": 80,
+        "default": 52
+      }
+    }
+  },
+  "code": {
+    "imports": "import { Shell } from 'decantr/components';",
+    "example": "Shell({ config: 'top-nav-footer' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navItems),\n  Shell.Body({}, mainContent),\n  Shell.Footer({}, footerContent)\n)"
+  }
+}

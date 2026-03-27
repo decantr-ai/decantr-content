@@ -1,0 +1,86 @@
+{
+  "id": "sidebar-aside",
+  "name": "Sidebar + Aside",
+  "description": "Three-column layout with left navigation and right inspector/detail panel. Used for admin dashboards, email clients, IDE-style apps.",
+  "layout": "grid",
+  "atoms": "_grid _h[100vh]",
+  "config": {
+    "regions": [
+      "header",
+      "nav",
+      "body",
+      "aside"
+    ],
+    "grid": {
+      "areas": [
+        [
+          "nav",
+          "header",
+          "aside"
+        ],
+        [
+          "nav",
+          "body",
+          "aside"
+        ]
+      ]
+    },
+    "nav": {
+      "position": "left",
+      "width": "240px",
+      "collapseTo": "64px",
+      "collapseBelow": "md"
+    },
+    "header": {
+      "height": "52px",
+      "sticky": true
+    },
+    "body": {
+      "scroll": true
+    },
+    "aside": {
+      "width": "280px",
+      "collapsible": true
+    }
+  },
+  "configurable": {
+    "nav": {
+      "positions": [
+        "left",
+        "right"
+      ],
+      "modes": [
+        "full",
+        "rail",
+        "hidden"
+      ]
+    },
+    "header": {
+      "toggleable": true
+    },
+    "aside": {
+      "toggleable": true
+    },
+    "sizing": {
+      "sidebarWidth": {
+        "min": 48,
+        "max": 400,
+        "default": 240
+      },
+      "headerHeight": {
+        "min": 36,
+        "max": 80,
+        "default": 52
+      },
+      "asideWidth": {
+        "min": 200,
+        "max": 480,
+        "default": 280
+      }
+    }
+  },
+  "code": {
+    "imports": "import { Shell } from 'decantr/components';",
+    "example": "Shell({ config: 'sidebar-aside' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent),\n  Shell.Aside({}, asideContent)\n)"
+  }
+}

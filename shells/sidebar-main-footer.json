@@ -1,0 +1,84 @@
+{
+  "id": "sidebar-main-footer",
+  "name": "Sidebar + Main + Footer",
+  "description": "Sidebar layout with a persistent footer bar. Used for apps needing status bars or action footers.",
+  "layout": "grid",
+  "atoms": "_grid _h[100vh]",
+  "config": {
+    "regions": [
+      "header",
+      "nav",
+      "body",
+      "footer"
+    ],
+    "grid": {
+      "areas": [
+        [
+          "nav",
+          "header"
+        ],
+        [
+          "nav",
+          "body"
+        ],
+        [
+          "nav",
+          "footer"
+        ]
+      ]
+    },
+    "nav": {
+      "position": "left",
+      "width": "240px",
+      "collapseTo": "64px",
+      "collapseBelow": "md"
+    },
+    "header": {
+      "height": "52px",
+      "sticky": true
+    },
+    "body": {
+      "scroll": true
+    },
+    "footer": {
+      "height": "auto",
+      "sticky": false
+    }
+  },
+  "configurable": {
+    "nav": {
+      "positions": [
+        "left",
+        "right",
+        "top"
+      ],
+      "modes": [
+        "full",
+        "rail",
+        "hidden"
+      ]
+    },
+    "header": {
+      "toggleable": true
+    },
+    "footer": {
+      "toggleable": true
+    },
+    "sizing": {
+      "sidebarWidth": {
+        "min": 48,
+        "max": 400,
+        "default": 240
+      },
+      "headerHeight": {
+        "min": 36,
+        "max": 80,
+        "default": 52
+      }
+    }
+  },
+  "code": {
+    "imports": "import { Shell } from 'decantr/components';",
+    "example": "Shell({ config: 'sidebar-main-footer' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent),\n  Shell.Footer({}, footerContent)\n)"
+  }
+}

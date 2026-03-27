@@ -1,0 +1,59 @@
+{
+  "id": "full-bleed",
+  "name": "Full Bleed",
+  "description": "No persistent navigation. Scroll-driven hero-first layout. Used by portfolio landing pages.",
+  "layout": "stack",
+  "atoms": "_flex _col",
+  "config": {
+    "regions": [
+      "header",
+      "body"
+    ],
+    "grid": {
+      "areas": [
+        [
+          "header"
+        ],
+        [
+          "body"
+        ]
+      ]
+    },
+    "nav": {
+      "position": "top",
+      "defaultState": "hidden"
+    },
+    "header": {
+      "height": "52px",
+      "sticky": true
+    },
+    "body": {
+      "scroll": true
+    }
+  },
+  "configurable": {
+    "nav": {
+      "positions": [
+        "top"
+      ],
+      "modes": [
+        "full",
+        "hidden"
+      ]
+    },
+    "header": {
+      "toggleable": true
+    },
+    "sizing": {
+      "headerHeight": {
+        "min": 36,
+        "max": 80,
+        "default": 52
+      }
+    }
+  },
+  "code": {
+    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';",
+    "example": "function FullBleed({ children }) {\n  const { div, header, main, nav: navEl } = tags;\n\n  return div({ class: css('_flex _col') },\n    // Floating nav (absolute positioned over hero)\n    header({ class: css('_fixed _top0 _left0 _wfull _flex _aic _jcsb _px8 _py4 _z[40]') },\n      link({ href: '/', class: css('_heading5 _nounder _fgfg') }, 'Brand'),\n      navEl({ class: css('_flex _aic _gap6') })\n    ),\n    // Content sections — each section is full viewport height or auto\n    main({ class: css('_flex _col') },\n      ...children\n    )\n  );\n}"
+  }
+}

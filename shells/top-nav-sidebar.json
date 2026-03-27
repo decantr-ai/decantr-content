@@ -1,0 +1,74 @@
+{
+  "id": "top-nav-sidebar",
+  "name": "Top Nav + Sidebar",
+  "description": "Full-width header spanning both columns, with left sidebar navigation below. Combines top branding with sidebar navigation depth.",
+  "layout": "grid",
+  "atoms": "_grid _h[100vh]",
+  "config": {
+    "regions": [
+      "header",
+      "nav",
+      "body"
+    ],
+    "grid": {
+      "areas": [
+        [
+          "header",
+          "header"
+        ],
+        [
+          "nav",
+          "body"
+        ]
+      ]
+    },
+    "nav": {
+      "position": "left",
+      "width": "240px",
+      "collapseTo": "64px",
+      "collapseBelow": "md"
+    },
+    "header": {
+      "height": "52px",
+      "sticky": true
+    },
+    "body": {
+      "scroll": true
+    }
+  },
+  "configurable": {
+    "nav": {
+      "positions": [
+        "left",
+        "right"
+      ],
+      "modes": [
+        "full",
+        "rail",
+        "hidden"
+      ]
+    },
+    "header": {
+      "toggleable": true
+    },
+    "footer": {
+      "toggleable": true
+    },
+    "sizing": {
+      "sidebarWidth": {
+        "min": 48,
+        "max": 400,
+        "default": 240
+      },
+      "headerHeight": {
+        "min": 36,
+        "max": 80,
+        "default": 52
+      }
+    }
+  },
+  "code": {
+    "imports": "import { Shell } from 'decantr/components';",
+    "example": "Shell({ config: 'top-nav-sidebar' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, sidebarContent),\n  Shell.Body({}, mainContent)\n)"
+  }
+}

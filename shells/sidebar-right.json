@@ -1,0 +1,75 @@
+{
+  "id": "sidebar-right",
+  "name": "Right Sidebar",
+  "description": "Main content with a right-side navigation panel. Useful for settings, documentation sidebars, or inspector layouts.",
+  "layout": "grid",
+  "atoms": "_grid _h[100vh]",
+  "config": {
+    "regions": [
+      "header",
+      "nav",
+      "body"
+    ],
+    "grid": {
+      "areas": [
+        [
+          "header",
+          "nav"
+        ],
+        [
+          "body",
+          "nav"
+        ]
+      ]
+    },
+    "nav": {
+      "position": "right",
+      "width": "240px",
+      "collapseTo": "64px",
+      "collapseBelow": "md"
+    },
+    "header": {
+      "height": "52px",
+      "sticky": true
+    },
+    "body": {
+      "scroll": true
+    }
+  },
+  "configurable": {
+    "nav": {
+      "positions": [
+        "left",
+        "right",
+        "top"
+      ],
+      "modes": [
+        "full",
+        "rail",
+        "hidden"
+      ]
+    },
+    "header": {
+      "toggleable": true
+    },
+    "footer": {
+      "toggleable": true
+    },
+    "sizing": {
+      "sidebarWidth": {
+        "min": 48,
+        "max": 400,
+        "default": 240
+      },
+      "headerHeight": {
+        "min": 36,
+        "max": 80,
+        "default": 52
+      }
+    }
+  },
+  "code": {
+    "imports": "import { Shell } from 'decantr/components';",
+    "example": "Shell({ config: 'sidebar-right' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent)\n)"
+  }
+}

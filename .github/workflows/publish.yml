@@ -10,27 +10,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Validate content
-        run: node scripts/validate.js
+      - run: node validate.js
 
   publish:
     needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Publish to registry
+      - name: Publish to Registry
         env:
-          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
-        run: node scripts/publish-to-registry.js
+          DECANTR_ADMIN_KEY: ${{ secrets.DECANTR_ADMIN_KEY }}
+          REGISTRY_URL: https://api.decantr.ai/v1
+        run: |
+          for type in patterns recipes themes blueprints archetypes shells; do
+            if [ -d "$type" ]; then
+              for file in $type/*.json; do
+                [ -f "$file" ] || continue
+                echo "Publishing $file..."
+                curl -s -X POST "$REGISTRY_URL/admin/sync" \
+                  -H "Authorization: Bearer $DECANTR_ADMIN_KEY" \
+                  -H "X-Admin-Key: $DECANTR_ADMIN_KEY" \
+                  -H "Content-Type: application/json" \
+                  -d "{\"type\": \"$(basename $type | sed 's/s$//')\", \"item\": $(cat $file)}" \
+                  || echo "Failed: $file"
+              done
+            fi
+          done
