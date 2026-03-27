@@ -1,0 +1,53 @@
+{
+  "$schema": "decantr-vignette-v1.0",
+  "id": "registry-platform",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "Registry Platform",
+  "description": "Content registry with browsing, publishing, user management, team collaboration, and admin moderation. Dogfooded UI for the Decantr design intelligence platform.",
+  "tags": [
+    "registry",
+    "platform",
+    "dashboard",
+    "content-management",
+    "moderation",
+    "billing"
+  ],
+  "compose": [
+    "registry-browser",
+    "user-dashboard",
+    "content-editor",
+    "admin-moderation",
+    "team-management",
+    "billing-portal"
+  ],
+  "theme": {
+    "style": "luminarum",
+    "mode": "dark",
+    "shape": "pill",
+    "recipe": "luminarum"
+  },
+  "personality": [
+    "technical",
+    "clean",
+    "professional",
+    "accessible"
+  ],
+  "overrides": {},
+  "dependencies": {
+    "archetypes": {
+      "registry-browser": "^1.0.0",
+      "user-dashboard": "^1.0.0",
+      "content-editor": "^1.0.0",
+      "admin-moderation": "^1.0.0",
+      "team-management": "^1.0.0",
+      "billing-portal": "^1.0.0"
+    },
+    "recipes": {},
+    "styles": {}
+  },
+  "seo_hints": {
+    "schema_org": ["WebApplication", "SoftwareApplication"],
+    "meta_priorities": ["description", "og:image", "twitter:card"]
+  }
+}

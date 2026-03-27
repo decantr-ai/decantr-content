@@ -1,0 +1,103 @@
+{
+  "$schema": "https://decantr.ai/schemas/pattern.v2.json",
+  "id": "content-card-grid",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.9.0",
+  "name": "Content Card Grid",
+  "description": "Responsive grid of registry content cards with type badges, namespace indicators, version info, and quick-action buttons. Used for browsing patterns, themes, blueprints, and other registry items.",
+  "dependencies": {
+    "patterns": {
+      "namespace-badge": "^1.0.0"
+    },
+    "recipes": {},
+    "styles": {},
+    "requires_core": {
+      "components": ["Card", "Badge", "Button", "icon"],
+      "charts": []
+    }
+  },
+  "contained": false,
+  "components": [
+    "Card",
+    "CardHeader",
+    "CardBody",
+    "CardFooter",
+    "Badge",
+    "Button",
+    "icon"
+  ],
+  "default_preset": "standard",
+  "presets": {
+    "standard": {
+      "description": "Registry content cards with type badge, namespace indicator, name, description, and version. Grid: 1/2/3 cols at sm/md/lg.",
+      "components": ["Card", "CardHeader", "CardBody", "CardFooter", "Badge", "Button", "icon"],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
+        "slots": {
+          "card-type-badge": "Type badge (pattern/theme/blueprint) with color-coded variant in CardHeader",
+          "card-namespace": "Namespace badge (@official/@community/@org) inline with type",
+          "card-title": "Content name with _heading4 styling, clickable link to detail",
+          "card-description": "Short description with _bodysm _fgmuted, max 2 lines",
+          "card-meta": "Version number, download count, and updated-at in CardFooter"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, icon } from 'decantr/components';",
+        "example": "function ContentCardGrid({ items }) {\n  const { div, h3, p, span, a } = tags;\n\n  return div({ class: css('_grid _gc1 _md:gc2 _lg:gc3 _gap4') },\n    ...items.map(item =>\n      Card({ class: css('_flex _col _gap0') },\n        div({ class: css('_flex _aic _gap2 _p4 _pb0') },\n          Badge({ variant: 'outline', size: 'sm' }, item.type),\n          Badge({ variant: item.namespace === '@official' ? 'primary' : 'secondary', size: 'sm' }, item.namespace)\n        ),\n        div({ class: css('_p4 _flex _col _gap2 _flex1') },\n          a({ href: `/registry/${item.type}/${item.namespace}/${item.slug}`, class: css('_heading4 _fgfg _hover:fgprimary _no-underline') }, item.name),\n          p({ class: css('_bodysm _fgmuted _line-clamp2') }, item.description)\n        ),\n        div({ class: css('_flex _aic _jcsb _p4 _pt0 _bordert _bordermuted/20') },\n          span({ class: css('_textxs _fgmuted') }, `v${item.version}`),\n          Button({ variant: 'ghost', size: 'xs' }, icon('arrow-right', { size: '0.875rem' }))\n        )\n      )\n    )\n  );\n}"
+      }
+    },
+    "compact": {
+      "description": "Compact list-style content cards with minimal info. Grid: 1/2/4 cols. Useful for dense browsing views.",
+      "components": ["Card", "Badge", "icon"],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gc1 _sm:gc2 _xl:gc4 _gap3",
+        "slots": {
+          "card-icon": "Content type icon on the left",
+          "card-title": "Content name with _textsm _fontmedium",
+          "card-namespace": "Namespace badge, small variant",
+          "card-version": "Version text with _textxs _fgmuted"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, icon } from 'decantr/components';",
+        "example": "function ContentCardGridCompact({ items }) {\n  const { div, span, a } = tags;\n\n  return div({ class: css('_grid _gc1 _sm:gc2 _xl:gc4 _gap3') },\n    ...items.map(item =>\n      Card({ class: css('_flex _aic _gap3 _p3') },\n        icon(item.type === 'pattern' ? 'layout' : item.type === 'theme' ? 'palette' : 'box', { size: '1.25rem', class: css('_fgmuted') }),\n        div({ class: css('_flex _col _gap1 _flex1 _min-w0') },\n          a({ href: `/registry/${item.type}/${item.namespace}/${item.slug}`, class: css('_textsm _fontmedium _truncate _fgfg _hover:fgprimary _no-underline') }, item.name),\n          span({ class: css('_textxs _fgmuted') }, `v${item.version}`)\n        ),\n        Badge({ variant: item.namespace === '@official' ? 'primary' : 'secondary', size: 'xs' }, item.namespace)\n      )\n    )\n  );\n}"
+      }
+    },
+    "editable": {
+      "description": "Content cards with edit/delete actions for the user dashboard. Includes status indicator and publish date.",
+      "components": ["Card", "CardHeader", "CardBody", "CardFooter", "Badge", "Button", "icon"],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
+        "slots": {
+          "card-status": "Status badge (published/pending/rejected) with color coding",
+          "card-type-badge": "Content type badge",
+          "card-title": "Content name, clickable to edit",
+          "card-description": "Short description, max 2 lines",
+          "card-actions": "Edit and delete Button group in CardFooter"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, icon } from 'decantr/components';",
+        "example": "function ContentCardGridEditable({ items, onEdit, onDelete }) {\n  const { div, h3, p, span } = tags;\n  const statusVariant = { published: 'success', pending: 'warning', rejected: 'destructive' };\n\n  return div({ class: css('_grid _gc1 _md:gc2 _lg:gc3 _gap4') },\n    ...items.map(item =>\n      Card({ class: css('_flex _col') },\n        div({ class: css('_flex _aic _jcsb _p4 _pb0') },\n          div({ class: css('_flex _aic _gap2') },\n            Badge({ variant: 'outline', size: 'sm' }, item.type),\n            Badge({ variant: statusVariant[item.status] || 'secondary', size: 'sm' }, item.status)\n          )\n        ),\n        div({ class: css('_p4 _flex _col _gap2 _flex1') },\n          h3({ class: css('_heading4') }, item.name),\n          p({ class: css('_bodysm _fgmuted _line-clamp2') }, item.description)\n        ),\n        div({ class: css('_flex _aic _jcsb _p4 _pt0 _bordert _bordermuted/20') },\n          span({ class: css('_textxs _fgmuted') }, item.published_at ? `Published ${item.published_at}` : 'Draft'),\n          div({ class: css('_flex _gap2') },\n            Button({ variant: 'ghost', size: 'sm', onclick: () => onEdit(item.id) }, icon('edit', { size: '0.875rem' }), ' Edit'),\n            Button({ variant: 'ghost', size: 'sm', onclick: () => onDelete(item.id) }, icon('trash', { size: '0.875rem' }))\n          )\n        )\n      )\n    )\n  );\n}"
+      }
+    }
+  },
+  "default_layout": {
+    "layout": "grid",
+    "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
+    "slots": {
+      "card-type-badge": "Type badge (pattern/theme/blueprint) with color-coded variant",
+      "card-namespace": "Namespace badge (@official/@community/@org)",
+      "card-title": "Content name, clickable link",
+      "card-description": "Short description, max 2 lines",
+      "card-meta": "Version, download count, updated-at"
+    }
+  },
+  "code": {
+    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, icon } from 'decantr/components';",
+    "example": "function ContentCardGrid({ items }) {\n  const { div, h3, p, span, a } = tags;\n\n  return div({ class: css('_grid _gc1 _md:gc2 _lg:gc3 _gap4') },\n    ...items.map(item =>\n      Card({ class: css('_flex _col _gap0') },\n        div({ class: css('_flex _aic _gap2 _p4 _pb0') },\n          Badge({ variant: 'outline', size: 'sm' }, item.type),\n          Badge({ variant: 'primary', size: 'sm' }, item.namespace)\n        ),\n        div({ class: css('_p4 _flex _col _gap2 _flex1') },\n          a({ href: `/registry/${item.type}/${item.namespace}/${item.slug}` }, item.name),\n          p({ class: css('_bodysm _fgmuted _line-clamp2') }, item.description)\n        ),\n        div({ class: css('_flex _aic _jcsb _p4 _bordert _bordermuted/20') },\n          span({ class: css('_textxs _fgmuted') }, `v${item.version}`),\n          Button({ variant: 'ghost', size: 'xs' }, icon('arrow-right'))\n        )\n      )\n    )\n  );\n}"
+  }
+}

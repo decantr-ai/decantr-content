@@ -1,0 +1,67 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "admin-moderation",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "Admin Moderation",
+  "description": "Admin moderation queue for reviewing, approving, and rejecting community-submitted registry content.",
+  "tags": [
+    "admin",
+    "moderation",
+    "review",
+    "queue",
+    "approval"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": ["moderation", "admin-queue", "content-review", "approval"],
+      "secondary": ["reject", "approve", "flagged", "pending"],
+      "negative": []
+    },
+    "implies": ["auth"],
+    "weight": 0.7,
+    "tier": "optional"
+  },
+  "pages": [
+    {
+      "id": "moderation-queue",
+      "path": "/admin/moderation",
+      "default_layout": [
+        "search-filter-bar",
+        "moderation-queue-item"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "moderation-detail",
+      "path": "/admin/moderation/[id]",
+      "default_layout": [
+        "content-detail-hero",
+        "json-viewer",
+        "moderation-queue-item"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "features": [
+    "auth",
+    "admin"
+  ],
+  "shells": {
+    "sidebar-main": "Sidebar navigation with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "search-filter-bar": "^1.0.0",
+      "moderation-queue-item": "^1.0.0",
+      "content-detail-hero": "^1.0.0",
+      "json-viewer": "^1.0.0"
+    },
+    "recipes": {},
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": ["luminarum"],
+    "modes": ["dark"]
+  }
+}

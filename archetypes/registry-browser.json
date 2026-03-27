@@ -1,0 +1,76 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "registry-browser",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "Registry Browser",
+  "description": "Public content browsing for a design registry. Search, filter, and explore patterns, themes, blueprints, archetypes, recipes, and shells.",
+  "tags": [
+    "registry",
+    "browser",
+    "search",
+    "content",
+    "explore"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": ["registry", "browse", "explore", "catalog"],
+      "secondary": ["search", "filter", "patterns", "themes", "blueprints"],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 0.9,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "registry",
+      "path": "/registry",
+      "default_layout": [
+        "search-filter-bar",
+        "content-card-grid"
+      ],
+      "shell": "topbar-main"
+    },
+    {
+      "id": "registry-type",
+      "path": "/registry/[type]",
+      "default_layout": [
+        "search-filter-bar",
+        "content-card-grid"
+      ],
+      "shell": "topbar-main"
+    },
+    {
+      "id": "registry-detail",
+      "path": "/registry/[type]/[namespace]/[slug]",
+      "default_layout": [
+        "content-detail-hero",
+        "json-viewer"
+      ],
+      "shell": "topbar-main"
+    }
+  ],
+  "features": [
+    "search",
+    "pagination"
+  ],
+  "shells": {
+    "topbar-main": "Top navigation bar with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "search-filter-bar": "^1.0.0",
+      "content-card-grid": "^1.0.0",
+      "content-detail-hero": "^1.0.0",
+      "json-viewer": "^1.0.0",
+      "namespace-badge": "^1.0.0"
+    },
+    "recipes": {},
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": ["luminarum"],
+    "modes": ["dark"]
+  }
+}

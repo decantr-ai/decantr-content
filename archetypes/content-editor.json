@@ -1,0 +1,63 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "content-editor",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "Content Editor",
+  "description": "Content creation and editing interface for publishing patterns, themes, blueprints, and other registry items.",
+  "tags": [
+    "editor",
+    "content",
+    "publish",
+    "create",
+    "json"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": ["editor", "create-content", "publish", "content-form"],
+      "secondary": ["json-editor", "schema-validation", "preview"],
+      "negative": []
+    },
+    "implies": ["auth"],
+    "weight": 0.8,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "content-new",
+      "path": "/dashboard/content/new",
+      "default_layout": [
+        "content-editor-form",
+        "json-viewer"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "content-edit",
+      "path": "/dashboard/content/[id]/edit",
+      "default_layout": [
+        "content-editor-form",
+        "json-viewer"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "features": [
+    "auth",
+    "validation"
+  ],
+  "shells": {
+    "sidebar-main": "Sidebar navigation with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "json-viewer": "^1.0.0"
+    },
+    "recipes": {},
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": ["luminarum"],
+    "modes": ["dark"]
+  }
+}

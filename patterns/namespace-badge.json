@@ -1,0 +1,84 @@
+{
+  "$schema": "https://decantr.ai/schemas/pattern.v2.json",
+  "id": "namespace-badge",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.9.0",
+  "name": "Namespace Badge",
+  "description": "Color-coded badge for content namespaces: @official (primary/blue), @community (green), and @org:slug (purple). Indicates content provenance and trust level.",
+  "dependencies": {
+    "patterns": {},
+    "recipes": {},
+    "styles": {},
+    "requires_core": {
+      "components": ["Badge", "icon"],
+      "charts": []
+    }
+  },
+  "contained": true,
+  "components": [
+    "Badge",
+    "icon"
+  ],
+  "default_preset": "standard",
+  "presets": {
+    "standard": {
+      "description": "Standard-sized namespace badge with icon and namespace text.",
+      "components": ["Badge", "icon"],
+      "layout": {
+        "layout": "inline",
+        "atoms": "_inline-flex _aic _gap1",
+        "slots": {
+          "icon": "Namespace icon: shield-check for @official, users for @community, building for @org",
+          "label": "Namespace text label"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, icon } from 'decantr/components';",
+        "example": "function NamespaceBadge({ namespace }) {\n  const config = {\n    '@official': { variant: 'primary', icon: 'shield-check', label: '@official' },\n    '@community': { variant: 'success', icon: 'users', label: '@community' }\n  };\n  const isOrg = namespace.startsWith('@org:');\n  const cfg = isOrg\n    ? { variant: 'secondary', icon: 'building', label: namespace }\n    : config[namespace] || { variant: 'outline', icon: 'globe', label: namespace };\n\n  return Badge({ variant: cfg.variant, size: 'sm' },\n    icon(cfg.icon, { size: '0.75rem' }),\n    ` ${cfg.label}`\n  );\n}"
+      }
+    },
+    "compact": {
+      "description": "Small badge with icon only, tooltip shows full namespace. For dense list views.",
+      "components": ["Badge", "icon"],
+      "layout": {
+        "layout": "inline",
+        "atoms": "_inline-flex _aic",
+        "slots": {
+          "icon": "Namespace icon only, with title attribute for tooltip"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, icon } from 'decantr/components';",
+        "example": "function NamespaceBadgeCompact({ namespace }) {\n  const iconMap = { '@official': 'shield-check', '@community': 'users' };\n  const variantMap = { '@official': 'primary', '@community': 'success' };\n  const isOrg = namespace.startsWith('@org:');\n  const ic = isOrg ? 'building' : iconMap[namespace] || 'globe';\n  const variant = isOrg ? 'secondary' : variantMap[namespace] || 'outline';\n\n  return Badge({ variant, size: 'xs', title: namespace },\n    icon(ic, { size: '0.625rem' })\n  );\n}"
+      }
+    },
+    "pill": {
+      "description": "Pill-shaped badge with background color fill. Prominent display for detail pages.",
+      "components": ["Badge", "icon"],
+      "layout": {
+        "layout": "inline",
+        "atoms": "_inline-flex _aic _gap1 _rfull _px3 _py1",
+        "slots": {
+          "icon": "Namespace icon with matching color",
+          "label": "Namespace text, bold weight"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, icon } from 'decantr/components';",
+        "example": "function NamespaceBadgePill({ namespace }) {\n  const config = {\n    '@official': { bg: '_bgprimary/15 _fgprimary', icon: 'shield-check' },\n    '@community': { bg: '_bgsuccess/15 _fgsuccess', icon: 'users' }\n  };\n  const isOrg = namespace.startsWith('@org:');\n  const cfg = isOrg\n    ? { bg: '_bgsecondary/15 _fgsecondary', icon: 'building' }\n    : config[namespace] || { bg: '_bgmuted/15 _fgmuted', icon: 'globe' };\n\n  const { span } = tags;\n  return span({ class: css(`_inline-flex _aic _gap1 _rfull _px3 _py1 _textsm _fontmedium ${cfg.bg}`) },\n    icon(cfg.icon, { size: '0.875rem' }),\n    ` ${namespace}`\n  );\n}"
+      }
+    }
+  },
+  "default_layout": {
+    "layout": "inline",
+    "atoms": "_inline-flex _aic _gap1",
+    "slots": {
+      "icon": "Namespace icon",
+      "label": "Namespace text"
+    }
+  },
+  "code": {
+    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, icon } from 'decantr/components';",
+    "example": "function NamespaceBadge({ namespace }) {\n  const variant = namespace === '@official' ? 'primary' : namespace === '@community' ? 'success' : 'secondary';\n  return Badge({ variant, size: 'sm' }, namespace);\n}"
+  }
+}

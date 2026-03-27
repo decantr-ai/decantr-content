@@ -1,0 +1,88 @@
+{
+  "$schema": "https://decantr.ai/schemas/pattern.v2.json",
+  "id": "json-viewer",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.9.0",
+  "name": "JSON Viewer",
+  "description": "Collapsible JSON viewer with syntax highlighting, line numbers, copy-to-clipboard, and expandable/collapsible nodes. Used for inspecting registry content data on detail pages.",
+  "dependencies": {
+    "patterns": {},
+    "recipes": {},
+    "styles": {},
+    "requires_core": {
+      "components": ["Button", "icon"],
+      "charts": []
+    }
+  },
+  "contained": false,
+  "components": [
+    "Button",
+    "icon"
+  ],
+  "default_preset": "collapsible",
+  "presets": {
+    "collapsible": {
+      "description": "Full JSON viewer with collapsible object/array nodes, syntax highlighting, line numbers, and a copy button in the header.",
+      "components": ["Button", "icon"],
+      "layout": {
+        "layout": "stack",
+        "atoms": "_flex _col _gap0 _r3 _overflow[hidden] _border _bordermuted/20",
+        "slots": {
+          "header": "Toolbar row with title, expand/collapse all toggle, and copy-to-clipboard Button",
+          "line-numbers": "Gutter column with line numbers, _fgmuted _textxs _mono",
+          "json-content": "Syntax-highlighted JSON with collapsible nodes. Keys in _fgprimary, strings in _fgsuccess, numbers in _fgwarning, booleans in _fgdestructive",
+          "footer": "Optional footer with byte size and node count"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';",
+        "example": "function JsonViewer({ data, title }) {\n  const { div, pre, code, span, button } = tags;\n  const json = JSON.stringify(data, null, 2);\n\n  return div({ class: css('_flex _col _r3 _overflow[hidden] _border _bordermuted/20') },\n    div({ class: css('_flex _aic _jcsb _px4 _py2 _bgmuted/5 _borderb _bordermuted/20') },\n      span({ class: css('_textsm _fontmedium _fgmuted') }, title || 'JSON'),\n      div({ class: css('_flex _gap2') },\n        Button({ variant: 'ghost', size: 'xs', onclick: () => navigator.clipboard.writeText(json) },\n          icon('copy', { size: '0.875rem' }), ' Copy'\n        ),\n        Button({ variant: 'ghost', size: 'xs' },\n          icon('chevrons-down-up', { size: '0.875rem' }), ' Collapse All'\n        )\n      )\n    ),\n    pre({ class: css('_p4 _overflow[auto] _bgcanvas _textxs _mono _leading[1.6] _m0') },\n      code({}, json)\n    )\n  );\n}"
+      }
+    },
+    "inline": {
+      "description": "Inline JSON snippet, non-collapsible, with copy button. For small JSON payloads.",
+      "components": ["Button", "icon"],
+      "layout": {
+        "layout": "stack",
+        "atoms": "_relative _r2 _overflow[hidden] _border _bordermuted/20",
+        "slots": {
+          "copy-button": "Absolute top-right copy Button",
+          "json-content": "Syntax-highlighted JSON, no line numbers"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';",
+        "example": "function JsonViewerInline({ data }) {\n  const { div, pre, code } = tags;\n  const json = JSON.stringify(data, null, 2);\n\n  return div({ class: css('_relative _r2 _overflow[hidden] _border _bordermuted/20') },\n    div({ class: css('_absolute _top2 _right2') },\n      Button({ variant: 'ghost', size: 'xs', onclick: () => navigator.clipboard.writeText(json) },\n        icon('copy', { size: '0.75rem' })\n      )\n    ),\n    pre({ class: css('_p4 _bgcanvas _textxs _mono _m0') },\n      code({}, json)\n    )\n  );\n}"
+      }
+    },
+    "diff": {
+      "description": "Side-by-side or unified diff view for comparing two JSON versions. Additions highlighted in green, deletions in red.",
+      "components": ["Button", "icon"],
+      "layout": {
+        "layout": "row",
+        "atoms": "_grid _gc2 _gap0 _r3 _overflow[hidden] _border _bordermuted/20",
+        "slots": {
+          "header": "Toolbar with version labels (before/after) and toggle unified/split view",
+          "left-pane": "Previous version JSON with red highlighted deletions",
+          "right-pane": "New version JSON with green highlighted additions"
+        }
+      },
+      "code": {
+        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';",
+        "example": "function JsonViewerDiff({ before, after }) {\n  const { div, pre, code, span } = tags;\n\n  return div({ class: css('_flex _col _r3 _overflow[hidden] _border _bordermuted/20') },\n    div({ class: css('_flex _aic _jcsb _px4 _py2 _bgmuted/5 _borderb _bordermuted/20') },\n      span({ class: css('_textsm _fontmedium _fgmuted') }, 'Changes'),\n      Button({ variant: 'ghost', size: 'xs' }, icon('columns', { size: '0.875rem' }), ' Split View')\n    ),\n    div({ class: css('_grid _gc2 _gap0') },\n      pre({ class: css('_p4 _bgdestructive/5 _textxs _mono _m0 _borderr _bordermuted/20') },\n        code({}, JSON.stringify(before, null, 2))\n      ),\n      pre({ class: css('_p4 _bgsuccess/5 _textxs _mono _m0') },\n        code({}, JSON.stringify(after, null, 2))\n      )\n    )\n  );\n}"
+      }
+    }
+  },
+  "default_layout": {
+    "layout": "stack",
+    "atoms": "_flex _col _gap0 _r3 _overflow[hidden] _border _bordermuted/20",
+    "slots": {
+      "header": "Toolbar with title and copy button",
+      "json-content": "Syntax-highlighted JSON"
+    }
+  },
+  "code": {
+    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';",
+    "example": "function JsonViewer({ data, title }) {\n  const { div, pre, code, span } = tags;\n  const json = JSON.stringify(data, null, 2);\n\n  return div({ class: css('_flex _col _r3 _overflow[hidden] _border _bordermuted/20') },\n    div({ class: css('_flex _aic _jcsb _px4 _py2 _bgmuted/5') },\n      span({ class: css('_textsm _fgmuted') }, title || 'JSON'),\n      Button({ variant: 'ghost', size: 'xs' }, icon('copy'), ' Copy')\n    ),\n    pre({ class: css('_p4 _bgcanvas _textxs _mono _m0') }, code({}, json))\n  );\n}"
+  }
+}

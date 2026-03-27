@@ -1,0 +1,84 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "user-dashboard",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "User Dashboard",
+  "description": "Authenticated user area with content management, API key management, account settings, and activity overview.",
+  "tags": [
+    "dashboard",
+    "user",
+    "account",
+    "settings",
+    "api-keys"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": ["dashboard", "account", "user-area", "my-content"],
+      "secondary": ["api-keys", "settings", "profile", "activity"],
+      "negative": []
+    },
+    "implies": ["auth"],
+    "weight": 0.9,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "dashboard",
+      "path": "/dashboard",
+      "default_layout": [
+        "kpi-grid",
+        "reputation-badge",
+        "activity-feed"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "dashboard-content",
+      "path": "/dashboard/content",
+      "default_layout": [
+        "content-card-grid"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "dashboard-api-keys",
+      "path": "/dashboard/api-keys",
+      "default_layout": [
+        "api-key-row"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "dashboard-settings",
+      "path": "/dashboard/settings",
+      "default_layout": [
+        "account-settings"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "features": [
+    "auth",
+    "api-keys"
+  ],
+  "shells": {
+    "sidebar-main": "Sidebar navigation with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "kpi-grid": "^1.0.0",
+      "reputation-badge": "^1.0.0",
+      "activity-feed": "^1.0.0",
+      "content-card-grid": "^1.0.0",
+      "api-key-row": "^1.0.0",
+      "account-settings": "^1.0.0"
+    },
+    "recipes": {},
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": ["luminarum"],
+    "modes": ["dark"]
+  }
+}
