@@ -1,0 +1,12 @@
+{
+  "name": "decantr-content",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official Decantr content registry",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "publish:dry-run": "DRYRUN=true node scripts/publish-to-registry.js",
+    "publish": "node scripts/publish-to-registry.js"
+  }
+}
