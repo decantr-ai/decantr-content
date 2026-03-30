@@ -6,5 +6,8 @@
   "description": "Official Decantr registry content — patterns, themes, recipes, blueprints, archetypes, shells",
   "scripts": {
     "validate": "node validate.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.100.1"
   }
 }
