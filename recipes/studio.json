@@ -51,10 +51,18 @@
     "enabled": true,
     "intensity": "medium",
     "type_mapping": {
-      "card": ["studio-card"],
-      "card_premium": ["studio-card-premium"],
-      "input": ["studio-input"],
-      "tier": ["studio-badge-tier"]
+      "card": [
+        "studio-card"
+      ],
+      "card_premium": [
+        "studio-card-premium"
+      ],
+      "input": [
+        "studio-input"
+      ],
+      "tier": [
+        "studio-badge-tier"
+      ]
     },
     "component_fallback": {
       "pre": "code_block",
@@ -93,7 +101,9 @@
     "dashboard": {
       "description": "Creator dashboard with sidebar navigation. Analytics, content management, subscriber views.",
       "shell": "sidebar-main",
-      "effects": ["studio-surface"]
+      "effects": [
+        "studio-surface"
+      ]
     },
     "storefront": {
       "description": "Fan-facing storefront with top navigation. Creator profiles, content browsing.",
@@ -114,5 +124,9 @@
       "shell": "centered",
       "card_style": "studio-card"
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

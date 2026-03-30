@@ -36,7 +36,10 @@
     "rounded",
     "pill"
   ],
-  "cvd_support": ["deuteranopia", "protanopia"],
+  "cvd_support": [
+    "deuteranopia",
+    "protanopia"
+  ],
   "tokens": {
     "base": {
       "danger": "#EF4444",
@@ -55,5 +58,14 @@
     }
   },
   "decantr_compat": ">=1.0.0",
-  "source": "core"
+  "source": "core",
+  "typography_hints": {
+    "scale": "modular",
+    "heading_weight": 600,
+    "body_weight": 400
+  },
+  "motion_hints": {
+    "preference": "subtle",
+    "reduce_motion_default": true
+  }
 }

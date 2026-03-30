@@ -155,5 +155,9 @@
       "description": "Chart in glass panel with gradient title.",
       "example": "const { div, span } = tags;\ndiv({ class: css('d-glass _r4 _overflow[hidden]') },\n  div({ class: css('_flex _aic _jcsb _px4 _py3 _borderB') },\n    span({ class: css('d-gradient-text _bold') }, 'Revenue Trend'),\n    span({ class: css('_textxs _fgmuted') }, 'Last 30 days')\n  ),\n  Chart({ type: 'area', data: revenueData, x: 'date', y: 'amount', height: 300 })\n)"
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

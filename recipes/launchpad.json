@@ -21,8 +21,13 @@
     "surface_override": null
   },
   "shell": {
-    "preferred": ["top-nav-main", "minimal-header"],
-    "avoid": ["sidebar-main"],
+    "preferred": [
+      "top-nav-main",
+      "minimal-header"
+    ],
+    "avoid": [
+      "sidebar-main"
+    ],
     "nav_style": "minimal",
     "default_nav_state": "expanded",
     "root": "lp-surface",
@@ -38,9 +43,15 @@
     "enabled": true,
     "intensity": "subtle",
     "type_mapping": {
-      "hero_section": ["lp-gradient-mesh"],
-      "feature_card": ["lp-card-elevated"],
-      "cta_button": ["lp-button-primary"]
+      "hero_section": [
+        "lp-gradient-mesh"
+      ],
+      "feature_card": [
+        "lp-card-elevated"
+      ],
+      "cta_button": [
+        "lp-button-primary"
+      ]
     }
   },
   "card_styles": {
@@ -69,5 +80,9 @@
     "lp-gradient-mesh": "Subtle gradient mesh in primary/accent colors at 5% opacity.",
     "lp-button-primary": "Solid primary color button with hover scale.",
     "lp-fade-in": "Simple fade-in on scroll, 0.4s duration."
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

@@ -51,9 +51,15 @@
     "enabled": true,
     "intensity": "subtle",
     "type_mapping": {
-      "card": ["carbon-card"],
-      "input": ["carbon-input"],
-      "code_block": ["carbon-code"]
+      "card": [
+        "carbon-card"
+      ],
+      "input": [
+        "carbon-input"
+      ],
+      "code_block": [
+        "carbon-code"
+      ]
     },
     "component_fallback": {
       "pre": "code_block",
@@ -88,7 +94,9 @@
     "chat": {
       "description": "Chat interface with conversation list sidebar and message thread. Anchored input at bottom.",
       "shell": "chat-portal",
-      "effects": ["carbon-glass"]
+      "effects": [
+        "carbon-glass"
+      ]
     },
     "auth": {
       "description": "Centered auth forms with clean card styling.",
@@ -99,5 +107,9 @@
       "description": "Marketing pages with top nav and footer. Clean sections with subtle separators.",
       "shell": "top-nav-footer"
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

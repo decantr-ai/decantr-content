@@ -82,5 +82,6 @@
   "code": {
     "imports": "import { Shell } from 'decantr/components';",
     "example": "Shell({ config: 'sidebar-aside' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent),\n  Shell.Aside({}, asideContent)\n)"
-  }
+  },
+  "$schema": "https://decantr.ai/schemas/shell.v1.json"
 }

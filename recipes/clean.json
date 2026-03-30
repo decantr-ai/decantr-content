@@ -21,7 +21,10 @@
     "surface_override": null
   },
   "shell": {
-    "preferred": ["top-nav-main", "sidebar-main"],
+    "preferred": [
+      "top-nav-main",
+      "sidebar-main"
+    ],
     "avoid": [],
     "nav_style": "minimal",
     "default_nav_state": "collapsed",
@@ -58,5 +61,9 @@
     "clean-surface": "Pure white (#FFFFFF) or near-black (#111111) depending on mode.",
     "clean-nav": "Minimal navigation with text links, no backgrounds.",
     "clean-surface-raised": "Slightly elevated surface for cards (2% darker/lighter)."
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

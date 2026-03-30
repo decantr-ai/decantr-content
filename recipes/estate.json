@@ -53,11 +53,21 @@
     "enabled": true,
     "intensity": "subtle",
     "type_mapping": {
-      "card": ["estate-card"],
-      "metric": ["estate-card-metric"],
-      "input": ["estate-input"],
-      "table": ["estate-table"],
-      "badge": ["estate-badge"]
+      "card": [
+        "estate-card"
+      ],
+      "metric": [
+        "estate-card-metric"
+      ],
+      "input": [
+        "estate-input"
+      ],
+      "table": [
+        "estate-table"
+      ],
+      "badge": [
+        "estate-badge"
+      ]
     },
     "component_fallback": {
       "Card": "card",
@@ -103,7 +113,10 @@
     "owner-dashboard": {
       "description": "Property owner dashboard with sidebar navigation. Portfolio metrics, property grid, financial summaries.",
       "shell": "sidebar-main",
-      "effects": ["estate-card", "estate-card-metric"]
+      "effects": [
+        "estate-card",
+        "estate-card-metric"
+      ]
     },
     "tenant-portal": {
       "description": "Tenant self-service portal with top navigation. Simplified interface for payments and maintenance.",
@@ -122,7 +135,14 @@
     "financial": {
       "description": "Financial dashboards and reports. Data-dense with tables, charts, and metrics.",
       "shell": "sidebar-main",
-      "effects": ["estate-table", "estate-card-metric"]
+      "effects": [
+        "estate-table",
+        "estate-card-metric"
+      ]
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

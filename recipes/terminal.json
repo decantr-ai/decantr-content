@@ -53,11 +53,23 @@
     "enabled": true,
     "intensity": "medium",
     "type_mapping": {
-      "panel": ["term-panel", "term-glow"],
-      "input": ["term-input", "term-blink"],
-      "table": ["term-table"],
-      "code_block": ["term-panel"],
-      "button": ["term-hotkey"]
+      "panel": [
+        "term-panel",
+        "term-glow"
+      ],
+      "input": [
+        "term-input",
+        "term-blink"
+      ],
+      "table": [
+        "term-table"
+      ],
+      "code_block": [
+        "term-panel"
+      ],
+      "button": [
+        "term-hotkey"
+      ]
     },
     "optional_effects": {
       "scanlines": true,
@@ -106,12 +118,17 @@
     "dashboard": {
       "description": "Terminal dashboard with split panes, status bar, and hotkey bar.",
       "shell": "terminal-split",
-      "effects": ["term-panel", "term-glow"]
+      "effects": [
+        "term-panel",
+        "term-glow"
+      ]
     },
     "logs": {
       "description": "Log viewer with real-time streaming and filtering.",
       "shell": "terminal-split",
-      "effects": ["term-panel"]
+      "effects": [
+        "term-panel"
+      ]
     },
     "auth": {
       "description": "Terminal-styled authentication forms with ASCII borders.",
@@ -121,7 +138,10 @@
     "marketing": {
       "description": "Dev tool marketing page with terminal aesthetic hero.",
       "shell": "top-nav-footer",
-      "effects": ["term-panel", "term-type"]
+      "effects": [
+        "term-panel",
+        "term-type"
+      ]
     }
   },
   "ascii_characters": {
@@ -158,5 +178,9 @@
       "info": "i",
       "loading": "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

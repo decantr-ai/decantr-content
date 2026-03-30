@@ -21,8 +21,13 @@
     "surface_override": null
   },
   "shell": {
-    "preferred": ["sidebar-main"],
-    "avoid": ["centered", "minimal-header"],
+    "preferred": [
+      "sidebar-main"
+    ],
+    "avoid": [
+      "centered",
+      "minimal-header"
+    ],
     "nav_style": "filled",
     "default_nav_state": "expanded",
     "root": "gg-dark",
@@ -37,10 +42,18 @@
     "enabled": true,
     "intensity": "strong",
     "type_mapping": {
-      "hero_section": ["gg-neon-glow"],
-      "stat_display": ["gg-stat-pulse"],
-      "leaderboard": ["gg-rank-badge"],
-      "achievement": ["gg-achievement-shine"]
+      "hero_section": [
+        "gg-neon-glow"
+      ],
+      "stat_display": [
+        "gg-stat-pulse"
+      ],
+      "leaderboard": [
+        "gg-rank-badge"
+      ],
+      "achievement": [
+        "gg-achievement-shine"
+      ]
     }
   },
   "card_styles": {
@@ -71,5 +84,9 @@
     "gg-rank-badge": "Rank position with metallic gradient (gold/silver/bronze).",
     "gg-achievement-shine": "Achievement cards with shine animation on hover.",
     "gg-slide-in": "Entrance: slide from left with slight bounce."
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

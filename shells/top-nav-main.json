@@ -57,5 +57,6 @@
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { text } from 'decantr/core';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';\nimport { Button, icon } from 'decantr/components';",
     "example": "function TopNavMain({ brand, nav, children }) {\n  const { div, header, main, nav: navEl } = tags;\n\n  return div({ class: css('_flex _col _h[100vh]') },\n    // Top navigation bar\n    header({ class: css('_flex _aic _jcsb _px6 _py3 _borderB _bgbg') },\n      link({ href: '/', class: css('_heading5 _nounder _fgfg') }, brand),\n      navEl({ class: css('_flex _aic _gap6') },\n        ...nav.map(item =>\n          link({ href: item.href, class: css('_fgmuted _nounder _trans') }, item.label)\n        )\n      ),\n      div({ class: css('_flex _aic _gap2') },\n        Button({ variant: 'ghost', size: 'sm' }, icon('search')),\n        Button({ variant: 'ghost', size: 'sm' }, icon('user'))\n      )\n    ),\n    // Main content\n    main({ class: css('_flex _col _gap4 _p6 _overflow[auto] _flex1') },\n      ...children\n    )\n  );\n}"
-  }
+  },
+  "$schema": "https://decantr.ai/schemas/shell.v1.json"
 }

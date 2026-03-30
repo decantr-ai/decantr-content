@@ -65,5 +65,6 @@
   "code": {
     "imports": "import { Shell } from 'decantr/components';",
     "example": "Shell({ config: 'top-nav-footer' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navItems),\n  Shell.Body({}, mainContent),\n  Shell.Footer({}, footerContent)\n)"
-  }
+  },
+  "$schema": "https://decantr.ai/schemas/shell.v1.json"
 }

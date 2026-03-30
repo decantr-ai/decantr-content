@@ -8,12 +8,6 @@
   "compose": [
     "marketing-landing"
   ],
-  "suggested_theme": {
-    "style": "luminarum",
-    "mode": "dark",
-    "recipe": "luminarum",
-    "shape": "pill"
-  },
   "personality": [
     "bold",
     "technical",
@@ -22,13 +16,33 @@
   ],
   "overrides": {
     "patterns": {
-      "hero-split": { "preset": "standard" },
-      "before-after": { "preset": "browser-frames" },
-      "pipeline-cards": { "preset": "outlined" },
-      "tool-list": { "preset": "standard" },
-      "quick-start": { "preset": "cards" },
-      "cta-banner": { "preset": "gradient" },
-      "tech-pills": { "preset": "colored" }
+      "hero-split": {
+        "preset": "standard"
+      },
+      "before-after": {
+        "preset": "browser-frames"
+      },
+      "pipeline-cards": {
+        "preset": "outlined"
+      },
+      "tool-list": {
+        "preset": "standard"
+      },
+      "quick-start": {
+        "preset": "cards"
+      },
+      "cta-banner": {
+        "preset": "gradient"
+      },
+      "tech-pills": {
+        "preset": "colored"
+      }
     }
+  },
+  "theme": {
+    "style": "luminarum",
+    "mode": "dark",
+    "recipe": "luminarum",
+    "shape": "pill"
   }
 }

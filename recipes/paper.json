@@ -54,10 +54,18 @@
     "enabled": true,
     "intensity": "minimal",
     "type_mapping": {
-      "card": ["paper-card"],
-      "input": ["paper-input"],
-      "editor": ["paper-prose"],
-      "comment": ["paper-comment"]
+      "card": [
+        "paper-card"
+      ],
+      "input": [
+        "paper-input"
+      ],
+      "editor": [
+        "paper-prose"
+      ],
+      "comment": [
+        "paper-comment"
+      ]
     },
     "component_fallback": {
       "pre": "editor",
@@ -94,7 +102,10 @@
     "editor": {
       "description": "Document editor with real-time collaboration. Page tree, editor, and comment sidebar.",
       "shell": "workspace-aside",
-      "effects": ["paper-prose", "paper-cursor"]
+      "effects": [
+        "paper-prose",
+        "paper-cursor"
+      ]
     },
     "workspace": {
       "description": "Workspace dashboard with activity and recent documents.",
@@ -110,5 +121,9 @@
       "description": "Marketing pages with top nav and footer. Clean sections with generous whitespace.",
       "shell": "top-nav-footer"
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

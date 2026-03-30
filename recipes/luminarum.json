@@ -129,14 +129,46 @@
   "color_rotation": {
     "description": "Sections and cards rotate through the brand palette for visual variety. Each section gets one accent color.",
     "sequence": [
-      { "name": "coral", "color": "#F58882", "rgb": "245,136,130" },
-      { "name": "pink", "color": "#FE4474", "rgb": "254,68,116" },
-      { "name": "amber", "color": "#FDA303", "rgb": "253,163,3" },
-      { "name": "cyan", "color": "#0AF3EB", "rgb": "10,243,235" },
-      { "name": "green", "color": "#00E0AB", "rgb": "0,224,171" },
-      { "name": "yellow", "color": "#FCD021", "rgb": "252,208,33" },
-      { "name": "orange", "color": "#FC8D0D", "rgb": "252,141,13" },
-      { "name": "purple", "color": "#6500C6", "rgb": "101,0,198" }
+      {
+        "name": "coral",
+        "color": "#F58882",
+        "rgb": "245,136,130"
+      },
+      {
+        "name": "pink",
+        "color": "#FE4474",
+        "rgb": "254,68,116"
+      },
+      {
+        "name": "amber",
+        "color": "#FDA303",
+        "rgb": "253,163,3"
+      },
+      {
+        "name": "cyan",
+        "color": "#0AF3EB",
+        "rgb": "10,243,235"
+      },
+      {
+        "name": "green",
+        "color": "#00E0AB",
+        "rgb": "0,224,171"
+      },
+      {
+        "name": "yellow",
+        "color": "#FCD021",
+        "rgb": "252,208,33"
+      },
+      {
+        "name": "orange",
+        "color": "#FC8D0D",
+        "rgb": "252,141,13"
+      },
+      {
+        "name": "purple",
+        "color": "#6500C6",
+        "rgb": "101,0,198"
+      }
     ]
   },
   "decorators": {
@@ -156,7 +188,9 @@
     "hero": {
       "description": "Split hero with large logo (1/3) and content (2/3). Dark bg with breathing gradient orbs behind. Logo floats gently.",
       "layout": "split-1-3",
-      "effects": ["lum-orbs"]
+      "effects": [
+        "lum-orbs"
+      ]
     },
     "feature-grid": {
       "description": "Grid of vibrant filled cards with corner brackets. Each card a different brand color.",
@@ -170,5 +204,9 @@
       "description": "Two-column list with colored dot bullets and colored left border stripes on hover.",
       "card_style": "none"
     }
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

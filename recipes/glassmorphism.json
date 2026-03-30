@@ -21,7 +21,10 @@
     "surface_override": null
   },
   "shell": {
-    "preferred": ["sidebar-main", "top-nav-main"],
+    "preferred": [
+      "sidebar-main",
+      "top-nav-main"
+    ],
     "avoid": [],
     "nav_style": "glass",
     "default_nav_state": "expanded",
@@ -37,9 +40,15 @@
     "enabled": true,
     "intensity": "medium",
     "type_mapping": {
-      "card": ["glass-card"],
-      "nav": ["glass-panel"],
-      "modal": ["glass-overlay"]
+      "card": [
+        "glass-card"
+      ],
+      "nav": [
+        "glass-panel"
+      ],
+      "modal": [
+        "glass-overlay"
+      ]
     }
   },
   "card_styles": {
@@ -60,5 +69,9 @@
     "glass-header": "Glass hero section with layered blur panels.",
     "glass-overlay": "Modal overlay with heavy blur.",
     "glass-fade-up": "Entrance animation: fade + translateY(20px) over 0.5s."
+  },
+  "radius_hints": {
+    "philosophy": "rounded",
+    "base": 8
   }
 }

@@ -26,5 +26,14 @@
     "pill"
   ],
   "decantr_compat": ">=0.9.0",
-  "source": "community"
+  "source": "community",
+  "typography_hints": {
+    "scale": "modular",
+    "heading_weight": 600,
+    "body_weight": 400
+  },
+  "motion_hints": {
+    "preference": "subtle",
+    "reduce_motion_default": true
+  }
 }

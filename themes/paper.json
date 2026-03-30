@@ -59,14 +59,46 @@
   },
   "presence": {
     "colors": [
-      { "name": "Blue", "light": "#3B82F6", "dark": "#60A5FA" },
-      { "name": "Purple", "light": "#8B5CF6", "dark": "#A78BFA" },
-      { "name": "Pink", "light": "#EC4899", "dark": "#F472B6" },
-      { "name": "Orange", "light": "#F97316", "dark": "#FB923C" },
-      { "name": "Teal", "light": "#14B8A6", "dark": "#2DD4BF" },
-      { "name": "Yellow", "light": "#EAB308", "dark": "#FACC15" },
-      { "name": "Red", "light": "#EF4444", "dark": "#F87171" },
-      { "name": "Green", "light": "#22C55E", "dark": "#4ADE80" }
+      {
+        "name": "Blue",
+        "light": "#3B82F6",
+        "dark": "#60A5FA"
+      },
+      {
+        "name": "Purple",
+        "light": "#8B5CF6",
+        "dark": "#A78BFA"
+      },
+      {
+        "name": "Pink",
+        "light": "#EC4899",
+        "dark": "#F472B6"
+      },
+      {
+        "name": "Orange",
+        "light": "#F97316",
+        "dark": "#FB923C"
+      },
+      {
+        "name": "Teal",
+        "light": "#14B8A6",
+        "dark": "#2DD4BF"
+      },
+      {
+        "name": "Yellow",
+        "light": "#EAB308",
+        "dark": "#FACC15"
+      },
+      {
+        "name": "Red",
+        "light": "#EF4444",
+        "dark": "#F87171"
+      },
+      {
+        "name": "Green",
+        "light": "#22C55E",
+        "dark": "#4ADE80"
+      }
     ]
   },
   "modes": [
@@ -78,7 +110,10 @@
     "rounded",
     "sharp"
   ],
-  "cvd_support": ["deuteranopia", "protanopia"],
+  "cvd_support": [
+    "deuteranopia",
+    "protanopia"
+  ],
   "tokens": {
     "base": {
       "success": "#22C55E",
@@ -98,5 +133,14 @@
     }
   },
   "decantr_compat": ">=1.0.0",
-  "source": "core"
+  "source": "core",
+  "typography_hints": {
+    "scale": "modular",
+    "heading_weight": 600,
+    "body_weight": 400
+  },
+  "motion_hints": {
+    "preference": "subtle",
+    "reduce_motion_default": true
+  }
 }
