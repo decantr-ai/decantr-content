@@ -2,6 +2,7 @@
 
 /**
  * Sync all content from this repo to the Decantr registry API.
+ * Uses concurrent requests (batches of 20) for speed.
  *
  * Usage:
  *   node scripts/sync-to-registry.js
@@ -15,13 +16,13 @@ import { readdirSync, readFileSync } from 'fs';
 
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
 const ADMIN_KEY = process.env.DECANTR_ADMIN_KEY;
+const CONCURRENCY = 20;
 
 if (!ADMIN_KEY) {
   console.error('Error: DECANTR_ADMIN_KEY environment variable is required');
   process.exit(1);
 }
 
-// Map directory names (plural) to API type names (singular)
 const TYPE_MAP = {
   patterns: 'pattern',
   recipes: 'recipe',
@@ -31,69 +32,67 @@ const TYPE_MAP = {
   shells: 'shell',
 };
 
-let succeeded = 0;
-let failed = 0;
-let skipped = 0;
-const failures = [];
-
+// Collect all items first
+const items = [];
 for (const [dir, type] of Object.entries(TYPE_MAP)) {
   let files;
   try {
     files = readdirSync(dir).filter(f => f.endsWith('.json'));
   } catch {
-    console.log(`  Skip: ${dir}/ not found`);
     continue;
   }
-
   for (const file of files) {
     const path = `${dir}/${file}`;
-    let item;
     try {
-      item = JSON.parse(readFileSync(path, 'utf-8'));
-    } catch (e) {
-      console.error(`  FAIL ${path}: invalid JSON`);
-      failed++;
-      failures.push(path);
-      continue;
-    }
-
-    const slug = item.id || item.slug;
-    if (!slug) {
-      console.error(`  FAIL ${path}: missing id or slug`);
-      failed++;
-      failures.push(path);
-      continue;
-    }
-
-    try {
-      const res = await fetch(`${REGISTRY_URL}/admin/sync`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Admin-Key': ADMIN_KEY,
-        },
-        body: JSON.stringify({ type, item }),
-      });
-
-      if (!res.ok) {
-        const body = await res.text();
-        console.error(`  FAIL ${path}: ${res.status} ${body}`);
-        failed++;
-        failures.push(path);
-      } else {
-        succeeded++;
-        process.stdout.write('.');
+      const item = JSON.parse(readFileSync(path, 'utf-8'));
+      const slug = item.id || item.slug;
+      if (!slug) {
+        console.error(`  SKIP ${path}: missing id or slug`);
+        continue;
       }
-    } catch (e) {
-      console.error(`  FAIL ${path}: ${e.message}`);
-      failed++;
-      failures.push(path);
+      items.push({ path, type, item });
+    } catch {
+      console.error(`  SKIP ${path}: invalid JSON`);
     }
   }
 }
 
-console.log('');
-console.log(`\nSync complete: ${succeeded} succeeded, ${failed} failed, ${skipped} skipped`);
+console.log(`Syncing ${items.length} items to ${REGISTRY_URL} (concurrency: ${CONCURRENCY})`);
+
+let succeeded = 0;
+let failed = 0;
+const failures = [];
+
+async function syncItem({ path, type, item }) {
+  try {
+    const res = await fetch(`${REGISTRY_URL}/admin/sync`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_KEY },
+      body: JSON.stringify({ type, item }),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      console.error(`  FAIL ${path}: ${res.status} ${body}`);
+      failed++;
+      failures.push(path);
+    } else {
+      succeeded++;
+      process.stdout.write('.');
+    }
+  } catch (e) {
+    console.error(`  FAIL ${path}: ${e.message}`);
+    failed++;
+    failures.push(path);
+  }
+}
+
+// Process in batches of CONCURRENCY
+for (let i = 0; i < items.length; i += CONCURRENCY) {
+  const batch = items.slice(i, i + CONCURRENCY);
+  await Promise.all(batch.map(syncItem));
+}
+
+console.log(`\n\nSync complete: ${succeeded} succeeded, ${failed} failed (of ${items.length} total)`);
 
 if (failures.length > 0) {
   console.log('\nFailed items:');
