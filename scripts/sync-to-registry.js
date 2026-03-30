@@ -70,7 +70,6 @@ for (const [dir, type] of Object.entries(TYPE_MAP)) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${ADMIN_KEY}`,
           'X-Admin-Key': ADMIN_KEY,
         },
         body: JSON.stringify({ type, item }),
