@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - run: node validate.js
 
   publish:
@@ -20,22 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Publish to Registry
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync content to registry
         env:
           DECANTR_ADMIN_KEY: ${{ secrets.DECANTR_ADMIN_KEY }}
-          REGISTRY_URL: https://api.decantr.ai/v1
-        run: |
-          for type in patterns recipes themes blueprints archetypes shells; do
-            if [ -d "$type" ]; then
-              for file in $type/*.json; do
-                [ -f "$file" ] || continue
-                echo "Publishing $file..."
-                curl -s -X POST "$REGISTRY_URL/admin/sync" \
-                  -H "Authorization: Bearer $DECANTR_ADMIN_KEY" \
-                  -H "X-Admin-Key: $DECANTR_ADMIN_KEY" \
-                  -H "Content-Type: application/json" \
-                  -d "{\"type\": \"$(basename $type | sed 's/s$//')\", \"item\": $(cat $file)}" \
-                  || echo "Failed: $file"
-              done
-            fi
-          done
+          REGISTRY_URL: ${{ vars.REGISTRY_URL || 'https://api.decantr.ai/v1' }}
+        run: node scripts/sync-to-registry.js
