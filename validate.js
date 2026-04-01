@@ -21,6 +21,13 @@ for (const type of types) {
         console.error(`  FAIL ${type}/${file}: missing id or slug`);
         errors++;
       }
+      if (type === 'archetypes') {
+        const validRoles = ['primary', 'gateway', 'public', 'auxiliary'];
+        if (!content.role || !validRoles.includes(content.role)) {
+          console.error(`  FAIL ${type}/${file}: missing or invalid role (must be one of: ${validRoles.join(', ')})`);
+          errors++;
+        }
+      }
     } catch (e) {
       console.error(`  FAIL ${type}/${file}: invalid JSON - ${e.message}`);
       errors++;
