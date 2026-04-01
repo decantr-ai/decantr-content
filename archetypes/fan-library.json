@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "fan-library",
+  "role": "auxiliary",
   "version": "1.0.0",
   "decantr_compat": ">=1.0.0",
   "name": "Fan Library",
