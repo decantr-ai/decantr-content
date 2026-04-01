@@ -10,7 +10,14 @@
     "recipes": {},
     "styles": {},
     "requires_core": {
-      "components": ["Input", "Select", "Button", "Badge", "Chip", "icon"],
+      "components": [
+        "Input",
+        "Select",
+        "Button",
+        "Badge",
+        "Chip",
+        "icon"
+      ],
       "charts": []
     }
   },
@@ -27,7 +34,13 @@
   "presets": {
     "standard": {
       "description": "Full search bar with search input, content type tabs (All/Patterns/Themes/Blueprints/etc.), namespace dropdown, and sort select.",
-      "components": ["Input", "Select", "Button", "Chip", "icon"],
+      "components": [
+        "Input",
+        "Select",
+        "Button",
+        "Chip",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap4",
@@ -36,15 +49,16 @@
           "filter-row": "Horizontal row: type Chip tabs on left, namespace Select and sort Select on right",
           "active-filters": "Optional row of active filter Badges with remove (x) action"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Input, Select, Button, Chip, icon } from 'decantr/components';",
-        "example": "function SearchFilterBar({ query, type, namespace, sort, onSearch, onTypeChange, onNamespaceChange, onSortChange }) {\n  const { div, span } = tags;\n  const types = ['all', 'patterns', 'themes', 'blueprints', 'archetypes', 'recipes', 'shells'];\n\n  return div({ class: css('_flex _col _gap4') },\n    div({ class: css('_flex _aic _gap3') },\n      div({ class: css('_flex _aic _gap2 _flex1 _border _bordermuted/20 _r2 _px3 _py2') },\n        icon('search', { size: '1rem', class: css('_fgmuted') }),\n        Input({ type: 'text', value: query, placeholder: 'Search registry...', class: css('_flex1 _border0 _outline0 _bgcanvas _textsm'), oninput: (e) => onSearch(e.target.value) }),\n        query ? Button({ variant: 'ghost', size: 'xs', onclick: () => onSearch('') }, icon('x', { size: '0.875rem' })) : null\n      )\n    ),\n    div({ class: css('_flex _aic _jcsb _gap4') },\n      div({ class: css('_flex _gap2 _overflow-x-auto') },\n        ...types.map(t =>\n          Chip({ variant: t === type ? 'primary' : 'outline', size: 'sm', onclick: () => onTypeChange(t) },\n            t === 'all' ? 'All' : t.charAt(0).toUpperCase() + t.slice(1)\n          )\n        )\n      ),\n      div({ class: css('_flex _gap2 _shrink0') },\n        Select({ size: 'sm', value: namespace, onchange: (e) => onNamespaceChange(e.target.value) },\n          { value: '', label: 'All namespaces' },\n          { value: '@official', label: '@official' },\n          { value: '@community', label: '@community' }\n        ),\n        Select({ size: 'sm', value: sort, onchange: (e) => onSortChange(e.target.value) },\n          { value: 'newest', label: 'Newest' },\n          { value: 'popular', label: 'Popular' },\n          { value: 'name', label: 'A-Z' }\n        )\n      )\n    )\n  );\n}"
       }
     },
     "compact": {
       "description": "Single-row compact search with inline type and namespace dropdowns. No tabs.",
-      "components": ["Input", "Select", "Button", "icon"],
+      "components": [
+        "Input",
+        "Select",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "row",
         "atoms": "_flex _aic _gap3",
@@ -53,15 +67,18 @@
           "type-select": "Content type Select dropdown",
           "namespace-select": "Namespace Select dropdown"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Input, Select, Button, icon } from 'decantr/components';",
-        "example": "function SearchFilterBarCompact({ query, type, namespace, onSearch, onTypeChange, onNamespaceChange }) {\n  const { div } = tags;\n\n  return div({ class: css('_flex _aic _gap3') },\n    div({ class: css('_flex _aic _gap2 _flex1 _border _bordermuted/20 _r2 _px3 _py2') },\n      icon('search', { size: '1rem', class: css('_fgmuted') }),\n      Input({ type: 'text', value: query, placeholder: 'Search...', class: css('_flex1 _border0 _outline0 _bgcanvas _textsm'), oninput: (e) => onSearch(e.target.value) })\n    ),\n    Select({ size: 'sm', value: type, onchange: (e) => onTypeChange(e.target.value) },\n      { value: 'all', label: 'All types' },\n      { value: 'patterns', label: 'Patterns' },\n      { value: 'themes', label: 'Themes' },\n      { value: 'blueprints', label: 'Blueprints' }\n    ),\n    Select({ size: 'sm', value: namespace, onchange: (e) => onNamespaceChange(e.target.value) },\n      { value: '', label: 'All' },\n      { value: '@official', label: '@official' },\n      { value: '@community', label: '@community' }\n    )\n  );\n}"
       }
     },
     "with-results-count": {
       "description": "Search bar with result count summary and active filter pills below.",
-      "components": ["Input", "Select", "Button", "Badge", "Chip", "icon"],
+      "components": [
+        "Input",
+        "Select",
+        "Button",
+        "Badge",
+        "Chip",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap3",
@@ -70,10 +87,6 @@
           "results-summary": "Result count text and active filter Badge pills with remove action",
           "clear-all": "Clear all filters Button when filters are active"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Input, Select, Button, Badge, icon } from 'decantr/components';",
-        "example": "function SearchFilterBarWithResults({ query, type, namespace, resultCount, onSearch, onTypeChange, onNamespaceChange, onClearAll }) {\n  const { div, span } = tags;\n  const hasFilters = query || type !== 'all' || namespace;\n\n  return div({ class: css('_flex _col _gap3') },\n    div({ class: css('_flex _aic _gap3') },\n      div({ class: css('_flex _aic _gap2 _flex1 _border _bordermuted/20 _r2 _px3 _py2') },\n        icon('search', { size: '1rem', class: css('_fgmuted') }),\n        Input({ type: 'text', value: query, placeholder: 'Search registry...', class: css('_flex1 _border0 _outline0 _bgcanvas _textsm'), oninput: (e) => onSearch(e.target.value) })\n      ),\n      Select({ size: 'sm', value: type, onchange: (e) => onTypeChange(e.target.value) },\n        { value: 'all', label: 'All types' },\n        { value: 'patterns', label: 'Patterns' },\n        { value: 'themes', label: 'Themes' },\n        { value: 'blueprints', label: 'Blueprints' }\n      )\n    ),\n    div({ class: css('_flex _aic _gap2') },\n      span({ class: css('_textsm _fgmuted') }, `${resultCount} results`),\n      hasFilters\n        ? div({ class: css('_flex _gap1') },\n            query ? Badge({ variant: 'secondary', size: 'xs', onclick: () => onSearch('') }, `\"${query}\" `, icon('x', { size: '0.625rem' })) : null,\n            type !== 'all' ? Badge({ variant: 'secondary', size: 'xs', onclick: () => onTypeChange('all') }, type, ' ', icon('x', { size: '0.625rem' })) : null,\n            Button({ variant: 'ghost', size: 'xs', onclick: onClearAll }, 'Clear all')\n          )\n        : null\n    )\n  );\n}"
       }
     }
   },
@@ -85,9 +98,5 @@
       "filter-row": "Type tabs and namespace/sort dropdowns",
       "active-filters": "Active filter badges"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Input, Select, Button, Chip, icon } from 'decantr/components';",
-    "example": "function SearchFilterBar({ query, type, onSearch, onTypeChange }) {\n  const { div } = tags;\n  const types = ['all', 'patterns', 'themes', 'blueprints', 'archetypes', 'recipes', 'shells'];\n\n  return div({ class: css('_flex _col _gap4') },\n    div({ class: css('_flex _aic _gap2 _border _bordermuted/20 _r2 _px3 _py2') },\n      icon('search', { size: '1rem', class: css('_fgmuted') }),\n      Input({ type: 'text', value: query, placeholder: 'Search registry...', class: css('_flex1 _border0 _outline0 _bgcanvas'), oninput: (e) => onSearch(e.target.value) })\n    ),\n    div({ class: css('_flex _gap2') },\n      ...types.map(t => Chip({ variant: t === type ? 'primary' : 'outline', size: 'sm', onclick: () => onTypeChange(t) }, t))\n    )\n  );\n}"
   }
 }

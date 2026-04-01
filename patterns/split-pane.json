@@ -28,10 +28,6 @@
           "divider": "Resizable vertical divider",
           "pane-right": "Right content pane"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { createSignal, onMount, onDestroy } from 'decantr/state';\nimport { css } from 'decantr/css';",
-        "example": "function HorizontalSplit({ left, right, initialSplit = 50 }) {\n  const { div } = tags;\n  const [split, setSplit] = createSignal(initialSplit);\n  const [isDragging, setIsDragging] = createSignal(false);\n  let containerRef;\n\n  const handleMouseMove = (e) => {\n    if (!isDragging() || !containerRef) return;\n    const rect = containerRef.getBoundingClientRect();\n    const pct = ((e.clientX - rect.left) / rect.width) * 100;\n    setSplit(Math.max(10, Math.min(90, pct)));\n  };\n\n  const handleMouseUp = () => setIsDragging(false);\n\n  onMount(() => {\n    document.addEventListener('mousemove', handleMouseMove);\n    document.addEventListener('mouseup', handleMouseUp);\n  });\n\n  onDestroy(() => {\n    document.removeEventListener('mousemove', handleMouseMove);\n    document.removeEventListener('mouseup', handleMouseUp);\n  });\n\n  return div({ ref: (el) => containerRef = el, class: css('_flex _hfull _relative') },\n    div({ class: css('term-panel _overflow[auto] _p2'), style: () => `width: ${split()}%` }, left),\n    div({\n      class: css('_w1 _bgborder _cursor[col-resize] _hover:bg[#555]'),\n      onmousedown: () => setIsDragging(true),\n      ondblclick: () => setSplit(50)\n    }),\n    div({ class: css('term-panel _overflow[auto] _p2 _flex1') }, right)\n  );\n}"
       }
     },
     "vertical": {
@@ -45,10 +41,6 @@
           "divider": "Resizable horizontal divider",
           "pane-bottom": "Bottom content pane"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { createSignal, onMount, onDestroy } from 'decantr/state';\nimport { css } from 'decantr/css';",
-        "example": "function VerticalSplit({ top, bottom, initialSplit = 50 }) {\n  const { div } = tags;\n  const [split, setSplit] = createSignal(initialSplit);\n  const [isDragging, setIsDragging] = createSignal(false);\n  let containerRef;\n\n  const handleMouseMove = (e) => {\n    if (!isDragging() || !containerRef) return;\n    const rect = containerRef.getBoundingClientRect();\n    const pct = ((e.clientY - rect.top) / rect.height) * 100;\n    setSplit(Math.max(10, Math.min(90, pct)));\n  };\n\n  const handleMouseUp = () => setIsDragging(false);\n\n  onMount(() => {\n    document.addEventListener('mousemove', handleMouseMove);\n    document.addEventListener('mouseup', handleMouseUp);\n  });\n\n  onDestroy(() => {\n    document.removeEventListener('mousemove', handleMouseMove);\n    document.removeEventListener('mouseup', handleMouseUp);\n  });\n\n  return div({ ref: (el) => containerRef = el, class: css('_flex _col _hfull _relative') },\n    div({ class: css('term-panel _overflow[auto] _p2'), style: () => `height: ${split()}%` }, top),\n    div({\n      class: css('_h1 _bgborder _cursor[row-resize] _hover:bg[#555]'),\n      onmousedown: () => setIsDragging(true),\n      ondblclick: () => setSplit(50)\n    }),\n    div({ class: css('term-panel _overflow[auto] _p2 _flex1') }, bottom)\n  );\n}"
       }
     },
     "quad": {
@@ -63,10 +55,6 @@
           "pane-bl": "Bottom-left pane",
           "pane-br": "Bottom-right pane"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { createSignal } from 'decantr/state';\nimport { css } from 'decantr/css';",
-        "example": "function QuadSplit({ topLeft, topRight, bottomLeft, bottomRight }) {\n  const { div } = tags;\n  const [hSplit, setHSplit] = createSignal(50);\n  const [vSplit, setVSplit] = createSignal(50);\n\n  return div({ class: css('_grid _hfull _gap[1px] _bgborder'), style: () =>\n    `grid-template-columns: ${hSplit()}% 1px 1fr; grid-template-rows: ${vSplit()}% 1px 1fr`\n  },\n    div({ class: css('term-panel _overflow[auto] _p2') }, topLeft),\n    div({ class: css('_bgborder _cursor[col-resize]') }),\n    div({ class: css('term-panel _overflow[auto] _p2') }, topRight),\n    div({ class: css('_bgborder _cursor[row-resize]'), style: 'grid-column: 1 / -1' }),\n    div({ class: css('term-panel _overflow[auto] _p2') }, bottomLeft),\n    div({ class: css('_bgborder') }),\n    div({ class: css('term-panel _overflow[auto] _p2') }, bottomRight)\n  );\n}"
       }
     }
   },
@@ -77,10 +65,6 @@
       "panes": "Content panes",
       "handles": "Resize handles"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { createSignal } from 'decantr/state';\nimport { css } from 'decantr/css';",
-    "example": "function SplitPane({ children, direction = 'horizontal' }) {\n  return direction === 'horizontal'\n    ? HorizontalSplit({ left: children[0], right: children[1] })\n    : VerticalSplit({ top: children[0], bottom: children[1] });\n}"
   },
   "features": [
     "drag-resize",

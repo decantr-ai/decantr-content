@@ -40,10 +40,6 @@
           "status": "Online/offline indicator or model name badge",
           "actions": "Search, export, branch, settings buttons"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { createSignal } from 'decantr/state';\nimport { css } from 'decantr/css';\nimport { Button, Badge, icon } from 'decantr/components';",
-        "example": "function ChatHeader({ title, model, onSearch, onExport, onSettings }) {\n  const { div, h2, input, span } = tags;\n  const [isEditing, setIsEditing] = createSignal(false);\n  const [editTitle, setEditTitle] = createSignal(title);\n\n  return div({ class: css('_flex _aic _jcsb _px6 _py3 _borderB _bgbg') },\n    div({ class: css('_flex _aic _gap3') },\n      isEditing() \n        ? input({\n            class: css('carbon-input _heading4 _p1'),\n            value: editTitle(),\n            oninput: (e) => setEditTitle(e.target.value),\n            onblur: () => setIsEditing(false),\n            onkeydown: (e) => e.key === 'Enter' && setIsEditing(false)\n          })\n        : h2({ \n            class: css('_heading4 _cursor[pointer]'),\n            onclick: () => setIsEditing(true)\n          }, editTitle()),\n      Badge({ variant: 'outline', size: 'sm' }, model || 'GPT-4')\n    ),\n    div({ class: css('_flex _aic _gap1') },\n      Button({ variant: 'ghost', size: 'sm', onclick: onSearch }, icon('search')),\n      Button({ variant: 'ghost', size: 'sm', onclick: onExport }, icon('download')),\n      Button({ variant: 'ghost', size: 'sm', onclick: onSettings }, icon('settings'))\n    )\n  );\n}"
       }
     },
     "compact": {
@@ -60,10 +56,6 @@
           "title": "Conversation title (truncated)",
           "menu": "Overflow menu button"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';\nimport { navigate } from 'decantr/router';",
-        "example": "function CompactChatHeader({ title, onMenu }) {\n  const { div, span } = tags;\n\n  return div({ class: css('_flex _aic _jcsb _px4 _py2 _borderB _bgbg') },\n    Button({ variant: 'ghost', size: 'sm', onclick: () => navigate('/chat') },\n      icon('arrow-left')\n    ),\n    span({ class: css('_heading5 _truncate _flex1 _tc') }, title),\n    Button({ variant: 'ghost', size: 'sm', onclick: onMenu },\n      icon('more-vertical')\n    )\n  );\n}"
       }
     }
   },
@@ -75,9 +67,5 @@
       "status": "Online/offline or model name",
       "actions": "Search, export, branch, settings"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, Badge, icon } from 'decantr/components';",
-    "example": "function ChatHeader({ title, model }) {\n  return StandardChatHeader({ title, model });\n}"
   }
 }

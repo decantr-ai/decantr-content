@@ -10,7 +10,12 @@
     "recipes": {},
     "styles": {},
     "requires_core": {
-      "components": ["Card", "Badge", "Button", "icon"],
+      "components": [
+        "Card",
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "charts": []
     }
   },
@@ -28,7 +33,15 @@
   "presets": {
     "standard": {
       "description": "Pricing card with plan name, monthly price, feature checklist, and upgrade button. Vertical stack layout.",
-      "components": ["Card", "CardHeader", "CardBody", "CardFooter", "Badge", "Button", "icon"],
+      "components": [
+        "Card",
+        "CardHeader",
+        "CardBody",
+        "CardFooter",
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap0 _border _bordermuted/20 _r4 _overflow[hidden]",
@@ -39,15 +52,16 @@
           "features": "Checklist of included features, each with check icon",
           "cta": "Upgrade/downgrade Button, full-width in CardFooter"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, icon } from 'decantr/components';",
-        "example": "function TierUpgradeCard({ tier, isCurrentTier, onUpgrade }) {\n  const { div, h3, span, p, ul, li } = tags;\n\n  return Card({ class: css(`_flex _col _w[320px] ${tier.highlighted ? '_borderprimary _border2' : ''}`) },\n    div({ class: css('_p6 _flex _col _gap3') },\n      div({ class: css('_flex _aic _gap2') },\n        h3({ class: css('_heading4') }, tier.name),\n        tier.highlighted ? Badge({ variant: 'primary', size: 'xs' }, 'Popular') : null\n      ),\n      div({ class: css('_flex _aic _baseline _gap1') },\n        span({ class: css('_heading2') }, tier.price === 0 ? 'Free' : `$${tier.price}`),\n        tier.price > 0 ? span({ class: css('_textsm _fgmuted') }, '/mo') : null\n      ),\n      p({ class: css('_bodysm _fgmuted') }, tier.description)\n    ),\n    div({ class: css('_px6 _pb6 _flex _col _gap2 _flex1') },\n      ul({ class: css('_flex _col _gap2 _list-none _p0 _m0') },\n        ...tier.features.map(feature =>\n          li({ class: css('_flex _aic _gap2 _textsm') },\n            icon('check', { size: '0.875rem', class: css('_fgsuccess') }),\n            span({}, feature)\n          )\n        )\n      )\n    ),\n    div({ class: css('_p6 _pt0') },\n      Button({\n        variant: isCurrentTier ? 'outline' : 'primary',\n        size: 'md',\n        class: css('_wfull'),\n        disabled: isCurrentTier,\n        onclick: () => onUpgrade(tier.id)\n      }, isCurrentTier ? 'Current Plan' : `Upgrade to ${tier.name}`)\n    )\n  );\n}"
       }
     },
     "highlighted": {
       "description": "Featured/recommended tier card with primary border, gradient background accent, and prominent CTA.",
-      "components": ["Card", "Badge", "Button", "icon"],
+      "components": [
+        "Card",
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap0 _border2 _borderprimary _r4 _overflow[hidden] _relative",
@@ -58,15 +72,15 @@
           "features": "Feature checklist with check icons",
           "cta": "Primary CTA with aura-glow effect"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, icon } from 'decantr/components';",
-        "example": "function TierUpgradeCardHighlighted({ tier, onUpgrade }) {\n  const { div, h3, span, p, ul, li } = tags;\n\n  return Card({ class: css('_flex _col _w[320px] _border2 _borderprimary _relative') },\n    div({ class: css('_h1 _wfull _bgprimary') }),\n    div({ class: css('_p6 _flex _col _gap3') },\n      div({ class: css('_flex _aic _gap2') },\n        h3({ class: css('_heading4') }, tier.name),\n        Badge({ variant: 'primary', size: 'xs' }, 'Recommended')\n      ),\n      div({ class: css('_flex _aic _baseline _gap1') },\n        span({ class: css('_heading2') }, `$${tier.price}`),\n        span({ class: css('_textsm _fgmuted') }, '/mo')\n      ),\n      p({ class: css('_bodysm _fgmuted') }, tier.description)\n    ),\n    div({ class: css('_px6 _pb6 _flex _col _gap2 _flex1') },\n      ul({ class: css('_flex _col _gap2 _list-none _p0 _m0') },\n        ...tier.features.map(f =>\n          li({ class: css('_flex _aic _gap2 _textsm') },\n            icon('check', { size: '0.875rem', class: css('_fgprimary') }), span({}, f))\n        )\n      )\n    ),\n    div({ class: css('_p6 _pt0') },\n      Button({ variant: 'primary', size: 'md', class: css('_wfull aura-glow'), onclick: () => onUpgrade(tier.id) },\n        `Upgrade to ${tier.name}`\n      )\n    )\n  );\n}"
       }
     },
     "horizontal": {
       "description": "Horizontal tier comparison row for compact billing views. Plan info on left, features in middle, CTA on right.",
-      "components": ["Badge", "Button", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "row",
         "atoms": "_flex _aic _gap6 _px6 _py4 _borderb _bordermuted/10",
@@ -75,10 +89,6 @@
           "features": "Key features as horizontal Badge list",
           "cta": "Upgrade Button on right"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, icon } from 'decantr/components';",
-        "example": "function TierUpgradeCardHorizontal({ tier, isCurrentTier, onUpgrade }) {\n  const { div, span, h4 } = tags;\n\n  return div({ class: css('_flex _aic _gap6 _px6 _py4 _borderb _bordermuted/10') },\n    div({ class: css('_flex _col _gap1 _w[200px] _shrink0') },\n      h4({ class: css('_textsm _fontmedium') }, tier.name),\n      span({ class: css('_heading4') }, tier.price === 0 ? 'Free' : `$${tier.price}/mo`)\n    ),\n    div({ class: css('_flex _wrap _gap1 _flex1') },\n      ...tier.features.slice(0, 4).map(f => Badge({ variant: 'outline', size: 'xs' }, f))\n    ),\n    Button({\n      variant: isCurrentTier ? 'outline' : 'primary',\n      size: 'sm',\n      disabled: isCurrentTier,\n      onclick: () => onUpgrade(tier.id)\n    }, isCurrentTier ? 'Current' : 'Upgrade')\n  );\n}"
       }
     }
   },
@@ -92,9 +102,5 @@
       "features": "Feature checklist",
       "cta": "Upgrade button"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, icon } from 'decantr/components';",
-    "example": "function TierUpgradeCard({ tier, onUpgrade }) {\n  const { div, h3, span, ul, li } = tags;\n\n  return Card({ class: css('_flex _col _w[320px]') },\n    div({ class: css('_p6 _flex _col _gap3') },\n      h3({ class: css('_heading4') }, tier.name),\n      span({ class: css('_heading2') }, `$${tier.price}/mo`)\n    ),\n    div({ class: css('_px6 _pb6 _flex1') },\n      ul({ class: css('_flex _col _gap2 _list-none _p0') },\n        ...tier.features.map(f => li({ class: css('_flex _aic _gap2 _textsm') }, icon('check'), f))\n      )\n    ),\n    div({ class: css('_p6 _pt0') },\n      Button({ variant: 'primary', class: css('_wfull'), onclick: () => onUpgrade(tier.id) }, 'Upgrade')\n    )\n  );\n}"
   }
 }

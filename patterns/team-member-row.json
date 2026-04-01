@@ -10,7 +10,13 @@
     "recipes": {},
     "styles": {},
     "requires_core": {
-      "components": ["Avatar", "Badge", "Button", "Select", "icon"],
+      "components": [
+        "Avatar",
+        "Badge",
+        "Button",
+        "Select",
+        "icon"
+      ],
       "charts": []
     }
   },
@@ -26,7 +32,13 @@
   "presets": {
     "standard": {
       "description": "Full team member row with avatar, name, email, role badge, joined date, and role-change/remove actions.",
-      "components": ["Avatar", "Badge", "Button", "Select", "icon"],
+      "components": [
+        "Avatar",
+        "Badge",
+        "Button",
+        "Select",
+        "icon"
+      ],
       "layout": {
         "layout": "row",
         "atoms": "_flex _aic _gap4 _px4 _py4 _borderb _bordermuted/10",
@@ -37,15 +49,16 @@
           "joined": "Join date with _textxs _fgmuted",
           "actions": "Role Select dropdown and Remove Button"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Avatar, Badge, Button, Select, icon } from 'decantr/components';",
-        "example": "function TeamMemberRow({ member, isAdmin, onChangeRole, onRemove }) {\n  const { div, span } = tags;\n  const roleVariant = { owner: 'primary', admin: 'secondary', member: 'outline' };\n\n  return div({ class: css('_flex _aic _gap4 _px4 _py4 _borderb _bordermuted/10') },\n    Avatar({ src: member.avatar, name: member.name, size: 'md' }),\n    div({ class: css('_flex _col _gap1 _flex1 _min-w0') },\n      span({ class: css('_textsm _fontmedium _truncate') }, member.name),\n      span({ class: css('_textxs _fgmuted _truncate') }, member.email)\n    ),\n    Badge({ variant: roleVariant[member.role] || 'outline', size: 'sm' }, member.role),\n    span({ class: css('_textxs _fgmuted _shrink0') }, `Joined ${member.joined_at}`),\n    isAdmin && member.role !== 'owner'\n      ? div({ class: css('_flex _gap2 _shrink0') },\n          Select({ size: 'sm', value: member.role, onchange: (e) => onChangeRole(member.id, e.target.value) },\n            { value: 'admin', label: 'Admin' },\n            { value: 'member', label: 'Member' }\n          ),\n          Button({ variant: 'ghost', size: 'sm', onclick: () => onRemove(member.id) },\n            icon('user-minus', { size: '0.875rem', class: css('_fgdestructive') })\n          )\n        )\n      : null\n  );\n}"
       }
     },
     "card": {
       "description": "Card-style team member for grid layouts. Avatar centered, name below, role badge, and actions.",
-      "components": ["Avatar", "Badge", "Button", "icon"],
+      "components": [
+        "Avatar",
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _aic _gap3 _p4 _border _bordermuted/20 _r3 _tc",
@@ -56,15 +69,15 @@
           "role": "Role Badge centered",
           "actions": "Action buttons row"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Avatar, Badge, Button, icon } from 'decantr/components';",
-        "example": "function TeamMemberRowCard({ member, isAdmin, onRemove }) {\n  const { div, span } = tags;\n  const roleVariant = { owner: 'primary', admin: 'secondary', member: 'outline' };\n\n  return div({ class: css('_flex _col _aic _gap3 _p4 _border _bordermuted/20 _r3 _tc') },\n    Avatar({ src: member.avatar, name: member.name, size: 'lg' }),\n    span({ class: css('_textsm _fontmedium') }, member.name),\n    span({ class: css('_textxs _fgmuted') }, member.email),\n    Badge({ variant: roleVariant[member.role] || 'outline', size: 'sm' }, member.role),\n    isAdmin && member.role !== 'owner'\n      ? Button({ variant: 'ghost', size: 'xs', onclick: () => onRemove(member.id) },\n          icon('user-minus', { size: '0.75rem' }), ' Remove'\n        )\n      : null\n  );\n}"
       }
     },
     "invite": {
       "description": "Pending invitation row showing email, invited-by, expiry, and resend/cancel actions.",
-      "components": ["Badge", "Button", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "row",
         "atoms": "_flex _aic _gap4 _px4 _py3 _borderb _bordermuted/10 _bgmuted/5",
@@ -74,10 +87,6 @@
           "status": "Pending Badge with expiry date",
           "actions": "Resend and cancel Buttons"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, icon } from 'decantr/components';",
-        "example": "function TeamMemberRowInvite({ invite, onResend, onCancel }) {\n  const { div, span } = tags;\n\n  return div({ class: css('_flex _aic _gap4 _px4 _py3 _borderb _bordermuted/10 _bgmuted/5') },\n    icon('mail', { size: '1.25rem', class: css('_fgmuted') }),\n    span({ class: css('_textsm _flex1') }, invite.email),\n    Badge({ variant: 'warning', size: 'xs' }, `Expires ${invite.expires_at}`),\n    div({ class: css('_flex _gap2') },\n      Button({ variant: 'ghost', size: 'xs', onclick: () => onResend(invite.id) }, icon('refresh-cw', { size: '0.75rem' }), ' Resend'),\n      Button({ variant: 'ghost', size: 'xs', onclick: () => onCancel(invite.id) }, icon('x', { size: '0.75rem' }), ' Cancel')\n    )\n  );\n}"
       }
     }
   },
@@ -91,9 +100,5 @@
       "joined": "Join date",
       "actions": "Management actions"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Avatar, Badge, Button, icon } from 'decantr/components';",
-    "example": "function TeamMemberRow({ member }) {\n  const { div, span } = tags;\n\n  return div({ class: css('_flex _aic _gap4 _px4 _py4 _borderb _bordermuted/10') },\n    Avatar({ src: member.avatar, name: member.name, size: 'md' }),\n    div({ class: css('_flex _col _gap1 _flex1') },\n      span({ class: css('_textsm _fontmedium') }, member.name),\n      span({ class: css('_textxs _fgmuted') }, member.email)\n    ),\n    Badge({ variant: 'outline', size: 'sm' }, member.role)\n  );\n}"
   }
 }

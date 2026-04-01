@@ -13,7 +13,13 @@
     "recipes": {},
     "styles": {},
     "requires_core": {
-      "components": ["Card", "Badge", "Button", "Avatar", "icon"],
+      "components": [
+        "Card",
+        "Badge",
+        "Button",
+        "Avatar",
+        "icon"
+      ],
       "charts": []
     }
   },
@@ -32,7 +38,16 @@
   "presets": {
     "standard": {
       "description": "Full moderation card with content preview, submitter avatar, reputation score, submission date, and approve/reject buttons.",
-      "components": ["Card", "CardHeader", "CardBody", "CardFooter", "Badge", "Button", "Avatar", "icon"],
+      "components": [
+        "Card",
+        "CardHeader",
+        "CardBody",
+        "CardFooter",
+        "Badge",
+        "Button",
+        "Avatar",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap0 _border _bordermuted/20 _r3 _overflow[hidden]",
@@ -43,15 +58,16 @@
           "notes": "Optional admin notes textarea",
           "actions": "Approve Button (success), Reject Button (destructive), View Detail link"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, Avatar, icon } from 'decantr/components';",
-        "example": "function ModerationQueueItem({ item, onApprove, onReject }) {\n  const { div, h3, p, span, a, time } = tags;\n\n  return Card({ class: css('_flex _col') },\n    div({ class: css('_flex _aic _jcsb _p4 _borderb _bordermuted/20') },\n      div({ class: css('_flex _aic _gap2') },\n        Badge({ variant: 'outline', size: 'sm' }, item.type),\n        h3({ class: css('_textsm _fontmedium') }, item.name),\n        Badge({ variant: 'warning', size: 'xs' }, 'Pending')\n      ),\n      time({ class: css('_textxs _fgmuted') }, item.submitted_at)\n    ),\n    div({ class: css('_flex _aic _gap3 _px4 _py3 _bgmuted/5') },\n      Avatar({ src: item.submitter.avatar, size: 'sm' }),\n      div({ class: css('_flex _col _gap1') },\n        span({ class: css('_textsm _fontmedium') }, item.submitter.name),\n        div({ class: css('_flex _aic _gap2') },\n          Badge({ variant: item.submitter.trusted ? 'success' : 'secondary', size: 'xs' },\n            item.submitter.trusted ? 'Trusted' : `Rep: ${item.submitter.reputation}`\n          )\n        )\n      )\n    ),\n    div({ class: css('_p4 _flex _col _gap2') },\n      p({ class: css('_bodysm _fgmuted') }, item.description),\n      a({ href: `/admin/moderation/${item.id}`, class: css('_textsm _fgprimary _hover:underline') }, 'View full content')\n    ),\n    div({ class: css('_flex _aic _jcfe _gap2 _p4 _bordert _bordermuted/20') },\n      Button({ variant: 'outline', size: 'sm', onclick: () => onReject(item.id) },\n        icon('x', { size: '0.875rem' }), ' Reject'\n      ),\n      Button({ variant: 'primary', size: 'sm', onclick: () => onApprove(item.id) },\n        icon('check', { size: '0.875rem' }), ' Approve'\n      )\n    )\n  );\n}"
       }
     },
     "compact": {
       "description": "Compact single-row moderation item for dense queue views. Inline approve/reject icons.",
-      "components": ["Badge", "Button", "Avatar", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "Avatar",
+        "icon"
+      ],
       "layout": {
         "layout": "row",
         "atoms": "_flex _aic _gap4 _px4 _py3 _borderb _bordermuted/10",
@@ -61,10 +77,6 @@
           "reputation": "Reputation score, compact",
           "actions": "Approve/reject icon Buttons"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, Avatar, icon } from 'decantr/components';",
-        "example": "function ModerationQueueItemCompact({ item, onApprove, onReject }) {\n  const { div, span } = tags;\n\n  return div({ class: css('_flex _aic _gap4 _px4 _py3 _borderb _bordermuted/10') },\n    Avatar({ src: item.submitter.avatar, size: 'xs' }),\n    div({ class: css('_flex _aic _gap2 _flex1 _min-w0') },\n      Badge({ variant: 'outline', size: 'xs' }, item.type),\n      span({ class: css('_textsm _fontmedium _truncate') }, item.name)\n    ),\n    Badge({ variant: 'secondary', size: 'xs' }, `${item.submitter.reputation}`),\n    div({ class: css('_flex _gap1') },\n      Button({ variant: 'ghost', size: 'xs', onclick: () => onReject(item.id) }, icon('x', { size: '0.875rem', class: css('_fgdestructive') })),\n      Button({ variant: 'ghost', size: 'xs', onclick: () => onApprove(item.id) }, icon('check', { size: '0.875rem', class: css('_fgsuccess') }))\n    )\n  );\n}"
       }
     }
   },
@@ -77,9 +89,5 @@
       "preview": "Description and content preview",
       "actions": "Approve and reject buttons"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, Button, Avatar, icon } from 'decantr/components';",
-    "example": "function ModerationQueueItem({ item, onApprove, onReject }) {\n  const { div, h3, p, span } = tags;\n\n  return Card({ class: css('_flex _col') },\n    div({ class: css('_flex _aic _gap2 _p4') },\n      Badge({ variant: 'outline', size: 'sm' }, item.type),\n      h3({ class: css('_textsm _fontmedium') }, item.name),\n      Badge({ variant: 'warning', size: 'xs' }, 'Pending')\n    ),\n    div({ class: css('_p4') }, p({ class: css('_bodysm _fgmuted') }, item.description)),\n    div({ class: css('_flex _jcfe _gap2 _p4') },\n      Button({ variant: 'outline', size: 'sm' }, icon('x'), ' Reject'),\n      Button({ variant: 'primary', size: 'sm' }, icon('check'), ' Approve')\n    )\n  );\n}"
   }
 }

@@ -12,7 +12,12 @@
     "recipes": {},
     "styles": {},
     "requires_core": {
-      "components": ["Badge", "Button", "Chip", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon"
+      ],
       "charts": []
     }
   },
@@ -27,7 +32,12 @@
   "presets": {
     "standard": {
       "description": "Full-width hero with content name, namespace badge, type chip, description, version, and action buttons.",
-      "components": ["Badge", "Button", "Chip", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap4 _py8 _px6 _borderb _bordermuted/20",
@@ -39,15 +49,15 @@
           "meta-row": "Version, author, updated date, download count",
           "action-group": "Copy JSON Button, Use in Project Button, share icon"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, Chip, icon } from 'decantr/components';",
-        "example": "function ContentDetailHero({ item }) {\n  const { div, h1, p, span, nav, a } = tags;\n\n  return div({ class: css('_flex _col _gap4 _py8 _px6 _borderb _bordermuted/20') },\n    nav({ class: css('_flex _aic _gap2 _textxs _fgmuted') },\n      a({ href: '/registry', class: css('_hover:fgfg') }, 'Registry'),\n      span({}, '/'),\n      a({ href: `/registry/${item.type}`, class: css('_hover:fgfg') }, item.type),\n      span({}, '/'),\n      span({ class: css('_fgfg') }, item.name)\n    ),\n    div({ class: css('_flex _aic _gap2') },\n      Chip({ size: 'sm' }, item.type),\n      Badge({ variant: item.namespace === '@official' ? 'primary' : 'secondary', size: 'sm' }, item.namespace)\n    ),\n    h1({ class: css('_heading2') }, item.name),\n    p({ class: css('_body _fgmuted _mw[720px]') }, item.description),\n    div({ class: css('_flex _aic _gap4 _textxs _fgmuted') },\n      span({}, `v${item.version}`),\n      span({}, `Updated ${item.updated_at}`)\n    ),\n    div({ class: css('_flex _gap3') },\n      Button({ variant: 'primary', size: 'sm' }, icon('copy', { size: '1em' }), ' Copy JSON'),\n      Button({ variant: 'outline', size: 'sm' }, icon('download', { size: '1em' }), ' Use in Project'),\n      Button({ variant: 'ghost', size: 'sm' }, icon('share', { size: '1em' }))\n    )\n  );\n}"
       }
     },
     "compact": {
       "description": "Compact hero for inline/modal views with minimal spacing.",
-      "components": ["Badge", "Button", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap3 _py4 _px4",
@@ -57,10 +67,6 @@
           "description": "Short description with _bodysm _fgmuted",
           "actions": "Copy and use buttons, compact"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, icon } from 'decantr/components';",
-        "example": "function ContentDetailHeroCompact({ item }) {\n  const { div, h2, p } = tags;\n\n  return div({ class: css('_flex _col _gap3 _py4 _px4') },\n    div({ class: css('_flex _aic _gap2') },\n      Badge({ variant: 'outline', size: 'xs' }, item.type),\n      Badge({ variant: 'primary', size: 'xs' }, item.namespace)\n    ),\n    h2({ class: css('_heading3') }, item.name),\n    p({ class: css('_bodysm _fgmuted') }, item.description),\n    div({ class: css('_flex _gap2') },\n      Button({ variant: 'primary', size: 'xs' }, icon('copy', { size: '0.75rem' }), ' Copy'),\n      Button({ variant: 'outline', size: 'xs' }, icon('download', { size: '0.75rem' }), ' Use')\n    )\n  );\n}"
       }
     }
   },
@@ -75,9 +81,5 @@
       "meta-row": "Version, author, date",
       "action-group": "Copy, use, share buttons"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, Chip, icon } from 'decantr/components';",
-    "example": "function ContentDetailHero({ item }) {\n  const { div, h1, p, span, nav, a } = tags;\n\n  return div({ class: css('_flex _col _gap4 _py8 _px6 _borderb _bordermuted/20') },\n    nav({ class: css('_flex _aic _gap2 _textxs _fgmuted') },\n      a({ href: '/registry' }, 'Registry'), span({}, '/'), span({}, item.name)\n    ),\n    div({ class: css('_flex _aic _gap2') },\n      Chip({ size: 'sm' }, item.type),\n      Badge({ variant: 'primary', size: 'sm' }, item.namespace)\n    ),\n    h1({ class: css('_heading2') }, item.name),\n    p({ class: css('_body _fgmuted') }, item.description),\n    div({ class: css('_flex _gap3') },\n      Button({ variant: 'primary', size: 'sm' }, icon('copy'), ' Copy JSON'),\n      Button({ variant: 'outline', size: 'sm' }, icon('download'), ' Use in Project')\n    )\n  );\n}"
   }
 }

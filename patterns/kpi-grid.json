@@ -42,10 +42,6 @@
           "value": "Primary metric value with _heading2 styling",
           "trend": "Change percentage Badge with positive/negative variant"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, icon } from 'decantr/components';",
-        "example": "function KpiGrid({ items }) {\n  const { div, span, p } = tags;\n\n  const kpis = items || [\n    { label: 'Total Revenue', value: '$45,231', change: '+20.1%', trend: 'up', ic: 'dollar-sign' },\n    { label: 'Subscriptions', value: '2,350', change: '+180', trend: 'up', ic: 'users' },\n    { label: 'Active Now', value: '573', change: '+19', trend: 'up', ic: 'activity' },\n    { label: 'Bounce Rate', value: '24.5%', change: '-4.3%', trend: 'down', ic: 'trending-down' },\n  ];\n\n  return div({ class: css('_grid _gc2 _lg:gc4 _gap4') },\n    ...kpis.map(kpi =>\n      Card({ class: css('_flex _col _gap2 _p4') },\n        div({ class: css('_flex _jcsb _aic') },\n          span({ class: css('_textsm _fgmuted') }, kpi.label),\n          icon(kpi.ic, { size: '1rem', class: css('_fgmuted') })\n        ),\n        p({ class: css('_heading2') }, kpi.value),\n        Badge({ variant: kpi.trend === 'up' ? 'default' : 'secondary' }, kpi.change)\n      )\n    )\n  );\n}"
       }
     },
     "compact": {
@@ -61,10 +57,6 @@
           "value": "Primary metric value with _heading4 styling",
           "sparkline": "Placeholder area for inline sparkline chart"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card } from 'decantr/components';",
-        "example": "function KpiGridCompact({ items }) {\n  const { div, span, p } = tags;\n\n  const kpis = items || [\n    { label: 'Revenue', value: '$45.2k' },\n    { label: 'Users', value: '2,350' },\n    { label: 'Active', value: '573' },\n    { label: 'Bounce', value: '24.5%' },\n  ];\n\n  return div({ class: css('_grid _gc2 _lg:gc4 _gap2') },\n    ...kpis.map(kpi =>\n      Card({ class: css('_flex _col _gap1 _p3') },\n        span({ class: css('_textxs _fgmuted') }, kpi.label),\n        p({ class: css('_heading4') }, kpi.value),\n        div({ class: css('_h6 _bgmuted/10 _r1') })\n      )\n    )\n  );\n}"
       }
     }
   },
@@ -77,10 +69,6 @@
       "value": "Primary metric value with _heading2 styling",
       "trend": "Change percentage Badge with positive/negative variant"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge, icon } from 'decantr/components';",
-    "example": "function KpiGrid({ items }) {\n  const { div, span, p } = tags;\n\n  const kpis = items || [\n    { label: 'Total Revenue', value: '$45,231', change: '+20.1%', trend: 'up', ic: 'dollar-sign' },\n    { label: 'Subscriptions', value: '2,350', change: '+180', trend: 'up', ic: 'users' },\n    { label: 'Active Now', value: '573', change: '+19', trend: 'up', ic: 'activity' },\n    { label: 'Bounce Rate', value: '24.5%', change: '-4.3%', trend: 'down', ic: 'trending-down' },\n  ];\n\n  return div({ class: css('_grid _gc2 _lg:gc4 _gap4') },\n    ...kpis.map(kpi =>\n      Card({ class: css('_flex _col _gap2 _p4') },\n        div({ class: css('_flex _jcsb _aic') },\n          span({ class: css('_textsm _fgmuted') }, kpi.label),\n          icon(kpi.ic, { size: '1rem', class: css('_fgmuted') })\n        ),\n        p({ class: css('_heading2') }, kpi.value),\n        Badge({ variant: kpi.trend === 'up' ? 'default' : 'secondary' }, kpi.change)\n      )\n    )\n  );\n}"
   },
   "io": {
     "produces": [

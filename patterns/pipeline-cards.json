@@ -39,10 +39,6 @@
           "step-description": "Step body text with _fs[0.85rem] _lh[1.6] _mb4 _fgwhite/75. Brief description of what happens in this step.",
           "step-visual": "Optional inner content area with _rounded[10px] _p3 and subtle tinted background matching the card's accent color at ~7% opacity. Can contain: chat bubbles, tag lists, code snippets, layer stacks, pattern compositions, mini code blocks, or check results."
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-        "example": "function PipelineCardsOutlined() {\n  const { section, div, h2, p, span } = tags;\n  const steps = [\n    { num: 1, name: 'Intent', desc: 'User describes what they want to build.', color: '#F58882' },\n    { num: 2, name: 'Interpret', desc: 'Parse intent into structured form.', color: '#FDA303' },\n    { num: 3, name: 'Decompose', desc: 'Split into theme, structure, features.', color: '#0AF3EB' },\n    { num: 4, name: 'Specify', desc: 'Write the machine-readable spec.', color: '#00E0AB' },\n    { num: 5, name: 'Compose', desc: 'Resolve layouts from patterns.', color: '#FCD021' },\n  ];\n\n  return section({ class: css('_py30 _relative _z1') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb4') }, 'The Pipeline'),\n      p({ class: css('_text[center] _fgmuted _mx[auto] _mb14') }, 'How it works.'),\n      div({ class: css('_grid _gc2 _gap6 _mw[920px] _mx[auto]') },\n        steps.map(s =>\n          Card({ class: css('_rounded[16px] _p7 _pt8 _relative _border[3px_solid] _bgtransparent _transition'), style: `border-color:${s.color}` },\n            Badge({ class: css('_inline-flex _items[center] _justify[center] _w8 _h8 _rounded[50%] _mono _fs[0.8rem] _fw700 _mb3'), style: `background:${s.color};color:#0D0D1A` }, s.num),\n            div({ class: css('_fs[1.15rem] _fw700 _mb2'), style: `color:${s.color}` }, s.name),\n            p({ class: css('_fs[0.85rem] _lh[1.6] _fgwhite/75') }, s.desc)\n          )\n        )\n      )\n    )\n  );\n}"
       }
     },
     "filled": {
@@ -60,10 +56,6 @@
           "step-description": "Step body with _fs[0.85rem] _lh[1.6] _mb4 _fgwhite/85",
           "step-visual": "Optional content area with _rounded[10px] _p3 _bgblack/20"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-        "example": "function PipelineCardsFilled() {\n  const { section, div, h2, p } = tags;\n\n  return section({ class: css('_py30 _relative _z1') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb14') }, 'The Pipeline'),\n      div({ class: css('_grid _gc2 _gap6 _mw[920px] _mx[auto]') },\n        Card({ class: css('_rounded[16px] _p7'), style: 'background:linear-gradient(135deg,#F58882,#D06060)' },\n          Badge({ class: css('_rounded[50%] _w8 _h8 _bgblack/20 _fgwhite _fw700 _mb3') }, '1'),\n          div({ class: css('_fs[1.15rem] _fw700 _mb2 _fgwhite') }, 'Step Name'),\n          p({ class: css('_fs[0.85rem] _fgwhite/85') }, 'Step description.')\n        )\n      )\n    )\n  );\n}"
       }
     },
     "horizontal": {
@@ -81,10 +73,6 @@
           "step-description": "Step body text, muted white",
           "step-visual": "Optional inner content block with tinted background"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-        "example": "function PipelineCardsHorizontal() {\n  const { section, div, h2, p } = tags;\n\n  return section({ class: css('_py30 _relative _z1') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb14') }, 'The Pipeline'),\n      div({ class: css('_flex _row _gap6 _overflow[auto] _snap[x_mandatory] _pb4') },\n        Card({ class: css('_rounded[16px] _p7 _min-w[280px] _snap[start] _border[3px_solid] _bgtransparent _shrink0'), style: 'border-color:#F58882' },\n          Badge({ class: css('_rounded[50%] _w8 _h8 _fw700 _mb3'), style: 'background:#F58882;color:#0D0D1A' }, '1'),\n          div({ class: css('_fw700 _mb2'), style: 'color:#F58882' }, 'Step Name'),\n          p({ class: css('_fs[0.85rem] _fgwhite/75') }, 'Description.')\n        )\n      )\n    )\n  );\n}"
       }
     }
   },
@@ -97,10 +85,6 @@
       "step-description": "Step description text",
       "step-visual": "Optional visual content inside the card"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-    "example": "function PipelineCards() {\n  const { section, div, h2, p } = tags;\n\n  return section({ class: css('_py30 _relative _z1') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb14') }, 'Process Steps'),\n      div({ class: css('_grid _gc2 _gap6 _mw[920px] _mx[auto]') },\n        // Repeat Card with Badge for each step, rotating colors\n      )\n    )\n  );\n}"
   },
   "io": {
     "consumes": [],

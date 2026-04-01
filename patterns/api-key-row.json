@@ -10,7 +10,11 @@
     "recipes": {},
     "styles": {},
     "requires_core": {
-      "components": ["Badge", "Button", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "charts": []
     }
   },
@@ -24,7 +28,11 @@
   "presets": {
     "standard": {
       "description": "Full API key row with name, masked key, scope badges, dates, and copy/revoke actions.",
-      "components": ["Badge", "Button", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "row",
         "atoms": "_flex _aic _gap4 _px4 _py4 _borderb _bordermuted/10",
@@ -35,15 +43,15 @@
           "dates": "Created and last-used timestamps",
           "actions": "Copy key Button and Revoke Button (destructive variant)"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, icon } from 'decantr/components';",
-        "example": "function ApiKeyRow({ apiKey, onCopy, onRevoke }) {\n  const { div, span } = tags;\n  const masked = apiKey.key_prefix + '••••••••••••••••';\n\n  return div({ class: css('_flex _aic _gap4 _px4 _py4 _borderb _bordermuted/10') },\n    icon('key', { size: '1.25rem', class: css('_fgmuted _shrink0') }),\n    div({ class: css('_flex _col _gap1 _flex1 _min-w0') },\n      span({ class: css('_textsm _fontmedium') }, apiKey.name),\n      span({ class: css('_textxs _mono _fgmuted _truncate') }, masked)\n    ),\n    div({ class: css('_flex _gap1 _shrink0') },\n      ...apiKey.scopes.map(scope =>\n        Badge({ variant: 'outline', size: 'xs' }, scope)\n      )\n    ),\n    div({ class: css('_flex _col _gap1 _shrink0 _textxs _fgmuted _text-right') },\n      span({}, `Created ${apiKey.created_at}`),\n      span({}, apiKey.last_used_at ? `Last used ${apiKey.last_used_at}` : 'Never used')\n    ),\n    div({ class: css('_flex _gap2 _shrink0') },\n      Button({ variant: 'ghost', size: 'sm', onclick: () => onCopy(apiKey) },\n        icon('copy', { size: '0.875rem' })\n      ),\n      Button({ variant: 'ghost', size: 'sm', onclick: () => onRevoke(apiKey.id) },\n        icon('trash', { size: '0.875rem', class: css('_fgdestructive') })\n      )\n    )\n  );\n}"
       }
     },
     "card": {
       "description": "Card-style API key display for mobile-friendly layouts. Stacked vertically.",
-      "components": ["Badge", "Button", "icon"],
+      "components": [
+        "Badge",
+        "Button",
+        "icon"
+      ],
       "layout": {
         "layout": "stack",
         "atoms": "_flex _col _gap3 _p4 _border _bordermuted/20 _r3",
@@ -53,10 +61,6 @@
           "meta": "Created and last-used dates",
           "actions": "Copy and revoke buttons, full width"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, icon } from 'decantr/components';",
-        "example": "function ApiKeyRowCard({ apiKey, onCopy, onRevoke }) {\n  const { div, span } = tags;\n  const masked = apiKey.key_prefix + '••••••••••••••••';\n\n  return div({ class: css('_flex _col _gap3 _p4 _border _bordermuted/20 _r3') },\n    div({ class: css('_flex _aic _gap2') },\n      icon('key', { size: '1rem', class: css('_fgmuted') }),\n      span({ class: css('_textsm _fontmedium') }, apiKey.name)\n    ),\n    span({ class: css('_textxs _mono _fgmuted _bgmuted/10 _px2 _py1 _r1') }, masked),\n    div({ class: css('_flex _wrap _gap1') },\n      ...apiKey.scopes.map(s => Badge({ variant: 'outline', size: 'xs' }, s))\n    ),\n    div({ class: css('_flex _aic _jcsb') },\n      span({ class: css('_textxs _fgmuted') }, `Created ${apiKey.created_at}`),\n      div({ class: css('_flex _gap2') },\n        Button({ variant: 'outline', size: 'xs', onclick: () => onCopy(apiKey) }, icon('copy', { size: '0.75rem' }), ' Copy'),\n        Button({ variant: 'destructive', size: 'xs', onclick: () => onRevoke(apiKey.id) }, icon('trash', { size: '0.75rem' }), ' Revoke')\n      )\n    )\n  );\n}"
       }
     }
   },
@@ -70,9 +74,5 @@
       "dates": "Created and last-used",
       "actions": "Copy and revoke buttons"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Badge, Button, icon } from 'decantr/components';",
-    "example": "function ApiKeyRow({ apiKey, onCopy, onRevoke }) {\n  const { div, span } = tags;\n  const masked = apiKey.key_prefix + '••••••••••••••••';\n\n  return div({ class: css('_flex _aic _gap4 _px4 _py4 _borderb _bordermuted/10') },\n    icon('key', { size: '1.25rem', class: css('_fgmuted') }),\n    div({ class: css('_flex _col _gap1 _flex1') },\n      span({ class: css('_textsm _fontmedium') }, apiKey.name),\n      span({ class: css('_textxs _mono _fgmuted') }, masked)\n    ),\n    div({ class: css('_flex _gap2') },\n      Button({ variant: 'ghost', size: 'sm', onclick: () => onCopy(apiKey) }, icon('copy')),\n      Button({ variant: 'ghost', size: 'sm', onclick: () => onRevoke(apiKey.id) }, icon('trash'))\n    )\n  );\n}"
   }
 }

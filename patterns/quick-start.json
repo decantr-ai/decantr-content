@@ -38,10 +38,6 @@
           "step-title": "Step heading with h3 _fs[1rem] _fw700 _mb3 _fgwhite. Brief title like 'Configure', 'Prompt', 'Build'.",
           "step-content": "Content area that varies by step type. Code block: _bgblack/30 _rounded[8px] _p3 _mono _fs[0.7rem] _lh[1.7] _overflow[auto] _whitespace[pre] _fgwhite/85. Chat bubble: _bgblack/20 _rounded[10px_10px_10px_2px] _p4 _fs[0.82rem] _lh[1.5] _text[left]. Output block: _bgblack/30 _rounded[8px] _p3 _mono _fs[0.68rem] _lh[1.7] _whitespace[pre] _overflow[auto] _fgwhite/85."
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-        "example": "function QuickStartCards() {\n  const { section, div, h2, p, h3, pre, button } = tags;\n\n  return section({ class: css('_py30 _relative _z1') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb4') }, 'Quick Start'),\n      p({ class: css('_text[center] _fgmuted _mx[auto] _mb14') }, 'Three steps to get started.'),\n      // Step cards row\n      div({ class: css('_flex _gap6 _mw[920px] _mx[auto] _mb12') },\n        // Step 1 - Config (coral gradient)\n        Card({ class: css('_flex1 _rounded[16px] _p7 _relative _transition'), style: 'background:linear-gradient(135deg,#F58882,#D06060)' },\n          Badge({ class: css('_w10 _h10 _rounded[50%] _flex _items[center] _justify[center] _fw700 _mb4 _bgblack/20 _fgwhite') }, '1'),\n          h3({ class: css('_fw700 _mb3 _fgwhite') }, 'Configure'),\n          pre({ class: css('_bgblack/30 _rounded[8px] _p3 _mono _fs[0.7rem] _lh[1.7] _fgwhite/85 _whitespace[pre]') }, 'npx decantr init\\n# creates decantr.essence.json')\n        ),\n        // Step 2 - Prompt (amber gradient)\n        Card({ class: css('_flex1 _rounded[16px] _p7 _relative _transition'), style: 'background:linear-gradient(135deg,#FDA303,#D08800)' },\n          Badge({ class: css('_w10 _h10 _rounded[50%] _flex _items[center] _justify[center] _fw700 _mb4 _bgblack/20 _fgwhite') }, '2'),\n          h3({ class: css('_fw700 _mb3 _fgwhite') }, 'Prompt'),\n          div({ class: css('_bgblack/20 _rounded[10px_10px_10px_2px] _p4 _fs[0.82rem] _lh[1.5]') }, '\"Build me a SaaS dashboard...\"')\n        ),\n        // Step 3 - Build (purple gradient)\n        Card({ class: css('_flex1 _rounded[16px] _p7 _relative _transition'), style: 'background:linear-gradient(135deg,#6500C6,#4A0090)' },\n          Badge({ class: css('_w10 _h10 _rounded[50%] _flex _items[center] _justify[center] _fw700 _mb4 _bgblack/20 _fgwhite') }, '3'),\n          h3({ class: css('_fw700 _mb3 _fgwhite') }, 'Build'),\n          pre({ class: css('_bgblack/30 _rounded[8px] _p3 _mono _fs[0.68rem] _lh[1.7] _fgwhite/85 _whitespace[pre]') }, '✓ Theme applied\\n✓ Structure validated\\n✓ Guard active')\n        )\n      ),\n      // Tabbed config section\n      div({ class: css('_mw[640px] _mx[auto]') },\n        div({ class: css('_flex _gap0 _mb[-1px] _relative _z1') },\n          button({ class: css('_bgtransparent _border _border[rgba(255,255,255,0.1)] _borderbottom[none] _fgcyan _py2 _px5 _fs[0.82rem] _fw600 _rounded[8px_8px_0_0]') }, 'Claude'),\n          button({ class: css('_bgtransparent _border _border[rgba(255,255,255,0.1)] _borderbottom[none] _fgmuted _py2 _px5 _fs[0.82rem] _fw600 _rounded[8px_8px_0_0]') }, 'Cursor')\n        ),\n        pre({ class: css('_bgcodebg _border _border[rgba(255,255,255,0.08)] _rounded[0_8px_8px_8px] _p5 _mono _fs[0.75rem] _lh[1.7] _fgmuted _overflow[auto] _whitespace[pre]') }, '// Framework-specific config here')\n      )\n    )\n  );\n}"
       }
     },
     "vertical": {
@@ -58,10 +54,6 @@
           "step-title": "Step heading with _fw700 _fgwhite _mb3",
           "step-content": "Content block: code block, chat bubble, or output depending on the step"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-        "example": "function QuickStartVertical() {\n  const { section, div, h2, p, h3, pre } = tags;\n\n  return section({ class: css('_py30') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb14') }, 'Quick Start'),\n      div({ class: css('_flex _col _gap6 _mw[640px] _mx[auto]') },\n        Card({ class: css('_rounded[16px] _p7'), style: 'background:linear-gradient(135deg,#F58882,#D06060)' },\n          Badge({ class: css('_rounded[50%] _w10 _h10 _bgblack/20 _fgwhite _fw700 _mb4') }, '1'),\n          h3({ class: css('_fw700 _mb3 _fgwhite') }, 'Configure'),\n          pre({ class: css('_bgblack/30 _rounded[8px] _p3 _mono _fs[0.7rem] _fgwhite/85') }, 'npx decantr init')\n        )\n      )\n    )\n  );\n}"
       }
     }
   },
@@ -73,10 +65,6 @@
       "step-title": "Step title heading",
       "step-content": "Code block, chat bubble, or output content"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card, Badge } from 'decantr/components';",
-    "example": "function QuickStart() {\n  const { section, div, h2, p } = tags;\n\n  return section({ class: css('_py30 _relative _z1') },\n    div({ class: css('_container') },\n      h2({ class: css('_heading2 _text[center] _mb14') }, 'Quick Start'),\n      div({ class: css('_flex _gap6 _mw[920px] _mx[auto]') },\n        // 3 gradient cards with Badge numbers, titles, and tabbed config blocks\n      )\n    )\n  );\n}"
   },
   "io": {
     "consumes": [],

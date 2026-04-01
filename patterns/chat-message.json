@@ -40,10 +40,6 @@
           "timestamp": "Relative or absolute timestamp (optional)",
           "actions": "Copy, edit, delete action buttons on hover"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';",
-        "example": "function UserMessage({ message, onEdit, onDelete }) {\n  const { div, span, time } = tags;\n  const [showActions, setShowActions] = createSignal(false);\n\n  return div({ \n    class: css('_flex _jce _gap3 _py2'),\n    onmouseenter: () => setShowActions(true),\n    onmouseleave: () => setShowActions(false)\n  },\n    showActions() ? div({ class: css('_flex _gap1 _aic') },\n      Button({ variant: 'ghost', size: 'xs', onclick: onEdit }, icon('edit', { size: '14' })),\n      Button({ variant: 'ghost', size: 'xs', onclick: onDelete }, icon('trash', { size: '14' }))\n    ) : null,\n    div({ class: css('_flex _col _gap1 _maxw[70%]') },\n      div({ class: css('carbon-bubble-user _p3 _r2 _rtr0') },\n        div({ class: css('_prose') }, message.content)\n      ),\n      time({ class: css('_textsm _fgmuted _tr') }, message.timestamp)\n    )\n  );\n}"
       }
     },
     "assistant": {
@@ -63,10 +59,6 @@
           "timestamp": "Relative or absolute timestamp",
           "actions": "Copy, react, branch action buttons on hover"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Avatar, Button, icon } from 'decantr/components';",
-        "example": "function AssistantMessage({ message, onCopy, onReact }) {\n  const { div, span, time } = tags;\n  const [showActions, setShowActions] = createSignal(false);\n\n  return div({ \n    class: css('_flex _jcs _gap3 _py2'),\n    onmouseenter: () => setShowActions(true),\n    onmouseleave: () => setShowActions(false)\n  },\n    Avatar({ src: '/ai-avatar.svg', size: 'sm', class: css('_shrink0') }),\n    div({ class: css('_flex _col _gap1 _maxw[70%]') },\n      div({ class: css('carbon-bubble-ai _p3 _r2 _rtl0') },\n        div({ class: css('_prose') }, message.content)\n      ),\n      div({ class: css('_flex _aic _gap2') },\n        time({ class: css('_textsm _fgmuted') }, message.timestamp),\n        showActions() ? div({ class: css('_flex _gap1') },\n          Button({ variant: 'ghost', size: 'xs', onclick: onCopy }, icon('copy', { size: '14' })),\n          Button({ variant: 'ghost', size: 'xs', onclick: onReact }, icon('smile', { size: '14' }))\n        ) : null\n      )\n    )\n  );\n}"
       }
     },
     "system": {
@@ -80,10 +72,6 @@
         "slots": {
           "content": "System message text"
         }
-      },
-      "code": {
-        "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';",
-        "example": "function SystemMessage({ message }) {\n  const { div, span } = tags;\n\n  return div({ class: css('_flex _jcc _py2') },\n    span({ class: css('_textsm _fgmuted _bgmuted/10 _px3 _py1 _rfull') },\n      message.content\n    )\n  );\n}"
       }
     }
   },
@@ -97,9 +85,5 @@
       "content": "Full markdown rendering with code blocks, images, links",
       "actions": "Copy, edit, delete, react, branch buttons"
     }
-  },
-  "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Avatar, Button, icon } from 'decantr/components';",
-    "example": "function ChatMessage({ message, variant = 'assistant' }) {\n  const { div } = tags;\n\n  if (variant === 'user') return UserMessage({ message });\n  if (variant === 'system') return SystemMessage({ message });\n  return AssistantMessage({ message });\n}"
   }
 }
