@@ -64,5 +64,12 @@
     },
     "recipes": {},
     "styles": {}
-  }
+  },
+  "features": [
+    "realtime-data",
+    "team-management",
+    "billing",
+    "auth",
+    "search"
+  ]
 }

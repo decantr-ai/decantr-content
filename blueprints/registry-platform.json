@@ -47,7 +47,24 @@
     "styles": {}
   },
   "seo_hints": {
-    "schema_org": ["WebApplication", "SoftwareApplication"],
-    "meta_priorities": ["description", "og:image", "twitter:card"]
-  }
+    "schema_org": [
+      "WebApplication",
+      "SoftwareApplication"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:image",
+      "twitter:card"
+    ]
+  },
+  "features": [
+    "search",
+    "pagination",
+    "auth",
+    "api-keys",
+    "validation",
+    "admin",
+    "team",
+    "billing"
+  ]
 }

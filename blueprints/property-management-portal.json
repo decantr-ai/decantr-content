@@ -72,15 +72,45 @@
     }
   },
   "features": [
+    "dashboard",
+    "analytics",
+    "notifications",
+    "crud",
+    "file-upload",
+    "search",
+    "filters",
+    "communication",
+    "export",
+    "charts",
+    "date-range",
+    "kanban",
+    "drag-drop",
+    "self-service",
+    "payments",
+    "autopay",
+    "receipts",
+    "marketing",
+    "seo",
+    "responsive",
     "auth",
     "mfa",
-    "payments",
-    "file-upload",
-    "notifications",
-    "search",
-    "export",
+    "oauth",
+    "email-verification",
+    "password-reset",
+    "profile-edit",
+    "password-change",
+    "mfa-management",
+    "session-management",
     "theme-toggle",
-    "kanban"
+    "account-deletion",
+    "team-grid",
+    "values-display",
+    "form-validation",
+    "spam-protection",
+    "file-attachment",
+    "toc-navigation",
+    "print-friendly",
+    "smooth-scroll"
   ],
   "routes": {
     "/": {
@@ -215,8 +245,8 @@
     },
     "/documents": {
       "shell": "sidebar-main",
-      "archetype": "document-vault",
-      "page": "list"
+      "archetype": "property-manager",
+      "page": "documents"
     },
     "/tenant-portal": {
       "shell": "top-nav-main",
@@ -260,7 +290,15 @@
     }
   },
   "seo_hints": {
-    "schema_org": ["Organization", "WebApplication", "RealEstateAgent"],
-    "meta_priorities": ["description", "og:image", "twitter:card"]
+    "schema_org": [
+      "Organization",
+      "WebApplication",
+      "RealEstateAgent"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:image",
+      "twitter:card"
+    ]
   }
 }

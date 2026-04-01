@@ -21,5 +21,11 @@
     },
     "recipes": {},
     "styles": {}
-  }
+  },
+  "features": [
+    "auth",
+    "payments",
+    "search",
+    "analytics"
+  ]
 }

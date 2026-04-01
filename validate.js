@@ -28,6 +28,15 @@ for (const type of types) {
           errors++;
         }
       }
+      if (type === 'blueprints' && content.routes) {
+        const composeIds = (content.compose || []).map(e => typeof e === 'string' ? e : e.archetype);
+        for (const [path, route] of Object.entries(content.routes)) {
+          if (route.archetype && !composeIds.includes(route.archetype)) {
+            console.error(`  FAIL ${type}/${file}: route "${path}" references archetype "${route.archetype}" not in compose`);
+            errors++;
+          }
+        }
+      }
     } catch (e) {
       console.error(`  FAIL ${type}/${file}: invalid JSON - ${e.message}`);
       errors++;

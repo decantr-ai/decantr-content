@@ -59,14 +59,35 @@
     }
   },
   "features": [
+    "chat",
+    "markdown",
+    "code-highlight",
+    "file-upload",
+    "mentions",
+    "reactions",
+    "export",
     "auth",
     "mfa",
-    "chat",
-    "file-upload",
-    "markdown",
-    "search",
-    "export",
-    "theme-toggle"
+    "oauth",
+    "email-verification",
+    "password-reset",
+    "profile-edit",
+    "password-change",
+    "mfa-management",
+    "session-management",
+    "theme-toggle",
+    "account-deletion",
+    "pricing-toggle",
+    "testimonials",
+    "feature-grid",
+    "team-grid",
+    "values-display",
+    "form-validation",
+    "spam-protection",
+    "file-attachment",
+    "toc-navigation",
+    "print-friendly",
+    "smooth-scroll"
   ],
   "routes": {
     "/": {
@@ -166,7 +187,15 @@
     }
   },
   "seo_hints": {
-    "schema_org": ["Organization", "WebApplication", "SoftwareApplication"],
-    "meta_priorities": ["description", "og:image", "twitter:card"]
+    "schema_org": [
+      "Organization",
+      "WebApplication",
+      "SoftwareApplication"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:image",
+      "twitter:card"
+    ]
   }
 }

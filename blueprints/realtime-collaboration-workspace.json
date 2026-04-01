@@ -68,17 +68,45 @@
     }
   },
   "features": [
-    "auth",
-    "mfa",
     "realtime",
+    "search",
+    "favorites",
+    "recent-history",
     "presence",
     "comments",
     "mentions",
     "versioning",
     "sharing",
-    "search",
     "export",
-    "theme-toggle"
+    "markdown",
+    "slash-commands",
+    "team-management",
+    "permissions",
+    "billing",
+    "admin",
+    "auth",
+    "mfa",
+    "oauth",
+    "email-verification",
+    "password-reset",
+    "profile-edit",
+    "password-change",
+    "mfa-management",
+    "session-management",
+    "theme-toggle",
+    "account-deletion",
+    "marketing",
+    "pricing",
+    "testimonials",
+    "cta",
+    "team-grid",
+    "values-display",
+    "form-validation",
+    "spam-protection",
+    "file-attachment",
+    "toc-navigation",
+    "print-friendly",
+    "smooth-scroll"
   ],
   "routes": {
     "/": {
@@ -198,7 +226,16 @@
     }
   },
   "seo_hints": {
-    "schema_org": ["Organization", "WebApplication", "SoftwareApplication", "CollaborativeWorkspace"],
-    "meta_priorities": ["description", "og:image", "twitter:card"]
+    "schema_org": [
+      "Organization",
+      "WebApplication",
+      "SoftwareApplication",
+      "CollaborativeWorkspace"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:image",
+      "twitter:card"
+    ]
   }
 }

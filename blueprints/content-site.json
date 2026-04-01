@@ -21,5 +21,10 @@
     },
     "recipes": {},
     "styles": {}
-  }
+  },
+  "features": [
+    "search",
+    "analytics",
+    "rss"
+  ]
 }

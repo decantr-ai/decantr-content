@@ -75,13 +75,61 @@
     }
   },
   "features": [
+    "earnings-kpis",
+    "activity-feed",
+    "quick-actions",
+    "revenue-charts",
+    "tier-breakdown",
+    "payout-configuration",
+    "export-reports",
+    "media-upload",
+    "tier-gating",
+    "scheduling",
+    "drafts",
+    "subscriber-filtering",
+    "export-csv",
+    "messaging",
+    "tier-management",
+    "tier-creation",
+    "benefit-management",
+    "pricing-config",
+    "tier-reorder",
+    "creator-profile",
+    "tier-display",
+    "content-preview",
+    "subscribe-flow",
+    "content-library",
+    "subscription-management",
+    "download-content",
+    "creator-links",
+    "stripe-integration",
+    "promo-codes",
+    "apple-pay",
+    "google-pay",
+    "hero-section",
+    "feature-grid",
+    "pricing-tiers",
+    "testimonials",
+    "faq",
     "auth",
     "mfa",
-    "payments",
-    "subscriptions",
-    "file-upload",
-    "analytics",
-    "theme-toggle"
+    "oauth",
+    "email-verification",
+    "password-reset",
+    "profile-edit",
+    "password-change",
+    "mfa-management",
+    "session-management",
+    "theme-toggle",
+    "account-deletion",
+    "team-grid",
+    "values-display",
+    "form-validation",
+    "spam-protection",
+    "file-attachment",
+    "toc-navigation",
+    "print-friendly",
+    "smooth-scroll"
   ],
   "routes": {
     "/": {
@@ -251,7 +299,15 @@
     }
   },
   "seo_hints": {
-    "schema_org": ["Organization", "WebApplication", "Product"],
-    "meta_priorities": ["description", "og:image", "twitter:card"]
+    "schema_org": [
+      "Organization",
+      "WebApplication",
+      "Product"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:image",
+      "twitter:card"
+    ]
   }
 }

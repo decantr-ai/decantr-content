@@ -63,14 +63,40 @@
     }
   },
   "features": [
-    "auth",
-    "logging",
-    "metrics",
-    "config",
-    "keyboard-shortcuts",
     "split-panes",
+    "log-streaming",
+    "metrics",
+    "command-input",
+    "keyboard-shortcuts",
     "command-palette",
-    "hotkeys"
+    "log-filtering",
+    "log-search",
+    "log-levels",
+    "auto-scroll",
+    "export-logs",
+    "realtime-metrics",
+    "ascii-charts",
+    "sparklines",
+    "threshold-alerts",
+    "historical-data",
+    "file-tree",
+    "syntax-highlight",
+    "diff-view",
+    "search-replace",
+    "undo-redo",
+    "auto-save",
+    "terminal-hero",
+    "ascii-demo",
+    "code-examples",
+    "installation-guide",
+    "auth",
+    "mfa",
+    "oauth",
+    "email-verification",
+    "password-reset",
+    "toc-navigation",
+    "print-friendly",
+    "smooth-scroll"
   ],
   "routes": {
     "/": {
@@ -141,17 +167,45 @@
   },
   "navigation": {
     "hotkeys": [
-      { "key": "F1", "route": "/app", "label": "Home" },
-      { "key": "F2", "route": "/app/config", "label": "Config" },
-      { "key": "F3", "route": "/app/logs", "label": "Logs" },
-      { "key": "F4", "route": "/app/metrics", "label": "Metrics" },
-      { "key": "F10", "action": "logout", "label": "Quit" }
+      {
+        "key": "F1",
+        "route": "/app",
+        "label": "Home"
+      },
+      {
+        "key": "F2",
+        "route": "/app/config",
+        "label": "Config"
+      },
+      {
+        "key": "F3",
+        "route": "/app/logs",
+        "label": "Logs"
+      },
+      {
+        "key": "F4",
+        "route": "/app/metrics",
+        "label": "Metrics"
+      },
+      {
+        "key": "F10",
+        "action": "logout",
+        "label": "Quit"
+      }
     ],
     "command_palette": true
   },
   "seo_hints": {
-    "schema_org": ["Organization", "WebApplication", "SoftwareApplication"],
-    "meta_priorities": ["description", "og:image", "twitter:card"]
+    "schema_org": [
+      "Organization",
+      "WebApplication",
+      "SoftwareApplication"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:image",
+      "twitter:card"
+    ]
   },
   "design_constraints": {
     "mode": "dark_only",

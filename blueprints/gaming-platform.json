@@ -45,5 +45,13 @@
     },
     "recipes": {},
     "styles": {}
-  }
+  },
+  "features": [
+    "guild-state",
+    "achievements",
+    "realtime-data",
+    "search",
+    "auth",
+    "notifications"
+  ]
 }
