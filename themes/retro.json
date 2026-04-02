@@ -17,6 +17,16 @@
     "accent": "#2a9d8f",
     "background": "#fffef5"
   },
+  "palette": {
+    "background": { "light": "#FFFEF5", "dark": "#1A1A18" },
+    "surface": { "light": "#FFFFFF", "dark": "#222220" },
+    "surface-raised": { "light": "#FFF8E1", "dark": "#2C2C28" },
+    "border": { "light": "#1A1A18", "dark": "#E8E4D9" },
+    "text": { "light": "#1A1A18", "dark": "#FFFEF5" },
+    "text-muted": { "light": "#6B6B60", "dark": "#A8A89E" },
+    "primary": { "light": "#E63946", "dark": "#FF5A67" },
+    "primary-hover": { "light": "#CC2D3A", "dark": "#FF7A84" }
+  },
   "modes": [
     "light",
     "dark"
@@ -28,6 +38,29 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "decorators": {
+    "retro-card": "Rounded container with bold 3px border, 4px offset shadow in dark, and warm cream background tint.",
+    "retro-badge": "Pill-shaped badge with saturated color fill, bold uppercase text, and 2px dark border outline.",
+    "retro-input": "Bordered input with generous 12px padding, warm cream background, and bold focus ring in primary red.",
+    "retro-button": "Chunky button with 3px border, 4px offset shadow that collapses on active press for tactile feedback.",
+    "retro-divider": "Thick 2px dashed border separator with warm dark color for section breaks."
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "content_gap_shift": "+1",
+    "section_padding": "generous",
+    "card_wrapping": "standard"
+  },
+  "motion": {
+    "preference": "subtle",
+    "reduce_motion": false,
+    "entrance": "none",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "100ms",
+      "entrance": "200ms"
+    }
+  },
   "typography_hints": {
     "scale": "modular",
     "heading_weight": 600,

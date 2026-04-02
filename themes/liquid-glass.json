@@ -17,6 +17,16 @@
     "accent": "#34c759",
     "background": "#f2f2f7"
   },
+  "palette": {
+    "background": { "light": "#F2F2F7", "dark": "#000000" },
+    "surface": { "light": "rgba(255,255,255,0.72)", "dark": "rgba(28,28,30,0.72)" },
+    "surface-raised": { "light": "rgba(255,255,255,0.85)", "dark": "rgba(44,44,46,0.85)" },
+    "border": { "light": "rgba(0,0,0,0.08)", "dark": "rgba(255,255,255,0.10)" },
+    "text": { "light": "#1C1C1E", "dark": "#F2F2F7" },
+    "text-muted": { "light": "#8E8E93", "dark": "#8E8E93" },
+    "primary": { "light": "#007AFF", "dark": "#0A84FF" },
+    "primary-hover": { "light": "#0066DD", "dark": "#409CFF" }
+  },
   "modes": [
     "light",
     "dark"
@@ -28,6 +38,28 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "decorators": {
+    "glass-panel": "Frosted glass panel with backdrop-filter blur(40px), semi-transparent surface background, thin 0.5px border.",
+    "glass-card": "Rounded card with extreme backdrop blur, specular highlight gradient at top edge, and subtle border opacity.",
+    "glass-nav": "Sticky navigation with blur(20px) backdrop, dynamic transparency that increases on scroll.",
+    "glass-input": "Translucent input field with frosted background, rounded corners, and blue focus ring with gentle glow."
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "content_gap_shift": "0",
+    "section_padding": "standard",
+    "card_wrapping": "standard"
+  },
+  "motion": {
+    "preference": "subtle",
+    "reduce_motion": false,
+    "entrance": "fade",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "150ms",
+      "entrance": "300ms"
+    }
+  },
   "typography_hints": {
     "scale": "modular",
     "heading_weight": 600,

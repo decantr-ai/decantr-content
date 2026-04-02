@@ -17,6 +17,16 @@
     "accent": "#14b8a6",
     "background": "#fafafa"
   },
+  "palette": {
+    "background": { "light": "#FAFAFA", "dark": "#0E0E18" },
+    "surface": { "light": "#FFFFFF", "dark": "#161625" },
+    "surface-raised": { "light": "#F5F3FF", "dark": "#1E1E35" },
+    "border": { "light": "#E0DEFF", "dark": "#3A3868" },
+    "text": { "light": "#1A1A2E", "dark": "#EEEEF8" },
+    "text-muted": { "light": "#6B6B8A", "dark": "#9898B8" },
+    "primary": { "light": "#6366F1", "dark": "#818CF8" },
+    "primary-hover": { "light": "#4F46E5", "dark": "#A5B4FC" }
+  },
   "modes": [
     "light",
     "dark"
@@ -28,6 +38,28 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "decorators": {
+    "prismatic-card": "Rounded card with iridescent border shimmer that shifts hue on hover, subtle indigo-tinted shadow at rest.",
+    "prismatic-gradient": "Background gradient shifting through indigo, pink, and teal at low opacity for section backgrounds.",
+    "prismatic-chip": "Small rounded chip with chromatic gradient fill that changes hue based on elevation depth level.",
+    "prismatic-glow": "Soft radial glow behind hero elements using primary indigo at 15% opacity with feathered edges."
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "content_gap_shift": "0",
+    "section_padding": "generous",
+    "card_wrapping": "standard"
+  },
+  "motion": {
+    "preference": "moderate",
+    "reduce_motion": false,
+    "entrance": "fade",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "200ms",
+      "entrance": "350ms"
+    }
+  },
   "typography_hints": {
     "scale": "modular",
     "heading_weight": 600,

@@ -27,10 +27,22 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "palette": {
+    "background": { "light": "#FFFFFF", "dark": "#111111" },
+    "surface": { "light": "#FFFFFF", "dark": "#1A1A1A" },
+    "surface-raised": { "light": "#F8F8F8", "dark": "#222222" },
+    "border": { "light": "#E5E5E5", "dark": "#333333" },
+    "text": { "light": "#111111", "dark": "#F5F5F5" },
+    "text-muted": { "light": "#6B7280", "dark": "#9CA3AF" },
+    "primary": { "light": "#1366D9", "dark": "#3B82F6" },
+    "primary-hover": { "light": "#0D4EA6", "dark": "#60A5FA" }
+  },
   "decorators": {
     "clean-surface": "Pure white (#FFFFFF) or near-black (#111111) depending on mode.",
     "clean-nav": "Minimal navigation with text links, no backgrounds.",
-    "clean-surface-raised": "Slightly elevated surface for cards (2% darker/lighter)."
+    "clean-surface-raised": "Slightly elevated surface for cards (2% darker/lighter).",
+    "clean-card": "Bordered card with 1px border, 8px radius, no shadow at rest, subtle shadow on hover transition.",
+    "clean-input": "Standard input with thin border, rounded corners, and blue focus ring using primary color."
   },
   "spatial": {
     "density_bias": 0,
@@ -43,7 +55,12 @@
     "preference": "subtle",
     "reduce_motion": true,
     "entrance": "none",
-    "micro": "instant"
+    "micro": "instant",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "150ms",
+      "entrance": "200ms"
+    }
   },
   "effects": {
     "enabled": false,

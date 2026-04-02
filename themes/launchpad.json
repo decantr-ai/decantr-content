@@ -28,6 +28,16 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "palette": {
+    "background": { "light": "#F9F9FD", "dark": "#0C0A14" },
+    "surface": { "light": "#FFFFFF", "dark": "#141020" },
+    "surface-raised": { "light": "#F4F2FA", "dark": "#1C1830" },
+    "border": { "light": "#E4E0F0", "dark": "#2E2848" },
+    "text": { "light": "#1A1530", "dark": "#F0EEF8" },
+    "text-muted": { "light": "#706A88", "dark": "#9890B0" },
+    "primary": { "light": "#7C3AED", "dark": "#9F6EFF" },
+    "primary-hover": { "light": "#6D28D9", "dark": "#B08AFF" }
+  },
   "decorators": {
     "lp-surface": "Base surface with subtle texture. Light mode: #FAFAFA, Dark mode: #111111.",
     "lp-nav": "Sticky navigation with blur backdrop. Minimal branding.",
@@ -48,7 +58,12 @@
     "preference": "subtle",
     "reduce_motion": true,
     "entrance": "lp-fade-in",
-    "micro": "snappy"
+    "micro": "snappy",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "150ms",
+      "entrance": "400ms"
+    }
   },
   "effects": {
     "enabled": true,

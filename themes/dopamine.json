@@ -17,6 +17,16 @@
     "accent": "#ffea00",
     "background": "#fff5fc"
   },
+  "palette": {
+    "background": { "light": "#FFF5FC", "dark": "#1A0018" },
+    "surface": { "light": "#FFFFFF", "dark": "#2A0028" },
+    "surface-raised": { "light": "#FFF0FA", "dark": "#3A0038" },
+    "border": { "light": "#FFB8F0", "dark": "#6B2068" },
+    "text": { "light": "#1A0030", "dark": "#FFF0FA" },
+    "text-muted": { "light": "#8B5080", "dark": "#C890B8" },
+    "primary": { "light": "#FF00E5", "dark": "#FF40ED" },
+    "primary-hover": { "light": "#E000CC", "dark": "#FF70F2" }
+  },
   "modes": [
     "light",
     "dark"
@@ -28,6 +38,29 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "decorators": {
+    "dopamine-card": "Pill-rounded card with vivid gradient border, raised shadow in magenta-tinted color, and white surface.",
+    "dopamine-badge": "Neon-bright pill badge with gradient fill from primary to secondary, bold white text overlay.",
+    "dopamine-input": "Rounded input with gradient focus ring cycling primary to accent, generous padding and bouncy scale on focus.",
+    "dopamine-glow": "Background glow effect using radial gradient of primary and accent colors at 20% opacity behind elements.",
+    "dopamine-shimmer": "Animated shimmer gradient sweeping left to right across element surface for loading or emphasis."
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "content_gap_shift": "+1",
+    "section_padding": "generous",
+    "card_wrapping": "standard"
+  },
+  "motion": {
+    "preference": "moderate",
+    "reduce_motion": false,
+    "entrance": "slide",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "150ms",
+      "entrance": "400ms"
+    }
+  },
   "typography_hints": {
     "scale": "modular",
     "heading_weight": 600,

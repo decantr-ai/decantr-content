@@ -17,6 +17,16 @@
     "accent": "#1a5276",
     "background": "#fefcf9"
   },
+  "palette": {
+    "background": { "light": "#FEFCF9", "dark": "#141210" },
+    "surface": { "light": "#FFFFFF", "dark": "#1C1A17" },
+    "surface-raised": { "light": "#F8F5F0", "dark": "#252320" },
+    "border": { "light": "#E8E4DD", "dark": "#3A3630" },
+    "text": { "light": "#1A1A1A", "dark": "#F5F2ED" },
+    "text-muted": { "light": "#6B665E", "dark": "#A09A90" },
+    "primary": { "light": "#1A1A1A", "dark": "#F5F2ED" },
+    "primary-hover": { "light": "#C41E3A", "dark": "#E8354F" }
+  },
   "modes": [
     "light",
     "dark"
@@ -28,6 +38,29 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "decorators": {
+    "editorial-card": "Clean white card with thin hairline border, generous whitespace, and elegant serif typography framing.",
+    "editorial-pullquote": "Large italic serif text with bold left accent border in secondary red, generous vertical margins.",
+    "editorial-divider": "Thin single-pixel line separator with generous vertical spacing to create breathing room between sections.",
+    "editorial-caption": "Small uppercase tracking-wide text in muted color for image captions and metadata labels.",
+    "editorial-dropcap": "Oversized initial letter spanning three lines in bold serif weight to open article sections."
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "content_gap_shift": "+1",
+    "section_padding": "generous",
+    "card_wrapping": "none"
+  },
+  "motion": {
+    "preference": "none",
+    "reduce_motion": true,
+    "entrance": "none",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "100ms",
+      "entrance": "0ms"
+    }
+  },
   "typography_hints": {
     "scale": "modular",
     "heading_weight": 600,

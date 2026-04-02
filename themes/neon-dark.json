@@ -16,6 +16,7 @@
     "border": { "dark": "#2A2A3A", "light": "#E0E0E0" },
     "text": { "dark": "#E8E8F0", "light": "#1A1A25" },
     "text-muted": { "dark": "#8888AA", "light": "#666680" },
+    "primary": { "dark": "#00E5FF", "light": "#00ACC1" },
     "primary-hover": { "dark": "#33EBFF", "light": "#00B8D4" }
   },
   "tokens": {
@@ -24,6 +25,28 @@
       "danger": "#FF1744",
       "warning": "#FFD600",
       "info": "#448AFF"
+    }
+  },
+  "decorators": {
+    "neon-card": "Dark card with neon cyan border glow, 1px solid border, and box-shadow using primary at 30% opacity.",
+    "neon-badge": "Compact pill badge with neon fill color, dark text, and subtle glow shadow matching the badge color.",
+    "neon-input": "Dark input with thin neon border, glowing focus ring in primary cyan, dark surface background.",
+    "neon-grid-line": "Subtle grid pattern overlay at 5% opacity using thin lines for cyberpunk dashboard aesthetic."
+  },
+  "spatial": {
+    "density_bias": "compact",
+    "content_gap_shift": "-1",
+    "section_padding": "standard",
+    "card_wrapping": "tight"
+  },
+  "motion": {
+    "preference": "moderate",
+    "reduce_motion": false,
+    "entrance": "fade",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "100ms",
+      "entrance": "250ms"
     }
   },
   "typography_hints": {

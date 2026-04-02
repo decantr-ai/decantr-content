@@ -29,6 +29,16 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "palette": {
+    "background": { "light": "#E8EDF5", "dark": "#0A0A0F" },
+    "surface": { "light": "#F0F4FA", "dark": "#111118" },
+    "surface-raised": { "light": "#FFFFFF", "dark": "#1A1A25" },
+    "border": { "light": "#C8D0E0", "dark": "#2A2A40" },
+    "text": { "light": "#141830", "dark": "#E8EDF5" },
+    "text-muted": { "light": "#5A6080", "dark": "#8888AA" },
+    "primary": { "light": "#3B82F6", "dark": "#60A5FA" },
+    "primary-hover": { "light": "#2563EB", "dark": "#93C5FD" }
+  },
   "decorators": {
     "gg-dark": "Near-black background (#0A0A0F) with subtle grid pattern.",
     "gg-sidebar": "Dark sidebar with accent-colored active states.",
@@ -50,7 +60,12 @@
     "preference": "subtle",
     "reduce_motion": true,
     "entrance": "gg-slide-in",
-    "micro": "bouncy"
+    "micro": "bouncy",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "100ms",
+      "entrance": "300ms"
+    }
   },
   "effects": {
     "enabled": true,

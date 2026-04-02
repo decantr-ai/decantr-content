@@ -17,6 +17,16 @@
     "accent": "#ff6b9d",
     "background": "#f0fdf4"
   },
+  "palette": {
+    "background": { "light": "#F0FDF4", "dark": "#050A0E" },
+    "surface": { "light": "#FFFFFF", "dark": "#0A1218" },
+    "surface-raised": { "light": "#ECFDF5", "dark": "#101C25" },
+    "border": { "light": "#A7F3D0", "dark": "#0D3B3B" },
+    "text": { "light": "#0A1A12", "dark": "#E0FFF0" },
+    "text-muted": { "light": "#4A7A60", "dark": "#6AA898" },
+    "primary": { "light": "#059669", "dark": "#00FFD5" },
+    "primary-hover": { "light": "#047857", "dark": "#33FFE0" }
+  },
   "modes": [
     "light",
     "dark"
@@ -28,6 +38,28 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
+  "decorators": {
+    "bio-glow-card": "Dark card with luminescent cyan border glow at 40% opacity, subtle pulse animation on the border shadow.",
+    "bio-glow-ring": "Circular element with animated bioluminescent ring that slowly pulses between cyan and violet hues.",
+    "bio-abyss": "Deep near-black background with faint radial cyan glow emanating from center for depth effect.",
+    "bio-tendril": "Organic wavy border accent using SVG path with glowing cyan stroke and animated dash offset."
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "content_gap_shift": "0",
+    "section_padding": "generous",
+    "card_wrapping": "standard"
+  },
+  "motion": {
+    "preference": "moderate",
+    "reduce_motion": false,
+    "entrance": "fade",
+    "timing": "ease-out",
+    "durations": {
+      "hover": "200ms",
+      "entrance": "400ms"
+    }
+  },
   "typography_hints": {
     "scale": "modular",
     "heading_weight": 600,
