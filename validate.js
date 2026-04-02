@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'fs';
 
-const types = ['patterns', 'recipes', 'themes', 'blueprints', 'archetypes', 'shells'];
+const types = ['patterns', 'themes', 'blueprints', 'archetypes', 'shells'];
 let errors = 0;
 let total = 0;
 

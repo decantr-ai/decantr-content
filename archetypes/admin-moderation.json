@@ -15,11 +15,23 @@
   ],
   "classification": {
     "triggers": {
-      "primary": ["moderation", "admin-queue", "content-review", "approval"],
-      "secondary": ["reject", "approve", "flagged", "pending"],
+      "primary": [
+        "moderation",
+        "admin-queue",
+        "content-review",
+        "approval"
+      ],
+      "secondary": [
+        "reject",
+        "approve",
+        "flagged",
+        "pending"
+      ],
       "negative": []
     },
-    "implies": ["auth"],
+    "implies": [
+      "auth"
+    ],
     "weight": 0.7,
     "tier": "optional"
   },
@@ -58,11 +70,14 @@
       "content-detail-hero": "^1.0.0",
       "json-viewer": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["luminarum"],
-    "modes": ["dark"]
+    "styles": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ]
   }
 }

@@ -7,9 +7,6 @@
   "description": "ASCII and braille character-based charts for terminal-style data visualization.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

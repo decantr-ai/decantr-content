@@ -7,9 +7,6 @@
   "description": "Keyboard shortcuts help overlay with categorized shortcuts and search.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

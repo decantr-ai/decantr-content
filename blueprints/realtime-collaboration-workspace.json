@@ -26,10 +26,9 @@
     "legal"
   ],
   "theme": {
-    "style": "paper",
     "mode": "light",
-    "recipe": "paper",
-    "shape": "rounded"
+    "shape": "rounded",
+    "id": "paper"
   },
   "personality": [
     "warm",
@@ -59,12 +58,6 @@
       "about-hybrid": "^1.0.0",
       "contact": "^1.0.0",
       "legal": "^1.0.0"
-    },
-    "recipes": {
-      "paper": "^1.0.0"
-    },
-    "styles": {
-      "paper": "^1.0.0"
     }
   },
   "features": [

@@ -7,9 +7,6 @@
   "description": "Real-time log streaming display with filtering, search, and auto-scroll behavior.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

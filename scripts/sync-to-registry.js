@@ -25,7 +25,6 @@ if (!ADMIN_KEY) {
 
 const TYPE_MAP = {
   patterns: 'pattern',
-  recipes: 'recipe',
   themes: 'theme',
   blueprints: 'blueprint',
   archetypes: 'archetype',

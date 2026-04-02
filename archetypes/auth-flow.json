@@ -39,7 +39,7 @@
     "implies": [
       "settings"
     ],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
@@ -81,7 +81,6 @@
     "patterns": {
       "auth-form": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

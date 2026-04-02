@@ -7,9 +7,6 @@
   "description": "ASCII-bordered data tables with box-drawing characters for terminal-style displays.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

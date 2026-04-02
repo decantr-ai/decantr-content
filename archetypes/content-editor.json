@@ -15,11 +15,22 @@
   ],
   "classification": {
     "triggers": {
-      "primary": ["editor", "create-content", "publish", "content-form"],
-      "secondary": ["json-editor", "schema-validation", "preview"],
+      "primary": [
+        "editor",
+        "create-content",
+        "publish",
+        "content-form"
+      ],
+      "secondary": [
+        "json-editor",
+        "schema-validation",
+        "preview"
+      ],
       "negative": []
     },
-    "implies": ["auth"],
+    "implies": [
+      "auth"
+    ],
     "weight": 0.8,
     "tier": "recommended"
   },
@@ -54,11 +65,14 @@
     "patterns": {
       "json-viewer": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["luminarum"],
-    "modes": ["dark"]
+    "styles": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ]
   }
 }

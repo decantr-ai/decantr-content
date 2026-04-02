@@ -7,7 +7,6 @@
   "description": "Full-width gradient call-to-action banner with bold headline, supporting subtext, and a prominent action button. Conversion-focused section designed to sit near the bottom of landing pages. Features a multi-stop gradient background that spans the full viewport width.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

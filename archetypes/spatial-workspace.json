@@ -5,25 +5,61 @@
   "decantr_compat": ">=1.5.0",
   "name": "Spatial Workspace",
   "description": "Immersive spatial workspace with depth-layered canvases, holographic controls, and real-time presence indicators for collaborative creative work.",
-  "tags": ["spatial", "workspace", "collaboration", "immersive", "canvas", "real-time", "2026"],
+  "tags": [
+    "spatial",
+    "workspace",
+    "collaboration",
+    "immersive",
+    "canvas",
+    "real-time",
+    "2026"
+  ],
   "role": "primary",
   "classification": {
     "triggers": {
-      "primary": ["spatial", "workspace", "canvas", "immersive", "collaborative-canvas"],
-      "secondary": ["whiteboard", "infinite-canvas", "depth", "3d-workspace", "virtual-space"],
-      "negative": ["dashboard", "table", "form-heavy"]
+      "primary": [
+        "spatial",
+        "workspace",
+        "canvas",
+        "immersive",
+        "collaborative-canvas"
+      ],
+      "secondary": [
+        "whiteboard",
+        "infinite-canvas",
+        "depth",
+        "3d-workspace",
+        "virtual-space"
+      ],
+      "negative": [
+        "dashboard",
+        "table",
+        "form-heavy"
+      ]
     },
-    "implies": ["collaboration", "real-time"],
-    "weight": 1.0,
+    "implies": [
+      "collaboration",
+      "real-time"
+    ],
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
     {
       "id": "workspace",
       "default_layout": [
-        { "pattern": "depth-layered-canvas", "as": "main-canvas" },
-        { "pattern": "holographic-control-bar", "as": "tool-bar" },
-        { "pattern": "spatial-presence-ring", "as": "collaborators" }
+        {
+          "pattern": "depth-layered-canvas",
+          "as": "main-canvas"
+        },
+        {
+          "pattern": "holographic-control-bar",
+          "as": "tool-bar"
+        },
+        {
+          "pattern": "spatial-presence-ring",
+          "as": "collaborators"
+        }
       ],
       "shell": "canvas-overlay",
       "notes": "Full-bleed workspace: depth-layered-canvas is the primary surface; holographic-control-bar floats as toolbar overlay; spatial-presence-ring shows active collaborators at canvas edges"
@@ -32,20 +68,35 @@
       "id": "workspace-settings",
       "default_layout": [
         "settings-nav",
-        { "pattern": "form-sections", "preset": "structured", "as": "workspace-preferences" }
+        {
+          "pattern": "form-sections",
+          "preset": "structured",
+          "as": "workspace-preferences"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Workspace configuration: grid snapping, depth layers, presence visibility, collaboration permissions"
     }
   ],
-  "features": ["spatial", "collaboration", "drag-drop", "real-time", "presence"],
+  "features": [
+    "spatial",
+    "collaboration",
+    "drag-drop",
+    "real-time",
+    "presence"
+  ],
   "shells": {
     "canvas-overlay": "Full-bleed canvas with floating overlay panels and toolbar",
     "sidebar-main": "Standard sidebar layout for settings pages"
   },
   "suggested_theme": {
-    "styles": ["carbon", "glass"],
-    "modes": ["dark"]
+    "styles": [
+      "carbon",
+      "glass"
+    ],
+    "modes": [
+      "dark"
+    ]
   },
   "dependencies": {
     "patterns": {
@@ -55,7 +106,6 @@
       "form-sections": ">=1.0.0",
       "settings-nav": ">=1.0.0"
     },
-    "recipes": {},
     "styles": {}
   }
 }

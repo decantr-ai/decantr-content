@@ -7,7 +7,6 @@
   "description": "Split hero section with media (logo or image) on one side and text with CTAs on the other. Supports breathing gradient orbs background, pill-shaped buttons, and responsive stacking. The split layout places emphasis on brand identity alongside a clear value proposition.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

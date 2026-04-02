@@ -22,10 +22,9 @@
     "billing-portal"
   ],
   "theme": {
-    "style": "luminarum",
     "mode": "dark",
     "shape": "pill",
-    "recipe": "luminarum"
+    "id": "luminarum"
   },
   "personality": [
     "technical",
@@ -42,9 +41,7 @@
       "admin-moderation": "^1.0.0",
       "team-management": "^1.0.0",
       "billing-portal": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   },
   "seo_hints": {
     "schema_org": [

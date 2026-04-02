@@ -15,11 +15,24 @@
   ],
   "classification": {
     "triggers": {
-      "primary": ["billing", "subscription", "pricing", "upgrade"],
-      "secondary": ["stripe", "plan", "tier", "payment"],
+      "primary": [
+        "billing",
+        "subscription",
+        "pricing",
+        "upgrade"
+      ],
+      "secondary": [
+        "stripe",
+        "plan",
+        "tier",
+        "payment"
+      ],
       "negative": []
     },
-    "implies": ["auth", "billing"],
+    "implies": [
+      "auth",
+      "billing"
+    ],
     "weight": 0.8,
     "tier": "recommended"
   },
@@ -46,11 +59,14 @@
       "tier-upgrade-card": "^1.0.0",
       "kpi-grid": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["luminarum"],
-    "modes": ["dark"]
+    "styles": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ]
   }
 }

@@ -33,7 +33,7 @@
       "negative": []
     },
     "implies": [],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
@@ -91,7 +91,6 @@
       "detail-header": "^1.0.0",
       "filter-bar": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

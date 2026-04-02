@@ -10,7 +10,6 @@
       "chat-message": "^1.0.0",
       "chat-input": "^1.0.0"
     },
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

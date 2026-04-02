@@ -7,9 +7,6 @@
   "description": "Side-by-side or unified diff display for code and text comparison.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

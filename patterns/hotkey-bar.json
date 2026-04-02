@@ -7,9 +7,6 @@
   "description": "Function key shortcut bar inspired by DOS/Norton Commander style interfaces.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

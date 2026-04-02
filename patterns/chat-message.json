@@ -7,7 +7,6 @@
   "description": "Single message bubble for user or AI responses. Supports markdown rendering, code blocks, attachments, reactions, and edit mode.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

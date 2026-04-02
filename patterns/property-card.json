@@ -7,7 +7,6 @@
   "description": "Single property overview card with key metrics including address, unit count, occupancy rate, and monthly revenue.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

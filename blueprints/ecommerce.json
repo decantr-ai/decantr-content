@@ -10,17 +10,14 @@
     "ecommerce"
   ],
   "theme": {
-    "style": "auradecantism",
-    "recipe": "auradecantism"
+    "id": "auradecantism"
   },
   "personality": [],
   "overrides": {},
   "dependencies": {
     "archetypes": {
       "ecommerce": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   },
   "features": [
     "auth",

@@ -31,7 +31,7 @@
       "negative": []
     },
     "implies": [],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "recommended"
   },
   "pages": [
@@ -108,9 +108,6 @@
       "hotkey-bar": "^1.0.0",
       "command-palette": "^1.0.0",
       "help-modal": "^1.0.0"
-    },
-    "recipes": {
-      "terminal": "^1.0.0"
     },
     "styles": {
       "terminal": "^1.0.0"

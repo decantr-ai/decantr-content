@@ -25,8 +25,11 @@
       ],
       "negative": []
     },
-    "implies": ["creator-earnings", "creator-content"],
-    "weight": 1.0,
+    "implies": [
+      "creator-earnings",
+      "creator-content"
+    ],
+    "weight": 1,
     "tier": "recommended"
   },
   "pages": [
@@ -71,7 +74,6 @@
       "earnings-dashboard": "^1.0.0",
       "activity-feed": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

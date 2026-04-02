@@ -10,7 +10,6 @@
       "namespace-badge": "^1.0.0",
       "reputation-badge": "^1.0.0"
     },
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

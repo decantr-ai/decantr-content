@@ -10,17 +10,14 @@
     "portfolio"
   ],
   "theme": {
-    "style": "auradecantism",
-    "recipe": "auradecantism"
+    "id": "auradecantism"
   },
   "personality": [],
   "overrides": {},
   "dependencies": {
     "archetypes": {
       "portfolio": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   },
   "features": [
     "analytics",

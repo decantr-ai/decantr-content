@@ -7,7 +7,6 @@
   "description": "Active sessions panel showing current device, other sessions with device info, location, last active, and revoke controls.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

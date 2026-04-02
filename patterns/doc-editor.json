@@ -12,7 +12,6 @@
       "mention-popup": "^1.0.0",
       "remote-cursor": "^1.0.0"
     },
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

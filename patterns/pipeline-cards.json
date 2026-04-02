@@ -7,7 +7,6 @@
   "description": "Grid of numbered step cards showing a sequential process or pipeline. Each card features a colored numbered badge, step name, description, and optional visual content area. Cards rotate through a color palette (coral, amber, cyan, green, yellow, orange, purple) with colored border strokes and matching heading colors. Ideal for process visualization, methodology breakdowns, and feature walkthroughs.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

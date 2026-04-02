@@ -7,7 +7,6 @@
   "description": "Single product/post display card with thumbnail, price, type indicator, and actions. Used within product grids.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

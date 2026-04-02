@@ -18,8 +18,7 @@
     "settings"
   ],
   "theme": {
-    "style": "auradecantism",
-    "recipe": "auradecantism"
+    "id": "auradecantism"
   },
   "personality": [
     "immersive",
@@ -42,9 +41,7 @@
       "game-catalog": "^1.0.0",
       "auth-flow": "^1.0.0",
       "settings": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   },
   "features": [
     "guild-state",

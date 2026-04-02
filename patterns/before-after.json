@@ -7,7 +7,6 @@
   "description": "Side-by-side comparison section showing two states: without and with the product. Visualizes drift and inconsistency on one side versus consistency and alignment on the other. Useful for demonstrating value through contrast, with browser-frame mockups or card-based layouts.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

@@ -20,8 +20,7 @@
     "settings"
   ],
   "theme": {
-    "style": "launchpad",
-    "recipe": "auradecantism"
+    "id": "launchpad"
   },
   "personality": [
     "technical",
@@ -61,9 +60,7 @@
       "billing": "^1.0.0",
       "auth-flow": "^1.0.0",
       "settings": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   },
   "features": [
     "realtime-data",

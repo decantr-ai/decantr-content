@@ -7,9 +7,6 @@
   "description": "File/data tree with ASCII connectors for hierarchical navigation.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

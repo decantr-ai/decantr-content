@@ -7,7 +7,6 @@
   "description": "Tenant profile summary card with photo, contact info, property/unit, lease details, and payment status.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

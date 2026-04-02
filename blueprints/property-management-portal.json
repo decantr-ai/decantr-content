@@ -29,10 +29,9 @@
     "legal"
   ],
   "theme": {
-    "style": "estate",
     "mode": "light",
-    "recipe": "estate",
-    "shape": "rounded"
+    "shape": "rounded",
+    "id": "estate"
   },
   "personality": [
     "professional",
@@ -63,12 +62,6 @@
       "about-hybrid": "^1.0.0",
       "contact": "^1.0.0",
       "legal": "^1.0.0"
-    },
-    "recipes": {
-      "estate": "^1.0.0"
-    },
-    "styles": {
-      "estate": "^1.0.0"
     }
   },
   "features": [

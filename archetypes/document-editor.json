@@ -31,7 +31,7 @@
       "negative": []
     },
     "implies": [],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
@@ -116,7 +116,6 @@
       "slash-command": "^1.0.0",
       "mention-popup": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

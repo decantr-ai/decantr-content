@@ -7,7 +7,6 @@
   "description": "Role-based access control grid showing permissions by role. Used for workspace settings and team management.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

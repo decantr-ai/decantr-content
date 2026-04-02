@@ -5,15 +5,40 @@
   "decantr_compat": ">=1.5.0",
   "name": "AI Transparency",
   "description": "AI model observability and transparency dashboard for inspecting inference logs, confidence distributions, and neural feedback cycles across deployed models.",
-  "tags": ["ai", "transparency", "observability", "monitoring", "analytics", "explainability", "2026"],
+  "tags": [
+    "ai",
+    "transparency",
+    "observability",
+    "monitoring",
+    "analytics",
+    "explainability",
+    "2026"
+  ],
   "role": "auxiliary",
   "classification": {
     "triggers": {
-      "primary": ["ai-transparency", "model-observability", "explainability", "inference-monitor"],
-      "secondary": ["confidence", "model-metrics", "ai-audit", "bias-detection", "interpretability"],
-      "negative": ["chatbot", "code-generation"]
+      "primary": [
+        "ai-transparency",
+        "model-observability",
+        "explainability",
+        "inference-monitor"
+      ],
+      "secondary": [
+        "confidence",
+        "model-metrics",
+        "ai-audit",
+        "bias-detection",
+        "interpretability"
+      ],
+      "negative": [
+        "chatbot",
+        "code-generation"
+      ]
     },
-    "implies": ["monitoring", "analytics"],
+    "implies": [
+      "monitoring",
+      "analytics"
+    ],
     "weight": 0.8,
     "tier": "core"
   },
@@ -21,8 +46,14 @@
     {
       "id": "model-overview",
       "default_layout": [
-        { "pattern": "stats-overview", "as": "model-kpis" },
-        { "pattern": "neural-feedback-loop", "as": "feedback-summary" }
+        {
+          "pattern": "stats-overview",
+          "as": "model-kpis"
+        },
+        {
+          "pattern": "neural-feedback-loop",
+          "as": "feedback-summary"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "High-level model health: stats-overview shows latency, throughput, error rates; neural-feedback-loop shows aggregate decision cycle patterns"
@@ -30,7 +61,10 @@
     {
       "id": "inference-log",
       "default_layout": [
-        { "pattern": "agent-timeline", "as": "inference-trace" }
+        {
+          "pattern": "agent-timeline",
+          "as": "inference-trace"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Chronological inference trace: each entry shows input, output, confidence, latency, and token usage with expandable reasoning chains"
@@ -38,20 +72,35 @@
     {
       "id": "confidence-explorer",
       "default_layout": [
-        { "pattern": "intent-radar", "as": "confidence-distribution" },
-        { "pattern": "stats-detail", "as": "metric-breakdown" }
+        {
+          "pattern": "intent-radar",
+          "as": "confidence-distribution"
+        },
+        {
+          "pattern": "stats-detail",
+          "as": "metric-breakdown"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Intent-radar visualizes confidence spread across categories; stats-detail breaks down per-model and per-endpoint metrics"
     }
   ],
-  "features": ["monitoring", "analytics", "observability"],
+  "features": [
+    "monitoring",
+    "analytics",
+    "observability"
+  ],
   "shells": {
     "sidebar-main": "Sidebar navigation with main content area for data exploration"
   },
   "suggested_theme": {
-    "styles": ["carbon", "neon-dark"],
-    "modes": ["dark"]
+    "styles": [
+      "carbon",
+      "neon-dark"
+    ],
+    "modes": [
+      "dark"
+    ]
   },
   "dependencies": {
     "patterns": {
@@ -61,7 +110,6 @@
       "intent-radar": ">=1.0.0",
       "stats-detail": ">=1.0.0"
     },
-    "recipes": {},
     "styles": {}
   }
 }

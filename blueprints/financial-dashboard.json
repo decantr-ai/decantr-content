@@ -10,16 +10,13 @@
     "financial-dashboard"
   ],
   "theme": {
-    "style": "auradecantism",
-    "recipe": "auradecantism"
+    "id": "auradecantism"
   },
   "personality": [],
   "overrides": {},
   "dependencies": {
     "archetypes": {
       "financial-dashboard": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   }
 }

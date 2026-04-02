@@ -9,7 +9,6 @@
     "patterns": {
       "product-card": "^1.0.0"
     },
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

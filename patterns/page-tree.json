@@ -7,7 +7,6 @@
   "description": "Hierarchical page navigation with drag-and-drop reordering, inline rename, and nested page support. Used in workspace sidebars.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

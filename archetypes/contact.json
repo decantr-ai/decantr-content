@@ -27,7 +27,7 @@
       "negative": []
     },
     "implies": [],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "recommended"
   },
   "pages": [
@@ -65,7 +65,6 @@
       "hero": "^1.0.0",
       "contact-form": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

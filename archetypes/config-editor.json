@@ -117,9 +117,6 @@
       "diff-view": "^1.0.0",
       "hotkey-bar": "^1.0.0"
     },
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     }

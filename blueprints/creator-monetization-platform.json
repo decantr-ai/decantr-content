@@ -30,10 +30,9 @@
     "legal"
   ],
   "theme": {
-    "style": "studio",
     "mode": "light",
-    "recipe": "studio",
-    "shape": "rounded"
+    "shape": "rounded",
+    "id": "studio"
   },
   "personality": [
     "creative",
@@ -66,12 +65,6 @@
       "about-hybrid": "^1.0.0",
       "contact": "^1.0.0",
       "legal": "^1.0.0"
-    },
-    "recipes": {
-      "studio": "^1.0.0"
-    },
-    "styles": {
-      "studio": "^1.0.0"
     }
   },
   "features": [

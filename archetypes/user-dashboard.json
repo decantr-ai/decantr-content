@@ -15,11 +15,23 @@
   ],
   "classification": {
     "triggers": {
-      "primary": ["dashboard", "account", "user-area", "my-content"],
-      "secondary": ["api-keys", "settings", "profile", "activity"],
+      "primary": [
+        "dashboard",
+        "account",
+        "user-area",
+        "my-content"
+      ],
+      "secondary": [
+        "api-keys",
+        "settings",
+        "profile",
+        "activity"
+      ],
       "negative": []
     },
-    "implies": ["auth"],
+    "implies": [
+      "auth"
+    ],
     "weight": 0.9,
     "tier": "recommended"
   },
@@ -75,11 +87,14 @@
       "api-key-row": "^1.0.0",
       "account-settings": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["luminarum"],
-    "modes": ["dark"]
+    "styles": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ]
   }
 }

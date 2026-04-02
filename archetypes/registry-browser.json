@@ -15,8 +15,19 @@
   ],
   "classification": {
     "triggers": {
-      "primary": ["registry", "browse", "explore", "catalog"],
-      "secondary": ["search", "filter", "patterns", "themes", "blueprints"],
+      "primary": [
+        "registry",
+        "browse",
+        "explore",
+        "catalog"
+      ],
+      "secondary": [
+        "search",
+        "filter",
+        "patterns",
+        "themes",
+        "blueprints"
+      ],
       "negative": []
     },
     "implies": [],
@@ -67,11 +78,14 @@
       "json-viewer": "^1.0.0",
       "namespace-badge": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["luminarum"],
-    "modes": ["dark"]
+    "styles": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ]
   }
 }

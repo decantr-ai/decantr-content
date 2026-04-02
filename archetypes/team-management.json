@@ -15,11 +15,23 @@
   ],
   "classification": {
     "triggers": {
-      "primary": ["team", "organization", "members", "roles"],
-      "secondary": ["invite", "collaboration", "org-content", "permissions"],
+      "primary": [
+        "team",
+        "organization",
+        "members",
+        "roles"
+      ],
+      "secondary": [
+        "invite",
+        "collaboration",
+        "org-content",
+        "permissions"
+      ],
       "negative": []
     },
-    "implies": ["auth"],
+    "implies": [
+      "auth"
+    ],
     "weight": 0.7,
     "tier": "optional"
   },
@@ -65,11 +77,14 @@
       "search-filter-bar": "^1.0.0",
       "content-card-grid": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["luminarum"],
-    "modes": ["dark"]
+    "styles": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ]
   }
 }

@@ -50,7 +50,6 @@
     "patterns": {
       "activity-feed": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

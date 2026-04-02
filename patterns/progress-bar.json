@@ -7,9 +7,6 @@
   "description": "ASCII progress indicators with bar, spinner, and dot animations for terminal-style feedback.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

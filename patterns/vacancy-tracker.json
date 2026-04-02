@@ -7,7 +7,6 @@
   "description": "Empty units tracker with vacancy rate, days vacant, lost revenue, listing status, and applicant pipeline.",
   "dependencies": {
     "patterns": {},
-    "recipes": {},
     "styles": {},
     "requires_core": {
       "components": [

@@ -31,7 +31,7 @@
       "negative": []
     },
     "implies": [],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
@@ -100,7 +100,6 @@
       "activity-feed": "^1.0.0",
       "form-sections": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

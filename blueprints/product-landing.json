@@ -40,9 +40,8 @@
     }
   },
   "theme": {
-    "style": "luminarum",
     "mode": "dark",
-    "recipe": "luminarum",
-    "shape": "pill"
+    "shape": "pill",
+    "id": "luminarum"
   }
 }

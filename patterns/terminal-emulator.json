@@ -7,9 +7,6 @@
   "description": "Interactive terminal input/output area with command history, tab completion, and ANSI color support.",
   "dependencies": {
     "patterns": {},
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
     "styles": {
       "terminal": "^1.0.0"
     },

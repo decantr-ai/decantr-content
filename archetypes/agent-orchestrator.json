@@ -5,24 +5,57 @@
   "decantr_compat": ">=1.5.0",
   "name": "Agent Orchestrator",
   "description": "Multi-agent management dashboard for monitoring, configuring, and orchestrating autonomous agent swarms with real-time status and marketplace discovery.",
-  "tags": ["agents", "orchestration", "dashboard", "ai", "monitoring", "real-time", "2026"],
+  "tags": [
+    "agents",
+    "orchestration",
+    "dashboard",
+    "ai",
+    "monitoring",
+    "real-time",
+    "2026"
+  ],
   "role": "primary",
   "classification": {
     "triggers": {
-      "primary": ["agent", "orchestrator", "swarm", "multi-agent", "agent-management"],
-      "secondary": ["autonomous", "agentic", "pipeline", "workflow-agent", "crew", "fleet"],
-      "negative": ["chatbot", "single-agent"]
+      "primary": [
+        "agent",
+        "orchestrator",
+        "swarm",
+        "multi-agent",
+        "agent-management"
+      ],
+      "secondary": [
+        "autonomous",
+        "agentic",
+        "pipeline",
+        "workflow-agent",
+        "crew",
+        "fleet"
+      ],
+      "negative": [
+        "chatbot",
+        "single-agent"
+      ]
     },
-    "implies": ["monitoring", "real-time"],
-    "weight": 1.0,
+    "implies": [
+      "monitoring",
+      "real-time"
+    ],
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
     {
       "id": "agent-overview",
       "default_layout": [
-        { "pattern": "agent-swarm-canvas", "as": "swarm-topology" },
-        { "pattern": "agent-timeline", "as": "activity-feed" }
+        {
+          "pattern": "agent-swarm-canvas",
+          "as": "swarm-topology"
+        },
+        {
+          "pattern": "agent-timeline",
+          "as": "activity-feed"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Primary dashboard: swarm canvas shows agent topology with live status; timeline shows recent agent actions and handoffs"
@@ -30,8 +63,14 @@
     {
       "id": "agent-detail",
       "default_layout": [
-        { "pattern": "agent-timeline", "as": "agent-history" },
-        { "pattern": "neural-feedback-loop", "as": "feedback-inspector" }
+        {
+          "pattern": "agent-timeline",
+          "as": "agent-history"
+        },
+        {
+          "pattern": "neural-feedback-loop",
+          "as": "feedback-inspector"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Single agent deep-dive: timeline shows execution trace; neural-feedback-loop visualizes decision cycles and confidence"
@@ -40,7 +79,11 @@
       "id": "agent-config",
       "default_layout": [
         "settings-nav",
-        { "pattern": "form-sections", "preset": "structured", "as": "agent-parameters" }
+        {
+          "pattern": "form-sections",
+          "preset": "structured",
+          "as": "agent-parameters"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Agent configuration: settings-nav for config sections; form-sections for parameters, prompts, tool assignments"
@@ -48,20 +91,38 @@
     {
       "id": "agent-marketplace",
       "default_layout": [
-        { "pattern": "hero", "preset": "standard", "as": "marketplace-hero" },
-        { "pattern": "generative-card-grid", "as": "agent-catalog" }
+        {
+          "pattern": "hero",
+          "preset": "standard",
+          "as": "marketplace-hero"
+        },
+        {
+          "pattern": "generative-card-grid",
+          "as": "agent-catalog"
+        }
       ],
       "shell": "sidebar-main",
       "notes": "Discover and install agent templates; generative-card-grid renders agent cards with capability tags and ratings"
     }
   ],
-  "features": ["agents", "monitoring", "orchestration", "real-time", "websockets"],
+  "features": [
+    "agents",
+    "monitoring",
+    "orchestration",
+    "real-time",
+    "websockets"
+  ],
   "shells": {
     "sidebar-main": "Collapsible sidebar with agent navigation tree and main content area"
   },
   "suggested_theme": {
-    "styles": ["neon-dark", "carbon"],
-    "modes": ["dark"]
+    "styles": [
+      "neon-dark",
+      "carbon"
+    ],
+    "modes": [
+      "dark"
+    ]
   },
   "dependencies": {
     "patterns": {
@@ -73,7 +134,6 @@
       "settings-nav": ">=1.0.0",
       "hero": ">=1.0.0"
     },
-    "recipes": {},
     "styles": {}
   }
 }

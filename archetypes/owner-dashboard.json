@@ -28,7 +28,7 @@
       "negative": []
     },
     "implies": [],
-    "weight": 1.0,
+    "weight": 1,
     "tier": "core"
   },
   "pages": [
@@ -87,7 +87,6 @@
       "maintenance-board": "^1.0.0",
       "vacancy-tracker": "^1.0.0"
     },
-    "recipes": {},
     "styles": {}
   },
   "suggested_theme": {

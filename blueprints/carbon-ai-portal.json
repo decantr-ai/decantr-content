@@ -22,12 +22,11 @@
     "legal"
   ],
   "theme": {
-    "style": "carbon",
     "mode": "dark",
-    "recipe": "carbon",
-    "shape": "rounded"
+    "shape": "rounded",
+    "id": "carbon"
   },
-  "personality": "Production-ready AI chatbot with refined glassmorphic depth. Muted stormy-blue palette with soft drop shadows and subtle backdrop blur on panels. Lucide icons throughout. Rich typographic hierarchy \u2014 Inter or system sans-serif for body, monospace for code and data. Polished form fields with visible focus rings, smooth hover-lift transitions on cards and buttons. No emoji in UI. Think Claude meets Linear.",
+  "personality": "Production-ready AI chatbot with refined glassmorphic depth. Muted stormy-blue palette with soft drop shadows and subtle backdrop blur on panels. Lucide icons throughout. Rich typographic hierarchy — Inter or system sans-serif for body, monospace for code and data. Polished form fields with visible focus rings, smooth hover-lift transitions on cards and buttons. No emoji in UI. Think Claude meets Linear.",
   "overrides": {
     "pages": {},
     "pages_remove": [],
@@ -45,12 +44,6 @@
       "about-hybrid": "^1.0.0",
       "contact": "^1.0.0",
       "legal": "^1.0.0"
-    },
-    "recipes": {
-      "carbon": "^1.0.0"
-    },
-    "styles": {
-      "carbon": "^1.0.0"
     }
   },
   "features": [

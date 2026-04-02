@@ -10,17 +10,14 @@
     "saas-dashboard"
   ],
   "theme": {
-    "style": "auradecantism",
-    "recipe": "auradecantism"
+    "id": "auradecantism"
   },
   "personality": [],
   "overrides": {},
   "dependencies": {
     "archetypes": {
       "saas-dashboard": "^1.0.0"
-    },
-    "recipes": {},
-    "styles": {}
+    }
   },
   "seo_hints": {
     "schema_org": [

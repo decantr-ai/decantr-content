@@ -52,9 +52,6 @@
       "quick-start": ">=1.0.0",
       "cta-banner": ">=1.0.0",
       "tech-pills": ">=1.0.0"
-    },
-    "recipes": {
-      "luminarum": ">=1.0.0"
     }
   }
 }

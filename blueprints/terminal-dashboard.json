@@ -23,10 +23,9 @@
     "legal"
   ],
   "theme": {
-    "style": "terminal",
     "mode": "dark",
-    "recipe": "terminal",
-    "shape": "sharp"
+    "shape": "sharp",
+    "id": "terminal"
   },
   "personality": [
     "technical",
@@ -54,12 +53,6 @@
       "marketing-devtool": "^1.0.0",
       "auth-full": "^1.0.0",
       "legal": "^1.0.0"
-    },
-    "recipes": {
-      "terminal": "^1.0.0"
-    },
-    "styles": {
-      "terminal": "^1.0.0"
     }
   },
   "features": [
