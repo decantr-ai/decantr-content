@@ -95,5 +95,126 @@
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
+  },
+  "decorator_definitions": {
+    "glass-backdrop": {
+      "description": "Dark gradient background with subtle noise texture.",
+      "intent": "Use as the foundational page background behind glass surfaces. The dark gradient and noise create depth for the frosted effect.",
+      "suggested_properties": {
+        "background": "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
+        "min-height": "100vh",
+        "position": "relative"
+      },
+      "pairs_with": [
+        "glass-panel",
+        "glass-card"
+      ],
+      "usage": [
+        "Page root containers",
+        "App shell backgrounds",
+        "Full-page backdrops"
+      ]
+    },
+    "glass-panel": {
+      "description": "Frosted panel with blur(20px), 5% white background, subtle border.",
+      "intent": "Use for navigation bars, sidebars, and content panels that need the signature frosted glass treatment.",
+      "suggested_properties": {
+        "background": "rgba(255, 255, 255, 0.05)",
+        "backdrop-filter": "blur(20px)",
+        "-webkit-backdrop-filter": "blur(20px)",
+        "border": "1px solid rgba(255, 255, 255, 0.1)",
+        "border-radius": "16px"
+      },
+      "pairs_with": [
+        "glass-backdrop",
+        "glass-card",
+        "glass-header"
+      ],
+      "usage": [
+        "Navigation bars",
+        "Sidebar panels",
+        "Content panels",
+        "Floating containers"
+      ]
+    },
+    "glass-card": {
+      "description": "Individual glass card element.",
+      "intent": "Use for cards within content grids and feature sections. Lighter glass effect than panels for visual hierarchy.",
+      "suggested_properties": {
+        "background": "rgba(255, 255, 255, 0.05)",
+        "backdrop-filter": "blur(20px)",
+        "-webkit-backdrop-filter": "blur(20px)",
+        "border": "1px solid rgba(255, 255, 255, 0.1)",
+        "border-radius": "16px"
+      },
+      "pairs_with": [
+        "glass-panel",
+        "glass-backdrop"
+      ],
+      "usage": [
+        "Feature cards",
+        "Content cards",
+        "Grid items",
+        "Info cards"
+      ]
+    },
+    "glass-header": {
+      "description": "Glass hero section with layered blur panels.",
+      "intent": "Use for hero sections and page headers that need dramatic frosted depth with multiple layered blur panels.",
+      "suggested_properties": {
+        "background": "rgba(255, 255, 255, 0.03)",
+        "backdrop-filter": "blur(30px)",
+        "-webkit-backdrop-filter": "blur(30px)",
+        "border-bottom": "1px solid rgba(255, 255, 255, 0.08)",
+        "padding": "80px 0"
+      },
+      "pairs_with": [
+        "glass-backdrop",
+        "glass-panel"
+      ],
+      "usage": [
+        "Hero sections",
+        "Page headers",
+        "Landing page hero areas"
+      ]
+    },
+    "glass-overlay": {
+      "description": "Modal overlay with heavy blur.",
+      "intent": "Use for modal backdrops and overlay containers. The heavy blur isolates the modal content from the page beneath.",
+      "suggested_properties": {
+        "background": "rgba(0, 0, 0, 0.4)",
+        "backdrop-filter": "blur(30px)",
+        "-webkit-backdrop-filter": "blur(30px)",
+        "position": "fixed",
+        "inset": "0"
+      },
+      "pairs_with": [
+        "glass-panel",
+        "glass-card"
+      ],
+      "usage": [
+        "Modal overlays",
+        "Dialog backdrops",
+        "Lightbox backgrounds"
+      ]
+    },
+    "glass-fade-up": {
+      "description": "Entrance animation: fade + translateY(20px) over 0.5s.",
+      "intent": "Use as the entrance animation for glass elements appearing on page load. The smooth motion complements the fluid glass aesthetic.",
+      "suggested_properties": {
+        "animation": "glass-fade-up 0.5s ease-out both",
+        "opacity": "0",
+        "transform": "translateY(20px)"
+      },
+      "pairs_with": [
+        "glass-card",
+        "glass-panel"
+      ],
+      "usage": [
+        "Card entrance animations",
+        "Section reveals",
+        "Page load transitions"
+      ]
+    }
   }
 }

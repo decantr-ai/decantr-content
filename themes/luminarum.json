@@ -216,5 +216,223 @@
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
+  },
+  "decorator_definitions": {
+    "lum-canvas": {
+      "description": "Dark particle network background (#0D0D1A). Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root.",
+      "intent": "Use as the foundational page background to create the dark geometric canvas. The particle network adds depth and tech-forward energy.",
+      "suggested_properties": {
+        "background-color": "#0D0D1A",
+        "color": "rgba(255, 255, 255, 0.85)",
+        "min-height": "100vh",
+        "position": "relative"
+      },
+      "pairs_with": [
+        "lum-particles",
+        "lum-glass",
+        "lum-orbs"
+      ],
+      "usage": [
+        "Page root containers",
+        "App shell backgrounds"
+      ]
+    },
+    "lum-glass": {
+      "description": "Subtle glass panel with rgba(255,255,255,0.03) background and 0.08 opacity border. No heavy blur — clean transparency.",
+      "intent": "Use for navigation and panel surfaces that need subtle elevation without competing with the vibrant card accents.",
+      "suggested_properties": {
+        "background": "rgba(255, 255, 255, 0.03)",
+        "border": "1px solid rgba(255, 255, 255, 0.08)",
+        "border-radius": "var(--d-radius, 12px)"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-card-outlined"
+      ],
+      "usage": [
+        "Navigation bars",
+        "Sidebar panels",
+        "Section containers"
+      ]
+    },
+    "lum-orbs": {
+      "description": "Breathing gradient orbs behind hero/feature sections. Large radial gradients in primary/secondary/accent at 15-22% opacity, slowly pulsing and drifting.",
+      "intent": "Use behind hero and feature sections to create living, breathing visual energy. Position as background decoration behind content.",
+      "suggested_properties": {
+        "background": "radial-gradient(ellipse at 30% 40%, rgba(254, 68, 116, var(--lum-orb-opacity, 0.15)), transparent 60%), radial-gradient(ellipse at 70% 60%, rgba(10, 243, 235, var(--lum-orb-opacity, 0.15)), transparent 60%)",
+        "position": "absolute",
+        "inset": "0",
+        "pointer-events": "none",
+        "animation": "breathe 8s ease-in-out infinite"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-card-vibrant"
+      ],
+      "usage": [
+        "Hero section backgrounds",
+        "Feature section accents",
+        "Landing page backdrops"
+      ]
+    },
+    "lum-particles": {
+      "description": "Fixed-position small dots (2-8px) in brand colors scattered across the viewport at 15% opacity with subtle pulse animation.",
+      "intent": "Use as a viewport-level decorative layer to add ambient visual interest. Fixed positioning keeps particles stable during scroll.",
+      "suggested_properties": {
+        "position": "fixed",
+        "inset": "0",
+        "pointer-events": "none",
+        "opacity": "0.15",
+        "z-index": "0"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-orbs"
+      ],
+      "usage": [
+        "Viewport background layer",
+        "Ambient decoration"
+      ]
+    },
+    "lum-card-outlined": {
+      "description": "Outlined card with colored border stroke, transparent bg, colored heading. The stroke color comes from the section's accent.",
+      "intent": "Use for content cards in grids where each card should have a distinct accent color stroke. Ideal for process steps and feature lists.",
+      "suggested_properties": {
+        "background": "transparent",
+        "border": "var(--lum-stroke-width, 3px) solid var(--lum-card-color, #FE4474)",
+        "border-radius": "16px",
+        "color": "rgba(255, 255, 255, 0.75)",
+        "transition": "transform 300ms ease, box-shadow 300ms ease"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-stat-glow",
+        "lum-card-vibrant"
+      ],
+      "usage": [
+        "Process step cards",
+        "Feature list items",
+        "Pipeline stages",
+        "Info cards"
+      ]
+    },
+    "lum-card-vibrant": {
+      "description": "Filled card with vibrant gradient background, white text, corner accent brackets.",
+      "intent": "Use for high-impact feature cards that need maximum visual energy. Each card uses a different brand color gradient.",
+      "suggested_properties": {
+        "background": "linear-gradient(135deg, var(--lum-card-color, #FE4474), var(--lum-card-color-alt, #FDA303))",
+        "border-radius": "16px",
+        "color": "#FFFFFF",
+        "transition": "transform 300ms ease, box-shadow 300ms ease"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-card-outlined"
+      ],
+      "usage": [
+        "Feature highlight cards",
+        "Product cards",
+        "Pricing tiers",
+        "Call-to-action cards"
+      ]
+    },
+    "lum-code-block": {
+      "description": "Dark code block (#111113 bg) with colored top border (2px) matching section accent. Monospace font, syntax highlighting.",
+      "intent": "Use for code examples and syntax-highlighted blocks. The colored top border ties the code block to its section's accent color.",
+      "suggested_properties": {
+        "background": "#111113",
+        "border-top": "2px solid var(--lum-card-color, #0AF3EB)",
+        "border-radius": "12px",
+        "font-family": "ui-monospace, monospace",
+        "padding": "20px"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-card-outlined"
+      ],
+      "usage": [
+        "Code blocks",
+        "API examples",
+        "Configuration snippets"
+      ]
+    },
+    "lum-stat-glow": {
+      "description": "Number badge with filled circle in accent color, dark text inside.",
+      "intent": "Use for numbered badges and step indicators. The filled circle with dark text creates a bold, readable counter.",
+      "suggested_properties": {
+        "background": "var(--lum-card-color, #FDA303)",
+        "color": "#0D0D1A",
+        "border-radius": "50%",
+        "width": "40px",
+        "height": "40px",
+        "display": "flex",
+        "align-items": "center",
+        "justify-content": "center",
+        "font-weight": "700"
+      },
+      "pairs_with": [
+        "lum-card-outlined",
+        "lum-card-vibrant"
+      ],
+      "usage": [
+        "Step numbers",
+        "Stat badges",
+        "Counter indicators",
+        "Ranking badges"
+      ]
+    },
+    "lum-brand": {
+      "description": "Brand text with accent color on punctuation (e.g. 'decantr.ai' with coral period and 'i').",
+      "intent": "Use for the brand name in navigation and headers. Colored punctuation creates a distinctive, memorable brand mark.",
+      "suggested_properties": {
+        "color": "rgba(255, 255, 255, 0.9)",
+        "font-weight": "700"
+      },
+      "pairs_with": [
+        "lum-glass",
+        "lum-canvas"
+      ],
+      "usage": [
+        "Brand logos",
+        "Navigation brand text",
+        "Footer brand marks"
+      ]
+    },
+    "lum-fade-up": {
+      "description": "Scroll-reveal animation: fade in + translate up 24px over 0.6s.",
+      "intent": "Use as the entrance animation for sections appearing on scroll. The larger translate creates a more dramatic reveal.",
+      "suggested_properties": {
+        "animation": "lum-fade-up 0.6s ease-out both",
+        "opacity": "0",
+        "transform": "translateY(24px)"
+      },
+      "pairs_with": [
+        "lum-card-outlined",
+        "lum-card-vibrant"
+      ],
+      "usage": [
+        "Section reveals",
+        "Card entrance animations",
+        "Scroll-triggered content"
+      ]
+    },
+    "lum-divider": {
+      "description": "Section divider: thin horizontal line with centered colored dot. Dot color matches the next section's accent.",
+      "intent": "Use between major page sections to create visual breathing room. The colored dot transitions the eye to the next section's accent.",
+      "suggested_properties": {
+        "border-top": "1px solid rgba(255, 255, 255, 0.1)",
+        "position": "relative",
+        "margin": "80px 0"
+      },
+      "pairs_with": [
+        "lum-canvas",
+        "lum-card-outlined"
+      ],
+      "usage": [
+        "Section dividers",
+        "Content breaks",
+        "Page section transitions"
+      ]
+    }
   }
 }

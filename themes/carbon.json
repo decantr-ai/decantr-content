@@ -197,5 +197,196 @@
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
+  },
+  "decorator_definitions": {
+    "carbon-canvas": {
+      "description": "Background color using theme background token. Clean, minimal foundation.",
+      "intent": "Use as the root page background to establish the clean, developer-focused foundation. Sets a neutral canvas for content.",
+      "suggested_properties": {
+        "background-color": "var(--d-bg, #18181B)",
+        "color": "var(--d-fg, #FAFAFA)",
+        "min-height": "100vh"
+      },
+      "pairs_with": [
+        "carbon-glass",
+        "carbon-divider"
+      ],
+      "usage": [
+        "Page root containers",
+        "App shell backgrounds"
+      ]
+    },
+    "carbon-glass": {
+      "description": "Glassmorphic panel with backdrop-filter blur(12px), semi-transparent surface background, 1px border. Use for nav bars, sidebars, floating panels.",
+      "intent": "Use for navigation surfaces and panels that float above the canvas. Provides subtle depth while maintaining the minimal aesthetic.",
+      "suggested_properties": {
+        "background": "rgba(31, 31, 35, 0.8)",
+        "backdrop-filter": "blur(12px)",
+        "-webkit-backdrop-filter": "blur(12px)",
+        "border": "1px solid var(--d-border, #3F3F46)"
+      },
+      "pairs_with": [
+        "carbon-canvas",
+        "carbon-card"
+      ],
+      "usage": [
+        "Navigation bars",
+        "Sidebar panels",
+        "Floating panels",
+        "Sticky headers"
+      ]
+    },
+    "carbon-input": {
+      "description": "Soft border with gentle focus ring using primary blue. Border transitions on focus.",
+      "intent": "Use for all form inputs to maintain the clean, professional input styling. Focus ring provides clear interaction feedback.",
+      "suggested_properties": {
+        "border": "1px solid var(--d-border, #3F3F46)",
+        "border-radius": "var(--d-radius, 8px)",
+        "background": "var(--d-surface, #1F1F23)",
+        "transition": "border-color 150ms ease, box-shadow 150ms ease"
+      },
+      "pairs_with": [
+        "carbon-card",
+        "carbon-canvas"
+      ],
+      "usage": [
+        "Text inputs",
+        "Search fields",
+        "Text areas",
+        "Select dropdowns"
+      ]
+    },
+    "carbon-card": {
+      "description": "Surface background, subtle border, 8px radius, hover shadow transition.",
+      "intent": "Use for content containers that need clear visual boundaries. The hover shadow provides subtle interactive feedback.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #1F1F23)",
+        "border": "1px solid var(--d-border, #3F3F46)",
+        "border-radius": "var(--d-radius, 8px)",
+        "transition": "box-shadow 150ms ease"
+      },
+      "pairs_with": [
+        "carbon-canvas",
+        "carbon-divider"
+      ],
+      "usage": [
+        "Content cards",
+        "Chat message groups",
+        "Settings panels",
+        "Feature cards"
+      ]
+    },
+    "carbon-divider": {
+      "description": "Hairline separator using border-color token.",
+      "intent": "Use to create visual separation between content sections without heavy borders. Maintains the minimal, clean aesthetic.",
+      "suggested_properties": {
+        "border-top": "1px solid var(--d-border, #3F3F46)",
+        "margin": "0"
+      },
+      "pairs_with": [
+        "carbon-card",
+        "carbon-canvas"
+      ],
+      "usage": [
+        "Section dividers",
+        "List separators",
+        "Content breaks"
+      ]
+    },
+    "carbon-code": {
+      "description": "Monospace font, surface-raised background, subtle 3px left border accent in primary color.",
+      "intent": "Use for code blocks and inline code to provide a distinct developer-tool aesthetic. The left accent border ties code to the brand.",
+      "suggested_properties": {
+        "font-family": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace",
+        "background": "var(--d-surface-raised, #27272A)",
+        "border-left": "3px solid var(--d-primary, #7C93B0)",
+        "border-radius": "var(--d-radius, 6px)",
+        "padding": "16px"
+      },
+      "pairs_with": [
+        "carbon-card",
+        "carbon-canvas"
+      ],
+      "usage": [
+        "Code blocks",
+        "Inline code snippets",
+        "API response displays",
+        "Log output"
+      ]
+    },
+    "carbon-bubble-user": {
+      "description": "Right-aligned message bubble with primary-tinted background for user messages.",
+      "intent": "Use for user-authored messages in chat interfaces. The primary tint distinguishes user messages from AI responses.",
+      "suggested_properties": {
+        "background": "rgba(124, 147, 176, 0.15)",
+        "border-radius": "16px 16px 4px 16px",
+        "padding": "12px 16px",
+        "margin-left": "auto",
+        "max-width": "80%"
+      },
+      "pairs_with": [
+        "carbon-bubble-ai",
+        "carbon-canvas"
+      ],
+      "usage": [
+        "User chat messages",
+        "Sent messages"
+      ]
+    },
+    "carbon-bubble-ai": {
+      "description": "Left-aligned message bubble with surface background for AI responses.",
+      "intent": "Use for AI-generated messages in chat interfaces. The neutral surface background creates a calm, readable presentation.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #1F1F23)",
+        "border-radius": "16px 16px 16px 4px",
+        "padding": "12px 16px",
+        "margin-right": "auto",
+        "max-width": "80%"
+      },
+      "pairs_with": [
+        "carbon-bubble-user",
+        "carbon-canvas"
+      ],
+      "usage": [
+        "AI chat responses",
+        "System messages"
+      ]
+    },
+    "carbon-fade-slide": {
+      "description": "Entrance animation: opacity 0 to 1, translateY 12px to 0, 200ms ease-out.",
+      "intent": "Use as the entrance animation for content appearing on page load or scroll. Provides subtle, professional motion.",
+      "suggested_properties": {
+        "animation": "carbon-fade-slide 200ms ease-out both",
+        "opacity": "0",
+        "transform": "translateY(12px)"
+      },
+      "pairs_with": [
+        "carbon-card",
+        "carbon-glass"
+      ],
+      "usage": [
+        "Page entrance animations",
+        "List item reveals",
+        "Card stagger animations"
+      ]
+    },
+    "carbon-skeleton": {
+      "description": "Loading placeholder with subtle pulse animation for skeleton states.",
+      "intent": "Use as a placeholder while content loads. The pulse animation communicates loading state without being distracting.",
+      "suggested_properties": {
+        "background": "var(--d-surface-raised, #27272A)",
+        "border-radius": "var(--d-radius, 6px)",
+        "animation": "pulse 1.5s ease-in-out infinite"
+      },
+      "pairs_with": [
+        "carbon-card",
+        "carbon-canvas"
+      ],
+      "usage": [
+        "Loading skeletons",
+        "Content placeholders",
+        "Lazy-loaded sections"
+      ]
+    }
   }
 }
