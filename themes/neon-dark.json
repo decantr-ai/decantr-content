@@ -1,0 +1,38 @@
+{
+  "name": "neon-dark",
+  "display_name": "Neon Dark",
+  "description": "High-contrast dark theme with electric neon accents. For agent dashboards, cyber UIs, and spatial interfaces.",
+  "category": "dark",
+  "tags": ["2026", "neon", "cyber", "dark", "vibrant"],
+  "seed": {
+    "primary": "#00E5FF",
+    "secondary": "#B388FF",
+    "accent": "#76FF03"
+  },
+  "palette": {
+    "background": { "dark": "#0A0A0F", "light": "#FAFAFA" },
+    "surface": { "dark": "#12121A", "light": "#FFFFFF" },
+    "surface-raised": { "dark": "#1A1A25", "light": "#F5F5F5" },
+    "border": { "dark": "#2A2A3A", "light": "#E0E0E0" },
+    "text": { "dark": "#E8E8F0", "light": "#1A1A25" },
+    "text-muted": { "dark": "#8888AA", "light": "#666680" },
+    "primary-hover": { "dark": "#33EBFF", "light": "#00B8D4" }
+  },
+  "tokens": {
+    "base": {
+      "success": "#00E676",
+      "danger": "#FF1744",
+      "warning": "#FFD600",
+      "info": "#448AFF"
+    }
+  },
+  "typography_hints": {
+    "scale": "1.25",
+    "heading_weight": 700,
+    "body_weight": 400
+  },
+  "motion_hints": {
+    "preference": "full",
+    "reduce_motion_default": false
+  }
+}

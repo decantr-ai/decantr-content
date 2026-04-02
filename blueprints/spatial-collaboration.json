@@ -1,0 +1,54 @@
+{
+  "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
+  "id": "spatial-collaboration",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Spatial Collaboration",
+  "description": "Immersive collaborative workspace combining spatial depth-layered canvases with real-time presence, auth, and public-facing about pages.",
+  "tags": ["spatial", "collaboration", "workspace", "immersive", "canvas", "real-time", "2026"],
+  "compose": ["spatial-workspace", "auth-full", "about-hybrid"],
+  "theme": {
+    "style": "carbon",
+    "mode": "dark",
+    "recipe": "carbon",
+    "shape": "rounded"
+  },
+  "personality": "Immersive spatial workspace with depth and presence. Glassmorphic floating panels over depth-layered backgrounds. Smooth spring animations for all transitions. Presence indicators use warm accent colors. Think Figma meets a sci-fi command bridge. System sans-serif typography. Minimal chrome, maximum canvas.",
+  "features": ["spatial", "collaboration", "drag-drop", "real-time", "presence", "auth", "mfa", "oauth"],
+  "routes": {
+    "/": { "page": "workspace", "shell": "canvas-overlay", "archetype": "spatial-workspace" },
+    "/settings": { "page": "workspace-settings", "shell": "sidebar-main", "archetype": "spatial-workspace" },
+    "/login": { "page": "login", "shell": "centered", "archetype": "auth-full" },
+    "/register": { "page": "register", "shell": "centered", "archetype": "auth-full" },
+    "/forgot-password": { "page": "forgot-password", "shell": "centered", "archetype": "auth-full" },
+    "/reset-password": { "page": "reset-password", "shell": "centered", "archetype": "auth-full" },
+    "/verify-email": { "page": "verify-email", "shell": "centered", "archetype": "auth-full" },
+    "/about": { "page": "about", "shell": "top-nav-footer", "archetype": "about-hybrid" }
+  },
+  "overrides": {
+    "features_add": ["theme-toggle"],
+    "features_remove": [],
+    "pages": {},
+    "pages_remove": []
+  },
+  "seo_hints": {
+    "schema_org": ["Organization", "WebApplication"],
+    "meta_priorities": ["description", "og:image"]
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g w", "route": "/", "label": "Go to Workspace" },
+      { "key": "g s", "route": "/settings", "label": "Go to Settings" }
+    ]
+  },
+  "dependencies": {
+    "archetypes": {
+      "spatial-workspace": ">=1.0.0",
+      "auth-full": ">=1.0.0",
+      "about-hybrid": ">=1.0.0"
+    },
+    "styles": { "carbon": ">=1.0.0" },
+    "recipes": { "carbon": ">=1.0.0" }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "agent-swarm-canvas",
+  "$schema": "https://decantr.ai/schemas/pattern.v2.json",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Agent Swarm Canvas",
+  "description": "A spatial node-graph canvas where AI agents appear as interactive nodes with real-time status, drag-to-connect edges, zoom/pan navigation, and a minimap for orchestration overview.",
+  "category": "agentic",
+  "tags": ["2026", "agentic", "spatial", "orchestration", "node-graph", "real-time"],
+  "components": [
+    "AgentNode",
+    "ConnectionPath",
+    "StatusBadge",
+    "CanvasControls",
+    "Minimap",
+    "TaskTooltip"
+  ],
+  "default_preset": "standard",
+  "presets": {
+    "standard": {
+      "description": "Full spatial canvas with minimap, control bar, and status overlay — intended as a primary view for agent orchestration dashboards",
+      "layout": {
+        "layout": "spatial",
+        "atoms": "_relative _w100 _h100 _overflow-hidden _bg-canvas"
+      }
+    },
+    "compact": {
+      "description": "Reduced canvas without minimap or control bar, suitable for embedding in sidebars or secondary panels — agents render as smaller nodes with abbreviated labels",
+      "layout": {
+        "layout": "spatial",
+        "atoms": "_relative _w100 _overflow-hidden _bg-canvas"
+      }
+    },
+    "readonly": {
+      "description": "Non-interactive snapshot of the agent graph — no drag, no connect, no zoom controls — used for monitoring dashboards and historical playback",
+      "layout": {
+        "layout": "spatial",
+        "atoms": "_relative _w100 _h100 _overflow-hidden _bg-canvas _pointer-events-none"
+      }
+    }
+  },
+  "default_layout": {
+    "layout": "spatial",
+    "atoms": "_relative _w100 _h100 _overflow-hidden _bg-canvas",
+    "slots": {
+      "canvas-viewport": "The main infinite-scroll canvas area. Uses CSS transform for zoom/pan. Contains all agent nodes and connection paths positioned absolutely via x/y coordinates. Must handle pointer events for drag-to-connect, pan (middle-click or space+drag), and pinch-to-zoom. Background should render a subtle dot-grid pattern that scales with zoom level.",
+      "agent-node": "Repeating slot — one per agent. Each node is a rounded card (80–120px wide) positioned absolutely on the canvas. Shows agent name, avatar/icon, and a colored status ring: idle (gray/neutral), running (blue/primary with pulse animation), error (red/destructive with shake), complete (green/success with checkmark). Nodes have connection ports (small circles) on left and right edges for drag-to-connect wiring. Clicking a node expands it inline to show current task description and elapsed time. Nodes support drag repositioning.",
+      "connection-line": "SVG path elements drawn between agent-node connection ports. Uses bezier curves (cubic) with a slight droop. Animated dash pattern flows in the direction of data transfer. Line color reflects connection status: active (primary color, animated flow), idle (muted/dashed), error (destructive, static). Hovering a line shows a tooltip with the data payload summary being transferred.",
+      "status-overlay": "A translucent overlay panel anchored to the top-right of the canvas viewport. Shows aggregate swarm stats: total agents, running count, error count, completed count, and overall progress as a thin horizontal bar. Collapses to a single summary badge on compact viewports. Uses backdrop-blur for depth.",
+      "control-bar": "Horizontal toolbar anchored to the bottom-center of the canvas. Contains zoom-in, zoom-out, fit-to-view, and toggle-minimap icon buttons. Also includes a play/pause button for swarm execution and a reset-layout button that auto-arranges nodes using a force-directed algorithm. Buttons use icon-only rendering with tooltips on hover.",
+      "minimap": "A small (160×120px) overview panel anchored to the bottom-right corner. Renders a simplified, zoomed-out view of the entire node graph with colored dots for agents and thin lines for connections. Shows a draggable viewport rectangle indicating the current visible area. Semi-transparent background with subtle border."
+    }
+  },
+  "accessibility": {
+    "role": "application",
+    "aria-label": "Agent orchestration canvas",
+    "announcements": [
+      "Agent {name} status changed to {status}",
+      "Connection established between {source} and {target}",
+      "Swarm execution {started|paused|completed}"
+    ],
+    "keyboard": [
+      "Tab: cycle through agent nodes in DOM order",
+      "Enter: expand selected agent node details",
+      "Space: toggle swarm play/pause",
+      "Arrow keys: pan canvas viewport",
+      "+/-: zoom in/out",
+      "0: fit all agents in view",
+      "Delete: remove selected connection",
+      "Escape: deselect current node or cancel drag"
+    ]
+  },
+  "responsive": {
+    "mobile": "Canvas remains spatial but disables drag-to-connect (use tap-to-select then tap-target-to-connect two-step flow). Minimap hidden. Control bar simplifies to zoom + play/pause. Agent nodes render at minimum 64px width with truncated labels.",
+    "tablet": "Full spatial canvas with minimap collapsed by default (toggle via control bar). Touch gestures: two-finger pan, pinch-to-zoom. Connection drag uses long-press to initiate."
+  }
+}

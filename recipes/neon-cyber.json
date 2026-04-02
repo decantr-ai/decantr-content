@@ -1,0 +1,20 @@
+{
+  "name": "neon-cyber",
+  "display_name": "Neon Cyber",
+  "description": "Cyber-aesthetic recipe with neon glow effects, electric borders, and void backgrounds.",
+  "decorators": {
+    "neon-card": "Surface card with subtle border that glows cyan on hover, rounded 8px radius, shadow elevation with hover shadow transition",
+    "neon-input": "Input field with border that transitions to cyan glow on focus, gentle focus ring with neon primary color",
+    "neon-glass": "Frosted glassmorphic panel with backdrop blur(16px), semi-transparent surface background, subtle cyan-tinted border",
+    "neon-code": "Monospace code block with surface-raised background, 3px left border in primary cyan, subtle rounded radius",
+    "neon-glow": "Element with cyan box-shadow glow effect, pulsing animation on hover",
+    "neon-divider": "Horizontal divider with gradient from transparent to primary to transparent",
+    "neon-badge": "Small surface-raised background badge with rounded radius and subtle border"
+  },
+  "spatial_hints": {
+    "density_bias": "comfortable",
+    "section_padding": "96px",
+    "content_gap_shift": 0,
+    "card_wrapping": "soft"
+  }
+}
