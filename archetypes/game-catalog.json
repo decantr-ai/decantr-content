@@ -88,6 +88,10 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "games": "Search bar at top with autocomplete. Filter bar below with genre, platform, and rating chips. Game catalog card grid showing cover art, title, genre tags, and player count on each card.",
+    "join-guild": "Marketing-style landing page. Hero banner with guild branding and join CTA. Perks grid with icon cards highlighting guild benefits. Testimonials section with member quotes. Final CTA section with sign-up button."
+  },
   "features": [
     "search"
   ],

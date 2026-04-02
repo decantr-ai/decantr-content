@@ -97,6 +97,12 @@
       "shell": "inherit"
     }
   ],
+  "page_briefs": {
+    "profile": "Profile settings form with avatar upload, display name, email, and bio fields. Save button at the bottom of each section. Clean grouped form layout.",
+    "security": "Security settings with password change form (current + new password fields), MFA toggle with setup flow, and active sessions table showing device, location, and last-active with revoke buttons.",
+    "preferences": "Preferences form with theme selector (light/dark/auto toggle), notification preference checkboxes, language dropdown, and timezone selector.",
+    "danger": "Danger zone section with red-bordered cards for destructive actions. Export data button, deactivate account toggle, and delete account button with confirmation dialog warning."
+  },
   "features": [
     "profile-edit",
     "password-change",

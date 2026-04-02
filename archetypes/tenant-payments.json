@@ -73,6 +73,10 @@
       "shell": "top-nav-main"
     }
   ],
+  "page_briefs": {
+    "overview": "Tenant payment hub. Rent reminder card at top showing next due date, amount, and pay-now button. Autopay setup card below. Payment history table at the bottom with date, amount, method, and receipt download per row.",
+    "setup": "Autopay configuration page. Bank account or card input form, autopay schedule selector, and confirmation toggle. Clear instructions and terms text above the form."
+  },
   "features": [
     "payments",
     "autopay",

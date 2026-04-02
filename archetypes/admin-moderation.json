@@ -56,6 +56,10 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "moderation-queue": "Dense list view with search bar and filter chips at top. Below, stacked queue item rows showing content title, submitter, type badge, and approve/reject action buttons on each row.",
+    "moderation-detail": "Two-column detail layout. Left side shows content hero card with metadata, right side has a JSON viewer for the raw submission. Action bar at bottom with approve, reject, and request-changes buttons."
+  },
   "features": [
     "auth",
     "admin"

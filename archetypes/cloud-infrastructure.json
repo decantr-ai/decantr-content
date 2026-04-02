@@ -191,6 +191,17 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "apps": "Filter bar at top with search and status filters. Two-column layout below: wider left column shows a card grid of app resources with status badges, narrower right column has a live activity feed.",
+    "app-detail": "Detail header with app name, status, and action buttons. KPI row showing request count, error rate, uptime. Below, two-column split: deploy log with live-updating entries on the left, data table of instances on the right.",
+    "team": "Filter bar at top for search and role filters. Below, a card grid of team member cards showing avatar, name, role badge, and last-active timestamp.",
+    "activity": "Filter bar with date range and event type filters. Below, a chronological activity feed with timestamped entries showing user, action, and resource affected.",
+    "services": "Grid of service catalog cards showing service name, icon, status indicator, and region badge. Cards are clickable for drill-down.",
+    "tokens": "Toolbar at top with create-token button and search. Below, a data table of API tokens with name, prefix, created date, last-used, and revoke action columns.",
+    "usage": "Resource gauge grid at top showing CPU, memory, bandwidth, and storage with circular or bar gauges. Below, a chart grid with time-series graphs for each metric.",
+    "status": "Status board with rows for each service showing name, current status dot (green/yellow/red), uptime percentage, and incident history sparkline.",
+    "compliance": "Onboarding-style checklist card at top with completion progress bar and check items. Below, a data table of compliance requirements with status and evidence columns."
+  },
   "features": [
     "realtime-data",
     "team-management"

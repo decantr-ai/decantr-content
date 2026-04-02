@@ -84,6 +84,12 @@
       "shell": "top-nav-main"
     }
   ],
+  "page_briefs": {
+    "home": "Personal landing page. Hero with name, title, and brief intro. Below, a card grid of featured projects with cover images, titles, and short descriptions. CTA section at the bottom inviting contact.",
+    "project-detail": "Project showcase page. Detail header with project title, role, date, and tags. Below, rich content area for project description, screenshots, and outcomes. CTA at the bottom linking to the next project.",
+    "about": "Split hero with portrait photo and biographical text. Below, an activity feed or timeline showing career highlights and milestones in chronological order.",
+    "contact": "Simple contact form page with name, email, subject, and message fields. Clean single-column centered layout."
+  },
   "features": [
     "analytics",
     "contact-form"

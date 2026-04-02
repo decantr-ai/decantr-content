@@ -88,6 +88,9 @@
       "shell": "workspace-aside"
     }
   ],
+  "page_briefs": {
+    "doc": "Three-column workspace. Collapsible page tree sidebar on the left for navigation. Wide center area with the block-based document editor, presence avatars along the top showing active collaborators with colored cursors. Comment thread sidebar on the right that slides in when a comment is selected."
+  },
   "features": [
     "realtime",
     "presence",

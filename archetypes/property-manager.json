@@ -104,6 +104,13 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "list": "Property grid showing property cards with thumbnail image, address, unit count, occupancy badge, and monthly revenue. Search and filter controls above the grid.",
+    "detail": "Property detail view with hero image, address, description, and key stats. Tabbed sections below for units, financials, and maintenance. Map embed in the sidebar.",
+    "create": "Multi-step property creation form with address fields, property type selector, photo upload area, unit configuration, and financial defaults.",
+    "units": "Unit grid showing unit cards with unit number, floor plan type, square footage, rent amount, and occupancy status badge. Add-unit button above the grid.",
+    "unit-detail": "Unit detail view with floor plan info, current tenant card if occupied, lease summary, rent history table, and maintenance ticket list."
+  },
   "features": [
     "crud",
     "file-upload",

@@ -76,6 +76,11 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "board": "Kanban board layout with columns for Open, In Progress, Scheduled, and Complete. Each column contains draggable ticket cards showing property address, issue summary, priority badge, and assigned vendor.",
+    "ticket": "Ticket detail view. Header with ticket ID, status badge, and priority indicator. Body shows issue description, photo attachments, property/unit info, vendor assignment, and a comment thread for updates.",
+    "create": "Ticket creation form. Fields for property/unit selector, issue category dropdown, description textarea, priority selector, photo upload area, and preferred schedule date picker."
+  },
   "features": [
     "kanban",
     "drag-drop",

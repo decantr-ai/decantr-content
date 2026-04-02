@@ -41,6 +41,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "settings": "Single-page settings form with grouped sections separated by dividers. Toggle switches, dropdowns, and text inputs organized by category. Save button at the bottom."
+  },
   "features": [],
   "shells": {
     "sidebar-main": "Sidebar navigation with main content area"

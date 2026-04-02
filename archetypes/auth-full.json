@@ -148,6 +148,16 @@
       "shell": "centered"
     }
   ],
+  "page_briefs": {
+    "login": "Centered card on a clean background. Email and password fields, primary sign-in button, OAuth provider row, and links to register and forgot-password.",
+    "register": "Centered card with name, email, password fields and strength meter. Terms checkbox, register button, and link back to login.",
+    "forgot-password": "Minimal centered card with email field and submit button. Brief instructional text above explaining the password reset email process.",
+    "reset-password": "Centered card with new password and confirm password fields, strength indicator, and save button. Token-authenticated view reached from email link.",
+    "verify-email": "Centered status card showing a verification message with animated checkmark on success or a resend-link button if pending.",
+    "mfa-setup": "Centered card with QR code display for authenticator app, manual key fallback, and a 6-digit code input to confirm setup.",
+    "mfa-verify": "Minimal centered card with a 6-digit code input, verify button, and a link to use backup codes as an alternative.",
+    "phone-verify": "Centered card with phone number display, 6-digit SMS code input field, verify button, and resend code link."
+  },
   "features": [
     "auth",
     "mfa",

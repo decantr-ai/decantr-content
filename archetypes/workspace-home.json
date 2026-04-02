@@ -59,6 +59,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "dashboard": "Workspace landing page. Collaboration activity feed at the top showing recent edits and comments from team members. Below, a recent documents card grid with doc thumbnails, titles, and last-edited timestamps. Shared documents section at the bottom with similar card layout."
+  },
   "features": [
     "realtime",
     "search",

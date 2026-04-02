@@ -76,6 +76,11 @@
       "notes": "filter-bar produces search signals consumed by card-grid for category filtering"
     }
   ],
+  "page_briefs": {
+    "home": "Landing hero with site title and tagline at top. Below, a card grid of latest article cards showing featured image thumbnail, title, excerpt, date, and category tag.",
+    "article": "Long-form reading view. Detail header with article title, author, date, and reading time. Prose content area below with generous line spacing and comfortable max-width.",
+    "categories": "Filter bar at top with category chips and search input. Below, a card grid of articles filtered by the active category. Same card style as the home page."
+  },
   "features": [
     "search",
     "analytics",

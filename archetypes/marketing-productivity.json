@@ -104,6 +104,10 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "home": "Scroll-driven marketing page. Brand hero with headline and product preview screenshot. Feature grid with icon cards. Before-after collaboration demo showing solo vs team workflow. Pricing tiers section. Testimonial cards. CTA banner at the bottom.",
+    "pricing": "Dedicated pricing page. Minimal hero with pricing headline. Detailed pricing cards with feature comparison and toggle for monthly/annual billing. CTA banner below."
+  },
   "features": [
     "marketing",
     "pricing",

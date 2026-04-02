@@ -74,6 +74,11 @@
       "shell": "minimal-header"
     }
   ],
+  "page_briefs": {
+    "checkout": "Minimal distraction checkout. Centered subscribe flow with plan summary card, payment method form with card fields, promo code input, and confirm button. Apple Pay and Google Pay buttons above card form.",
+    "purchase": "Single-item purchase checkout. Product summary at top with image and price. Payment form below with card fields and confirm purchase button.",
+    "success": "Centered success message card with animated checkmark, confirmation text, order/subscription details summary, and a button to continue to the content library."
+  },
   "features": [
     "stripe-integration",
     "promo-codes",

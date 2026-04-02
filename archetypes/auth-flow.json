@@ -71,6 +71,11 @@
       "shell": "centered"
     }
   ],
+  "page_briefs": {
+    "login": "Centered card on a clean background. Card contains email and password fields, a primary sign-in button, OAuth provider buttons, and a forgot-password link below.",
+    "register": "Centered card matching login style. Fields for name, email, password with strength indicator. Terms checkbox and a primary register button. Link to sign-in at bottom.",
+    "forgot-password": "Minimal centered card with email input field and a submit button. Short instructional text above the form explaining the reset process."
+  },
   "features": [
     "auth"
   ],

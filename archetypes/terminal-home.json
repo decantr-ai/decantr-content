@@ -87,6 +87,9 @@
       "shell": "terminal-split"
     }
   ],
+  "page_briefs": {
+    "home": "Terminal-style dashboard with status bar at top showing hostname and connection info. Resizable horizontal split pane: left pane has log stream with color-coded entries, right pane has metric gauges and a terminal emulator input. Hotkey bar at bottom. Command palette overlay accessible via keyboard shortcut."
+  },
   "features": [
     "split-panes",
     "log-streaming",

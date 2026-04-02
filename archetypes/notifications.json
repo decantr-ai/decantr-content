@@ -40,6 +40,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "notifications": "Scrollable notification inbox. Each notification row shows icon, title, message preview, timestamp, and read/unread indicator. Mark-all-read button at top. Rows are grouped by date."
+  },
   "features": [
     "notifications"
   ],

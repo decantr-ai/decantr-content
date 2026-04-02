@@ -92,6 +92,10 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "home": "Terminal-styled landing page. Hero section with ASCII art logo, typing-effect tagline, and embedded terminal demo with installation command. Feature cards below. Interactive demo terminal showing tool output. ASCII chart visualization. CTA banner at the bottom.",
+    "docs": "Documentation page with clean prose sections and embedded read-only terminal blocks showing code examples with syntax highlighting. Scrollable single-column layout."
+  },
   "features": [
     "terminal-hero",
     "ascii-demo",

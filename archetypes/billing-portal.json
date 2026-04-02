@@ -47,6 +47,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "billing": "Current plan summary card at top showing tier name, price, and usage bar. Below, a tier comparison grid with feature checkmarks and upgrade buttons. KPI row showing spend, usage limits, and next billing date."
+  },
   "features": [
     "auth",
     "billing"

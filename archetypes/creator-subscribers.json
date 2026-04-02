@@ -66,6 +66,10 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "subscribers": "Data table of subscribers with columns for avatar, name, tier badge, join date, total spent, and status. Search and filter controls above the table. Bulk action toolbar for messaging.",
+    "subscriber-detail": "Detail header showing subscriber avatar, name, tier, and engagement score. Below, an activity feed of the subscriber's recent actions including purchases, comments, and subscription changes."
+  },
   "features": [
     "subscriber-filtering",
     "export-csv",

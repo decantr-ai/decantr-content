@@ -46,6 +46,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "tiers": "Tier builder interface with draggable tier cards arranged vertically. Each card shows tier name, price, subscriber count, and a benefits checklist. Add-tier button at the bottom. Cards are expandable to reveal inline editing of benefits and pricing."
+  },
   "features": [
     "tier-creation",
     "benefit-management",

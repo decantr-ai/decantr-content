@@ -96,6 +96,10 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "home": "Scroll-driven marketing page. Brand hero with headline, subtext, and dual CTA buttons. Feature card grid with icons and descriptions. How-it-works timeline with numbered steps. Pricing section with tier cards. Testimonial cards from creators. Final CTA banner.",
+    "pricing": "Dedicated pricing page. Detailed pricing cards with feature comparison checklist on each tier. FAQ accordion section below with common questions and expandable answers."
+  },
   "features": [
     "hero-section",
     "feature-grid",

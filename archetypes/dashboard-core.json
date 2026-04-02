@@ -54,6 +54,10 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "overview": "KPI stat cards in a row at the top showing key metrics. Below, a chart grid with 2-3 time-series or bar charts. Activity feed at the bottom with recent events in a scrollable list.",
+    "analytics": "Filter bar at top with date range picker, dimension selectors, and search. Below, a full-width data table with sortable columns, pagination, and row-click drill-down."
+  },
   "features": [
     "analytics-state"
   ],

@@ -80,6 +80,9 @@
       "shell": "full-bleed"
     }
   ],
+  "page_briefs": {
+    "home": "Full-bleed scrolling landing page. Brand hero with headline and CTA buttons at top. Feature grid with icon cards below. Scrolling logo strip of partner logos. Capability grid section. Platform stats with large numbers. Enterprise CTA banner. Minimal footer with link columns."
+  },
   "features": [],
   "shells": {
     "full-bleed": "Floating nav over scroll-driven marketing sections — hero-first, maximum visual impact"

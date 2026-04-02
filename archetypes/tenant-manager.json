@@ -94,6 +94,11 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "list": "Tenant directory table with columns for avatar, name, property/unit, lease status badge, monthly rent, and balance. Search bar and status filter above the table.",
+    "detail": "Tenant profile view. Profile card at top with name, contact info, and photo. Lease overview section below showing lease dates, rent amount, and terms. Payment history table at the bottom with date, amount, and status columns.",
+    "create": "Tenant onboarding form. Personal info fields at top (name, email, phone). Lease configuration form below with property/unit selector, lease dates, rent amount, and deposit. Document upload area."
+  },
   "features": [
     "crud",
     "search",

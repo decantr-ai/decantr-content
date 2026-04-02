@@ -113,6 +113,10 @@
       "shell": "terminal-split"
     }
   ],
+  "page_briefs": {
+    "metrics": "Terminal-style quad-split dashboard. Status bar at top with hostname and uptime. Four quadrants showing: metrics gauge grid with CPU/memory/disk bars, ASCII line chart for throughput, ASCII bar chart for latency distribution, and compact process table. Hotkey bar at bottom.",
+    "detail": "Single-metric deep dive. Status bar at top. Large braille-style ASCII chart showing detailed time series. Below, a block-style gauge showing current value with threshold markers. Hotkey bar at bottom."
+  },
   "features": [
     "realtime-metrics",
     "ascii-charts",

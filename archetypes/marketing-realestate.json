@@ -70,6 +70,9 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "home": "Property management SaaS landing page. Brand hero with property imagery and headline. Feature grid with icon cards highlighting management tools. Pricing section with tier cards. Testimonial cards from property managers. CTA banner with sign-up button."
+  },
   "features": [
     "marketing",
     "seo",

@@ -71,6 +71,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "dashboard": "Portfolio overview dashboard. P&L summary cards at top showing revenue, expenses, NOI, and occupancy rate. Rent collection status bar below. Vacancy tracker mini cards. Maintenance summary showing open ticket count. Property card grid at the bottom with thumbnail, address, unit count, and occupancy per card."
+  },
   "features": [
     "dashboard",
     "analytics",

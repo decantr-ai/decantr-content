@@ -90,6 +90,12 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "overview": "P&L dashboard with revenue and expense summary cards at top, income vs expense bar chart, and NOI trend line chart. Date range selector in the header for period filtering.",
+    "rent-roll": "Full rent roll table with columns for unit, tenant name, monthly rent, payment status, last payment date, and balance. Summary row at the bottom with totals.",
+    "expenses": "Expense list view with filter bar for category and date range. Table rows showing expense date, category badge, vendor, property, amount, and receipt attachment indicator.",
+    "payments": "Payment history table showing date, tenant, property, amount, method badge, and status. Filterable by property and date range. Summary cards at top showing collected vs outstanding totals."
+  },
   "features": [
     "analytics",
     "export",

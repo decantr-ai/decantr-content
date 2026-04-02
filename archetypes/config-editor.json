@@ -97,6 +97,10 @@
       "shell": "terminal-split"
     }
   ],
+  "page_briefs": {
+    "config": "Terminal-style split layout. File tree panel on the left showing directory hierarchy. Editor pane on the right with syntax-highlighted config file content. Status bar at bottom showing file path, cursor position, and mode. Hotkey bar at very bottom.",
+    "diff": "Side-by-side diff view showing old and new versions of a config file with red/green highlighted changed lines. Status bar at top with file names and change count. Hotkey bar at bottom."
+  },
   "features": [
     "file-tree",
     "syntax-highlight",

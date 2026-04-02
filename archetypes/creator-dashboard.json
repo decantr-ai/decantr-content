@@ -60,6 +60,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "home": "At-a-glance dashboard. Compact KPI cards across the top showing subscriber count, monthly earnings, and view stats. Earnings summary chart in the middle showing revenue trend. Recent activity feed at the bottom with timestamped subscriber actions."
+  },
   "features": [
     "earnings-kpis",
     "activity-feed",

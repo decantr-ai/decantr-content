@@ -105,6 +105,12 @@
       "notes": "Discover and install agent templates; generative-card-grid renders agent cards with capability tags and ratings"
     }
   ],
+  "page_briefs": {
+    "agent-overview": "Dense monitoring dashboard. Swarm topology canvas dominates the center showing agent nodes with live status indicators and connection lines. Activity feed timeline in a right sidebar or below, scrolling with timestamped agent actions.",
+    "agent-detail": "Deep-dive view with agent name and status ring in header. Timeline shows execution trace with expandable entries. Neural feedback loop visualization below with circular confidence diagrams and decision cycle charts.",
+    "agent-config": "Form-heavy page with grouped settings sections. Toggle switches for boolean config, text inputs for endpoints, dropdown for model selection. Settings nav on the left for jumping between parameter groups.",
+    "agent-marketplace": "Discovery page with hero banner at top and search bar. Below, a generative card grid of agent templates showing capability tags, ratings, and install buttons on each card."
+  },
   "features": [
     "agents",
     "monitoring",

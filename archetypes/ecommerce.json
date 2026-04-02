@@ -99,6 +99,12 @@
       "shell": "top-nav-main"
     }
   ],
+  "page_briefs": {
+    "home": "Storefront landing. Featured collections as large image cards at the top. Below, a trending products grid with product images, prices, and quick-add buttons. CTA section at the bottom.",
+    "catalog": "Filter bar with category chips, price range, sort dropdown, and search. Below, a responsive product card grid with image, name, price, and rating on each card.",
+    "product-detail": "Product detail header with large image gallery, product name, price, and description. Below, structured options form (size, color, quantity). Related products card grid at the bottom.",
+    "cart": "Cart items displayed in a data table with product thumbnail, name, quantity stepper, line total, and remove button per row. Order summary CTA section at the bottom with total and checkout button."
+  },
   "features": [
     "auth",
     "payments",

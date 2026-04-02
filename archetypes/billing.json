@@ -44,6 +44,9 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "billing": "KPI cards at top showing total spend, current plan, and next payment date. Below, a pricing table with plan columns and feature rows. Order history table at the bottom with date, amount, and status columns."
+  },
   "features": [
     "billing"
   ],

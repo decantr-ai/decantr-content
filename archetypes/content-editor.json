@@ -54,6 +54,10 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "content-new": "Two-panel editing layout. Left panel has a structured form for content metadata (type selector, name, description, tags). Right panel shows a live JSON viewer with syntax highlighting that updates as the form changes.",
+    "content-edit": "Same two-panel layout as new. Left form pre-populated with existing content data. Right panel shows the full JSON with diff indicators for changed fields."
+  },
   "features": [
     "auth",
     "validation"

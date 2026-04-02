@@ -73,6 +73,9 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "about": "Scroll-driven narrative page. Split hero with founder photo and headline at top, flowing into a long-form company story section. Below, a card grid of team member portraits with name and role, then a values grid with icon cards. Ends with a centered CTA banner."
+  },
   "features": [
     "team-grid",
     "values-display"

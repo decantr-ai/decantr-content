@@ -93,6 +93,11 @@
       "shell": "top-nav-main"
     }
   ],
+  "page_briefs": {
+    "home": "Tenant home dashboard. Rent reminder card at top with due date and pay button. Profile summary card with address and lease info. Lease summary section below. Recent maintenance tickets list at the bottom with status badges.",
+    "maintenance": "Maintenance request form. Fields for issue category dropdown, description textarea, urgency selector, and photo upload area with drag-and-drop. Submit button at the bottom.",
+    "documents": "Document vault view. Grid or list of tenant documents (lease, receipts, notices) with file type icon, name, upload date, and download button per item. Upload button in the header."
+  },
   "features": [
     "self-service",
     "file-upload",

@@ -63,6 +63,11 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "team-overview": "Team summary page. KPI cards at top showing member count, active users, and content published. Below, a member list with avatar, name, role badge, and last-active date per row.",
+    "team-members": "Full member management view. Search bar and role filter at top. Member rows below with avatar, name, email, role dropdown, and action buttons for remove/change-role. Invite button in the header.",
+    "team-content": "Shared organization content grid. Card grid showing team-published content items with author avatar, title, type badge, and publication date."
+  },
   "features": [
     "auth",
     "team"

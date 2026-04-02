@@ -42,6 +42,9 @@
       "description": "Full-length scrolling landing page with all marketing sections"
     }
   ],
+  "page_briefs": {
+    "home": "Full-length scrolling landing page. Split hero with headline and product screenshot. Before-after comparison section. Pipeline cards showing workflow steps. Tool list with descriptions. Quick-start code block. Tech pills showing integrations. Final CTA banner."
+  },
   "features": [],
   "dependencies": {
     "patterns": {

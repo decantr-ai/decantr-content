@@ -78,6 +78,10 @@
       "notes": "Workspace configuration: grid snapping, depth layers, presence visibility, collaboration permissions"
     }
   ],
+  "page_briefs": {
+    "workspace": "Full-bleed immersive canvas. Depth-layered canvas surface fills the viewport with draggable objects at different Z-levels. Floating holographic control bar at the top or side for tools. Collaborator presence ring at canvas edges showing active users with colored indicators.",
+    "workspace-settings": "Standard settings page. Settings nav on the left with sections for grid, layers, presence, and permissions. Structured form on the right with toggle switches, sliders, and dropdowns for workspace preferences."
+  },
   "features": [
     "spatial",
     "collaboration",

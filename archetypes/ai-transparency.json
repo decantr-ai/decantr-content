@@ -85,6 +85,11 @@
       "notes": "Intent-radar visualizes confidence spread across categories; stats-detail breaks down per-model and per-endpoint metrics"
     }
   ],
+  "page_briefs": {
+    "model-overview": "High-level health dashboard. KPI stat cards across the top showing latency, throughput, and error rates. Below, a neural feedback loop summary visualization showing aggregate decision cycle patterns as a flow diagram.",
+    "inference-log": "Chronological scrollable timeline of inference entries. Each row shows timestamp, input snippet, output snippet, confidence score badge, latency, and token count. Rows are expandable to reveal full reasoning chains.",
+    "confidence-explorer": "Data exploration view. Radar chart visualization showing confidence spread across categories dominates the upper area. Below, a detailed stats breakdown table with per-model and per-endpoint metric rows."
+  },
   "features": [
     "monitoring",
     "analytics",

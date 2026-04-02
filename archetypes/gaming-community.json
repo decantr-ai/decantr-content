@@ -143,6 +143,12 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "main": "Guild hub landing. Hero banner with guild name and emblem. KPI cards showing member count, active players, and weekly XP. Two-column layout below: activity feed on the left, top-players leaderboard spotlight on the right.",
+    "news": "Guild news feed. Filter bar with category and date filters. Below, a list of news posts with title, author avatar, timestamp, and preview text. Clickable rows for full articles.",
+    "hall-of-fame": "Stats bar with all-time records at the top. Ranked leaderboard table below with position, player avatar, name, score, and achievement badges. Historical timeline at the bottom showing guild milestones.",
+    "member-profile": "Player profile header with avatar, username, rank badge, and KPI stats row. Two-column layout: wider achievements grid with unlocked badges, narrower activity feed with recent plays. Timeline at the bottom showing player history."
+  },
   "features": [
     "guild-state",
     "achievements",

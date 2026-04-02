@@ -52,6 +52,9 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "contact": "Hero header with page title and brief intro text. Below, a centered contact form with name, email, subject, and message textarea fields. Submit button and optional file attachment area. Clean, focused layout."
+  },
   "features": [
     "form-validation",
     "spam-protection",

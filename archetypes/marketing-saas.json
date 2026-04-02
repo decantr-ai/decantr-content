@@ -79,6 +79,9 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "home": "Classic SaaS landing page. Brand hero with headline, subtext, and dual CTA buttons. Feature card grid with icons. How-it-works timeline with numbered steps and connecting lines. Pricing section with tier cards and monthly/annual toggle. Testimonial card row. Final CTA banner."
+  },
   "features": [
     "pricing-toggle",
     "testimonials",

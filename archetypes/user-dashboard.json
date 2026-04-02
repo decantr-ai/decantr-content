@@ -71,6 +71,12 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "dashboard": "User home dashboard. KPI cards at top showing published items, downloads, and reputation score. Reputation badge display below. Activity feed at the bottom with recent actions.",
+    "dashboard-content": "Content management grid. Card grid of user-published content items with thumbnail, title, type badge, status indicator, and date per card.",
+    "dashboard-api-keys": "API key management page. Table of API keys with key name, masked prefix, creation date, last-used date, and revoke button per row. Create-key button in the header.",
+    "dashboard-settings": "Account settings form with profile fields (name, email, avatar), notification preferences, and connected accounts section."
+  },
   "features": [
     "auth",
     "api-keys"

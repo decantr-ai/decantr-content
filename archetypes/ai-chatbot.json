@@ -83,6 +83,10 @@
       "shell": "chat-portal"
     }
   ],
+  "page_briefs": {
+    "chat": "Three-region chat interface. Collapsible conversation sidebar on the left lists previous chats. Center area is a scrollable message thread with alternating user and AI bubbles. Anchored input bar at the bottom with text field, send button, and file attachment.",
+    "new": "Clean centered view for starting a new conversation. Empty thread area with placeholder prompt suggestions. Anchored input bar at bottom, conversation sidebar still accessible on the left."
+  },
   "features": [
     "chat",
     "markdown",

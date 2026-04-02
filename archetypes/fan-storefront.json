@@ -66,6 +66,10 @@
       "shell": "top-nav-main"
     }
   ],
+  "page_briefs": {
+    "profile": "Creator profile page with large banner image, avatar, creator name, bio text, and subscriber count. Tier cards below showing available subscription levels. Content preview feed underneath.",
+    "post": "Single post view with content (image, video, or text) at the top. If gated, a blur overlay with upgrade prompt covers locked content. Full content visible below for authorized subscribers."
+  },
   "features": [
     "creator-profile",
     "tier-display",

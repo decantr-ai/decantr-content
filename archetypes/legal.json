@@ -76,6 +76,11 @@
       "shell": "top-nav-footer"
     }
   ],
+  "page_briefs": {
+    "privacy": "Long-form legal prose with sticky table of contents sidebar. Clean typography with numbered sections, generous line height, and comfortable max-width for readability. Print-friendly layout.",
+    "terms": "Same structure as privacy page. Sticky TOC on the side, numbered sections of terms text in a clean prose layout with last-updated date at the top.",
+    "cookies": "Compact legal prose page. Sticky TOC, cookie categories table, and consent management section. Same clean typography and layout as other legal pages."
+  },
   "features": [
     "toc-navigation",
     "print-friendly",

@@ -67,6 +67,10 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "earnings": "Revenue analytics view. Full earnings dashboard with line chart showing monthly revenue, bar chart for tier breakdown, and summary cards. Below, a read-only payout preview card showing next payout date and amount.",
+    "payouts": "Payout configuration page. Form sections for bank account details, payout schedule selector, minimum threshold input, and tax information fields."
+  },
   "features": [
     "revenue-charts",
     "tier-breakdown",

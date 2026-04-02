@@ -63,6 +63,11 @@
       "shell": "topbar-main"
     }
   ],
+  "page_briefs": {
+    "registry": "Search-first browsing page. Search bar with filter chips for content type (patterns, themes, blueprints, etc.) at the top. Below, a card grid of content items showing name, namespace badge, description preview, and tag pills.",
+    "registry-type": "Filtered registry view for a specific content type. Same search and filter bar layout as main registry page, pre-filtered to the selected type. Card grid below with type-specific metadata on each card.",
+    "registry-detail": "Content detail page. Hero card at top with item name, namespace badge, version, description, and tags. Below, a JSON viewer showing the full content schema with syntax highlighting."
+  },
   "features": [
     "search",
     "pagination"

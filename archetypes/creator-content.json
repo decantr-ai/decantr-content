@@ -93,6 +93,11 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "content": "Content library view. Filter bar at top with type and status filters. Below, a list view of content items showing thumbnail, title, publish date, tier badge, and status indicator per row.",
+    "new": "Upload-first creation flow. Large drag-and-drop uploader area at top for media files. Below, a structured form with title, description, tier selector, scheduling date picker, and tags input.",
+    "edit": "Media preview panel at top showing the uploaded asset. Below, the same form layout as new, pre-populated with existing content data and an update button."
+  },
   "features": [
     "media-upload",
     "tier-gating",

@@ -103,6 +103,12 @@
       "shell": "sidebar-main"
     }
   ],
+  "page_briefs": {
+    "general": "Workspace general settings form. Fields for workspace name, description, icon upload, and URL slug. Save button at the bottom.",
+    "members": "Member management page. Data table of team members with name, email, role dropdown, and remove button. Invite modal accessible via button in the header.",
+    "permissions": "Granular permission matrix. Grid layout with roles as columns and permissions as rows. Checkbox cells for toggling each permission per role.",
+    "billing": "Workspace billing page. Current plan summary card at top with usage stats. Billing info form below with payment method, billing address, and invoice history."
+  },
   "features": [
     "team-management",
     "permissions",

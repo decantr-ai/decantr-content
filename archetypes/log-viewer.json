@@ -87,6 +87,10 @@
       "shell": "terminal-split"
     }
   ],
+  "page_briefs": {
+    "logs": "Terminal-style log viewer. Status bar at top showing connection state and filter summary. Scrollable monospace log stream in the center with color-coded severity levels. Hotkey bar at bottom with filter shortcuts.",
+    "grouped": "Grouped log view. Status bar at top. Logs are collapsed into groups by service or request ID, with expandable group headers showing count and latest timestamp. Hotkey bar at bottom."
+  },
   "features": [
     "log-streaming",
     "log-filtering",
