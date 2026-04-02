@@ -74,5 +74,11 @@
       "comparison": "Feature comparison table",
       "faq": "FAQ accordion"
     }
+  },
+  "visual_brief": "Usage-based pricing section with a monthly/annual toggle at the top, followed by volume tier cards displayed in a horizontal row. Each tier card shows the tier name, unit price, included volume, overage rate, and a CTA button — the recommended tier gets an accent border and a popular badge. Below the tiers, an interactive usage calculator with a slider lets users estimate their monthly cost. A feature comparison table follows with checkmark/dash cells. The section closes with an FAQ accordion.",
+  "responsive": {
+    "mobile": "Tier cards stack vertically in a single column with full-width cards. Usage calculator slider becomes full-width with the cost estimate displayed below. Comparison table converts to a stacked card layout (one card per tier) with feature rows inside each card. FAQ accordion items take full width with larger tap targets.",
+    "tablet": "Tier cards display in a 2-column grid, wrapping to a second row if more than two tiers. Comparison table remains tabular but horizontally scrollable if more than three tiers. Calculator and FAQ maintain standard layout.",
+    "desktop": "Tier cards display in a single horizontal row (up to four tiers). Comparison table renders as a full-width sticky-header table. Calculator shows slider and cost estimate side-by-side. FAQ renders in a max-width centered column for readability."
   }
 }

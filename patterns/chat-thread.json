@@ -73,5 +73,17 @@
       "branch-indicator": "Branched conversation marker",
       "scroll-to-bottom": "Floating FAB when scrolled up"
     }
+  },
+  "visual_brief": "Vertically scrolling message thread with alternating alignment for user and AI messages. User bubbles align right with accent background; AI responses align left with surface background and wider max-width. A pulsing dot-trio typing indicator appears at the bottom when the AI is generating. A floating scroll-to-bottom FAB fades in when the user scrolls up past a threshold.",
+  "responsive": {
+    "mobile": "Messages span full width with minimal horizontal padding (12px). Avatars shrink to 28px or hide entirely. Typing indicator anchors to bottom of viewport. Scroll-to-bottom FAB shifts to bottom-right corner with 16px inset. Load-more button becomes a pull-to-refresh gesture at the top.",
+    "tablet": "Standard layout with comfortable padding. Avatars visible at 36px. Message bubbles max-width at 75% of container. Typing indicator and scroll-to-bottom FAB remain in default positions.",
+    "desktop": "Message bubbles cap at 640px max-width for readability. Full avatars at 40px with timestamp on hover. Branch indicators show as a vertical sidebar gutter. Keyboard shortcuts enabled for navigation between messages."
+  },
+  "motion": {
+    "message-entrance": "New messages slide in from the bottom with a 200ms ease-out and 50ms stagger between sequential messages. AI messages additionally fade from 0 to 1 opacity.",
+    "typing-indicator": "Three dots animate in a 1.2s infinite loop — each dot scales from 0.4 to 1.0 with 150ms offset per dot, creating a wave pulse effect.",
+    "scroll-to-bottom": "FAB fades in (opacity 0 to 1, 150ms) and translates up 8px when scroll position exceeds one viewport height from bottom. Reverse on dismiss.",
+    "auto-scroll": "When a new message arrives and the user is within 100px of the bottom, smooth-scroll to the new message over 300ms ease-in-out."
   }
 }

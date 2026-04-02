@@ -67,5 +67,17 @@
       "textarea": "Auto-growing input with placeholder",
       "actions": "Attach and send buttons"
     }
+  },
+  "visual_brief": "Anchored input bar at the bottom of the chat viewport with a subtle top border separator. The textarea auto-grows from one line up to a max height, with a muted placeholder. An attachment button (paperclip icon) sits to the left and a send button (arrow-up icon) sits to the right, coloring to accent when the input has content. Staged file attachments render as thumbnail pills above the textarea with individual remove buttons.",
+  "responsive": {
+    "mobile": "Input bar stretches full width with 12px horizontal padding. Textarea font size bumps to 16px to prevent iOS zoom. Attachment previews scroll horizontally as a single row. Send button uses a compact 36px icon-only variant. Mentions popup renders as a bottom sheet rather than a dropdown.",
+    "tablet": "Standard layout with comfortable padding. Formatting toolbar (rich preset) shows as a single scrollable row above the textarea. Mentions popup renders as a floating dropdown anchored to the cursor position.",
+    "desktop": "Full-featured input with optional formatting toolbar. Send button shows label text alongside icon. Character/token counter appears in the bottom-right corner. Keyboard shortcut hints shown on hover (Enter to send, Shift+Enter for newline)."
+  },
+  "motion": {
+    "textarea-grow": "Height transitions with a 150ms ease-out when content grows or shrinks. No animation on initial render.",
+    "send-button": "Send icon rotates 45 degrees and scales to 0.9 on press, returns on release (100ms spring). Button color transitions from muted to accent over 200ms when input becomes non-empty.",
+    "attachment-add": "New attachment thumbnails scale from 0.8 to 1.0 with 150ms ease-out. Remove animation scales to 0.8 and fades out over 120ms.",
+    "mentions-popup": "Dropdown slides down from the cursor position with 150ms ease-out and fades in. Dismiss reverses the animation."
   }
 }
