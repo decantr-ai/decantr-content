@@ -90,5 +90,11 @@
     "consumes": [
       "existing-tiers"
     ]
+  },
+  "visual_brief": "Configuration interface for creating and managing subscription tiers. A tier list on the left shows existing tiers as draggable cards with name, price, and subscriber count. Selecting a tier opens an editor form on the right with fields: tier name input, price input (with currency selector), description textarea, and a benefits editor (sortable list of benefit items with add/remove). A live preview card shows how the tier will appear to subscribers. The compact preset combines the list and editor into a single-column flow. 'Add Tier' button at the bottom of the tier list.",
+  "responsive": {
+    "mobile": "Single-column layout — tier list at top, editor below when a tier is selected. Preview at the bottom. Drag-to-reorder uses long-press.",
+    "tablet": "Two-column layout — tier list on left, editor on right. Preview below the editor.",
+    "desktop": "Three-column layout — tier list, editor, and live preview all visible simultaneously."
   }
 }

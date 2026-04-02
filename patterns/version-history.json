@@ -101,5 +101,11 @@
       "download-version",
       "compare-versions"
     ]
+  },
+  "visual_brief": "Sidebar or modal panel showing a chronological list of document versions grouped by date. Each version entry shows a timestamp, an auto-save or named-checkpoint label, the author avatar and name, and a brief summary of changes. Selecting a version shows a preview of the document at that point. A compare toggle enables diff view between the selected version and the current or another version. A 'Restore' button allows reverting to the selected version with a confirmation dialog. The sidebar preset renders as a right-side panel. The modal preset opens as a centered modal. The compact preset shows a condensed timeline with fewer details.",
+  "responsive": {
+    "mobile": "Version history opens as a full-screen overlay. Timeline entries are compact. Preview replaces the timeline view (back button to return). Restore button at the bottom.",
+    "tablet": "Sidebar at 320px width with timeline and inline preview. Compare mode uses a bottom sheet.",
+    "desktop": "Sidebar with timeline, adjacent preview panel, and inline diff view. Full author details and change summaries visible."
   }
 }

@@ -83,5 +83,11 @@
       "content": "Markdown prose content",
       "footer": "Contact, version history"
     }
+  },
+  "visual_brief": "Long-form legal document layout with a sticky table of contents sidebar on the left and the prose content area on the right. The TOC auto-generates from heading hierarchy with indented sub-sections, highlighting the current section on scroll. The prose area uses comfortable reading typography — constrained line length, generous line height, numbered section headers, and proper paragraph spacing. A header shows the document title and 'Last updated' date. Footer contains contact information and version history link. The document is print-friendly with clean page breaks.",
+  "responsive": {
+    "mobile": "TOC collapses into a dropdown menu at the top. Prose takes full width with comfortable reading margins. Sections stack with clear heading hierarchy.",
+    "tablet": "TOC as a collapsible left drawer. Prose area takes remaining width with comfortable reading column.",
+    "desktop": "Full two-column layout — sticky TOC sidebar on the left (220px), prose content on the right with max-width for readability."
   }
 }

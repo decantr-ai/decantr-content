@@ -62,5 +62,11 @@
       "tenant": "Tenant information",
       "tabs": "History tabs"
     }
+  },
+  "visual_brief": "Detail view for a single rental unit. Header shows unit number/name, status badge (occupied, vacant, maintenance), and action buttons. A specs section displays key-value pairs: bedroom count, bathroom count, square footage, floor, rent amount. A tenant information card shows the current tenant (avatar, name, contact, lease dates) or 'Vacant' with a list-unit button. Tabbed content below shows: Rent History (payment records), Maintenance (ticket list), and Documents (lease, inspection reports). The view preset is the only preset, displaying all information.",
+  "responsive": {
+    "mobile": "Single-column stacked layout. Specs in a 2-column key-value grid. Tenant card full-width. Tabs become a dropdown or accordion.",
+    "tablet": "Standard layout. Specs and tenant info side by side. Tabs in a row.",
+    "desktop": "Full layout with specs, tenant card, and tabs all comfortably displayed."
   }
 }

@@ -107,5 +107,11 @@
       "card-description": "Short description, max 2 lines",
       "card-meta": "Version, download count, updated-at"
     }
+  },
+  "visual_brief": "Responsive grid of bordered cards, each representing a registry content item. Card header shows a color-coded type badge (pattern in blue, theme in purple, blueprint in green) and a namespace badge (@official, @community). Card body displays the content name as a clickable link heading, a two-line description in muted text, and a meta row with version number, download count icon, and last-updated date. Card footer contains quick-action buttons (copy JSON, use in project). Compact preset reduces card height by hiding description. Editable preset adds edit and delete actions.",
+  "responsive": {
+    "mobile": "Single-column card stack. Cards take full width. Quick actions use icon-only buttons. Description limited to one line.",
+    "tablet": "Two-column grid. Standard card sizes with full descriptions visible.",
+    "desktop": "Three or four column grid depending on container width. Cards show all metadata and actions."
   }
 }

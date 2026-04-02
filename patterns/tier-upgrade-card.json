@@ -101,5 +101,11 @@
       "features": "Feature checklist",
       "cta": "Upgrade button"
     }
+  },
+  "visual_brief": "Pricing card for upgrade flows with a header showing the plan name and an optional 'Current Plan' or 'Recommended' badge. Price displayed prominently with monthly billing amount. A short plan description below the price. A feature checklist with checkmark icons lists included features. The CTA button reads 'Upgrade' (or 'Current Plan' in disabled state for the current plan). The highlighted preset adds a primary-color border and a 'Most Popular' ribbon. The horizontal preset arranges plans side by side in a comparison table layout instead of separate cards.",
+  "responsive": {
+    "mobile": "Cards stack vertically. CTA buttons full-width. Feature lists fully visible.",
+    "tablet": "Two or three column card comparison. Standard card sizes.",
+    "desktop": "Three-column comparison layout. Highlighted plan slightly elevated. Generous feature list spacing."
   }
 }

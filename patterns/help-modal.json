@@ -120,5 +120,11 @@
         }
       ]
     }
-  ]
+  ],
+  "visual_brief": "Centered modal overlay with a title ('Keyboard Shortcuts') and an optional search input. The body is organized into categorized sections (General, Navigation, Editing, etc.) with muted category headers. Each shortcut row shows the action description on the left and the key combination on the right rendered as styled key cap badges (bordered rounded boxes with monospace text, e.g., [Cmd] + [K]). Sections are separated by subtle dividers. Minimal preset removes categories and shows a flat list.",
+  "responsive": {
+    "mobile": "Modal takes near-full screen. Shortcuts list scrolls vertically. Key badges remain readable. Search input at top for quick filtering.",
+    "tablet": "Centered modal at 520px width. Standard layout with categories.",
+    "desktop": "Centered modal at 600px width. Optional two-column layout for dense shortcut lists."
+  }
 }

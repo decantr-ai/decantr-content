@@ -73,5 +73,11 @@
       "table": "Rent roll table",
       "totals": "Totals row"
     }
+  },
+  "visual_brief": "Data table showing monthly rent collection for all units in a property. Columns: unit number, tenant name, expected rent, amount collected, outstanding balance (highlighted red if nonzero), and payment status badge (paid, partial, unpaid, vacant). A header row has the title, month/year selector, and export button. A summary row at the top shows total expected, total collected, total outstanding, and vacancy loss. The totals row at the bottom sums all columns. The summary preset shows only the KPI metrics without the full table.",
+  "responsive": {
+    "mobile": "Table becomes a card list — each unit as a card with key values. Summary metrics in a 2x2 grid. Month selector is a simple dropdown.",
+    "tablet": "Table with horizontal scroll if needed. Summary visible above. Comfortable row height.",
+    "desktop": "Full table with all columns visible. Summary bar at top. Sticky header row."
   }
 }

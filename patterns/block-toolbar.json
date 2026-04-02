@@ -108,5 +108,11 @@
       "add-comment",
       "highlight"
     ]
+  },
+  "visual_brief": "Floating horizontal toolbar that appears above or near selected text. Rendered as a compact pill-shaped bar with a subtle shadow and surface background. Contains a row of small icon buttons: bold (B), italic (I), underline (U), strikethrough (S), code, link, highlight color picker, and comment. Buttons show active state with a filled background when the corresponding format is applied. The toolbar positions itself dynamically near the text selection with a small arrow pointing toward the selected content. Extended preset adds heading level, alignment, and list type buttons.",
+  "responsive": {
+    "mobile": "Toolbar renders full-width at the bottom of the screen as a fixed bar above the keyboard. Touch-friendly 44px button targets. Overflow actions collapse into a more menu.",
+    "tablet": "Floating toolbar near selection. Slightly larger touch targets than desktop.",
+    "desktop": "Floating toolbar tracks text selection precisely. Compact button sizing with hover tooltips for labels."
   }
 }

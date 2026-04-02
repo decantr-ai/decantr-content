@@ -75,5 +75,11 @@
       "select-user",
       "close"
     ]
+  },
+  "visual_brief": "Small floating dropdown that appears at the cursor position when '@' is typed. Contains a type-ahead search input (auto-focused, filtering as the user types), an optional 'Recent' section showing recently mentioned users, and a filtered results list. Each user row shows a small avatar, display name, and username or email in muted text. The currently highlighted item has a subtle background tint. The popup has a border, shadow, and rounded corners. Compact preset uses smaller avatars and tighter row spacing.",
+  "responsive": {
+    "mobile": "Popup renders as a bottom sheet anchored to the keyboard. Full-width list items with larger touch targets. Avatars at 32px.",
+    "tablet": "Floating popup near cursor. Standard row sizing.",
+    "desktop": "Compact floating popup near cursor. Keyboard navigation with up/down arrows. Small avatars at 24px."
   }
 }

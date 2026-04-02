@@ -85,5 +85,11 @@
     "Ctrl+L": "Clear screen",
     "Ctrl+R": "Search history",
     "Tab": "Autocomplete"
+  },
+  "visual_brief": "Dark-background panel with a scrollable output area showing previous command-output pairs in monospace green-on-dark text. ANSI color codes render as styled spans (red errors, yellow warnings, blue info, etc.). At the bottom, a command input line shows a prompt character ($ or >) followed by a blinking cursor. Tab completion suggestions appear as a horizontal row above the input. Command history is navigable with up/down arrows. The readonly preset disables the input and shows only output. The split preset divides into two side-by-side terminal panels.",
+  "responsive": {
+    "mobile": "Terminal takes full width. Font size adjusts for readability on small screens. Tab completion uses a scrollable row. Command history via swipe gestures.",
+    "tablet": "Standard terminal proportions. Comfortable font size. Tab completion visible.",
+    "desktop": "Full terminal with generous width for long output lines. Split preset available. Tab completion and history fully functional."
   }
 }

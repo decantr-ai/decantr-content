@@ -91,5 +91,11 @@
       "expand-list",
       "view-profile"
     ]
+  },
+  "visual_brief": "Horizontal stack of overlapping circular avatar images, each with a colored ring border indicating their presence state (green for active, yellow for idle, gray for offline). Avatars overlap by about 25% of their diameter. When there are more avatars than can be shown, a '+N' overflow indicator appears at the end as a circular badge with a muted background. Hovering any avatar shows a tooltip with the collaborator's name and status. The detailed preset adds a dropdown panel on click showing all collaborators with name, role, and status. The compact preset reduces avatar size to 24px.",
+  "responsive": {
+    "mobile": "Avatars at 28px. Maximum 3-4 visible with overflow indicator. Tooltip replaced by tap-to-reveal.",
+    "tablet": "Avatars at 32px. Up to 6 visible. Tap or hover for tooltip.",
+    "desktop": "Avatars at 36px. Up to 8 visible. Hover tooltips. Detailed preset dropdown on click."
   }
 }

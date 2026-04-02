@@ -4,37 +4,90 @@
   "version": "1.0.0",
   "name": "Leaderboard",
   "description": "Ranked list of items with position, avatar, name, and score. Supports spotlight, ranked, and grid presets.",
-  "tags": ["gaming", "ranking", "scores", "competition", "social"],
+  "tags": [
+    "gaming",
+    "ranking",
+    "scores",
+    "competition",
+    "social"
+  ],
   "classification": {
-    "triggers": ["leaderboard", "ranking", "top players", "high scores", "standings"],
+    "triggers": [
+      "leaderboard",
+      "ranking",
+      "top players",
+      "high scores",
+      "standings"
+    ],
     "tier": "recommended"
   },
   "presets": {
     "spotlight": {
       "description": "Top 3 highlighted with large cards, rest in compact list",
-      "layout": { "top": "cards", "rest": "list" }
+      "layout": {
+        "top": "cards",
+        "rest": "list"
+      }
     },
     "ranked": {
       "description": "Full ranked list with position numbers and progress indicators",
-      "layout": { "style": "numbered-list", "showChange": true }
+      "layout": {
+        "style": "numbered-list",
+        "showChange": true
+      }
     },
     "grid": {
       "description": "Card grid for achievements or badges display",
-      "layout": { "style": "grid", "columns": 3 }
+      "layout": {
+        "style": "grid",
+        "columns": 3
+      }
     }
   },
   "slots": {
-    "position": { "type": "number", "required": true },
-    "avatar": { "type": "image", "required": false },
-    "name": { "type": "text", "required": true },
-    "score": { "type": "number", "required": true },
-    "change": { "type": "delta", "required": false },
-    "badge": { "type": "image", "required": false }
+    "position": {
+      "type": "number",
+      "required": true
+    },
+    "avatar": {
+      "type": "image",
+      "required": false
+    },
+    "name": {
+      "type": "text",
+      "required": true
+    },
+    "score": {
+      "type": "number",
+      "required": true
+    },
+    "change": {
+      "type": "delta",
+      "required": false
+    },
+    "badge": {
+      "type": "image",
+      "required": false
+    }
   },
   "layout": {
     "container": "section",
-    "header": ["title", "filter?"],
-    "body": ["items"],
-    "footer": ["pagination?", "view-all?"]
+    "header": [
+      "title",
+      "filter?"
+    ],
+    "body": [
+      "items"
+    ],
+    "footer": [
+      "pagination?",
+      "view-all?"
+    ]
+  },
+  "visual_brief": "Ranked vertical list where each row shows a position number (with gold/silver/bronze styling for top 3), a user avatar, display name, and a numeric score on the right. Top-three items in the spotlight preset are enlarged with medal icons and a subtle glow or card treatment. The ranked preset is a dense list with alternating row shading. Grid preset arranges entries as cards in a responsive grid with position badge, avatar, name, and score. Position changes show up/down arrows with green/red coloring.",
+  "responsive": {
+    "mobile": "Single-column list. Spotlight cards stack vertically. Avatars reduce to 32px. Score values right-aligned.",
+    "tablet": "Spotlight top-3 in a horizontal row, remaining entries in a list below. Grid preset uses 2 columns.",
+    "desktop": "Spotlight top-3 prominently displayed. Full list with generous spacing. Grid preset uses 3-4 columns."
   }
 }

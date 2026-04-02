@@ -105,5 +105,11 @@
       "*",
       "|"
     ]
+  },
+  "visual_brief": "Monospace terminal-style chart rendered entirely with ASCII and braille characters on a dark or transparent background. Green-on-dark color scheme by default. Line preset draws axes with pipe and dash characters, data points with dots and asterisks connected by line-drawing characters. Bar preset renders horizontal bars using block characters (full, three-quarter, half, quarter fills). Sparkline preset is a single inline row of braille dots. All presets include a chart title at top and axis labels along edges.",
+  "responsive": {
+    "mobile": "Chart width scales to container. Character count per row reduces. Sparkline preset preferred for inline metrics. Legend moves below chart.",
+    "tablet": "Standard chart dimensions. Side legend if space allows.",
+    "desktop": "Full-width charts with generous character grids. Legend renders beside the chart area."
   }
 }

@@ -86,5 +86,11 @@
       "tier-data",
       "post-data"
     ]
+  },
+  "visual_brief": "Full-width creator page starting with a storefront hero section (cover image, avatar, creator name, bio, follower count, subscribe CTA). Below the hero, a horizontal tab bar with tabs for Posts, Memberships, About, and Community. The tab content area fills the remaining space — Posts tab shows a content feed, Memberships tab shows tier cards, About tab shows a rich text bio with social links. Embed preset removes the hero and shows a compact card version suitable for embedding on external sites.",
+  "responsive": {
+    "mobile": "Hero cover image reduces in height. Tabs become horizontally scrollable. Content feed is single-column full-width.",
+    "tablet": "Standard hero proportions. Tabs fit in a single row. Content area has comfortable margins.",
+    "desktop": "Full-width hero with generous cover image. Content area centered with max-width constraint. All tabs visible."
   }
 }

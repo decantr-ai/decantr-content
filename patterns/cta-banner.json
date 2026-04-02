@@ -67,5 +67,11 @@
     "actions": [
       "cta-click"
     ]
+  },
+  "visual_brief": "Full-viewport-width banner with a multi-stop gradient background (flowing from primary through accent colors). A bold, large headline centered in the banner delivers the conversion message. Below the headline, a single line of supporting subtext in slightly lighter weight. A prominent pill-shaped action button (rounded-full, primary contrast colors) sits centered below the text. The dark preset uses a dark solid background instead of gradient. Generous vertical padding (py-16 to py-24) creates breathing room.",
+  "responsive": {
+    "mobile": "Text scales down slightly. Button goes full-width with generous padding. Vertical padding reduces. Headline may wrap to two lines.",
+    "tablet": "Standard centered layout. Button at natural width. Comfortable padding.",
+    "desktop": "Full impact — large headline, generous whitespace, button with hover scale effect."
   }
 }

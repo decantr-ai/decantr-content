@@ -97,5 +97,11 @@
       "upload-progress"
     ],
     "consumes": []
+  },
+  "visual_brief": "Large dashed-border drop zone with a cloud upload icon centered above 'Drag and drop files here or click to browse' text. Active drag-over state highlights the zone with a primary color border. Below the drop zone, an uploaded files list shows each file as a row with thumbnail preview, filename, file size, a progress bar during upload, and a remove button. The progress bar fills with primary color. The single preset shows one file at a time with a larger preview. Audio preset includes waveform visualization for audio files.",
+  "responsive": {
+    "mobile": "Drop zone reduces in height. File list shows smaller thumbnails. Upload uses native file picker on tap. Progress bars are full-width.",
+    "tablet": "Standard drop zone size. File list shows medium thumbnails with inline progress.",
+    "desktop": "Large drop zone with generous padding. File list shows large thumbnails and detailed file info."
   }
 }

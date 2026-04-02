@@ -50,5 +50,11 @@
       "sessions-list": "Other sessions with device, browser, location, last active",
       "revoke-all": "Sign out everywhere button"
     }
+  },
+  "visual_brief": "Settings panel showing active login sessions. The current session is highlighted at the top with a 'Current Session' badge, showing device name (e.g., 'MacBook Pro — Chrome'), location, and last active time. Below, a list of other sessions, each showing device icon (desktop/mobile/tablet), browser name, location (city, country), last active timestamp, and a 'Revoke' button on the right. A 'Sign Out All Other Sessions' destructive button sits at the bottom of the list. Sessions with suspicious activity show a warning icon.",
+  "responsive": {
+    "mobile": "Sessions stack as full-width cards. Device info and location on separate lines. Revoke button full-width per session. Sign Out All button at the bottom.",
+    "tablet": "Standard list layout. Device info and location inline. Revoke buttons on the right.",
+    "desktop": "Full list with all information inline per row. Comfortable spacing between sessions."
   }
 }

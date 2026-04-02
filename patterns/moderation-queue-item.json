@@ -88,5 +88,11 @@
       "preview": "Description and content preview",
       "actions": "Approve and reject buttons"
     }
+  },
+  "visual_brief": "Bordered card for a single moderation queue entry. The header row shows a type badge (pattern, theme, etc.) in a color-coded pill, the content name, and a submission timestamp. A submitter row displays a small avatar, username, and reputation score badge. The card body shows a description preview and a collapsible content preview section (rendered JSON or markdown). The footer contains Approve (primary green) and Reject (destructive red) action buttons with optional feedback textarea. Compact preset condenses to a single row with inline approve/reject icon buttons.",
+  "responsive": {
+    "mobile": "Cards take full width. Approve/Reject buttons are full-width stacked. Content preview defaults to collapsed. Feedback textarea appears on button click.",
+    "tablet": "Standard card layout. Buttons side by side in the footer.",
+    "desktop": "Full card with content preview visible. Buttons inline in footer. Feedback textarea expandable."
   }
 }

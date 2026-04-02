@@ -69,5 +69,11 @@
       "new-button": "Create new conversation",
       "items": "Conversation rows with icon, title, date, unread-indicator, actions"
     }
+  },
+  "visual_brief": "Vertical sidebar panel with a search input at the top (magnifying glass icon, 'Search conversations' placeholder), a 'New Chat' button below it, and a scrollable list of conversation items. Each item shows a chat icon or model avatar, the conversation title (truncating with ellipsis), a last-message date in small muted text, and an unread count badge (colored circle with number) when applicable. The active conversation has a highlighted surface background. Hovering reveals a three-dot menu for rename and delete actions. Compact preset reduces row height and hides dates.",
+  "responsive": {
+    "mobile": "Conversation list takes full screen as a page. Selecting an item navigates to the chat view. New Chat button is a floating action button.",
+    "tablet": "Sidebar panel at 280px width. Standard row heights.",
+    "desktop": "Sidebar panel at 300px width with comfortable spacing. Full dates visible. Hover actions on each row."
   }
 }

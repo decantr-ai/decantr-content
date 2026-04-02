@@ -6,7 +6,14 @@
   "name": "Intent Radar",
   "description": "A radial polar interface that visualizes user intent as vectors radiating from a center point, with suggestions pulsing outward based on confidence scores — used for AI command palettes, intent disambiguation, and contextual action discovery.",
   "category": "agentic",
-  "tags": ["2026", "agentic", "radial", "intent", "command-palette", "disambiguation"],
+  "tags": [
+    "2026",
+    "agentic",
+    "radial",
+    "intent",
+    "command-palette",
+    "disambiguation"
+  ],
   "components": [
     "RadarDisplay",
     "IntentVector",
@@ -70,5 +77,6 @@
   "responsive": {
     "mobile": "Switches to compact semi-circular mode automatically. Suggestion chips render as a vertically scrollable list below the half-radar rather than on the arc. Touch-friendly chip sizes (min 44px tap target). Confidence arcs simplified to solid fills.",
     "tablet": "Full radial radar with slightly reduced radius. Suggestion chips remain on the outer ring but increase tap target size. Two-column chip overflow if more than 6 suggestions."
-  }
+  },
+  "visual_brief": "Circular radial display with a glowing center point showing the current input query. Intent suggestion vectors radiate outward as labeled lines with lengths proportional to confidence scores. High-confidence suggestions appear closer to the edge with brighter colors; low-confidence ones are shorter and dimmer. SuggestionChip components sit at the end of each vector as clickable pill labels. The radar has subtle concentric circle gridlines. Compact preset renders as a smaller inline widget. The inline preset displays a horizontal confidence bar instead of the radial layout."
 }

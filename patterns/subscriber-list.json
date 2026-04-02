@@ -93,5 +93,11 @@
       "subscriber-data",
       "tier-data"
     ]
+  },
+  "visual_brief": "Data table of subscribers/fans with columns: checkbox (for bulk select), avatar, display name, email, subscription tier badge, joined date, status badge (active, cancelled, paused), and a kebab menu for actions. A header bar contains search input, tier filter dropdown, status filter, and bulk action buttons (message, export). A pagination bar at the bottom shows page controls and total count. The compact preset removes the avatar column and reduces row height.",
+  "responsive": {
+    "mobile": "Table becomes a card list — each subscriber as a card with avatar, name, tier, and status. Bulk actions move to a bottom action bar. Filters collapse to a filter button.",
+    "tablet": "Table with horizontal scroll. Search and primary filters visible. Checkboxes and bulk actions functional.",
+    "desktop": "Full table with all columns visible. Filters, search, and bulk actions in a single toolbar row."
   }
 }

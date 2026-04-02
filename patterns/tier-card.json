@@ -98,5 +98,11 @@
       "tier-data",
       "billing-cycle"
     ]
+  },
+  "visual_brief": "Bordered card displaying a subscription tier. Header shows the tier name and an optional 'Popular' or 'Best Value' badge. The price is prominently displayed as a large number with currency symbol and '/month' suffix. A benefits list uses checkmark icons in green/primary color with benefit text for each item. A 'Subscribe' CTA button fills the bottom of the card. The featured preset adds a colored top border or accent and slightly scales up the card. The compact preset reduces padding and uses smaller type. The storefront preset adds additional social proof (subscriber count, rating).",
+  "responsive": {
+    "mobile": "Cards stack full-width. Subscribe button full-width. Benefits list compact.",
+    "tablet": "Two or three column grid of tier cards for comparison.",
+    "desktop": "Three-column grid for plan comparison. Featured tier slightly elevated. Generous padding."
   }
 }

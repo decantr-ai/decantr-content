@@ -91,5 +91,11 @@
       "summary": "Category totals",
       "table": "Expense records"
     }
+  },
+  "visual_brief": "Expense management interface with a header row containing title, date range selector, and an 'Add Expense' button. A category summary bar below shows colored pills for each expense category (Maintenance, Insurance, Utilities, etc.) with running totals. The main area is a data table with columns: date, description, category badge, property, amount, receipt icon, and status. Filter controls sit above the table for category and property filtering. The create preset shows a form with category select, amount input, description, property picker, and receipt upload. Summary preset displays a pie chart of category breakdown.",
+  "responsive": {
+    "mobile": "Table becomes a card list — each expense as a stacked card. Category summary pills wrap. Add button is a FAB. Filters collapse into a filter drawer.",
+    "tablet": "Table layout maintained with horizontal scroll for extra columns. Category bar fits in one row.",
+    "desktop": "Full table with all columns visible. Category summary bar spans the top. Comfortable spacing."
   }
 }

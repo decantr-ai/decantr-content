@@ -89,5 +89,11 @@
       "earnings-data",
       "transaction-data"
     ]
+  },
+  "visual_brief": "Dashboard layout with a row of KPI metric cards at the top (total revenue, subscribers, MRR, churn rate), each showing the value, trend arrow (up/down with green/red color), and percentage change. Below the KPIs, a large revenue line chart with date range selector (7d, 30d, 90d, 1y) and an overlaid area fill. A tier breakdown section shows revenue per subscription tier as a horizontal stacked bar or donut chart. A recent transactions table at the bottom lists individual payments with date, subscriber, amount, and status. Export button in the header.",
+  "responsive": {
+    "mobile": "KPI cards scroll horizontally or stack in a 2x2 grid. Charts take full width with simplified labels. Transactions table becomes a card list. Export button moves to a menu.",
+    "tablet": "KPIs in a single row. Charts render at full container width. Transactions table with horizontal scroll if needed.",
+    "desktop": "Full dashboard grid. KPIs span the top. Charts and tier breakdown side by side. Transactions table with all columns visible."
   }
 }

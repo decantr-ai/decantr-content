@@ -89,5 +89,11 @@
     "consumes": [],
     "produces": [],
     "actions": []
+  },
+  "visual_brief": "Grid of numbered step cards, each with a colored circular badge showing the step number, a step name heading in the matching accent color, a description paragraph, and an optional visual content area. Cards cycle through a color palette (coral, amber, cyan, green, yellow, orange, purple) with the badge background, heading color, and a left or top border stroke all matching. The outlined preset uses bordered cards with white/transparent backgrounds. The filled preset gives cards a light tinted background of their accent color. The horizontal preset arranges cards in a single scrollable row.",
+  "responsive": {
+    "mobile": "Single-column stack of cards. Numbered badges remain prominent. Visual content areas scale to full width.",
+    "tablet": "Two-column grid. Cards at comfortable reading width.",
+    "desktop": "Three-column grid or horizontal scroll row. Cards show full visual content. Generous inter-card spacing."
   }
 }

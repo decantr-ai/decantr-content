@@ -96,5 +96,11 @@
       "tier-data",
       "preview-content"
     ]
+  },
+  "visual_brief": "Content paywall overlay. The blur preset applies a strong CSS blur filter to the protected content behind the gate, with a centered overlay card showing a lock icon, the required tier name as a badge, a message ('Subscribe to unlock this content'), and a 'Subscribe' CTA button. The solid preset replaces blurred content with a solid surface that hides the content entirely, showing the same lock icon, tier, and CTA. The teaser preset shows the first portion of content (a paragraph or image preview) unblurred, then fades into the gate overlay with the subscribe prompt.",
+  "responsive": {
+    "mobile": "Gate overlay takes full content width. CTA button full-width. Tier badge and lock icon centered. Blur amount may reduce for performance.",
+    "tablet": "Standard overlay. CTA button at natural width. Comfortable padding.",
+    "desktop": "Overlay centered over the content area. CTA button with hover effects. Teaser shows more content before the fade."
   }
 }

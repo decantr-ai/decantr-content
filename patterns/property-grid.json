@@ -95,5 +95,11 @@
       "items": "Property cards or rows",
       "pagination": "Page controls"
     }
+  },
+  "visual_brief": "Dashboard page for all properties. Header row with 'Properties' title, a search input, and an 'Add Property' button. A portfolio summary bar shows total properties, total units, average occupancy, and total monthly revenue. Filter controls below offer search by name, filter by status, and view toggle (cards/table/map). The main area displays property cards in a responsive grid, a data table, or a map view with pins. Pagination controls at the bottom handle large portfolios.",
+  "responsive": {
+    "mobile": "Single-column property cards. Summary metrics in a 2x2 grid. Filters collapse into a filter button. Map view takes full screen.",
+    "tablet": "Two-column card grid. Summary in a row. Filters visible. Table view has horizontal scroll.",
+    "desktop": "Three-column card grid or full-width table. All summary, filters, and pagination visible."
   }
 }

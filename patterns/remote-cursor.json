@@ -71,5 +71,11 @@
     ],
     "produces": [],
     "actions": []
+  },
+  "visual_brief": "Small SVG cursor icon colored in the collaborator's assigned presence color, positioned absolutely over the document at the collaborator's cursor location. A name tag label extends from the cursor top-right, styled as a small rounded badge with the user's name in white text on a colored background matching the cursor color. The cursor animates smoothly between positions using CSS transitions. The minimal preset shows only the colored caret line without the name tag. The extended preset adds a small avatar thumbnail beside the name tag. Multiple cursors coexist independently on the same document.",
+  "responsive": {
+    "mobile": "Cursors render smaller. Name tags use abbreviated first names. Extended preset falls back to minimal to save space.",
+    "tablet": "Standard cursor size and name tags.",
+    "desktop": "Full cursor visualization with smooth interpolation, name tags, and optional avatar in extended preset."
   }
 }

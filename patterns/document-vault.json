@@ -86,5 +86,11 @@
       "content": "Document list/grid",
       "preview": "Preview pane"
     }
+  },
+  "visual_brief": "Three-panel layout: a folder tree sidebar on the left for navigation, a document list or grid in the center, and an optional preview pane on the right. Each document item shows a file-type icon, document name, upload date, file size, and status badges (active, expired, shared). Folder sidebar shows a nested tree of folders with expand/collapse controls. The grid preset displays documents as card tiles with thumbnail previews. Tenant preset filters by tenant and adds a tenant selector header. Version history is accessible via a timeline popover on each document.",
+  "responsive": {
+    "mobile": "Single-panel view — folder navigation becomes a top dropdown or drawer. Document list takes full width as cards. Preview opens as a full-screen overlay.",
+    "tablet": "Two-panel layout — sidebar and document list. Preview opens as a slide-over.",
+    "desktop": "Full three-panel layout with resizable sidebar. Preview pane docked on the right."
   }
 }

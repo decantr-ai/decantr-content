@@ -73,5 +73,11 @@
       "dates": "Created and last-used",
       "actions": "Copy and revoke buttons"
     }
+  },
+  "visual_brief": "Single horizontal row with a key icon on the far left, followed by the key name in medium-weight text and a masked key value (e.g. 'sk-****...3f2a') in monospace below it. Scope badges (read, write) appear as small colored pills in the middle. Created and last-used dates render in muted small text. Copy and revoke action buttons sit on the far right, with revoke styled as a destructive variant. Rows are separated by bottom borders. The card preset stacks everything vertically inside a bordered card for mobile use.",
+  "responsive": {
+    "mobile": "Switches to card preset — stacked vertical layout with full-width copy/revoke buttons. Scope badges wrap to a second line. Dates appear below key info.",
+    "tablet": "Standard row layout maintained. Action buttons use icon-only mode to save horizontal space.",
+    "desktop": "Full row layout with all elements visible inline. Generous horizontal spacing between key info, scopes, dates, and actions."
   }
 }

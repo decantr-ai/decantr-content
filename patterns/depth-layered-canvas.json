@@ -6,7 +6,15 @@
   "name": "Depth-Layered Canvas",
   "description": "A true z-axis spatial layout with foreground, midground, and background layers using CSS perspective and transform-style: preserve-3d. Layers stack along the depth axis with parallax scrolling and focal-plane blur effects. For immersive dashboards, data landscapes, and spatial storytelling where information lives at different visual depths.",
   "category": "spatial",
-  "tags": ["2026", "spatial", "immersive", "parallax", "3d", "dashboard", "depth"],
+  "tags": [
+    "2026",
+    "spatial",
+    "immersive",
+    "parallax",
+    "3d",
+    "dashboard",
+    "depth"
+  ],
   "components": [
     "SpatialLayer",
     "FocalPoint",
@@ -68,5 +76,6 @@
   "responsive": {
     "mobile": "Collapse to flat-fallback preset. Stack layers vertically. DepthSlider hidden. Focal-point renders inline without blur effect.",
     "tablet": "Reduce parallax intensity to 50%. Two visible planes (midground + foreground). Background becomes a static backdrop. DepthSlider available but simplified."
-  }
+  },
+  "visual_brief": "Three-plane spatial layout using CSS perspective and preserve-3d transforms. Background layer sits deepest with ambient gradients or data visualizations, rendered with blur and slow parallax. Midground layer holds the primary content cards and panels at normal focus. Foreground layer contains interactive controls, tooltips, and floating action elements at the closest depth. A depth slider control on the edge lets users adjust focal plane. Layers shift on scroll with different parallax rates. The flat-fallback preset collapses all layers to a standard stacked layout for reduced-motion preference."
 }

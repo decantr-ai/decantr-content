@@ -115,5 +115,11 @@
       "toggle-link",
       "copy-link"
     ]
+  },
+  "visual_brief": "Modal dialog with tabs for Invite, Link, and Members. The Invite tab shows an email input with autocomplete, a role dropdown (Viewer, Editor, Admin), and a Send button. The Link tab has a toggle to enable/disable shareable link, the link URL in a copy-able input, and permission settings (view/edit, expiration). The Members tab lists current collaborators as rows with avatar, name, email, role dropdown, and a remove button. Pending invitations show an 'Invited' badge with a resend option. The modal header shows the document or resource name being shared.",
+  "responsive": {
+    "mobile": "Modal takes near-full screen. Tabs render as a top bar. Email input full-width. Member list scrolls vertically. Role dropdowns use native selects.",
+    "tablet": "Centered modal at 520px width. Standard tab navigation. Member list comfortable.",
+    "desktop": "Centered modal at 560px width. Full tab layout. Member management with inline role selectors."
   }
 }

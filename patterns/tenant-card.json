@@ -109,5 +109,11 @@
       "details": "Property and lease info",
       "actions": "Action buttons"
     }
+  },
+  "visual_brief": "Bordered card with a tenant avatar or photo at the top-left, followed by name and contact information (phone, email). Below, property/unit assignment as a linked label and lease period dates. A payment status indicator shows current standing (current, late, delinquent) with color coding. Action buttons (Message, View Profile) sit at the bottom. The compact preset is a dense horizontal row with avatar, name, unit, and status. The contact preset emphasizes phone and email with click-to-call/email actions. The self preset is a tenant-facing card showing their own information and quick links.",
+  "responsive": {
+    "mobile": "Cards take full width. Action buttons stack. Contact info uses tap-to-call/email links.",
+    "tablet": "Two-column card grid. Standard card proportions.",
+    "desktop": "Three-column grid or list layout. Cards at comfortable size with all details visible."
   }
 }

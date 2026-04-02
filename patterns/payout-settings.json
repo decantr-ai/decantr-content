@@ -91,5 +91,11 @@
       "payout-settings",
       "payout-history"
     ]
+  },
+  "visual_brief": "Settings form with a payout method selector at the top (radio cards for Bank Transfer/ACH, PayPal, Stripe, with icons). Below, a details section shows the selected method's account fields (bank name, routing number, account number — masked with reveal toggle). A schedule section has radio buttons or toggles for payout frequency (weekly, bi-weekly, monthly) with a next payout date indicator. A payout history list at the bottom shows recent payouts with date, amount, status, and method. The readonly preset disables all inputs and shows data in display-only mode.",
+  "responsive": {
+    "mobile": "Method cards stack vertically. Account fields are full-width. Schedule options stack. Payout history becomes a card list.",
+    "tablet": "Method cards in a 2x2 grid. Standard form layout. History table visible.",
+    "desktop": "Method cards in a single row. Account and schedule sections side by side. Full history table."
   }
 }

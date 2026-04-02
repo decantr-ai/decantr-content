@@ -88,5 +88,11 @@
       "save",
       "revert"
     ]
+  },
+  "visual_brief": "Grid table with role names as column headers and permission categories as row labels. Each cell contains a checkbox or toggle indicating whether that role has that permission. Permission rows are grouped by category (Content, Users, Settings, Billing) with bold category headers. The simple preset shows a reduced set of roles and permissions. The granular preset shows every permission with sub-categories. An 'Add Custom Role' button appears after the last column header. Hovering a permission row shows a description tooltip. Changed but unsaved permissions are highlighted with a subtle accent background.",
+  "responsive": {
+    "mobile": "Matrix transposes — each role becomes a section with permission checkboxes listed vertically. Role selector at top switches between roles. Horizontal scroll alternative for small matrices.",
+    "tablet": "Standard matrix with horizontal scroll if more than 4 roles. Touch-friendly checkbox sizes.",
+    "desktop": "Full matrix grid with all roles and permissions visible. Sticky left column for permission names. Sticky header row for role names."
   }
 }

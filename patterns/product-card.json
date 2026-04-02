@@ -99,5 +99,11 @@
     "consumes": [
       "product-data"
     ]
+  },
+  "visual_brief": "Bordered card displaying a single product or content item. A thumbnail image fills the top portion of the card. Below the image, the product title in medium-weight text, a price displayed prominently (or 'Free' badge), and a type indicator badge (video, audio, image, document). Action buttons in the card footer allow quick purchase or preview. The list preset renders as a horizontal row with a small thumbnail on the left. The featured preset enlarges the card with a gradient overlay on the image and a 'Featured' badge. Hover state lifts the card with a subtle shadow increase.",
+  "responsive": {
+    "mobile": "Cards take full width in single column. Thumbnail height reduces. Price and title prominent. Action buttons full-width.",
+    "tablet": "Two-column card grid. Standard card proportions.",
+    "desktop": "Three or four column grid. Cards at comfortable size with hover effects."
   }
 }

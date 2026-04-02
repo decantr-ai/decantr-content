@@ -6,7 +6,16 @@
   "name": "Spatial Presence Ring",
   "description": "A circular or arc display showing nearby agents and users with live status indicators. Ring segments represent participants, expanding on hover or focus to reveal details. Segments are distributed evenly around the ring with smooth reflow when participants join or leave. For collaborative workspaces, multiplayer agent UIs, and real-time presence-aware interfaces.",
   "category": "spatial",
-  "tags": ["2026", "spatial", "presence", "collaboration", "ring", "multiplayer", "agents", "real-time"],
+  "tags": [
+    "2026",
+    "spatial",
+    "presence",
+    "collaboration",
+    "ring",
+    "multiplayer",
+    "agents",
+    "real-time"
+  ],
   "components": [
     "PresenceRing",
     "PresenceSegment",
@@ -69,5 +78,6 @@
   "responsive": {
     "mobile": "Switch to linear-fallback preset. Horizontal scrollable avatar row with status dots. Tap to expand detail popover as a bottom sheet. Maximum 8 visible before overflow count badge.",
     "tablet": "Half-arc preset by default to save vertical space. Segments are touch-sized (48px minimum). Detail popover appears as a card overlay rather than radial popup."
-  }
+  },
+  "visual_brief": "Circular ring display where each participant occupies an arc segment proportional to their activity level. Segments distribute evenly around the ring with subtle dividers. Each segment shows a small avatar and a status dot (green/yellow/red). Expanding a segment on hover reveals a detail popover with name, role, and activity details. The ring track itself is rendered as a conic gradient or SVG circle. The half-arc preset shows only the top semicircle. The linear-fallback preset arranges participants in a horizontal row for simpler layouts. Smooth reflow animation when participants join or leave."
 }

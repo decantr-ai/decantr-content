@@ -6,7 +6,14 @@
   "name": "Agent Handoff Zone",
   "description": "A transition portal for agent-to-agent context transfer that visualizes the source agent, target agent, transferred context summary, animated handoff progress, and an approval workflow for human-in-the-loop oversight.",
   "category": "agentic",
-  "tags": ["2026", "agentic", "handoff", "context-transfer", "approval", "orchestration"],
+  "tags": [
+    "2026",
+    "agentic",
+    "handoff",
+    "context-transfer",
+    "approval",
+    "orchestration"
+  ],
   "components": [
     "AgentCard",
     "ContextSummary",
@@ -72,5 +79,6 @@
   "responsive": {
     "mobile": "Agent cards stack vertically (source on top, target below) with the handoff animation rendered as a vertical downward flow between them. Context preview defaults to collapsed. Approval buttons render full-width stacked. Timeline becomes a vertical strip on the left edge.",
     "tablet": "Standard horizontal layout maintained. Context preview starts collapsed to save space. Approval buttons remain inline. Touch targets for approve/reject increased to 48px minimum height."
-  }
+  },
+  "visual_brief": "Horizontal two-card layout with source agent on the left and target agent on the right, connected by an animated transfer beam. Each agent card shows avatar, name, role label, and status badge with a colored left/right border accent. A collapsible context-preview panel sits below the cards displaying transferred data sections. A horizontal status timeline runs underneath with dot-connected steps. Approval action buttons (Approve, Reject) anchor at the bottom. Compact preset collapses to a single row with inline avatars and an arrow between them."
 }

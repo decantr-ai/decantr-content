@@ -73,5 +73,11 @@
       "breakdowns": "Income and expense breakdowns",
       "comparison": "Property comparison"
     }
+  },
+  "visual_brief": "Financial dashboard with a header containing title, property/portfolio selector, and date range filter. A summary metrics row shows gross income, total expenses, NOI (net operating income), and cash flow as large value cards with trend indicators. Below, two side-by-side breakdown panels: income categories (rent, fees, other) and expense categories (maintenance, insurance, utilities, management) displayed as horizontal bar charts or itemized lists with amounts. A property comparison table shows these metrics per property. A projections section shows a line chart of projected vs. actual income/expenses.",
+  "responsive": {
+    "mobile": "Summary metrics in a 2x2 grid. Breakdown panels stack vertically. Property comparison becomes a scrollable card list. Projections chart takes full width with simplified labels.",
+    "tablet": "Metrics in a single row. Breakdowns side by side. Comparison table with horizontal scroll.",
+    "desktop": "Full dashboard grid with all sections visible. Charts and tables at comfortable sizes."
   }
 }

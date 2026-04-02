@@ -79,5 +79,11 @@
       "header": "Toolbar with title and copy button",
       "json-content": "Syntax-highlighted JSON"
     }
+  },
+  "visual_brief": "Code viewer panel with a header toolbar containing a title and a copy-to-clipboard button. The body displays syntax-highlighted JSON with color-coded keys (accent color), string values (green), numbers (blue), booleans (orange), and null (muted). Collapsible nodes show expand/collapse chevron icons next to objects and arrays, with an item count badge when collapsed (e.g., '{3}' or '[5]'). Line numbers appear in a left gutter column. The inline preset removes the header and renders JSON inline with reduced formatting. The diff preset highlights additions in green background and removals in red background.",
+  "responsive": {
+    "mobile": "Full-width viewer with horizontal scroll for deeply nested content. Nodes default to collapsed beyond depth 2. Copy button prominently placed.",
+    "tablet": "Standard viewer width. Nodes expand to depth 3 by default.",
+    "desktop": "Full viewer with comfortable width. All nodes expandable. Horizontal space accommodates deep nesting without scroll."
   }
 }

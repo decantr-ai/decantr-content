@@ -54,5 +54,11 @@
     "consumes": [],
     "produces": [],
     "actions": []
+  },
+  "visual_brief": "Dense two-column list of tools or features. Each item shows a colored dot bullet on the left (cycling through a rotating palette), the tool name in monospace medium-weight text, and a muted description beside or below it. A thin colored left border accent matches the dot color per item. Rows highlight on hover with a subtle background tint. The compact preset reduces line height and removes descriptions, showing names only. Pure text layout with no images or icons, relying on typography and color accents for visual hierarchy.",
+  "responsive": {
+    "mobile": "Single-column list. Names and descriptions stack vertically per item. Full-width rows.",
+    "tablet": "Two-column list if items fit. Comfortable row spacing.",
+    "desktop": "Two-column grid with items distributed evenly. Hover effects visible. Full descriptions inline."
   }
 }

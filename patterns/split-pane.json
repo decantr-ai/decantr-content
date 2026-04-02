@@ -79,5 +79,11 @@
     "Ctrl+Shift+Up": "Shrink top pane",
     "Ctrl+Shift+Down": "Expand top pane",
     "Ctrl+\\": "Toggle pane focus"
+  },
+  "visual_brief": "Multi-panel layout with resizable dividers between panes. The horizontal preset splits the viewport into left and right panels with a vertical drag handle between them. The vertical preset splits into top and bottom with a horizontal drag handle. The quad preset creates four panels in a 2x2 grid with cross-shaped drag handles at the center. Each pane has a monospace terminal aesthetic with a dark background. Drag handles render as a thin line with a grip indicator (three dots or lines). Double-clicking a handle resets to equal sizing.",
+  "responsive": {
+    "mobile": "Panes stack vertically (no side-by-side splitting). Tab-based switching between panes instead of simultaneous view. No drag handles.",
+    "tablet": "Horizontal split available. Drag handles have larger touch targets (24px hit area). Quad preset unavailable.",
+    "desktop": "Full split pane with all presets. Keyboard shortcuts for resizing. Drag handles at standard size."
   }
 }

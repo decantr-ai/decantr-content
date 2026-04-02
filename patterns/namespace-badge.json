@@ -75,5 +75,11 @@
       "icon": "Namespace icon",
       "label": "Namespace text"
     }
+  },
+  "visual_brief": "Small inline badge with a namespace icon and text label. @official renders with a blue/primary background and a shield or checkmark icon. @community renders with a green background and a people/globe icon. @org:slug renders with a purple background and a building icon. The standard preset shows both icon and text. Compact preset shows icon only with a tooltip for the full namespace. Pill preset renders as a rounded-full capsule shape. All variants use white or contrast text on the colored background.",
+  "responsive": {
+    "mobile": "Badge renders at standard size. Compact preset preferred in tight layouts to save space.",
+    "tablet": "Standard badge with icon and text visible.",
+    "desktop": "Full badge with comfortable padding. Pill preset works well inline with other metadata."
   }
 }

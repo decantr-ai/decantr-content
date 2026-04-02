@@ -105,5 +105,11 @@
       "delete-block",
       "add-comment"
     ]
+  },
+  "visual_brief": "Contenteditable block-based document area occupying the main content region. Each block (paragraph, heading, list, image, code) is a discrete editable unit. A floating formatting toolbar appears on text selection. Typing '/' at the start of a block opens a slash command menu. Remote collaborator cursors appear as colored caret lines with name labels. Remote selections render as colored highlights. The top area may include a document title field. Minimal preset hides all chrome except the content. Presentation preset uses larger type sizes and hides editing UI.",
+  "responsive": {
+    "mobile": "Full-width editor with bottom-fixed formatting toolbar above the keyboard. Slash menu takes full width. Remote cursors show abbreviated names.",
+    "tablet": "Standard editor layout. Floating toolbar near selection. Comfortable block spacing.",
+    "desktop": "Full editor with generous margins. Floating toolbar tracks selection precisely. All collaboration indicators visible."
   }
 }

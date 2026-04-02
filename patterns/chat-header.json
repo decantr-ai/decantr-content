@@ -66,5 +66,11 @@
       "status": "Online/offline or model name",
       "actions": "Search, export, branch, settings"
     }
+  },
+  "visual_brief": "Horizontal bar at the top of a chat panel with the conversation title on the left (editable on click, showing a pencil icon on hover), a status indicator dot (green for online, gray for offline, or a model name badge) in the center-left area, and action icon buttons on the right (search, export, branch, settings). The bar has a bottom border separator. Compact preset reduces padding and hides less-used actions behind a more-menu.",
+  "responsive": {
+    "mobile": "Title truncates with ellipsis. Actions collapse into a single kebab menu. Status indicator moves below title.",
+    "tablet": "Full title visible. Two primary actions visible, rest in overflow menu.",
+    "desktop": "All elements visible inline. Title is editable on click. Full action button row."
   }
 }

@@ -4,33 +4,63 @@
   "version": "1.0.0",
   "name": "Stats Bar",
   "description": "Horizontal bar of key statistics or metrics. Compact summary row.",
-  "tags": ["metrics", "stats", "summary", "kpi", "dashboard"],
+  "tags": [
+    "metrics",
+    "stats",
+    "summary",
+    "kpi",
+    "dashboard"
+  ],
   "classification": {
-    "triggers": ["stats summary", "metrics bar", "key numbers", "totals"],
+    "triggers": [
+      "stats summary",
+      "metrics bar",
+      "key numbers",
+      "totals"
+    ],
     "tier": "recommended"
   },
   "presets": {
     "default": {
       "description": "Equal-width stat items in a row",
-      "layout": { "distribution": "equal" }
+      "layout": {
+        "distribution": "equal"
+      }
     },
     "compact": {
       "description": "Minimal padding, inline separators",
-      "layout": { "distribution": "auto", "separator": "divider" }
+      "layout": {
+        "distribution": "auto",
+        "separator": "divider"
+      }
     },
     "highlighted": {
       "description": "First stat emphasized, rest secondary",
-      "layout": { "distribution": "featured-first" }
+      "layout": {
+        "distribution": "featured-first"
+      }
     }
   },
   "slots": {
     "items": {
       "type": "array",
       "item": {
-        "label": { "type": "text", "required": true },
-        "value": { "type": "number", "required": true },
-        "unit": { "type": "text", "required": false },
-        "trend": { "type": "delta", "required": false }
+        "label": {
+          "type": "text",
+          "required": true
+        },
+        "value": {
+          "type": "number",
+          "required": true
+        },
+        "unit": {
+          "type": "text",
+          "required": false
+        },
+        "trend": {
+          "type": "delta",
+          "required": false
+        }
       }
     }
   },
@@ -38,5 +68,11 @@
     "container": "div",
     "direction": "horizontal",
     "alignment": "center"
+  },
+  "visual_brief": "Compact horizontal row of key statistics separated by subtle vertical dividers. Each stat shows a label in muted uppercase small text above a large bold value. The compact preset reduces vertical padding and font sizes. The highlighted preset adds a colored accent underline or background to the most important metric. Stats are evenly distributed across the bar width. Optional trend arrows (up/down) appear beside values with green/red coloring.",
+  "responsive": {
+    "mobile": "Stats wrap to a 2x2 grid or become horizontally scrollable. Values remain large. Labels may abbreviate.",
+    "tablet": "Single horizontal row with all stats visible. Comfortable spacing.",
+    "desktop": "Full horizontal bar with generous spacing between stats. All labels fully spelled out."
   }
 }

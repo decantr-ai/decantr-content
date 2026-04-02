@@ -84,5 +84,11 @@
       "content": "Full markdown rendering with code blocks, images, links",
       "actions": "Copy, edit, delete, react, branch buttons"
     }
+  },
+  "visual_brief": "Message bubble layout with avatar on the left (user messages) or a model icon (assistant messages). Sender name in small bold text with a relative timestamp to the right. Content area supports full markdown: paragraphs, headings, bold/italic, bulleted lists, code blocks with syntax highlighting and copy button, inline code, images, and links. Action buttons (copy, edit, delete, react, branch) appear on hover in a small row above or below the message. User messages align left with a subtle surface background. Assistant messages use a slightly different surface shade. System messages are centered with muted italic text.",
+  "responsive": {
+    "mobile": "Avatar size reduces to 28px. Action buttons appear on long-press instead of hover. Code blocks scroll horizontally. Message content takes full width minus avatar.",
+    "tablet": "Standard layout with 32px avatars. Actions appear on hover/tap.",
+    "desktop": "Full layout with 36px avatars, hover actions, and generous content width for code blocks."
   }
 }

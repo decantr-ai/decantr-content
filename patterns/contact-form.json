@@ -67,5 +67,11 @@
       "success": "Success confirmation",
       "info": "Contact info (optional)"
     }
+  },
+  "visual_brief": "Vertically stacked form with a header (title and short description), input fields for name, email, department dropdown, subject, and a multiline message textarea. An optional file attachment area with a paperclip icon sits below the textarea. A honeypot field is hidden from visual display. The submit button is primary-colored at the bottom. Success state replaces the form with a checkmark icon and confirmation message. Compact preset removes the department dropdown and attachment area. An optional contact-info sidebar shows phone, email, and address.",
+  "responsive": {
+    "mobile": "Full-width form with stacked fields. Submit button goes full-width. Contact info section moves below the form. File attachment uses native file picker.",
+    "tablet": "Form centered at 500px max-width. Contact info appears beside the form if space allows.",
+    "desktop": "Form at 500px max-width centered or beside a contact info panel. Generous padding and spacing."
   }
 }

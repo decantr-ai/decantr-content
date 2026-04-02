@@ -67,5 +67,11 @@
     "color-coded-status",
     "click-actions",
     "tooltip-hover"
-  ]
+  ],
+  "visual_brief": "Fixed horizontal bar (top or bottom of viewport) with three alignment zones: left, center, and right. Each zone contains clickable status items rendered in monospace text with optional colored icons. Typical left items: mode indicator (INSERT/NORMAL), file name. Center items: line/column numbers, selection count. Right items: language mode, encoding, line endings, notification count. Background is a solid dark or accent color. Clicking a status item triggers a quick action or popup. The bar is a single row, densely packed with small text.",
+  "responsive": {
+    "mobile": "Bar shows only essential items (mode, file name, line/col). Other items accessible via tap-to-expand. Font size slightly reduced.",
+    "tablet": "Most items visible. Right-side items may overflow to a menu.",
+    "desktop": "Full bar with all items visible in left, center, and right zones."
+  }
 }

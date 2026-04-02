@@ -59,5 +59,11 @@
       "methods": "Payment methods",
       "upcoming": "Upcoming payments"
     }
+  },
+  "visual_brief": "Settings form for tenant autopay configuration. An autopay toggle switch at the top enables/disables automatic payments with a description of what it does. Below, a payment methods section shows saved cards/bank accounts as rows with masked account number, type icon (Visa, Mastercard, bank), and a star icon for the default method. 'Add Payment Method' button opens a card/ACH input form. An upcoming payments section shows the next payment amount, date, and property/unit in a summary card. If autopay is off, a manual 'Pay Now' button appears.",
+  "responsive": {
+    "mobile": "Full-width form. Payment method cards stack. Toggle switch prominent at top. Pay Now button full-width and sticky.",
+    "tablet": "Standard form layout. Payment methods and upcoming payments visible together.",
+    "desktop": "Comfortable form width. All sections visible. Payment methods in a clean list."
   }
 }

@@ -110,5 +110,11 @@
       "color": "#FF0000",
       "priority": 3
     }
+  },
+  "visual_brief": "Terminal-style scrolling log display on a dark background with monospace text. Each log entry is a single line showing a timestamp in muted color, a log level badge (INFO in blue, WARN in yellow, ERROR in red, DEBUG in gray), and the message text. New entries append at the bottom with auto-scroll behavior. A controls header contains a search input, level filter toggles, and a pause/resume button. The filtered preset dims non-matching entries. The grouped preset collapses repeated messages with a count badge. A small stats bar shows entries/second and total count.",
+  "responsive": {
+    "mobile": "Full-width log view. Controls collapse into a top bar with a filter toggle button. Log entries use smaller font. Search is a full-width overlay.",
+    "tablet": "Standard layout with controls visible. Comfortable font size for log entries.",
+    "desktop": "Full log stream with controls bar, search, and stats visible. Wide view accommodates long log messages without wrapping."
   }
 }

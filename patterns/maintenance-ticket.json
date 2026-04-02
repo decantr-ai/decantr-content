@@ -116,5 +116,11 @@
       "timeline": "Status timeline",
       "actions": "Actions"
     }
+  },
+  "visual_brief": "Ticket detail view with a header showing ticket ID, title, status badge (color-coded), and priority badge. The details section displays property, unit, category (plumbing, electrical, etc.), reporter name, and description text. A photo section shows uploaded images in a small gallery grid. A status timeline tracks the ticket lifecycle with timestamped entries (submitted, assigned, in-progress, completed). The create preset shows a form with title, category select, priority select, description textarea, and photo upload area. Action buttons include Assign, Update Status, and Close.",
+  "responsive": {
+    "mobile": "Single-column stacked layout. Photo gallery uses horizontal scroll. Timeline is vertical. Action buttons are full-width at the bottom.",
+    "tablet": "Standard layout with comfortable spacing. Photo gallery shows 2-3 thumbnails per row.",
+    "desktop": "Full layout with details and timeline side by side. Photo gallery in a grid. All actions visible in a toolbar."
   }
 }

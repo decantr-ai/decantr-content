@@ -99,5 +99,11 @@
       "joined": "Join date",
       "actions": "Management actions"
     }
+  },
+  "visual_brief": "Horizontal row displaying a team member with a circular avatar on the left, followed by name (medium weight) and email (muted, smaller text) stacked vertically, a role badge (Owner, Admin, Member) color-coded in the middle, join date in muted text, and action controls on the right (role change dropdown, remove button). Rows are separated by bottom borders. The card preset wraps each member in a bordered card with a vertical layout. The invite preset shows a pending invite row with email, role, and resend/cancel actions.",
+  "responsive": {
+    "mobile": "Card preset used — members as stacked cards. Avatar, name, role badge, and actions visible. Join date hidden. Actions as icon buttons.",
+    "tablet": "Standard row layout. All fields visible. Actions as text buttons.",
+    "desktop": "Full row with generous spacing. All information and actions visible inline."
   }
 }

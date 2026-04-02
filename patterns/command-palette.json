@@ -74,5 +74,11 @@
     "ArrowUp": "Previous command",
     "ArrowDown": "Next command",
     "Enter": "Execute command"
+  },
+  "visual_brief": "Centered modal overlay with a large search input at the top featuring a magnifying glass icon and placeholder text ('Type a command...'). Below the input, a scrollable results list shows matched commands grouped by category (Navigation, Actions, Settings) with muted category headers. Each result row displays an icon on the left, command name in medium weight, description in muted text, and a keyboard shortcut badge on the right. The currently selected item has a highlighted surface background. The overlay has a backdrop blur and rounded corners with a subtle border.",
+  "responsive": {
+    "mobile": "Palette takes full screen width with slight horizontal margin. Results list fills available height. No keyboard shortcut badges shown. Touch-optimized row heights.",
+    "tablet": "Centered overlay at 560px width. Standard row heights with shortcut badges visible.",
+    "desktop": "Centered overlay at 640px max-width. Full keyboard navigation with shortcut badges. Preview panel optionally visible on the right for selected commands."
   }
 }

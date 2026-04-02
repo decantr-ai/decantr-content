@@ -106,5 +106,11 @@
       "color": "#FF0000",
       "description": "Critical threshold"
     }
+  },
+  "visual_brief": "CLI-style metric display with the metric label in muted uppercase small text, the current value in large bold monospace type, and an optional unit suffix. A trend indicator arrow (up/down) with green/red coloring appears beside the value with a percentage change. The inline preset renders as a compact single-line display: label, value, and trend on one row. The block preset wraps the metric in a bordered card with optional sparkline underneath. The grid preset arranges multiple gauges in a responsive grid. Sparklines use ASCII braille characters or thin SVG lines.",
+  "responsive": {
+    "mobile": "Grid preset uses 2 columns. Block cards take full width if single. Values remain large for readability.",
+    "tablet": "Grid uses 3 columns. Standard card sizes.",
+    "desktop": "Grid uses 4 columns. Block preset shows full sparkline width. Comfortable spacing."
   }
 }

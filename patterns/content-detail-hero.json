@@ -80,5 +80,11 @@
       "meta-row": "Version, author, date",
       "action-group": "Copy, use, share buttons"
     }
+  },
+  "visual_brief": "Full-width header section for a content detail page. A breadcrumb navigation trail sits at the top. Below it, type and namespace badges render inline. The content name appears as a large heading. A description paragraph follows in standard text. A meta row shows version, author name, and publish date separated by dots. An action button group on the right contains 'Copy JSON', 'Use in Project', and 'Share' buttons. Compact preset reduces vertical spacing and uses a single-line layout for badges and meta.",
+  "responsive": {
+    "mobile": "Breadcrumb collapses to back-arrow + parent name. Badges and meta stack below the title. Action buttons go full-width stacked at the bottom.",
+    "tablet": "Standard layout. Action buttons align right of the title. Breadcrumb shows full path.",
+    "desktop": "Full layout with action group floating right. All metadata and breadcrumb visible in one comfortable view."
   }
 }

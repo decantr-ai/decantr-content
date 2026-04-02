@@ -92,5 +92,11 @@
     "last": "└── ",
     "vertical": "│   ",
     "empty": "    "
+  },
+  "visual_brief": "Hierarchical tree rendered with ASCII connector characters (├── for branches, └── for last items, │ for vertical lines) in monospace font. Each node shows a folder or file icon (or expand/collapse toggle for branches), the item name, and optional metadata. Indentation increases per depth level with connector lines drawn vertically. The flat preset removes ASCII connectors and uses simple indentation. The checkbox preset adds a checkbox before each node for selection. Nodes are clickable to expand/collapse or to select. The currently selected node has a highlighted background.",
+  "responsive": {
+    "mobile": "Tree takes full width. Touch targets enlarged. Deep nesting truncates with horizontal scroll. Checkbox preset uses larger checkboxes.",
+    "tablet": "Standard tree layout. Comfortable node spacing for touch.",
+    "desktop": "Full tree with all connectors rendered crisply. Keyboard navigation (arrow keys). Comfortable indentation."
   }
 }

@@ -91,5 +91,11 @@
     "actions": [
       "cta-click"
     ]
+  },
+  "visual_brief": "Two-column section with a media area (logo or hero image) taking roughly one-third width on the left and a text content area on the right. The text area contains a large primary heading with accent-colored punctuation, a supporting tagline paragraph with accent-colored inline spans, and a row of pill-shaped CTA buttons (primary filled, secondary outlined). Background features breathing gradient orbs with slow animation. Reversed preset flips the columns. Centered preset stacks both columns vertically with centered alignment.",
+  "responsive": {
+    "mobile": "Columns stack vertically — media on top, text content below. CTA buttons go full-width stacked. Gradient orbs scale down or simplify.",
+    "tablet": "Side-by-side layout maintained with tighter proportions. Media area shrinks to 40% width.",
+    "desktop": "Full split layout with generous whitespace. Media at one-third, content at two-thirds. Orbs animate at full size."
   }
 }

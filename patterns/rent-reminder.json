@@ -103,5 +103,11 @@
       "amount": "Amount",
       "action": "Action button"
     }
+  },
+  "visual_brief": "Notification-style card or banner with contextual coloring based on payment state. Upcoming (blue/info tint) shows a calendar icon with 'Rent due in X days', the amount, and a 'Pay Now' button. Due today (yellow/warning tint) shows an alert icon with 'Rent due today', the amount prominently, and an urgent 'Pay Now' button. Overdue (red/destructive tint) shows a warning triangle icon with 'Rent overdue by X days', the amount with late fee breakdown, and a 'Pay Now' button. Paid (green/success tint) shows a checkmark icon with 'Rent paid' and the payment date.",
+  "responsive": {
+    "mobile": "Full-width banner card. Amount text large for visibility. Pay button full-width at the bottom. Details stack vertically.",
+    "tablet": "Standard card width. All elements in a comfortable layout. Pay button inline.",
+    "desktop": "Card or inline banner. All information on one or two lines. Pay button on the right."
   }
 }

@@ -4,38 +4,94 @@
   "version": "1.0.0",
   "name": "Post List",
   "description": "Chronological list of posts, articles, or news items with author, date, and preview.",
-  "tags": ["content", "news", "blog", "feed", "articles"],
+  "tags": [
+    "content",
+    "news",
+    "blog",
+    "feed",
+    "articles"
+  ],
   "classification": {
-    "triggers": ["news feed", "blog posts", "articles", "announcements", "updates"],
+    "triggers": [
+      "news feed",
+      "blog posts",
+      "articles",
+      "announcements",
+      "updates"
+    ],
     "tier": "recommended"
   },
   "presets": {
     "default": {
       "description": "Standard post list with thumbnails",
-      "layout": { "style": "list", "showThumbnail": true }
+      "layout": {
+        "style": "list",
+        "showThumbnail": true
+      }
     },
     "compact": {
       "description": "Dense list without thumbnails",
-      "layout": { "style": "list", "showThumbnail": false }
+      "layout": {
+        "style": "list",
+        "showThumbnail": false
+      }
     },
     "cards": {
       "description": "Card-based layout for featured posts",
-      "layout": { "style": "cards", "columns": 2 }
+      "layout": {
+        "style": "cards",
+        "columns": 2
+      }
     }
   },
   "slots": {
-    "title": { "type": "text", "required": true },
-    "excerpt": { "type": "text", "required": false },
-    "author": { "type": "user", "required": false },
-    "date": { "type": "datetime", "required": true },
-    "thumbnail": { "type": "image", "required": false },
-    "category": { "type": "tag", "required": false },
-    "readTime": { "type": "duration", "required": false }
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": false
+    },
+    "author": {
+      "type": "user",
+      "required": false
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "image",
+      "required": false
+    },
+    "category": {
+      "type": "tag",
+      "required": false
+    },
+    "readTime": {
+      "type": "duration",
+      "required": false
+    }
   },
   "layout": {
     "container": "section",
-    "header": ["title", "filter?"],
-    "body": ["posts"],
-    "footer": ["load-more?", "pagination?"]
+    "header": [
+      "title",
+      "filter?"
+    ],
+    "body": [
+      "posts"
+    ],
+    "footer": [
+      "load-more?",
+      "pagination?"
+    ]
+  },
+  "visual_brief": "Vertical list of post items in chronological order. Each post row shows a title link in medium-weight text, an author name, publish date in muted text, and a two-line preview excerpt. Posts are separated by subtle dividers or spacing. The compact preset reduces to title and date only, one line per item. The cards preset wraps each post in a bordered card with optional thumbnail image on the left, title, excerpt, author avatar, and date. Featured posts may have a 'Featured' badge.",
+  "responsive": {
+    "mobile": "Full-width post items. Cards preset uses vertical card layout with image on top. Excerpts limited to one line.",
+    "tablet": "Standard list or card layout with comfortable spacing.",
+    "desktop": "Posts in a centered content column. Cards preset shows image on the left with text on the right."
   }
 }

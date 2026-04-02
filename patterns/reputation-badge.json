@@ -79,5 +79,11 @@
       "score": "Numeric score",
       "label": "Trust level text"
     }
+  },
+  "visual_brief": "Compact inline badge displaying a user's reputation score and trust level. Shows a trust-level icon (shield, star, or checkmark based on level), a numeric score in medium-weight text, and a text label for the trust level (New, Trusted, Verified, etc.) in muted smaller text. A subtle progress indicator shows advancement toward the next trust threshold. The large preset enlarges everything and adds a detailed breakdown tooltip on hover. The compact preset shows icon and score only. Color varies by trust level — gray for new, blue for trusted, gold for verified.",
+  "responsive": {
+    "mobile": "Compact preset preferred. Badge renders inline at standard body text size.",
+    "tablet": "Standard badge with icon, score, and label visible.",
+    "desktop": "Full badge with progress indicator. Large preset with tooltip on hover."
   }
 }

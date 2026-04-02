@@ -85,5 +85,11 @@
       "metrics": "Key metrics",
       "content": "Tabbed content area"
     }
+  },
+  "visual_brief": "Full property view starting with a header showing property name, address, status badge, and action buttons (Edit, Archive). Below the header, a photo gallery as a horizontal scrollable strip or grid of thumbnails. A metrics row shows key stats: total units, occupancy rate, monthly revenue, NOI. The main content area uses horizontal tabs: Overview (property details and description), Units (unit list), Financials (income/expense summaries), Documents (lease PDFs, insurance), and Maintenance (ticket list). The create preset replaces display fields with an input form.",
+  "responsive": {
+    "mobile": "Single-column layout. Gallery becomes a swipeable carousel. Tabs become a dropdown selector or horizontally scrollable. Content sections stack fully.",
+    "tablet": "Standard layout with scrollable tab bar. Gallery shows 3-4 thumbnails. Content area comfortable width.",
+    "desktop": "Full layout with all tabs visible. Gallery shows full thumbnail row. Content area can show side-by-side panels within tabs."
   }
 }

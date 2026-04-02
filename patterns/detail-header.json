@@ -98,5 +98,11 @@
       "delete",
       "share"
     ]
+  },
+  "visual_brief": "Page header area with a breadcrumb navigation trail at the top, followed by a title row containing a large heading on the left and action buttons on the right. Below the title, a subtitle or description paragraph in muted text. An optional status badge appears inline next to the title. The profile preset adds an avatar to the left of the title. All elements are separated by consistent vertical spacing with a subtle bottom border below the entire header block.",
+  "responsive": {
+    "mobile": "Breadcrumb collapses to back arrow with parent name. Action buttons move below the title and stack full-width. Status badge wraps below the title on its own line.",
+    "tablet": "Standard layout. Actions remain inline right of title. Breadcrumb shows full path.",
+    "desktop": "Full header with all elements comfortably positioned. Generous whitespace above and below."
   }
 }

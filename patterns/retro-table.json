@@ -93,5 +93,11 @@
     "t_top": "┬",
     "t_bottom": "┴",
     "cross": "┼"
+  },
+  "visual_brief": "Data table rendered entirely with ASCII box-drawing characters on a monospace font. Headers and cells are separated by lines drawn with characters like ─, │, ┌, ┐, └, ┘, ├, ┤, ┬, ┴, ┼. Column headers are bold or uppercase. Cell content is padded for alignment. The simple preset uses single-line borders. The compact preset uses minimal separators (only horizontal lines between rows). A pagination row at the bottom uses ASCII characters for page indicators. Footer summary row uses double-line border (═, ║) to distinguish from data rows.",
+  "responsive": {
+    "mobile": "Table scrolls horizontally in a container. Column widths minimize. Font size can reduce slightly. Fewer columns shown with a 'more' expand option.",
+    "tablet": "Standard table width. All columns visible with comfortable padding.",
+    "desktop": "Full-width table with generous column padding. Box-drawing characters render crisply at standard monospace sizing."
   }
 }

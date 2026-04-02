@@ -170,5 +170,11 @@
       "footer": "Navigation links",
       "error": "Inline error messages"
     }
+  },
+  "visual_brief": "Centered single-column form card constrained to 400px max-width. Header area shows logo and a welcome title. Form fields stack vertically with labeled inputs for email and password. A horizontal divider with 'or continue with' text separates the form from OAuth provider buttons (Google, GitHub icons in bordered pill buttons). Footer contains muted text links for Register and Forgot Password. Error messages appear inline below inputs in destructive color. MFA presets show a 6-digit code input with large separated character boxes. Verify-email preset centers a large mail icon with instructional text.",
+  "responsive": {
+    "mobile": "Form takes full width with horizontal padding. OAuth buttons stack vertically. MFA code inputs remain large for touch targets. Footer links stack.",
+    "tablet": "Centered 400px form. Standard spacing. OAuth buttons render in a row.",
+    "desktop": "Centered form with generous padding. All elements comfortably spaced in their standard layout."
   }
 }

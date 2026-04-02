@@ -114,5 +114,11 @@
       "▉",
       "█"
     ]
+  },
+  "visual_brief": "Terminal-style progress indicators rendered in monospace type. The bar preset shows a label, a horizontal bar made of block characters (filled blocks for progress, empty/light blocks for remaining), and a percentage value. The spinner preset shows a cycling ASCII spinner character (|, /, -, \\) with a label. The dots preset shows animated trailing dots (...) with a label. The blocks preset uses Unicode block elements for a higher-resolution bar with eighth-block gradations at the fill edge. All variants use green or primary color on a dark/terminal background.",
+  "responsive": {
+    "mobile": "Bar width scales to container. Label may truncate. Percentage stays visible.",
+    "tablet": "Standard bar width. Full label visible.",
+    "desktop": "Full-width bar with generous spacing. All text and labels comfortably visible."
   }
 }

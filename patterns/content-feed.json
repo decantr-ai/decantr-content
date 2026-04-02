@@ -100,5 +100,11 @@
       "creator-data",
       "user-tier"
     ]
+  },
+  "visual_brief": "Vertical feed of content cards in chronological order. Each card shows an author row (avatar, name, timestamp), the post content (text, images, embedded video player), engagement stats (likes, comments count), and a comment input area. Tier-gated content shows a blurred preview with a lock icon and 'Subscribe to unlock' overlay. Filter tabs at the top allow switching between All, Text, Video, Audio, and Images. The grid preset arranges cards in a masonry layout. Compact preset removes the comment area and reduces card padding.",
+  "responsive": {
+    "mobile": "Single-column full-width cards. Video players scale to container width. Filters become a horizontal scrollable row. Load-more button replaces infinite scroll for performance.",
+    "tablet": "Single-column feed with comfortable card widths. Filters visible in a row.",
+    "desktop": "Feed constrained to a centered content column (680px). Grid preset uses two or three columns."
   }
 }

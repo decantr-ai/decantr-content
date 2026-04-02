@@ -99,5 +99,11 @@
       "product-data",
       "category-data"
     ]
+  },
+  "visual_brief": "Grid of product cards with a toolbar header containing filter dropdowns (category, price range, type), a sort selector (newest, popular, price), and view mode toggles (grid/list). Cards are arranged in a responsive CSS grid. The list preset stacks items as horizontal rows. The masonry preset uses a masonry layout for varied card heights. A 'Load More' button or infinite scroll pagination sits at the bottom. Empty state shows a 'No products found' message when filters return nothing.",
+  "responsive": {
+    "mobile": "Single-column card list. Filters collapse into a filter drawer button. Sort is a simple dropdown. Load more as a button.",
+    "tablet": "Two-column grid. Filters visible in a row. Sort inline.",
+    "desktop": "Three to four column grid. All filter and sort controls visible in the toolbar. Masonry layout effective at this width."
   }
 }

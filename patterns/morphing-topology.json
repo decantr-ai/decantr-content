@@ -6,7 +6,16 @@
   "name": "Morphing Topology",
   "description": "A layout that reshapes its zone structure based on AI-detected user context. Zones expand, collapse, merge, and split using animated CSS grid-template changes driven by application state. Integrates with Decantr's composition topology system: zones map to archetype roles (primary, gateway, public, auxiliary), and transitions between zone configurations are smooth and meaningful. For adaptive dashboards, context-aware workspaces, and AI-orchestrated interfaces that reorganize around what the user is doing.",
   "category": "generative",
-  "tags": ["2026", "generative", "adaptive", "topology", "grid", "context-aware", "AI", "zones"],
+  "tags": [
+    "2026",
+    "generative",
+    "adaptive",
+    "topology",
+    "grid",
+    "context-aware",
+    "AI",
+    "zones"
+  ],
   "components": [
     "MorphZone",
     "TransitionBorder",
@@ -85,5 +94,6 @@
   "responsive": {
     "mobile": "Switch to stacked-fallback preset. Zones render as collapsible accordion panels. Only one zone expanded at a time. LayoutToggle hidden; AI-driven topology changes limited to reordering zones by relevance.",
     "tablet": "Maximum 2-column grid. Focus-expand uses 60/40 split instead of 70/30. TransitionBorder drag handles enlarged for touch (48px hit target). ContextBadge displayed as a dismissible toast rather than inline badge."
-  }
+  },
+  "visual_brief": "CSS Grid container with named zones that animate between configurations. In the balanced preset, zones are evenly distributed in a 2x2 or 3-column grid. Focus-expand preset enlarges one zone to take two-thirds of the space while others shrink. Merged preset combines adjacent zones into a single large panel. Split preset divides a zone into two sub-panels. Zone boundaries show subtle transition borders that animate during layout changes. Each zone has a small label badge in the corner indicating its role (primary, gateway, auxiliary). The stacked-fallback preset arranges all zones in a single column."
 }

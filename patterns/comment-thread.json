@@ -111,5 +111,11 @@
       "delete-comment",
       "edit-comment"
     ]
+  },
+  "visual_brief": "Vertical thread of comment messages with an anchor line connecting to the commented content. Each comment shows a small avatar, author name in bold, timestamp in muted text, and the comment body. Replies indent slightly with a thin left border. A textarea input at the bottom allows new replies with a send button. A resolve button (checkmark icon) sits in the thread header. Resolved threads show a green checkmark and collapsed state. Sidebar preset renders as a right-side panel. Inline preset positions the thread as a popover near the anchor point.",
+  "responsive": {
+    "mobile": "Thread renders full-width as a bottom sheet. Avatar size reduces. Reply input is full-width. Thread collapses to show only the first comment with an expand button.",
+    "tablet": "Sidebar preset renders as a right panel at 320px width. Inline preset uses a popover.",
+    "desktop": "Standard sidebar or inline popover layout. Full avatars and comfortable spacing."
   }
 }

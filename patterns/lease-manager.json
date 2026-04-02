@@ -90,5 +90,11 @@
       "documents": "Documents",
       "actions": "Actions"
     }
+  },
+  "visual_brief": "Structured lease management view with a header showing lease ID, property address, and status badge (active, expired, pending). Below, a terms section displays key-value pairs: start date, end date, monthly rent, deposit, late fee policy. A documents list shows lease PDFs and amendments as file rows with download buttons. An actions bar provides Edit, Renew, and Terminate buttons. The edit preset switches terms to editable inputs. Summary preset shows a condensed single-card overview. Amendment history appears as a collapsible timeline.",
+  "responsive": {
+    "mobile": "Single-column stacked layout. Terms display as a two-column key-value grid. Documents list is full-width. Action buttons stack vertically.",
+    "tablet": "Standard layout with terms in a comfortable grid. Documents and actions visible without scrolling.",
+    "desktop": "Full layout with generous spacing. Terms, documents, and actions all visible in a single view."
   }
 }

@@ -86,5 +86,11 @@
       "header": "Title and controls",
       "columns": "Kanban columns"
     }
+  },
+  "visual_brief": "Kanban board with horizontal columns for each maintenance status: New, Assigned, In Progress, Pending Parts, Completed, Closed. Each column has a header with the status name and a ticket count badge. Ticket cards within columns show a title, priority badge (urgent/high/normal/low), property name, and assignee avatar. Cards are draggable between columns. A header bar above the board contains the title, a search input, and an 'Add Ticket' button. The list preset displays tickets as a flat filtered list. Mini preset shows a compact status summary with counts per column.",
+  "responsive": {
+    "mobile": "Columns displayed one at a time with horizontal swipe or a dropdown status selector. Cards take full width. Drag-and-drop replaced by status-change action buttons.",
+    "tablet": "Three visible columns with horizontal scroll for the rest. Cards at comfortable size for touch.",
+    "desktop": "All columns visible in horizontal scroll or fixed layout. Drag-and-drop fully functional. Cards show all metadata."
   }
 }

@@ -91,5 +91,11 @@
       "table": "Payment records",
       "summary": "Totals"
     }
+  },
+  "visual_brief": "Data table of payment records with columns: date, description, property/unit, payer, amount (green for received, red for refunded), and status badge (completed, pending, failed). A header row contains the title, date range filter (date pickers or preset buttons like 30d/90d/1y), and an export button. A summary row at the top or bottom shows total received, total outstanding, and period comparison. The portfolio preset adds a property column. The tenant preset filters to a single tenant. The property preset filters to a single property.",
+  "responsive": {
+    "mobile": "Table becomes a card list — each payment as a stacked card showing date, description, amount, and status. Filters collapse to a filter button. Export moves to a menu.",
+    "tablet": "Table with horizontal scroll for extra columns. Date range filter visible in the header.",
+    "desktop": "Full table with all columns visible. Summary row and filters always visible."
   }
 }

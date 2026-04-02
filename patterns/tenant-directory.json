@@ -79,5 +79,11 @@
       "items": "Tenant cards or rows",
       "pagination": "Page controls"
     }
+  },
+  "visual_brief": "Directory page with a header containing 'Tenants' title, a search input, and an 'Add Tenant' button. Summary stats show total tenants, active leases, and average occupancy. Filter controls offer search by name, filter by property/status. The main area displays tenant cards in a responsive grid (cards preset) or a data table (table preset) with columns for avatar, name, property, unit, lease dates, payment status, and actions. Pagination controls at the bottom for large directories.",
+  "responsive": {
+    "mobile": "Single-column tenant cards. Summary in a compact bar. Filters collapse to a button. Search is full-width.",
+    "tablet": "Two-column card grid or table with horizontal scroll. Filters visible.",
+    "desktop": "Three-column card grid or full-width table. All summary, filters, and pagination visible."
   }
 }

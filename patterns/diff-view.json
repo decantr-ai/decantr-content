@@ -88,5 +88,11 @@
     "p": "Previous change",
     "e": "Expand all",
     "c": "Collapse all"
+  },
+  "visual_brief": "Code comparison display with two side-by-side panels (split preset) or a single merged panel (unified preset). Each panel shows line numbers in a narrow gutter column with a monospace font. Added lines have a green-tinted background with a '+' marker. Removed lines have a red-tinted background with a '-' marker. Unchanged lines render with no background tint. A header bar above each panel shows the file name and change statistics (additions/deletions count). The inline preset highlights changed characters within a line with a stronger color accent.",
+  "responsive": {
+    "mobile": "Defaults to unified diff view — single column with added/removed lines interleaved. Horizontal scroll for long lines. Line numbers use minimal width.",
+    "tablet": "Split view available with narrower panes. Synchronized scrolling between panels.",
+    "desktop": "Full split view with generous panel widths. Character-level diff highlighting. Expandable context lines."
   }
 }

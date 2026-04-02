@@ -97,5 +97,11 @@
       "filter-row": "Type tabs and namespace/sort dropdowns",
       "active-filters": "Active filter badges"
     }
+  },
+  "visual_brief": "Two-row filter bar. The first row contains a search input with a magnifying glass icon on the left. The second row contains type filter tabs (All, Patterns, Themes, Blueprints, Shells) rendered as pill-shaped toggles, a namespace dropdown selector, and a sort dropdown (Relevance, Newest, Popular). Active filter selections appear as removable chip badges below the bar. The compact preset combines search and filters into a single row. The with-results-count preset adds a 'Showing N results' label.",
+  "responsive": {
+    "mobile": "Search input full-width on its own row. Type tabs become a horizontal scrollable strip. Namespace and sort collapse into a 'Filters' button that opens a bottom sheet.",
+    "tablet": "Search and filters fit in two rows. Type tabs visible. Dropdowns inline.",
+    "desktop": "Single or two row bar with all controls visible. Type tabs, namespace, and sort all inline."
   }
 }

@@ -70,5 +70,11 @@
       "select-command",
       "close"
     ]
+  },
+  "visual_brief": "Floating dropdown menu that appears inline when '/' is typed at the start of a block. Contains a search input at the top (auto-focused, filtering as user types), and categorized command groups below: Text (paragraph, headings H1-H3, quote, callout), Lists (bullet, numbered, todo, toggle), Media (image, video, file, embed), and Advanced (code block, table, divider, math). Each command item shows an icon, name, and a brief description in muted text. The currently selected item has a highlighted background. Keyboard shortcut hints appear on the right. The filtered preset shows only matching commands when search text is entered.",
+  "responsive": {
+    "mobile": "Menu renders as a bottom sheet. Full-width items with larger touch targets. Category headers prominent. No keyboard shortcut hints.",
+    "tablet": "Floating dropdown near the cursor. Standard item sizing.",
+    "desktop": "Compact floating dropdown near the cursor. Full keyboard navigation with up/down arrows and Enter to select."
   }
 }

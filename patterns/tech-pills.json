@@ -59,5 +59,11 @@
     "consumes": [],
     "produces": [],
     "actions": []
+  },
+  "visual_brief": "Centered flex-wrap row of rounded pill badges, each displaying a technology or integration name (e.g., 'React', 'Vue', 'Next.js', 'Tailwind', 'Figma'). Standard preset shows uniform styling — each pill has a muted border, surface background, and small text in consistent color. The colored preset gives each pill a unique brand-colored background or border (React blue, Vue green, etc.) with white or dark text for contrast. Pills have consistent padding and slight letter spacing. The row wraps naturally, creating an organic layout of technology compatibility indicators.",
+  "responsive": {
+    "mobile": "Pills wrap across multiple lines. Sizing remains consistent. Narrower horizontal padding if needed.",
+    "tablet": "Pills in a comfortable centered row, wrapping as needed.",
+    "desktop": "Single or two row display depending on count. Generous spacing between pills."
   }
 }

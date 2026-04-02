@@ -107,5 +107,11 @@
       "tier-data",
       "product-data"
     ]
+  },
+  "visual_brief": "Two-column layout with an order summary card on the right and a payment form on the left. The summary card shows line items with names and prices, a promo code input field, subtotal, tax, and total in bold. The payment form includes radio buttons for payment method (card, PayPal), card number/expiry/CVC inputs with card brand icon detection, billing address fields, and a prominent submit button at the bottom. Subscribe preset adds plan name and billing cycle selector. Upgrade preset shows a comparison of current vs. new plan.",
+  "responsive": {
+    "mobile": "Single column layout — order summary moves above the payment form. Submit button is full-width and sticky at the bottom. Card inputs stack vertically.",
+    "tablet": "Two-column layout maintained. Summary panel is narrower. Payment form takes majority width.",
+    "desktop": "Standard two-column layout with comfortable spacing. Summary card is sticky within its column on scroll."
   }
 }

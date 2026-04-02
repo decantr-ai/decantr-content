@@ -92,5 +92,11 @@
       "metrics": "Key metrics",
       "actions": "Action buttons"
     }
+  },
+  "visual_brief": "Bordered card with a property photo at the top, followed by the property address and name. A metrics row shows unit count, occupancy rate (as a percentage with color coding — green for high, red for low), and monthly revenue. An action bar at the bottom provides View and Edit buttons. The compact preset removes the photo and shows a denser card with just address, key metrics, and actions. The list-item preset renders as a horizontal row suitable for table-like lists. Status badges indicate property state (active, maintenance, vacant).",
+  "responsive": {
+    "mobile": "Cards take full width. Photo height reduces. Metrics wrap to two rows. Action buttons go full-width.",
+    "tablet": "Two-column card grid. Standard card proportions with photo.",
+    "desktop": "Three-column grid or larger. Cards at comfortable size with all metrics inline."
   }
 }

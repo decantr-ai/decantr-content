@@ -64,5 +64,11 @@
     "keyboard-trigger",
     "disabled-state",
     "active-pressed-state"
-  ]
+  ],
+  "visual_brief": "Fixed horizontal bar at the bottom of the viewport displaying function key shortcuts in a DOS/Norton Commander style. Each slot shows a function key label (F1, F2, ... F10) in a highlighted badge followed by the action name (Help, Menu, View, Edit, Copy, Move, Mkdir, Delete, etc.). Background is typically dark with bright key labels. Extended preset adds Shift+F and Ctrl+F combinations as additional rows. The bar spans the full viewport width with evenly distributed key slots.",
+  "responsive": {
+    "mobile": "Bar shows only the most critical shortcuts (F1-F5). Remaining keys accessible via a more button. Key labels use abbreviated action names.",
+    "tablet": "Full F1-F10 bar visible. Key slots slightly narrower.",
+    "desktop": "Full bar with all function keys and comfortable spacing. Extended preset shows additional modifier combinations."
+  }
 }

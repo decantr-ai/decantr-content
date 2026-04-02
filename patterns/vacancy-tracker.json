@@ -68,5 +68,11 @@
       "units": "Vacant unit list",
       "pipeline": "Applicants"
     }
+  },
+  "visual_brief": "Dashboard panel for tracking vacant units. Header with 'Vacancy Tracker' title. A summary metrics row shows total vacant units, overall vacancy rate (percentage with color coding), total days vacant across all units, and estimated lost revenue. Below, a list of vacant unit cards, each showing unit number, property name, days vacant, last rent amount, listing status badge (listed, unlisted, pending), and an applicant pipeline indicator (number of applicants at each stage). The mini preset condenses to a single summary card showing vacancy rate and count only.",
+  "responsive": {
+    "mobile": "Summary metrics in a 2x2 grid. Vacant unit cards stack full-width. Pipeline indicators simplified to counts only.",
+    "tablet": "Metrics in a row. Two-column card grid for vacant units.",
+    "desktop": "Full dashboard panel with metrics bar, unit cards in a grid, and detailed pipeline indicators."
   }
 }
