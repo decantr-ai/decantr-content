@@ -73,6 +73,12 @@
       }
     }
   },
+  "visual_brief": "Grid of chart cards for dashboard analytics. Each card is a contained surface (d-surface) with a compact header showing the chart title in small medium-weight text and an optional time-range selector. The chart area occupies the card body with a minimum height of 200px and renders line charts, bar charts, area charts, or pie charts via data-chart-type attributes. A simple horizontal legend sits below the chart area with colored dots and labels. The mixed preset features one large chart spanning two columns in the first row, with two smaller charts below. Cards have consistent rounded corners and border styling.",
+  "responsive": {
+    "mobile": "Single column — all charts stack vertically at full width. Chart minimum height reduces to 160px. Legend wraps to multiple lines if needed. Wide preset becomes vertical stack instead of horizontal scroll.",
+    "tablet": "Two-column grid activates. Mixed preset large chart still spans full width, smaller charts go side by side below. Chart height at 200px.",
+    "desktop": "Full two-column grid. Mixed preset spans correctly. Wide preset shows horizontal scrollable row. Charts at full minimum height with comfortable legend spacing."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc1 _lg:gc2 _gap4",

@@ -70,6 +70,21 @@
       }
     }
   },
+  "visual_brief": "Full-width data table with a sticky header row. Header cells use uppercase, small, muted text with sort-direction arrows on sortable columns. Data rows have consistent vertical padding (py3) for scan-ability, with subtle zebra-stripe background on hover. Row-selection checkboxes align in the first column. Active selections highlight the row with a faint primary-color tint. A toolbar above the table holds a search input on the left and action buttons (export, delete) on the right. Pagination controls at the bottom show current range, total count, and prev/next buttons with disabled states at boundaries.",
+  "responsive": {
+    "mobile": "Table transforms into a stacked card list. Each row becomes a vertical card with label-value pairs. Toolbar search goes full-width. Pagination simplifies to prev/next only. Horizontal scroll is avoided entirely.",
+    "tablet": "Table displays with horizontal scroll if columns exceed viewport. Sticky first column for row identifiers. Toolbar remains single row.",
+    "desktop": "Full table layout with all columns visible. Sticky header on scroll. Toolbar with search, filters, and bulk action buttons. Full pagination with page numbers."
+  },
+  "motion": {
+    "micro": "Row hover highlights with 150ms background-color transition. Sort arrow rotates 180deg on direction change with 200ms ease. Checkbox scales briefly on check (scale 1.1 for 100ms).",
+    "transitions": "Rows entering from filter/search fade in with 200ms opacity transition. Bulk-selected rows highlight with a slide-in left-border accent over 150ms."
+  },
+  "accessibility": {
+    "role": "Table uses semantic <table>, <thead>, <tbody>, <th>, <td> elements. Sort buttons are <button> inside <th> with aria-sort attribute.",
+    "keyboard": "Arrow keys navigate cells. Space toggles row selection. Enter activates row action. Tab moves between toolbar, table, and pagination.",
+    "screen_reader": "aria-label on table describes content. aria-sort on sortable headers. Live region announces sort changes and selection count. Pagination uses nav with aria-label."
+  },
   "default_layout": {
     "layout": "column",
     "atoms": "_flex _col _gap4 _w[100%] _overflow[auto]",

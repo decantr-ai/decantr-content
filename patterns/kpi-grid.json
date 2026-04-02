@@ -59,6 +59,12 @@
       }
     }
   },
+  "visual_brief": "Row of four KPI cards in a responsive grid. Each card is a compact surface with an icon in a rounded muted-background circle at top-left, a small muted label below describing the metric, the primary value in large heading2-scale bold text, and a trend badge showing percentage change — green with an up-arrow for positive, red with a down-arrow for negative. Cards have equal height and consistent internal padding (p4). The compact preset removes icons and replaces the trend badge with an inline sparkline chart placeholder. Cards use subtle border or shadow to delineate from the background.",
+  "responsive": {
+    "mobile": "Two columns (2x2 grid). Card padding reduces to p3. Value text drops to heading3 scale. Icons shrink to 20px. Sparklines in compact preset maintain aspect ratio.",
+    "tablet": "Two columns at default, four columns if space allows. Standard padding. Full heading2 values.",
+    "desktop": "Four-column single row. Full layout with icons, values, and trend badges. Comfortable gap4 spacing between cards."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc2 _lg:gc4 _gap4 _p4",

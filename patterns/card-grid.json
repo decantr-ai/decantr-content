@@ -111,6 +111,16 @@
       }
     }
   },
+  "visual_brief": "Responsive grid of uniformly-sized cards with consistent gap spacing. Each card is a contained surface with subtle border or shadow, rounded corners (r3), and internal padding. Product preset: top image with fixed aspect ratio, title below in medium-weight text, price in bold heading style, star-rating row with filled/empty star icons, and a full-width add-to-cart button in the card footer. Content preset: thumbnail image, colored category badge, article title, two-line excerpt in muted small text, and an author row with avatar, name, and date. Cards maintain equal height within each row via grid stretch.",
+  "responsive": {
+    "mobile": "Single column (1 card per row). Cards go full-width with larger touch targets. Image aspect ratio maintained. Gap reduces to gap3.",
+    "tablet": "Two columns for most presets. Collection preset stays at 2 columns. Gap at gap4. Cards maintain equal height per row.",
+    "desktop": "Three to four columns depending on preset. Product goes up to 4 columns at xl breakpoint. Content stays at 3. Icon preset reaches 4 columns. Full gap4-gap6 spacing."
+  },
+  "motion": {
+    "micro": "Cards lift on hover with translateY(-2px) and increased shadow over 200ms ease. Image within card scales to 1.03 on hover with overflow hidden. Badge pulses subtly on new items.",
+    "transitions": "Cards entering viewport fade up from 15px below with staggered 100ms delay per card, 300ms duration. Load-more appends new cards with the same stagger animation."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc1 _sm:gc2 _lg:gc3 _xl:gc4 _gap4",
