@@ -34,13 +34,15 @@
     "shape": "rounded",
     "id": "studio"
   },
-  "personality": [
-    "creative",
-    "warm",
-    "friendly",
-    "premium",
-    "approachable"
-  ],
+  "personality": "Warm, creator-first monetization platform that celebrates creative work. Light theme with soft gradients and rounded cards. Creator profiles are visually rich — large cover images, prominent avatars, and tier cards with benefit previews. Earnings dashboards use approachable chart styles (rounded bars, smooth lines) in warm accent tones. The fan storefront feels like a boutique, not a marketplace. Premium tiers get subtle visual elevation. Think Patreon meets Gumroad with a Dribbble-level polish.",
+  "voice": {
+    "tone": "Warm, encouraging, and creator-supportive. Celebrates milestones. Speaks differently to creators (empowering) vs fans (appreciative).",
+    "cta_verbs": ["Create", "Publish", "Subscribe", "Support", "Unlock", "Share"],
+    "avoid": ["Submit", "Click here", "Please enter", "Buy now", "Deploy"],
+    "empty_states": "Encouraging and aspirational. An empty subscriber list should celebrate that the creator is getting started and offer tips for their first post.",
+    "errors": "Gentle and solution-oriented. Payment failures should reassure that no charges were made and offer alternative methods.",
+    "loading": "Content card skeletons with rounded corners and warm shimmer. Earnings charts show axis labels while data populates."
+  },
   "overrides": {
     "pages": {},
     "pages_remove": [],

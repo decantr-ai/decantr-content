@@ -12,7 +12,15 @@
   "theme": {
     "id": "auradecantism"
   },
-  "personality": [],
+  "personality": "Bold, expressive portfolio that lets the work shine. Large hero with confident typography and a strong CTA. Project showcases use generous whitespace and full-bleed imagery. Subtle scroll-triggered animations add polish without distraction. Social proof and testimonials provide credibility. The overall feel is curated gallery meets personal brand statement.",
+  "voice": {
+    "tone": "Confident and personal. First-person where appropriate. Speaks with authority about craft.",
+    "cta_verbs": ["View project", "Get in touch", "See my work", "Explore", "Connect"],
+    "avoid": ["Submit", "Click here", "Please enter", "Buy now"],
+    "empty_states": "Minimal and intentional. A portfolio with no projects yet should feel like a canvas waiting to be filled, with a prompt to add the first piece.",
+    "errors": "Brief and low-key. Contact form errors should guide without breaking the creative flow.",
+    "loading": "Fade-in content blocks with subtle opacity transitions. No spinners — the portfolio should feel curated, not loading."
+  },
   "overrides": {},
   "dependencies": {
     "archetypes": {

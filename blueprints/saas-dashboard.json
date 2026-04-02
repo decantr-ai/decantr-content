@@ -12,7 +12,15 @@
   "theme": {
     "id": "auradecantism"
   },
-  "personality": [],
+  "personality": "Clean, data-driven SaaS dashboard. Neutral tones with a single accent color for CTAs and active states. Card-based layout with consistent spacing. Charts use the accent palette. Navigation is efficient and keyboard-accessible. Think Linear meets Stripe dashboard.",
+  "voice": {
+    "tone": "Professional and concise. Informative without being verbose. Data speaks for itself.",
+    "cta_verbs": ["View", "Create", "Export", "Configure", "Manage"],
+    "avoid": ["Submit", "Click here", "Please enter", "Dear user"],
+    "empty_states": "Friendly and action-oriented. Explain what will appear here and provide a single clear next step.",
+    "errors": "Direct and helpful. State what went wrong and suggest a fix. No blame language.",
+    "loading": "Show skeleton placeholders matching the content shape. No spinner text — let the layout speak."
+  },
   "overrides": {},
   "dependencies": {
     "archetypes": {

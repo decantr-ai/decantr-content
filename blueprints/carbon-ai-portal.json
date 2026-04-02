@@ -27,6 +27,14 @@
     "id": "carbon"
   },
   "personality": "Production-ready AI chatbot with refined glassmorphic depth. Muted stormy-blue palette with soft drop shadows and subtle backdrop blur on panels. Lucide icons throughout. Rich typographic hierarchy — Inter or system sans-serif for body, monospace for code and data. Polished form fields with visible focus rings, smooth hover-lift transitions on cards and buttons. No emoji in UI. Think Claude meets Linear.",
+  "voice": {
+    "tone": "Intelligent and measured. Speaks like a premium developer tool. Technical accuracy matters. Warm but never casual.",
+    "cta_verbs": ["Start chat", "New conversation", "Send", "Export", "Configure", "Upgrade"],
+    "avoid": ["Submit", "Click here", "Please enter", "Hey there", "Awesome"],
+    "empty_states": "Thoughtful and inviting. An empty conversation list should welcome the user and suggest a first prompt or use case. Settings pages show clear descriptions of each option.",
+    "errors": "Calm and specific. AI response failures should explain rate limits or model availability. Form errors use inline validation with specific guidance.",
+    "loading": "Chat messages stream token-by-token with a blinking cursor. Conversation list shows skeleton cards. Settings forms show field outlines while preferences load."
+  },
   "overrides": {
     "pages": {},
     "pages_remove": [],

@@ -12,7 +12,15 @@
   "theme": {
     "id": "auradecantism"
   },
-  "personality": [],
+  "personality": "Warm, inviting storefront. Product imagery takes center stage. Clean white backgrounds with accent pops on CTAs. Typography hierarchy guides the eye from product name to price to buy button. Micro-animations on add-to-cart and wishlist interactions. Trust signals (reviews, shipping badges) are visible but not overwhelming.",
+  "voice": {
+    "tone": "Friendly, confident, and encouraging. Speaks like a helpful shop assistant — never pushy.",
+    "cta_verbs": ["Add to cart", "Buy now", "Browse", "Explore", "Save"],
+    "avoid": ["Submit", "Click here", "Please enter", "Purchase immediately"],
+    "empty_states": "Warm and inviting. Suggest popular items or categories when a search returns no results. Keep the shopper browsing.",
+    "errors": "Reassuring and solution-focused. If a payment fails, suggest alternatives. Never alarm the customer.",
+    "loading": "Show product card skeletons with image placeholders. Subtle shimmer animation to signal progress."
+  },
   "overrides": {},
   "dependencies": {
     "archetypes": {

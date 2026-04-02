@@ -12,7 +12,15 @@
   "theme": {
     "id": "auradecantism"
   },
-  "personality": [],
+  "personality": "Technical design-system workbench for power users. Dense, IDE-like layout with multi-panel navigation. Monospace typography for code and data, system sans-serif for UI chrome. Dark theme primary with light option. Component previews render in isolated viewports with device simulation. Search is instant and filterable. The aesthetic is VS Code meets Storybook — functional, fast, and keyboard-driven.",
+  "voice": {
+    "tone": "Technical and precise. Speaks to designers and developers who know design systems. Uses correct terminology.",
+    "cta_verbs": ["Preview", "Inspect", "Copy", "Search", "Configure", "Toggle"],
+    "avoid": ["Submit", "Click here", "Please enter", "Buy", "Subscribe"],
+    "empty_states": "Technical and helpful. An empty component list should explain how to register components or link to documentation.",
+    "errors": "Developer-friendly. Show error codes, stack traces for component render failures, and link to relevant docs.",
+    "loading": "Code skeleton blocks with line-height placeholders. Component preview areas show a subtle grid pattern while loading."
+  },
   "overrides": {},
   "dependencies": {
     "archetypes": {

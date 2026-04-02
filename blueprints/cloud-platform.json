@@ -22,11 +22,15 @@
   "theme": {
     "id": "launchpad"
   },
-  "personality": [
-    "technical",
-    "enterprise",
-    "reliable"
-  ],
+  "personality": "Enterprise-grade cloud console built for reliability and scale. Clean, systematic layout with a left sidebar for service navigation. Status indicators use semantic colors — green healthy, amber degraded, red incident. Deploy logs stream in monospace with ANSI color support. Usage charts are functional, not decorative. Dense data tables with sort, filter, and bulk actions. Think AWS Console meets Vercel — powerful but approachable. Every view should feel like a control plane.",
+  "voice": {
+    "tone": "Technical and trustworthy. Speaks to infrastructure engineers and DevOps teams. Precise about states and operations.",
+    "cta_verbs": ["Deploy", "Create", "Scale", "Monitor", "Configure", "Migrate"],
+    "avoid": ["Submit", "Click here", "Please enter", "Buy", "Amazing"],
+    "empty_states": "Helpful and onboarding-oriented. An empty project list should walk users through creating their first app with clear steps.",
+    "errors": "Precise and diagnostic. Include request IDs, timestamps, and affected resources. Link to status page for platform issues.",
+    "loading": "Resource list skeletons with status dot placeholders. Deploy logs show a blinking cursor. Metrics charts show axis labels while data loads."
+  },
   "overrides": {
     "pages": {
       "billing": {

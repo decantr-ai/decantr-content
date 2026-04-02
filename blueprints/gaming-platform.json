@@ -20,11 +20,15 @@
   "theme": {
     "id": "auradecantism"
   },
-  "personality": [
-    "immersive",
-    "energetic",
-    "competitive"
-  ],
+  "personality": "High-energy gaming hub with bold, immersive visuals. Dark backgrounds with vibrant neon accents (electric blue, hot pink, lime green). Leaderboard tables use rank-colored highlights. Profile cards show achievement badges and stat bars. Game catalog uses large cover-art cards with hover-zoom effects. Competitive elements (rankings, win rates) are front and center. The vibe is Discord meets Steam — social, loud, and unapologetically gamer.",
+  "voice": {
+    "tone": "Energetic and direct. Speaks like a fellow gamer. Uses gaming vernacular where natural but stays readable.",
+    "cta_verbs": ["Play", "Join", "Challenge", "Explore", "Claim", "Unlock"],
+    "avoid": ["Submit", "Click here", "Please enter", "Purchase", "Subscribe now"],
+    "empty_states": "Motivational and challenge-oriented. An empty leaderboard should dare the user to be the first to claim the top spot.",
+    "errors": "Brief and in-character. Connection failures can use gaming metaphors (lag, disconnect). Always offer a retry.",
+    "loading": "Pulsing skeleton cards with neon accent borders. Progress bars use the accent palette. Leaderboard rows animate in sequentially."
+  },
   "overrides": {
     "pages": {},
     "pages_remove": [
