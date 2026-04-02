@@ -56,6 +56,10 @@
     "accent-glow": {
       "dark": "rgba(0, 212, 255, 0.3)",
       "light": "rgba(0, 212, 255, 0.15)"
+    },
+    "secondary": {
+      "dark": "#A78BFA",
+      "light": "#7C3AED"
     }
   },
   "modes": [
@@ -152,6 +156,14 @@
     },
     "d-interactive[data-variant=\"primary\"]:hover": {
       "box-shadow": "0 0 20px var(--d-accent-glow, rgba(0, 212, 255, 0.3))"
+    },
+    "d-surface[data-status=\"error\"]": {
+      "border-color": "var(--d-error)",
+      "box-shadow": "0 0 12px color-mix(in srgb, var(--d-error) 20%, transparent)"
+    },
+    "d-control:focus": {
+      "border-color": "var(--d-accent)",
+      "box-shadow": "0 0 0 3px var(--d-accent-glow, rgba(0, 212, 255, 0.2))"
     }
   },
   "compositions": {
