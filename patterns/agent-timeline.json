@@ -39,6 +39,13 @@
       }
     }
   },
+  "layout_hints": {
+    "vertical_line": "A continuous 2px vertical line runs the FULL height of the timeline, 16px from the left edge. Color: var(--d-border). The line MUST NOT have gaps between events — it connects all events visually.",
+    "orb": "Each event has a 12px diameter colored circle (orb) centered ON the vertical line. The orb is vertically aligned with the FIRST line of text (the badge/timestamp row), not the center of the event block.",
+    "event_colors": "Each event TYPE must have a DISTINCT color. No two types share the same color. Suggested: action=cyan(accent), decision=green(success), error=red(error), warning=amber(warning), tool_call=purple, reasoning=amber/gold, info=blue(info).",
+    "spacing": "Compact event spacing: gap-3 to gap-4 between events. Dense timelines are easier to scan than spacious ones.",
+    "badge_size": "Event type badges use d-annotation with at least 0.7rem font and enough padding to be scannable at speed."
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap4 _py4",

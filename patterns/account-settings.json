@@ -95,6 +95,11 @@
       }
     }
   },
+  "layout_hints": {
+    "active_state": "Active nav/tab item should have a visible indicator: accent-colored left border (for vertical nav) or bottom border (for horizontal tabs), plus accent text color.",
+    "nav_position": "For settings pages, vertical tab nav on the left. Content area scrolls independently.",
+    "spacing": "Nav items have consistent padding. Active item stands out but doesn't shift layout."
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap8",

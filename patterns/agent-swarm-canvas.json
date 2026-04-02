@@ -39,6 +39,14 @@
       }
     }
   },
+  "layout_hints": {
+    "container": "borderless",
+    "note": "This is a full-bleed visualization. Do NOT wrap in a d-surface card. Agent nodes float freely within the canvas area.",
+    "node_interaction": "Each agent node card MUST have cursor: pointer. Use d-surface[data-interactive] for clickable nodes. Clicking navigates to agent detail.",
+    "metrics": "Display agent metrics with LABELED text, not icon-only. Good: 'Requests: 142 | Latency: 120ms'. Bad: '⚡ 142 ⬇ 120ms'. Icons without labels are unparseable.",
+    "status_consistency": "All status badges MUST use d-annotation[data-status]. Every status includes a colored dot (8px circle) prefix for visual scanning. Consistent across all agents.",
+    "error_escalation": "Agents with error status should have a subtle red border glow on their card: box-shadow: 0 0 12px color-mix(in srgb, var(--d-error) 25%, transparent)."
+  },
   "default_layout": {
     "layout": "spatial",
     "atoms": "_relative _w100 _h100 _overflow-hidden _bg-canvas",

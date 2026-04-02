@@ -46,6 +46,11 @@
       }
     }
   },
+  "layout_hints": {
+    "filtering": "If filter tabs or category pills are shown, they MUST be functional. Clicking a tab/pill filters the grid. Use React state to filter. Non-functional filter UI is worse than no filters.",
+    "empty_state": "When filters produce 0 results, show an empty state: centered icon (48px, muted) + descriptive message + 'Clear filters' action.",
+    "grid": "Use CSS grid with auto-fill: grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)). Cards should be equal height within each row."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gap4 _p4",

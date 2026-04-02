@@ -56,6 +56,14 @@
       }
     }
   },
+  "layout_hints": {
+    "direction": "horizontal",
+    "note": "For 3-5 steps, use a HORIZONTAL layout with connecting lines or arrows between numbered circles. Center the entire row within the section. For 6+ steps, use a 2-column grid. NEVER use a left-aligned vertical list for ≤5 steps.",
+    "connector": "Use a subtle horizontal line between step circles (1px solid var(--d-border) or border at 50% opacity).",
+    "step_circle": "Numbered circle with accent border, 40-48px diameter, number centered. Background transparent or surface.",
+    "alignment": "center",
+    "step_text": "Title bold, below or right of circle. Description in muted text, max 2 lines."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_flex _gap6 _mw[920px] _mx[auto]",

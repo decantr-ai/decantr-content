@@ -105,6 +105,15 @@
       }
     }
   },
+  "layout_hints": {
+    "label_position": "stacked",
+    "note": "Labels go ABOVE their field, not side-by-side. This prevents the label-field gap problem at wide viewports.",
+    "max_width": "Form content should be constrained to max-width: 40rem (640px). Full-width forms are hard to read.",
+    "section_grouping": "Group related fields under section headers. Use a SINGLE d-surface card for the entire form, OR no card at all. Do NOT wrap each section in its own separate card.",
+    "icon_placement": "Section header icons render INLINE with the heading text (icon left of heading, vertically centered), not floating outside the card border.",
+    "select_styling": "Apply d-control to ALL form elements including <select>. Add appearance: none and a custom SVG chevron for consistent styling.",
+    "textarea": "Textareas should have min-height: 6rem to visually differentiate from single-line inputs."
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap6 _p4",
