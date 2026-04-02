@@ -28,14 +28,38 @@
   "decantr_compat": ">=0.9.0",
   "source": "community",
   "palette": {
-    "background": { "light": "#FFFFFF", "dark": "#111111" },
-    "surface": { "light": "#FFFFFF", "dark": "#1A1A1A" },
-    "surface-raised": { "light": "#F8F8F8", "dark": "#222222" },
-    "border": { "light": "#E5E5E5", "dark": "#333333" },
-    "text": { "light": "#111111", "dark": "#F5F5F5" },
-    "text-muted": { "light": "#6B7280", "dark": "#9CA3AF" },
-    "primary": { "light": "#1366D9", "dark": "#3B82F6" },
-    "primary-hover": { "light": "#0D4EA6", "dark": "#60A5FA" }
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#111111"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#1A1A1A"
+    },
+    "surface-raised": {
+      "light": "#F8F8F8",
+      "dark": "#222222"
+    },
+    "border": {
+      "light": "#E5E5E5",
+      "dark": "#333333"
+    },
+    "text": {
+      "light": "#111111",
+      "dark": "#F5F5F5"
+    },
+    "text-muted": {
+      "light": "#6B7280",
+      "dark": "#9CA3AF"
+    },
+    "primary": {
+      "light": "#1366D9",
+      "dark": "#3B82F6"
+    },
+    "primary-hover": {
+      "light": "#0D4EA6",
+      "dark": "#60A5FA"
+    }
   },
   "decorators": {
     "clean-surface": "Pure white (#FFFFFF) or near-black (#111111) depending on mode.",
@@ -103,5 +127,98 @@
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
+  },
+  "decorator_definitions": {
+    "clean-surface": {
+      "description": "Pure white (#FFFFFF) or near-black (#111111) depending on mode.",
+      "intent": "Use as the root page background for the most neutral, universally appropriate foundation. Zero personality, maximum clarity.",
+      "suggested_properties": {
+        "background-color": "var(--d-bg, #FFFFFF)",
+        "color": "var(--d-fg, #111111)",
+        "min-height": "100vh"
+      },
+      "pairs_with": [
+        "clean-nav",
+        "clean-card"
+      ],
+      "usage": [
+        "Page root containers",
+        "App shell backgrounds"
+      ]
+    },
+    "clean-nav": {
+      "description": "Minimal navigation with text links, no backgrounds.",
+      "intent": "Use for primary navigation that should be virtually invisible. Text links only, no backgrounds, no borders.",
+      "suggested_properties": {
+        "background": "transparent",
+        "padding": "16px 0"
+      },
+      "pairs_with": [
+        "clean-surface",
+        "clean-card"
+      ],
+      "usage": [
+        "Navigation bars",
+        "Header navigation",
+        "Minimal nav strips"
+      ]
+    },
+    "clean-surface-raised": {
+      "description": "Slightly elevated surface for cards (2% darker/lighter).",
+      "intent": "Use for content areas that need minimal visual separation from the background. The 2% shift is barely perceptible but creates hierarchy.",
+      "suggested_properties": {
+        "background": "var(--d-surface-raised, #F8F8F8)",
+        "border-radius": "var(--d-radius, 8px)"
+      },
+      "pairs_with": [
+        "clean-surface",
+        "clean-card"
+      ],
+      "usage": [
+        "Background sections",
+        "Subtle content areas",
+        "Secondary containers"
+      ]
+    },
+    "clean-card": {
+      "description": "Bordered card with 1px border, 8px radius, no shadow at rest, subtle shadow on hover transition.",
+      "intent": "Use for content containers that need clear but understated boundaries. Hover shadow adds interactivity without resting visual weight.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #FFFFFF)",
+        "border": "1px solid var(--d-border, #E5E5E5)",
+        "border-radius": "var(--d-radius, 8px)",
+        "transition": "box-shadow 150ms ease"
+      },
+      "pairs_with": [
+        "clean-surface",
+        "clean-input"
+      ],
+      "usage": [
+        "Content cards",
+        "Feature cards",
+        "List items",
+        "Settings panels"
+      ]
+    },
+    "clean-input": {
+      "description": "Standard input with thin border, rounded corners, and blue focus ring using primary color.",
+      "intent": "Use for all form inputs. Standard styling with blue focus ring is universally appropriate and accessible.",
+      "suggested_properties": {
+        "border": "1px solid var(--d-border, #E5E5E5)",
+        "border-radius": "var(--d-radius, 8px)",
+        "background": "var(--d-surface, #FFFFFF)",
+        "transition": "border-color 150ms ease, box-shadow 150ms ease"
+      },
+      "pairs_with": [
+        "clean-card",
+        "clean-surface"
+      ],
+      "usage": [
+        "Text inputs",
+        "Search fields",
+        "Form fields",
+        "Select dropdowns"
+      ]
+    }
   }
 }

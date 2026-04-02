@@ -29,14 +29,38 @@
   "decantr_compat": ">=0.9.0",
   "source": "community",
   "palette": {
-    "background": { "light": "#F9F9FD", "dark": "#0C0A14" },
-    "surface": { "light": "#FFFFFF", "dark": "#141020" },
-    "surface-raised": { "light": "#F4F2FA", "dark": "#1C1830" },
-    "border": { "light": "#E4E0F0", "dark": "#2E2848" },
-    "text": { "light": "#1A1530", "dark": "#F0EEF8" },
-    "text-muted": { "light": "#706A88", "dark": "#9890B0" },
-    "primary": { "light": "#7C3AED", "dark": "#9F6EFF" },
-    "primary-hover": { "light": "#6D28D9", "dark": "#B08AFF" }
+    "background": {
+      "light": "#F9F9FD",
+      "dark": "#0C0A14"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#141020"
+    },
+    "surface-raised": {
+      "light": "#F4F2FA",
+      "dark": "#1C1830"
+    },
+    "border": {
+      "light": "#E4E0F0",
+      "dark": "#2E2848"
+    },
+    "text": {
+      "light": "#1A1530",
+      "dark": "#F0EEF8"
+    },
+    "text-muted": {
+      "light": "#706A88",
+      "dark": "#9890B0"
+    },
+    "primary": {
+      "light": "#7C3AED",
+      "dark": "#9F6EFF"
+    },
+    "primary-hover": {
+      "light": "#6D28D9",
+      "dark": "#B08AFF"
+    }
   },
   "decorators": {
     "lp-surface": "Base surface with subtle texture. Light mode: #FAFAFA, Dark mode: #111111.",
@@ -121,5 +145,139 @@
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
+  },
+  "decorator_definitions": {
+    "lp-surface": {
+      "description": "Base surface with subtle texture. Light mode: #FAFAFA, Dark mode: #111111.",
+      "intent": "Use as the foundational page background. The subtle texture adds depth while maintaining the clean SaaS aesthetic.",
+      "suggested_properties": {
+        "background-color": "var(--d-bg, #F9F9FD)",
+        "color": "var(--d-fg, #1A1530)",
+        "min-height": "100vh"
+      },
+      "pairs_with": [
+        "lp-nav",
+        "lp-card-elevated"
+      ],
+      "usage": [
+        "Page root containers",
+        "App shell backgrounds"
+      ]
+    },
+    "lp-nav": {
+      "description": "Sticky navigation with blur backdrop. Minimal branding.",
+      "intent": "Use for the primary navigation bar. The blur backdrop creates a floating navigation suited for SaaS landing pages.",
+      "suggested_properties": {
+        "background": "rgba(249, 249, 253, 0.85)",
+        "backdrop-filter": "blur(12px)",
+        "-webkit-backdrop-filter": "blur(12px)",
+        "border-bottom": "1px solid var(--d-border, #E4E0F0)",
+        "position": "sticky",
+        "top": "0"
+      },
+      "pairs_with": [
+        "lp-surface",
+        "lp-header"
+      ],
+      "usage": [
+        "Navigation bars",
+        "Sticky headers",
+        "Top bars"
+      ]
+    },
+    "lp-header": {
+      "description": "Large hero with gradient mesh background.",
+      "intent": "Use for the primary hero section of landing pages. The gradient mesh creates visual depth while keeping the professional tone.",
+      "suggested_properties": {
+        "background": "linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(6, 182, 212, 0.05))",
+        "padding": "120px 0",
+        "text-align": "center"
+      },
+      "pairs_with": [
+        "lp-surface",
+        "lp-gradient-mesh"
+      ],
+      "usage": [
+        "Hero sections",
+        "Landing page headers",
+        "Feature page intros"
+      ]
+    },
+    "lp-card-elevated": {
+      "description": "Card with elevation shadow, hover lift effect.",
+      "intent": "Use for feature cards and content containers on landing pages. Shadow elevation and hover lift create professional interactivity.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #FFFFFF)",
+        "border-radius": "12px",
+        "box-shadow": "0 4px 24px rgba(0, 0, 0, 0.08)",
+        "transition": "transform 150ms ease, box-shadow 150ms ease"
+      },
+      "pairs_with": [
+        "lp-surface",
+        "lp-gradient-mesh"
+      ],
+      "usage": [
+        "Feature cards",
+        "Pricing cards",
+        "Testimonial cards",
+        "Product feature cards"
+      ]
+    },
+    "lp-gradient-mesh": {
+      "description": "Subtle gradient mesh in primary/accent colors at 5% opacity.",
+      "intent": "Use as a background effect for hero and feature sections. The violet-cyan gradient adds brand color without being distracting.",
+      "suggested_properties": {
+        "background": "radial-gradient(ellipse at 30% 40%, rgba(124, 58, 237, 0.05), transparent 60%), radial-gradient(ellipse at 70% 60%, rgba(6, 182, 212, 0.05), transparent 60%)",
+        "position": "absolute",
+        "inset": "0",
+        "pointer-events": "none"
+      },
+      "pairs_with": [
+        "lp-header",
+        "lp-surface"
+      ],
+      "usage": [
+        "Hero section backgrounds",
+        "Feature section accents"
+      ]
+    },
+    "lp-button-primary": {
+      "description": "Solid primary color button with hover scale.",
+      "intent": "Use for primary CTAs on landing pages. Solid color and hover scale create a confident, professional call-to-action.",
+      "suggested_properties": {
+        "background": "var(--d-primary, #7C3AED)",
+        "color": "#FFFFFF",
+        "border-radius": "8px",
+        "padding": "12px 24px",
+        "font-weight": "600",
+        "transition": "transform 150ms ease"
+      },
+      "pairs_with": [
+        "lp-card-elevated",
+        "lp-header"
+      ],
+      "usage": [
+        "Primary CTA buttons",
+        "Sign-up buttons",
+        "Get started buttons"
+      ]
+    },
+    "lp-fade-in": {
+      "description": "Simple fade-in on scroll, 0.4s duration.",
+      "intent": "Use as the entrance animation for sections appearing on scroll. Longer duration for a more deliberate, polished reveal.",
+      "suggested_properties": {
+        "animation": "lp-fade-in 0.4s ease-out both",
+        "opacity": "0"
+      },
+      "pairs_with": [
+        "lp-card-elevated",
+        "lp-header"
+      ],
+      "usage": [
+        "Section reveals",
+        "Card entrance animations",
+        "Scroll-triggered content"
+      ]
+    }
   }
 }

@@ -18,14 +18,38 @@
     "background": "#fffef5"
   },
   "palette": {
-    "background": { "light": "#FFFEF5", "dark": "#1A1A18" },
-    "surface": { "light": "#FFFFFF", "dark": "#222220" },
-    "surface-raised": { "light": "#FFF8E1", "dark": "#2C2C28" },
-    "border": { "light": "#1A1A18", "dark": "#E8E4D9" },
-    "text": { "light": "#1A1A18", "dark": "#FFFEF5" },
-    "text-muted": { "light": "#6B6B60", "dark": "#A8A89E" },
-    "primary": { "light": "#E63946", "dark": "#FF5A67" },
-    "primary-hover": { "light": "#CC2D3A", "dark": "#FF7A84" }
+    "background": {
+      "light": "#FFFEF5",
+      "dark": "#1A1A18"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#222220"
+    },
+    "surface-raised": {
+      "light": "#FFF8E1",
+      "dark": "#2C2C28"
+    },
+    "border": {
+      "light": "#1A1A18",
+      "dark": "#E8E4D9"
+    },
+    "text": {
+      "light": "#1A1A18",
+      "dark": "#FFFEF5"
+    },
+    "text-muted": {
+      "light": "#6B6B60",
+      "dark": "#A8A89E"
+    },
+    "primary": {
+      "light": "#E63946",
+      "dark": "#FF5A67"
+    },
+    "primary-hover": {
+      "light": "#CC2D3A",
+      "dark": "#FF7A84"
+    }
   },
   "modes": [
     "light",
@@ -69,5 +93,109 @@
   "motion_hints": {
     "preference": "subtle",
     "reduce_motion_default": true
+  },
+  "decorator_definitions": {
+    "retro-card": {
+      "description": "Rounded container with bold 3px border, 4px offset shadow in dark, and warm cream background tint.",
+      "intent": "Use for all content containers. The bold border and offset shadow create the signature neobrutalist tactile, physical feel.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #FFFFFF)",
+        "border": "3px solid var(--d-border, #1A1A18)",
+        "border-radius": "8px",
+        "box-shadow": "4px 4px 0 var(--d-border, #1A1A18)"
+      },
+      "pairs_with": [
+        "retro-button",
+        "retro-divider"
+      ],
+      "usage": [
+        "Content cards",
+        "Feature cards",
+        "Product cards",
+        "Info containers"
+      ]
+    },
+    "retro-badge": {
+      "description": "Pill-shaped badge with saturated color fill, bold uppercase text, and 2px dark border outline.",
+      "intent": "Use for labels, tags, and status indicators. The saturated fill and bold border make badges punchy and distinctive.",
+      "suggested_properties": {
+        "border-radius": "9999px",
+        "border": "2px solid var(--d-border, #1A1A18)",
+        "padding": "4px 12px",
+        "font-weight": "700",
+        "text-transform": "uppercase",
+        "font-size": "12px"
+      },
+      "pairs_with": [
+        "retro-card",
+        "retro-button"
+      ],
+      "usage": [
+        "Status badges",
+        "Category labels",
+        "Tags",
+        "Notification counts"
+      ]
+    },
+    "retro-input": {
+      "description": "Bordered input with generous 12px padding, warm cream background, and bold focus ring in primary red.",
+      "intent": "Use for form inputs that need to feel substantial and tactile. Generous padding and bold focus ring match the brutalist personality.",
+      "suggested_properties": {
+        "border": "3px solid var(--d-border, #1A1A18)",
+        "border-radius": "8px",
+        "background": "var(--d-surface-raised, #FFF8E1)",
+        "padding": "12px",
+        "transition": "box-shadow 100ms ease-out"
+      },
+      "pairs_with": [
+        "retro-card",
+        "retro-button"
+      ],
+      "usage": [
+        "Text inputs",
+        "Search fields",
+        "Form fields",
+        "Text areas"
+      ]
+    },
+    "retro-button": {
+      "description": "Chunky button with 3px border, 4px offset shadow that collapses on active press for tactile feedback.",
+      "intent": "Use for all buttons to create the signature tactile press effect. The shadow collapse on active mimics a physical button press.",
+      "suggested_properties": {
+        "border": "3px solid var(--d-border, #1A1A18)",
+        "border-radius": "8px",
+        "box-shadow": "4px 4px 0 var(--d-border, #1A1A18)",
+        "padding": "10px 20px",
+        "font-weight": "700",
+        "transition": "transform 100ms ease-out, box-shadow 100ms ease-out"
+      },
+      "pairs_with": [
+        "retro-card",
+        "retro-input"
+      ],
+      "usage": [
+        "Primary buttons",
+        "Submit buttons",
+        "Action buttons",
+        "Navigation buttons"
+      ]
+    },
+    "retro-divider": {
+      "description": "Thick 2px dashed border separator with warm dark color for section breaks.",
+      "intent": "Use to create bold, visible section breaks. The dashed style adds playfulness while maintaining the brutalist aesthetic.",
+      "suggested_properties": {
+        "border-top": "2px dashed var(--d-border, #1A1A18)",
+        "margin": "24px 0"
+      },
+      "pairs_with": [
+        "retro-card",
+        "retro-badge"
+      ],
+      "usage": [
+        "Section dividers",
+        "Content breaks",
+        "Form section separators"
+      ]
+    }
   }
 }

@@ -18,14 +18,38 @@
     "background": "#fff5fc"
   },
   "palette": {
-    "background": { "light": "#FFF5FC", "dark": "#1A0018" },
-    "surface": { "light": "#FFFFFF", "dark": "#2A0028" },
-    "surface-raised": { "light": "#FFF0FA", "dark": "#3A0038" },
-    "border": { "light": "#FFB8F0", "dark": "#6B2068" },
-    "text": { "light": "#1A0030", "dark": "#FFF0FA" },
-    "text-muted": { "light": "#8B5080", "dark": "#C890B8" },
-    "primary": { "light": "#FF00E5", "dark": "#FF40ED" },
-    "primary-hover": { "light": "#E000CC", "dark": "#FF70F2" }
+    "background": {
+      "light": "#FFF5FC",
+      "dark": "#1A0018"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#2A0028"
+    },
+    "surface-raised": {
+      "light": "#FFF0FA",
+      "dark": "#3A0038"
+    },
+    "border": {
+      "light": "#FFB8F0",
+      "dark": "#6B2068"
+    },
+    "text": {
+      "light": "#1A0030",
+      "dark": "#FFF0FA"
+    },
+    "text-muted": {
+      "light": "#8B5080",
+      "dark": "#C890B8"
+    },
+    "primary": {
+      "light": "#FF00E5",
+      "dark": "#FF40ED"
+    },
+    "primary-hover": {
+      "light": "#E000CC",
+      "dark": "#FF70F2"
+    }
   },
   "modes": [
     "light",
@@ -69,5 +93,106 @@
   "motion_hints": {
     "preference": "subtle",
     "reduce_motion_default": true
+  },
+  "decorator_definitions": {
+    "dopamine-card": {
+      "description": "Pill-rounded card with vivid gradient border, raised shadow in magenta-tinted color, and white surface.",
+      "intent": "Use for content containers that need maximum joyful energy. The gradient border and magenta shadow create the maximalist look.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #FFFFFF)",
+        "border": "2px solid transparent",
+        "border-image": "linear-gradient(135deg, #FF00E5, #00FF88) 1",
+        "border-radius": "16px",
+        "box-shadow": "0 4px 16px rgba(255, 0, 229, 0.15)"
+      },
+      "pairs_with": [
+        "dopamine-glow",
+        "dopamine-badge"
+      ],
+      "usage": [
+        "Feature cards",
+        "Product cards",
+        "Profile cards",
+        "Content cards"
+      ]
+    },
+    "dopamine-badge": {
+      "description": "Neon-bright pill badge with gradient fill from primary to secondary, bold white text overlay.",
+      "intent": "Use for labels and status indicators that need to pop with maximum saturation. The gradient fill ensures badges are impossible to miss.",
+      "suggested_properties": {
+        "background": "linear-gradient(135deg, #FF00E5, #00FF88)",
+        "color": "#FFFFFF",
+        "border-radius": "9999px",
+        "padding": "4px 14px",
+        "font-weight": "700"
+      },
+      "pairs_with": [
+        "dopamine-card",
+        "dopamine-shimmer"
+      ],
+      "usage": [
+        "Status badges",
+        "Notification indicators",
+        "Category labels",
+        "Sale tags"
+      ]
+    },
+    "dopamine-input": {
+      "description": "Rounded input with gradient focus ring cycling primary to accent, generous padding and bouncy scale on focus.",
+      "intent": "Use for form inputs that should feel playful and energetic. The bouncy scale-up on focus adds a delightful micro-interaction.",
+      "suggested_properties": {
+        "border": "2px solid var(--d-border, #FFB8F0)",
+        "border-radius": "12px",
+        "padding": "12px 16px",
+        "transition": "transform 150ms ease-out, box-shadow 150ms ease-out"
+      },
+      "pairs_with": [
+        "dopamine-card",
+        "dopamine-glow"
+      ],
+      "usage": [
+        "Text inputs",
+        "Search fields",
+        "Form fields",
+        "Comment inputs"
+      ]
+    },
+    "dopamine-glow": {
+      "description": "Background glow effect using radial gradient of primary and accent colors at 20% opacity behind elements.",
+      "intent": "Use as a background effect behind featured sections and hero areas. The dual-color glow creates depth and visual energy.",
+      "suggested_properties": {
+        "background": "radial-gradient(ellipse at center, rgba(255, 0, 229, 0.2), rgba(255, 234, 0, 0.1), transparent 70%)",
+        "position": "absolute",
+        "inset": "0",
+        "pointer-events": "none"
+      },
+      "pairs_with": [
+        "dopamine-card",
+        "dopamine-shimmer"
+      ],
+      "usage": [
+        "Hero section backgrounds",
+        "Feature section accents",
+        "Page-level glow effects"
+      ]
+    },
+    "dopamine-shimmer": {
+      "description": "Animated shimmer gradient sweeping left to right across element surface for loading or emphasis.",
+      "intent": "Use for loading states and to add energetic motion to static surfaces. The shimmer matches the maximalist personality.",
+      "suggested_properties": {
+        "background": "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)",
+        "background-size": "200% 100%",
+        "animation": "shimmer 1.5s infinite linear"
+      },
+      "pairs_with": [
+        "dopamine-card",
+        "dopamine-glow"
+      ],
+      "usage": [
+        "Loading skeletons",
+        "Emphasis effects",
+        "Premium content highlights"
+      ]
+    }
   }
 }

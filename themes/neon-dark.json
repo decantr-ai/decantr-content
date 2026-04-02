@@ -3,21 +3,51 @@
   "name": "Neon Dark",
   "description": "High-contrast dark theme with electric neon accents. For agent dashboards, cyber UIs, and spatial interfaces.",
   "category": "dark",
-  "tags": ["2026", "neon", "cyber", "dark", "vibrant"],
+  "tags": [
+    "2026",
+    "neon",
+    "cyber",
+    "dark",
+    "vibrant"
+  ],
   "seed": {
     "primary": "#00E5FF",
     "secondary": "#B388FF",
     "accent": "#76FF03"
   },
   "palette": {
-    "background": { "dark": "#0A0A0F", "light": "#FAFAFA" },
-    "surface": { "dark": "#12121A", "light": "#FFFFFF" },
-    "surface-raised": { "dark": "#1A1A25", "light": "#F5F5F5" },
-    "border": { "dark": "#2A2A3A", "light": "#E0E0E0" },
-    "text": { "dark": "#E8E8F0", "light": "#1A1A25" },
-    "text-muted": { "dark": "#8888AA", "light": "#666680" },
-    "primary": { "dark": "#00E5FF", "light": "#00ACC1" },
-    "primary-hover": { "dark": "#33EBFF", "light": "#00B8D4" }
+    "background": {
+      "dark": "#0A0A0F",
+      "light": "#FAFAFA"
+    },
+    "surface": {
+      "dark": "#12121A",
+      "light": "#FFFFFF"
+    },
+    "surface-raised": {
+      "dark": "#1A1A25",
+      "light": "#F5F5F5"
+    },
+    "border": {
+      "dark": "#2A2A3A",
+      "light": "#E0E0E0"
+    },
+    "text": {
+      "dark": "#E8E8F0",
+      "light": "#1A1A25"
+    },
+    "text-muted": {
+      "dark": "#8888AA",
+      "light": "#666680"
+    },
+    "primary": {
+      "dark": "#00E5FF",
+      "light": "#00ACC1"
+    },
+    "primary-hover": {
+      "dark": "#33EBFF",
+      "light": "#00B8D4"
+    }
   },
   "tokens": {
     "base": {
@@ -57,5 +87,90 @@
   "motion_hints": {
     "preference": "full",
     "reduce_motion_default": false
+  },
+  "decorator_definitions": {
+    "neon-card": {
+      "description": "Dark card with neon cyan border glow, 1px solid border, and box-shadow using primary at 30% opacity.",
+      "intent": "Use for data panels and dashboard widgets. The neon glow border creates the cyberpunk dashboard aesthetic.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #12121A)",
+        "border": "1px solid rgba(0, 229, 255, 0.3)",
+        "border-radius": "6px",
+        "box-shadow": "0 0 12px rgba(0, 229, 255, 0.15)"
+      },
+      "pairs_with": [
+        "neon-badge",
+        "neon-input",
+        "neon-grid-line"
+      ],
+      "usage": [
+        "Dashboard panels",
+        "Agent status cards",
+        "Data widgets",
+        "Metric containers"
+      ]
+    },
+    "neon-badge": {
+      "description": "Compact pill badge with neon fill color, dark text, and subtle glow shadow matching the badge color.",
+      "intent": "Use for status indicators and category labels. Neon fill with dark text creates high-contrast readability on dark surfaces.",
+      "suggested_properties": {
+        "border-radius": "9999px",
+        "padding": "2px 10px",
+        "font-size": "11px",
+        "font-weight": "600",
+        "color": "#0A0A0F"
+      },
+      "pairs_with": [
+        "neon-card",
+        "neon-input"
+      ],
+      "usage": [
+        "Status badges",
+        "Priority labels",
+        "Agent state indicators",
+        "Category tags"
+      ]
+    },
+    "neon-input": {
+      "description": "Dark input with thin neon border, glowing focus ring in primary cyan, dark surface background.",
+      "intent": "Use for form inputs in dark dashboards. The neon focus ring provides clear visibility against the dark background.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #12121A)",
+        "border": "1px solid var(--d-border, #2A2A3A)",
+        "border-radius": "6px",
+        "color": "var(--d-fg, #E8E8F0)",
+        "transition": "border-color 100ms ease, box-shadow 100ms ease"
+      },
+      "pairs_with": [
+        "neon-card",
+        "neon-badge"
+      ],
+      "usage": [
+        "Command inputs",
+        "Search fields",
+        "Filter inputs",
+        "Form fields"
+      ]
+    },
+    "neon-grid-line": {
+      "description": "Subtle grid pattern overlay at 5% opacity using thin lines for cyberpunk dashboard aesthetic.",
+      "intent": "Use as a background overlay on dashboard pages. The grid pattern adds the cyberpunk spatial interface feel.",
+      "suggested_properties": {
+        "background-image": "linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px)",
+        "background-size": "40px 40px",
+        "pointer-events": "none",
+        "position": "fixed",
+        "inset": "0"
+      },
+      "pairs_with": [
+        "neon-card",
+        "neon-badge"
+      ],
+      "usage": [
+        "Dashboard background overlays",
+        "Spatial interface grids",
+        "Page-level decoration"
+      ]
+    }
   }
 }

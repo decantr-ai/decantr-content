@@ -30,14 +30,38 @@
   "decantr_compat": ">=0.9.0",
   "source": "community",
   "palette": {
-    "background": { "light": "#E8EDF5", "dark": "#0A0A0F" },
-    "surface": { "light": "#F0F4FA", "dark": "#111118" },
-    "surface-raised": { "light": "#FFFFFF", "dark": "#1A1A25" },
-    "border": { "light": "#C8D0E0", "dark": "#2A2A40" },
-    "text": { "light": "#141830", "dark": "#E8EDF5" },
-    "text-muted": { "light": "#5A6080", "dark": "#8888AA" },
-    "primary": { "light": "#3B82F6", "dark": "#60A5FA" },
-    "primary-hover": { "light": "#2563EB", "dark": "#93C5FD" }
+    "background": {
+      "light": "#E8EDF5",
+      "dark": "#0A0A0F"
+    },
+    "surface": {
+      "light": "#F0F4FA",
+      "dark": "#111118"
+    },
+    "surface-raised": {
+      "light": "#FFFFFF",
+      "dark": "#1A1A25"
+    },
+    "border": {
+      "light": "#C8D0E0",
+      "dark": "#2A2A40"
+    },
+    "text": {
+      "light": "#141830",
+      "dark": "#E8EDF5"
+    },
+    "text-muted": {
+      "light": "#5A6080",
+      "dark": "#8888AA"
+    },
+    "primary": {
+      "light": "#3B82F6",
+      "dark": "#60A5FA"
+    },
+    "primary-hover": {
+      "light": "#2563EB",
+      "dark": "#93C5FD"
+    }
   },
   "decorators": {
     "gg-dark": "Near-black background (#0A0A0F) with subtle grid pattern.",
@@ -126,5 +150,155 @@
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
+  },
+  "decorator_definitions": {
+    "gg-dark": {
+      "description": "Near-black background (#0A0A0F) with subtle grid pattern.",
+      "intent": "Use as the root page background to create the immersive dark guild-hall atmosphere. The grid pattern adds a subtle HUD aesthetic.",
+      "suggested_properties": {
+        "background-color": "#0A0A0F",
+        "color": "var(--d-fg, #E8EDF5)",
+        "min-height": "100vh"
+      },
+      "pairs_with": [
+        "gg-sidebar",
+        "gg-neon-glow"
+      ],
+      "usage": [
+        "Page root containers",
+        "App shell backgrounds"
+      ]
+    },
+    "gg-sidebar": {
+      "description": "Dark sidebar with accent-colored active states.",
+      "intent": "Use for the primary sidebar navigation. Active states use the electric indigo accent to indicate current location.",
+      "suggested_properties": {
+        "background": "var(--d-surface, #111118)",
+        "border-right": "1px solid var(--d-border, #2A2A40)",
+        "width": "240px"
+      },
+      "pairs_with": [
+        "gg-dark",
+        "gg-hero"
+      ],
+      "usage": [
+        "Sidebar navigation",
+        "Guild menu panels"
+      ]
+    },
+    "gg-hero": {
+      "description": "Hero with animated gradient background.",
+      "intent": "Use for the main hero section of guild pages. The animated gradient creates energy and excitement for the gaming context.",
+      "suggested_properties": {
+        "background": "linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 214, 160, 0.1), rgba(168, 85, 247, 0.1))",
+        "padding": "80px 0",
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "pairs_with": [
+        "gg-dark",
+        "gg-neon-glow"
+      ],
+      "usage": [
+        "Hero sections",
+        "Guild banner areas",
+        "Featured content headers"
+      ]
+    },
+    "gg-neon-glow": {
+      "description": "Neon glow effect behind hero elements.",
+      "intent": "Use as a background glow behind hero text and featured elements. The neon glow adds the high-energy gaming atmosphere.",
+      "suggested_properties": {
+        "box-shadow": "0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(6, 214, 160, 0.15)",
+        "position": "relative"
+      },
+      "pairs_with": [
+        "gg-hero",
+        "gg-dark"
+      ],
+      "usage": [
+        "Hero element accents",
+        "Featured content highlights",
+        "Active state glows"
+      ]
+    },
+    "gg-stat-pulse": {
+      "description": "Stats with subtle pulse animation.",
+      "intent": "Use for live stat displays and real-time metrics. The pulse animation communicates that data is live and actively updating.",
+      "suggested_properties": {
+        "animation": "gg-pulse 2s ease-in-out infinite",
+        "font-variant-numeric": "tabular-nums",
+        "font-family": "ui-monospace, monospace"
+      },
+      "pairs_with": [
+        "gg-dark",
+        "gg-rank-badge"
+      ],
+      "usage": [
+        "Live stat counters",
+        "Real-time metrics",
+        "Active player counts",
+        "Score displays"
+      ]
+    },
+    "gg-rank-badge": {
+      "description": "Rank position with metallic gradient (gold/silver/bronze).",
+      "intent": "Use for leaderboard rank positions and achievement tiers. The metallic gradients instantly communicate rank hierarchy.",
+      "suggested_properties": {
+        "border-radius": "8px",
+        "padding": "4px 12px",
+        "font-weight": "700",
+        "text-transform": "uppercase",
+        "font-size": "12px"
+      },
+      "pairs_with": [
+        "gg-stat-pulse",
+        "gg-achievement-shine"
+      ],
+      "usage": [
+        "Leaderboard positions",
+        "Rank badges",
+        "Achievement tier labels"
+      ]
+    },
+    "gg-achievement-shine": {
+      "description": "Achievement cards with shine animation on hover.",
+      "intent": "Use for achievement and reward cards. The shine animation on hover creates a collectible, trophy-like feel.",
+      "suggested_properties": {
+        "background": "var(--d-surface-raised, #1A1A25)",
+        "border": "1px solid var(--d-border, #2A2A40)",
+        "border-radius": "8px",
+        "overflow": "hidden",
+        "position": "relative"
+      },
+      "pairs_with": [
+        "gg-rank-badge",
+        "gg-neon-glow"
+      ],
+      "usage": [
+        "Achievement cards",
+        "Reward displays",
+        "Trophy showcases",
+        "Unlock cards"
+      ]
+    },
+    "gg-slide-in": {
+      "description": "Entrance: slide from left with slight bounce.",
+      "intent": "Use as the entrance animation for content panels and cards. The bounce adds playful energy fitting the gaming context.",
+      "suggested_properties": {
+        "animation": "gg-slide-in 300ms ease-out both",
+        "opacity": "0",
+        "transform": "translateX(-20px)"
+      },
+      "pairs_with": [
+        "gg-dark",
+        "gg-achievement-shine"
+      ],
+      "usage": [
+        "Card entrance animations",
+        "Panel reveals",
+        "List item animations"
+      ]
+    }
   }
 }
