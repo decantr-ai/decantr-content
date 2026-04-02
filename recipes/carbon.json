@@ -90,6 +90,13 @@
     "carbon-fade-slide": "Entrance animation: opacity 0 to 1, translateY 12px to 0, 200ms ease-out.",
     "carbon-skeleton": "Loading placeholder with subtle pulse animation for skeleton states."
   },
+  "treatment_overrides": {
+    "d-surface": {
+      "background": "rgba(31, 31, 35, 0.8)",
+      "backdrop-filter": "blur(8px)",
+      "-webkit-backdrop-filter": "blur(8px)"
+    }
+  },
   "compositions": {
     "chat": {
       "description": "Chat interface with conversation list sidebar and message thread. Anchored input at bottom.",
