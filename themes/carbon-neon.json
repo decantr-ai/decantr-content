@@ -1,0 +1,211 @@
+{
+  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "id": "carbon-neon",
+  "name": "Carbon Neon",
+  "description": "Carbon's sleek dark surfaces with vivid neon cyan accent. For mission-control, agent dashboards, and data-intensive interfaces.",
+  "tags": [
+    "dark",
+    "light",
+    "neutral",
+    "developer",
+    "minimal",
+    "professional",
+    "neon",
+    "vibrant"
+  ],
+  "personality": "clean + minimal + professional + developer-focused",
+  "seed": {
+    "primary": "#7C93B0",
+    "secondary": "#A1A1AA",
+    "accent": "#00D4FF",
+    "background": "#18181B"
+  },
+  "palette": {
+    "background": {
+      "light": "#FAFAFA",
+      "dark": "#18181B"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#1F1F23"
+    },
+    "surface-raised": {
+      "light": "#F4F4F5",
+      "dark": "#27272A"
+    },
+    "border": {
+      "light": "#E4E4E7",
+      "dark": "#3F3F46"
+    },
+    "text": {
+      "light": "#18181B",
+      "dark": "#FAFAFA"
+    },
+    "text-muted": {
+      "light": "#71717A",
+      "dark": "#A1A1AA"
+    },
+    "primary": {
+      "light": "#6B8AAE",
+      "dark": "#7C93B0"
+    },
+    "primary-hover": {
+      "light": "#5A7A9E",
+      "dark": "#8CA3C0"
+    },
+    "accent-glow": {
+      "dark": "rgba(0, 212, 255, 0.3)",
+      "light": "rgba(0, 212, 255, 0.15)"
+    }
+  },
+  "modes": [
+    "light",
+    "dark",
+    "auto"
+  ],
+  "shapes": [
+    "rounded",
+    "sharp",
+    "pill"
+  ],
+  "cvd_support": [
+    "deuteranopia",
+    "protanopia"
+  ],
+  "tokens": {
+    "base": {
+      "success": "#22C55E",
+      "danger": "#EF4444",
+      "warning": "#F59E0B"
+    },
+    "cvd": {
+      "deuteranopia": {
+        "success": "#2196F3",
+        "danger": "#FF8F00"
+      },
+      "protanopia": {
+        "success": "#03A9F4",
+        "danger": "#FFC107"
+      }
+    }
+  },
+  "decantr_compat": ">=1.0.0",
+  "source": "core",
+  "decorators": {
+    "carbon-canvas": "Background color using theme background token. Clean, minimal foundation.",
+    "carbon-glass": "Glassmorphic panel with backdrop-filter blur(12px), semi-transparent surface background, 1px border. Use for nav bars, sidebars, floating panels.",
+    "carbon-input": "Soft border with gentle focus ring using primary blue. Border transitions on focus.",
+    "carbon-card": "Surface background, subtle border, 8px radius, hover shadow transition.",
+    "carbon-divider": "Hairline separator using border-color token.",
+    "carbon-code": "Monospace font, surface-raised background, subtle 3px left border accent in primary color.",
+    "carbon-bubble-user": "Right-aligned message bubble with primary-tinted background for user messages.",
+    "carbon-bubble-ai": "Left-aligned message bubble with surface background for AI responses.",
+    "carbon-fade-slide": "Entrance animation: opacity 0 to 1, translateY 12px to 0, 200ms ease-out.",
+    "carbon-skeleton": "Loading placeholder with subtle pulse animation for skeleton states."
+  },
+  "spatial": {
+    "density_bias": 0,
+    "content_gap_shift": 0,
+    "section_padding": "80px",
+    "card_wrapping": "minimal",
+    "surface_override": null
+  },
+  "motion": {
+    "preference": "subtle",
+    "reduce_motion": true,
+    "entrance": "carbon-fade-slide",
+    "micro": "smooth",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "durations": {
+      "hover": "150ms",
+      "entrance": "200ms",
+      "modal": "250ms",
+      "page": "300ms"
+    }
+  },
+  "effects": {
+    "enabled": true,
+    "intensity": "subtle",
+    "type_mapping": {
+      "card": [
+        "carbon-card"
+      ],
+      "input": [
+        "carbon-input"
+      ],
+      "code_block": [
+        "carbon-code"
+      ]
+    },
+    "component_fallback": {
+      "pre": "code_block",
+      "code": "code_block",
+      "Card": "card",
+      "Input": "input"
+    }
+  },
+  "treatments": {
+    "d-surface": {
+      "background": "rgba(31, 31, 35, 0.8)",
+      "backdrop-filter": "blur(8px)",
+      "-webkit-backdrop-filter": "blur(8px)"
+    },
+    "d-interactive[data-variant=\"primary\"]:hover": {
+      "box-shadow": "0 0 20px var(--d-accent-glow, rgba(0, 212, 255, 0.3))"
+    }
+  },
+  "compositions": {
+    "chat": {
+      "description": "Chat interface with conversation list sidebar and message thread. Anchored input at bottom.",
+      "shell": "chat-portal",
+      "effects": [
+        "carbon-glass"
+      ]
+    },
+    "auth": {
+      "description": "Centered auth forms with clean card styling.",
+      "shell": "centered",
+      "card_style": "carbon-card"
+    },
+    "marketing": {
+      "description": "Marketing pages with top nav and footer. Clean sections with subtle separators.",
+      "shell": "top-nav-footer"
+    }
+  },
+  "radius": {
+    "philosophy": "rounded",
+    "base": 8
+  },
+  "pattern_preferences": {
+    "prefer": [
+      "chat-thread",
+      "chat-input",
+      "conversation-list",
+      "auth-form"
+    ],
+    "avoid": [],
+    "default_presets": {}
+  },
+  "shell": {
+    "preferred": [
+      "chat-portal",
+      "sidebar-main",
+      "top-nav-main"
+    ],
+    "avoid": [],
+    "nav_style": "minimal",
+    "default_nav_state": "expanded",
+    "root": "carbon-canvas",
+    "nav": "carbon-glass",
+    "header": "",
+    "navLabel": "",
+    "brand": "",
+    "dimensions": null
+  },
+  "typography": {
+    "scale": "modular",
+    "heading_weight": 600,
+    "body_weight": 400,
+    "mono": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace"
+  }
+}

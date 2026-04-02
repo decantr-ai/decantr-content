@@ -1,0 +1,72 @@
+{
+  "id": "neon-cyber",
+  "name": "Neon Cyber",
+  "description": "Cyberpunk aesthetic with vivid neon accents on pure dark backgrounds. High-energy, high-contrast, data-dense.",
+  "tags": ["dark", "neon", "cyber", "vibrant", "developer", "futuristic"],
+  "seed": {
+    "primary": "#00E5FF",
+    "secondary": "#B388FF",
+    "accent": "#76FF03",
+    "background": "#0A0A0F"
+  },
+  "palette": {
+    "background": { "dark": "#0A0A0F" },
+    "surface": { "dark": "#12121A" },
+    "surface-raised": { "dark": "#1A1A25" },
+    "border": { "dark": "#2A2A3A" },
+    "text": { "dark": "#E8E8F0" },
+    "text-muted": { "dark": "#8888AA" },
+    "primary-hover": { "dark": "#33ECFF" },
+    "accent-glow": { "dark": "rgba(118, 255, 3, 0.3)" }
+  },
+  "modes": ["dark"],
+  "shapes": ["rounded", "sharp"],
+  "decorators": {
+    "neon-card": "Surface card with subtle border that glows cyan on hover, rounded 8px radius, shadow elevation with hover shadow transition",
+    "neon-input": "Input field with border that transitions to cyan glow on focus, gentle focus ring with neon primary color",
+    "neon-glass": "Frosted glassmorphic panel with backdrop blur(16px), semi-transparent surface background, subtle cyan-tinted border",
+    "neon-code": "Monospace code block with surface-raised background, 3px left border in primary cyan, subtle rounded radius",
+    "neon-glow": "Element with cyan box-shadow glow effect, pulsing animation on hover",
+    "neon-divider": "Horizontal divider with gradient from transparent to primary to transparent",
+    "neon-badge": "Small surface-raised background badge with rounded radius and subtle border"
+  },
+  "spatial": {
+    "density_bias": "comfortable",
+    "section_padding": "96px",
+    "content_gap_shift": 0,
+    "card_wrapping": "soft"
+  },
+  "motion": {
+    "preference": "energetic",
+    "reduce_motion": false,
+    "entrance": "neon-fade",
+    "timing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "durations": {
+      "hover": "0.12s",
+      "entrance": "0.3s",
+      "modal": "0.25s"
+    }
+  },
+  "typography": {
+    "scale": "1.25",
+    "heading_weight": 700,
+    "body_weight": 400,
+    "mono": "ui-monospace, 'Cascadia Code', 'Fira Code', monospace"
+  },
+  "radius": {
+    "philosophy": "sharp",
+    "base": 4
+  },
+  "treatments": {
+    "d-interactive[data-variant=\"primary\"]:hover": {
+      "box-shadow": "0 0 24px var(--d-accent-glow, rgba(118, 255, 3, 0.3))"
+    }
+  },
+  "tokens": {
+    "base": {
+      "success": "#22C55E",
+      "danger": "#EF4444",
+      "warning": "#F59E0B"
+    }
+  }
+}
