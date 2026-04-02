@@ -1,6 +1,6 @@
 {
-  "name": "neon-dark",
-  "display_name": "Neon Dark",
+  "id": "neon-dark",
+  "name": "Neon Dark",
   "description": "High-contrast dark theme with electric neon accents. For agent dashboards, cyber UIs, and spatial interfaces.",
   "category": "dark",
   "tags": ["2026", "neon", "cyber", "dark", "vibrant"],

@@ -1,6 +1,6 @@
 {
-  "name": "neon-cyber",
-  "display_name": "Neon Cyber",
+  "id": "neon-cyber",
+  "name": "Neon Cyber",
   "description": "Cyber-aesthetic recipe with neon glow effects, electric borders, and void backgrounds.",
   "decorators": {
     "neon-card": "Surface card with subtle border that glows cyan on hover, rounded 8px radius, shadow elevation with hover shadow transition",
