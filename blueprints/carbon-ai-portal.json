@@ -27,7 +27,7 @@
     "recipe": "carbon",
     "shape": "rounded"
   },
-  "personality": "Production-ready AI chatbot with refined glassmorphic depth. Muted stormy-blue palette with soft drop shadows and subtle backdrop blur on panels. Lucide icons throughout. Rich typographic hierarchy — Inter or system sans-serif for body, monospace for code and data. Polished form fields with visible focus rings, smooth hover-lift transitions on cards and buttons. No emoji in UI. Think Claude meets Linear.",
+  "personality": "Production-ready AI chatbot with refined glassmorphic depth. Muted stormy-blue palette with soft drop shadows and subtle backdrop blur on panels. Lucide icons throughout. Rich typographic hierarchy \u2014 Inter or system sans-serif for body, monospace for code and data. Polished form fields with visible focus rings, smooth hover-lift transitions on cards and buttons. No emoji in UI. Think Claude meets Linear.",
   "overrides": {
     "pages": {},
     "pages_remove": [],
@@ -179,6 +179,11 @@
       "shell": "chat-portal",
       "archetype": "settings-full",
       "page": "danger"
+    },
+    "/phone-verify": {
+      "page": "phone-verify",
+      "shell": "centered",
+      "archetype": "auth-full"
     }
   },
   "seo_hints": {
