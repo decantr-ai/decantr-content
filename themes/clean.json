@@ -27,13 +27,64 @@
   ],
   "decantr_compat": ">=0.9.0",
   "source": "community",
-  "typography_hints": {
+  "decorators": {
+    "clean-surface": "Pure white (#FFFFFF) or near-black (#111111) depending on mode.",
+    "clean-nav": "Minimal navigation with text links, no backgrounds.",
+    "clean-surface-raised": "Slightly elevated surface for cards (2% darker/lighter)."
+  },
+  "spatial": {
+    "density_bias": 0,
+    "content_gap_shift": 0,
+    "section_padding": "64px",
+    "card_wrapping": "standard",
+    "surface_override": null
+  },
+  "motion": {
+    "preference": "subtle",
+    "reduce_motion": true,
+    "entrance": "none",
+    "micro": "instant"
+  },
+  "effects": {
+    "enabled": false,
+    "intensity": "none"
+  },
+  "radius": {
+    "philosophy": "rounded",
+    "base": 8
+  },
+  "shell": {
+    "preferred": [
+      "top-nav-main",
+      "sidebar-main"
+    ],
+    "avoid": [],
+    "nav_style": "minimal",
+    "default_nav_state": "collapsed",
+    "root": "clean-surface",
+    "nav": "clean-nav",
+    "header": ""
+  },
+  "card_styles": {
+    "flat": {
+      "description": "Borderless card with subtle background difference",
+      "properties": {
+        "background": "var(--clean-surface-raised)",
+        "border-radius": "8px"
+      }
+    },
+    "bordered": {
+      "description": "Card with thin border, no shadow",
+      "properties": {
+        "background": "var(--clean-surface)",
+        "border": "1px solid var(--clean-border)",
+        "border-radius": "8px"
+      }
+    }
+  },
+  "typography": {
     "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400
-  },
-  "motion_hints": {
-    "preference": "subtle",
-    "reduce_motion_default": true
   }
 }
