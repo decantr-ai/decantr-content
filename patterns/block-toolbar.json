@@ -62,7 +62,7 @@
       }
     },
     "minimal": {
-      "description": "Bold, italic, and link only",
+      "description": "Stripped-down toolbar with only bold, italic, and link formatting for simple text editing",
       "components": [
         "Button",
         "icon"

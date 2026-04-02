@@ -45,7 +45,7 @@
       }
     },
     "solid": {
-      "description": "Solid overlay without preview",
+      "description": "Solid opaque overlay that fully hides content behind a lock icon and subscribe prompt",
       "components": [
         "Button",
         "icon"

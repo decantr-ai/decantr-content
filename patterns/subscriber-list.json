@@ -59,7 +59,7 @@
       }
     },
     "compact": {
-      "description": "Card grid view for mobile",
+      "description": "Responsive card grid view with subscriber info cards optimized for mobile and touch interactions",
       "components": [
         "Card",
         "Avatar",

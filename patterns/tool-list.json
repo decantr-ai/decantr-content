@@ -13,7 +13,7 @@
       "charts": []
     }
   },
-  "components": [],
+  "components": ["Text", "Container"],
   "contained": false,
   "default_preset": "standard",
   "presets": {

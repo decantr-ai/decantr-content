@@ -13,7 +13,7 @@
       "charts": []
     }
   },
-  "components": [],
+  "components": ["Avatar", "Text", "Container"],
   "default_preset": "standard",
   "presets": {
     "standard": {
@@ -40,7 +40,7 @@
       }
     },
     "extended": {
-      "description": "Cursor with avatar thumbnail",
+      "description": "Extended cursor with small avatar thumbnail beside the name tag for richer collaborator presence",
       "components": [
         "Avatar"
       ],

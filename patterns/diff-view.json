@@ -25,7 +25,7 @@
   "default_preset": "split",
   "presets": {
     "split": {
-      "description": "Side-by-side diff view",
+      "description": "Side-by-side split diff view with original and modified panels, line numbers, and change markers",
       "components": [
         "Button",
         "icon"
@@ -42,7 +42,7 @@
       }
     },
     "unified": {
-      "description": "Unified diff format view",
+      "description": "Unified diff format with interleaved additions and deletions in a single scrollable column",
       "components": [
         "icon"
       ],
@@ -56,7 +56,7 @@
       }
     },
     "inline": {
-      "description": "Inline word-level diff",
+      "description": "Inline word-level diff highlighting character changes within individual lines",
       "components": [],
       "layout": {
         "layout": "stack",

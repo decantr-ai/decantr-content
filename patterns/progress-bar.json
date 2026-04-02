@@ -15,7 +15,7 @@
       "charts": []
     }
   },
-  "components": [],
+  "components": ["Text", "Container"],
   "default_preset": "bar",
   "presets": {
     "bar": {
@@ -44,7 +44,7 @@
       }
     },
     "dots": {
-      "description": "Animated dots ... progression",
+      "description": "Animated trailing dots progression indicator for indeterminate loading status feedback",
       "components": [],
       "layout": {
         "layout": "flex",

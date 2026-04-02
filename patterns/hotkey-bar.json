@@ -15,11 +15,11 @@
       "charts": []
     }
   },
-  "components": [],
+  "components": ["Text", "Kbd"],
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "F1-F10 function key bar",
+      "description": "Standard F1-F10 function key bar with evenly spaced shortcut labels in a fixed bottom row",
       "components": [],
       "layout": {
         "layout": "flex",

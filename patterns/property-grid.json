@@ -70,7 +70,7 @@
       }
     },
     "map": {
-      "description": "Map view with property pins",
+      "description": "Interactive map view with property location pins and a scrollable sidebar property list",
       "components": [
         "Button",
         "icon"

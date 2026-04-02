@@ -20,6 +20,7 @@
     ],
     "tier": "recommended"
   },
+  "components": ["Text", "icon", "Container"],
   "presets": {
     "default": {
       "description": "Equal-width stat items in a row",

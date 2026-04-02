@@ -52,7 +52,7 @@
       }
     },
     "list": {
-      "description": "Horizontal list view",
+      "description": "Stacked horizontal list view with product rows for a single-column browsing experience",
       "components": [
         "Card",
         "Badge",

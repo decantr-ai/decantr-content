@@ -13,7 +13,7 @@
       "charts": []
     }
   },
-  "components": [],
+  "components": ["Container"],
   "default_preset": "horizontal",
   "presets": {
     "horizontal": {
@@ -43,7 +43,7 @@
       }
     },
     "quad": {
-      "description": "2x2 grid of four panes",
+      "description": "Four-pane 2x2 grid layout with cross-shaped drag handles at the center intersection",
       "components": [],
       "layout": {
         "layout": "grid",

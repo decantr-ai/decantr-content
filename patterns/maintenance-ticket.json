@@ -54,7 +54,7 @@
       }
     },
     "view": {
-      "description": "Ticket details view",
+      "description": "Read-only ticket details view with status timeline, photo gallery, and assignment info",
       "components": [
         "Button",
         "icon",
@@ -75,7 +75,7 @@
       }
     },
     "edit": {
-      "description": "Edit ticket (owner-facing)",
+      "description": "Owner-facing ticket edit form with vendor assignment, internal notes, and status controls",
       "components": [
         "Button",
         "icon",

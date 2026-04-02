@@ -56,7 +56,7 @@
       }
     },
     "create": {
-      "description": "Create/edit property form",
+      "description": "Create or edit property form with address, type, unit count fields, and image upload area",
       "components": [
         "Button",
         "icon",

@@ -31,7 +31,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full profile page with tabs",
+      "description": "Full creator profile page with hero banner, tabbed navigation for posts, memberships, and about",
       "components": [
         "Button",
         "Card",
@@ -50,7 +50,7 @@
       }
     },
     "embed": {
-      "description": "Embeddable widget version",
+      "description": "Compact embeddable widget with avatar, subscriber count, and subscribe CTA for external sites",
       "components": [
         "Button",
         "Card",

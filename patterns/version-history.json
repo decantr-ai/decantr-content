@@ -60,7 +60,7 @@
       }
     },
     "compact": {
-      "description": "Dropdown version selector",
+      "description": "Condensed dropdown version selector with current version label and version list menu",
       "components": [
         "Button",
         "icon"

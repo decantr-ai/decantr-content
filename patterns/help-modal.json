@@ -39,7 +39,7 @@
       }
     },
     "minimal": {
-      "description": "Compact quick reference card",
+      "description": "Compact quick reference card showing a flat shortcut list without categories or search",
       "components": [],
       "layout": {
         "layout": "stack",

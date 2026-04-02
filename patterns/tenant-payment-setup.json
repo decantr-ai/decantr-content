@@ -29,7 +29,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full payment setup view",
+      "description": "Full payment setup view with autopay toggle, saved payment methods, and upcoming payment preview",
       "components": [
         "Button",
         "icon",

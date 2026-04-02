@@ -31,7 +31,7 @@
   "default_preset": "list",
   "presets": {
     "list": {
-      "description": "Expense list view",
+      "description": "Filterable expense list view with category summary bar, data table, and date range controls",
       "components": [
         "Button",
         "icon",
@@ -51,7 +51,7 @@
       }
     },
     "create": {
-      "description": "Add expense form",
+      "description": "New expense entry form with category select, amount input, description, and receipt upload",
       "components": [
         "Button",
         "icon",
@@ -70,7 +70,7 @@
       }
     },
     "summary": {
-      "description": "Category summary with chart",
+      "description": "Category summary widget with pie chart breakdown and per-category running totals",
       "components": [],
       "layout": {
         "layout": "stack",

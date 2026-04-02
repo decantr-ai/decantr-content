@@ -25,7 +25,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full vacancy tracker view",
+      "description": "Full vacancy tracker with rate metrics, vacant unit list, applicant pipeline, and listing status",
       "components": [
         "Button",
         "icon",

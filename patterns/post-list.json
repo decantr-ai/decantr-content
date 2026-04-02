@@ -21,6 +21,7 @@
     ],
     "tier": "recommended"
   },
+  "components": ["Card", "Badge", "Avatar", "Text", "icon"],
   "presets": {
     "default": {
       "description": "Standard post list with thumbnails",
@@ -30,7 +31,7 @@
       }
     },
     "compact": {
-      "description": "Dense list without thumbnails",
+      "description": "Dense single-column list without thumbnails, showing only title, date, and category per row",
       "layout": {
         "style": "list",
         "showThumbnail": false

@@ -15,11 +15,11 @@
       "charts": []
     }
   },
-  "components": [],
+  "components": ["Text", "Container"],
   "default_preset": "line",
   "presets": {
     "line": {
-      "description": "ASCII line chart with axes",
+      "description": "ASCII line chart with labeled axes, dot-and-dash data points, and optional series legend",
       "components": [],
       "layout": {
         "layout": "stack",
@@ -33,7 +33,7 @@
       }
     },
     "bar": {
-      "description": "Horizontal ASCII bar chart",
+      "description": "Horizontal ASCII bar chart using block fill characters with value labels and color legend",
       "components": [],
       "layout": {
         "layout": "stack",

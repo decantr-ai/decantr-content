@@ -61,7 +61,7 @@
       }
     },
     "forgot-password": {
-      "description": "Password reset request form",
+      "description": "Password reset request form with email input and success confirmation message",
       "components": [
         "Button",
         "icon"
@@ -127,7 +127,7 @@
       }
     },
     "mfa-verify": {
-      "description": "MFA code entry during login",
+      "description": "Multi-factor authentication code entry during login with six-digit input and backup code fallback",
       "components": [
         "Button",
         "icon"

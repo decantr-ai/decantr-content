@@ -31,7 +31,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full P&L dashboard",
+      "description": "Full profit-and-loss dashboard with income and expense breakdowns, property comparison, and projections",
       "components": [
         "Button",
         "icon",

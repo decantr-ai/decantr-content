@@ -30,7 +30,7 @@
   "default_preset": "view",
   "presets": {
     "view": {
-      "description": "Full unit detail view",
+      "description": "Full unit detail view with specs, current tenant info, and tabbed rent and maintenance history",
       "components": [
         "Button",
         "icon",

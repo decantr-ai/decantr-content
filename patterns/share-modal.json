@@ -49,7 +49,7 @@
       }
     },
     "link": {
-      "description": "Shareable link management",
+      "description": "Shareable link management with copy-to-clipboard URL, permission settings, and expiration controls",
       "components": [
         "Button",
         "Input",

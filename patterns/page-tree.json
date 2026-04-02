@@ -43,7 +43,7 @@
       }
     },
     "compact": {
-      "description": "Dense tree with smaller text",
+      "description": "Dense tree with smaller text and tighter row spacing for narrow sidebar containers",
       "components": [
         "Button",
         "icon"

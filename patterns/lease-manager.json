@@ -48,7 +48,7 @@
       }
     },
     "edit": {
-      "description": "Lease term editing form",
+      "description": "Lease term editing form with editable date, rent, and deposit fields plus document upload",
       "components": [
         "Button",
         "icon",

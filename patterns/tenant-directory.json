@@ -52,7 +52,7 @@
       }
     },
     "cards": {
-      "description": "Card grid of tenants",
+      "description": "Visual card grid of tenants with avatar, property, and lease status displayed per card",
       "components": [
         "Button",
         "icon",

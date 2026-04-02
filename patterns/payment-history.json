@@ -29,7 +29,7 @@
   "default_preset": "portfolio",
   "presets": {
     "portfolio": {
-      "description": "All payments across portfolio",
+      "description": "All payments across the full property portfolio with date range filters and export controls",
       "components": [
         "Button",
         "icon",
@@ -49,7 +49,7 @@
       }
     },
     "tenant": {
-      "description": "Single tenant payment history",
+      "description": "Single tenant payment history filtered to one tenant with simplified columns and receipt links",
       "components": [
         "Button",
         "icon",
@@ -65,7 +65,7 @@
       }
     },
     "property": {
-      "description": "Property-wide payment history",
+      "description": "Property-wide payment history aggregating all tenant payments for a single property",
       "components": [
         "Button",
         "icon",

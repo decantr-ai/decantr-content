@@ -29,7 +29,7 @@
   "default_preset": "board",
   "presets": {
     "board": {
-      "description": "Full Kanban board view",
+      "description": "Full Kanban board with drag-and-drop columns for each maintenance ticket status",
       "components": [
         "Button",
         "icon",
@@ -48,7 +48,7 @@
       }
     },
     "list": {
-      "description": "List view of tickets",
+      "description": "Flat sortable list view of maintenance tickets with status badges and priority indicators",
       "components": [
         "Button",
         "icon",
@@ -64,7 +64,7 @@
       }
     },
     "mini": {
-      "description": "Compact board for dashboard",
+      "description": "Compact dashboard widget showing column counts and most recent tickets at a glance",
       "components": [
         "Badge"
       ],

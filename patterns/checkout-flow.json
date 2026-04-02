@@ -31,7 +31,7 @@
   "default_preset": "subscribe",
   "presets": {
     "subscribe": {
-      "description": "Tier subscription checkout",
+      "description": "Recurring tier subscription checkout with plan summary, payment form, and promo code input",
       "components": [
         "Button",
         "Card",
@@ -53,7 +53,7 @@
       }
     },
     "purchase": {
-      "description": "One-time product purchase",
+      "description": "One-time product purchase flow with order summary and payment method selection",
       "components": [
         "Button",
         "Card",
@@ -71,7 +71,7 @@
       }
     },
     "upgrade": {
-      "description": "Tier upgrade flow",
+      "description": "Tier upgrade flow showing current-vs-new plan comparison with prorated pricing",
       "components": [
         "Button",
         "Card",

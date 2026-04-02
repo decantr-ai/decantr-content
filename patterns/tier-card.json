@@ -46,7 +46,7 @@
       }
     },
     "compact": {
-      "description": "Small inline tier display",
+      "description": "Compact inline tier display with color indicator, name, and price for use in lists and selectors",
       "components": [
         "Badge",
         "icon"

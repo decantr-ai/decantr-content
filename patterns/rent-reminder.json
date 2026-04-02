@@ -25,7 +25,7 @@
   "default_preset": "upcoming",
   "presets": {
     "upcoming": {
-      "description": "Upcoming payment reminder",
+      "description": "Upcoming payment reminder with blue info tint, due date countdown, and a pay-now action button",
       "components": [
         "Button",
         "icon"
@@ -43,7 +43,7 @@
       }
     },
     "due-today": {
-      "description": "Due today alert",
+      "description": "Due-today alert banner with warning tint, prominent amount display, and urgent pay-now action",
       "components": [
         "Button",
         "icon"
@@ -60,7 +60,7 @@
       }
     },
     "overdue": {
-      "description": "Overdue payment warning",
+      "description": "Overdue payment warning with destructive red tint, late fee breakdown, and days-overdue counter",
       "components": [
         "Button",
         "icon"
@@ -78,7 +78,7 @@
       }
     },
     "paid": {
-      "description": "Payment confirmed",
+      "description": "Payment confirmed success banner with green tint, checkmark icon, and payment date receipt",
       "components": [
         "icon"
       ],

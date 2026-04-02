@@ -46,7 +46,7 @@
       }
     },
     "list": {
-      "description": "Horizontal list item",
+      "description": "Horizontal list row item with small thumbnail on the left and title, description, and price on the right",
       "components": [
         "Card",
         "Badge",

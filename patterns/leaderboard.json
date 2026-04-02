@@ -21,6 +21,7 @@
     ],
     "tier": "recommended"
   },
+  "components": ["Card", "Badge", "Avatar", "Text", "icon"],
   "presets": {
     "spotlight": {
       "description": "Top 3 highlighted with large cards, rest in compact list",

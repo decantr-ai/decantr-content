@@ -27,7 +27,7 @@
   "default_preset": "list",
   "presets": {
     "list": {
-      "description": "File list view",
+      "description": "Three-panel file list view with folder tree sidebar, document rows, and preview pane",
       "components": [
         "Button",
         "icon",
@@ -47,7 +47,7 @@
       }
     },
     "grid": {
-      "description": "Thumbnail grid view",
+      "description": "Thumbnail grid view displaying document cards with file type icons and preview images",
       "components": [
         "Button",
         "icon",

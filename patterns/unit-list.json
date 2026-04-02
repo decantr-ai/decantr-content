@@ -25,7 +25,7 @@
   "default_preset": "grid",
   "presets": {
     "grid": {
-      "description": "Card grid of units",
+      "description": "Responsive card grid of units showing unit number, specs, tenant, rent, and occupancy status",
       "components": [
         "Button",
         "icon",
@@ -43,7 +43,7 @@
       }
     },
     "table": {
-      "description": "Table view of units",
+      "description": "Sortable data table view of units with columns for number, specs, tenant, rent, and status",
       "components": [
         "Button",
         "icon",

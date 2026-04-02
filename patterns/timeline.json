@@ -21,6 +21,7 @@
     ],
     "tier": "recommended"
   },
+  "components": ["Card", "Badge", "icon", "Text"],
   "presets": {
     "default": {
       "description": "Vertical timeline with alternating sides",
@@ -30,14 +31,14 @@
       }
     },
     "compact": {
-      "description": "Single-side vertical timeline",
+      "description": "Single-side vertical timeline with all entries on one side of the connector line for compact layouts",
       "layout": {
         "orientation": "vertical",
         "alternating": false
       }
     },
     "horizontal": {
-      "description": "Horizontal scrolling timeline",
+      "description": "Horizontal scrolling timeline with entries arranged left-to-right along a connector line",
       "layout": {
         "orientation": "horizontal"
       }
