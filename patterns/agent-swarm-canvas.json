@@ -54,8 +54,8 @@
     "metrics": "Display agent metrics with LABELED text, not icon-only. Good: 'Requests: 142 | Latency: 120ms'. Bad: '\u26a1 142 \u2b07 120ms'. Icons without labels are unparseable.",
     "status_consistency": "All status badges MUST use d-annotation[data-status]. Every status includes a colored dot (8px circle) prefix for visual scanning. Consistent across all agents.",
     "error_escalation": "Agents with error status should have a subtle red border glow on their card: box-shadow: 0 0 12px color-mix(in srgb, var(--d-error) 25%, transparent).",
-    "node_card": "Agent node cards should be min-width: 180px, max-width: 240px. Internal layout: flex column with gap-2. Name: truncate with text-ellipsis at max-width, use full agent name in tooltip on hover. Status badge: absolute-positioned top-right corner or inline below name \u2014 never overlapping metrics. Metrics: stack vertically (one per line) in mono-data font, not side-by-side.",
-    "node_card_sizing": "Node cards must accommodate: agent name (up to 20 chars visible), status badge, 2-3 metric lines. If content overflows, increase card width \u2014 never truncate metrics."
+    "node_card": "Agent node cards: min-width 200px, max-width 260px. Layout must be: Row 1: avatar (40px circle) + column(name + agent-id). Row 2: status badge (FULL WIDTH, not beside the name). Row 3+: metrics stacked vertically. The status badge must NEVER share a row with the agent name \u2014 it goes on its own row below the name/id, spanning the full card width. Use d-annotation for the badge.",
+    "node_card_sizing": "The name text uses text-sm font-semibold with text-ellipsis overflow-hidden whitespace-nowrap. The agent-id uses text-xs text-muted. Status badge row: flex with gap-2, badge pill-shaped. Metrics: mono-data text-xs, one line per metric. Card padding: 12px. Gap between rows: 8px."
   },
   "default_layout": {
     "layout": "spatial",
