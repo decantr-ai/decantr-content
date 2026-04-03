@@ -112,10 +112,25 @@
     "desktop": "Full two-column grid for field groups. Settings preset shows section label column on the left, fields on the right. Generous p4 spacing. Inline validation visible without layout shift."
   },
   "accessibility": {
+    "role": "form",
+    "aria-label": "Form",
+    "keyboard": [
+      "Tab navigates between fields",
+      "Shift+Tab navigates backwards between fields",
+      "Enter submits when focus is on submit button",
+      "Escape cancels or closes modal forms",
+      "Arrow keys navigate within radio groups",
+      "Space toggles checkboxes and switches"
+    ],
+    "announcements": [
+      "Validation errors announced on field blur",
+      "Required field indicator announced on focus",
+      "Success confirmation announced on submit",
+      "Field group label announced on section entry"
+    ],
+    "focus_management": "First invalid field receives focus on failed validation. On successful submit, focus moves to success message or next logical action.",
     "labels": "Every input has an associated <label> element with matching htmlFor/id. Labels are always visible — no placeholder-only fields.",
-    "validation": "Error messages are linked to inputs via aria-describedby. Invalid fields use aria-invalid='true'. Error text uses role='alert' for screen reader announcement.",
-    "keyboard": "Tab order follows visual order. Required fields announced via aria-required. Radio groups use arrow keys for selection within the group. Submit via Enter on the last field.",
-    "focus": "Visible focus ring on all interactive elements using :focus-visible. Focus moves to first error field on failed submission."
+    "validation": "Error messages are linked to inputs via aria-describedby. Invalid fields use aria-invalid='true'. Error text uses role='alert' for screen reader announcement."
   },
   "layout_hints": {
     "label_position": "stacked",
