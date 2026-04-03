@@ -118,5 +118,10 @@
   "composition": {
     "Testimonials": "Grid(d-section, responsive: 1/2/3-col) > TestimonialCard[]",
     "TestimonialCard": "Card(d-surface) > [QuoteIcon(d-annotation) + QuoteText(italic) + AuthorRow > [Avatar + AuthorInfo > [Name(font-medium) + Role(text-muted)] + CompanyLogo?]]"
+  },
+  "layout_hints": {
+    "card_treatment": "Testimonial cards should use d-surface with a thin left border (3px solid) that rotates through accent/primary colors per card. This creates visual variety without inconsistency. Include a large decorative open-quote mark in low-opacity accent color.",
+    "avatar_treatment": "Avatars should have a subtle ring: 2px solid var(--d-primary) with 2px gap (outline-offset). This frames the person and adds polish.",
+    "section_background": "Use a very subtle gradient background: linear-gradient(180deg, var(--d-bg), color-mix(in srgb, var(--d-surface) 30%, var(--d-bg))). This creates visual separation from pricing above without being heavy."
   }
 }

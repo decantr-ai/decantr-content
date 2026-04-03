@@ -72,11 +72,11 @@
       }
     }
   },
-  "visual_brief": "Full-width call-to-action section designed to drive user action. The standard preset centers a bold heading2-scale headline, a supporting paragraph in muted text constrained to 640px max-width, and two horizontally-arranged CTA buttons — primary filled and secondary ghost-outlined. The section has generous vertical padding (py12) and can carry a subtle gradient background, pattern texture, or elevated surface treatment to visually distinguish it from surrounding content. The split preset places the text and CTAs on the left column with an illustration, screenshot, or decorative image on the right. The banner preset is a compact single-row bar with a tinted background (primary at 10% opacity), text on the left, and a single action button on the right — useful as an inline CTA between content sections.",
+  "visual_brief": "Full-width call-to-action section designed to drive user action. The standard preset centers a bold heading2-scale headline, a supporting paragraph in muted text constrained to 640px max-width, and two horizontally-arranged CTA buttons \u2014 primary filled and secondary ghost-outlined. The section has generous vertical padding (py12) and can carry a subtle gradient background, pattern texture, or elevated surface treatment to visually distinguish it from surrounding content. The split preset places the text and CTAs on the left column with an illustration, screenshot, or decorative image on the right. The banner preset is a compact single-row bar with a tinted background (primary at 10% opacity), text on the left, and a single action button on the right \u2014 useful as an inline CTA between content sections.",
   "responsive": {
     "mobile": "Standard: content stacks vertically, full-width. CTA buttons stack vertically at full width, primary on top. Split: becomes single column with image below text. Banner: wraps text and button vertically with centered alignment. Padding reduces to py8 px4.",
     "tablet": "Standard stays centered with comfortable width. Split activates two-column grid. Banner remains horizontal. Padding at py10.",
-    "desktop": "Full layout — standard centered with py12. Split shows side-by-side columns with gap6. Banner compact horizontal with accent background."
+    "desktop": "Full layout \u2014 standard centered with py12. Split shows side-by-side columns with gap6. Banner compact horizontal with accent background."
   },
   "motion": {
     "micro": "CTA button pulses with subtle scale(1.02) and shadow increase on idle after 3s, 1.5s duration loop. Button brightens on hover over 150ms.",
@@ -110,5 +110,10 @@
     "actions": [
       "cta-click"
     ]
+  },
+  "layout_hints": {
+    "background_treatment": "CTA section should stand out from the rest of the page. Use a gradient background: linear-gradient(135deg, color-mix(in srgb, var(--d-primary) 8%, var(--d-bg)), color-mix(in srgb, var(--d-accent) 5%, var(--d-bg))). Or use a glassmorphic surface with backdrop-blur.",
+    "button_treatment": "The primary CTA button should be larger than standard buttons (py-3 px-8, text-lg). For neon themes, add a subtle glow on hover: box-shadow: 0 0 20px rgba(var(--d-primary-rgb), 0.3).",
+    "urgency": "Add a subtle visual urgency element \u2014 a small line of muted text below the button like \"Free for teams up to 5 agents\" or a trust indicator row (logos or badges). This prevents the CTA from feeling empty."
   }
 }

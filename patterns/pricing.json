@@ -46,7 +46,7 @@
           "tiers": "Horizontal row of tier Cards: _grid _gc1 _md:gc3 _gap4 _aic",
           "tier-card": "Individual Card: plan name (_heading4), price (_heading1 _fontmono), billing period, feature checklist, CTA Button",
           "feature-list": "Checklist of features with checkmark icons and _textsm",
-          "cta": "Full-width Button per tier — primary variant for recommended, ghost for others"
+          "cta": "Full-width Button per tier \u2014 primary variant for recommended, ghost for others"
         }
       }
     },
@@ -119,5 +119,10 @@
     "PricingSection": "Container(d-section, centered) > [Heading(heading2) + BillingToggle(d-control, pill) + TierGrid > PricingTier[]]",
     "BillingToggle": "Toggle(d-control) > [MonthlyLabel + Switch + AnnualLabel + SaveBadge?(d-annotation)]",
     "PricingTier": "Card(d-surface, elevated?: tier.recommended) > [PlanName(heading4) + Badge?(d-annotation, show: tier.recommended) + Price(mono-data, heading1) + Period(text-muted) + FeatureList > CheckItem(icon: check)[] + CTAButton(d-interactive, variant: tier.recommended ? primary : ghost, full-width)]"
+  },
+  "layout_hints": {
+    "recommended_treatment": "The recommended/popular tier card should be visually elevated: scale(1.02) or extra top padding, a primary-colored top border (3px solid var(--d-primary)), and the Popular badge using d-annotation[data-status=info]. The other tier cards should be subtly muted in comparison.",
+    "card_glow": "For neon/glow themes, the recommended tier gets a subtle box-shadow glow: 0 0 30px rgba(var(--d-primary-rgb), 0.15). This draws the eye without being garish.",
+    "toggle_treatment": "The annual/monthly toggle should be a pill-style toggle with the active option using var(--d-primary) background. Show the savings percentage (\"Save 20%\") as a small accent-colored badge next to the annual option."
   }
 }

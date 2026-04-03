@@ -104,5 +104,10 @@
       "step-description": "Step explanation",
       "connector": "Visual connector between steps"
     }
+  },
+  "layout_hints": {
+    "connector_line": "Draw a horizontal connecting line (2px, var(--d-border)) between the step circles. On mobile (stacked), use a vertical line on the left side. The line should be dashed or use a gradient fade at the ends.",
+    "step_numbers": "Step number circles should use background: var(--d-primary) with white text (or accent bg with dark text for neon themes). Size: 48px diameter, font-weight: bold. Active/current step should pulse subtly.",
+    "section_background": "Use var(--d-bg) background (same as hero) to create a visual pairing with the hero section. This groups hero + how-it-works as the \"above the fold\" narrative."
   }
 }
