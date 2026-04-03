@@ -33,8 +33,21 @@
   "personality": "Warm, distraction-free collaboration workspace built for focused teamwork. Light paper-like backgrounds with comfortable reading typography. Presence indicators use distinct warm colors per collaborator. Inline comments appear as subtle margin annotations. Page tree navigation is clean and collapsible. The document editor prioritizes content over chrome — toolbar hides on scroll, formatting is keyboard-first. Real-time cursors and selections feel natural, not distracting. Think Notion meets Google Docs — productive, polished, and genuinely collaborative.",
   "voice": {
     "tone": "Warm, collaborative, and productivity-focused. Speaks in we/us language. Celebrates team accomplishments.",
-    "cta_verbs": ["Create", "Share", "Invite", "Comment", "Publish", "Export"],
-    "avoid": ["Submit", "Click here", "Please enter", "Buy", "Deploy"],
+    "cta_verbs": [
+      "Create",
+      "Share",
+      "Invite",
+      "Comment",
+      "Publish",
+      "Export"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Buy",
+      "Deploy"
+    ],
     "empty_states": "Inviting and action-oriented. An empty workspace should feel like a fresh notebook — exciting, not barren. Suggest creating a first page or importing content.",
     "errors": "Calm and recovery-focused. Sync conflicts should show both versions and let the user choose. Never lose work silently.",
     "loading": "Document outline skeletons with line-height placeholders. Presence avatars fade in as connections establish. Page tree shows structure while content loads."
@@ -231,6 +244,26 @@
       "description",
       "og:image",
       "twitter:card"
+    ]
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g h",
+        "route": "/home",
+        "label": "Go to Home"
+      },
+      {
+        "key": "g s",
+        "route": "/settings",
+        "label": "Go to Settings"
+      },
+      {
+        "key": "g t",
+        "route": "/team",
+        "label": "Go to Team"
+      }
     ]
   }
 }

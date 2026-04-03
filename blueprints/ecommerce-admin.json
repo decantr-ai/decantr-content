@@ -15,8 +15,21 @@
   "personality": "Efficient, no-nonsense admin dashboard built for store operators. Clean table-heavy layouts with inline editing where possible. Status badges use semantic colors (green shipped, amber pending, red flagged). Bulk actions are prominent. Sidebar navigation groups by domain (Products, Orders, Customers, Analytics). Dense but scannable — every row should be actionable without drilling in.",
   "voice": {
     "tone": "Direct and operational. Speaks to busy store operators who need to process orders fast. No marketing fluff.",
-    "cta_verbs": ["Create", "Edit", "Fulfill", "Export", "Archive", "Bulk update"],
-    "avoid": ["Submit", "Click here", "Please enter", "Shop now", "Discover"],
+    "cta_verbs": [
+      "Create",
+      "Edit",
+      "Fulfill",
+      "Export",
+      "Archive",
+      "Bulk update"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Shop now",
+      "Discover"
+    ],
     "empty_states": "Practical and forward-looking. An empty orders page should say when orders will appear and link to store setup. No whimsy.",
     "errors": "Specific and actionable. Include affected item IDs. For inventory conflicts, show current vs. attempted values.",
     "loading": "Table row skeletons matching column widths. Show row count estimate if available. No full-page spinners."
@@ -26,5 +39,68 @@
     "archetypes": {
       "ecommerce-admin": "^1.0.0"
     }
+  },
+  "routes": {
+    "/overview": {
+      "shell": "sidebar-main",
+      "archetype": "ecommerce-admin",
+      "page": "overview"
+    },
+    "/products": {
+      "shell": "sidebar-main",
+      "archetype": "ecommerce-admin",
+      "page": "products"
+    },
+    "/orders": {
+      "shell": "sidebar-main",
+      "archetype": "ecommerce-admin",
+      "page": "orders"
+    },
+    "/customers": {
+      "shell": "sidebar-main",
+      "archetype": "ecommerce-admin",
+      "page": "customers"
+    },
+    "/settings": {
+      "shell": "sidebar-main",
+      "archetype": "ecommerce-admin",
+      "page": "settings"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g o",
+        "route": "/overview",
+        "label": "Go to Overview"
+      },
+      {
+        "key": "g p",
+        "route": "/products",
+        "label": "Go to Products"
+      },
+      {
+        "key": "g r",
+        "route": "/orders",
+        "label": "Go to Orders"
+      },
+      {
+        "key": "g c",
+        "route": "/customers",
+        "label": "Go to Customers"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebApplication",
+      "SoftwareApplication"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:description"
+    ]
   }
 }

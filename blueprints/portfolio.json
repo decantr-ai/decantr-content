@@ -15,8 +15,19 @@
   "personality": "Bold, expressive portfolio that lets the work shine. Large hero with confident typography and a strong CTA. Project showcases use generous whitespace and full-bleed imagery. Subtle scroll-triggered animations add polish without distraction. Social proof and testimonials provide credibility. The overall feel is curated gallery meets personal brand statement.",
   "voice": {
     "tone": "Confident and personal. First-person where appropriate. Speaks with authority about craft.",
-    "cta_verbs": ["View project", "Get in touch", "See my work", "Explore", "Connect"],
-    "avoid": ["Submit", "Click here", "Please enter", "Buy now"],
+    "cta_verbs": [
+      "View project",
+      "Get in touch",
+      "See my work",
+      "Explore",
+      "Connect"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Buy now"
+    ],
     "empty_states": "Minimal and intentional. A portfolio with no projects yet should feel like a canvas waiting to be filled, with a prompt to add the first piece.",
     "errors": "Brief and low-key. Contact form errors should guide without breaking the creative flow.",
     "loading": "Fade-in content blocks with subtle opacity transitions. No spinners — the portfolio should feel curated, not loading."
@@ -30,5 +41,59 @@
   "features": [
     "analytics",
     "contact-form"
-  ]
+  ],
+  "routes": {
+    "/": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio",
+      "page": "home"
+    },
+    "/projects/:id": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio",
+      "page": "project-detail"
+    },
+    "/about": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio",
+      "page": "about"
+    },
+    "/contact": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio",
+      "page": "contact"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g h",
+        "route": "/",
+        "label": "Go to Home"
+      },
+      {
+        "key": "g a",
+        "route": "/about",
+        "label": "Go to About"
+      },
+      {
+        "key": "g c",
+        "route": "/contact",
+        "label": "Go to Contact"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebSite",
+      "Person",
+      "ProfilePage"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:image"
+    ]
+  }
 }

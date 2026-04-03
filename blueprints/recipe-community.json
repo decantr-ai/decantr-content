@@ -15,8 +15,20 @@
   "personality": "Warm, appetite-driven recipe community with rich food photography as the visual anchor. Earthy tones with pops of warm orange and herb green. Card-based recipe feeds with generous image ratios. Friendly rounded shapes and soft shadows. AI features (photo-to-recipe, chef chat) feel like helpful kitchen companions, not cold tech. Community interactions are encouraging and celebratory.",
   "voice": {
     "tone": "Warm, enthusiastic, and encouraging. Speaks like a friend who loves to cook. Uses sensory language when describing food.",
-    "cta_verbs": ["Cook this", "Save recipe", "Share", "Try it", "Explore"],
-    "avoid": ["Submit", "Click here", "Please enter", "Execute", "Deploy"],
+    "cta_verbs": [
+      "Cook this",
+      "Save recipe",
+      "Share",
+      "Try it",
+      "Explore"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Execute",
+      "Deploy"
+    ],
     "empty_states": "Inviting and appetizing. An empty cookbook should inspire the user to save their first recipe, not feel like an error. Use food-related metaphors.",
     "errors": "Gentle and understanding. If a recipe upload fails, offer to retry. Keep the kitchen metaphor alive without being cheesy.",
     "loading": "Recipe card skeletons with image placeholders showing a subtle plate outline. Shimmer animation in warm tones."
@@ -26,5 +38,59 @@
     "archetypes": {
       "recipe-community": "^1.0.0"
     }
+  },
+  "routes": {
+    "/feed": {
+      "shell": "sidebar-main",
+      "archetype": "recipe-community",
+      "page": "feed"
+    },
+    "/recipes/:id": {
+      "shell": "sidebar-main",
+      "archetype": "recipe-community",
+      "page": "recipe-detail"
+    },
+    "/create": {
+      "shell": "sidebar-main",
+      "archetype": "recipe-community",
+      "page": "create"
+    },
+    "/profile/:id": {
+      "shell": "sidebar-main",
+      "archetype": "recipe-community",
+      "page": "profile"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g f",
+        "route": "/feed",
+        "label": "Go to Feed"
+      },
+      {
+        "key": "g n",
+        "route": "/create",
+        "label": "New Recipe"
+      },
+      {
+        "key": "g p",
+        "route": "/profile/me",
+        "label": "Go to Profile"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebApplication",
+      "Recipe",
+      "CollectionPage"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:image"
+    ]
   }
 }

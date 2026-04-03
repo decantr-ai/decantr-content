@@ -25,8 +25,21 @@
   "personality": "Enterprise-grade cloud console built for reliability and scale. Clean, systematic layout with a left sidebar for service navigation. Status indicators use semantic colors — green healthy, amber degraded, red incident. Deploy logs stream in monospace with ANSI color support. Usage charts are functional, not decorative. Dense data tables with sort, filter, and bulk actions. Think AWS Console meets Vercel — powerful but approachable. Every view should feel like a control plane.",
   "voice": {
     "tone": "Technical and trustworthy. Speaks to infrastructure engineers and DevOps teams. Precise about states and operations.",
-    "cta_verbs": ["Deploy", "Create", "Scale", "Monitor", "Configure", "Migrate"],
-    "avoid": ["Submit", "Click here", "Please enter", "Buy", "Amazing"],
+    "cta_verbs": [
+      "Deploy",
+      "Create",
+      "Scale",
+      "Monitor",
+      "Configure",
+      "Migrate"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Buy",
+      "Amazing"
+    ],
     "empty_states": "Helpful and onboarding-oriented. An empty project list should walk users through creating their first app with clear steps.",
     "errors": "Precise and diagnostic. Include request IDs, timestamps, and affected resources. Link to status page for platform issues.",
     "loading": "Resource list skeletons with status dot placeholders. Deploy logs show a blinking cursor. Metrics charts show axis labels while data loads."
@@ -72,5 +85,113 @@
     "billing",
     "auth",
     "search"
-  ]
+  ],
+  "routes": {
+    "/": {
+      "shell": "full-bleed",
+      "archetype": "cloud-marketing",
+      "page": "home"
+    },
+    "/login": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "login"
+    },
+    "/register": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "register"
+    },
+    "/apps": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "apps"
+    },
+    "/apps/:id": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "app-detail"
+    },
+    "/team": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "team"
+    },
+    "/activity": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "activity"
+    },
+    "/services": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "services"
+    },
+    "/tokens": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "tokens"
+    },
+    "/usage": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "usage"
+    },
+    "/status": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "status"
+    },
+    "/compliance": {
+      "shell": "sidebar-main",
+      "archetype": "cloud-infrastructure",
+      "page": "compliance"
+    },
+    "/billing": {
+      "shell": "sidebar-main",
+      "archetype": "billing",
+      "page": "billing"
+    },
+    "/settings": {
+      "shell": "sidebar-main",
+      "archetype": "settings",
+      "page": "settings"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g h",
+        "route": "/",
+        "label": "Go to Home"
+      },
+      {
+        "key": "g a",
+        "route": "/apps",
+        "label": "Go to Apps"
+      },
+      {
+        "key": "g u",
+        "route": "/usage",
+        "label": "Go to Usage"
+      },
+      {
+        "key": "g s",
+        "route": "/status",
+        "label": "Go to Status"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebApplication",
+      "SoftwareApplication"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:description"
+    ]
+  }
 }

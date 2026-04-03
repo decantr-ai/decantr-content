@@ -11,8 +11,20 @@
   "personality": "Bold, high-impact product landing page designed to convert. Dark premium background with vibrant geometric accent elements. Split hero with confident headline and product visualization. Before-after comparisons in browser frames sell the transformation. Pipeline cards showcase the workflow with numbered steps. Tech pills display integrations and compatibility. The overall rhythm alternates between full-bleed visual sections and contained content. Every scroll position has a conversion opportunity.",
   "voice": {
     "tone": "Bold, confident, and technically credible. Makes strong claims backed by specifics. No fluff.",
-    "cta_verbs": ["Get started", "Try free", "See how", "Explore", "Install"],
-    "avoid": ["Submit", "Click here", "Please enter", "Buy now", "Sign up today"],
+    "cta_verbs": [
+      "Get started",
+      "Try free",
+      "See how",
+      "Explore",
+      "Install"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Buy now",
+      "Sign up today"
+    ],
     "empty_states": "N/A for landing pages — all content is authored, not user-generated.",
     "errors": "Minimal. Form submission errors should be inline and specific. Never break the conversion flow.",
     "loading": "Hero content loads instantly (SSR/SSG). Below-fold sections fade in on scroll intersection. No loading states visible to users."
@@ -46,5 +58,39 @@
     "mode": "dark",
     "shape": "pill",
     "id": "luminarum"
+  },
+  "routes": {
+    "/": {
+      "shell": "full-bleed",
+      "archetype": "marketing-landing",
+      "page": "home"
+    }
+  },
+  "navigation": {
+    "command_palette": false,
+    "hotkeys": [
+      {
+        "key": "g h",
+        "route": "/",
+        "label": "Go to Home"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebSite",
+      "SoftwareApplication",
+      "Product"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:image"
+    ]
+  },
+  "dependencies": {
+    "archetypes": {
+      "marketing-landing": ">=1.0.0"
+    }
   }
 }

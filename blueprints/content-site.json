@@ -15,8 +15,19 @@
   "personality": "Reading-first content site optimized for long-form consumption. Generous line-height, comfortable measure (65-75 characters), and a clear typographic hierarchy. Light backgrounds with high-contrast text. Category navigation is unobtrusive. Article cards emphasize headlines and reading time over imagery. Search is fast and prominent. The experience should feel like a well-designed magazine — effortless to browse, comfortable to read.",
   "voice": {
     "tone": "Clear, editorial, and authoritative. Matches the publication's voice. Headlines are precise and compelling.",
-    "cta_verbs": ["Read", "Browse", "Search", "Subscribe", "Explore"],
-    "avoid": ["Submit", "Click here", "Please enter", "Buy now"],
+    "cta_verbs": [
+      "Read",
+      "Browse",
+      "Search",
+      "Subscribe",
+      "Explore"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Buy now"
+    ],
     "empty_states": "Editorially appropriate. An empty category should suggest related topics or popular articles to keep readers engaged.",
     "errors": "Minimal and unobtrusive. A 404 should suggest similar articles. Search with no results should offer alternative queries.",
     "loading": "Article card skeletons with headline and excerpt placeholders. Subtle fade-in for content blocks. Reading experience never shows spinners."
@@ -31,5 +42,49 @@
     "search",
     "analytics",
     "rss"
-  ]
+  ],
+  "routes": {
+    "/": {
+      "shell": "top-nav-main",
+      "archetype": "content-site",
+      "page": "home"
+    },
+    "/articles/:slug": {
+      "shell": "top-nav-main",
+      "archetype": "content-site",
+      "page": "article"
+    },
+    "/categories": {
+      "shell": "top-nav-main",
+      "archetype": "content-site",
+      "page": "categories"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g h",
+        "route": "/",
+        "label": "Go to Home"
+      },
+      {
+        "key": "g c",
+        "route": "/categories",
+        "label": "Go to Categories"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebSite",
+      "Blog",
+      "Article"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:image"
+    ]
+  }
 }

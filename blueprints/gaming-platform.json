@@ -23,8 +23,21 @@
   "personality": "High-energy gaming hub with bold, immersive visuals. Dark backgrounds with vibrant neon accents (electric blue, hot pink, lime green). Leaderboard tables use rank-colored highlights. Profile cards show achievement badges and stat bars. Game catalog uses large cover-art cards with hover-zoom effects. Competitive elements (rankings, win rates) are front and center. The vibe is Discord meets Steam — social, loud, and unapologetically gamer.",
   "voice": {
     "tone": "Energetic and direct. Speaks like a fellow gamer. Uses gaming vernacular where natural but stays readable.",
-    "cta_verbs": ["Play", "Join", "Challenge", "Explore", "Claim", "Unlock"],
-    "avoid": ["Submit", "Click here", "Please enter", "Purchase", "Subscribe now"],
+    "cta_verbs": [
+      "Play",
+      "Join",
+      "Challenge",
+      "Explore",
+      "Claim",
+      "Unlock"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Purchase",
+      "Subscribe now"
+    ],
     "empty_states": "Motivational and challenge-oriented. An empty leaderboard should dare the user to be the first to claim the top spot.",
     "errors": "Brief and in-character. Connection failures can use gaming metaphors (lag, disconnect). Always offer a retry.",
     "loading": "Pulsing skeleton cards with neon accent borders. Progress bars use the accent palette. Leaderboard rows animate in sequentially."
@@ -54,5 +67,83 @@
     "search",
     "auth",
     "notifications"
-  ]
+  ],
+  "routes": {
+    "/games": {
+      "shell": "sidebar-main",
+      "archetype": "game-catalog",
+      "page": "games"
+    },
+    "/join": {
+      "shell": "sidebar-main",
+      "archetype": "game-catalog",
+      "page": "join-guild"
+    },
+    "/community": {
+      "shell": "sidebar-main",
+      "archetype": "gaming-community",
+      "page": "main"
+    },
+    "/community/news": {
+      "shell": "sidebar-main",
+      "archetype": "gaming-community",
+      "page": "news"
+    },
+    "/community/hall-of-fame": {
+      "shell": "sidebar-main",
+      "archetype": "gaming-community",
+      "page": "hall-of-fame"
+    },
+    "/community/members/:id": {
+      "shell": "sidebar-main",
+      "archetype": "gaming-community",
+      "page": "member-profile"
+    },
+    "/login": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "login"
+    },
+    "/register": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "register"
+    },
+    "/settings": {
+      "shell": "sidebar-main",
+      "archetype": "settings",
+      "page": "settings"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g g",
+        "route": "/games",
+        "label": "Go to Games"
+      },
+      {
+        "key": "g c",
+        "route": "/community",
+        "label": "Go to Community"
+      },
+      {
+        "key": "g h",
+        "route": "/community/hall-of-fame",
+        "label": "Go to Hall of Fame"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebApplication",
+      "SoftwareApplication"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:description"
+    ]
+  }
 }

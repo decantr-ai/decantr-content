@@ -15,8 +15,19 @@
   "personality": "Authoritative financial dashboard built for trust and precision. Conservative color palette with green for gains, red for losses, and neutral grays for structure. Dense data tables with monospace numerals for alignment. Charts favor line and area over decorative visuals. Spacing is tight but never cramped. Think Bloomberg Terminal meets a modern wealth management app.",
   "voice": {
     "tone": "Precise and measured. Uses financial terminology correctly. Numbers are formatted consistently (commas, decimal places, currency symbols).",
-    "cta_verbs": ["Review", "Analyze", "Export", "Configure", "Approve"],
-    "avoid": ["Submit", "Click here", "Please enter", "Exciting opportunity"],
+    "cta_verbs": [
+      "Review",
+      "Analyze",
+      "Export",
+      "Configure",
+      "Approve"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Exciting opportunity"
+    ],
     "empty_states": "Matter-of-fact. Explain what data will appear and how to configure the data source. No playful language.",
     "errors": "Clear and specific. Include error codes where applicable. For data sync failures, show last-known-good timestamp.",
     "loading": "Skeleton rows in tables and chart outlines. Show stale data with a subtle 'Updating...' badge rather than blank screens."
@@ -26,5 +37,58 @@
     "archetypes": {
       "financial-dashboard": "^1.0.0"
     }
+  },
+  "routes": {
+    "/overview": {
+      "shell": "sidebar-main",
+      "archetype": "financial-dashboard",
+      "page": "overview"
+    },
+    "/transactions": {
+      "shell": "sidebar-main",
+      "archetype": "financial-dashboard",
+      "page": "transactions"
+    },
+    "/reports": {
+      "shell": "sidebar-main",
+      "archetype": "financial-dashboard",
+      "page": "reports"
+    },
+    "/settings": {
+      "shell": "sidebar-main",
+      "archetype": "financial-dashboard",
+      "page": "settings"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g o",
+        "route": "/overview",
+        "label": "Go to Overview"
+      },
+      {
+        "key": "g t",
+        "route": "/transactions",
+        "label": "Go to Transactions"
+      },
+      {
+        "key": "g r",
+        "route": "/reports",
+        "label": "Go to Reports"
+      }
+    ]
+  },
+  "seo_hints": {
+    "schema_org": [
+      "WebApplication",
+      "FinancialProduct"
+    ],
+    "meta_priorities": [
+      "description",
+      "og:title",
+      "og:description"
+    ]
   }
 }

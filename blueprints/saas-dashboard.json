@@ -15,8 +15,19 @@
   "personality": "Clean, data-driven SaaS dashboard. Neutral tones with a single accent color for CTAs and active states. Card-based layout with consistent spacing. Charts use the accent palette. Navigation is efficient and keyboard-accessible. Think Linear meets Stripe dashboard.",
   "voice": {
     "tone": "Professional and concise. Informative without being verbose. Data speaks for itself.",
-    "cta_verbs": ["View", "Create", "Export", "Configure", "Manage"],
-    "avoid": ["Submit", "Click here", "Please enter", "Dear user"],
+    "cta_verbs": [
+      "View",
+      "Create",
+      "Export",
+      "Configure",
+      "Manage"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Dear user"
+    ],
     "empty_states": "Friendly and action-oriented. Explain what will appear here and provide a single clear next step.",
     "errors": "Direct and helpful. State what went wrong and suggest a fix. No blame language.",
     "loading": "Show skeleton placeholders matching the content shape. No spinner text — let the layout speak."
@@ -36,6 +47,48 @@
       "description",
       "og:image",
       "twitter:card"
+    ]
+  },
+  "routes": {
+    "/overview": {
+      "shell": "sidebar-main",
+      "archetype": "saas-dashboard",
+      "page": "overview"
+    },
+    "/analytics": {
+      "shell": "sidebar-main",
+      "archetype": "saas-dashboard",
+      "page": "analytics"
+    },
+    "/customers": {
+      "shell": "sidebar-main",
+      "archetype": "saas-dashboard",
+      "page": "customers"
+    },
+    "/settings": {
+      "shell": "sidebar-main",
+      "archetype": "saas-dashboard",
+      "page": "settings"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g o",
+        "route": "/overview",
+        "label": "Go to Overview"
+      },
+      {
+        "key": "g a",
+        "route": "/analytics",
+        "label": "Go to Analytics"
+      },
+      {
+        "key": "g c",
+        "route": "/customers",
+        "label": "Go to Customers"
+      }
     ]
   }
 }

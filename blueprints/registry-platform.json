@@ -29,8 +29,21 @@
   "personality": "Technical, developer-oriented registry platform with a dark premium aesthetic. Content cards display pattern/theme previews with metadata (version, downloads, compatibility). Search is instant with faceted filters. Publishing workflow is clear and step-by-step. Admin moderation views are dense and action-oriented. Billing portal is clean and transparent. The Decantr dogfood app — built with its own system, showcasing what the platform produces. Think npm registry meets Figma Community.",
   "voice": {
     "tone": "Technical and developer-friendly. Uses correct design-system terminology. Precise about versions and compatibility.",
-    "cta_verbs": ["Publish", "Install", "Browse", "Search", "Preview", "Fork"],
-    "avoid": ["Submit", "Click here", "Please enter", "Buy now", "Amazing"],
+    "cta_verbs": [
+      "Publish",
+      "Install",
+      "Browse",
+      "Search",
+      "Preview",
+      "Fork"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Buy now",
+      "Amazing"
+    ],
     "empty_states": "Developer-friendly and constructive. An empty published items list should link to the publishing guide. Search with no results should suggest broadening filters.",
     "errors": "Precise and technical. Include error codes and affected resource identifiers. Validation errors should quote the failing field and expected format.",
     "loading": "Content card skeletons with code-block placeholders. Search results show filter sidebar while results stream in. Registry stats use counter animations."
@@ -66,5 +79,107 @@
     "admin",
     "team",
     "billing"
-  ]
+  ],
+  "routes": {
+    "/registry": {
+      "shell": "topbar-main",
+      "archetype": "registry-browser",
+      "page": "registry"
+    },
+    "/registry/:type": {
+      "shell": "topbar-main",
+      "archetype": "registry-browser",
+      "page": "registry-type"
+    },
+    "/registry/:type/:namespace/:slug": {
+      "shell": "topbar-main",
+      "archetype": "registry-browser",
+      "page": "registry-detail"
+    },
+    "/dashboard": {
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard",
+      "page": "dashboard"
+    },
+    "/dashboard/content": {
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard",
+      "page": "dashboard-content"
+    },
+    "/dashboard/content/new": {
+      "shell": "sidebar-main",
+      "archetype": "content-editor",
+      "page": "content-new"
+    },
+    "/dashboard/content/:id/edit": {
+      "shell": "sidebar-main",
+      "archetype": "content-editor",
+      "page": "content-edit"
+    },
+    "/dashboard/api-keys": {
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard",
+      "page": "dashboard-api-keys"
+    },
+    "/dashboard/settings": {
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard",
+      "page": "dashboard-settings"
+    },
+    "/dashboard/team": {
+      "shell": "sidebar-main",
+      "archetype": "team-management",
+      "page": "team-overview"
+    },
+    "/dashboard/team/members": {
+      "shell": "sidebar-main",
+      "archetype": "team-management",
+      "page": "team-members"
+    },
+    "/dashboard/team/content": {
+      "shell": "sidebar-main",
+      "archetype": "team-management",
+      "page": "team-content"
+    },
+    "/admin/moderation": {
+      "shell": "sidebar-main",
+      "archetype": "admin-moderation",
+      "page": "moderation-queue"
+    },
+    "/admin/moderation/:id": {
+      "shell": "sidebar-main",
+      "archetype": "admin-moderation",
+      "page": "moderation-detail"
+    },
+    "/dashboard/billing": {
+      "shell": "sidebar-main",
+      "archetype": "billing-portal",
+      "page": "billing"
+    }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g r",
+        "route": "/registry",
+        "label": "Go to Registry"
+      },
+      {
+        "key": "g d",
+        "route": "/dashboard",
+        "label": "Go to Dashboard"
+      },
+      {
+        "key": "g c",
+        "route": "/dashboard/content",
+        "label": "Go to Content"
+      },
+      {
+        "key": "g t",
+        "route": "/dashboard/team",
+        "label": "Go to Team"
+      }
+    ]
+  }
 }
