@@ -90,6 +90,21 @@
     "mobile": "Canvas remains spatial but disables drag-to-connect (use tap-to-select then tap-target-to-connect two-step flow). Minimap hidden. Control bar simplifies to zoom + play/pause. Agent nodes render at minimum 64px width with truncated labels.",
     "tablet": "Full spatial canvas with minimap collapsed by default (toggle via control bar). Touch gestures: two-finger pan, pinch-to-zoom. Connection drag uses long-press to initiate."
   },
+  "motion": {
+    "micro": {
+      "node-hover": "scale(1.05) + glow-intensity 200ms ease-out",
+      "connection-pulse": "opacity 0.3→1→0.3 along path 2s linear infinite"
+    },
+    "transitions": {
+      "node-add": "scale(0) to scale(1) + fade 300ms spring",
+      "node-remove": "scale(1) to scale(0) + fade 200ms ease-in",
+      "layout-shift": "position lerp 500ms ease-in-out"
+    },
+    "ambient": {
+      "connection-flow": "dash-offset animate along path 3s linear infinite",
+      "status-glow": "border-color pulse matching status 2s ease-in-out infinite"
+    }
+  },
   "composition": {
     "AgentSwarmCanvas": "Viewport(d-section, spatial, full-bleed) > [CanvasLayer + StatusOverlay + ControlBar + Minimap?]",
     "CanvasLayer": "Canvas(zoomable, pannable) > [AgentNode[] + ConnectionPath[]]",

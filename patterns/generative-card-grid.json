@@ -98,6 +98,20 @@
     "mobile": "Single column layout regardless of preset. Cards full-width. Preview area maintains 16:9 aspect ratio. ActionBar always visible (no hover state on touch). Skeleton state simplified to a single pulsing block. Maximum 10 cards before 'Load more' button.",
     "tablet": "Two-column grid for uniform and masonry presets. Featured preset uses 2-column with featured card spanning full width at top. List preset unchanged. Touch targets for ActionBar buttons are 44px minimum."
   },
+  "motion": {
+    "micro": {
+      "card-hover": "translateY(-4px) + shadow-lg 200ms ease-out",
+      "card-press": "scale(0.98) 100ms ease-out"
+    },
+    "transitions": {
+      "card-enter": "fade-up + scale(0.95→1) 300ms ease-out, stagger 50ms per card",
+      "grid-reflow": "position + size lerp 400ms ease-in-out",
+      "card-remove": "scale(1→0.9) + fade-out 200ms ease-in"
+    },
+    "ambient": {
+      "shimmer-loading": "gradient-sweep left-to-right 1.5s ease-in-out infinite on skeleton"
+    }
+  },
   "composition": {
     "GenerativeCardGrid": "Grid(d-section, auto-fill, responsive) > [PreviewCard[] + EmptyState?]",
     "PreviewCard": "Card(d-surface, hoverable, lift-on-hover) > [SkeletonPreview | Preview + GenerationBadge(d-annotation, top-right) + PromptTag(d-data, line-clamp-2) + ActionBar]",

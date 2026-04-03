@@ -87,6 +87,20 @@
     "tablet": "All presets available. Radial preset scales to container. Touch targets for tooltip activation are 44px minimum. Ambient preset works well as a page background on tablet."
   },
   "visual_brief": "Bio-mimetic circular visualization with a central PulseCore element that expands and contracts with breathing animation, its frequency mapped to processing state (slow idle pulse, rapid active pulse). Surrounding the core, an IntensityRing provides a clean circular gauge with fill level indicating the current metric value. FlowTrack renders directional particle animations flowing along arc paths to represent throughput. A MetricDisplay overlay shows the numeric value and label. The inline-flow preset linearizes the visualization as a horizontal pulsing bar. The ambient preset uses large subtle background pulses. Static-gauge renders as a simple circular progress ring without animation.",
+  "motion": {
+    "micro": {
+      "gauge-update": "value transition 500ms ease-out with number counter",
+      "threshold-cross": "flash border-color 300ms + scale(1.02) on threshold breach"
+    },
+    "transitions": {
+      "metric-refresh": "cross-fade 200ms ease-in-out",
+      "panel-toggle": "height 0→auto + fade 300ms ease-out"
+    },
+    "ambient": {
+      "confidence-pulse": "opacity oscillate 0.7→1 3s ease-in-out infinite",
+      "data-stream": "translateY scroll-like 1s linear infinite on live data"
+    }
+  },
   "composition": {
     "NeuralFeedbackLoop": "Container(d-section, centered) > [PulseCore + IntensityRing + MetricDisplay + DetailTooltip?]",
     "PulseCore": "Core(d-data, radial-gradient, pulsing: frequency-mapped, color-shift: metric)",

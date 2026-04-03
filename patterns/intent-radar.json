@@ -79,6 +79,20 @@
     "tablet": "Full radial radar with slightly reduced radius. Suggestion chips remain on the outer ring but increase tap target size. Two-column chip overflow if more than 6 suggestions."
   },
   "visual_brief": "Circular radial display with a glowing center point showing the current input query. Intent suggestion vectors radiate outward as labeled lines with lengths proportional to confidence scores. High-confidence suggestions appear closer to the edge with brighter colors; low-confidence ones are shorter and dimmer. SuggestionChip components sit at the end of each vector as clickable pill labels. The radar has subtle concentric circle gridlines. Compact preset renders as a smaller inline widget. The inline preset displays a horizontal confidence bar instead of the radial layout.",
+  "motion": {
+    "micro": {
+      "segment-hover": "opacity 0.7→1 + scale(1.02) 150ms ease-out",
+      "label-reveal": "fade + translateY(4px→0) 200ms ease-out on hover"
+    },
+    "transitions": {
+      "data-update": "segment-size lerp 500ms ease-out",
+      "focus-shift": "highlight-ring transition 300ms ease-out"
+    },
+    "ambient": {
+      "radar-sweep": "rotation 8s linear infinite on scan indicator",
+      "pulse-ring": "scale(1→1.3) + opacity(1→0) 2s ease-out infinite"
+    }
+  },
   "composition": {
     "IntentRadar": "Display(d-section, spatial, aspect-square) > [SuggestionRings + IntentVectors + RadarCenter + ActionZone]",
     "RadarCenter": "Core(d-interactive, glowing, pulsing: interpreting) > [QueryText | SearchIcon]",
