@@ -15,7 +15,7 @@
   ],
   "personality": "clean + minimal + professional + developer-focused",
   "seed": {
-    "primary": "#7C93B0",
+    "primary": "#6366F1",
     "secondary": "#A1A1AA",
     "accent": "#00D4FF",
     "background": "#18181B"
@@ -46,12 +46,12 @@
       "dark": "#A1A1AA"
     },
     "primary": {
-      "light": "#6B8AAE",
-      "dark": "#7C93B0"
+      "light": "#4F46E5",
+      "dark": "#6366F1"
     },
     "primary-hover": {
-      "light": "#5A7A9E",
-      "dark": "#8CA3C0"
+      "light": "#4338CA",
+      "dark": "#818CF8"
     },
     "accent-glow": {
       "dark": "rgba(0, 212, 255, 0.3)",
