@@ -111,6 +111,17 @@
     "tablet": "Two-column field grid activates for shorter fields (name, email). Textareas span full width. Action buttons stay horizontal, right-aligned.",
     "desktop": "Full two-column grid for field groups. Settings preset shows section label column on the left, fields on the right. Generous p4 spacing. Inline validation visible without layout shift."
   },
+  "motion": {
+    "micro": {
+      "field-focus": "border-color transition 150ms ease-out",
+      "button-press": "scale(0.97) 100ms ease-out",
+      "error-shake": "translateX(-4px, 4px, -2px, 2px, 0) 300ms ease-out on validation error"
+    },
+    "transitions": {
+      "validation-error": "fade + slideDown 200ms ease-out for error message",
+      "success-submit": "fade-out form + fade-in success message 300ms ease-out"
+    }
+  },
   "accessibility": {
     "role": "form",
     "aria-label": "Form",

@@ -158,6 +158,13 @@
       }
     }
   },
+  "accessibility": {
+    "role": "banner",
+    "aria-label": "Hero section",
+    "keyboard": ["Tab to CTA button", "Enter activates CTA"],
+    "announcements": ["Page title announced on load"],
+    "focus_management": "CTA button is the primary focus target"
+  },
   "visual_brief": "Full-width section dominating the viewport with a bold, large-scale headline centered or left-aligned depending on preset. Generous vertical padding (4-6rem top/bottom) creates breathing room. Subtext sits beneath the headline in muted, lighter-weight type with relaxed line-height. One or two CTA buttons are arranged horizontally with equal height — the primary filled, the secondary ghost-outlined. Optional media (illustration, screenshot, or ambient gradient) appears below or beside the content. Brand preset fills the entire viewport height with decorative floating orbs in the background. Split preset uses a two-column grid with content on one side and media on the other.",
   "responsive": {
     "mobile": "Single column, stacked vertically. Headline drops to heading2 scale. CTAs stack full-width. Padding reduces to py8 px4. Media goes below content at full width. Min-height removed on brand/vision presets.",
