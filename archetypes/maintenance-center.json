@@ -43,7 +43,7 @@
         }
       ],
       "default_layout": [
-        "board"
+        "maintenance-board"
       ],
       "shell": "sidebar-main"
     },
@@ -57,7 +57,7 @@
         }
       ],
       "default_layout": [
-        "ticket"
+        "maintenance-ticket"
       ],
       "shell": "sidebar-main"
     },

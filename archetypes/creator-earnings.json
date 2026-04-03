@@ -47,8 +47,8 @@
         }
       ],
       "default_layout": [
-        "earnings",
-        "payout-preview"
+        "earnings-dashboard",
+        "payout-settings"
       ],
       "shell": "sidebar-main"
     },

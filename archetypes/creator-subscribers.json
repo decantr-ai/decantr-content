@@ -41,7 +41,7 @@
         }
       ],
       "default_layout": [
-        "subscriber-table"
+        "subscriber-list"
       ],
       "shell": "sidebar-main"
     },
@@ -60,8 +60,8 @@
         }
       ],
       "default_layout": [
-        "subscriber-header",
-        "subscriber-activity"
+        "detail-header",
+        "activity-feed"
       ],
       "shell": "sidebar-main"
     }

@@ -63,7 +63,7 @@
         }
       ],
       "default_layout": [
-        "members-table",
+        "data-table",
         "invite"
       ],
       "shell": "sidebar-main"

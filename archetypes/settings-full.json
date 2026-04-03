@@ -44,7 +44,7 @@
         }
       ],
       "default_layout": [
-        "settings"
+        "account-settings"
       ],
       "shell": "inherit"
     },
@@ -63,7 +63,7 @@
         }
       ],
       "default_layout": [
-        "security-settings",
+        "account-settings",
         "sessions"
       ],
       "shell": "inherit"
@@ -78,7 +78,7 @@
         }
       ],
       "default_layout": [
-        "settings"
+        "account-settings"
       ],
       "shell": "inherit"
     },
@@ -92,7 +92,7 @@
         }
       ],
       "default_layout": [
-        "settings"
+        "account-settings"
       ],
       "shell": "inherit"
     }

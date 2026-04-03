@@ -52,9 +52,9 @@
         }
       ],
       "default_layout": [
-        "reminder",
-        "setup",
-        "history"
+        "rent-reminder",
+        "tenant-payment-setup",
+        "payment-history"
       ],
       "shell": "top-nav-main"
     },
@@ -68,7 +68,7 @@
         }
       ],
       "default_layout": [
-        "setup"
+        "tenant-payment-setup"
       ],
       "shell": "top-nav-main"
     }

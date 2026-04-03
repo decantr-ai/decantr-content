@@ -41,7 +41,7 @@
         }
       ],
       "default_layout": [
-        "subscribe-checkout"
+        "checkout-flow"
       ],
       "shell": "minimal-header"
     },
@@ -55,7 +55,7 @@
         }
       ],
       "default_layout": [
-        "purchase-checkout"
+        "checkout-flow"
       ],
       "shell": "minimal-header"
     },
@@ -69,7 +69,7 @@
         }
       ],
       "default_layout": [
-        "success-message"
+        "chat-message"
       ],
       "shell": "minimal-header"
     }

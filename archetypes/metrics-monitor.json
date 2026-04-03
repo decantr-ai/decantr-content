@@ -74,8 +74,8 @@
         }
       ],
       "default_layout": [
-        "status",
-        "quad-split",
+        "status-bar",
+        "split-pane",
         "hotkeys"
       ],
       "shell": "terminal-split"
@@ -105,7 +105,7 @@
         }
       ],
       "default_layout": [
-        "status",
+        "status-bar",
         "detailed-chart",
         "metric-detail",
         "hotkeys"

@@ -47,7 +47,7 @@
       ],
       "default_layout": [
         "filters",
-        "content-grid"
+        "content-card-grid"
       ],
       "shell": "top-nav-main"
     },
@@ -61,7 +61,7 @@
         }
       ],
       "default_layout": [
-        "subscription-cards"
+        "card-grid"
       ],
       "shell": "top-nav-main"
     }

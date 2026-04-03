@@ -38,8 +38,8 @@
       "id": "billing",
       "default_layout": [
         "kpi-grid",
-        "pricing-table",
-        "order-history"
+        "pricing",
+        "payment-history"
       ],
       "shell": "sidebar-main"
     }
@@ -56,8 +56,8 @@
   "dependencies": {
     "patterns": {
       "kpi-grid": "^1.0.0",
-      "pricing-table": "^1.0.0",
-      "order-history": "^1.0.0"
+      "pricing": "^1.0.0",
+      "payment-history": "^1.0.0"
     },
     "styles": {}
   },

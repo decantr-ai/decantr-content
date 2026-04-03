@@ -80,8 +80,8 @@
         }
       ],
       "default_layout": [
-        "status",
-        "main-split",
+        "status-bar",
+        "split-pane",
         "hotkeys"
       ],
       "shell": "terminal-split"

@@ -36,7 +36,7 @@
     {
       "id": "games",
       "patterns": [
-        "search-bar",
+        "search-filter-bar",
         "filter-bar",
         {
           "pattern": "card-grid",
@@ -45,7 +45,7 @@
         }
       ],
       "default_layout": [
-        "search-bar",
+        "search-filter-bar",
         "filter-bar",
         {
           "pattern": "card-grid",
@@ -104,8 +104,8 @@
       "cta-section": "^1.0.0",
       "filter-bar": "^1.0.0",
       "hero": "^1.0.0",
-      "search-bar": "^1.0.0",
-      "testimonials": "^1.0.0"
+      "testimonials": "^1.0.0",
+      "search-filter-bar": "^1.0.0"
     },
     "styles": {}
   },

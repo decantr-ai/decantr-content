@@ -63,9 +63,9 @@
       ],
       "default_layout": [
         "financials",
-        "rent-collection",
+        "rent-roll",
         "vacancies",
-        "maintenance",
+        "maintenance-board",
         "properties"
       ],
       "shell": "sidebar-main"

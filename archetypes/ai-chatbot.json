@@ -56,9 +56,9 @@
         }
       ],
       "default_layout": [
-        "header",
-        "messages",
-        "input"
+        "chat-header",
+        "chat-thread",
+        "chat-input"
       ],
       "shell": "chat-portal"
     },
@@ -77,8 +77,8 @@
         }
       ],
       "default_layout": [
-        "empty-thread",
-        "input"
+        "chat-thread",
+        "chat-input"
       ],
       "shell": "chat-portal"
     }

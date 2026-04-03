@@ -70,7 +70,7 @@
       "patterns": [
         "detail-header",
         "kpi-grid",
-        "deploy-log",
+        "log-stream",
         "data-table"
       ],
       "default_layout": [
@@ -79,9 +79,9 @@
         {
           "cols": [
             {
-              "pattern": "deploy-log",
+              "pattern": "log-stream",
               "preset": "live",
-              "as": "deploy-log"
+              "as": "log-stream"
             },
             "data-table"
           ],
@@ -151,12 +151,12 @@
     {
       "id": "usage",
       "patterns": [
-        "resource-overview",
+        "stats-overview",
         "chart-grid"
       ],
       "default_layout": [
         {
-          "pattern": "resource-overview",
+          "pattern": "stats-overview",
           "preset": "gauge-grid",
           "as": "resource-gauges"
         },
@@ -216,13 +216,13 @@
       "chart-grid": "^1.0.0",
       "checklist-card": "^1.0.0",
       "data-table": "^1.0.0",
-      "deploy-log": "^1.0.0",
       "detail-header": "^1.0.0",
       "filter-bar": "^1.0.0",
       "kpi-grid": "^1.0.0",
-      "resource-overview": "^1.0.0",
       "service-catalog": "^1.0.0",
-      "status-board": "^1.0.0"
+      "status-board": "^1.0.0",
+      "log-stream": "^1.0.0",
+      "stats-overview": "^1.0.0"
     },
     "styles": {}
   },

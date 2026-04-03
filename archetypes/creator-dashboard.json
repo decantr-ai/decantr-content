@@ -53,9 +53,9 @@
         }
       ],
       "default_layout": [
-        "stats",
-        "earnings-summary",
-        "recent-activity"
+        "stats-overview",
+        "earnings-dashboard",
+        "activity-feed"
       ],
       "shell": "sidebar-main"
     }

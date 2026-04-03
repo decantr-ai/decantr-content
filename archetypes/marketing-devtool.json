@@ -65,8 +65,8 @@
       "default_layout": [
         "hero",
         "features",
-        "demo-terminal",
-        "demo-chart",
+        "terminal-emulator",
+        "chart-grid",
         "cta"
       ],
       "shell": "top-nav-footer"

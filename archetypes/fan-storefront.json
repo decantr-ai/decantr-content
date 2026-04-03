@@ -41,7 +41,7 @@
         }
       ],
       "default_layout": [
-        "creator-page"
+        "creator-profile"
       ],
       "shell": "top-nav-main"
     },
@@ -60,7 +60,7 @@
         }
       ],
       "default_layout": [
-        "single-post",
+        "post-list",
         "paywall"
       ],
       "shell": "top-nav-main"

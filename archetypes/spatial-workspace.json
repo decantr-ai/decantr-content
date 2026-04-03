@@ -67,7 +67,7 @@
     {
       "id": "workspace-settings",
       "default_layout": [
-        "settings-nav",
+        "nav-header",
         {
           "pattern": "form-sections",
           "preset": "structured",
@@ -108,7 +108,7 @@
       "holographic-control-bar": ">=1.0.0",
       "spatial-presence-ring": ">=1.0.0",
       "form-sections": ">=1.0.0",
-      "settings-nav": ">=1.0.0"
+      "nav-header": ">=1.0.0"
     },
     "styles": {}
   }

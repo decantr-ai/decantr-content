@@ -43,7 +43,7 @@
         }
       ],
       "default_layout": [
-        "grid"
+        "property-grid"
       ],
       "shell": "sidebar-main"
     },
@@ -57,7 +57,7 @@
         }
       ],
       "default_layout": [
-        "detail"
+        "property-detail"
       ],
       "shell": "sidebar-main"
     },
@@ -99,7 +99,7 @@
         }
       ],
       "default_layout": [
-        "unit"
+        "unit-detail"
       ],
       "shell": "sidebar-main"
     }

@@ -80,9 +80,9 @@
         }
       ],
       "default_layout": [
-        "nav",
-        "presence",
-        "editor",
+        "nav-header",
+        "presence-avatars",
+        "doc-editor",
         "comments"
       ],
       "shell": "workspace-aside"

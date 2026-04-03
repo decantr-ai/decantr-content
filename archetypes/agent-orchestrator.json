@@ -78,7 +78,7 @@
     {
       "id": "agent-config",
       "default_layout": [
-        "settings-nav",
+        "nav-header",
         {
           "pattern": "form-sections",
           "preset": "structured",
@@ -137,8 +137,8 @@
       "neural-feedback-loop": ">=1.0.0",
       "generative-card-grid": ">=1.0.0",
       "form-sections": ">=1.0.0",
-      "settings-nav": ">=1.0.0",
-      "hero": ">=1.0.0"
+      "hero": ">=1.0.0",
+      "nav-header": ">=1.0.0"
     },
     "styles": {}
   }

@@ -43,7 +43,7 @@
         }
       ],
       "default_layout": [
-        "content"
+        "legal-prose"
       ],
       "shell": "top-nav-footer"
     },
@@ -57,7 +57,7 @@
         }
       ],
       "default_layout": [
-        "content"
+        "legal-prose"
       ],
       "shell": "top-nav-footer"
     },
@@ -71,7 +71,7 @@
         }
       ],
       "default_layout": [
-        "content"
+        "legal-prose"
       ],
       "shell": "top-nav-footer"
     }

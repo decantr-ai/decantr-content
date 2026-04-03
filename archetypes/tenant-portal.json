@@ -58,9 +58,9 @@
       ],
       "default_layout": [
         "rent-reminder",
-        "profile",
-        "lease",
-        "maintenance"
+        "creator-profile",
+        "lease-manager",
+        "maintenance-board"
       ],
       "shell": "top-nav-main"
     },

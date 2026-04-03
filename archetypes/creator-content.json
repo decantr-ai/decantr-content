@@ -67,7 +67,7 @@
         }
       ],
       "default_layout": [
-        "uploader",
+        "content-uploader",
         "post-form"
       ],
       "shell": "sidebar-main"

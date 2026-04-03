@@ -43,7 +43,7 @@
         }
       ],
       "default_layout": [
-        "directory"
+        "tenant-directory"
       ],
       "shell": "sidebar-main"
     },
@@ -67,8 +67,8 @@
         }
       ],
       "default_layout": [
-        "profile",
-        "lease",
+        "creator-profile",
+        "lease-manager",
         "payments"
       ],
       "shell": "sidebar-main"
@@ -89,7 +89,7 @@
       ],
       "default_layout": [
         "form",
-        "lease-form"
+        "form"
       ],
       "shell": "sidebar-main"
     }

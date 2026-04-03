@@ -41,7 +41,7 @@
         }
       ],
       "default_layout": [
-        "tier-manager"
+        "tier-builder"
       ],
       "shell": "sidebar-main"
     }

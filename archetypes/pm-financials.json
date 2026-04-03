@@ -43,7 +43,7 @@
         }
       ],
       "default_layout": [
-        "pnl"
+        "pnl-dashboard"
       ],
       "shell": "sidebar-main"
     },

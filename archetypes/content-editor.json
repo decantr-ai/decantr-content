@@ -39,7 +39,7 @@
       "id": "content-new",
       "path": "/dashboard/content/new",
       "default_layout": [
-        "content-editor-form",
+        "form",
         "json-viewer"
       ],
       "shell": "sidebar-main"
@@ -48,7 +48,7 @@
       "id": "content-edit",
       "path": "/dashboard/content/[id]/edit",
       "default_layout": [
-        "content-editor-form",
+        "form",
         "json-viewer"
       ],
       "shell": "sidebar-main"

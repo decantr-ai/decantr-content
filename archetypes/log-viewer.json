@@ -54,7 +54,7 @@
         }
       ],
       "default_layout": [
-        "status",
+        "status-bar",
         "log-stream",
         "hotkeys"
       ],
@@ -80,7 +80,7 @@
         }
       ],
       "default_layout": [
-        "status",
+        "status-bar",
         "grouped-logs",
         "hotkeys"
       ],

@@ -90,7 +90,7 @@
         }
       ],
       "default_layout": [
-        "pricing-detail",
+        "pricing",
         "faq"
       ],
       "shell": "top-nav-footer"
