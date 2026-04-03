@@ -80,6 +80,11 @@
     "tablet": "Standard row layout maintained. Action buttons use icon-only mode to save horizontal space.",
     "desktop": "Full row layout with all elements visible inline. Generous horizontal spacing between key info, scopes, dates, and actions."
   },
+  "layout_hints": {
+    "row_layout": "Key icon (16px, muted) + key name (font-semibold) + masked value (mono-data, ••••••••) + copy button (ghost) + delete button (ghost, danger on hover). Last used timestamp on far right.",
+    "reveal": "Click masked value to reveal for 5 seconds, then re-mask. Copy button copies full key.",
+    "create_form": "Inline form at top: text input for key name + Create button (primary). Appears on 'New API Key' click."
+  },
   "composition": {
     "ApiKeyRow": "Row(d-data-row, hoverable) > [KeyIcon + KeyInfo + ScopeBadges + DateInfo + Actions]",
     "KeyInfo": "Stack(flex-col) > [KeyName(font-medium) + MaskedKey(mono-data, text-muted)]",

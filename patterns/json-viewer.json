@@ -81,6 +81,11 @@
     }
   },
   "visual_brief": "Code viewer panel with a header toolbar containing a title and a copy-to-clipboard button. The body displays syntax-highlighted JSON with color-coded keys (accent color), string values (green), numbers (blue), booleans (orange), and null (muted). Collapsible nodes show expand/collapse chevron icons next to objects and arrays, with an item count badge when collapsed (e.g., '{3}' or '[5]'). Line numbers appear in a left gutter column. The inline preset removes the header and renders JSON inline with reduced formatting. The diff preset highlights additions in green background and removals in red background.",
+  "layout_hints": {
+    "viewer_treatment": "Use lum-code-block: dark bg (#111113 or var(--d-surface)) with colored top border (2px, accent). Monospace font. Line numbers in text-muted.",
+    "toolbar": "Header bar: title (filename or 'Preview') left, Copy button (ghost) right. Language badge if applicable.",
+    "syntax": "Syntax highlighting using theme accent colors: strings=amber, numbers=cyan, keys=coral, booleans=green."
+  },
   "responsive": {
     "mobile": "Full-width viewer with horizontal scroll for deeply nested content. Nodes default to collapsed beyond depth 2. Copy button prominently placed.",
     "tablet": "Standard viewer width. Nodes expand to depth 3 by default.",

@@ -83,6 +83,11 @@
       "date-range"
     ]
   },
+  "layout_hints": {
+    "stat_treatment": "Each KPI uses lum-stat-glow: filled circle in accent/primary color with number inside (dark text). Label below in text-muted. Sparkline trend to the right.",
+    "animation": "Counter animation on mount — numbers count from 0 to value over 500ms.",
+    "grid": "4 columns desktop, 2 tablet, 1 mobile. Cards should breathe — generous padding."
+  },
   "composition": {
     "KPIGrid": "Grid(d-section, responsive: 2/4-col) > KPICard[]",
     "KPICard": "Card(d-surface, padding) > [Icon(d-annotation, rounded-bg) + Label(text-muted, text-sm) + Value(heading2, mono-data) + TrendBadge(d-annotation, variant: positive|negative)]"

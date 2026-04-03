@@ -114,6 +114,11 @@
     "tablet": "Two-column grid. Standard card sizes with full descriptions visible.",
     "desktop": "Three or four column grid depending on container width. Cards show all metadata and actions."
   },
+  "layout_hints": {
+    "card_treatment": "Each card uses lum-card-outlined: transparent bg, colored border-left (3px) by content type — coral for patterns, amber for themes, cyan for blueprints, green for shells. Hover: border-color intensifies + translateY(-2px) + subtle shadow.",
+    "card_content": "Card shows: type badge (d-annotation) top-left, title (font-semibold), namespace-badge, one-line description, bottom row: version + download count + compatibility badge. Clean vertical stack with gap-2.",
+    "grid_layout": "Responsive grid: 3 columns desktop, 2 tablet, 1 mobile. Gap: 1rem. Equal height cards per row."
+  },
   "composition": {
     "ContentCardGrid": "Grid(d-section, responsive: 1/2/3-col) > ContentCard[]",
     "ContentCard": "Card(d-surface, hoverable) > [CardHeader > [TypeBadge(d-annotation, color-coded) + NamespaceBadge(d-annotation)] + CardBody > [Title(heading4, clickable) + Description(text-muted, line-clamp-2)] + CardFooter > [Version(mono-data) + DownloadCount + UpdatedAt(text-muted)]]",

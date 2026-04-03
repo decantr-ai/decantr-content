@@ -100,6 +100,7 @@
     "nav_position": "For settings pages, vertical tab nav on the left. Content area scrolls independently.",
     "spacing": "Nav items have consistent padding. Active item stands out but doesn't shift layout."
   },
+  "visual_brief": "Settings page with vertical navigation tabs on the left (Profile, Security, Notifications, Danger Zone) and form content on the right. Active tab highlighted with primary left-border. Each settings section is a d-surface card with grouped form fields, section heading, and Save button at bottom-right.",
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap8",

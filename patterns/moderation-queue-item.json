@@ -95,6 +95,11 @@
     "tablet": "Standard card layout. Buttons side by side in the footer.",
     "desktop": "Full card with content preview visible. Buttons inline in footer. Feedback textarea expandable."
   },
+  "layout_hints": {
+    "card_layout": "Bordered card: type badge (d-annotation) + title + namespace + submitted-by + submitted-at. Right side: Approve (primary) + Reject (danger ghost) action buttons.",
+    "status_indicator": "Left border colored by status: pending=amber, approved=green, rejected=red.",
+    "density": "Compact cards — this is an admin worklist, not a showcase. Minimal vertical padding."
+  },
   "composition": {
     "ModerationQueueItem": "Card(d-surface, bordered) > [Header + SubmitterRow + ContentPreview + AdminNotes? + ActionBar]",
     "Header": "CardHeader > [TypeBadge(d-annotation, color-coded) + ContentName(heading4) + Timestamp(text-muted)]",

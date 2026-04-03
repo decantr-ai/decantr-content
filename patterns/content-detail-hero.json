@@ -87,6 +87,11 @@
     "tablet": "Standard layout. Action buttons align right of the title. Breadcrumb shows full path.",
     "desktop": "Full layout with action group floating right. All metadata and breadcrumb visible in one comfortable view."
   },
+  "layout_hints": {
+    "hero_layout": "Full-width section with breadcrumb trail (type > namespace > slug). Large title (heading2) with namespace-badge inline. Metadata row: version, downloads, last updated, compatibility. For themes: live color swatch. For patterns: component count + slot summary.",
+    "background": "Subtle gradient matching content type color at 5-8% opacity, fading to var(--d-bg).",
+    "actions": "Right-aligned action buttons: Install (primary), Preview (ghost), Fork (ghost). Mobile: full-width stacked."
+  },
   "composition": {
     "ContentDetailHero": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + BadgeRow + Title(heading2) + Description(text-muted) + MetaRow + ActionGroup]",
     "BadgeRow": "Row(gap-2) > [TypeChip(d-annotation, color-coded) + NamespaceBadge(d-annotation)]",

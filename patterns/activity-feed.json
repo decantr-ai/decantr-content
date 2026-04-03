@@ -121,6 +121,11 @@
       "mark-read"
     ]
   },
+  "layout_hints": {
+    "event_treatment": "Each event row: small colored dot (8px, color by event type) + timestamp (mono-data, text-xs) + description. Hover: subtle bg highlight.",
+    "grouping": "Group events by date. Date header: d-label with accent left-border. Today/Yesterday labels, then ISO dates.",
+    "empty_state": "Encouraging: 'No activity yet. Publish your first item to see it here.'"
+  },
   "composition": {
     "ActivityFeed": "Container(d-data, flex-col, full-width) > [DateGroup[] + LoadMore?(d-interactive)]",
     "DateGroup": "Section > [DateHeader(d-annotation, text-muted) + FeedItem[]]",

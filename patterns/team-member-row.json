@@ -106,6 +106,10 @@
     "tablet": "Standard row layout. All fields visible. Actions as text buttons.",
     "desktop": "Full row with generous spacing. All information and actions visible inline."
   },
+  "layout_hints": {
+    "row_layout": "Avatar (32px circle) + name (font-semibold) + email (text-muted) + role badge (d-annotation: owner/admin/member) + actions dropdown (ghost). Hover: subtle bg.",
+    "invite_form": "Inline invite form: email input + role dropdown + Invite button. Appears above member list."
+  },
   "composition": {
     "TeamMemberRow": "Row(d-data-row, hoverable) > [Avatar + MemberInfo + RoleBadge(d-annotation) + JoinDate(text-muted) + Actions]",
     "MemberInfo": "Stack(flex-col) > [Name(font-medium) + Email(text-muted, text-sm)]",

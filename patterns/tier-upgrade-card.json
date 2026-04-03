@@ -108,6 +108,10 @@
     "tablet": "Two or three column card comparison. Standard card sizes.",
     "desktop": "Three-column comparison layout. Highlighted plan slightly elevated. Generous feature list spacing."
   },
+  "layout_hints": {
+    "card_treatment": "Current plan highlighted with primary border + 'Current' badge. Upgrade options show price, feature list, and Upgrade CTA (primary).",
+    "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color."
+  },
   "composition": {
     "TierUpgradeCard": "Card(d-surface, bordered) > [CardHeader > [PlanName(heading4) + PopularBadge?(d-annotation)] + Price(mono-data, heading2) + Description(text-muted) + FeatureList + CTAButton]",
     "FeatureList": "List > FeatureItem(d-data-row) > [CheckIcon(color: success) + FeatureText][]",

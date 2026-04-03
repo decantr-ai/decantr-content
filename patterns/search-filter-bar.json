@@ -104,6 +104,11 @@
     "tablet": "Search and filters fit in two rows. Type tabs visible. Dropdowns inline.",
     "desktop": "Single or two row bar with all controls visible. Type tabs, namespace, and sort all inline."
   },
+  "layout_hints": {
+    "search_input": "Full-width search input with magnifying glass icon. On focus: border transitions to accent color. Placeholder: 'Search patterns, themes, blueprints...'",
+    "filter_tabs": "Type tabs below search: All, Patterns, Themes, Blueprints, Shells. Active tab uses primary bg with white text (pill shape). Inactive: ghost.",
+    "sort_dropdown": "Right-aligned sort: Relevance, Most Downloaded, Recently Updated, Name A-Z."
+  },
   "composition": {
     "SearchFilterBar": "Row(d-control, full-width) > [SearchInput(d-control, icon: search, real-time) + TypeTabs > Tab(d-interactive)[] + NamespaceSelect(d-control) + SortSelect(d-control)]",
     "ActiveFilters": "Row(gap-2) > Chip(d-annotation, removable)[]"
