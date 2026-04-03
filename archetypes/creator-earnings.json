@@ -83,7 +83,8 @@
   "dependencies": {
     "patterns": {
       "earnings-dashboard": "^1.0.0",
-      "payout-settings": "^1.0.0"
+      "payout-settings": "^1.0.0",
+      "sparkline-cell": "^1.0.0"
     },
     "styles": {}
   },

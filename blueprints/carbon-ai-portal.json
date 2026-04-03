@@ -231,5 +231,11 @@
         "label": "Go to Settings"
       }
     ]
-  }
+  },
+  "suggested_themes": [
+    "carbon",
+    "glassmorphism",
+    "clean",
+    "launchpad"
+  ]
 }

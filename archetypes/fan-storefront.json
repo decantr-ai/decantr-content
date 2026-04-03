@@ -38,10 +38,16 @@
           "pattern": "creator-profile",
           "preset": "standard",
           "as": "creator-page"
+        },
+        {
+          "pattern": "comparison-table",
+          "preset": "highlight",
+          "as": "tier-comparison"
         }
       ],
       "default_layout": [
-        "creator-profile"
+        "creator-profile",
+        "tier-comparison"
       ],
       "shell": "top-nav-main"
     },
@@ -83,7 +89,8 @@
     "patterns": {
       "creator-profile": "^1.0.0",
       "content-feed": "^1.0.0",
-      "unlock-gate": "^1.0.0"
+      "unlock-gate": "^1.0.0",
+      "comparison-table": "^1.0.0"
     },
     "styles": {}
   },

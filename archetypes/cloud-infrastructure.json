@@ -71,7 +71,12 @@
         "detail-header",
         "kpi-grid",
         "log-stream",
-        "data-table"
+        "data-table",
+        {
+          "pattern": "trace-waterfall",
+          "preset": "compact",
+          "as": "request-trace"
+        }
       ],
       "default_layout": [
         "detail-header",
@@ -86,7 +91,8 @@
             "data-table"
           ],
           "at": "lg"
-        }
+        },
+        "request-trace"
       ],
       "shell": "sidebar-main"
     },
@@ -121,14 +127,20 @@
     {
       "id": "services",
       "patterns": [
-        "service-catalog"
+        "service-catalog",
+        {
+          "pattern": "service-map",
+          "preset": "graph",
+          "as": "topology"
+        }
       ],
       "default_layout": [
         {
           "pattern": "service-catalog",
           "preset": "grid",
           "as": "service-grid"
-        }
+        },
+        "topology"
       ],
       "shell": "sidebar-main"
     },
@@ -222,7 +234,9 @@
       "service-catalog": "^1.0.0",
       "status-board": "^1.0.0",
       "log-stream": "^1.0.0",
-      "stats-overview": "^1.0.0"
+      "stats-overview": "^1.0.0",
+      "service-map": "^1.0.0",
+      "trace-waterfall": "^1.0.0"
     },
     "styles": {}
   },

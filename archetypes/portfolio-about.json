@@ -1,0 +1,79 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "portfolio-about",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Portfolio About",
+  "description": "Bio, skills, and contact pages for a personal portfolio. Professional yet personal presentation with skill badges and a contact form.",
+  "tags": ["portfolio", "about", "bio", "skills", "contact", "2026"],
+  "classification": {
+    "triggers": {
+      "primary": ["portfolio about", "portfolio bio", "portfolio contact", "portfolio skills"],
+      "secondary": ["about me", "skill badges", "personal bio", "contact page", "resume"],
+      "negative": ["dashboard", "analytics", "admin"]
+    },
+    "implies": [],
+    "weight": 0.8,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "about",
+      "patterns": [
+        {
+          "pattern": "hero",
+          "preset": "brand",
+          "as": "about-hero"
+        }
+      ],
+      "default_layout": ["about-hero"],
+      "shell": "top-nav-main"
+    },
+    {
+      "id": "skills",
+      "patterns": [
+        {
+          "pattern": "card-grid",
+          "preset": "icon",
+          "as": "skill-grid"
+        }
+      ],
+      "default_layout": ["skill-grid"],
+      "shell": "top-nav-main"
+    },
+    {
+      "id": "contact-page",
+      "patterns": [
+        {
+          "pattern": "contact-form",
+          "preset": "standard",
+          "as": "contact"
+        }
+      ],
+      "default_layout": ["contact"],
+      "shell": "top-nav-main"
+    }
+  ],
+  "page_briefs": {
+    "about": "Brand hero with a strong personal photo, concise bio text, and a CTA to view work or get in touch. Clean layout with confident typography. Personal but professional tone.",
+    "skills": "Icon card grid displaying skill areas. Each card has an icon, skill name, and brief proficiency description. Cards are grouped by category (design, development, tools, etc.).",
+    "contact-page": "Clean contact form with name, email, and message fields. Optional social links displayed alongside. Minimal and inviting, encouraging visitors to reach out."
+  },
+  "features": ["contact-form", "social-links"],
+  "shells": {
+    "top-nav-main": "Fixed top navigation bar with main content area below"
+  },
+  "dependencies": {
+    "patterns": {
+      "hero": ">=1.0.0",
+      "card-grid": ">=1.0.0",
+      "contact-form": ">=1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": ["auradecantism"],
+    "modes": ["dark", "light"]
+  }
+}

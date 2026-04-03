@@ -25,7 +25,7 @@
     "shape": "rounded",
     "id": "carbon-neon"
   },
-  "personality": "Confident cyber-minimal agent marketplace. Neon accent glows on dark void backgrounds. Monospace data typography. Agent status shown through color-coded rings and pulse animations. Think Linear meets a mission control center. Lucide icons. No decorative elements \u2014 every pixel serves the operator.",
+  "personality": "Confident cyber-minimal agent marketplace. Neon accent glows on dark void backgrounds. Monospace data typography. Agent status shown through color-coded rings and pulse animations. Think Linear meets a mission control center. Lucide icons. No decorative elements — every pixel serves the operator.",
   "voice": {
     "tone": "Operational and precise. Speaks to agent operators and platform engineers. Data-first, minimal prose.",
     "cta_verbs": [
@@ -191,5 +191,11 @@
       "marketing-saas": ">=1.0.0",
       "ai-transparency": ">=1.0.0"
     }
-  }
+  },
+  "suggested_themes": [
+    "carbon-neon",
+    "carbon",
+    "terminal",
+    "neon-cyber"
+  ]
 }

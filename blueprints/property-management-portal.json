@@ -334,5 +334,11 @@
         "label": "Go to Financials"
       }
     ]
-  }
+  },
+  "suggested_themes": [
+    "estate",
+    "clean",
+    "launchpad",
+    "government"
+  ]
 }

@@ -1,0 +1,145 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "listing-browser",
+  "role": "primary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Listing Browser",
+  "description": "Browse and search marketplace listings with grid, map, and detail views. Core discovery interface for two-sided marketplaces.",
+  "tags": [
+    "marketplace",
+    "listings",
+    "browse",
+    "search",
+    "discovery"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "browse listings",
+        "marketplace search",
+        "listing directory",
+        "product discovery"
+      ],
+      "secondary": [
+        "search results",
+        "map view",
+        "listing detail",
+        "filters",
+        "image gallery"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "browse",
+      "patterns": [
+        {
+          "pattern": "search-filter-bar",
+          "preset": "standard",
+          "as": "search-filters"
+        },
+        {
+          "pattern": "card-grid",
+          "preset": "product",
+          "as": "listings"
+        },
+        {
+          "pattern": "map-view",
+          "preset": "pins",
+          "as": "map"
+        }
+      ],
+      "default_layout": [
+        "search-filters",
+        "listings",
+        "map"
+      ],
+      "shell": "top-nav-main"
+    },
+    {
+      "id": "listing-detail",
+      "patterns": [
+        {
+          "pattern": "detail-header",
+          "preset": "standard",
+          "as": "header"
+        },
+        {
+          "pattern": "comparison-table",
+          "preset": "highlight",
+          "as": "details"
+        },
+        {
+          "pattern": "calendar-view",
+          "preset": "week",
+          "as": "availability"
+        }
+      ],
+      "default_layout": [
+        "header",
+        "details",
+        "availability"
+      ],
+      "shell": "top-nav-main"
+    },
+    {
+      "id": "search",
+      "patterns": [
+        {
+          "pattern": "search-filter-bar",
+          "preset": "standard",
+          "as": "search-filters"
+        },
+        {
+          "pattern": "card-grid",
+          "preset": "product",
+          "as": "results"
+        }
+      ],
+      "default_layout": [
+        "search-filters",
+        "results"
+      ],
+      "shell": "top-nav-main"
+    }
+  ],
+  "page_briefs": {
+    "browse": "Full-width browse view with a sticky search and filter bar at the top. Below, a responsive card grid displays listing thumbnails, prices, and ratings. A toggle switches between grid and map view, where pins represent listing locations with hover previews.",
+    "listing-detail": "Immersive listing detail page with a large image gallery header, title, price, and host info. Scrolling reveals a comparison-style feature table with highlighted attributes, followed by a weekly calendar showing availability slots and a booking CTA.",
+    "search": "Focused search results page with the search filter bar pre-populated from the query. Results render as a product card grid with sort controls and pagination. Faceted filters on the left narrow by category, price range, and rating."
+  },
+  "features": [
+    "search",
+    "filters",
+    "map-view",
+    "image-gallery"
+  ],
+  "shells": {
+    "top-nav-main": "Top navigation bar with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "search-filter-bar": "^1.0.0",
+      "card-grid": "^1.0.0",
+      "map-view": "^1.0.0",
+      "detail-header": "^1.0.0",
+      "comparison-table": "^1.0.0",
+      "calendar-view": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
+}

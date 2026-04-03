@@ -193,5 +193,11 @@
       "og:title",
       "og:description"
     ]
-  }
+  },
+  "suggested_themes": [
+    "launchpad",
+    "carbon",
+    "fintech",
+    "government"
+  ]
 }

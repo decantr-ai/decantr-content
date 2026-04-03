@@ -30,8 +30,21 @@
   "personality": "Retro-modern terminal aesthetic with phosphor green or amber text on pure black backgrounds. All typography is monospace. Borders use ASCII box-drawing characters. Split-pane layout mimics tmux/screen sessions. Log streams auto-scroll with ANSI color rendering. Metrics display as ASCII sparklines and bar charts. Configuration files show with syntax highlighting. Optional CRT scanline effect for full immersion. Dark mode only — no light theme. Think htop meets Datadog in a terminal emulator.",
   "voice": {
     "tone": "Terse and command-line native. Uses Unix conventions. Status messages read like stdout. No marketing language.",
-    "cta_verbs": ["Run", "Tail", "Filter", "Grep", "Export", "Connect"],
-    "avoid": ["Submit", "Click here", "Please enter", "Welcome", "Amazing"],
+    "cta_verbs": [
+      "Run",
+      "Tail",
+      "Filter",
+      "Grep",
+      "Export",
+      "Connect"
+    ],
+    "avoid": [
+      "Submit",
+      "Click here",
+      "Please enter",
+      "Welcome",
+      "Amazing"
+    ],
     "empty_states": "Command-line style. An empty log view should show a prompt-like message: 'No logs matching filter. Try adjusting --level or --source flags.'",
     "errors": "stderr-style. Show exit codes, timestamps, and affected services. Format as log lines, not modal dialogs.",
     "loading": "Blinking cursor on empty panes. Streaming log lines appear one by one. Metrics counters increment from zero. No skeleton screens — terminals do not have skeletons."
@@ -214,5 +227,11 @@
       "scanlines": "optional",
       "flicker": "disabled"
     }
-  }
+  },
+  "suggested_themes": [
+    "terminal",
+    "carbon-neon",
+    "fintech",
+    "neon-cyber"
+  ]
 }

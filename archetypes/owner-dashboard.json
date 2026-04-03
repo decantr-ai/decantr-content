@@ -59,9 +59,15 @@
           "pattern": "vacancy-tracker",
           "preset": "mini",
           "as": "vacancies"
+        },
+        {
+          "pattern": "notification-center",
+          "preset": "dropdown",
+          "as": "alerts"
         }
       ],
       "default_layout": [
+        "alerts",
         "financials",
         "rent-roll",
         "vacancies",
@@ -88,7 +94,9 @@
       "property-grid": "^1.0.0",
       "rent-roll": "^1.0.0",
       "maintenance-board": "^1.0.0",
-      "vacancy-tracker": "^1.0.0"
+      "vacancy-tracker": "^1.0.0",
+      "notification-center": "^1.0.0",
+      "sparkline-cell": "^1.0.0"
     },
     "styles": {}
   },

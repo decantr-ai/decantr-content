@@ -77,12 +77,24 @@
           "pattern": "version-history",
           "preset": "sidebar",
           "as": "history"
+        },
+        {
+          "pattern": "breadcrumb-nav",
+          "preset": "standard",
+          "as": "doc-breadcrumbs"
+        },
+        {
+          "pattern": "emoji-reaction-bar",
+          "preset": "inline",
+          "as": "reactions"
         }
       ],
       "default_layout": [
+        "doc-breadcrumbs",
         "nav-header",
         "presence-avatars",
         "doc-editor",
+        "reactions",
         "comments"
       ],
       "shell": "workspace-aside"
@@ -117,7 +129,9 @@
       "activity-feed": "^1.0.0",
       "block-toolbar": "^1.0.0",
       "slash-command": "^1.0.0",
-      "mention-popup": "^1.0.0"
+      "mention-popup": "^1.0.0",
+      "breadcrumb-nav": "^1.0.0",
+      "emoji-reaction-bar": "^1.0.0"
     },
     "styles": {}
   },

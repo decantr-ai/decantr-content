@@ -1,26 +1,40 @@
 {
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "portfolio",
-  "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "version": "2.0.0",
+  "decantr_compat": ">=1.5.0",
   "name": "Portfolio",
-  "description": "Single-page brand landing site with stunning hero, feature showcase, social proof, and conversion-focused layout.",
-  "tags": [],
+  "description": "Bold, expressive portfolio with project showcase, about/skills pages, and a personal blog. Multi-archetype composition with full-bleed project views, bio and contact pages, and comfortable reading typography.",
+  "tags": [
+    "portfolio",
+    "creative",
+    "showcase",
+    "projects",
+    "blog",
+    "2026"
+  ],
   "compose": [
-    "portfolio"
+    "portfolio-showcase",
+    "portfolio-about",
+    "portfolio-blog",
+    "auth-flow",
+    "settings"
   ],
   "theme": {
-    "id": "auradecantism"
+    "id": "auradecantism",
+    "mode": "dark",
+    "shape": "rounded"
   },
-  "personality": "Bold, expressive portfolio that lets the work shine. Large hero with confident typography and a strong CTA. Project showcases use generous whitespace and full-bleed imagery. Subtle scroll-triggered animations add polish without distraction. Social proof and testimonials provide credibility. The overall feel is curated gallery meets personal brand statement.",
+  "personality": "Bold, expressive portfolio that lets the work shine. Large hero with confident typography and strong CTA. Project showcases use generous whitespace and large imagery. Dark backgrounds make visual work pop. Case studies flow like stories with full-bleed images and concise text blocks. The about page is personal but professional — one strong photo, concise bio, skill badges. Blog posts use comfortable reading typography. Lucide icons. Every pixel showcases craft.",
   "voice": {
-    "tone": "Confident and personal. First-person where appropriate. Speaks with authority about craft.",
+    "tone": "Confident and personal. Shows, doesn't tell.",
     "cta_verbs": [
-      "View project",
-      "Get in touch",
-      "See my work",
+      "View",
       "Explore",
-      "Connect"
+      "Read",
+      "Connect",
+      "Download",
+      "Browse"
     ],
     "avoid": [
       "Submit",
@@ -32,45 +46,88 @@
     "errors": "Brief and low-key. Contact form errors should guide without breaking the creative flow.",
     "loading": "Fade-in content blocks with subtle opacity transitions. No spinners — the portfolio should feel curated, not loading."
   },
-  "overrides": {},
-  "dependencies": {
-    "archetypes": {
-      "portfolio": "^1.0.0"
-    }
-  },
   "features": [
     "analytics",
-    "contact-form"
+    "contact-form",
+    "gallery",
+    "markdown",
+    "auth",
+    "keyboard-shortcuts"
   ],
   "routes": {
-    "/": {
-      "shell": "top-nav-main",
-      "archetype": "portfolio",
-      "page": "home"
+    "/projects": {
+      "shell": "full-bleed",
+      "archetype": "portfolio-showcase",
+      "page": "projects"
     },
     "/projects/:id": {
-      "shell": "top-nav-main",
-      "archetype": "portfolio",
+      "shell": "full-bleed",
+      "archetype": "portfolio-showcase",
       "page": "project-detail"
     },
     "/about": {
       "shell": "top-nav-main",
-      "archetype": "portfolio",
+      "archetype": "portfolio-about",
       "page": "about"
+    },
+    "/skills": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio-about",
+      "page": "skills"
     },
     "/contact": {
       "shell": "top-nav-main",
-      "archetype": "portfolio",
-      "page": "contact"
+      "archetype": "portfolio-about",
+      "page": "contact-page"
+    },
+    "/blog": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio-blog",
+      "page": "blog"
+    },
+    "/blog/:id": {
+      "shell": "top-nav-main",
+      "archetype": "portfolio-blog",
+      "page": "blog-post"
+    },
+    "/login": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "login"
+    },
+    "/register": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "register"
+    },
+    "/forgot-password": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "forgot-password"
+    },
+    "/settings": {
+      "shell": "sidebar-main",
+      "archetype": "settings",
+      "page": "settings"
+    }
+  },
+  "overrides": {},
+  "dependencies": {
+    "archetypes": {
+      "portfolio-showcase": ">=1.0.0",
+      "portfolio-about": ">=1.0.0",
+      "portfolio-blog": ">=1.0.0",
+      "auth-flow": ">=1.0.0",
+      "settings": ">=1.0.0"
     }
   },
   "navigation": {
     "command_palette": true,
     "hotkeys": [
       {
-        "key": "g h",
-        "route": "/",
-        "label": "Go to Home"
+        "key": "g p",
+        "route": "/projects",
+        "label": "Go to Projects"
       },
       {
         "key": "g a",
@@ -78,9 +135,19 @@
         "label": "Go to About"
       },
       {
+        "key": "g s",
+        "route": "/skills",
+        "label": "Go to Skills"
+      },
+      {
         "key": "g c",
         "route": "/contact",
         "label": "Go to Contact"
+      },
+      {
+        "key": "g b",
+        "route": "/blog",
+        "label": "Go to Blog"
       }
     ]
   },
@@ -88,12 +155,20 @@
     "schema_org": [
       "WebSite",
       "Person",
-      "ProfilePage"
+      "ProfilePage",
+      "Blog"
     ],
     "meta_priorities": [
       "description",
       "og:title",
       "og:image"
     ]
-  }
+  },
+  "suggested_themes": [
+    "auradecantism",
+    "luminarum",
+    "earth",
+    "neo-tokyo",
+    "editorial"
+  ]
 }

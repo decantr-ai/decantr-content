@@ -40,9 +40,15 @@
           "pattern": "maintenance-board",
           "preset": "board",
           "as": "board"
+        },
+        {
+          "pattern": "kanban-board",
+          "preset": "standard",
+          "as": "maintenance-board"
         }
       ],
       "default_layout": [
+        "board",
         "maintenance-board"
       ],
       "shell": "sidebar-main"
@@ -93,7 +99,8 @@
   "dependencies": {
     "patterns": {
       "maintenance-board": "^1.0.0",
-      "maintenance-ticket": "^1.0.0"
+      "maintenance-ticket": "^1.0.0",
+      "kanban-board": "^1.0.0"
     },
     "styles": {}
   },

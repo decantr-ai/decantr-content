@@ -1,0 +1,98 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "marketplace-messaging",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Marketplace Messaging",
+  "description": "Dedicated message center for marketplace buyer-seller communication with conversation list and threaded chat views.",
+  "tags": [
+    "marketplace",
+    "messaging",
+    "chat",
+    "communication",
+    "inbox"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "marketplace messaging",
+        "buyer seller chat",
+        "message center",
+        "inbox"
+      ],
+      "secondary": [
+        "conversation thread",
+        "direct message",
+        "listing inquiry"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "messages",
+      "patterns": [
+        {
+          "pattern": "conversation-list",
+          "preset": "standard",
+          "as": "inbox"
+        },
+        {
+          "pattern": "chat-thread",
+          "preset": "standard",
+          "as": "active-thread"
+        }
+      ],
+      "default_layout": [
+        "inbox",
+        "active-thread"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "thread",
+      "patterns": [
+        {
+          "pattern": "chat-thread",
+          "preset": "standard",
+          "as": "conversation"
+        }
+      ],
+      "default_layout": [
+        "conversation"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "page_briefs": {
+    "messages": "Split-panel message center. Left panel lists all conversations sorted by most recent, with avatar, participant name, listing thumbnail, last message preview, and unread badge. Right panel shows the selected conversation thread with message bubbles, timestamps, and a contextual listing card pinned at the top for reference.",
+    "thread": "Full-width single conversation view for mobile or focused reading. Message bubbles with sender avatars, timestamps, and read receipts scroll vertically. The referenced listing appears as a compact card at the top. Text input with attachment and emoji controls anchors at the bottom."
+  },
+  "features": [
+    "messaging",
+    "contextual-listing-cards"
+  ],
+  "shells": {
+    "sidebar-main": "Sidebar navigation with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "conversation-list": "^1.0.0",
+      "chat-thread": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
+}

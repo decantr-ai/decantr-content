@@ -145,5 +145,11 @@
       "og:title",
       "og:description"
     ]
-  }
+  },
+  "suggested_themes": [
+    "gaming-guild",
+    "neo-tokyo",
+    "dopamine",
+    "neon-cyber"
+  ]
 }

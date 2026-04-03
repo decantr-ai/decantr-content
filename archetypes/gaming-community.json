@@ -74,11 +74,23 @@
       "id": "news",
       "patterns": [
         "filter-bar",
-        "post-list"
+        "post-list",
+        {
+          "pattern": "emoji-reaction-bar",
+          "preset": "inline",
+          "as": "reactions"
+        },
+        {
+          "pattern": "notification-center",
+          "preset": "dropdown",
+          "as": "notifications"
+        }
       ],
       "default_layout": [
+        "notifications",
         "filter-bar",
-        "post-list"
+        "post-list",
+        "reactions"
       ],
       "shell": "sidebar-main"
     },
@@ -167,7 +179,9 @@
       "leaderboard": "^1.0.0",
       "post-list": "^1.0.0",
       "stats-bar": "^1.0.0",
-      "timeline": "^1.0.0"
+      "timeline": "^1.0.0",
+      "emoji-reaction-bar": "^1.0.0",
+      "notification-center": "^1.0.0"
     },
     "styles": {}
   },

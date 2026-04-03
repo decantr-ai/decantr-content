@@ -71,11 +71,22 @@
           "pattern": "hotkey-bar",
           "preset": "standard",
           "as": "hotkeys"
+        },
+        {
+          "pattern": "sparkline-cell",
+          "preset": "standard",
+          "as": "metric-sparklines"
+        },
+        {
+          "pattern": "usage-meter",
+          "preset": "bar",
+          "as": "resource-usage"
         }
       ],
       "default_layout": [
         "status-bar",
         "split-pane",
+        "resource-usage",
         "hotkeys"
       ],
       "shell": "terminal-split"
@@ -134,7 +145,9 @@
       "metric-gauge": "^1.0.0",
       "ascii-chart": "^1.0.0",
       "retro-table": "^1.0.0",
-      "hotkey-bar": "^1.0.0"
+      "hotkey-bar": "^1.0.0",
+      "sparkline-cell": "^1.0.0",
+      "usage-meter": "^1.0.0"
     },
     "styles": {
       "terminal": "^1.0.0"

@@ -342,5 +342,12 @@
         "label": "Go to Tiers"
       }
     ]
-  }
+  },
+  "suggested_themes": [
+    "studio",
+    "neo-tokyo",
+    "dopamine",
+    "auradecantism",
+    "clean"
+  ]
 }

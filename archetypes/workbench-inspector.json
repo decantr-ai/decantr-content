@@ -1,0 +1,110 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "workbench-inspector",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Workbench Inspector",
+  "description": "Property inspector and live preview for the design-system workbench. Editable form sections for component properties with real-time preview in split-pane layout.",
+  "tags": [
+    "inspector",
+    "preview",
+    "properties",
+    "design-system",
+    "live-edit",
+    "2026"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "property inspector",
+        "component inspector",
+        "live preview",
+        "design inspector",
+        "prop editor"
+      ],
+      "secondary": [
+        "property panel",
+        "component properties",
+        "real-time preview",
+        "live editing",
+        "design preview"
+      ],
+      "negative": [
+        "ecommerce",
+        "social",
+        "marketing"
+      ]
+    },
+    "implies": [
+      "live-preview",
+      "editing"
+    ],
+    "weight": 0.8,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "inspector",
+      "patterns": [
+        {
+          "pattern": "form-sections",
+          "preset": "standard",
+          "as": "property-form"
+        },
+        {
+          "pattern": "json-viewer",
+          "preset": "standard",
+          "as": "property-data"
+        }
+      ],
+      "default_layout": [
+        "property-form",
+        "property-data"
+      ],
+      "shell": "sidebar-aside"
+    },
+    {
+      "id": "preview",
+      "patterns": [
+        {
+          "pattern": "split-pane",
+          "preset": "standard",
+          "as": "preview-panes"
+        }
+      ],
+      "default_layout": [
+        "preview-panes"
+      ],
+      "shell": "sidebar-aside"
+    }
+  ],
+  "page_briefs": {
+    "inspector": "Property inspector with grouped form sections for editing component props — text inputs, dropdowns, toggles, color pickers organized by category. JSON viewer below showing the raw data output in real time as properties change. Compact layout optimized for the aside panel.",
+    "preview": "Split-pane layout with live component preview on the left and code/config output on the right. Preview updates in real time as properties change. Device frame selector for viewport simulation. Zoom controls."
+  },
+  "features": [
+    "live-preview",
+    "editing"
+  ],
+  "shells": {
+    "sidebar-aside": "Collapsible activity bar with main content area and right aside panel for inspector"
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon",
+      "terminal"
+    ],
+    "modes": [
+      "dark"
+    ]
+  },
+  "dependencies": {
+    "patterns": {
+      "form-sections": ">=1.0.0",
+      "json-viewer": ">=1.0.0",
+      "split-pane": ">=1.0.0"
+    },
+    "styles": {}
+  }
+}

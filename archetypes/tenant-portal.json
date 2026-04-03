@@ -54,10 +54,16 @@
           "pattern": "maintenance-ticket",
           "preset": "recent",
           "as": "maintenance"
+        },
+        {
+          "pattern": "calendar-view",
+          "preset": "month",
+          "as": "rent-calendar"
         }
       ],
       "default_layout": [
         "rent-reminder",
+        "rent-calendar",
         "creator-profile",
         "lease-manager",
         "maintenance-board"
@@ -112,7 +118,8 @@
       "rent-reminder": "^1.0.0",
       "lease-manager": "^1.0.0",
       "maintenance-ticket": "^1.0.0",
-      "document-vault": "^1.0.0"
+      "document-vault": "^1.0.0",
+      "calendar-view": "^1.0.0"
     },
     "styles": {}
   },

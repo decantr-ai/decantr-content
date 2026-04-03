@@ -50,11 +50,23 @@
           "pattern": "activity-feed",
           "preset": "compact",
           "as": "recent-activity"
+        },
+        {
+          "pattern": "calendar-view",
+          "preset": "month",
+          "as": "content-calendar"
+        },
+        {
+          "pattern": "notification-center",
+          "preset": "dropdown",
+          "as": "notifications"
         }
       ],
       "default_layout": [
+        "notifications",
         "stats-overview",
         "earnings-dashboard",
+        "content-calendar",
         "activity-feed"
       ],
       "shell": "sidebar-main"
@@ -75,7 +87,9 @@
     "patterns": {
       "kpi-grid": "^1.0.0",
       "earnings-dashboard": "^1.0.0",
-      "activity-feed": "^1.0.0"
+      "activity-feed": "^1.0.0",
+      "calendar-view": "^1.0.0",
+      "notification-center": "^1.0.0"
     },
     "styles": {}
   },

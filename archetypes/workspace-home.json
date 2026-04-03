@@ -49,12 +49,24 @@
           "pattern": "card-grid",
           "preset": "docs",
           "as": "shared-docs"
+        },
+        {
+          "pattern": "notification-center",
+          "preset": "dropdown",
+          "as": "notifications"
+        },
+        {
+          "pattern": "kanban-board",
+          "preset": "standard",
+          "as": "task-board"
         }
       ],
       "default_layout": [
+        "notifications",
         "activity-feed",
         "recent-docs",
-        "shared-docs"
+        "shared-docs",
+        "task-board"
       ],
       "shell": "sidebar-main"
     }
@@ -75,7 +87,9 @@
     "patterns": {
       "activity-feed": "^1.0.0",
       "card-grid": "^1.0.0",
-      "page-tree": "^1.0.0"
+      "page-tree": "^1.0.0",
+      "notification-center": "^1.0.0",
+      "kanban-board": "^1.0.0"
     },
     "styles": {}
   },

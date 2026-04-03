@@ -1,0 +1,77 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "review-system",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Review System",
+  "description": "Review submission flow for marketplace transactions. Allows buyers to rate, write text reviews, and upload photos after a completed booking.",
+  "tags": [
+    "marketplace",
+    "reviews",
+    "ratings",
+    "feedback",
+    "user-generated"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "write review",
+        "leave review",
+        "review submission",
+        "rating form"
+      ],
+      "secondary": [
+        "star rating",
+        "photo review",
+        "booking feedback"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "write-review",
+      "patterns": [
+        {
+          "pattern": "form-sections",
+          "preset": "standard",
+          "as": "review-form"
+        }
+      ],
+      "default_layout": [
+        "review-form"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "page_briefs": {
+    "write-review": "Guided review submission form anchored to a specific booking. Top section shows a compact booking summary card with listing thumbnail and dates. Form sections include star rating selectors for overall and category scores, a text area for the written review, a photo upload dropzone, and a submit button with preview toggle."
+  },
+  "features": [
+    "reviews",
+    "ratings",
+    "photos"
+  ],
+  "shells": {
+    "sidebar-main": "Sidebar navigation with main content area"
+  },
+  "dependencies": {
+    "patterns": {
+      "form-sections": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
+}
