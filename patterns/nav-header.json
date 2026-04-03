@@ -67,6 +67,23 @@
     "micro": "Link hover underline slides in from left with 200ms ease. Dropdown chevron rotates 180deg on open. Active link indicator transitions position with 250ms ease.",
     "transitions": "Mobile menu slides in from right with 300ms ease-out transform. Backdrop fades in over 200ms. Dropdown menus fade in and translate down 4px over 200ms. Sticky header shadow transitions in over 150ms on scroll."
   },
+  "accessibility": {
+    "role": "navigation",
+    "aria-label": "Main navigation",
+    "keyboard": [
+      "Tab navigates between navigation links and action buttons",
+      "Enter activates the focused link or button",
+      "Escape closes the mobile menu or open dropdown",
+      "Arrow Left/Right navigates between top-level links",
+      "Arrow Down opens a dropdown menu on focused link"
+    ],
+    "announcements": [
+      "Navigation menu expanded",
+      "Navigation menu collapsed",
+      "Submenu {name} opened"
+    ],
+    "focus_management": "Mobile menu button uses aria-expanded to reflect open/closed state. On menu open, focus moves to first link. On Escape, focus returns to the hamburger button."
+  },
   "default_layout": {
     "layout": "row",
     "atoms": "_flex _aic _jcsb _px6 _py3 _borderB",

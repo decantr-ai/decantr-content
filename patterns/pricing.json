@@ -77,6 +77,22 @@
     "micro": "Tier cards lift on hover with translateY(-4px) and increased shadow over 200ms. CTA buttons brighten on hover. Toggle pill slides between states with 250ms ease.",
     "transitions": "Cards fade in and slide up with staggered delay (100ms per card) on section enter. Price value animates (counter-style) when toggling between monthly and annual. Badge pulses once on toggle change."
   },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Pricing plans",
+    "keyboard": [
+      "Tab navigates between tier cards and their CTA buttons",
+      "Shift+Tab navigates backwards",
+      "Enter or Space activates billing toggle or CTA button",
+      "Arrow Left/Right navigates between tiers"
+    ],
+    "announcements": [
+      "{plan_name} plan: {price} per {period}",
+      "Billing changed to {period}, price updated to {price}",
+      "Recommended plan: {plan_name}"
+    ],
+    "focus_management": "On billing toggle change, price values are announced via aria-live polite region. Focus remains on the toggle after change."
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _aic _gap8 _py16 _px6",

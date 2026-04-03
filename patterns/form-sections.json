@@ -115,6 +115,28 @@
     "select_styling": "Apply d-control to ALL form elements including <select>. Add appearance: none and a custom SVG chevron for consistent styling.",
     "textarea": "Textareas should have min-height: 6rem to visually differentiate from single-line inputs."
   },
+  "motion": {
+    "micro": "Collapsible sections expand/collapse with 250ms ease height transition. Validation errors shake the invalid field with a 300ms horizontal oscillation (translateX +/-4px).",
+    "transitions": "Section content fades in on expand with 200ms ease. Step transitions in creation preset cross-fade over 250ms."
+  },
+  "accessibility": {
+    "role": "form",
+    "aria-label": "Form",
+    "keyboard": [
+      "Tab navigates between form fields",
+      "Shift+Tab navigates backwards between fields",
+      "Enter submits when focus is on submit button",
+      "Space toggles checkboxes and switches",
+      "Arrow keys navigate within radio groups"
+    ],
+    "announcements": [
+      "Validation error: {field} — {message}",
+      "Section {name} expanded",
+      "Section {name} collapsed",
+      "Form submitted successfully"
+    ],
+    "focus_management": "First invalid field receives focus on failed validation. On section expand, focus moves to first field in the section. On step change in creation preset, focus moves to first field of new step."
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap6 _p4",

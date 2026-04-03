@@ -78,6 +78,23 @@
     "tablet": "Standard stays centered with comfortable width. Split activates two-column grid. Banner remains horizontal. Padding at py10.",
     "desktop": "Full layout — standard centered with py12. Split shows side-by-side columns with gap6. Banner compact horizontal with accent background."
   },
+  "motion": {
+    "micro": "CTA button pulses with subtle scale(1.02) and shadow increase on idle after 3s, 1.5s duration loop. Button brightens on hover over 150ms.",
+    "transitions": "Section content fades up (translateY(16px) to 0, opacity 0 to 1) on viewport enter with 400ms ease."
+  },
+  "accessibility": {
+    "role": "complementary",
+    "aria-label": "Call to action",
+    "keyboard": [
+      "Tab navigates to CTA buttons",
+      "Enter or Space activates the focused CTA button"
+    ],
+    "announcements": [
+      "Call to action section",
+      "Primary action: {button_text}"
+    ],
+    "focus_management": "Primary CTA button receives visible focus ring on Tab. Focus order: headline, description, primary button, secondary button."
+  },
   "default_layout": {
     "layout": "hero",
     "atoms": "_flex _col _items[center] _text[center] _py12 _px4 _gap4",

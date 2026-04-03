@@ -81,6 +81,23 @@
     "tablet": "Three or four columns depending on stat count. Compact preset stays single row if 4 or fewer items. Standard padding.",
     "desktop": "Full single-row layout with all stats visible. Four columns standard. Highlighted preset shows featured stat at 2x width. Generous gap4 spacing."
   },
+  "motion": {
+    "micro": "Stat values animate with counter effect (number rolls up from 0) over 800ms ease-out on viewport enter. Trend badges fade in after value completes.",
+    "transitions": "Value text transitions smoothly on data change with 300ms ease. Trend arrow rotates on direction change."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Key statistics",
+    "aria-live": "polite",
+    "keyboard": [
+      "Tab navigates between stat cards",
+      "Shift+Tab navigates backwards"
+    ],
+    "announcements": [
+      "{label}: {value}, {trend_direction} {trend_percent}",
+      "Statistics updated"
+    ]
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc2 _lg:gc4 _gap4",

@@ -78,6 +78,22 @@
     "tablet": "Horizontal preset shows 3 columns. Connectors visible. Vertical preset centered at comfortable width. Standard spacing.",
     "desktop": "Full horizontal row with visible connecting lines between step circles. Generous gap8 spacing. Section centered with py12 padding."
   },
+  "motion": {
+    "micro": "Step connector lines draw in from left to right with 400ms ease as each step enters viewport.",
+    "transitions": "Steps stagger in on section enter with fade-up (translateY(12px) to 0) at 300ms ease, 120ms stagger delay per step."
+  },
+  "accessibility": {
+    "role": "list",
+    "aria-label": "How it works",
+    "keyboard": [
+      "Tab navigates between steps",
+      "Shift+Tab navigates backwards between steps"
+    ],
+    "announcements": [
+      "Step {number} of {total}: {title}",
+      "Process overview with {total} steps"
+    ]
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc1 _md:gc3 _gap8 _py12 _px6 _textCenter",

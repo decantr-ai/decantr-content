@@ -87,6 +87,25 @@
     "tablet": "Two-column grid. Carousel controls visible. Featured preset centered with comfortable max-width.",
     "desktop": "Three-column grid with gap6. Carousel shows prev/next buttons on hover. Featured preset at 720px max-width centered."
   },
+  "motion": {
+    "micro": "Carousel slides transition with 400ms ease translateX. Auto-play advances every 5s.",
+    "transitions": "Testimonial cards fade in on section enter with 300ms ease. Carousel dot indicators pulse on active transition."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-roledescription": "carousel",
+    "aria-label": "Customer testimonials",
+    "keyboard": [
+      "Tab moves to next/previous carousel controls",
+      "Enter or Space activates carousel navigation buttons",
+      "Arrow Left/Right navigates between slides in carousel preset"
+    ],
+    "announcements": [
+      "Testimonial {number} of {total}",
+      "Slide changed to testimonial by {author}"
+    ],
+    "focus_management": "Carousel pauses auto-play when any element within receives focus. Resumes on blur after 3s delay."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap6 _py12 _px6",
