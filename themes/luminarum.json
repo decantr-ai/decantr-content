@@ -2,9 +2,10 @@
   "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
   "id": "luminarum",
   "name": "Luminarum",
-  "description": "Dark geometric canvas with vibrant faceted color accents. Breathing gradient orbs, outlined cards with colored strokes, particle network details. Tech-forward meets visual candy.",
+  "description": "Geometric canvas with vibrant faceted color accents. Breathing gradient orbs, outlined cards with colored strokes, particle network details. Tech-forward meets visual candy. Dual dark/light modes: warm charcoal dark, warm off-white light.",
   "tags": [
     "dark",
+    "light",
     "vibrant",
     "geometric",
     "technical",
@@ -16,21 +17,30 @@
     "primary": "#FE4474",
     "secondary": "#0AF3EB",
     "accent": "#FDA303",
-    "background": "#0D0D1A"
+    "background": "#141414"
   },
   "palette": {
-    "coral": "#F58882",
-    "pink": "#FE4474",
-    "crimson": "#D80F4A",
-    "cyan": "#0AF3EB",
-    "green": "#00E0AB",
-    "amber": "#FDA303",
-    "yellow": "#FCD021",
-    "orange": "#FC8D0D",
-    "purple": "#6500C6"
+    "background": { "dark": "#141414", "light": "#FAFAF9" },
+    "surface": { "dark": "#1E1E1E", "light": "#FFFFFF" },
+    "surface-raised": { "dark": "#262626", "light": "#F5F5F4" },
+    "border": { "dark": "#2E2E2E", "light": "#E7E5E4" },
+    "text": { "dark": "#FAFAFA", "light": "#1C1917" },
+    "text-muted": { "dark": "#A1A1AA", "light": "#78716C" },
+    "primary": { "dark": "#FE4474", "light": "#E11D48" },
+    "primary-hover": { "dark": "#FF5C8A", "light": "#BE123C" },
+    "coral": { "dark": "#F58882", "light": "#F58882" },
+    "pink": { "dark": "#FE4474", "light": "#FE4474" },
+    "crimson": { "dark": "#D80F4A", "light": "#D80F4A" },
+    "cyan": { "dark": "#0AF3EB", "light": "#0AF3EB" },
+    "green": { "dark": "#00E0AB", "light": "#00E0AB" },
+    "amber": { "dark": "#FDA303", "light": "#FDA303" },
+    "yellow": { "dark": "#FCD021", "light": "#FCD021" },
+    "orange": { "dark": "#FC8D0D", "light": "#FC8D0D" },
+    "purple": { "dark": "#6500C6", "light": "#6500C6" }
   },
   "modes": [
-    "dark"
+    "dark",
+    "light"
   ],
   "shapes": [
     "rounded",
@@ -60,14 +70,14 @@
   "decantr_compat": ">=1.0.0",
   "source": "core",
   "decorators": {
-    "lum-canvas": "Dark particle network background (#0D0D1A). Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root.",
-    "lum-glass": "Subtle glass panel with rgba(255,255,255,0.03) background and 0.08 opacity border. No heavy blur — clean transparency.",
+    "lum-canvas": "Particle network background (dark: #141414, light: #FAFAF9). Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root.",
+    "lum-glass": "Subtle glass panel (dark: rgba(255,255,255,0.03), light: rgba(0,0,0,0.02)) with soft border. No heavy blur — clean transparency.",
     "lum-orbs": "Breathing gradient orbs behind hero/feature sections. Large radial gradients in primary/secondary/accent at 15-22% opacity, slowly pulsing and drifting.",
     "lum-particles": "Fixed-position small dots (2-8px) in brand colors scattered across the viewport at 15% opacity with subtle pulse animation.",
     "lum-card-outlined": "Outlined card with colored border stroke, transparent bg, colored heading. The stroke color comes from the section's accent.",
     "lum-card-vibrant": "Filled card with vibrant gradient background, white text, corner accent brackets.",
-    "lum-code-block": "Dark code block (#111113 bg) with colored top border (2px) matching section accent. Monospace font, syntax highlighting.",
-    "lum-stat-glow": "Number badge with filled circle in accent color, dark text inside.",
+    "lum-code-block": "Code block (dark: #111113, light: #F5F5F4) with colored top border (2px) matching section accent. Monospace font, syntax highlighting.",
+    "lum-stat-glow": "Number badge with filled circle in accent color, contrasting text inside.",
     "lum-brand": "Brand text with accent color on punctuation (e.g. 'decantr.ai' with coral period and 'i').",
     "lum-fade-up": "Scroll-reveal animation: fade in + translate up 24px over 0.6s.",
     "lum-divider": "Section divider: thin horizontal line with centered colored dot. Dot color matches the next section's accent."
@@ -134,7 +144,7 @@
   },
   "compositions": {
     "hero": {
-      "description": "Split hero with large logo (1/3) and content (2/3). Dark bg with breathing gradient orbs behind. Logo floats gently.",
+      "description": "Split hero with large logo (1/3) and content (2/3). Canvas bg with breathing gradient orbs behind. Logo floats gently.",
       "layout": "split-1-3",
       "effects": [
         "lum-orbs"
@@ -189,7 +199,7 @@
         "background": "transparent",
         "border": "var(--lum-stroke-width, 3px) solid var(--lum-card-color)",
         "border-radius": "16px",
-        "color": "rgba(255,255,255,0.75)"
+        "color": "var(--d-text-muted, rgba(255,255,255,0.75))"
       },
       "heading_color": "var(--lum-card-color)",
       "hover": {
@@ -219,13 +229,17 @@
   },
   "decorator_definitions": {
     "lum-canvas": {
-      "description": "Dark particle network background (#0D0D1A). Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root.",
-      "intent": "Use as the foundational page background to create the dark geometric canvas. The particle network adds depth and tech-forward energy.",
+      "description": "Particle network background. Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root. Dark: #141414, Light: #FAFAF9.",
+      "intent": "Use as the foundational page background to create the geometric canvas. The particle network adds depth and tech-forward energy.",
       "suggested_properties": {
-        "background-color": "#0D0D1A",
-        "color": "rgba(255, 255, 255, 0.85)",
+        "background-color": "var(--d-background, #141414)",
+        "color": "var(--d-text, rgba(255, 255, 255, 0.85))",
         "min-height": "100vh",
         "position": "relative"
+      },
+      "mode_overrides": {
+        "dark": { "background-color": "#141414", "color": "rgba(255, 255, 255, 0.85)" },
+        "light": { "background-color": "#FAFAF9", "color": "rgba(28, 25, 23, 0.85)" }
       },
       "pairs_with": [
         "lum-particles",
@@ -238,12 +252,16 @@
       ]
     },
     "lum-glass": {
-      "description": "Subtle glass panel with rgba(255,255,255,0.03) background and 0.08 opacity border. No heavy blur — clean transparency.",
+      "description": "Subtle glass panel. No heavy blur — clean transparency. Dark: rgba(255,255,255,0.03) bg. Light: rgba(0,0,0,0.02) bg.",
       "intent": "Use for navigation and panel surfaces that need subtle elevation without competing with the vibrant card accents.",
       "suggested_properties": {
-        "background": "rgba(255, 255, 255, 0.03)",
-        "border": "1px solid rgba(255, 255, 255, 0.08)",
+        "background": "var(--d-glass-bg, rgba(255, 255, 255, 0.03))",
+        "border": "1px solid var(--d-glass-border, rgba(255, 255, 255, 0.08))",
         "border-radius": "var(--d-radius, 12px)"
+      },
+      "mode_overrides": {
+        "dark": { "background": "rgba(255, 255, 255, 0.03)", "border-color": "rgba(255, 255, 255, 0.08)" },
+        "light": { "background": "rgba(0, 0, 0, 0.02)", "border-color": "rgba(0, 0, 0, 0.06)" }
       },
       "pairs_with": [
         "lum-canvas",
@@ -301,8 +319,12 @@
         "background": "transparent",
         "border": "var(--lum-stroke-width, 3px) solid var(--lum-card-color, #FE4474)",
         "border-radius": "16px",
-        "color": "rgba(255, 255, 255, 0.75)",
+        "color": "var(--d-text-muted, rgba(255, 255, 255, 0.75))",
         "transition": "transform 300ms ease, box-shadow 300ms ease"
+      },
+      "mode_overrides": {
+        "dark": { "color": "rgba(255, 255, 255, 0.75)" },
+        "light": { "color": "rgba(28, 25, 23, 0.75)" }
       },
       "pairs_with": [
         "lum-canvas",
@@ -337,14 +359,18 @@
       ]
     },
     "lum-code-block": {
-      "description": "Dark code block (#111113 bg) with colored top border (2px) matching section accent. Monospace font, syntax highlighting.",
+      "description": "Code block with colored top border (2px) matching section accent. Monospace font, syntax highlighting. Dark: #111113 bg, Light: #F5F5F4 bg.",
       "intent": "Use for code examples and syntax-highlighted blocks. The colored top border ties the code block to its section's accent color.",
       "suggested_properties": {
-        "background": "#111113",
+        "background": "var(--d-surface, #111113)",
         "border-top": "2px solid var(--lum-card-color, #0AF3EB)",
         "border-radius": "12px",
         "font-family": "ui-monospace, monospace",
         "padding": "20px"
+      },
+      "mode_overrides": {
+        "dark": { "background": "#111113" },
+        "light": { "background": "#F5F5F4" }
       },
       "pairs_with": [
         "lum-canvas",
@@ -357,11 +383,11 @@
       ]
     },
     "lum-stat-glow": {
-      "description": "Number badge with filled circle in accent color, dark text inside.",
-      "intent": "Use for numbered badges and step indicators. The filled circle with dark text creates a bold, readable counter.",
+      "description": "Number badge with filled circle in accent color, contrasting text inside.",
+      "intent": "Use for numbered badges and step indicators. The filled circle with contrasting text creates a bold, readable counter.",
       "suggested_properties": {
         "background": "var(--lum-card-color, #FDA303)",
-        "color": "#0D0D1A",
+        "color": "var(--d-background, #141414)",
         "border-radius": "50%",
         "width": "40px",
         "height": "40px",
@@ -369,6 +395,10 @@
         "align-items": "center",
         "justify-content": "center",
         "font-weight": "700"
+      },
+      "mode_overrides": {
+        "dark": { "color": "#141414" },
+        "light": { "color": "#FFFFFF" }
       },
       "pairs_with": [
         "lum-card-outlined",
@@ -385,8 +415,12 @@
       "description": "Brand text with accent color on punctuation (e.g. 'decantr.ai' with coral period and 'i').",
       "intent": "Use for the brand name in navigation and headers. Colored punctuation creates a distinctive, memorable brand mark.",
       "suggested_properties": {
-        "color": "rgba(255, 255, 255, 0.9)",
+        "color": "var(--d-text, rgba(255, 255, 255, 0.9))",
         "font-weight": "700"
+      },
+      "mode_overrides": {
+        "dark": { "color": "rgba(255, 255, 255, 0.9)" },
+        "light": { "color": "rgba(28, 25, 23, 0.9)" }
       },
       "pairs_with": [
         "lum-glass",
@@ -420,9 +454,13 @@
       "description": "Section divider: thin horizontal line with centered colored dot. Dot color matches the next section's accent.",
       "intent": "Use between major page sections to create visual breathing room. The colored dot transitions the eye to the next section's accent.",
       "suggested_properties": {
-        "border-top": "1px solid rgba(255, 255, 255, 0.1)",
+        "border-top": "1px solid var(--d-border, rgba(255, 255, 255, 0.1))",
         "position": "relative",
         "margin": "80px 0"
+      },
+      "mode_overrides": {
+        "dark": { "border-top-color": "rgba(255, 255, 255, 0.1)" },
+        "light": { "border-top-color": "rgba(0, 0, 0, 0.08)" }
       },
       "pairs_with": [
         "lum-canvas",
