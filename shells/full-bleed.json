@@ -52,6 +52,11 @@
       }
     }
   },
+  "internal_layout": {
+    "root": { "display": "flex", "direction": "column", "atoms": "_flex _col" },
+    "header": { "height": "52px", "position": "fixed", "top": "0", "left": "0", "width": "100%", "display": "flex", "align": "center", "justify": "space-between", "padding": "0 2rem", "z_index": "40", "background": "transparent", "atoms": "_fixed _top0 _left0 _wfull _flex _aic _jcsb _px8 _py4 _z[40]", "left_content": "Brand/logo link", "right_content": "Nav links — flex with gap 1.5rem", "note": "Floating nav overlays hero. No border, transparent background." },
+    "body": { "flex": "1", "direction": "column", "atoms": "_flex _col", "note": "Full-width sections stack vertically. Each section is full viewport height or auto. Sections own their own padding. Natural document scroll, no scroll container." }
+  },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';",
     "example": "function FullBleed({ children }) {\n  const { div, header, main, nav: navEl } = tags;\n\n  return div({ class: css('_flex _col') },\n    // Floating nav (absolute positioned over hero)\n    header({ class: css('_fixed _top0 _left0 _wfull _flex _aic _jcsb _px8 _py4 _z[40]') },\n      link({ href: '/', class: css('_heading5 _nounder _fgfg') }, 'Brand'),\n      navEl({ class: css('_flex _aic _gap6') })\n    ),\n    // Content sections — each section is full viewport height or auto\n    main({ class: css('_flex _col') },\n      ...children\n    )\n  );\n}"

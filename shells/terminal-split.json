@@ -69,6 +69,17 @@
       }
     }
   },
+  "internal_layout": {
+    "root": { "display": "grid", "height": "100vh", "grid_template": "rows: 24px 1fr 28px", "font": "monospace", "background": "var(--d-black)", "color": "var(--d-green)", "atoms": "_grid _h[100vh] _mono _bgblack _fggreen" },
+    "status_bar": { "height": "24px", "display": "flex", "align": "center", "justify": "space-between", "padding": "0 0.5rem", "background": "var(--d-green)", "color": "var(--d-black)", "font_size": "sm", "sticky": true, "left_content": "App name + version", "right_content": "Status indicator" },
+    "body": { "display": "flex", "overflow": "hidden", "padding": "0.5rem",
+      "pane_left": { "flex": "1", "overflow_y": "auto", "padding": "0.5rem", "note": "Left split pane. Resizable width via drag handle." },
+      "divider": { "width": "4px", "cursor": "col-resize", "background": "var(--d-border)", "note": "Drag handle between panes." },
+      "pane_right": { "flex": "1", "overflow_y": "auto", "padding": "0.5rem", "note": "Right split pane. Resizable width via drag handle." },
+      "note": "Split pane body. Supports horizontal, vertical, and quad layouts. Min pane size 100px."
+    },
+    "hotkey_bar": { "height": "28px", "display": "flex", "align": "center", "gap": "1rem", "padding": "0 0.5rem", "background": "var(--d-surface)", "font_size": "sm", "sticky": true, "atoms": "_flex _aic _gap4 _px2 _bgmuted _textsm", "note": "Keyboard shortcut hints. Each item: kbd badge + label." }
+  },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { createSignal, onMount, onDestroy } from 'decantr/state';\nimport { css } from 'decantr/css';\nimport { Button, icon } from 'decantr/components';",
     "example": "function TerminalSplit({ appName, version, status, hotkeys, children }) {\n  const { div, header, main, footer, span, kbd } = tags;\n  const [paneWidths, setPaneWidths] = createSignal([50, 50]);\n\n  const handleKeyDown = (e) => {\n    const hotkey = hotkeys.find(h => h.key === e.key);\n    if (hotkey) {\n      e.preventDefault();\n      hotkey.action();\n    }\n  };\n\n  onMount(() => document.addEventListener('keydown', handleKeyDown));\n  onDestroy(() => document.removeEventListener('keydown', handleKeyDown));\n\n  return div({ class: css('_grid _h[100vh] _mono _bgblack _fggreen'), style: 'grid-template-rows: 24px 1fr 28px' },\n    // Status bar\n    header({ class: css('_flex _aic _jcsb _px2 _bggreen _fgblack _textsm') },\n      span({}, `${appName} v${version}`),\n      span({}, `[status: ${status}]`)\n    ),\n    // Split pane body\n    main({ class: css('_flex _overflow[hidden] _p2') },\n      div({ class: css('term-panel _flex1 _overflow[auto] _p2'), style: () => `width: ${paneWidths()[0]}%` },\n        children[0]\n      ),\n      div({ class: css('_w1 _cursor[col-resize] _bgborder') }),\n      div({ class: css('term-panel _flex1 _overflow[auto] _p2'), style: () => `width: ${paneWidths()[1]}%` },\n        children[1]\n      )\n    ),\n    // Hotkey bar\n    footer({ class: css('_flex _aic _gap4 _px2 _bgmuted _textsm') },\n      ...hotkeys.map(h =>\n        div({ class: css('_flex _aic _gap1'), onclick: h.action },\n          kbd({ class: css('term-hotkey _px1 _border _r1') }, h.key),\n          span({ class: css('_fgmuted') }, h.label)\n        )\n      )\n    )\n  );\n}"

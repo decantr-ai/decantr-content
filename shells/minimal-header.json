@@ -51,6 +51,13 @@
       }
     }
   },
+  "internal_layout": {
+    "root": { "display": "flex", "direction": "column", "height": "100vh", "atoms": "_flex _col _h[100vh]" },
+    "header": { "height": "44px", "display": "flex", "align": "center", "justify": "center", "padding": "0.75rem 0", "border": "bottom", "sticky": true, "content": "Back arrow icon + brand link, centered", "note": "Slim header with centered brand. Minimal — no nav links." },
+    "body": { "flex": "1", "direction": "column", "align": "center", "overflow_y": "auto", "padding": "2rem 0", "atoms": "_flex _col _aic _overflow[auto] _flex1 _py8",
+      "content_wrapper": { "width": "720px", "max_width": "100%", "padding": "0 1rem", "direction": "column", "gap": "1.5rem", "atoms": "_w[720px] _mw[100%] _px4 _flex _col _gap6", "note": "Centered column for focused content. Checkout forms, task pages." }
+    }
+  },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';\nimport { icon } from 'decantr/components';",
     "example": "function MinimalHeader({ brand, children }) {\n  const { div, header, main } = tags;\n\n  return div({ class: css('_flex _col _h[100vh]') },\n    // Slim header\n    header({ class: css('_flex _aic _jcc _py3 _borderB') },\n      link({ href: '/', class: css('_flex _aic _gap2 _nounder _fgfg') },\n        icon('arrow-left'),\n        brand\n      )\n    ),\n    // Centered main content\n    main({ class: css('_flex _col _aic _overflow[auto] _flex1 _py8') },\n      div({ class: css('_w[720px] _mw[100%] _px4 _flex _col _gap6') },\n        ...children\n      )\n    )\n  );\n}"

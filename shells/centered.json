@@ -34,6 +34,10 @@
     "max_width": "Centered content should be constrained to max-width: 28rem (448px) for auth forms, 36rem (576px) for wider content.",
     "vertical_centering": "Center the content card vertically using min-height: 100dvh with flexbox centering."
   },
+  "internal_layout": {
+    "root": { "display": "flex", "align": "center", "justify": "center", "min_height": "100vh", "background": "var(--d-bg)", "atoms": "_flex _center _minh[100vh]" },
+    "body": { "width": "100%", "max_width_auth": "28rem", "max_width_wide": "36rem", "padding": "1.5rem", "treatment": "d-surface", "border_radius": "var(--d-radius-lg)", "note": "Single centered card. No sidebar, no header. Auth forms use 28rem, wider content 36rem." }
+  },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { Card } from 'decantr/components';",
     "example": "function Centered({ children, width = '400px' }) {\n  const { div } = tags;\n\n  return div({ class: css('_flex _center _h[100vh] _bgmuted _p4') },\n    Card({ class: css(`_w[${width}] _mw[100%]`) },\n      ...children\n    )\n  );\n}"
