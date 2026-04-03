@@ -80,5 +80,13 @@
     "mobile": "Agent cards stack vertically (source on top, target below) with the handoff animation rendered as a vertical downward flow between them. Context preview defaults to collapsed. Approval buttons render full-width stacked. Timeline becomes a vertical strip on the left edge.",
     "tablet": "Standard horizontal layout maintained. Context preview starts collapsed to save space. Approval buttons remain inline. Touch targets for approve/reject increased to 48px minimum height."
   },
-  "visual_brief": "Horizontal two-card layout with source agent on the left and target agent on the right, connected by an animated transfer beam. Each agent card shows avatar, name, role label, and status badge with a colored left/right border accent. A collapsible context-preview panel sits below the cards displaying transferred data sections. A horizontal status timeline runs underneath with dot-connected steps. Approval action buttons (Approve, Reject) anchor at the bottom. Compact preset collapses to a single row with inline avatars and an arrow between them."
+  "visual_brief": "Horizontal two-card layout with source agent on the left and target agent on the right, connected by an animated transfer beam. Each agent card shows avatar, name, role label, and status badge with a colored left/right border accent. A collapsible context-preview panel sits below the cards displaying transferred data sections. A horizontal status timeline runs underneath with dot-connected steps. Approval action buttons (Approve, Reject) anchor at the bottom. Compact preset collapses to a single row with inline avatars and an arrow between them.",
+  "composition": {
+    "AgentHandoffZone": "Container(d-section, flex-col, gap-6) > [AgentRow + ContextPreview + StatusTimeline + ApprovalActions?]",
+    "AgentRow": "Row(d-surface, gap-6) > [AgentCard(source, accent-left) + HandoffAnimation(animated) + AgentCard(target, accent-right)]",
+    "AgentCard": "Card(d-surface) > [Avatar + Name(heading4) + RoleLabel(d-annotation) + StatusBadge(d-annotation, data-status)]",
+    "ContextPreview": "Panel(d-surface, collapsible) > [Section(collapsible)[] + ViewRawToggle?(d-interactive)]",
+    "StatusTimeline": "Track(d-data) > TimelineStep(dot-connected)[]",
+    "ApprovalActions": "Row(d-interactive) > [ApproveButton(variant: primary) + RejectButton(variant: destructive) + ModifyButton?(variant: ghost)]"
+  }
 }

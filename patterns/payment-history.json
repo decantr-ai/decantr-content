@@ -97,5 +97,12 @@
     "mobile": "Table becomes a card list — each payment as a stacked card showing date, description, amount, and status. Filters collapse to a filter button. Export moves to a menu.",
     "tablet": "Table with horizontal scroll for extra columns. Date range filter visible in the header.",
     "desktop": "Full table with all columns visible. Summary row and filters always visible."
+  },
+  "composition": {
+    "PaymentHistory": "Container(d-section, flex-col, gap-4) > [Header + Filters? + SummaryRow? + PaymentTable]",
+    "Header": "Row(d-control, space-between) > [Title + DateRangePicker(d-control) + ExportButton(d-interactive)]",
+    "SummaryRow": "Row(d-data) > [TotalReceived(mono-data, color: success) + TotalOutstanding(mono-data, color: warning)]",
+    "PaymentTable": "Table(d-data) > PaymentRow[]",
+    "PaymentRow": "Row(d-data-row) > [Date + Description + Property? + Payer + Amount(mono-data, color: status) + StatusBadge(d-annotation)]"
   }
 }

@@ -107,5 +107,11 @@
     "mobile": "Version history opens as a full-screen overlay. Timeline entries are compact. Preview replaces the timeline view (back button to return). Restore button at the bottom.",
     "tablet": "Sidebar at 320px width with timeline and inline preview. Compare mode uses a bottom sheet.",
     "desktop": "Sidebar with timeline, adjacent preview panel, and inline diff view. Full author details and change summaries visible."
+  },
+  "composition": {
+    "VersionHistory": "Panel(d-section, flex-col) > [VersionList + DiffView?]",
+    "VersionList": "List(d-data, flex-col) > VersionEntry[]",
+    "VersionEntry": "Row(d-data-row, hoverable, active?: selected) > [Avatar(small) + EntryInfo > [AuthorName(font-medium) + Timestamp(text-muted, mono-data)] + VersionLabel?(d-annotation) + RestoreButton?(d-interactive)]",
+    "DiffView": "Panel(d-surface, split) > [OldContent + NewContent(highlighted-changes)]"
   }
 }

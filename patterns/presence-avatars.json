@@ -97,5 +97,10 @@
     "mobile": "Avatars at 28px. Maximum 3-4 visible with overflow indicator. Tooltip replaced by tap-to-reveal.",
     "tablet": "Avatars at 32px. Up to 6 visible. Tap or hover for tooltip.",
     "desktop": "Avatars at 36px. Up to 8 visible. Hover tooltips. Detailed preset dropdown on click."
+  },
+  "composition": {
+    "PresenceAvatars": "Row(d-section, overlapping) > [AvatarStack + OverflowBadge?]",
+    "AvatarStack": "Row(negative-margin) > Avatar(ring-color: presence-state, tooltip: name)[]",
+    "OverflowBadge": "Badge(d-annotation, muted-bg, circular) > PlusCount"
   }
 }

@@ -107,5 +107,10 @@
       "form": "Settings form fields",
       "save": "Save button"
     }
+  },
+  "composition": {
+    "AccountSettings": "Container(d-section, flex-col) > [SettingsNav(vertical-tabs, d-interactive) + SettingsContent]",
+    "SettingsNav": "TabList(d-control) > Tab(active?: accent-border)[]",
+    "SettingsContent": "Panel(d-surface, flex-col, gap-8) > [AvatarUpload? + FormFields + SaveButton(d-interactive, variant: primary)]"
   }
 }

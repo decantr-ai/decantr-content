@@ -75,5 +75,10 @@
       "links": "Navigation links",
       "actions": "Action buttons (login, signup)"
     }
+  },
+  "composition": {
+    "NavHeader": "Bar(d-section, row, space-between, border-bottom, full-width) > [Logo + NavLinks + ActionButtons]",
+    "NavLinks": "Row(d-interactive, gap-4) > Link(hover: underline)[]",
+    "ActionButtons": "Row(d-interactive, gap-2) > [LoginButton(variant: ghost) + SignUpButton(variant: primary)]"
   }
 }

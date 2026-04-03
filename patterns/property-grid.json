@@ -101,5 +101,12 @@
     "mobile": "Single-column property cards. Summary metrics in a 2x2 grid. Filters collapse into a filter button. Map view takes full screen.",
     "tablet": "Two-column card grid. Summary in a row. Filters visible. Table view has horizontal scroll.",
     "desktop": "Three-column card grid or full-width table. All summary, filters, and pagination visible."
+  },
+  "composition": {
+    "PropertyGrid": "Container(d-section, flex-col, gap-6) > [Header + PortfolioSummary + Filters + PropertyItems + Pagination]",
+    "Header": "Row(d-control, space-between) > [Title + AddPropertyButton(d-interactive) + ViewToggle(d-interactive)]",
+    "PortfolioSummary": "Row(d-data) > [TotalProperties + TotalUnits + AvgOccupancy(mono-data) + TotalRevenue(mono-data)]",
+    "Filters": "Row(d-control) > [SearchInput(d-control) + StatusFilter(d-control) + TypeFilter(d-control)]",
+    "PropertyItems": "Grid(d-data, responsive: 1/2/3-col) > PropertyCard[]"
   }
 }

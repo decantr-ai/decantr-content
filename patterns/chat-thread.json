@@ -85,5 +85,11 @@
     "typing-indicator": "Three dots animate in a 1.2s infinite loop — each dot scales from 0.4 to 1.0 with 150ms offset per dot, creating a wave pulse effect.",
     "scroll-to-bottom": "FAB fades in (opacity 0 to 1, 150ms) and translates up 8px when scroll position exceeds one viewport height from bottom. Reverse on dismiss.",
     "auto-scroll": "When a new message arrives and the user is within 100px of the bottom, smooth-scroll to the new message over 300ms ease-in-out."
+  },
+  "composition": {
+    "ChatThread": "Container(d-surface, flex-col, full-height) > [MessageList + TypingIndicator? + ScrollAnchor]",
+    "MessageList": "List(flex-col, gap-3, scrollable) > Message[]",
+    "TypingIndicator": "Bubble(d-annotation, opacity-70) > PulseDots(3, animated)",
+    "ScrollAnchor": "FAB(d-interactive, floating, show-on-scroll-up)"
   }
 }

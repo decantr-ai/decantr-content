@@ -92,5 +92,12 @@
     "mobile": "Single-panel view — folder navigation becomes a top dropdown or drawer. Document list takes full width as cards. Preview opens as a full-screen overlay.",
     "tablet": "Two-panel layout — sidebar and document list. Preview opens as a slide-over.",
     "desktop": "Full three-panel layout with resizable sidebar. Preview pane docked on the right."
+  },
+  "composition": {
+    "DocumentVault": "Container(d-section, split-3-panel) > [FolderSidebar + DocumentList + PreviewPane?]",
+    "FolderSidebar": "Panel(d-surface, flex-col) > [TreeNode(expandable)[] + NewFolderButton?(d-interactive)]",
+    "DocumentList": "Panel(d-data) > [Header > [Title + UploadButton(d-interactive) + ViewToggle] + SearchInput(d-control) + DocumentRow(d-data-row)[]]",
+    "DocumentRow": "Row(hoverable) > [FileIcon + Name + Date(text-muted) + Size(mono-data) + StatusBadge(d-annotation) + DownloadButton(d-interactive)]",
+    "PreviewPane": "Panel(d-surface) > [PreviewContent + VersionTimeline?]"
   }
 }

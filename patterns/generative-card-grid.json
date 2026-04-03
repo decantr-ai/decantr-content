@@ -6,7 +6,17 @@
   "name": "Generative Card Grid",
   "description": "A grid of cards where each card shows a procedurally generated preview of what an AI would build from a given prompt. Cards display live micro-renders, placeholder sketches, or wireframe thumbnails that materialize from skeleton states. The grid itself is generative: card sizes, positions, and visual weights adapt to content relevance and user interaction history. For AI generation galleries, prompt exploration interfaces, template browsers, and any context where users browse and compare multiple AI outputs.",
   "category": "generative",
-  "tags": ["2026", "generative", "cards", "grid", "AI", "gallery", "preview", "masonry", "prompt"],
+  "tags": [
+    "2026",
+    "generative",
+    "cards",
+    "grid",
+    "AI",
+    "gallery",
+    "preview",
+    "masonry",
+    "prompt"
+  ],
   "components": [
     "PreviewCard",
     "GenerationBadge",
@@ -86,5 +96,12 @@
   "responsive": {
     "mobile": "Single column layout regardless of preset. Cards full-width. Preview area maintains 16:9 aspect ratio. ActionBar always visible (no hover state on touch). Skeleton state simplified to a single pulsing block. Maximum 10 cards before 'Load more' button.",
     "tablet": "Two-column grid for uniform and masonry presets. Featured preset uses 2-column with featured card spanning full width at top. List preset unchanged. Touch targets for ActionBar buttons are 44px minimum."
+  },
+  "composition": {
+    "GenerativeCardGrid": "Grid(d-section, auto-fill, responsive) > [PreviewCard[] + EmptyState?]",
+    "PreviewCard": "Card(d-surface, hoverable, lift-on-hover) > [SkeletonPreview | Preview + GenerationBadge(d-annotation, top-right) + PromptTag(d-data, line-clamp-2) + ActionBar]",
+    "SkeletonPreview": "Placeholder(shimmer, animated)",
+    "GenerationBadge": "Badge(d-annotation, semi-transparent) > [ModelName + GenerationTime + ConfidenceScore?]",
+    "ActionBar": "Row(d-interactive, show-on-hover) > [RegenerateButton(labeled) + FavoriteButton + ExpandButton + CopyButton + DeleteButton]"
   }
 }

@@ -75,5 +75,10 @@
     "mobile": "Conversation list takes full screen as a page. Selecting an item navigates to the chat view. New Chat button is a floating action button.",
     "tablet": "Sidebar panel at 280px width. Standard row heights.",
     "desktop": "Sidebar panel at 300px width with comfortable spacing. Full dates visible. Hover actions on each row."
+  },
+  "composition": {
+    "ConversationList": "Panel(d-surface, flex-col, full-height) > [SearchInput(d-control, icon: search) + NewChatButton(d-interactive, variant: primary) + ItemList]",
+    "ItemList": "List(flex-col, scrollable) > ConversationItem[]",
+    "ConversationItem": "Row(d-data-row, hoverable, active?: highlighted) > [ChatIcon + Title(ellipsis) + Date(text-muted, text-xs) + UnreadBadge?(d-annotation, accent)]"
   }
 }

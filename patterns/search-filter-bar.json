@@ -103,5 +103,9 @@
     "mobile": "Search input full-width on its own row. Type tabs become a horizontal scrollable strip. Namespace and sort collapse into a 'Filters' button that opens a bottom sheet.",
     "tablet": "Search and filters fit in two rows. Type tabs visible. Dropdowns inline.",
     "desktop": "Single or two row bar with all controls visible. Type tabs, namespace, and sort all inline."
+  },
+  "composition": {
+    "SearchFilterBar": "Row(d-control, full-width) > [SearchInput(d-control, icon: search, real-time) + TypeTabs > Tab(d-interactive)[] + NamespaceSelect(d-control) + SortSelect(d-control)]",
+    "ActiveFilters": "Row(gap-2) > Chip(d-annotation, removable)[]"
   }
 }

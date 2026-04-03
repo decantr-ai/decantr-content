@@ -122,5 +122,13 @@
     "mobile": "Single-column stacked layout. Photo gallery uses horizontal scroll. Timeline is vertical. Action buttons are full-width at the bottom.",
     "tablet": "Standard layout with comfortable spacing. Photo gallery shows 2-3 thumbnails per row.",
     "desktop": "Full layout with details and timeline side by side. Photo gallery in a grid. All actions visible in a toolbar."
+  },
+  "composition": {
+    "MaintenanceTicket": "Container(d-section, flex-col, gap-4) > [Header + Details + PhotoGallery? + StatusTimeline + Assignment? + Actions]",
+    "Header": "Row(d-surface) > [TicketID(mono-data) + Title + StatusBadge(d-annotation, color-coded) + PriorityBadge(d-annotation)]",
+    "Details": "Section(d-data) > [Category + Property + Reporter + Description]",
+    "PhotoGallery": "Grid(d-data) > Thumbnail(clickable)[]",
+    "StatusTimeline": "Track(d-data, vertical) > TimelineEntry(timestamped)[]",
+    "Actions": "Row(d-interactive) > [AssignButton + UpdateStatusButton + CloseButton(variant: ghost)]"
   }
 }

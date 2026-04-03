@@ -79,5 +79,11 @@
     "mobile": "Switches to card preset — stacked vertical layout with full-width copy/revoke buttons. Scope badges wrap to a second line. Dates appear below key info.",
     "tablet": "Standard row layout maintained. Action buttons use icon-only mode to save horizontal space.",
     "desktop": "Full row layout with all elements visible inline. Generous horizontal spacing between key info, scopes, dates, and actions."
+  },
+  "composition": {
+    "ApiKeyRow": "Row(d-data-row, hoverable) > [KeyIcon + KeyInfo + ScopeBadges + DateInfo + Actions]",
+    "KeyInfo": "Stack(flex-col) > [KeyName(font-medium) + MaskedKey(mono-data, text-muted)]",
+    "ScopeBadges": "Row(gap-2) > Badge(d-annotation)[]",
+    "Actions": "Row(d-interactive) > [CopyButton(variant: ghost) + RevokeButton(variant: destructive)]"
   }
 }

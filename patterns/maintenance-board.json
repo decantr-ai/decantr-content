@@ -92,5 +92,12 @@
     "mobile": "Columns displayed one at a time with horizontal swipe or a dropdown status selector. Cards take full width. Drag-and-drop replaced by status-change action buttons.",
     "tablet": "Three visible columns with horizontal scroll for the rest. Cards at comfortable size for touch.",
     "desktop": "All columns visible in horizontal scroll or fixed layout. Drag-and-drop fully functional. Cards show all metadata."
+  },
+  "composition": {
+    "MaintenanceBoard": "Container(d-section, flex-col) > [Header + FilterBar(d-control) + KanbanColumns]",
+    "Header": "Row(d-control, space-between) > [Title + SearchInput(d-control) + AddTicketButton(d-interactive)]",
+    "KanbanColumns": "Row(d-data, horizontal-scroll) > Column[]",
+    "Column": "Panel(d-surface, flex-col) > [ColumnHeader > [StatusName + CountBadge(d-annotation)] + TicketCard(d-surface, draggable)[]]",
+    "TicketCard": "Card(d-surface, hoverable) > [Title + PriorityBadge(d-annotation) + PropertyName(text-muted) + AssigneeAvatar?]"
   }
 }

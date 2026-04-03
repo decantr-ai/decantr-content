@@ -72,5 +72,9 @@
     "mobile": "Title truncates with ellipsis. Actions collapse into a single kebab menu. Status indicator moves below title.",
     "tablet": "Full title visible. Two primary actions visible, rest in overflow menu.",
     "desktop": "All elements visible inline. Title is editable on click. Full action button row."
+  },
+  "composition": {
+    "ChatHeader": "Bar(d-surface, row, space-between, border-bottom) > [Title(editable, heading4) + StatusIndicator(d-annotation, dot: online|offline) + ActionButtons(d-interactive)]",
+    "ActionButtons": "Row(gap-2) > IconButton(variant: ghost)[]"
   }
 }

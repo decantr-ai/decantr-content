@@ -109,5 +109,10 @@
     "mobile": "Full-width banner card. Amount text large for visibility. Pay button full-width at the bottom. Details stack vertically.",
     "tablet": "Standard card width. All elements in a comfortable layout. Pay button inline.",
     "desktop": "Card or inline banner. All information on one or two lines. Pay button on the right."
+  },
+  "composition": {
+    "RentReminder": "Card(d-surface, tint: status) > [StatusIcon(color: status) + ReminderContent + PayAction]",
+    "ReminderContent": "Stack(flex-col) > [Title(font-medium) + DueDate(d-annotation, mono-data) + Amount(heading3, mono-data) + Property?(text-muted)]",
+    "PayAction": "Button(d-interactive, variant: status === overdue ? destructive : primary)"
   }
 }

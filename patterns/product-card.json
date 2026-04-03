@@ -105,5 +105,10 @@
     "mobile": "Cards take full width in single column. Thumbnail height reduces. Price and title prominent. Action buttons full-width.",
     "tablet": "Two-column card grid. Standard card proportions.",
     "desktop": "Three or four column grid. Cards at comfortable size with hover effects."
+  },
+  "composition": {
+    "ProductCard": "Card(d-surface, hoverable, lift-on-hover) > [Thumbnail(aspect-ratio) + Title(font-medium) + Price(heading4) | FreeBadge(d-annotation) + TypeBadge(d-annotation) + ActionButtons?(d-interactive)]",
+    "FeaturedCard": "Card(d-surface, large, gradient-overlay) > [Media + Content > [Title + Description + Meta] + Actions(d-interactive)]",
+    "ListItem": "Row(d-surface) > [SmallThumbnail + Content > [Title + Description] + Meta > [Price + Actions(d-interactive)]]"
   }
 }

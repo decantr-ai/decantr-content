@@ -121,5 +121,13 @@
     "mobile": "Modal takes near-full screen. Tabs render as a top bar. Email input full-width. Member list scrolls vertically. Role dropdowns use native selects.",
     "tablet": "Centered modal at 520px width. Standard tab navigation. Member list comfortable.",
     "desktop": "Centered modal at 560px width. Full tab layout. Member management with inline role selectors."
+  },
+  "composition": {
+    "ShareModal": "Modal(d-surface, centered) > [Header + Tabs + TabContent]",
+    "Header": "Row(space-between) > [Title(heading3) + CloseButton(d-interactive)]",
+    "Tabs": "TabBar(d-control) > [InviteTab + LinkTab + MembersTab]",
+    "InviteForm": "Section > [EmailInput(d-control, autocomplete) + RoleSelect(d-control) + SendButton(d-interactive, variant: primary)]",
+    "MembersList": "List(flex-col) > MemberRow[]",
+    "MemberRow": "Row > [Avatar + Name + Email(text-muted) + RoleSelect(d-control) + RemoveButton(d-interactive, variant: ghost)]"
   }
 }

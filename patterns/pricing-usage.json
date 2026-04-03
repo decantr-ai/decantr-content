@@ -80,5 +80,13 @@
     "mobile": "Tier cards stack vertically in a single column with full-width cards. Usage calculator slider becomes full-width with the cost estimate displayed below. Comparison table converts to a stacked card layout (one card per tier) with feature rows inside each card. FAQ accordion items take full width with larger tap targets.",
     "tablet": "Tier cards display in a 2-column grid, wrapping to a second row if more than two tiers. Comparison table remains tabular but horizontally scrollable if more than three tiers. Calculator and FAQ maintain standard layout.",
     "desktop": "Tier cards display in a single horizontal row (up to four tiers). Comparison table renders as a full-width sticky-header table. Calculator shows slider and cost estimate side-by-side. FAQ renders in a max-width centered column for readability."
+  },
+  "composition": {
+    "PricingUsage": "Container(d-section, centered, gap-12) > [BillingToggle(d-control) + TierCards + UsageCalculator? + ComparisonTable? + FAQ?]",
+    "TierCards": "Grid(responsive: 1/2/4-col) > TierCard[]",
+    "TierCard": "Card(d-surface, accent-border?: recommended) > [TierName(heading4) + UnitPrice(mono-data, heading2) + Volume + OverageRate(text-muted) + CTAButton(d-interactive)]",
+    "UsageCalculator": "Card(d-surface) > [Slider(d-control) + CostEstimate(mono-data, heading3)]",
+    "ComparisonTable": "Table(d-data) > [HeaderRow > TierName[] + FeatureRow > Cell(icon: check|dash)[]]",
+    "FAQ": "Accordion(d-surface) > FAQItem(collapsible)[]"
   }
 }

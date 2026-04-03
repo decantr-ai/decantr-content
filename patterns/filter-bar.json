@@ -111,5 +111,10 @@
     "mobile": "Search input takes full width on its own row. Filter selects stack below or collapse into a 'Filters' button that opens a bottom sheet. Active filter chips wrap to multiple lines.",
     "tablet": "Search and primary filters fit in one row. Less common filters in a collapsible section.",
     "desktop": "All elements in a single horizontal row. Advanced filters expand inline below the bar."
+  },
+  "composition": {
+    "FilterBar": "Row(d-control, full-width) > [SearchInput(d-control, icon: search) + FilterSelects > Select(d-control)[] + ActionButtons(d-interactive)]",
+    "ActiveFilters": "Row(gap-2) > FilterChip(d-annotation, removable)[]",
+    "AdvancedFilters": "Panel(d-surface, expandable) > [FilterRow > Select[] + SavedFilters > Button(variant: outline)[]]"
   }
 }

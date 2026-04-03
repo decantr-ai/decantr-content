@@ -106,5 +106,11 @@
     "mobile": "Single-column full-width cards. Video players scale to container width. Filters become a horizontal scrollable row. Load-more button replaces infinite scroll for performance.",
     "tablet": "Single-column feed with comfortable card widths. Filters visible in a row.",
     "desktop": "Feed constrained to a centered content column (680px). Grid preset uses two or three columns."
+  },
+  "composition": {
+    "ContentFeed": "Container(d-section, flex-col, centered) > [FilterTabs(d-control) + PostList + LoadMore?(d-interactive)]",
+    "PostList": "List(flex-col, gap-6) > PostCard[]",
+    "PostCard": "Card(d-surface) > [AuthorRow > [Avatar + Name + Timestamp(text-muted)] + PostContent(markdown, media?) + EngagementBar > [LikeCount + CommentCount] + CommentInput?]",
+    "GatedPost": "PostCard(blurred) > [LockOverlay(d-annotation, icon: lock) + SubscribeCTA(d-interactive)]"
   }
 }

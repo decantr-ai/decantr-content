@@ -85,5 +85,12 @@
     "mobile": "Single-column tenant cards. Summary in a compact bar. Filters collapse to a button. Search is full-width.",
     "tablet": "Two-column card grid or table with horizontal scroll. Filters visible.",
     "desktop": "Three-column card grid or full-width table. All summary, filters, and pagination visible."
+  },
+  "composition": {
+    "TenantDirectory": "Container(d-section, flex-col, gap-4) > [Header + Filters + SummaryStats? + TenantList + Pagination]",
+    "Header": "Row(d-control, space-between) > [Title + AddTenantButton(d-interactive) + ViewToggle(d-interactive)]",
+    "Filters": "Row(d-control) > [SearchInput(d-control) + PropertyFilter(d-control) + StatusFilter(d-control)]",
+    "SummaryStats": "Row(d-data) > [TotalTenants + ActiveLeases + PendingPayments(color: warning)]",
+    "TenantList": "Grid(d-data, responsive: 1/2/3-col) > TenantCard[]"
   }
 }

@@ -73,5 +73,9 @@
     "mobile": "Single-column card stack. Summary bar shows counts compactly. Add Unit button is a FAB or in the header.",
     "tablet": "Two-column card grid or table with horizontal scroll.",
     "desktop": "Three-column card grid or full-width table with all columns visible."
+  },
+  "composition": {
+    "UnitList": "Grid(d-section, responsive: 1/2/3-col) > UnitCard[]",
+    "UnitCard": "Card(d-surface, hoverable) > [UnitNumber(heading4) + SpecsRow > [Beds + Baths + SqFt(mono-data)] + TenantName?(font-medium) + Rent(mono-data) + StatusBadge(d-annotation, color: occupancy)]"
   }
 }

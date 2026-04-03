@@ -114,5 +114,11 @@
     "mobile": "Toolbar renders full-width at the bottom of the screen as a fixed bar above the keyboard. Touch-friendly 44px button targets. Overflow actions collapse into a more menu.",
     "tablet": "Floating toolbar near selection. Slightly larger touch targets than desktop.",
     "desktop": "Floating toolbar tracks text selection precisely. Compact button sizing with hover tooltips for labels."
+  },
+  "composition": {
+    "BlockToolbar": "Bar(d-control, floating, shadow, pill) > [FormatButtons + LinkButton + HighlightButton? + CommentButton? + MoreMenu?]",
+    "FormatButtons": "Group(d-interactive, gap-0.5) > IconButton(active?: filled-bg)[]",
+    "LinkButton": "IconButton(d-interactive) > LinkIcon",
+    "MoreMenu": "IconButton(d-interactive) > DropdownIcon"
   }
 }

@@ -82,5 +82,9 @@
     "consumes": [
       "date-range"
     ]
+  },
+  "composition": {
+    "KPIGrid": "Grid(d-section, responsive: 2/4-col) > KPICard[]",
+    "KPICard": "Card(d-surface, padding) > [Icon(d-annotation, rounded-bg) + Label(text-muted, text-sm) + Value(heading2, mono-data) + TrendBadge(d-annotation, variant: positive|negative)]"
   }
 }

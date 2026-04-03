@@ -74,5 +74,11 @@
     "mobile": "Summary metrics in a 2x2 grid. Vacant unit cards stack full-width. Pipeline indicators simplified to counts only.",
     "tablet": "Metrics in a row. Two-column card grid for vacant units.",
     "desktop": "Full dashboard panel with metrics bar, unit cards in a grid, and detailed pipeline indicators."
+  },
+  "composition": {
+    "VacancyTracker": "Container(d-section, flex-col, gap-4) > [MetricsRow + VacantUnitList + ApplicantPipeline?]",
+    "MetricsRow": "Grid(d-data, responsive: 2/4-col) > [VacancyRate(d-surface, mono-data) + AvgDaysVacant(d-surface) + LostRevenue(d-surface, color: destructive)]",
+    "VacantUnitList": "Table(d-data) > VacantUnitRow[]",
+    "VacantUnitRow": "Row(d-data-row) > [UnitNumber + Property + DaysVacant(mono-data) + ListingStatus(d-annotation) + ApplicantCount + ActionButton(d-interactive)]"
   }
 }

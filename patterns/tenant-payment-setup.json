@@ -65,5 +65,12 @@
     "mobile": "Full-width form. Payment method cards stack. Toggle switch prominent at top. Pay Now button full-width and sticky.",
     "tablet": "Standard form layout. Payment methods and upcoming payments visible together.",
     "desktop": "Comfortable form width. All sections visible. Payment methods in a clean list."
+  },
+  "composition": {
+    "TenantPaymentSetup": "Container(d-section, flex-col, gap-6) > [PaymentMethods + AutopayToggle + UpcomingPayment]",
+    "PaymentMethods": "Section(d-surface) > [MethodCard(d-surface, selectable)[] + AddMethodButton(d-interactive)]",
+    "MethodCard": "Card(d-surface, active?: selected) > [CardBrandIcon + MaskedNumber(mono-data) + Expiry(text-muted) + DefaultBadge?(d-annotation)]",
+    "AutopayToggle": "Row(d-control) > [Label + Switch(d-control) + Description(text-muted)]",
+    "UpcomingPayment": "Card(d-surface) > [NextDueDate(d-annotation) + Amount(heading3, mono-data) + BreakdownList > LineItem[]]"
   }
 }

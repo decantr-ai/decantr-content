@@ -90,5 +90,10 @@
     "mobile": "Avatar size reduces to 28px. Action buttons appear on long-press instead of hover. Code blocks scroll horizontally. Message content takes full width minus avatar.",
     "tablet": "Standard layout with 32px avatars. Actions appear on hover/tap.",
     "desktop": "Full layout with 36px avatars, hover actions, and generous content width for code blocks."
+  },
+  "composition": {
+    "ChatMessage": "Row(d-surface, align: role) > [Avatar? + MessageBody + Timestamp?(mono-data, text-xs)]",
+    "MessageBody": "Bubble(d-surface, variant: role) > [SenderName?(font-bold, text-sm) + Content(markdown) + CodeBlock?(syntax-highlight, copy-button)]",
+    "MessageActions": "Row(d-interactive, show-on-hover) > IconButton(variant: ghost)[]"
   }
 }

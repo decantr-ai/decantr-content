@@ -120,5 +120,10 @@
       "load-more",
       "mark-read"
     ]
+  },
+  "composition": {
+    "ActivityFeed": "Container(d-data, flex-col, full-width) > [DateGroup[] + LoadMore?(d-interactive)]",
+    "DateGroup": "Section > [DateHeader(d-annotation, text-muted) + FeedItem[]]",
+    "FeedItem": "Row(d-data-row, hoverable) > [Avatar(fallback-initials) + Content(flex-col) > [UserName(font-medium) + ActionText] + Timestamp(mono-data, text-xs, text-muted)]"
   }
 }

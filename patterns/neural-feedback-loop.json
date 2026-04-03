@@ -86,5 +86,13 @@
     "mobile": "Use inline-flow or static-gauge preset. Radial preset requires minimum 160px container. FlowTrack particle count reduced for performance. FeedbackTooltip appears as a bottom sheet on tap rather than hover tooltip.",
     "tablet": "All presets available. Radial preset scales to container. Touch targets for tooltip activation are 44px minimum. Ambient preset works well as a page background on tablet."
   },
-  "visual_brief": "Bio-mimetic circular visualization with a central PulseCore element that expands and contracts with breathing animation, its frequency mapped to processing state (slow idle pulse, rapid active pulse). Surrounding the core, an IntensityRing provides a clean circular gauge with fill level indicating the current metric value. FlowTrack renders directional particle animations flowing along arc paths to represent throughput. A MetricDisplay overlay shows the numeric value and label. The inline-flow preset linearizes the visualization as a horizontal pulsing bar. The ambient preset uses large subtle background pulses. Static-gauge renders as a simple circular progress ring without animation."
+  "visual_brief": "Bio-mimetic circular visualization with a central PulseCore element that expands and contracts with breathing animation, its frequency mapped to processing state (slow idle pulse, rapid active pulse). Surrounding the core, an IntensityRing provides a clean circular gauge with fill level indicating the current metric value. FlowTrack renders directional particle animations flowing along arc paths to represent throughput. A MetricDisplay overlay shows the numeric value and label. The inline-flow preset linearizes the visualization as a horizontal pulsing bar. The ambient preset uses large subtle background pulses. Static-gauge renders as a simple circular progress ring without animation.",
+  "composition": {
+    "NeuralFeedbackLoop": "Container(d-section, centered) > [PulseCore + IntensityRing + MetricDisplay + DetailTooltip?]",
+    "PulseCore": "Core(d-data, radial-gradient, pulsing: frequency-mapped, color-shift: metric)",
+    "IntensityRing": "Ring(d-data, conic-gradient, fill: 0-100%)",
+    "FlowTrack": "Track(d-data, particle-animation, speed: rate) > Particle[]",
+    "MetricDisplay": "Label(d-annotation, mono-data, tabular-nums) > [Value + Unit + TrendArrow?]",
+    "DetailTooltip": "Tooltip(d-surface, on-hover) > [CurrentValue + Range + Trend + Interpretation]"
+  }
 }

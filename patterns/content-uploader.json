@@ -103,5 +103,11 @@
     "mobile": "Drop zone reduces in height. File list shows smaller thumbnails. Upload uses native file picker on tap. Progress bars are full-width.",
     "tablet": "Standard drop zone size. File list shows medium thumbnails with inline progress.",
     "desktop": "Large drop zone with generous padding. File list shows large thumbnails and detailed file info."
+  },
+  "composition": {
+    "ContentUploader": "Container(d-section, flex-col, gap-4) > [Dropzone + FileList + Actions]",
+    "Dropzone": "Zone(d-surface, dashed-border, drop-target) > [CloudIcon + InstructionText + BrowseButton?(d-interactive)]",
+    "FileList": "List(flex-col, gap-2) > FileRow[]",
+    "FileRow": "Row(d-data-row) > [Thumbnail + FileName + FileSize(text-muted) + Progress(d-data) + RemoveButton(d-interactive)]"
   }
 }

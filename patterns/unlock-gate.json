@@ -102,5 +102,9 @@
     "mobile": "Gate overlay takes full content width. CTA button full-width. Tier badge and lock icon centered. Blur amount may reduce for performance.",
     "tablet": "Standard overlay. CTA button at natural width. Comfortable padding.",
     "desktop": "Overlay centered over the content area. CTA button with hover effects. Teaser shows more content before the fade."
+  },
+  "composition": {
+    "UnlockGate": "Overlay(d-section, relative) > [BlurredContent(d-surface, blur) + GateOverlay]",
+    "GateOverlay": "Card(d-surface, centered, elevated) > [LockIcon(d-annotation, large) + Message(heading4) + TierBadge(d-annotation) + SubscribeButton(d-interactive, variant: primary)]"
   }
 }

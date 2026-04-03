@@ -96,5 +96,12 @@
     "mobile": "Single-column stacked layout. Terms display as a two-column key-value grid. Documents list is full-width. Action buttons stack vertically.",
     "tablet": "Standard layout with terms in a comfortable grid. Documents and actions visible without scrolling.",
     "desktop": "Full layout with generous spacing. Terms, documents, and actions all visible in a single view."
+  },
+  "composition": {
+    "LeaseManager": "Container(d-section, flex-col, gap-4) > [Header + Parties + Terms + Documents + Actions]",
+    "Header": "Row(d-surface) > [LeaseID(mono-data) + StatusBadge(d-annotation)]",
+    "Terms": "Grid(d-data, key-value) > [StartDate + EndDate + Rent(mono-data) + Deposit + LateFee]",
+    "Documents": "List(d-data) > FileRow(d-data-row)[]",
+    "Actions": "Row(d-interactive) > [RenewButton + TerminateButton(variant: destructive) + AmendButton(variant: ghost)]"
   }
 }

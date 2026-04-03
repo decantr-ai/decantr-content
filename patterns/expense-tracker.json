@@ -97,5 +97,12 @@
     "mobile": "Table becomes a card list — each expense as a stacked card. Category summary pills wrap. Add button is a FAB. Filters collapse into a filter drawer.",
     "tablet": "Table layout maintained with horizontal scroll for extra columns. Category bar fits in one row.",
     "desktop": "Full table with all columns visible. Category summary bar spans the top. Comfortable spacing."
+  },
+  "composition": {
+    "ExpenseTracker": "Container(d-section, flex-col, gap-4) > [Header + Filters + CategorySummary + ExpenseTable]",
+    "Header": "Row(d-control, space-between) > [Title + DateRange(d-control) + AddButton(d-interactive)]",
+    "CategorySummary": "Row(d-data) > CategoryPill(d-annotation, color-coded)[]",
+    "ExpenseTable": "Table(d-data) > ExpenseRow[]",
+    "ExpenseRow": "Row(d-data-row) > [Date + Description + CategoryBadge(d-annotation) + Property + Amount(mono-data) + ReceiptIcon? + StatusBadge(d-annotation)]"
   }
 }

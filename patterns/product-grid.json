@@ -105,5 +105,11 @@
     "mobile": "Single-column card list. Filters collapse into a filter drawer button. Sort is a simple dropdown. Load more as a button.",
     "tablet": "Two-column grid. Filters visible in a row. Sort inline.",
     "desktop": "Three to four column grid. All filter and sort controls visible in the toolbar. Masonry layout effective at this width."
+  },
+  "composition": {
+    "ProductGrid": "Container(d-section, flex-col, gap-6) > [Toolbar + ItemGrid + LoadMore?]",
+    "Toolbar": "Row(d-control) > [FilterDropdowns > Select(d-control)[] + SortSelect(d-control) + ViewToggle(d-interactive)]",
+    "ItemGrid": "Grid(d-data, responsive: 1/2/3/4-col) > ProductCard[]",
+    "LoadMore": "Button(d-interactive, full-width, variant: ghost)"
   }
 }

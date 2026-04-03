@@ -95,5 +95,10 @@
       "filters"
     ],
     "produces": []
+  },
+  "composition": {
+    "ChartGrid": "Grid(d-section, responsive: 1/2-col) > ChartCard[]",
+    "ChartCard": "Card(d-surface) > [CardHeader > Title(font-medium) + ChartArea(d-data, min-height) + Legend(d-annotation)]",
+    "Legend": "Row(gap-2) > LegendItem(dot + label)[]"
   }
 }

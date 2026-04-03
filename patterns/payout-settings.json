@@ -97,5 +97,12 @@
     "mobile": "Method cards stack vertically. Account fields are full-width. Schedule options stack. Payout history becomes a card list.",
     "tablet": "Method cards in a 2x2 grid. Standard form layout. History table visible.",
     "desktop": "Method cards in a single row. Account and schedule sections side by side. Full history table."
+  },
+  "composition": {
+    "PayoutSettings": "Container(d-section, flex-col, gap-6) > [MethodSelect + BankForm + ScheduleSection + PayoutHistory?]",
+    "MethodSelect": "Row(d-control) > RadioCard(d-surface, icon, selectable)[]",
+    "BankForm": "Section(d-surface) > [BankName(d-control) + RoutingNumber(d-control, masked) + AccountNumber(d-control, masked) + RevealToggle(d-interactive)]",
+    "ScheduleSection": "Section(d-surface) > [FrequencyRadio(d-control) > Option[] + NextPayoutDate(d-annotation) + ThresholdInput(d-control)]",
+    "PayoutHistory": "Table(d-data) > PayoutRow(d-data-row)[]"
   }
 }

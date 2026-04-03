@@ -94,5 +94,11 @@
     "mobile": "Matrix transposes — each role becomes a section with permission checkboxes listed vertically. Role selector at top switches between roles. Horizontal scroll alternative for small matrices.",
     "tablet": "Standard matrix with horizontal scroll if more than 4 roles. Touch-friendly checkbox sizes.",
     "desktop": "Full matrix grid with all roles and permissions visible. Sticky left column for permission names. Sticky header row for role names."
+  },
+  "composition": {
+    "PermissionMatrix": "Container(d-section) > [MatrixTable + AddRoleButton?(d-interactive)]",
+    "MatrixTable": "Table(d-data, full-width) > [HeaderRow > RoleHeader[] + CategoryGroup[]]",
+    "CategoryGroup": "Group > [CategoryHeader(d-annotation, font-bold) + PermissionRow[]]",
+    "PermissionRow": "Row(d-data-row) > [PermissionLabel + PermissionCell(d-control) > Checkbox[] + Tooltip?(d-annotation)]"
   }
 }

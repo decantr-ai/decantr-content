@@ -92,5 +92,11 @@
     "mobile": "Hero cover image reduces in height. Tabs become horizontally scrollable. Content feed is single-column full-width.",
     "tablet": "Standard hero proportions. Tabs fit in a single row. Content area has comfortable margins.",
     "desktop": "Full-width hero with generous cover image. Content area centered with max-width constraint. All tabs visible."
+  },
+  "composition": {
+    "CreatorProfile": "Container(d-section, flex-col) > [Hero + TabBar(d-control) + TabContent]",
+    "Hero": "Section(full-width) > [CoverImage + Avatar(large) + CreatorName(heading2) + Bio(text-muted) + Stats + SubscribeCTA(d-interactive)]",
+    "TabBar": "Row(d-control) > Tab(d-interactive)[]",
+    "TabContent": "Panel(d-surface) > [PostsFeed? + TierCards? + AboutSection?]"
   }
 }

@@ -117,5 +117,12 @@
     "mobile": "Thread renders full-width as a bottom sheet. Avatar size reduces. Reply input is full-width. Thread collapses to show only the first comment with an expand button.",
     "tablet": "Sidebar preset renders as a right panel at 320px width. Inline preset uses a popover.",
     "desktop": "Standard sidebar or inline popover layout. Full avatars and comfortable spacing."
+  },
+  "composition": {
+    "CommentThread": "Container(d-surface, flex-col) > [AnchorLine? + CommentList + ReplyInput + ThreadActions]",
+    "CommentList": "List(flex-col, gap-3) > Comment[]",
+    "Comment": "Row > [Avatar(small) + Body(flex-col) > [AuthorName(font-bold) + Timestamp(text-muted) + CommentText] + ReactionBar?]",
+    "ReplyInput": "Row > [Textarea(d-control) + SendButton(d-interactive)]",
+    "ThreadActions": "Row(d-interactive) > [ResolveButton(icon: check) + DeleteButton?(variant: ghost)]"
   }
 }

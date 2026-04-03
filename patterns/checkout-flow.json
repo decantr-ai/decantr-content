@@ -113,5 +113,10 @@
     "mobile": "Single column layout — order summary moves above the payment form. Submit button is full-width and sticky at the bottom. Card inputs stack vertically.",
     "tablet": "Two-column layout maintained. Summary panel is narrower. Payment form takes majority width.",
     "desktop": "Standard two-column layout with comfortable spacing. Summary card is sticky within its column on scroll."
+  },
+  "composition": {
+    "CheckoutFlow": "Grid(d-section, 2-col, responsive: stack) > [PaymentForm + OrderSummary]",
+    "PaymentForm": "Form(d-surface, flex-col) > [MethodSelect > Radio(d-control)[] + CardInputs > [NumberInput + ExpiryInput + CVCInput] + BillingAddress + SubmitButton(d-interactive, variant: primary, full-width)]",
+    "OrderSummary": "Card(d-surface, sticky) > [LineItems > LineItem[] + PromoInput?(d-control) + Subtotal + Tax + Total(heading3, font-bold)]"
   }
 }

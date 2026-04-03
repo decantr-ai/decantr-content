@@ -91,5 +91,12 @@
     "mobile": "Single-column layout. Gallery becomes a swipeable carousel. Tabs become a dropdown selector or horizontally scrollable. Content sections stack fully.",
     "tablet": "Standard layout with scrollable tab bar. Gallery shows 3-4 thumbnails. Content area comfortable width.",
     "desktop": "Full layout with all tabs visible. Gallery shows full thumbnail row. Content area can show side-by-side panels within tabs."
+  },
+  "composition": {
+    "PropertyDetail": "Container(d-section, flex-col, gap-6) > [Header + Gallery + MetricsRow + TabContent]",
+    "Header": "Row(d-surface, space-between) > [PropertyName(heading2) + Address(text-muted) + StatusBadge(d-annotation) + ActionButtons(d-interactive)]",
+    "Gallery": "Row(d-data, scrollable) > Thumbnail(clickable)[]",
+    "MetricsRow": "Grid(d-data, 4-col) > MetricCard(d-surface)[]",
+    "TabContent": "Tabs(d-control) > [OverviewTab + UnitsTab + FinancialsTab + DocumentsTab + MaintenanceTab]"
   }
 }

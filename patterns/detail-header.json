@@ -104,5 +104,11 @@
     "mobile": "Breadcrumb collapses to back arrow with parent name. Action buttons move below the title and stack full-width. Status badge wraps below the title on its own line.",
     "tablet": "Standard layout. Actions remain inline right of title. Breadcrumb shows full path.",
     "desktop": "Full header with all elements comfortably positioned. Generous whitespace above and below."
+  },
+  "composition": {
+    "DetailHeader": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + TitleRow + Subtitle?(text-muted)]",
+    "TitleRow": "Row(space-between) > [Title(heading2) + StatusBadge?(d-annotation) + ActionButtons(d-interactive)]",
+    "ActionButtons": "Row(gap-2) > Button(variant: ghost)[]",
+    "ProfileHeader": "Row(d-section, gap-6) > [Avatar(large, 96px) + InfoColumn > [Name(heading2) + Title(text-muted) + Bio + StatsRow + ActionButtons]]"
   }
 }

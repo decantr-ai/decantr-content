@@ -85,5 +85,11 @@
     "mobile": "Default to docked-bottom preset. Drag-to-float disabled (too imprecise on touch). Swipe down to dismiss, swipe up to restore. Action groups scroll horizontally if overflow.",
     "tablet": "All presets available. Drag handle enlarged for touch (56x56px). Dock snap threshold increased to 60px. Floating position persisted across sessions."
   },
-  "visual_brief": "Floating glassmorphic toolbar with backdrop blur, semi-transparent background, and subtle luminant border. Contains grouped action buttons with icon-only or icon+label styles. A drag handle on one end allows repositioning anywhere in the viewport. Docks to viewport edges with a snap animation when dragged near them. Docked-bottom preset fixes the bar along the bottom edge. Docked-side preset fixes along a vertical edge. Minimal preset reduces to a small floating pill with only essential actions. A subtle glow or shimmer effect reinforces the glassmorphic treatment."
+  "visual_brief": "Floating glassmorphic toolbar with backdrop blur, semi-transparent background, and subtle luminant border. Contains grouped action buttons with icon-only or icon+label styles. A drag handle on one end allows repositioning anywhere in the viewport. Docks to viewport edges with a snap animation when dragged near them. Docked-bottom preset fixes the bar along the bottom edge. Docked-side preset fixes along a vertical edge. Minimal preset reduces to a small floating pill with only essential actions. A subtle glow or shimmer effect reinforces the glassmorphic treatment.",
+  "composition": {
+    "HolographicControlBar": "Bar(d-control, glassmorphic, backdrop-blur, floating) > [DragHandle(grip-pattern) + ActionGroup[] + DockIndicator?]",
+    "ActionGroup": "Group(d-interactive, gap-2, divider) > IconButton[]",
+    "DragHandle": "Handle(d-interactive, min-44px, cursor: grab)",
+    "DockIndicator": "Indicator(d-annotation, glow: near-dock)"
+  }
 }

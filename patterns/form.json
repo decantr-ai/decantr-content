@@ -148,5 +148,12 @@
       "cancel",
       "reset"
     ]
+  },
+  "composition": {
+    "Form": "Container(d-section, flex-col, gap-6, max-width) > [FormSection[] + ActionButtons]",
+    "FormSection": "Card(d-surface) > [SectionTitle(heading4) + SectionDescription?(text-muted) + FieldGroup(d-control, grid: 1/2-col)]",
+    "FieldGroup": "Grid > Field[]",
+    "Field": "Stack(flex-col) > [Label(d-control, font-medium) + Input(d-control) + ValidationError?(d-annotation, text-destructive)]",
+    "ActionButtons": "Row(d-interactive, gap-2) > [SaveButton(variant: primary) + CancelButton(variant: ghost)]"
   }
 }

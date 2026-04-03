@@ -96,5 +96,12 @@
     "mobile": "Single-column layout — tier list at top, editor below when a tier is selected. Preview at the bottom. Drag-to-reorder uses long-press.",
     "tablet": "Two-column layout — tier list on left, editor on right. Preview below the editor.",
     "desktop": "Three-column layout — tier list, editor, and live preview all visible simultaneously."
+  },
+  "composition": {
+    "TierBuilder": "Container(d-section, split: list|editor|preview) > [TierList + TierForm + LivePreview?]",
+    "TierList": "Panel(d-surface, flex-col) > [TierItem(d-data-row, draggable)[] + AddTierButton(d-interactive)]",
+    "TierItem": "Row(d-data-row) > [DragHandle + TierName(font-medium) + Price(mono-data) + SubscriberCount(d-annotation)]",
+    "TierForm": "Form(d-surface) > [NameInput(d-control) + PriceInput(d-control, currency) + DescriptionTextarea(d-control) + BenefitsEditor > BenefitRow(d-data-row, sortable)[]]",
+    "LivePreview": "Panel(d-surface) > TierCard"
   }
 }

@@ -95,5 +95,9 @@
       "quote-text": "Testimonial paragraph",
       "author": "Avatar, name, and role"
     }
+  },
+  "composition": {
+    "Testimonials": "Grid(d-section, responsive: 1/2/3-col) > TestimonialCard[]",
+    "TestimonialCard": "Card(d-surface) > [QuoteIcon(d-annotation) + QuoteText(italic) + AuthorRow > [Avatar + AuthorInfo > [Name(font-medium) + Role(text-muted)] + CompanyLogo?]]"
   }
 }

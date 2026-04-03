@@ -94,5 +94,12 @@
     "mobile": "Cards take full width. Approve/Reject buttons are full-width stacked. Content preview defaults to collapsed. Feedback textarea appears on button click.",
     "tablet": "Standard card layout. Buttons side by side in the footer.",
     "desktop": "Full card with content preview visible. Buttons inline in footer. Feedback textarea expandable."
+  },
+  "composition": {
+    "ModerationQueueItem": "Card(d-surface, bordered) > [Header + SubmitterRow + ContentPreview + AdminNotes? + ActionBar]",
+    "Header": "CardHeader > [TypeBadge(d-annotation, color-coded) + ContentName(heading4) + Timestamp(text-muted)]",
+    "SubmitterRow": "Row > [Avatar + Username(font-medium) + ReputationBadge(d-annotation)]",
+    "ContentPreview": "CardBody(d-data) > [Description + JSONPreview?(collapsible, mono-data)]",
+    "ActionBar": "CardFooter(d-interactive) > [ApproveButton(variant: success) + RejectButton(variant: destructive) + ViewDetailLink(variant: ghost)]"
   }
 }

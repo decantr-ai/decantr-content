@@ -105,5 +105,10 @@
     "mobile": "Card preset used — members as stacked cards. Avatar, name, role badge, and actions visible. Join date hidden. Actions as icon buttons.",
     "tablet": "Standard row layout. All fields visible. Actions as text buttons.",
     "desktop": "Full row with generous spacing. All information and actions visible inline."
+  },
+  "composition": {
+    "TeamMemberRow": "Row(d-data-row, hoverable) > [Avatar + MemberInfo + RoleBadge(d-annotation) + JoinDate(text-muted) + Actions]",
+    "MemberInfo": "Stack(flex-col) > [Name(font-medium) + Email(text-muted, text-sm)]",
+    "Actions": "Row(d-interactive) > [RoleSelect(d-control) + RemoveButton(variant: destructive, icon-only)]"
   }
 }

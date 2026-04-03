@@ -6,7 +6,14 @@
   "name": "Agent Swarm Canvas",
   "description": "A spatial node-graph canvas where AI agents appear as interactive nodes with real-time status, drag-to-connect edges, zoom/pan navigation, and a minimap for orchestration overview.",
   "category": "agentic",
-  "tags": ["2026", "agentic", "spatial", "orchestration", "node-graph", "real-time"],
+  "tags": [
+    "2026",
+    "agentic",
+    "spatial",
+    "orchestration",
+    "node-graph",
+    "real-time"
+  ],
   "components": [
     "AgentNode",
     "ConnectionPath",
@@ -81,5 +88,13 @@
   "responsive": {
     "mobile": "Canvas remains spatial but disables drag-to-connect (use tap-to-select then tap-target-to-connect two-step flow). Minimap hidden. Control bar simplifies to zoom + play/pause. Agent nodes render at minimum 64px width with truncated labels.",
     "tablet": "Full spatial canvas with minimap collapsed by default (toggle via control bar). Touch gestures: two-finger pan, pinch-to-zoom. Connection drag uses long-press to initiate."
+  },
+  "composition": {
+    "AgentSwarmCanvas": "Viewport(d-section, spatial, full-bleed) > [CanvasLayer + StatusOverlay + ControlBar + Minimap?]",
+    "CanvasLayer": "Canvas(zoomable, pannable) > [AgentNode[] + ConnectionPath[]]",
+    "AgentNode": "Card(d-surface, data-interactive, positioned) > [Name + Avatar + StatusRing(pulse?: running) + TaskTooltip?]",
+    "ConnectionPath": "SVG(bezier, animated-dash) > Path(color: status)",
+    "StatusOverlay": "Panel(d-annotation, backdrop-blur, top-right) > [AgentCount + RunningCount + ErrorCount + ProgressBar]",
+    "ControlBar": "Bar(d-control, bottom-center) > [ZoomIn + ZoomOut + FitView + ToggleMinimap + PlayPause + ResetLayout]"
   }
 }

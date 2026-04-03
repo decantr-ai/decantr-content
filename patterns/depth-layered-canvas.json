@@ -77,5 +77,12 @@
     "mobile": "Collapse to flat-fallback preset. Stack layers vertically. DepthSlider hidden. Focal-point renders inline without blur effect.",
     "tablet": "Reduce parallax intensity to 50%. Two visible planes (midground + foreground). Background becomes a static backdrop. DepthSlider available but simplified."
   },
-  "visual_brief": "Three-plane spatial layout using CSS perspective and preserve-3d transforms. Background layer sits deepest with ambient gradients or data visualizations, rendered with blur and slow parallax. Midground layer holds the primary content cards and panels at normal focus. Foreground layer contains interactive controls, tooltips, and floating action elements at the closest depth. A depth slider control on the edge lets users adjust focal plane. Layers shift on scroll with different parallax rates. The flat-fallback preset collapses all layers to a standard stacked layout for reduced-motion preference."
+  "visual_brief": "Three-plane spatial layout using CSS perspective and preserve-3d transforms. Background layer sits deepest with ambient gradients or data visualizations, rendered with blur and slow parallax. Midground layer holds the primary content cards and panels at normal focus. Foreground layer contains interactive controls, tooltips, and floating action elements at the closest depth. A depth slider control on the edge lets users adjust focal plane. Layers shift on scroll with different parallax rates. The flat-fallback preset collapses all layers to a standard stacked layout for reduced-motion preference.",
+  "composition": {
+    "DepthLayeredCanvas": "Container(d-section, perspective, preserve-3d, full) > [BackgroundLayer + MidgroundLayer + ForegroundLayer + DepthControls?]",
+    "BackgroundLayer": "SpatialLayer(d-surface, z-back, blur, parallax: 0.3x)",
+    "MidgroundLayer": "SpatialLayer(d-surface, z-mid, parallax: 0.7x) > Content[]",
+    "ForegroundLayer": "SpatialLayer(d-interactive, z-front, parallax: 1x) > Controls[]",
+    "DepthControls": "Panel(d-control, floating) > [DepthSlider(d-control) + FlatToggle(d-interactive)]"
+  }
 }

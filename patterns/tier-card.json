@@ -104,5 +104,9 @@
     "mobile": "Cards stack full-width. Subscribe button full-width. Benefits list compact.",
     "tablet": "Two or three column grid of tier cards for comparison.",
     "desktop": "Three-column grid for plan comparison. Featured tier slightly elevated. Generous padding."
+  },
+  "composition": {
+    "TierCard": "Card(d-surface, accent-border?: featured) > [TierName(heading4) + Price(mono-data, heading2) + BillingPeriod(text-muted) + BenefitsList > CheckItem(icon: check)[] + SubscribeCTA(d-interactive, variant: featured ? primary : ghost, full-width)]",
+    "SubscribeCTA": "Button(d-interactive, full-width)"
   }
 }

@@ -99,5 +99,9 @@
     "produces": [
       "stat-data"
     ]
+  },
+  "composition": {
+    "StatsOverview": "Row(d-section, responsive: wrap) > StatItem[]",
+    "StatItem": "Card(d-surface) > [Icon?(d-annotation, rounded-bg) + Label(text-muted, text-sm) + Value(heading3, mono-data) + TrendBadge?(d-annotation, variant: positive|negative)]"
   }
 }

@@ -109,5 +109,9 @@
     "mobile": "Cover image height reduces. Avatar centers above the name. Bio text wraps fully. Social links in a compact icon row. Subscribe button goes full-width.",
     "tablet": "Standard hero proportions. Avatar and text left-aligned. Subscribe button inline.",
     "desktop": "Full-width hero with generous cover height. Avatar, bio, social links, and subscribe button all comfortably laid out."
+  },
+  "composition": {
+    "StorefrontHero": "Section(d-section, full-width) > [CoverImage(full-bleed) + ProfileRow + SocialLinks?]",
+    "ProfileRow": "Row(centered, gap-4) > [Avatar(large, border) + InfoColumn > [CreatorName(heading2) + Bio(text-muted) + StatsRow > [FollowerCount + PostCount]] + SubscribeCTA(d-interactive, variant: primary)]"
   }
 }

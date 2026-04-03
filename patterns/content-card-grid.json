@@ -113,5 +113,10 @@
     "mobile": "Single-column card stack. Cards take full width. Quick actions use icon-only buttons. Description limited to one line.",
     "tablet": "Two-column grid. Standard card sizes with full descriptions visible.",
     "desktop": "Three or four column grid depending on container width. Cards show all metadata and actions."
+  },
+  "composition": {
+    "ContentCardGrid": "Grid(d-section, responsive: 1/2/3-col) > ContentCard[]",
+    "ContentCard": "Card(d-surface, hoverable) > [CardHeader > [TypeBadge(d-annotation, color-coded) + NamespaceBadge(d-annotation)] + CardBody > [Title(heading4, clickable) + Description(text-muted, line-clamp-2)] + CardFooter > [Version(mono-data) + DownloadCount + UpdatedAt(text-muted)]]",
+    "EditableCard": "ContentCard > CardFooter > [EditButton(d-interactive) + DeleteButton(d-interactive, variant: destructive)]"
   }
 }

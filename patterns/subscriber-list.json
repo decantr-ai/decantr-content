@@ -99,5 +99,12 @@
     "mobile": "Table becomes a card list — each subscriber as a card with avatar, name, tier, and status. Bulk actions move to a bottom action bar. Filters collapse to a filter button.",
     "tablet": "Table with horizontal scroll. Search and primary filters visible. Checkboxes and bulk actions functional.",
     "desktop": "Full table with all columns visible. Filters, search, and bulk actions in a single toolbar row."
+  },
+  "composition": {
+    "SubscriberList": "Container(d-section, flex-col, gap-4) > [Toolbar + SubscriberTable + Pagination + BulkActions?]",
+    "Toolbar": "Row(d-control) > [SearchInput(d-control) + TierFilter(d-control) + StatusFilter(d-control) + ExportButton(d-interactive)]",
+    "SubscriberTable": "Table(d-data) > SubscriberRow[]",
+    "SubscriberRow": "Row(d-data-row) > [Checkbox(d-control) + Avatar + Name(font-medium) + Email(text-muted) + TierBadge(d-annotation) + JoinDate + StatusBadge(d-annotation) + ActionsMenu(d-interactive)]",
+    "BulkActions": "Bar(d-control, sticky-bottom) > [SelectedCount + MessageButton(d-interactive) + ExportButton(d-interactive)]"
   }
 }

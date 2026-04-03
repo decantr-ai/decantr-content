@@ -86,5 +86,11 @@
     "mobile": "Breadcrumb collapses to back-arrow + parent name. Badges and meta stack below the title. Action buttons go full-width stacked at the bottom.",
     "tablet": "Standard layout. Action buttons align right of the title. Breadcrumb shows full path.",
     "desktop": "Full layout with action group floating right. All metadata and breadcrumb visible in one comfortable view."
+  },
+  "composition": {
+    "ContentDetailHero": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + BadgeRow + Title(heading2) + Description(text-muted) + MetaRow + ActionGroup]",
+    "BadgeRow": "Row(gap-2) > [TypeChip(d-annotation, color-coded) + NamespaceBadge(d-annotation)]",
+    "MetaRow": "Row(d-data, gap-3) > [Version(mono-data) + Author + PublishDate(text-muted)]",
+    "ActionGroup": "Row(d-interactive, gap-2) > [CopyJSONButton + UseButton(variant: primary) + ShareButton(variant: ghost)]"
   }
 }

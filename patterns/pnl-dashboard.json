@@ -79,5 +79,12 @@
     "mobile": "Summary metrics in a 2x2 grid. Breakdown panels stack vertically. Property comparison becomes a scrollable card list. Projections chart takes full width with simplified labels.",
     "tablet": "Metrics in a single row. Breakdowns side by side. Comparison table with horizontal scroll.",
     "desktop": "Full dashboard grid with all sections visible. Charts and tables at comfortable sizes."
+  },
+  "composition": {
+    "PnlDashboard": "Container(d-section, flex-col, gap-6) > [Header + SummaryCards + Breakdowns + PropertyComparison + Projections?]",
+    "Header": "Row(d-control) > [Title + PropertyFilter(d-control) + DateRange(d-control) + ExportButton(d-interactive)]",
+    "SummaryCards": "Grid(d-data, responsive: 2/4-col) > MetricCard(d-surface)[]",
+    "Breakdowns": "Row(d-data, 2-col) > [IncomeBreakdown(d-surface) + ExpenseBreakdown(d-surface)]",
+    "PropertyComparison": "Table(d-data) > PropertyRow(d-data-row)[]"
   }
 }

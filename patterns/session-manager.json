@@ -56,5 +56,11 @@
     "mobile": "Sessions stack as full-width cards. Device info and location on separate lines. Revoke button full-width per session. Sign Out All button at the bottom.",
     "tablet": "Standard list layout. Device info and location inline. Revoke buttons on the right.",
     "desktop": "Full list with all information inline per row. Comfortable spacing between sessions."
+  },
+  "composition": {
+    "SessionManager": "Container(d-section, flex-col, gap-4) > [CurrentSession + OtherSessions + RevokeAllButton?]",
+    "CurrentSession": "Card(d-surface, accent-border) > [DeviceIcon + DeviceInfo > [Name(font-medium) + Location + LastActive(text-muted)] + CurrentBadge(d-annotation)]",
+    "OtherSessions": "List(flex-col) > SessionRow[]",
+    "SessionRow": "Row(d-data-row) > [DeviceIcon + DeviceInfo > [Name + Location + LastActive(text-muted)] + RevokeButton(d-interactive, variant: destructive)]"
   }
 }

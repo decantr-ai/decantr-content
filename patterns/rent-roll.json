@@ -79,5 +79,12 @@
     "mobile": "Table becomes a card list — each unit as a card with key values. Summary metrics in a 2x2 grid. Month selector is a simple dropdown.",
     "tablet": "Table with horizontal scroll if needed. Summary visible above. Comfortable row height.",
     "desktop": "Full table with all columns visible. Summary bar at top. Sticky header row."
+  },
+  "composition": {
+    "RentRoll": "Container(d-section, flex-col, gap-4) > [Header + SummaryMetrics + UnitTable + Totals]",
+    "Header": "Row(d-control) > [Title + MonthSelector(d-control) + PropertyFilter(d-control) + ExportButton(d-interactive)]",
+    "SummaryMetrics": "Row(d-data) > [ExpectedTotal(mono-data) + CollectedTotal(mono-data, color: success) + Outstanding(mono-data, color: warning) + VacancyLoss(mono-data, color: destructive)]",
+    "UnitTable": "Table(d-data) > UnitRow[]",
+    "UnitRow": "Row(d-data-row) > [UnitNumber + Tenant + ExpectedRent(mono-data) + Collected(mono-data) + Balance(mono-data, color: status) + StatusBadge(d-annotation)]"
   }
 }

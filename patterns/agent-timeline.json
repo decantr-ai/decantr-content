@@ -6,7 +6,14 @@
   "name": "Agent Timeline",
   "description": "A vertical timeline for agent observability that displays actions, decisions, tool calls, and reasoning steps as collapsible color-coded events with filtering, detail expansion, and summary statistics.",
   "category": "agentic",
-  "tags": ["2026", "agentic", "timeline", "observability", "tool-calls", "reasoning"],
+  "tags": [
+    "2026",
+    "agentic",
+    "timeline",
+    "observability",
+    "tool-calls",
+    "reasoning"
+  ],
   "components": [
     "TimelineEvent",
     "EventDetail",
@@ -80,5 +87,13 @@
   "responsive": {
     "mobile": "Timeline track moves to a thin left-edge gutter (8px inset). Event cards span full width with reduced padding. Filter bar scrolls horizontally with momentum. Summary header stacks stats in a 2×2 grid. Event details render in a bottom sheet on tap rather than inline expansion to save vertical space.",
     "tablet": "Standard vertical layout maintained. Filter bar remains fully visible without scrolling (wraps to second row if needed). Event cards maintain comfortable padding. Summary header displays stats in a single row."
+  },
+  "composition": {
+    "AgentTimeline": "Container(d-section, flex-col, gap-4) > [TimelineSummary + FilterBar + EventList]",
+    "TimelineSummary": "Card(d-surface, sticky) > [AgentName + ModelId + Status(d-annotation) + EventCounts(d-data) + ElapsedTime(mono-data) + TokenUsage]",
+    "FilterBar": "Row(d-control, scrollable) > FilterChip(toggleable, color: event-type)[]",
+    "EventList": "Track(d-data, vertical-line) > EventNode[]",
+    "EventNode": "Card(d-surface, color-left-border: event-type, collapsible) > [TypeIcon + Summary + Timestamp(mono-data) + ChevronToggle + EventDetail?]",
+    "EventDetail": "Panel(d-data, expandable) > [Content(variant: event-type)]"
   }
 }

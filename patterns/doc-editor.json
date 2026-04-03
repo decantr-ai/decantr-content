@@ -111,5 +111,11 @@
     "mobile": "Full-width editor with bottom-fixed formatting toolbar above the keyboard. Slash menu takes full width. Remote cursors show abbreviated names.",
     "tablet": "Standard editor layout. Floating toolbar near selection. Comfortable block spacing.",
     "desktop": "Full editor with generous margins. Floating toolbar tracks selection precisely. All collaboration indicators visible."
+  },
+  "composition": {
+    "DocEditor": "Container(d-section, flex-col, full-height, relative) > [CursorsLayer + SelectionsLayer + ContentArea + FloatingToolbar? + SlashMenu? + MentionPopup?]",
+    "ContentArea": "Editor(d-surface, contenteditable) > Block[]",
+    "CursorsLayer": "Overlay(absolute) > RemoteCursor(colored, named)[]",
+    "FloatingToolbar": "Bar(d-control, floating, on-selection)"
   }
 }

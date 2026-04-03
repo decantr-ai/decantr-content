@@ -68,5 +68,11 @@
     "mobile": "Single-column stacked layout. Specs in a 2-column key-value grid. Tenant card full-width. Tabs become a dropdown or accordion.",
     "tablet": "Standard layout. Specs and tenant info side by side. Tabs in a row.",
     "desktop": "Full layout with specs, tenant card, and tabs all comfortably displayed."
+  },
+  "composition": {
+    "UnitDetail": "Container(d-section, flex-col, gap-6) > [Header + Specs + CurrentTenant? + TabContent]",
+    "Header": "Row(d-surface, space-between) > [UnitNumber(heading2) + StatusBadge(d-annotation) + ActionButtons(d-interactive)]",
+    "Specs": "Grid(d-data, key-value) > [Bedrooms + Bathrooms + SqFt(mono-data) + FloorPlan?]",
+    "TabContent": "Tabs(d-control) > [LeaseTab + PaymentTab + MaintenanceTab + DocumentsTab]"
   }
 }

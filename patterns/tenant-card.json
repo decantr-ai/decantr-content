@@ -115,5 +115,11 @@
     "mobile": "Cards take full width. Action buttons stack. Contact info uses tap-to-call/email links.",
     "tablet": "Two-column card grid. Standard card proportions.",
     "desktop": "Three-column grid or list layout. Cards at comfortable size with all details visible."
+  },
+  "composition": {
+    "TenantCard": "Card(d-surface, hoverable) > [Avatar(large) + TenantInfo + PaymentStatus + Actions]",
+    "TenantInfo": "Stack(flex-col) > [Name(font-medium) + Property(text-muted) + Unit(text-muted) + LeaseEnd(d-annotation)]",
+    "PaymentStatus": "Badge(d-annotation, color: status)",
+    "Actions": "Row(d-interactive) > [ViewButton + MessageButton(variant: ghost) + MenuButton]"
   }
 }

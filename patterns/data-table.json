@@ -110,5 +110,12 @@
       "delete",
       "edit"
     ]
+  },
+  "composition": {
+    "DataTable": "Container(d-data, full-width) > [Toolbar + Table + Pagination]",
+    "Toolbar": "Row(d-control) > [SearchInput(d-control) + ActionButtons(d-interactive)]",
+    "Table": "Table(d-data) > [TableHeader > HeaderCell(sortable?, sort-indicator?)[] + TableBody > DataRow(d-data-row, hoverable, striped?)[]]",
+    "DataRow": "Row > [Checkbox?(d-control) + DataCell(d-data-cell)[]]",
+    "Pagination": "Row(d-control) > [PageInfo(text-muted) + PageButtons(d-interactive, variant: ghost)[]]"
   }
 }

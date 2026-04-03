@@ -144,5 +144,10 @@
     "actions": [
       "load-more"
     ]
+  },
+  "composition": {
+    "CardGrid": "Grid(d-section, responsive: 1/2/3/4-col) > ProductCard[]",
+    "ProductCard": "Card(d-surface, hoverable, lift-on-hover) > [Image(aspect-ratio) + Title(font-medium) + Price(heading4) + RatingRow > [StarIcon[] + CountBadge(d-annotation)] + CTAButton(d-interactive, full-width)]",
+    "ContentCard": "Card(d-surface) > [Thumbnail + CategoryBadge(d-annotation) + Title(heading4) + Excerpt(text-muted) + MetaRow > [AuthorAvatar + AuthorName + Date]]"
   }
 }
