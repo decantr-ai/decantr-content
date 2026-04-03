@@ -81,24 +81,88 @@
     }
   },
   "internal_layout": {
-    "root": { "display": "grid", "height": "100vh", "grid_template": "columns: sidebar 1fr aside; rows: 52px 1fr", "atoms": "_grid _h[100vh]" },
+    "root": {
+      "display": "grid",
+      "height": "100vh",
+      "grid_template": "columns: sidebar 1fr aside; rows: 52px 1fr",
+      "atoms": "_grid _h[100vh]"
+    },
     "sidebar": {
-      "width": "240px", "collapsed_width": "48px", "collapse_breakpoint": "lg",
-      "position": "left", "direction": "column", "border": "right", "background": "var(--d-surface)",
+      "width": "240px",
+      "collapsed_width": "48px",
+      "collapse_breakpoint": "lg",
+      "position": "left",
+      "direction": "column",
+      "border": "right",
+      "background": "var(--d-surface)",
       "grid_span": "row 1/3",
       "atoms": "_flex _col _bgmuted _borderR",
-      "brand": { "height": "52px", "display": "flex", "align": "center", "justify": "space-between", "padding": "0.75rem", "border": "bottom", "content": "Pages heading + collapse toggle" },
-      "nav": { "flex": "1", "overflow_y": "auto", "padding": "0.5rem", "item_gap": "0.25rem", "item_padding": "0.5rem", "item_content": "Page icon (emoji) + page title (truncated). Collapsed: icon only." },
-      "footer": { "border": "top", "padding": "0.5rem", "content": "New Page button (full-width outline)" }
+      "brand": {
+        "height": "52px",
+        "display": "flex",
+        "align": "center",
+        "justify": "space-between",
+        "padding": "0.75rem",
+        "border": "bottom",
+        "content": "Pages heading + collapse toggle"
+      },
+      "nav": {
+        "flex": "1",
+        "overflow_y": "auto",
+        "padding": "0.5rem",
+        "item_gap": "0.25rem",
+        "item_padding": "0.5rem",
+        "item_content": "Page icon (emoji) + page title (truncated). Collapsed: icon only."
+      },
+      "footer": {
+        "border": "top",
+        "padding": "0.5rem",
+        "content": "New Page button (full-width outline)"
+      }
     },
-    "header": { "height": "52px", "display": "flex", "align": "center", "justify": "space-between", "padding": "0 1.5rem", "border": "bottom", "background": "var(--d-bg)", "grid_span": "column 2/4", "left_content": "Document title", "right_content": "Share button + collaborator avatars (stacked, max 4 + overflow count) + notifications + user avatar" },
-    "body": { "flex": "1", "direction": "column", "overflow_y": "auto", "padding": "2rem", "atoms": "_flex _col _overflow[auto] _p8", "note": "Document editor area. Scrollable. Editor mode enabled." },
+    "header": {
+      "height": "52px",
+      "display": "flex",
+      "align": "center",
+      "justify": "space-between",
+      "padding": "0 1.5rem",
+      "border": "bottom",
+      "background": "var(--d-bg)",
+      "grid_span": "column 2/4",
+      "left_content": "Document title",
+      "right_content": "Share button + collaborator avatars (stacked, max 4 + overflow count) + notifications + user avatar",
+      "button_sizing": "Buttons in the header use compact sizing: py-1.5 px-3 text-sm (~32px tall). The header is a tight 52px bar \u2014 default d-interactive padding is too large here."
+    },
+    "body": {
+      "flex": "1",
+      "direction": "column",
+      "overflow_y": "auto",
+      "padding": "2rem",
+      "atoms": "_flex _col _overflow[auto] _p8",
+      "note": "Document editor area. Scrollable. Editor mode enabled."
+    },
     "aside": {
-      "width": "280px", "collapsible": true, "collapse_breakpoint": "xl",
-      "direction": "column", "border": "left", "background": "var(--d-bg)",
+      "width": "280px",
+      "collapsible": true,
+      "collapse_breakpoint": "xl",
+      "direction": "column",
+      "border": "left",
+      "background": "var(--d-bg)",
       "atoms": "_flex _col _borderL _bgbg _overflow[auto]",
-      "header": { "display": "flex", "align": "center", "justify": "space-between", "padding": "1rem", "border": "bottom", "content": "Comments label + close button" },
-      "body": { "flex": "1", "overflow_y": "auto", "padding": "1rem", "note": "Comment/activity thread." },
+      "header": {
+        "display": "flex",
+        "align": "center",
+        "justify": "space-between",
+        "padding": "1rem",
+        "border": "bottom",
+        "content": "Comments label + close button"
+      },
+      "body": {
+        "flex": "1",
+        "overflow_y": "auto",
+        "padding": "1rem",
+        "note": "Comment/activity thread."
+      },
       "note": "Right comment/activity sidebar. Toggleable. When collapsed, shows a floating message-square icon button to reopen."
     }
   },

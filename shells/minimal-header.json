@@ -52,10 +52,40 @@
     }
   },
   "internal_layout": {
-    "root": { "display": "flex", "direction": "column", "height": "100vh", "atoms": "_flex _col _h[100vh]" },
-    "header": { "height": "44px", "display": "flex", "align": "center", "justify": "center", "padding": "0.75rem 0", "border": "bottom", "sticky": true, "content": "Back arrow icon + brand link, centered", "note": "Slim header with centered brand. Minimal — no nav links." },
-    "body": { "flex": "1", "direction": "column", "align": "center", "overflow_y": "auto", "padding": "2rem 0", "atoms": "_flex _col _aic _overflow[auto] _flex1 _py8",
-      "content_wrapper": { "width": "720px", "max_width": "100%", "padding": "0 1rem", "direction": "column", "gap": "1.5rem", "atoms": "_w[720px] _mw[100%] _px4 _flex _col _gap6", "note": "Centered column for focused content. Checkout forms, task pages." }
+    "root": {
+      "display": "flex",
+      "direction": "column",
+      "height": "100vh",
+      "atoms": "_flex _col _h[100vh]"
+    },
+    "header": {
+      "height": "44px",
+      "display": "flex",
+      "align": "center",
+      "justify": "center",
+      "padding": "0.75rem 0",
+      "border": "bottom",
+      "sticky": true,
+      "content": "Back arrow icon + brand link, centered",
+      "note": "Slim header with centered brand. Minimal \u2014 no nav links.",
+      "button_sizing": "Buttons in the header use compact sizing: py-1.5 px-3 text-sm (~32px tall). The header is a tight 52px bar \u2014 default d-interactive padding is too large here."
+    },
+    "body": {
+      "flex": "1",
+      "direction": "column",
+      "align": "center",
+      "overflow_y": "auto",
+      "padding": "2rem 0",
+      "atoms": "_flex _col _aic _overflow[auto] _flex1 _py8",
+      "content_wrapper": {
+        "width": "720px",
+        "max_width": "100%",
+        "padding": "0 1rem",
+        "direction": "column",
+        "gap": "1.5rem",
+        "atoms": "_w[720px] _mw[100%] _px4 _flex _col _gap6",
+        "note": "Centered column for focused content. Checkout forms, task pages."
+      }
     }
   },
   "code": {

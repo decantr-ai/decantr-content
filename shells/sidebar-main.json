@@ -81,7 +81,7 @@
     }
   },
   "guidance": {
-    "hotkeys": "Navigation hotkeys defined in the essence are keyboard shortcuts. Implement as useEffect keydown event listeners — do NOT render hotkey text in the sidebar UI.",
+    "hotkeys": "Navigation hotkeys defined in the essence are keyboard shortcuts. Implement as useEffect keydown event listeners \u2014 do NOT render hotkey text in the sidebar UI.",
     "collapse": "Sidebar collapse toggle should be integrated into the sidebar header area (next to the brand/logo), not floating at the bottom of the sidebar.",
     "breadcrumbs": "For nested routes (e.g., /resource/:id), show a breadcrumb trail above the page heading inside the main content area.",
     "section_labels": "Dashboard section labels should use the d-label class. Anchor with a left accent border: border-left: 2px solid var(--d-accent); padding-left: 0.5rem.",
@@ -90,18 +90,71 @@
     "page_transitions": "Apply the entrance-fade class (if generated) to the main content area for smooth page transitions."
   },
   "internal_layout": {
-    "root": { "display": "flex", "direction": "row", "height": "100vh", "atoms": "_flex _h[100vh]" },
-    "sidebar": {
-      "width": "240px", "collapsed_width": "64px", "collapse_breakpoint": "md",
-      "position": "left", "direction": "column", "border": "right", "background": "var(--d-surface)",
-      "atoms": "_flex _col _borderR",
-      "brand": { "height": "52px", "display": "flex", "align": "center", "padding": "0 1rem", "border": "bottom", "content": "Logo/brand + collapse toggle" },
-      "nav": { "flex": "1", "overflow_y": "auto", "padding": "0.5rem", "group_gap": "0.5rem", "group_header_treatment": "d-label", "item_treatment": "d-interactive[ghost]", "item_padding": "0.375rem 0.75rem", "item_gap": "2px", "item_content": "icon (16px) + label text. Collapsed: icon only, text hidden." },
-      "footer": { "border": "top", "padding": "0.5rem", "position_within": "bottom (mt-auto)", "content": "User avatar + settings link" }
+    "root": {
+      "display": "flex",
+      "direction": "row",
+      "height": "100vh",
+      "atoms": "_flex _h[100vh]"
     },
-    "main_wrapper": { "flex": "1", "direction": "column", "overflow": "hidden", "atoms": "_flex _col _flex1 _overflow[hidden]" },
-    "header": { "height": "52px", "display": "flex", "align": "center", "justify": "space-between", "padding": "0 1.5rem", "border": "bottom", "left_content": "Breadcrumb — omit segment when it equals page title", "right_content": "Search/command trigger" },
-    "body": { "flex": "1", "overflow_y": "auto", "padding": "1.5rem", "atoms": "_flex1 _overflow[auto] _p6", "note": "Sole scroll container. Page content renders directly here. No wrapper div around outlet." }
+    "sidebar": {
+      "width": "240px",
+      "collapsed_width": "64px",
+      "collapse_breakpoint": "md",
+      "position": "left",
+      "direction": "column",
+      "border": "right",
+      "background": "var(--d-surface)",
+      "atoms": "_flex _col _borderR",
+      "brand": {
+        "height": "52px",
+        "display": "flex",
+        "align": "center",
+        "padding": "0 1rem",
+        "border": "bottom",
+        "content": "Logo/brand + collapse toggle"
+      },
+      "nav": {
+        "flex": "1",
+        "overflow_y": "auto",
+        "padding": "0.5rem",
+        "group_gap": "0.5rem",
+        "group_header_treatment": "d-label",
+        "item_treatment": "d-interactive[ghost]",
+        "item_padding": "0.375rem 0.75rem",
+        "item_gap": "2px",
+        "item_content": "icon (16px) + label text. Collapsed: icon only, text hidden."
+      },
+      "footer": {
+        "border": "top",
+        "padding": "0.5rem",
+        "position_within": "bottom (mt-auto)",
+        "content": "User avatar + settings link"
+      }
+    },
+    "main_wrapper": {
+      "flex": "1",
+      "direction": "column",
+      "overflow": "hidden",
+      "atoms": "_flex _col _flex1 _overflow[hidden]"
+    },
+    "header": {
+      "height": "52px",
+      "display": "flex",
+      "align": "center",
+      "justify": "space-between",
+      "padding": "0 1.5rem",
+      "border": "bottom",
+      "left_content": "Breadcrumb \u2014 omit segment when it equals page title",
+      "right_content": "Search/command trigger",
+      "button_sizing": "Buttons in the header use compact sizing: py-1.5 px-3 text-sm (~32px tall). The header is a tight 52px bar \u2014 default d-interactive padding is too large here."
+    },
+    "body": {
+      "flex": "1",
+      "overflow_y": "auto",
+      "padding": "1.5rem",
+      "atoms": "_flex1 _overflow[auto] _p6",
+      "note": "Sole scroll container. Page content renders directly here. No wrapper div around outlet."
+    }
   },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { h, text, onMount, onDestroy } from 'decantr/core';\nimport { createSignal } from 'decantr/state';\nimport { css } from 'decantr/css';\nimport { link, useRoute } from 'decantr/router';\nimport { Button, icon } from 'decantr/components';",
