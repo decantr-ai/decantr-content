@@ -72,7 +72,7 @@
       "sticky": true,
       "left_content": "Brand/logo link",
       "center_content": "Nav links \u2014 flex with gap 1.5rem",
-      "right_content": "Search + user icon buttons",
+      "right_content": "Theme toggle (sun/moon icon, toggles light/dark class on html element) + Search trigger + CTA button or user avatar. Theme toggle uses a simple icon button \u2014 no dropdown.",
       "button_sizing": "Buttons and CTAs in the header must use compact sizing: py-1.5 px-4 text-sm (not the default d-interactive padding). The header is 52px \u2014 buttons should be ~32px tall, not 40px+.",
       "nav_links": "Nav links use text-sm font-medium with no background. Hover: text color transitions to primary. Active: font-semibold or underline-offset-4."
     },

@@ -145,7 +145,7 @@
       "padding": "0 1.5rem",
       "border": "bottom",
       "left_content": "Breadcrumb \u2014 omit segment when it equals page title",
-      "right_content": "Search/command trigger",
+      "right_content": "Theme toggle (sun/moon icon) + Search/command trigger. Theme toggle toggles light/dark class on html element.",
       "button_sizing": "Buttons in the header use compact sizing: py-1.5 px-3 text-sm (~32px tall). The header is a tight 52px bar \u2014 default d-interactive padding is too large here."
     },
     "body": {
