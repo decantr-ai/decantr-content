@@ -37,7 +37,7 @@
   },
   "pages": [
     {
-      "id": "dashboard",
+      "id": "overview",
       "path": "/dashboard",
       "default_layout": [
         "kpi-grid",
@@ -47,7 +47,7 @@
       "shell": "sidebar-main"
     },
     {
-      "id": "dashboard-content",
+      "id": "content",
       "path": "/dashboard/content",
       "default_layout": [
         "content-card-grid"
@@ -55,7 +55,16 @@
       "shell": "sidebar-main"
     },
     {
-      "id": "dashboard-api-keys",
+      "id": "content-new",
+      "default_layout": [
+        "form",
+        "json-viewer"
+      ],
+      "shell": "sidebar-main",
+      "notes": "Create new content item. Form with metadata fields + JSON editor."
+    },
+    {
+      "id": "api-keys",
       "path": "/dashboard/api-keys",
       "default_layout": [
         "api-key-row"
@@ -63,19 +72,40 @@
       "shell": "sidebar-main"
     },
     {
-      "id": "dashboard-settings",
+      "id": "settings",
       "path": "/dashboard/settings",
       "default_layout": [
         "account-settings"
       ],
       "shell": "sidebar-main"
+    },
+    {
+      "id": "billing",
+      "default_layout": [
+        "tier-upgrade-card",
+        "kpi-grid"
+      ],
+      "shell": "sidebar-main",
+      "notes": "Billing and subscription management."
+    },
+    {
+      "id": "team",
+      "default_layout": [
+        "kpi-grid",
+        "team-member-row"
+      ],
+      "shell": "sidebar-main",
+      "notes": "Team overview and member management."
     }
   ],
   "page_briefs": {
-    "dashboard": "User home dashboard. KPI cards at top showing published items, downloads, and reputation score. Reputation badge display below. Activity feed at the bottom with recent actions.",
-    "dashboard-content": "Content management grid. Card grid of user-published content items with thumbnail, title, type badge, status indicator, and date per card.",
-    "dashboard-api-keys": "API key management page. Table of API keys with key name, masked prefix, creation date, last-used date, and revoke button per row. Create-key button in the header.",
-    "dashboard-settings": "Account settings form with profile fields (name, email, avatar), notification preferences, and connected accounts section."
+    "overview": "User home dashboard. KPI cards at top showing published items, downloads, and reputation score. Reputation badge display below. Activity feed at the bottom with recent actions.",
+    "content": "Content management grid. Card grid of user-published content items with thumbnail, title, type badge, status indicator, and date per card.",
+    "content-new": "Content creation page. Metadata form on the left (name, type, description, tags) with a live JSON editor on the right showing the content schema.",
+    "api-keys": "API key management page. Table of API keys with key name, masked prefix, creation date, last-used date, and revoke button per row. Create-key button in the header.",
+    "settings": "Account settings form with profile fields (name, email, avatar), notification preferences, and connected accounts section.",
+    "billing": "Billing overview with current plan tier card, usage stats KPI grid, and upgrade/downgrade options. Invoice history below.",
+    "team": "Team dashboard with member count and role distribution KPI cards at top. Below: member list with avatar, name, role badge, and action menu per row."
   },
   "features": [
     "auth",
@@ -91,7 +121,11 @@
       "activity-feed": "^1.0.0",
       "content-card-grid": "^1.0.0",
       "api-key-row": "^1.0.0",
-      "account-settings": "^1.0.0"
+      "account-settings": "^1.0.0",
+      "form": "^1.0.0",
+      "json-viewer": "^1.0.0",
+      "tier-upgrade-card": "^1.0.0",
+      "team-member-row": "^1.0.0"
     },
     "styles": {}
   },

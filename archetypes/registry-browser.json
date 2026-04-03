@@ -36,52 +36,79 @@
   },
   "pages": [
     {
-      "id": "registry",
-      "path": "/registry",
+      "id": "homepage",
+      "default_layout": [
+        "hero",
+        "search-filter-bar",
+        "content-card-grid",
+        "kpi-grid"
+      ],
+      "shell": "top-nav-main",
+      "notes": "Marketing landing for the registry. Hero with search, featured content grid, stats."
+    },
+    {
+      "id": "browse",
+      "path": "/browse",
       "default_layout": [
         "search-filter-bar",
         "content-card-grid"
       ],
-      "shell": "topbar-main"
+      "shell": "top-nav-main"
     },
     {
-      "id": "registry-type",
-      "path": "/registry/[type]",
+      "id": "browse-type",
+      "path": "/browse/[type]",
       "default_layout": [
         "search-filter-bar",
         "content-card-grid"
       ],
-      "shell": "topbar-main"
+      "shell": "top-nav-main"
     },
     {
-      "id": "registry-detail",
-      "path": "/registry/[type]/[namespace]/[slug]",
+      "id": "detail",
+      "path": "/[type]/[namespace]/[slug]",
       "default_layout": [
         "content-detail-hero",
         "json-viewer"
       ],
-      "shell": "topbar-main"
+      "shell": "top-nav-main"
+    },
+    {
+      "id": "profile",
+      "default_layout": [
+        "detail-header",
+        "content-card-grid",
+        "activity-feed"
+      ],
+      "shell": "top-nav-main",
+      "notes": "Public user profile showing published items and activity."
     }
   ],
   "page_briefs": {
-    "registry": "Search-first browsing page. Search bar with filter chips for content type (patterns, themes, blueprints, etc.) at the top. Below, a card grid of content items showing name, namespace badge, description preview, and tag pills.",
-    "registry-type": "Filtered registry view for a specific content type. Same search and filter bar layout as main registry page, pre-filtered to the selected type. Card grid below with type-specific metadata on each card.",
-    "registry-detail": "Content detail page. Hero card at top with item name, namespace badge, version, description, and tags. Below, a JSON viewer showing the full content schema with syntax highlighting."
+    "homepage": "Vibrant landing with hero section featuring centered search bar over lum-orbs gradient. Below: featured content carousel, popular patterns/themes grid, registry stats bar.",
+    "browse": "Search-first browsing page. Search bar with filter chips for content type (patterns, themes, blueprints, etc.) at the top. Below, a card grid of content items showing name, namespace badge, description preview, and tag pills.",
+    "browse-type": "Filtered registry view for a specific content type. Same search and filter bar layout as main browse page, pre-filtered to the selected type. Card grid below with type-specific metadata on each card.",
+    "detail": "Content detail page. Hero card at top with item name, namespace badge, version, description, and tags. Below, a JSON viewer showing the full content schema with syntax highlighting.",
+    "profile": "Public profile showing avatar, username, bio, published item count. Below: grid of their published content cards + activity timeline."
   },
   "features": [
     "search",
     "pagination"
   ],
   "shells": {
-    "topbar-main": "Top navigation bar with main content area"
+    "top-nav-main": "Top navigation bar with main content area"
   },
   "dependencies": {
     "patterns": {
+      "hero": "^1.0.0",
       "search-filter-bar": "^1.0.0",
       "content-card-grid": "^1.0.0",
       "content-detail-hero": "^1.0.0",
+      "detail-header": "^1.0.0",
       "json-viewer": "^1.0.0",
-      "namespace-badge": "^1.0.0"
+      "namespace-badge": "^1.0.0",
+      "kpi-grid": "^1.0.0",
+      "activity-feed": "^1.0.0"
     },
     "styles": {}
   },

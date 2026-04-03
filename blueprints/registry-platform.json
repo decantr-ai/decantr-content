@@ -16,26 +16,28 @@
   "compose": [
     "registry-browser",
     "user-dashboard",
-    "content-editor",
     "admin-moderation",
-    "team-management",
-    "billing-portal"
+    {
+      "archetype": "auth-flow",
+      "prefix": "auth",
+      "role": "gateway"
+    }
   ],
   "theme": {
+    "id": "luminarum",
     "mode": "dark",
-    "shape": "pill",
-    "id": "luminarum"
+    "shape": "pill"
   },
-  "personality": "Technical, developer-oriented registry platform with a dark premium aesthetic. Content cards display pattern/theme previews with metadata (version, downloads, compatibility). Search is instant with faceted filters. Publishing workflow is clear and step-by-step. Admin moderation views are dense and action-oriented. Billing portal is clean and transparent. The Decantr dogfood app — built with its own system, showcasing what the platform produces. Think npm registry meets Figma Community.",
+  "personality": "Vibrant design intelligence registry. Warm coral and amber accents on a rich dark canvas (or crisp warm-white in light mode). Content cards are the hero \u2014 outlined with colored type borders, hovering with purpose. Search is instant and faceted. Publishing feels like sharing art. The Decantr dogfood app \u2014 built with its own system, proudly showing what the platform produces. Think Figma Community meets shadcn/ui registry.",
   "voice": {
-    "tone": "Technical and developer-friendly. Uses correct design-system terminology. Precise about versions and compatibility.",
+    "tone": "Welcoming and developer-friendly. Uses design-system terminology naturally. Celebrates community contributions.",
     "cta_verbs": [
+      "Browse",
       "Publish",
       "Install",
-      "Browse",
-      "Search",
       "Preview",
-      "Fork"
+      "Fork",
+      "Explore"
     ],
     "avoid": [
       "Submit",
@@ -44,20 +46,112 @@
       "Buy now",
       "Amazing"
     ],
-    "empty_states": "Developer-friendly and constructive. An empty published items list should link to the publishing guide. Search with no results should suggest broadening filters.",
-    "errors": "Precise and technical. Include error codes and affected resource identifiers. Validation errors should quote the failing field and expected format.",
-    "loading": "Content card skeletons with code-block placeholders. Search results show filter sidebar while results stream in. Registry stats use counter animations."
+    "empty_states": "Encouraging and constructive. Empty content list links to publishing guide. No results suggests broadening filters or browsing popular items.",
+    "errors": "Precise with error codes and affected resource IDs. Validation errors quote the failing field.",
+    "loading": "Content card skeletons with type-colored top borders. Registry stats use counter animations. Search results stream in as they resolve."
   },
-  "overrides": {},
-  "dependencies": {
-    "archetypes": {
-      "registry-browser": "^1.0.0",
-      "user-dashboard": "^1.0.0",
-      "content-editor": "^1.0.0",
-      "admin-moderation": "^1.0.0",
-      "team-management": "^1.0.0",
-      "billing-portal": "^1.0.0"
+  "features": [
+    "search",
+    "pagination",
+    "auth",
+    "api-keys",
+    "validation",
+    "admin",
+    "team",
+    "billing",
+    "theme-toggle"
+  ],
+  "routes": {
+    "/": {
+      "page": "homepage",
+      "shell": "top-nav-main",
+      "archetype": "registry-browser"
+    },
+    "/browse": {
+      "page": "browse",
+      "shell": "top-nav-main",
+      "archetype": "registry-browser"
+    },
+    "/browse/:type": {
+      "page": "browse-type",
+      "shell": "top-nav-main",
+      "archetype": "registry-browser"
+    },
+    "/:type/:namespace/:slug": {
+      "page": "detail",
+      "shell": "top-nav-main",
+      "archetype": "registry-browser"
+    },
+    "/profile/:username": {
+      "page": "profile",
+      "shell": "top-nav-main",
+      "archetype": "registry-browser"
+    },
+    "/login": {
+      "page": "login",
+      "shell": "centered",
+      "archetype": "auth-flow"
+    },
+    "/dashboard": {
+      "page": "overview",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/dashboard/content": {
+      "page": "content",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/dashboard/content/new": {
+      "page": "content-new",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/dashboard/api-keys": {
+      "page": "api-keys",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/dashboard/settings": {
+      "page": "settings",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/dashboard/billing": {
+      "page": "billing",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/dashboard/team": {
+      "page": "team",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
+    "/admin/moderation": {
+      "page": "moderation-queue",
+      "shell": "sidebar-main",
+      "archetype": "admin-moderation"
     }
+  },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      {
+        "key": "g b",
+        "route": "/browse",
+        "label": "Browse Registry"
+      },
+      {
+        "key": "g d",
+        "route": "/dashboard",
+        "label": "Dashboard"
+      },
+      {
+        "key": "g s",
+        "route": "/dashboard/settings",
+        "label": "Settings"
+      }
+    ]
   },
   "seo_hints": {
     "schema_org": [
@@ -70,116 +164,15 @@
       "twitter:card"
     ]
   },
-  "features": [
-    "search",
-    "pagination",
-    "auth",
-    "api-keys",
-    "validation",
-    "admin",
-    "team",
-    "billing"
-  ],
-  "routes": {
-    "/registry": {
-      "shell": "topbar-main",
-      "archetype": "registry-browser",
-      "page": "registry"
-    },
-    "/registry/:type": {
-      "shell": "topbar-main",
-      "archetype": "registry-browser",
-      "page": "registry-type"
-    },
-    "/registry/:type/:namespace/:slug": {
-      "shell": "topbar-main",
-      "archetype": "registry-browser",
-      "page": "registry-detail"
-    },
-    "/dashboard": {
-      "shell": "sidebar-main",
-      "archetype": "user-dashboard",
-      "page": "dashboard"
-    },
-    "/dashboard/content": {
-      "shell": "sidebar-main",
-      "archetype": "user-dashboard",
-      "page": "dashboard-content"
-    },
-    "/dashboard/content/new": {
-      "shell": "sidebar-main",
-      "archetype": "content-editor",
-      "page": "content-new"
-    },
-    "/dashboard/content/:id/edit": {
-      "shell": "sidebar-main",
-      "archetype": "content-editor",
-      "page": "content-edit"
-    },
-    "/dashboard/api-keys": {
-      "shell": "sidebar-main",
-      "archetype": "user-dashboard",
-      "page": "dashboard-api-keys"
-    },
-    "/dashboard/settings": {
-      "shell": "sidebar-main",
-      "archetype": "user-dashboard",
-      "page": "dashboard-settings"
-    },
-    "/dashboard/team": {
-      "shell": "sidebar-main",
-      "archetype": "team-management",
-      "page": "team-overview"
-    },
-    "/dashboard/team/members": {
-      "shell": "sidebar-main",
-      "archetype": "team-management",
-      "page": "team-members"
-    },
-    "/dashboard/team/content": {
-      "shell": "sidebar-main",
-      "archetype": "team-management",
-      "page": "team-content"
-    },
-    "/admin/moderation": {
-      "shell": "sidebar-main",
-      "archetype": "admin-moderation",
-      "page": "moderation-queue"
-    },
-    "/admin/moderation/:id": {
-      "shell": "sidebar-main",
-      "archetype": "admin-moderation",
-      "page": "moderation-detail"
-    },
-    "/dashboard/billing": {
-      "shell": "sidebar-main",
-      "archetype": "billing-portal",
-      "page": "billing"
+  "overrides": {},
+  "dependencies": {
+    "archetypes": {
+      "registry-browser": "^1.0.0",
+      "user-dashboard": "^1.0.0",
+      "content-editor": "^1.0.0",
+      "admin-moderation": "^1.0.0",
+      "team-management": "^1.0.0",
+      "billing-portal": "^1.0.0"
     }
-  },
-  "navigation": {
-    "command_palette": true,
-    "hotkeys": [
-      {
-        "key": "g r",
-        "route": "/registry",
-        "label": "Go to Registry"
-      },
-      {
-        "key": "g d",
-        "route": "/dashboard",
-        "label": "Go to Dashboard"
-      },
-      {
-        "key": "g c",
-        "route": "/dashboard/content",
-        "label": "Go to Content"
-      },
-      {
-        "key": "g t",
-        "route": "/dashboard/team",
-        "label": "Go to Team"
-      }
-    ]
   }
 }
