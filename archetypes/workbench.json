@@ -1,0 +1,126 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "workbench",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "Workbench",
+  "description": "Developer workbench and IDE-like application with split-pane workspace, file browser, document editor, terminal, and settings.",
+  "tags": [
+    "workbench",
+    "ide",
+    "developer",
+    "editor",
+    "terminal",
+    "workspace",
+    "tools"
+  ],
+  "role": "primary",
+  "classification": {
+    "triggers": {
+      "primary": [
+        "workbench",
+        "ide",
+        "developer-tools",
+        "code-editor",
+        "dev-workspace"
+      ],
+      "secondary": [
+        "editor",
+        "terminal",
+        "file-browser",
+        "split-pane",
+        "command-palette"
+      ],
+      "negative": [
+        "dashboard",
+        "ecommerce",
+        "social"
+      ]
+    },
+    "implies": [
+      "developer-tools",
+      "keyboard-driven"
+    ],
+    "weight": 1,
+    "tier": "core"
+  },
+  "pages": [
+    {
+      "id": "workspace",
+      "default_layout": [
+        "split-pane",
+        "doc-editor"
+      ],
+      "shell": "sidebar-main",
+      "notes": "Primary workspace: split-pane layout with resizable panels, doc-editor for the active file or document"
+    },
+    {
+      "id": "files",
+      "default_layout": [
+        "page-tree",
+        "doc-editor"
+      ],
+      "shell": "sidebar-main",
+      "notes": "File browser: page-tree for navigating the file hierarchy, doc-editor for viewing and editing the selected file"
+    },
+    {
+      "id": "terminal",
+      "default_layout": [
+        "log-stream",
+        "status-bar"
+      ],
+      "shell": "sidebar-main",
+      "notes": "Terminal view: log-stream for command output and logs, status-bar at the bottom showing connection status and metrics"
+    },
+    {
+      "id": "settings",
+      "default_layout": [
+        "account-settings",
+        {
+          "pattern": "form-sections",
+          "preset": "structured",
+          "as": "workspace-preferences"
+        }
+      ],
+      "shell": "sidebar-main",
+      "notes": "Workspace settings: account settings for profile and auth, form sections for editor preferences, keybindings, and extensions"
+    }
+  ],
+  "page_briefs": {
+    "workspace": "Split-pane layout with draggable dividers. Left pane shows a file tree or outline; right pane holds the doc editor with syntax highlighting, line numbers, and a minimap. Tabs along the top for multiple open files. Command palette accessible via keyboard shortcut.",
+    "files": "Page-tree file browser on the left with expandable folders, file type icons, and search. Doc-editor on the right showing the selected file with full editing capabilities. Breadcrumb path above the editor.",
+    "terminal": "Log-stream occupying most of the viewport with monospace output, ANSI color support, and auto-scroll. Status bar at the bottom showing working directory, branch name, connection status, and resource usage indicators.",
+    "settings": "Account settings with profile, API tokens, and connected services. Structured form sections for editor theme, font size, tab width, keybinding scheme, installed extensions, and workspace-level overrides."
+  },
+  "features": [
+    "auth",
+    "keyboard-shortcuts",
+    "search",
+    "websockets"
+  ],
+  "shells": {
+    "sidebar-main": "Collapsible activity bar with icon navigation and main content area"
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon",
+      "terminal"
+    ],
+    "modes": [
+      "dark",
+      "auto"
+    ]
+  },
+  "dependencies": {
+    "patterns": {
+      "split-pane": "^1.0.0",
+      "doc-editor": "^1.0.0",
+      "page-tree": "^1.0.0",
+      "log-stream": "^1.0.0",
+      "status-bar": "^1.0.0",
+      "account-settings": "^1.0.0",
+      "form-sections": "^1.0.0"
+    },
+    "styles": {}
+  }
+}
