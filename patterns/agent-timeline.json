@@ -46,6 +46,7 @@
       }
     }
   },
+  "visual_brief": "Vertical timeline with a continuous 2px line on the left edge. Color-coded orbs mark each event type (action=cyan, decision=green, error=red, tool_call=purple, reasoning=amber). Cards extend right from the line with colored left-borders. Sticky summary header at top with aggregate stats. Filter chips below header.",
   "layout_hints": {
     "vertical_line": "A continuous 2px vertical line runs the FULL height of the timeline, 16px from the left edge. Color: var(--d-border). The line MUST NOT have gaps between events — it connects all events visually.",
     "orb": "Each event has a 12px diameter colored circle (orb) centered ON the vertical line. The orb is vertically aligned with the FIRST line of text (the badge/timestamp row), not the center of the event block.",

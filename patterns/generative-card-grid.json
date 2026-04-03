@@ -56,6 +56,7 @@
       }
     }
   },
+  "visual_brief": "Responsive auto-fill card grid (minmax 280px). Each card shows a generated preview thumbnail, a generation badge overlay (top-right), a truncated prompt label below, and a hover-reveal action bar. Cards shimmer from skeleton to final preview. Masonry or uniform sizing depending on preset.",
   "layout_hints": {
     "filtering": "If filter tabs or category pills are shown, they MUST be functional. Clicking a tab/pill filters the grid. Use React state to filter. Non-functional filter UI is worse than no filters.",
     "empty_state": "When filters produce 0 results, show an empty state: centered icon (48px, muted) + descriptive message + 'Clear filters' action.",

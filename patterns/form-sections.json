@@ -105,6 +105,7 @@
       }
     }
   },
+  "visual_brief": "Vertical stack of grouped form fields. Each section has a heading/description on the left and form controls on the right (2-column at desktop, stacked on mobile). Labels above fields. Max-width 640px. Single card wrapping or no card. Save/cancel buttons at bottom.",
   "layout_hints": {
     "label_position": "stacked",
     "note": "Labels go ABOVE their field, not side-by-side. This prevents the label-field gap problem at wide viewports.",

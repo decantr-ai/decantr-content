@@ -46,6 +46,7 @@
       }
     }
   },
+  "visual_brief": "A dark, full-bleed spatial canvas with floating agent-node cards connected by animated bezier paths. Nodes show colored status rings (idle/running/error). Minimap in bottom-right, control bar bottom-center. Dot-grid background scales with zoom.",
   "layout_hints": {
     "container": "borderless",
     "note": "This is a full-bleed visualization. Do NOT wrap in a d-surface card. Agent nodes float freely within the canvas area.",

@@ -54,11 +54,6 @@
       "shell": "top-nav-footer",
       "archetype": "marketing-saas"
     },
-    "/about": {
-      "page": "about",
-      "shell": "top-nav-footer",
-      "archetype": "marketing-saas"
-    },
     "/login": {
       "page": "login",
       "shell": "centered",
