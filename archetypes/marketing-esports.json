@@ -1,0 +1,75 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "marketing-esports",
+  "role": "public",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Esports Marketing",
+  "description": "Public marketing landing surface for an esports team operations platform with image-overlay hero, feature grid, testimonials, and final call to action.",
+  "tags": [
+    "esports",
+    "marketing",
+    "landing",
+    "saas",
+    "public"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "esports marketing",
+        "esports saas landing",
+        "team management landing",
+        "esports product site"
+      ],
+      "secondary": [
+        "esports tech landing",
+        "team ops marketing",
+        "gaming team site"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "home",
+      "patterns": [
+        {
+          "pattern": "hero",
+          "preset": "image-overlay",
+          "as": "landing-hero"
+        },
+        {
+          "pattern": "features",
+          "preset": "standard",
+          "as": "feature-grid"
+        },
+        {
+          "pattern": "testimonials",
+          "preset": "standard",
+          "as": "team-testimonials"
+        },
+        {
+          "pattern": "cta-section",
+          "preset": "standard",
+          "as": "signup-cta"
+        }
+      ],
+      "default_layout": [
+        "hero",
+        "features",
+        "testimonials",
+        "cta-section"
+      ],
+      "shell": "top-nav-footer"
+    }
+  ],
+  "page_briefs": {
+    "home": "Marketing landing page for an esports team operations platform. Image-overlay hero anchors the top with a full-bleed action shot of a team on stage, a bold headline about running a pro team like a pro org, and dual CTAs for trial and demo. Below, a features grid highlights roster management, scrim scheduling, VOD review, and sponsor tracking. Next, a testimonials band carries quotes from coaches, managers, and org owners. The page closes with a full-width cta-section driving visitors to book a demo."
+  },
+  "features": [
+    "marketing"
+  ]
+}

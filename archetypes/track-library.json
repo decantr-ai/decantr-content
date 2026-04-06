@@ -1,0 +1,105 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "track-library",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Track Library",
+  "description": "Producer track catalog with searchable table of finished and in-progress tracks plus a per-track detail view with waveform preview and version history.",
+  "tags": [
+    "music",
+    "tracks",
+    "library",
+    "versions",
+    "catalog"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "track library",
+        "song catalog",
+        "music files",
+        "tracks list"
+      ],
+      "secondary": [
+        "versions",
+        "revisions",
+        "track manager"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "tracks",
+      "patterns": [
+        {
+          "pattern": "data-table",
+          "preset": "standard",
+          "as": "table"
+        },
+        {
+          "pattern": "search-filter-bar",
+          "preset": "standard",
+          "as": "search"
+        }
+      ],
+      "default_layout": [
+        "search-filter-bar",
+        "data-table"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "track-detail",
+      "patterns": [
+        {
+          "pattern": "waveform-track",
+          "preset": "track",
+          "as": "waveform"
+        },
+        {
+          "pattern": "version-history",
+          "preset": "sidebar",
+          "as": "versions"
+        }
+      ],
+      "default_layout": [
+        "waveform-track",
+        "version-history"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "page_briefs": {
+    "tracks": "Searchable browse surface for the producer's track catalog. Top area holds a filter bar with genre, status, BPM, and key facets plus a search field. Below, a dense data table lists tracks with title, duration, BPM, last-edited, collaborators, and status columns.",
+    "track-detail": "Detail view for a single track. Hero area plays the rendered waveform with transport controls and region markers. A version history panel lists each saved revision with timestamps, authors, and notes so producers can compare and restore prior takes."
+  },
+  "features": [
+    "track-management",
+    "versions"
+  ],
+  "shells": {
+    "sidebar-main": "Left navigation sidebar with primary content column"
+  },
+  "dependencies": {
+    "patterns": {
+      "data-table": "^1.0.0",
+      "search-filter-bar": "^1.0.0",
+      "waveform-track": "^1.0.0",
+      "version-history": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
+}

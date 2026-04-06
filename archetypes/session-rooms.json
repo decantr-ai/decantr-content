@@ -1,0 +1,105 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "session-rooms",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Session Rooms",
+  "description": "Live producer session rooms for real-time co-creation with voice, video, and chat.",
+  "tags": [
+    "live-sessions",
+    "voice",
+    "video",
+    "rooms",
+    "music"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "session rooms",
+        "live rooms",
+        "co-producing",
+        "live collab"
+      ],
+      "secondary": [
+        "voice chat",
+        "video session",
+        "jam rooms"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "rooms",
+      "patterns": [
+        {
+          "pattern": "card-grid",
+          "preset": "content",
+          "as": "rooms"
+        },
+        {
+          "pattern": "activity-feed",
+          "preset": "compact",
+          "as": "feed"
+        }
+      ],
+      "default_layout": [
+        "card-grid",
+        "activity-feed"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "room-detail",
+      "patterns": [
+        {
+          "pattern": "video-room",
+          "preset": "speaker",
+          "as": "stage"
+        },
+        {
+          "pattern": "chat-thread",
+          "preset": "standard",
+          "as": "chat"
+        }
+      ],
+      "default_layout": [
+        "video-room",
+        "chat-thread"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "page_briefs": {
+    "rooms": "Browse surface for live producer rooms. A card grid shows each active room with host, participants, topic, and join action. A compact activity feed runs alongside showing who started rooms, who joined, and recent session highlights.",
+    "room-detail": "Active room stage. A speaker-focused video room highlights the current speaker with participant tiles and raise-hand controls. A persistent chat thread runs down the right with messages, reactions, and shared track links for the live session."
+  },
+  "features": [
+    "live-sessions",
+    "voice-chat"
+  ],
+  "shells": {
+    "sidebar-main": "Left navigation sidebar with primary content column"
+  },
+  "dependencies": {
+    "patterns": {
+      "card-grid": "^1.0.0",
+      "activity-feed": "^1.0.0",
+      "video-room": "^1.0.0",
+      "chat-thread": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "music-workspace",
+  "role": "primary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Music Workspace",
+  "description": "Music producer session workspace with multi-track waveform editing, stem stacking, and split-pane arrangement for audio production flows.",
+  "tags": [
+    "music",
+    "production",
+    "audio",
+    "workspace",
+    "daw"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "music producer",
+        "daw",
+        "audio workspace",
+        "session editor",
+        "track editor"
+      ],
+      "secondary": [
+        "stems",
+        "waveform",
+        "mixing",
+        "music session"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "session",
+      "patterns": [
+        {
+          "pattern": "waveform-track",
+          "preset": "stem",
+          "as": "waveform"
+        },
+        {
+          "pattern": "stem-stack",
+          "preset": "standard",
+          "as": "stems"
+        },
+        {
+          "pattern": "split-pane",
+          "preset": "horizontal",
+          "as": "arrangement"
+        }
+      ],
+      "default_layout": [
+        "split-pane",
+        "waveform-track",
+        "stem-stack"
+      ],
+      "shell": "sidebar-aside"
+    },
+    {
+      "id": "session-detail",
+      "patterns": [
+        {
+          "pattern": "waveform-track",
+          "preset": "track",
+          "as": "waveform"
+        },
+        {
+          "pattern": "stem-stack",
+          "preset": "standard",
+          "as": "stems"
+        }
+      ],
+      "default_layout": [
+        "waveform-track",
+        "stem-stack"
+      ],
+      "shell": "sidebar-aside"
+    }
+  ],
+  "page_briefs": {
+    "session": "Active producer session workspace with a split-pane layout. Primary pane holds the multi-track waveform timeline with scrub head, markers, and region selection. Secondary pane shows the vertical stem stack with per-stem mute, solo, and volume controls. Sidebar lists session assets; aside panel surfaces inspector for the selected track.",
+    "session-detail": "Detail view of a single saved session. Full-width waveform track displays the rendered mixdown with region markers. Below, the stem stack shows each contributing stem with levels and processing chain so producers can audit and branch from this version."
+  },
+  "features": [
+    "session-editing",
+    "stems",
+    "mixing"
+  ],
+  "shells": {
+    "sidebar-aside": "Left sidebar for session navigation, main canvas, and right aside inspector"
+  },
+  "dependencies": {
+    "patterns": {
+      "waveform-track": "^1.0.0",
+      "stem-stack": "^1.0.0",
+      "split-pane": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
+}

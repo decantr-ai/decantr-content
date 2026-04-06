@@ -1,0 +1,106 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "collaboration-hub",
+  "role": "auxiliary",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Collaboration Hub",
+  "description": "Producer collaborator directory and royalty split management surface with contributor cards and split calculators.",
+  "tags": [
+    "collaboration",
+    "royalties",
+    "splits",
+    "team",
+    "music"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "collaborators",
+        "royalty splits",
+        "co-writers",
+        "music team"
+      ],
+      "secondary": [
+        "splits",
+        "contributors",
+        "credits"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "collaborators",
+      "patterns": [
+        {
+          "pattern": "card-grid",
+          "preset": "content",
+          "as": "grid"
+        },
+        {
+          "pattern": "team-member-row",
+          "preset": "standard",
+          "as": "members"
+        }
+      ],
+      "default_layout": [
+        "card-grid",
+        "team-member-row"
+      ],
+      "shell": "sidebar-main"
+    },
+    {
+      "id": "splits",
+      "patterns": [
+        {
+          "pattern": "split-calculator",
+          "preset": "standard",
+          "as": "calculator"
+        },
+        {
+          "pattern": "data-table",
+          "preset": "standard",
+          "as": "ledger"
+        }
+      ],
+      "default_layout": [
+        "split-calculator",
+        "data-table"
+      ],
+      "shell": "sidebar-main"
+    }
+  ],
+  "page_briefs": {
+    "collaborators": "Producer collaborator directory. A card grid surfaces each collaborator with avatar, role, active projects, and contact action. Below, a flat list of team-member rows shows recent activity and invite status for quick ops on the full roster.",
+    "splits": "Royalty split workspace. The split calculator takes the track and contributors and computes percentage shares with publishing, master, and writer breakdowns. Below, a ledger-style data table lists all finalized splits across the catalog with signing status and payout routing."
+  },
+  "features": [
+    "collaboration",
+    "royalties"
+  ],
+  "shells": {
+    "sidebar-main": "Left navigation sidebar with primary content column"
+  },
+  "dependencies": {
+    "patterns": {
+      "card-grid": "^1.0.0",
+      "team-member-row": "^1.0.0",
+      "split-calculator": "^1.0.0",
+      "data-table": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
+}

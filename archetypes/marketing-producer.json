@@ -1,0 +1,101 @@
+{
+  "$schema": "https://decantr.ai/schemas/archetype.v2.json",
+  "id": "marketing-producer",
+  "role": "public",
+  "version": "1.0.0",
+  "decantr_compat": ">=1.5.0",
+  "name": "Producer Studio Marketing",
+  "description": "Public marketing landing page for a music producer studio product with vision hero, feature rundown, pricing, and testimonials.",
+  "tags": [
+    "marketing",
+    "landing",
+    "music",
+    "producer",
+    "public"
+  ],
+  "classification": {
+    "triggers": {
+      "primary": [
+        "music producer marketing",
+        "producer studio landing",
+        "daw marketing site"
+      ],
+      "secondary": [
+        "music landing",
+        "studio marketing"
+      ],
+      "negative": []
+    },
+    "implies": [],
+    "weight": 1,
+    "tier": "recommended"
+  },
+  "pages": [
+    {
+      "id": "home",
+      "patterns": [
+        {
+          "pattern": "hero",
+          "preset": "vision",
+          "as": "hero"
+        },
+        {
+          "pattern": "features",
+          "preset": "grid",
+          "as": "features"
+        },
+        {
+          "pattern": "pricing",
+          "preset": "standard",
+          "as": "pricing"
+        },
+        {
+          "pattern": "testimonials",
+          "preset": "grid",
+          "as": "testimonials"
+        },
+        {
+          "pattern": "cta-section",
+          "preset": "standard",
+          "as": "cta"
+        }
+      ],
+      "default_layout": [
+        "hero",
+        "features",
+        "pricing",
+        "testimonials",
+        "cta-section"
+      ],
+      "shell": "top-nav-footer"
+    }
+  ],
+  "page_briefs": {
+    "home": "Producer studio marketing landing. Vision-style hero casts a bold, ambient first impression about the creative workflow. Below, a feature grid spotlights stem editing, collaborative sessions, and split management. Pricing tiers follow, then a grid of producer testimonials with quotes and avatars. Final full-width CTA section drives trial signups."
+  },
+  "features": [
+    "marketing"
+  ],
+  "shells": {
+    "top-nav-footer": "Public marketing shell with top navigation and footer"
+  },
+  "dependencies": {
+    "patterns": {
+      "hero": "^1.0.0",
+      "features": "^1.0.0",
+      "pricing": "^1.0.0",
+      "testimonials": "^1.0.0",
+      "cta-section": "^1.0.0"
+    },
+    "styles": {}
+  },
+  "suggested_theme": {
+    "styles": [
+      "carbon"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
+}
