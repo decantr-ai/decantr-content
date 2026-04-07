@@ -7,7 +7,9 @@
   "description": "Bento grid detail page for content items. Glass-treated cards arranged in a spatial 4-column grid over an immersive backdrop. Per-type card arrangements surface rich data fields (personality, visual brief, palette, composition, routes). Includes animated terminal card for install/prompt commands and ambient cursor glow.",
   "dependencies": {
     "patterns": {
-      "namespace-badge": "^1.0.0"
+      "namespace-badge": "^1.0.0",
+      "breadcrumb-nav": "^1.0.0",
+      "json-viewer": "^1.0.0"
     },
     "styles": {
       "luminarum": ">=1.0.0"
