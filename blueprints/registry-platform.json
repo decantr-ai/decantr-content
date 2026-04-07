@@ -59,11 +59,7 @@
     "admin",
     "team",
     "billing",
-    "theme-toggle",
-    "content-management",
-    "password-change",
-    "theme-preview",
-    "showcase-preview"
+    "theme-toggle"
   ],
   "routes": {
     "/": {
