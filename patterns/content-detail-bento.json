@@ -1,0 +1,188 @@
+{
+  "$schema": "https://decantr.ai/schemas/pattern.v2.json",
+  "id": "content-detail-bento",
+  "version": "1.0.0",
+  "decantr_compat": ">=0.10.0",
+  "name": "Content Detail Bento",
+  "description": "Bento grid detail page for content items. Glass-treated cards arranged in a spatial 4-column grid over an immersive backdrop. Per-type card arrangements surface rich data fields (personality, visual brief, palette, composition, routes). Includes animated terminal card for install/prompt commands and ambient cursor glow.",
+  "dependencies": {
+    "patterns": {
+      "namespace-badge": "^1.0.0"
+    },
+    "styles": {
+      "luminarum": ">=1.0.0"
+    },
+    "requires_core": {
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon",
+        "CodeBlock"
+      ],
+      "charts": []
+    }
+  },
+  "contained": false,
+  "components": [
+    "Badge",
+    "Button",
+    "Chip",
+    "icon",
+    "CodeBlock"
+  ],
+  "default_preset": "default",
+  "presets": {
+    "default": {
+      "description": "Standard bento grid with full backdrop, cursor glow, stagger animations, and all card types rendered based on content type.",
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon",
+        "CodeBlock"
+      ],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gap4 _p0 _mxa _maxw[1200px] _relative",
+        "slots": {
+          "backdrop": "Full-bleed immersive backdrop (lum-backdrop-screenshot or lum-backdrop-orbs + lum-backdrop-geo)",
+          "identity": "Identity card — name, namespace, type, version, description. Spans 2 columns.",
+          "terminal": "Animated macOS terminal card with install command. Spans 2 columns.",
+          "tags": "Tags card — d-annotation pills in flex-wrap. 1 column.",
+          "used-by": "Social proof card — install count, placeholder avatars. 1 column.",
+          "type-cards": "Per-type cards rendered conditionally (see slots below). Variable span.",
+          "schema": "Expandable JSON viewer behind View Source toggle. Full width."
+        }
+      }
+    },
+    "blueprint": {
+      "description": "Blueprint-specific card arrangement. Adds compose, features, theme, routes, personality, route-map, and sparkline cards.",
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon",
+        "CodeBlock"
+      ],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gap4 _p0 _mxa _maxw[1200px] _relative",
+        "slots": {
+          "backdrop": "lum-backdrop-screenshot (if screenshot exists) or lum-backdrop-orbs + lum-backdrop-geo",
+          "identity": "Identity card, spans 2 columns",
+          "terminal": "Terminal card, spans 2 columns",
+          "compose": "Archetype composition list, spans 2 columns",
+          "features": "Feature pills, 1 column",
+          "theme-preview": "Theme swatch preview, 1 column",
+          "routes": "Route list grouped by section, 1 column",
+          "personality": "Personality pull-quote (lum-quote), 1-2 columns",
+          "route-map": "Animated SVG topology diagram, 1 column",
+          "sparkline": "Install trend sparkline (lum-sparkline), 1 column",
+          "tags": "Tags card, 1 column",
+          "used-by": "Install count + avatars, 1 column",
+          "schema": "Expandable JSON viewer, full width"
+        }
+      }
+    },
+    "pattern": {
+      "description": "Pattern-specific card arrangement. Adds visual-brief, components, presets, responsive, and slots cards.",
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon",
+        "CodeBlock"
+      ],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gap4 _p0 _mxa _maxw[1200px] _relative",
+        "slots": {
+          "backdrop": "lum-backdrop-orbs + lum-backdrop-geo (coral accent)",
+          "identity": "Identity card, spans 2 columns",
+          "terminal": "Terminal card, spans 2 columns",
+          "visual-brief": "Visual brief card (lum-quote), spans 2 columns",
+          "components": "Component list with icons, 1 column",
+          "presets": "Preset pills with active highlight, 1 column",
+          "responsive": "Mobile/tablet/desktop breakdown, 1 column",
+          "slot-definitions": "Slot name + description list, spans 2 columns",
+          "tags": "Tags card, 1 column",
+          "used-by": "Install count + avatars, 1 column",
+          "schema": "Expandable JSON viewer, full width"
+        }
+      }
+    },
+    "theme": {
+      "description": "Theme-specific card arrangement. Adds palette, decorators, modes, shapes cards, plus live theme preview.",
+      "components": [
+        "Badge",
+        "Button",
+        "Chip",
+        "icon",
+        "CodeBlock"
+      ],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gap4 _p0 _mxa _maxw[1200px] _relative",
+        "slots": {
+          "backdrop": "lum-backdrop-orbs + lum-backdrop-geo (amber accent), live-previewed in theme colors",
+          "identity": "Identity card, spans 2 columns",
+          "terminal": "Terminal card, spans 2 columns",
+          "palette": "Full color palette swatch grid, spans 2 columns",
+          "decorators": "Decorator class list with descriptions, 1 column",
+          "modes": "Mode support badges, 1 column",
+          "shapes": "Shape option badges with preview, 1 column",
+          "tags": "Tags card, 1 column",
+          "used-by": "Install count + avatars, 1 column",
+          "schema": "Expandable JSON viewer, full width",
+          "preview-banner": "lum-preview-banner floating indicator (theme pages only)"
+        }
+      }
+    }
+  },
+  "default_layout": {
+    "layout": "grid",
+    "atoms": "_grid _gap4 _p0 _mxa _maxw[1200px] _relative",
+    "slots": {
+      "backdrop": "Full-bleed immersive backdrop behind all content. lum-backdrop-screenshot for blueprints with screenshots, otherwise lum-backdrop-orbs + lum-backdrop-geo using the type accent color.",
+      "identity": "Primary info card replacing the old hero section. Type badge (filled, type accent), namespace badge, content name (text-2xl bold), version (monospace muted), description (max 70ch), published date and author. Grid: spans 2 columns.",
+      "terminal": "macOS terminal card with install command. lum-terminal + lum-terminal-titlebar (traffic light dots) + lum-terminal-body. Character-by-character typing animation on mount. Copy feedback: green border ripple, dots flash green. Grid: spans 2 columns.",
+      "tags": "Tags rendered as d-annotation pills in flex-wrap. Hidden if no tags. Grid: 1 column.",
+      "used-by": "Social proof card. Animated download counter, 'installs' label, placeholder avatar circles. Grid: 1 column.",
+      "type-cards": "Conditional cards rendered per content type — see preset definitions for per-type slot breakdowns.",
+      "schema": "Expandable JSON viewer. Collapsed by default behind 'View Source' toggle button. Expands to full lum-code-block with syntax highlighting, collapsible nodes, line numbers, copy button. Height transition 300ms. Grid: spans full width."
+    }
+  },
+  "visual_brief": "A spatial bento grid of glass-treated cards floating over an immersive full-bleed backdrop. The backdrop is either a faded screenshot (for blueprints) or animated gradient orbs with a geometric SVG overlay colored by content type. Cards arrange in a 4-column grid: an identity card (2-col) with type badge, name, and description sits top-left; an animated macOS terminal card (2-col) with typing animation sits top-right; type-specific data cards fill the middle rows; a collapsed JSON viewer spans the bottom. A soft cursor glow follows the mouse behind the glass cards. Cards stagger-animate in on load and lift with accent-colored borders on hover.",
+  "responsive": {
+    "mobile": "Grid collapses to 1 column. All cards stack vertically. Backdrop orbs scale down and reduce opacity. Terminal card shows full command immediately (no typing animation). Cursor glow disabled. Cards use reduced lift on tap (2px instead of 4px).",
+    "tablet": "Grid uses 2 columns. Identity and terminal cards each span full width. Type-specific cards arrange in 2-col pairs. Backdrop orbs retain animation. Cursor glow active.",
+    "desktop": "Full 4-column grid. Identity and terminal span 2 columns each on the first row. Remaining cards fill subsequent rows. Full backdrop animation, cursor glow, and stagger animations active."
+  },
+  "composition": {
+    "ContentDetailBento": "Section(lum-bento-grid, grid-4col, gap-1rem, p-0, max-w-1200, mx-auto, relative) > [Backdrop + IdentityCard + TerminalCard + TypeCards + SchemaCard]",
+    "Backdrop": "Div(absolute, inset-0, z-0, pointer-events-none) > [BackdropOrbs(lum-backdrop-orbs) | BackdropScreenshot(lum-backdrop-screenshot)] + [BackdropGeo(lum-backdrop-geo)]",
+    "IdentityCard": "Card(lum-bento-card, col-span-2) > [TypeBadge(d-annotation, accent-filled) + NamespaceBadge(d-annotation) + Name(heading2) + Version(mono, muted) + Description(body, muted, max-70ch) + MetaRow(d-data)]",
+    "TerminalCard": "Card(lum-bento-card, col-span-2) > Terminal(lum-terminal) > [Titlebar(lum-terminal-titlebar) > [Dots(lum-terminal-dots) + Title(mono, muted) + CopyBtn] + Body(lum-terminal-body) > [TypedCommand + Cursor]]",
+    "SchemaCard": "Card(lum-bento-card, col-span-full) > [ToggleButton(d-interactive) + Collapsible > CodeBlock(lum-code-block, syntax-highlight)]"
+  },
+  "motion": {
+    "entrance": "lum-stagger on grid children — 400ms fade-in + translateY(16px), 60ms stagger delay per card",
+    "micro": "Card hover lift 200ms ease-out. Terminal typing ~1.5s character-by-character. Copy ripple 600ms. Traffic light flash 1.5s. Schema expand/collapse 300ms height transition.",
+    "ambient": "Backdrop orbs drift 12s ease-in-out infinite alternate. Topology nodes pulse scale 3s infinite. Cursor glow continuous at rAF.",
+    "reduced_motion": "All entrance animations instant. Typing shows full command. Cursor glow disabled. Orbs static. Hover uses shadow-only (no transform)."
+  },
+  "accessibility": {
+    "aria": "Each bento card uses role='region' with aria-label describing its content (e.g., 'Content identity', 'Install command'). Schema toggle uses aria-expanded. Terminal typing is aria-live='polite'.",
+    "keyboard": "Cards are not individually focusable — interactive elements within cards (buttons, toggles, links) receive focus. Tab order: Identity actions → Terminal copy → Tags → Type cards → Schema toggle. Schema toggle is keyboard-operable (Enter/Space).",
+    "focus": "Focus-visible outlines use the type accent color. Copy button shows focus ring matching the terminal border color.",
+    "screen_reader": "Terminal typing animation has aria-hidden on the animated span; the full command text is in a visually-hidden element. Sparkline has aria-label describing the trend. Color swatches include sr-only labels for each color name and hex value."
+  },
+  "layout_hints": {
+    "shell_padding": "The top-nav-main shell body applies padding 1.5rem. The bento grid uses padding: 0 and max-width: 1200px with margin: 0 auto. Do not add outer padding to the grid container.",
+    "backdrop_compositing": "Backdrop layers stack: screenshot OR orbs (z-0), then geo SVG overlay (z-0, 6% opacity), then the bento grid (z-1 implicit via flow). Cards sit above the backdrop via normal document flow.",
+    "cursor_glow": "Implemented via ::before pseudo-element on the grid container. Updates --mouse-x, --mouse-y custom properties via pointermove listener throttled to rAF. Disabled on touch and prefers-reduced-motion.",
+    "type_accent_var": "Set --lum-type-accent and --lum-type-accent-rgb as CSS custom properties on the grid container based on content type. Pattern=#F58882, Theme=#FDA303, Blueprint=#0AF3EB, Shell=#00E0AB, Archetype=#6500C6.",
+    "card_spans": "Identity and terminal always span 2 columns. Schema spans full width. Other cards default to 1 column. Personality card may span 2 if text exceeds 200 characters."
+  }
+}
