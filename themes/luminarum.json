@@ -80,7 +80,15 @@
     "lum-stat-glow": "Number badge with filled circle in accent color, contrasting text inside.",
     "lum-brand": "Brand text with accent color on punctuation (e.g. 'decantr.ai' with coral period and 'i').",
     "lum-fade-up": "Scroll-reveal animation: fade in + translate up 24px over 0.6s.",
-    "lum-divider": "Section divider: thin horizontal line with centered colored dot. Dot color matches the next section's accent."
+    "lum-divider": "Section divider: thin horizontal line with centered colored dot. Dot color matches the next section's accent.",
+    "lum-drawer": "Right-side drawer panel. Fixed colors (#1E1E1E bg, #2E2E2E border-left) not tokens. Width 380px, full height, z-50, slide-in transition 200ms.",
+    "lum-drawer-scrim": "Overlay behind drawer. Fixed inset-0, bg rgba(0,0,0,0.4), z-40, fade-in transition.",
+    "lum-theme-card": "Theme card in drawer. Fixed bg #1E1E1E. Border 1px solid #2E2E2E, rounded, padding, cursor pointer. Hover: border brightens. Active: border-color var(--d-accent).",
+    "lum-swatch": "Single color circle. 24px width/height, rounded-full, border 1px solid rgba(255,255,255,0.1), inline-flex, align/justify center.",
+    "lum-swatch-strip": "Row of color swatches. Display flex, gap 0.375rem, overflow hidden.",
+    "lum-preview-hero": "Screenshot backdrop section. Position relative, overflow hidden, min-height 300px. Pseudo-element gradient overlay from transparent to var(--d-bg).",
+    "lum-preview-image": "Crisp screenshot container. Border-radius var(--d-radius-lg), border 1px solid var(--d-border), box-shadow var(--d-shadow-lg), overflow hidden, max-width 100%.",
+    "lum-preview-banner": "Floating preview indicator. Position fixed, bottom 1.5rem, left 50%, translateX(-50%). Pill shape, bg var(--d-surface), border var(--d-accent), z-50, box-shadow var(--d-shadow-md)."
   },
   "spatial": {
     "density_bias": 0,
@@ -470,6 +478,177 @@
         "Section dividers",
         "Content breaks",
         "Page section transitions"
+      ]
+    },
+    "lum-drawer": {
+      "description": "Right-side drawer panel for theme preview. Uses FIXED colors (#1E1E1E background, #2E2E2E border-left) not tokens, so it stays readable during theme swaps.",
+      "intent": "Use as a fixed overlay panel for theme preview. Fixed neutral colors ensure the drawer remains legible while injected theme tokens change the rest of the page.",
+      "suggested_properties": {
+        "position": "fixed",
+        "top": "0",
+        "right": "0",
+        "width": "380px",
+        "height": "100vh",
+        "background-color": "#1E1E1E",
+        "border-left": "1px solid #2E2E2E",
+        "z-index": "50",
+        "transition": "transform 200ms ease-out"
+      },
+      "pairs_with": [
+        "lum-drawer-scrim",
+        "lum-theme-card"
+      ],
+      "usage": [
+        "Theme preview drawer",
+        "Settings side panel"
+      ]
+    },
+    "lum-drawer-scrim": {
+      "description": "Semi-transparent overlay behind the drawer. Covers the full viewport to focus attention on the drawer content.",
+      "intent": "Use as a backdrop overlay behind the theme preview drawer. Click to dismiss. Provides visual separation between drawer and page content.",
+      "suggested_properties": {
+        "position": "fixed",
+        "inset": "0",
+        "background": "rgba(0, 0, 0, 0.4)",
+        "z-index": "40",
+        "transition": "opacity 200ms ease-out"
+      },
+      "pairs_with": [
+        "lum-drawer"
+      ],
+      "usage": [
+        "Drawer backdrop overlay",
+        "Modal scrim"
+      ]
+    },
+    "lum-theme-card": {
+      "description": "Theme card inside the drawer. Uses FIXED background #1E1E1E so the card itself does not shift during theme swaps. Border brightens on hover; active card shows accent border.",
+      "intent": "Use for individual theme entries in the preview drawer. Each card shows the theme's color swatches, name, and description. Active variant uses accent border to indicate current selection.",
+      "suggested_properties": {
+        "background": "#1E1E1E",
+        "border": "1px solid #2E2E2E",
+        "border-radius": "var(--d-radius, 8px)",
+        "padding": "12px",
+        "cursor": "pointer",
+        "transition": "border-color 150ms ease"
+      },
+      "variants": {
+        "active": {
+          "border-color": "var(--d-accent, #FDA303)"
+        }
+      },
+      "pairs_with": [
+        "lum-drawer",
+        "lum-swatch-strip"
+      ],
+      "usage": [
+        "Theme preview cards",
+        "Selectable option cards"
+      ]
+    },
+    "lum-swatch": {
+      "description": "Single color circle displaying one palette color. Small 24px circle with a subtle border for visibility against dark backgrounds.",
+      "intent": "Use to render individual color samples within a swatch strip. The background-color is set dynamically per palette entry.",
+      "suggested_properties": {
+        "width": "24px",
+        "height": "24px",
+        "border-radius": "50%",
+        "border": "1px solid rgba(255, 255, 255, 0.1)",
+        "display": "inline-flex",
+        "align-items": "center",
+        "justify-content": "center"
+      },
+      "pairs_with": [
+        "lum-swatch-strip",
+        "lum-theme-card"
+      ],
+      "usage": [
+        "Color palette samples",
+        "Theme color indicators"
+      ]
+    },
+    "lum-swatch-strip": {
+      "description": "Horizontal row of color swatch circles. Displays 5-6 key palette colors for a theme at a glance.",
+      "intent": "Use inside theme cards to show a compact horizontal preview of the theme's color palette. Overflow is hidden to keep the strip tidy.",
+      "suggested_properties": {
+        "display": "flex",
+        "gap": "0.375rem",
+        "overflow": "hidden"
+      },
+      "pairs_with": [
+        "lum-swatch",
+        "lum-theme-card"
+      ],
+      "usage": [
+        "Theme palette preview strips",
+        "Color palette displays"
+      ]
+    },
+    "lum-preview-hero": {
+      "description": "Screenshot backdrop section for blueprint detail pages. The screenshot fills the section as a faded background with a gradient overlay dissolving to var(--d-bg).",
+      "intent": "Use as the hero section on blueprint detail/showcase pages. The faded screenshot provides visual context while the gradient ensures content layered above remains readable.",
+      "suggested_properties": {
+        "position": "relative",
+        "overflow": "hidden",
+        "min-height": "300px"
+      },
+      "pseudo": {
+        "::after": {
+          "content": "''",
+          "position": "absolute",
+          "inset": "0",
+          "background": "linear-gradient(to bottom, transparent 30%, var(--d-bg, #141414) 100%)",
+          "pointer-events": "none"
+        }
+      },
+      "pairs_with": [
+        "lum-preview-image",
+        "lum-canvas"
+      ],
+      "usage": [
+        "Blueprint detail hero sections",
+        "Showcase page headers"
+      ]
+    },
+    "lum-preview-image": {
+      "description": "Crisp screenshot container with rounded corners, border, and prominent shadow. Sits above the faded backdrop to show a clear preview.",
+      "intent": "Use for the primary screenshot display on blueprint detail pages. The border and shadow lift the image above the faded backdrop, making it the focal point.",
+      "suggested_properties": {
+        "border-radius": "var(--d-radius-lg, 12px)",
+        "border": "1px solid var(--d-border, #2E2E2E)",
+        "box-shadow": "var(--d-shadow-lg, 0 20px 60px rgba(0, 0, 0, 0.4))",
+        "overflow": "hidden",
+        "max-width": "100%"
+      },
+      "pairs_with": [
+        "lum-preview-hero"
+      ],
+      "usage": [
+        "Blueprint screenshot displays",
+        "Showcase preview images"
+      ]
+    },
+    "lum-preview-banner": {
+      "description": "Floating preview indicator pill. Fixed to the bottom center of the viewport to signal that the user is viewing a live theme preview.",
+      "intent": "Use as a floating notification banner when theme preview is active. The pill shape and fixed positioning ensure visibility without obstructing content.",
+      "suggested_properties": {
+        "position": "fixed",
+        "bottom": "1.5rem",
+        "left": "50%",
+        "transform": "translateX(-50%)",
+        "border-radius": "var(--d-radius-full, 9999px)",
+        "background": "var(--d-surface, #1E1E1E)",
+        "border": "1px solid var(--d-accent, #FDA303)",
+        "z-index": "50",
+        "box-shadow": "var(--d-shadow-md, 0 8px 24px rgba(0, 0, 0, 0.3))"
+      },
+      "pairs_with": [
+        "lum-drawer",
+        "lum-canvas"
+      ],
+      "usage": [
+        "Theme preview active indicator",
+        "Floating status banners"
       ]
     }
   }
