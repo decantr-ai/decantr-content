@@ -88,7 +88,19 @@
     "lum-swatch-strip": "Row of color swatches. Display flex, gap 0.375rem, overflow hidden.",
     "lum-preview-hero": "Screenshot backdrop section. Position relative, overflow hidden, min-height 300px. Pseudo-element gradient overlay from transparent to var(--d-bg).",
     "lum-preview-image": "Crisp screenshot container. Border-radius var(--d-radius-lg), border 1px solid var(--d-border), box-shadow var(--d-shadow-lg), overflow hidden, max-width 100%.",
-    "lum-preview-banner": "Floating preview indicator. Position fixed, bottom 1.5rem, left 50%, translateX(-50%). Pill shape, bg var(--d-surface), border var(--d-accent), z-50, box-shadow var(--d-shadow-md)."
+    "lum-preview-banner": "Floating preview indicator. Position fixed, bottom 1.5rem, left 50%, translateX(-50%). Pill shape, bg var(--d-surface), border var(--d-accent), z-50, box-shadow var(--d-shadow-md).",
+    "lum-bento-grid": "Bento grid container. 4-column CSS Grid with 1rem gap, responsive to 2-col and 1-col. Position relative for cursor glow.",
+    "lum-bento-card": "Individual bento card. Extends lum-glass with hover lift, border accent transition, and depth shadow.",
+    "lum-terminal": "macOS terminal window chrome. Fixed dark background (#111113), rounded corners, subtle border and shadow.",
+    "lum-terminal-titlebar": "Terminal title bar with traffic light dots area and centered title text. 40px height, flex layout.",
+    "lum-terminal-dots": "Traffic light dots container. Three 12px circles: #FF5F57, #FFBD2E, #27C93F. Flex row with 8px gap.",
+    "lum-terminal-body": "Terminal body content area. Monospace font, comfortable padding, generous line-height.",
+    "lum-backdrop-orbs": "Full-bleed animated gradient orbs for content detail backdrops. Type-colored accent at 12-18% opacity with drift animation.",
+    "lum-backdrop-geo": "Geometric SVG pattern overlay. Fixed-position, 6% opacity. Data-driven SVG per content type.",
+    "lum-backdrop-screenshot": "Screenshot background for blueprint detail pages. Cover image with gradient overlay dissolving to var(--d-bg).",
+    "lum-quote": "Pull-quote treatment for personality narratives. Accent-colored left border, decorative open-quote mark, slightly larger text.",
+    "lum-sparkline": "Sparkline chart container. Fixed 60px height, full width, overflow hidden. Accent-colored line and area fill.",
+    "lum-stagger": "Sequential stagger animation for child elements. 400ms fade-in + translateY(16px), 60ms delay between children."
   },
   "spatial": {
     "density_bias": 0,
@@ -649,6 +661,308 @@
       "usage": [
         "Theme preview active indicator",
         "Floating status banners"
+      ]
+    },
+    "lum-bento-grid": {
+      "description": "Bento grid container. 4-column CSS Grid with 1rem gap, responsive down to 2-col (1024px) and 1-col (640px). Position relative for cursor glow pseudo-element.",
+      "intent": "Use as the outer grid container on content detail pages. The bento layout arranges glass cards in a spatial grid over the immersive backdrop. Zero padding — the top-nav-main shell body region provides the outer 1.5rem padding.",
+      "suggested_properties": {
+        "display": "grid",
+        "grid-template-columns": "repeat(4, 1fr)",
+        "gap": "1rem",
+        "padding": "0",
+        "max-width": "1200px",
+        "margin": "0 auto",
+        "position": "relative"
+      },
+      "pairs_with": [
+        "lum-bento-card",
+        "lum-backdrop-orbs",
+        "lum-backdrop-screenshot",
+        "lum-stagger"
+      ],
+      "usage": [
+        "Content detail page grid container",
+        "Bento card layout wrapper"
+      ]
+    },
+    "lum-bento-card": {
+      "description": "Individual bento card. Extends lum-glass with card-specific hover lift, border accent transition, and depth shadow. The base glass treatment provides the subtle transparency.",
+      "intent": "Use for every card within the bento grid. Combines the glass panel aesthetic with interactive hover behavior — cards lift, borders brighten to the type accent color, and shadows deepen on hover.",
+      "suggested_properties": {
+        "background": "var(--d-glass-bg, rgba(255, 255, 255, 0.03))",
+        "border": "1px solid var(--d-glass-border, rgba(255, 255, 255, 0.08))",
+        "border-radius": "var(--d-radius, 12px)",
+        "padding": "1.25rem",
+        "transition": "transform 200ms ease-out, border-color 200ms ease-out, box-shadow 200ms ease-out"
+      },
+      "mode_overrides": {
+        "dark": {
+          "background": "rgba(255, 255, 255, 0.03)",
+          "border-color": "rgba(255, 255, 255, 0.08)"
+        },
+        "light": {
+          "background": "rgba(0, 0, 0, 0.02)",
+          "border-color": "rgba(0, 0, 0, 0.06)"
+        }
+      },
+      "variants": {
+        "hover": {
+          "transform": "translateY(-4px)",
+          "border-color": "var(--lum-type-accent, var(--d-accent))",
+          "box-shadow": "var(--d-shadow-lg, 0 20px 60px rgba(0, 0, 0, 0.4))"
+        }
+      },
+      "pairs_with": [
+        "lum-bento-grid",
+        "lum-glass",
+        "lum-stagger"
+      ],
+      "usage": [
+        "Bento grid cards",
+        "Content detail info cards",
+        "Terminal card wrapper"
+      ]
+    },
+    "lum-terminal": {
+      "description": "macOS terminal window chrome. Fixed dark background (#111113) not tokens, rounded corners, subtle border and shadow. Overflow hidden to clip the title bar's top radius.",
+      "intent": "Use as the outer container for the install/prompt terminal card. Fixed neutral colors ensure the terminal looks authentic regardless of the active theme or mode.",
+      "suggested_properties": {
+        "background-color": "#111113",
+        "border-radius": "var(--d-radius-lg, 12px)",
+        "border": "1px solid rgba(255, 255, 255, 0.1)",
+        "box-shadow": "0 8px 32px rgba(0, 0, 0, 0.4)",
+        "overflow": "hidden"
+      },
+      "pairs_with": [
+        "lum-terminal-titlebar",
+        "lum-terminal-body",
+        "lum-bento-card"
+      ],
+      "usage": [
+        "Install command terminal card",
+        "CLI prompt display",
+        "Code execution preview"
+      ]
+    },
+    "lum-terminal-titlebar": {
+      "description": "Terminal title bar with traffic light dots area and centered title text. 40px height, flex layout, subtle border-bottom separating it from the terminal body.",
+      "intent": "Use as the top section of the terminal card. Contains the three macOS traffic light dots on the left and a centered 'decantr' title in muted monospace. The slight background difference from the body creates visual depth.",
+      "suggested_properties": {
+        "height": "40px",
+        "display": "flex",
+        "align-items": "center",
+        "padding": "0 1rem",
+        "background-color": "rgba(255, 255, 255, 0.02)",
+        "border-bottom": "1px solid rgba(255, 255, 255, 0.06)"
+      },
+      "pairs_with": [
+        "lum-terminal",
+        "lum-terminal-dots"
+      ],
+      "usage": [
+        "Terminal window title bar",
+        "macOS-style window chrome"
+      ]
+    },
+    "lum-terminal-dots": {
+      "description": "Traffic light dots container. Three 12px circles in macOS colors: #FF5F57 (close/red), #FFBD2E (minimize/yellow), #27C93F (maximize/green). Flex row with 8px gap.",
+      "intent": "Use inside the terminal title bar to render the three macOS window control dots. On copy feedback, all three dots temporarily turn green (#27C93F) for 1.5 seconds.",
+      "suggested_properties": {
+        "display": "flex",
+        "align-items": "center",
+        "gap": "8px"
+      },
+      "variants": {
+        "copied": {
+          "description": "All dots turn green for 1.5s after a successful copy action"
+        }
+      },
+      "pairs_with": [
+        "lum-terminal-titlebar"
+      ],
+      "usage": [
+        "Terminal traffic light dots",
+        "Window control indicators"
+      ]
+    },
+    "lum-terminal-body": {
+      "description": "Terminal body content area. Monospace font, comfortable padding, generous line-height for readability. Contains the typed command text and blinking cursor.",
+      "intent": "Use as the main content area of the terminal card where the CLI command is displayed. The monospace font and line-height ensure the typing animation looks authentic.",
+      "suggested_properties": {
+        "padding": "1rem 1.25rem",
+        "font-family": "ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Code', monospace",
+        "font-size": "0.875rem",
+        "line-height": "1.7",
+        "color": "rgba(255, 255, 255, 0.85)"
+      },
+      "pairs_with": [
+        "lum-terminal",
+        "lum-terminal-titlebar"
+      ],
+      "usage": [
+        "Terminal command display",
+        "CLI output rendering"
+      ]
+    },
+    "lum-backdrop-orbs": {
+      "description": "Full-bleed animated gradient orbs for content detail backdrops. Two large radial gradients using the content type's accent color at 12-18% opacity, with slow drift animation. Positioned absolute behind all page content.",
+      "intent": "Use as the immersive backdrop layer on content detail pages when no screenshot is available. The orbs use the per-type accent color (coral for patterns, amber for themes, etc.) instead of hardcoded primary/accent. Extends the lum-orbs concept to type-colored variants.",
+      "suggested_properties": {
+        "position": "absolute",
+        "inset": "0",
+        "pointer-events": "none",
+        "z-index": "0",
+        "background": "radial-gradient(ellipse 500px 500px at 25% 20%, rgba(var(--lum-type-accent-rgb), 0.18), transparent 70%), radial-gradient(ellipse 400px 400px at 75% 70%, rgba(var(--lum-type-accent-rgb), 0.12), transparent 70%)",
+        "animation": "lum-orb-drift 12s ease-in-out infinite alternate"
+      },
+      "pairs_with": [
+        "lum-backdrop-geo",
+        "lum-bento-grid",
+        "lum-canvas"
+      ],
+      "usage": [
+        "Content detail page backdrop (non-screenshot)",
+        "Type-colored ambient background"
+      ]
+    },
+    "lum-backdrop-geo": {
+      "description": "Geometric SVG pattern overlay. Fixed-position, 6% opacity, pointer-events none. The SVG pattern is data-driven: connected nodes for patterns, concentric circles for themes, intersecting circles for blueprints, rectangular wireframes for shells, radial spokes for archetypes.",
+      "intent": "Use as a secondary backdrop layer composited over lum-backdrop-orbs. The SVG geometry derives from the content data (component count, palette size, page count, etc.), creating a unique ambient pattern per item. Fixed positioning keeps it stable during scroll.",
+      "suggested_properties": {
+        "position": "fixed",
+        "inset": "0",
+        "pointer-events": "none",
+        "z-index": "0",
+        "opacity": "0.06",
+        "background-repeat": "no-repeat",
+        "background-position": "center",
+        "background-size": "80% 80%"
+      },
+      "pairs_with": [
+        "lum-backdrop-orbs",
+        "lum-canvas"
+      ],
+      "usage": [
+        "Content detail geometric backdrop overlay",
+        "Data-driven ambient SVG decoration"
+      ]
+    },
+    "lum-backdrop-screenshot": {
+      "description": "Screenshot background for blueprint detail pages that have a showcase image. The screenshot renders as background-image cover with a gradient overlay dissolving to var(--d-bg), plus a dark scrim for card readability.",
+      "intent": "Use as the backdrop layer on blueprint detail pages when a screenshot exists. The faded screenshot provides rich visual context while the gradient and scrim ensure glass cards layered above remain readable.",
+      "suggested_properties": {
+        "position": "absolute",
+        "inset": "0",
+        "background-size": "cover",
+        "background-position": "top center",
+        "z-index": "0",
+        "pointer-events": "none"
+      },
+      "pseudo": {
+        "::after": {
+          "content": "''",
+          "position": "absolute",
+          "inset": "0",
+          "background": "linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, var(--d-bg, #141414) 70%)",
+          "pointer-events": "none"
+        }
+      },
+      "mode_overrides": {
+        "dark": {
+          "description": "Gradient fades to dark background #141414"
+        },
+        "light": {
+          "description": "Gradient fades to light background #FAFAF9"
+        }
+      },
+      "pairs_with": [
+        "lum-bento-grid",
+        "lum-canvas"
+      ],
+      "usage": [
+        "Blueprint detail screenshot backdrop",
+        "Showcase page faded background image"
+      ]
+    },
+    "lum-quote": {
+      "description": "Pull-quote treatment for personality narratives and visual briefs. Accent-colored left border (3px), oversized decorative open-quote mark at top-left, slightly larger text (1.0625rem).",
+      "intent": "Use for rendering personality text on blueprint detail pages and visual_brief text on pattern detail pages. The decorative quote mark and accent border create an evocative pull-quote aesthetic. The first sentence auto-highlights in the type accent color.",
+      "suggested_properties": {
+        "border-left": "3px solid var(--lum-type-accent, var(--d-accent))",
+        "padding": "1.25rem 1.5rem",
+        "font-size": "1.0625rem",
+        "line-height": "1.65",
+        "color": "var(--d-text-muted, rgba(255, 255, 255, 0.75))",
+        "position": "relative"
+      },
+      "pseudo": {
+        "::before": {
+          "content": "'\\201C'",
+          "position": "absolute",
+          "top": "-0.25rem",
+          "left": "0.5rem",
+          "font-size": "3rem",
+          "line-height": "1",
+          "color": "var(--lum-type-accent, var(--d-accent))",
+          "opacity": "0.5",
+          "pointer-events": "none"
+        }
+      },
+      "mode_overrides": {
+        "dark": {
+          "color": "rgba(255, 255, 255, 0.75)"
+        },
+        "light": {
+          "color": "rgba(28, 25, 23, 0.75)"
+        }
+      },
+      "pairs_with": [
+        "lum-bento-card",
+        "lum-glass"
+      ],
+      "usage": [
+        "Personality narrative pull-quotes",
+        "Visual brief display",
+        "Styled descriptive text blocks"
+      ]
+    },
+    "lum-sparkline": {
+      "description": "Sparkline chart container. Fixed 60px height, full card width, overflow hidden. Contains an inline SVG with a line in the type accent color and an area fill at 10% opacity.",
+      "intent": "Use for the install trend sparkline card on content detail pages. The compact height and accent coloring keep the chart subtle but informative. Placeholder sine wave renders when no real data exists.",
+      "suggested_properties": {
+        "height": "60px",
+        "width": "100%",
+        "overflow": "hidden",
+        "display": "flex",
+        "align-items": "flex-end"
+      },
+      "pairs_with": [
+        "lum-bento-card"
+      ],
+      "usage": [
+        "Install trend sparkline",
+        "Compact inline chart display",
+        "Metric trend visualization"
+      ]
+    },
+    "lum-stagger": {
+      "description": "Sequential stagger animation for child elements. Each direct child fades in with translateY(16px) over 400ms, with a 60ms delay between each child. Applied to the bento grid container.",
+      "intent": "Use on the bento grid to create a cascading reveal of cards on page load. Each card appears sequentially using CSS animation-delay calculated from its child index. Respects prefers-reduced-motion by showing all cards instantly.",
+      "suggested_properties": {
+        "animation": "lum-stagger-in 400ms ease-out both",
+        "opacity": "0",
+        "transform": "translateY(16px)"
+      },
+      "pairs_with": [
+        "lum-bento-grid",
+        "lum-bento-card",
+        "lum-fade-up"
+      ],
+      "usage": [
+        "Bento grid card reveal",
+        "Sequential element entrance",
+        "Staggered list item animation"
       ]
     }
   }
