@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "lab",
   "name": "Lab",
   "description": "Scientific research theme with pristine white surfaces, cyan accents, and IBM Plex Mono data displays. Precise 8px grid alignment and technical iconography for research, data, and laboratory interfaces.",

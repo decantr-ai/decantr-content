@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "bioluminescent",
   "name": "Bioluminescent",
   "description": "Deep ocean aesthetic. Organic glow. Luminescent edges on dark backgrounds, living and breathing UI. Glowing borders, pulsing animations, deep abyss backgrounds.",

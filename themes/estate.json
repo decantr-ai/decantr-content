@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "estate",
   "name": "Estate",
   "description": "Professional, trustworthy theme for property management. Deep navy for stability, forest green for growth, warm gold accent. Light mode default for business applications.",

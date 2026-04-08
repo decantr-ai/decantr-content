@@ -82,7 +82,12 @@
   },
   "accessibility": {
     "role": "Table uses semantic <table>, <thead>, <tbody>, <th>, <td> elements. Sort buttons are <button> inside <th> with aria-sort attribute.",
-    "keyboard": "Arrow keys navigate cells. Space toggles row selection. Enter activates row action. Tab moves between toolbar, table, and pagination.",
+    "keyboard": [
+      "Arrow keys navigate cells.",
+      "Space toggles row selection.",
+      "Enter activates row action.",
+      "Tab moves between toolbar, table, and pagination."
+    ],
     "screen_reader": "aria-label on table describes content. aria-sort on sortable headers. Live region announces sort changes and selection count. Pagination uses nav with aria-label."
   },
   "default_layout": {

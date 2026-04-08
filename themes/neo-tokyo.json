@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "neo-tokyo",
   "name": "Neo Tokyo",
   "description": "Anime/manga-inspired theme with vibrant gradients, sakura pink, and energetic motion. Bouncy spring animations, pill shapes, and gradient borders create an expressive, youthful aesthetic. Supports both dark midnight and warm cream modes.",

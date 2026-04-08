@@ -55,6 +55,15 @@ Each content type has specific required fields. All items should include:
 - `name` — human-readable name
 - `description` — brief description
 
+Canonical schemas now live in [`schemas/`](./schemas):
+- `schemas/pattern.v2.json`
+- `schemas/theme.v1.json`
+- `schemas/blueprint.v1.json`
+- `schemas/archetype.v2.json`
+- `schemas/shell.v1.json`
+
+`validate.js` enforces both the expected `$schema` URL and the local schema contract for each content type.
+
 Themes include DNA-inference hints (`typography_hints`, `motion_hints`, `radius_hints`) used by the CLI to generate v3 essence defaults during `decantr init`.
 
 Legacy note:

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "fintech",
   "name": "Fintech",
   "description": "Data-dense dark-mode financial terminal optimized for real-time market data. Deep dark backgrounds with indigo and cyan accents. Monospace numbers, tight spacing, and minimal motion for professional trading and analytics interfaces.",

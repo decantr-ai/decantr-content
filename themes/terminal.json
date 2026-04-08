@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "terminal",
   "name": "Terminal",
   "description": "Pure terminal aesthetic with CRT-inspired phosphor green/amber on black. Monospace only, ASCII borders, optional scanline effects. Dark mode only.",

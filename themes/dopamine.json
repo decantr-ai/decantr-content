@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "dopamine",
   "name": "Dopamine",
   "description": "Saturated maximalism. Y2K revival. Joyful, loud, electric. Maximum saturation, heavy type, gradient everything. The anti-minimal design language.",

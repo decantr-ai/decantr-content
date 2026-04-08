@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "counsel",
   "name": "Counsel",
   "description": "Legal and professional services theme with warm cream backgrounds, deep navy authority, and muted oxblood accents. Georgia serif body type and document-inspired layouts for trustworthy advisory interfaces.",

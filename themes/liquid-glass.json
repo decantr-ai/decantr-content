@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "liquid-glass",
   "name": "Liquid Glass",
   "description": "Apple-inspired premium glass aesthetic. Refined, dynamic refraction feel. Extreme blur values, dramatic opacity ramp, specular highlights. True black dark mode.",

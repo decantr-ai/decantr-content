@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "luminarum",
   "name": "Luminarum",
   "description": "Geometric canvas with vibrant faceted color accents. Breathing gradient orbs, outlined cards with colored strokes, particle network details. Tech-forward meets visual candy. Dual dark/light modes: warm charcoal dark, warm off-white light.",

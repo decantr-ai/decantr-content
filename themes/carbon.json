@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "carbon",
   "name": "Carbon",
   "description": "Neutral-cool grayscale theme with slate undertones. Developer-tool aesthetic inspired by Claude, VS Code, and Devin AI. Soft muted blue accent.",

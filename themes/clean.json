@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "clean",
   "name": "Clean",
   "description": "Professional, understated, universally appropriate. Subtle shadows, smooth motion, rounded corners. The safe default.",

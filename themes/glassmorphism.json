@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "glassmorphism",
   "name": "Glassmorphism",
   "description": "Stormy blue frosted glass aesthetic. Dark glass surfaces with blue-tinted borders, sky-blue primary, cyan accents, and atmospheric gradient backgrounds.",

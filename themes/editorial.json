@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "editorial",
   "name": "Editorial",
   "description": "Digital print magazine aesthetic. High-contrast, dramatic typography, zero decoration. Content is the design. Ink-on-paper warmth with modern sensibility.",
