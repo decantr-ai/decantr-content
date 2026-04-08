@@ -200,7 +200,9 @@
     "list_highlight": "Selected list item should have a visually distinct active/selected state",
     "empty_detail": "When no list item is selected, detail shows a centered empty-state placeholder",
     "keyboard_nav": "Arrow keys navigate list items, Enter opens in detail, Escape goes back to list on mobile",
-    "mobile_pattern": "On mobile, columns become stacked views with back-navigation between them"
+    "mobile_pattern": "On mobile, columns become stacked views with back-navigation between them",
+    "section_label_treatment": "d-label[data-anchor]",
+    "section_density": "compact"
   },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { h, text, onMount, onDestroy } from 'decantr/core';\nimport { createSignal } from 'decantr/state';\nimport { css } from 'decantr/css';\nimport { Button, Avatar, icon } from 'decantr/components';",

@@ -64,7 +64,9 @@
   },
   "guidance": {
     "section_spacing": "Marketing sections use spacious density. Each d-section uses full --d-section-py padding.",
-    "section_labels": "Section overline labels (CAPABILITIES, HOW IT WORKS) should be uppercase, small, accent-colored, center-aligned, with letter-spacing: 0.1em. Use d-label class with text-align: center.",
+    "section_labels": "Section overline labels use d-label for uppercase, accent-colored headers with density-responsive spacing.",
+    "section_label_treatment": "d-label",
+    "section_density": "comfortable",
     "cta_sections": "CTA sections at the bottom of marketing pages should stand out visually \u2014 subtle background gradient or glass effect, not just a plain card."
   },
   "internal_layout": {

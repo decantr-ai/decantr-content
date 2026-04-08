@@ -116,6 +116,10 @@
       "note": "Main scroll container for primary content."
     }
   },
+  "guidance": {
+    "section_label_treatment": "d-label[data-anchor]",
+    "section_density": "compact"
+  },
   "code": {
     "imports": "import { Shell } from 'decantr/components';",
     "example": "Shell({ config: 'top-nav-sidebar' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, sidebarContent),\n  Shell.Body({}, mainContent)\n)"

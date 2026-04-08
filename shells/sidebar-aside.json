@@ -148,6 +148,10 @@
       "note": "Right inspector/detail panel. Toggleable. Shows contextual details, properties, or preview."
     }
   },
+  "guidance": {
+    "section_label_treatment": "d-label[data-anchor]",
+    "section_density": "compact"
+  },
   "code": {
     "imports": "import { Shell } from 'decantr/components';",
     "example": "Shell({ config: 'sidebar-aside' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent),\n  Shell.Aside({}, asideContent)\n)"
