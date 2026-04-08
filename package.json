@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Official Decantr registry content — patterns, themes, recipes, blueprints, archetypes, shells",
+  "description": "Official Decantr registry content — patterns, themes, blueprints, archetypes, shells",
   "scripts": {
     "validate": "node validate.js"
   },

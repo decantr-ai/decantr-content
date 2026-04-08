@@ -6,8 +6,7 @@ Official content for the Decantr design intelligence registry. This repo is the 
 
 ```
 patterns/       — UI section components (hero, kpi-grid, chat-thread, etc.)
-recipes/        — Visual decoration rules (carbon, glassmorphism, etc.)
-themes/         — Color palettes, modes, and DNA-inference hints
+themes/         — Color palettes, modes, treatment metadata, and DNA-inference hints
 blueprints/     — Complete app compositions (saas-dashboard, etc.)
 archetypes/     — App-level templates (ai-chatbot, saas-dashboard, etc.)
 shells/         — Page layout containers (sidebar-main, topbar-main, etc.)
@@ -56,4 +55,8 @@ Each content type has specific required fields. All items should include:
 - `name` — human-readable name
 - `description` — brief description
 
-Themes and recipes include DNA-inference hints (`typography_hints`, `motion_hints`, `radius_hints`) used by the CLI to generate v3 essence defaults during `decantr init`.
+Themes include DNA-inference hints (`typography_hints`, `motion_hints`, `radius_hints`) used by the CLI to generate v3 essence defaults during `decantr init`.
+
+Legacy note:
+- recipe metadata has been folded into themes and treatment-related fields
+- `recipe` is no longer an active top-level registry content type
