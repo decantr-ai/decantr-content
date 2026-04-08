@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Official Decantr registry content — patterns, themes, blueprints, archetypes, shells",
   "scripts": {
+    "schemas:sync": "node scripts/sync-schemas-from-monorepo.js",
     "validate": "node validate.js"
   },
   "devDependencies": {
