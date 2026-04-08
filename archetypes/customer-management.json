@@ -62,7 +62,7 @@
     "sidebar-main": "Sidebar navigation with main content area"
   },
   "suggested_theme": {
-    "styles": ["auradecantism", "carbon"],
+    "ids": ["auradecantism", "carbon"],
     "modes": ["dark", "light"]
   },
   "dependencies": {

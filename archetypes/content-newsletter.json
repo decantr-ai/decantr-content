@@ -91,7 +91,7 @@
     "minimal-header": "Minimal header with logo and back link, no heavy navigation"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "editorial",
       "clean"
     ],

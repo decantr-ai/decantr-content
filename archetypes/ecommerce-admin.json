@@ -113,7 +113,7 @@
     "sidebar-main": "Sidebar navigation grouped by domain (Products, Orders, Customers, Analytics) with main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "clean",
       "auradecantism"
     ],

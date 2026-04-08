@@ -95,7 +95,7 @@
     "top-nav-footer": "Fixed top navigation bar with logo and links, sticky footer with legal and social links"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "gradient-mesh",
       "carbon"
     ],

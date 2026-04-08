@@ -15,9 +15,15 @@
     "single-page"
   ],
   "suggested_theme": {
-    "id": "luminarum",
-    "mode": "dark",
-    "shape": "pill"
+    "ids": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ],
+    "shapes": [
+      "pill"
+    ]
   },
   "personality": [
     "bold",

@@ -88,7 +88,7 @@
     "top-nav-footer": "Fixed top navigation bar with logo and links, footer with legal and social links"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "editorial",
       "clean"
     ],

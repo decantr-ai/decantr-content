@@ -76,7 +76,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "clean"
     ],
     "modes": [

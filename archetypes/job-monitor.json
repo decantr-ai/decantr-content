@@ -97,7 +97,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "technical"
     ],

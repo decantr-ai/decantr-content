@@ -92,7 +92,7 @@
     "sidebar-main": "Collapsible sidebar with tool category tree and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon"
     ],
     "modes": [

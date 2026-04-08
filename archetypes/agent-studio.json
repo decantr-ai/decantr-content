@@ -132,7 +132,7 @@
     "sidebar-aside": "Collapsible sidebar for agent navigation with main content area and optional right aside panel"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "neon-dark"
     ],

@@ -97,7 +97,7 @@
     "sidebar-main": "Sidebar with category tree navigation and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "terminal"
     ],

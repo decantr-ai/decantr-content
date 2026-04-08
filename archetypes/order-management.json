@@ -57,7 +57,7 @@
     "sidebar-main": "Sidebar with account navigation and main content area"
   },
   "suggested_theme": {
-    "styles": ["auradecantism", "clean"],
+    "ids": ["auradecantism", "clean"],
     "modes": ["light", "auto"]
   },
   "dependencies": {

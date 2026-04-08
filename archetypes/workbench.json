@@ -102,7 +102,7 @@
     "sidebar-main": "Collapsible activity bar with icon navigation and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "terminal"
     ],

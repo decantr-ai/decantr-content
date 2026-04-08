@@ -56,7 +56,7 @@
     "sidebar-main": "Sidebar navigation with main content area for inventory operations"
   },
   "suggested_theme": {
-    "styles": ["clean", "auradecantism"],
+    "ids": ["clean", "auradecantism"],
     "modes": ["light", "auto"]
   },
   "dependencies": {

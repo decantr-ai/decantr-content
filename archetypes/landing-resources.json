@@ -107,7 +107,7 @@
     "top-nav-main": "Top navigation bar with main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "luminarum",
       "clean"
     ],

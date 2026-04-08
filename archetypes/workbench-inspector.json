@@ -91,7 +91,7 @@
     "sidebar-aside": "Collapsible activity bar with main content area and right aside panel for inspector"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "terminal"
     ],

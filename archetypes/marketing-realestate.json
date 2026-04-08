@@ -91,7 +91,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "estate"
     ],
     "modes": [

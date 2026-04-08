@@ -123,7 +123,7 @@
     "full-bleed": "Edge-to-edge layout with floating navigation overlay"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "luminarum",
       "gradient-mesh"
     ],

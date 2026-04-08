@@ -102,7 +102,7 @@
     "sidebar-main": "Sidebar navigation with category links and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "clean",
       "paper"
     ],

@@ -5,6 +5,11 @@ let errors = 0;
 let warnings = 0;
 let total = 0;
 
+function fail(msg) {
+  console.error(`  FAIL ${msg}`);
+  errors++;
+}
+
 function warn(msg) {
   console.log(`  WARN ${msg}`);
   warnings++;
@@ -26,23 +31,49 @@ for (const type of types) {
 
       // --- ERROR checks (fail the build) ---
 
-      if (!content.id && !content.slug) {
-        console.error(`  FAIL ${type}/${file}: missing id or slug`);
-        errors++;
-      }
+      if (!content.id && !content.slug) fail(`${type}/${file}: missing id or slug`);
       if (type === 'archetypes') {
         const validRoles = ['primary', 'gateway', 'public', 'auxiliary'];
         if (!content.role || !validRoles.includes(content.role)) {
-          console.error(`  FAIL ${type}/${file}: missing or invalid role (must be one of: ${validRoles.join(', ')})`);
-          errors++;
+          fail(`${type}/${file}: missing or invalid role (must be one of: ${validRoles.join(', ')})`);
+        }
+
+        if (content.suggested_theme !== undefined) {
+          const suggestedTheme = content.suggested_theme;
+
+          if (!suggestedTheme || typeof suggestedTheme !== 'object' || Array.isArray(suggestedTheme)) {
+            fail(`${type}/${file}: suggested_theme must be an object`);
+          } else {
+            if (Object.hasOwn(suggestedTheme, 'styles')) {
+              fail(`${type}/${file}: suggested_theme.styles is legacy; use suggested_theme.ids`);
+            }
+            if (Object.hasOwn(suggestedTheme, 'id')) {
+              fail(`${type}/${file}: suggested_theme.id is legacy; use suggested_theme.ids`);
+            }
+            if (Object.hasOwn(suggestedTheme, 'mode')) {
+              fail(`${type}/${file}: suggested_theme.mode is legacy; use suggested_theme.modes`);
+            }
+            if (Object.hasOwn(suggestedTheme, 'shape')) {
+              fail(`${type}/${file}: suggested_theme.shape is legacy; use suggested_theme.shapes`);
+            }
+
+            for (const [key, value] of Object.entries(suggestedTheme)) {
+              if (!['ids', 'modes', 'shapes'].includes(key)) {
+                fail(`${type}/${file}: suggested_theme.${key} is not supported`);
+                continue;
+              }
+              if (!Array.isArray(value) || value.some(item => typeof item !== 'string' || item.trim().length === 0)) {
+                fail(`${type}/${file}: suggested_theme.${key} must be an array of non-empty strings`);
+              }
+            }
+          }
         }
       }
       if (type === 'blueprints' && content.routes) {
         const composeIds = (content.compose || []).map(e => typeof e === 'string' ? e : e.archetype);
         for (const [path, route] of Object.entries(content.routes)) {
           if (route.archetype && !composeIds.includes(route.archetype)) {
-            console.error(`  FAIL ${type}/${file}: route "${path}" references archetype "${route.archetype}" not in compose`);
-            errors++;
+            fail(`${type}/${file}: route "${path}" references archetype "${route.archetype}" not in compose`);
           }
         }
       }
@@ -96,8 +127,7 @@ for (const type of types) {
       }
 
     } catch (e) {
-      console.error(`  FAIL ${type}/${file}: invalid JSON - ${e.message}`);
-      errors++;
+      fail(`${type}/${file}: invalid JSON - ${e.message}`);
     }
   }
 }
