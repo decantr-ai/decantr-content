@@ -59,8 +59,8 @@
     "neon-badge": "Small surface-raised background badge with rounded radius and subtle border"
   },
   "spatial": {
-    "density_bias": "comfortable",
-    "section_padding": "96px",
+    "density_bias": 0,
+    "section_padding": "6rem",
     "content_gap_shift": 0,
     "card_wrapping": "soft"
   },

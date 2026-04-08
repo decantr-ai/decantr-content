@@ -74,7 +74,7 @@
   "spatial": {
     "density_bias": 0,
     "content_gap_shift": 0,
-    "section_padding": "96px",
+    "section_padding": "6rem",
     "card_wrapping": "standard",
     "surface_override": null
   },

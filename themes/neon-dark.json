@@ -64,9 +64,9 @@
     "neon-grid-line": "Subtle grid pattern overlay at 5% opacity using thin lines for cyberpunk dashboard aesthetic."
   },
   "spatial": {
-    "density_bias": "compact",
-    "content_gap_shift": "-1",
-    "section_padding": "standard",
+    "density_bias": 2,
+    "content_gap_shift": -1,
+    "section_padding": "4rem",
     "card_wrapping": "tight"
   },
   "motion": {

@@ -120,7 +120,7 @@
   "spatial": {
     "density_bias": -1,
     "content_gap_shift": 1,
-    "section_padding": "64px",
+    "section_padding": "4rem",
     "card_wrapping": "subtle",
     "surface_override": null
   },

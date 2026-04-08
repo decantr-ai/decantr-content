@@ -91,7 +91,7 @@
   "spatial": {
     "density_bias": -1,
     "content_gap_shift": 1,
-    "section_padding": "96px",
+    "section_padding": "6rem",
     "card_wrapping": "subtle",
     "surface_override": null
   },

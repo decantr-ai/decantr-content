@@ -69,9 +69,9 @@
     "prismatic-glow": "Soft radial glow behind hero elements using primary indigo at 15% opacity with feathered edges."
   },
   "spatial": {
-    "density_bias": "comfortable",
-    "content_gap_shift": "0",
-    "section_padding": "generous",
+    "density_bias": 0,
+    "content_gap_shift": 0,
+    "section_padding": "6rem",
     "card_wrapping": "standard"
   },
   "motion": {
