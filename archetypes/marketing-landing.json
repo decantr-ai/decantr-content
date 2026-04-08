@@ -15,9 +15,8 @@
     "single-page"
   ],
   "suggested_theme": {
-    "style": "luminarum",
+    "id": "luminarum",
     "mode": "dark",
-    "recipe": "luminarum",
     "shape": "pill"
   },
   "personality": [
