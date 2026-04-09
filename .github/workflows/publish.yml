@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
+      - run: npm ci
       - run: node validate.js
 
   publish:
@@ -29,6 +31,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
+      - run: npm ci
       - name: Sync content to registry
         env:
           DECANTR_ADMIN_KEY: ${{ secrets.DECANTR_ADMIN_KEY }}
