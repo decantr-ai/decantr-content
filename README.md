@@ -63,7 +63,7 @@ The audit is read-only and does not require an admin key for public `@official` 
 
 ## Auditing Content Intelligence Coverage
 
-Use the content-intelligence audit when you want to measure how much of the live `@official` corpus is carrying benchmark-backed intelligence metadata:
+Use the content-intelligence audit when you want to measure how much of the live `@official` corpus is carrying registry intelligence metadata, how that metadata is sourced, and whether the hosted recommended filter agrees with the underlying scores:
 
 ```bash
 node scripts/audit-content-intelligence.js
@@ -74,11 +74,13 @@ REGISTRY_URL=https://staging-api.decantr.ai/v1 node scripts/audit-content-intell
 
 What it reports:
 - `with intelligence` — live items that expose registry intelligence metadata
+- `authored` / `benchmark` / `hybrid` — provenance split for that intelligence metadata
 - `recommended` — live items currently marked as recommended references
 - `recommended API` — live items returned by the hosted `?recommended=true` filter
 - `smoke green` / `build green` — benchmark-backed verification coverage
 - `avg quality` / `avg confidence` — average scores for items that already have intelligence data
 - `blueprints missing intelligence` — official blueprint slugs still missing that metadata entirely
+- `intelligence missing source` — content types where live intelligence metadata is present but does not yet declare `authored`, `benchmark`, or `hybrid` provenance
 - `recommended filter mismatches` — content types where live metadata counts disagree with the hosted recommended filter
 
 This audit is also read-only and does not require an admin key for public `@official` content.

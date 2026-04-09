@@ -106,11 +106,19 @@ function toTypeStats(type, repoCount, liveItems, recommendedItems) {
     .map((item) => item.intelligence?.confidence_score)
     .filter((value) => typeof value === 'number');
   const recommended = intelligenceItems.filter((item) => item.intelligence?.recommended).length;
+  const authored = intelligenceItems.filter((item) => item.intelligence?.source === 'authored').length;
+  const benchmark = intelligenceItems.filter((item) => item.intelligence?.source === 'benchmark').length;
+  const hybrid = intelligenceItems.filter((item) => item.intelligence?.source === 'hybrid').length;
+  const missingSource = intelligenceItems.filter((item) => !item.intelligence?.source).length;
 
   return {
     repo: repoCount,
     live: liveItems.length,
     withIntelligence: intelligenceItems.length,
+    authored,
+    benchmark,
+    hybrid,
+    missingSource,
     recommended,
     recommendedViaFilter: recommendedItems.length,
     recommendedFilterMismatch: recommendedItems.length - recommended,
@@ -130,19 +138,19 @@ function buildMarkdownSummary(report) {
     `- Registry: ${report.registryUrl}`,
     `- Namespace: ${report.namespace}`,
     '',
-    '| Type | Repo | Live | With Intelligence | Recommended | Recommended API | Smoke Green | Build Green | High Confidence | Avg Quality | Avg Confidence |',
-    '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
+    '| Type | Repo | Live | With Intelligence | Authored | Benchmark | Hybrid | Recommended | Recommended API | Smoke Green | Build Green | High Confidence | Avg Quality | Avg Confidence |',
+    '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
   ];
 
   for (const [type, stats] of Object.entries(report.byType)) {
     lines.push(
-      `| ${type} | ${stats.repo} | ${stats.live} | ${stats.withIntelligence} | ${stats.recommended} | ${stats.recommendedViaFilter} | ${stats.smokeGreen} | ${stats.buildGreen} | ${stats.highConfidence} | ${stats.averageQuality ?? '—'} | ${stats.averageConfidence ?? '—'} |`,
+      `| ${type} | ${stats.repo} | ${stats.live} | ${stats.withIntelligence} | ${stats.authored} | ${stats.benchmark} | ${stats.hybrid} | ${stats.recommended} | ${stats.recommendedViaFilter} | ${stats.smokeGreen} | ${stats.buildGreen} | ${stats.highConfidence} | ${stats.averageQuality ?? '—'} | ${stats.averageConfidence ?? '—'} |`,
     );
   }
 
   lines.push('');
   lines.push(
-    `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, recommended ${report.totals.recommended}, recommended API ${report.totals.recommendedViaFilter}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}`,
+    `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, authored ${report.totals.authored}, benchmark ${report.totals.benchmark}, hybrid ${report.totals.hybrid}, recommended ${report.totals.recommended}, recommended API ${report.totals.recommendedViaFilter}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}`,
   );
 
   if (report.recommendedFilterMismatches.length > 0) {
@@ -150,6 +158,14 @@ function buildMarkdownSummary(report) {
     lines.push('## Recommended Filter Mismatches');
     for (const mismatch of report.recommendedFilterMismatches) {
       lines.push(`- ${mismatch.type} — metadata ${mismatch.recommended}, API filter ${mismatch.recommendedViaFilter}`);
+    }
+  }
+
+  if (report.missingSourceByType.length > 0) {
+    lines.push('');
+    lines.push('## Intelligence Missing Source');
+    for (const item of report.missingSourceByType) {
+      lines.push(`- ${item.type} — ${item.missingSource} live items expose intelligence metadata without a provenance source`);
     }
   }
 
@@ -166,7 +182,7 @@ function buildMarkdownSummary(report) {
     lines.push('## Top Recommended Blueprints');
     for (const item of report.topRecommendations) {
       lines.push(
-        `- ${item.slug} — quality ${item.qualityScore ?? '—'}, confidence ${item.confidenceScore ?? '—'}, verification ${item.verificationStatus ?? 'unknown'}`,
+        `- ${item.slug} — source ${item.source ?? 'unknown'}, quality ${item.qualityScore ?? '—'}, confidence ${item.confidenceScore ?? '—'}, verification ${item.verificationStatus ?? 'unknown'}`,
       );
     }
   }
@@ -203,6 +219,7 @@ async function main() {
     .filter((item) => item.intelligence?.recommended)
     .map((item) => ({
       slug: item.slug,
+      source: item.intelligence?.source ?? null,
       qualityScore: item.intelligence?.quality_score ?? null,
       confidenceScore: item.intelligence?.confidence_score ?? null,
       verificationStatus: item.intelligence?.verification_status ?? null,
@@ -221,12 +238,22 @@ async function main() {
       recommended: stats.recommended,
       recommendedViaFilter: stats.recommendedViaFilter,
     }));
+  const missingSourceByType = Object.entries(byType)
+    .filter(([, stats]) => stats.missingSource > 0)
+    .map(([type, stats]) => ({
+      type,
+      missingSource: stats.missingSource,
+    }));
 
   const totals = Object.values(byType).reduce(
     (acc, stats) => ({
       repo: acc.repo + stats.repo,
       live: acc.live + stats.live,
       withIntelligence: acc.withIntelligence + stats.withIntelligence,
+      authored: acc.authored + stats.authored,
+      benchmark: acc.benchmark + stats.benchmark,
+      hybrid: acc.hybrid + stats.hybrid,
+      missingSource: acc.missingSource + stats.missingSource,
       recommended: acc.recommended + stats.recommended,
       recommendedViaFilter: acc.recommendedViaFilter + stats.recommendedViaFilter,
       smokeGreen: acc.smokeGreen + stats.smokeGreen,
@@ -237,6 +264,10 @@ async function main() {
       repo: 0,
       live: 0,
       withIntelligence: 0,
+      authored: 0,
+      benchmark: 0,
+      hybrid: 0,
+      missingSource: 0,
       recommended: 0,
       recommendedViaFilter: 0,
       smokeGreen: 0,
@@ -254,6 +285,7 @@ async function main() {
     blueprintsMissingIntelligence,
     topRecommendations,
     recommendedFilterMismatches,
+    missingSourceByType,
     failures,
   };
 
