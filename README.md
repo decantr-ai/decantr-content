@@ -70,6 +70,7 @@ node scripts/audit-content-intelligence.js
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json --summary-markdown=./content-intelligence-summary.md
 REGISTRY_URL=https://staging-api.decantr.ai/v1 node scripts/audit-content-intelligence.js --fail-on-missing
 REGISTRY_URL=https://staging-api.decantr.ai/v1 node scripts/audit-content-intelligence.js --fail-on-filter-mismatch
+REGISTRY_URL=https://staging-api.decantr.ai/v1 node scripts/audit-content-intelligence.js --fail-on-source-filter-mismatch
 ```
 
 What it reports:
@@ -82,6 +83,7 @@ What it reports:
 - `blueprints missing intelligence` — official blueprint slugs still missing that metadata entirely
 - `intelligence missing source` — content types where live intelligence metadata is present but does not yet declare `authored`, `benchmark`, or `hybrid` provenance
 - `recommended filter mismatches` — content types where live metadata counts disagree with the hosted recommended filter
+- `source filter mismatches` — content types where hosted `?intelligence_source=authored|benchmark|hybrid` results disagree with the underlying metadata counts
 
 This audit is also read-only and does not require an admin key for public `@official` content.
 

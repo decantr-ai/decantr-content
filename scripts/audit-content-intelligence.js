@@ -9,12 +9,14 @@
  *   node scripts/audit-content-intelligence.js --summary-markdown=./content-intelligence-summary.md
  *   node scripts/audit-content-intelligence.js --fail-on-missing
  *   node scripts/audit-content-intelligence.js --fail-on-filter-mismatch
+ *   node scripts/audit-content-intelligence.js --fail-on-source-filter-mismatch
  *
  * Environment variables:
  *   REGISTRY_URL        - API base URL (default: https://api.decantr.ai/v1)
  *   CONTENT_NAMESPACE   - Namespace to audit (default: @official)
  *   FAIL_ON_MISSING     - Set to "true" to fail when official blueprints have no intelligence metadata
  *   FAIL_ON_FILTER_MISMATCH - Set to "true" to fail when the hosted recommended filter disagrees with metadata counts
+ *   FAIL_ON_SOURCE_FILTER_MISMATCH - Set to "true" to fail when hosted source filters disagree with metadata counts
  */
 
 import { mkdirSync, readdirSync, writeFileSync } from 'fs';
@@ -32,6 +34,8 @@ const FAIL_ON_MISSING =
   args.includes('--fail-on-missing') || process.env.FAIL_ON_MISSING === 'true';
 const FAIL_ON_FILTER_MISMATCH =
   args.includes('--fail-on-filter-mismatch') || process.env.FAIL_ON_FILTER_MISMATCH === 'true';
+const FAIL_ON_SOURCE_FILTER_MISMATCH =
+  args.includes('--fail-on-source-filter-mismatch') || process.env.FAIL_ON_SOURCE_FILTER_MISMATCH === 'true';
 
 function ensureParentDir(path) {
   mkdirSync(dirname(path), { recursive: true });
@@ -52,7 +56,7 @@ function countRepoItems() {
 }
 
 async function fetchLiveItems(directory, options = {}) {
-  const { recommendedOnly = false } = options;
+  const { recommendedOnly = false, intelligenceSource = null } = options;
   const items = [];
   let offset = 0;
 
@@ -65,6 +69,9 @@ async function fetchLiveItems(directory, options = {}) {
 
     if (recommendedOnly) {
       searchParams.set('recommended', 'true');
+    }
+    if (intelligenceSource) {
+      searchParams.set('intelligence_source', intelligenceSource);
     }
 
     const url = `${REGISTRY_URL}/${directory}?${searchParams}`;
@@ -97,7 +104,7 @@ function average(values) {
   return Math.round((total / values.length) * 100) / 100;
 }
 
-function toTypeStats(type, repoCount, liveItems, recommendedItems) {
+function toTypeStats(type, repoCount, liveItems, recommendedItems, sourceFilteredItems) {
   const intelligenceItems = liveItems.filter((item) => item.intelligence);
   const qualityScores = intelligenceItems
     .map((item) => item.intelligence?.quality_score)
@@ -110,6 +117,9 @@ function toTypeStats(type, repoCount, liveItems, recommendedItems) {
   const benchmark = intelligenceItems.filter((item) => item.intelligence?.source === 'benchmark').length;
   const hybrid = intelligenceItems.filter((item) => item.intelligence?.source === 'hybrid').length;
   const missingSource = intelligenceItems.filter((item) => !item.intelligence?.source).length;
+  const authoredViaFilter = sourceFilteredItems.authored.length;
+  const benchmarkViaFilter = sourceFilteredItems.benchmark.length;
+  const hybridViaFilter = sourceFilteredItems.hybrid.length;
 
   return {
     repo: repoCount,
@@ -119,6 +129,9 @@ function toTypeStats(type, repoCount, liveItems, recommendedItems) {
     benchmark,
     hybrid,
     missingSource,
+    authoredViaFilter,
+    benchmarkViaFilter,
+    hybridViaFilter,
     recommended,
     recommendedViaFilter: recommendedItems.length,
     recommendedFilterMismatch: recommendedItems.length - recommended,
@@ -169,6 +182,24 @@ function buildMarkdownSummary(report) {
     }
   }
 
+  if (report.sourceFilterMismatches.length > 0) {
+    lines.push('');
+    lines.push('## Source Filter Mismatches');
+    for (const mismatch of report.sourceFilterMismatches) {
+      const parts = [];
+      if (mismatch.authored !== mismatch.authoredViaFilter) {
+        parts.push(`authored metadata ${mismatch.authored}, API filter ${mismatch.authoredViaFilter}`);
+      }
+      if (mismatch.benchmark !== mismatch.benchmarkViaFilter) {
+        parts.push(`benchmark metadata ${mismatch.benchmark}, API filter ${mismatch.benchmarkViaFilter}`);
+      }
+      if (mismatch.hybrid !== mismatch.hybridViaFilter) {
+        parts.push(`hybrid metadata ${mismatch.hybrid}, API filter ${mismatch.hybridViaFilter}`);
+      }
+      lines.push(`- ${mismatch.type} — ${parts.join('; ')}`);
+    }
+  }
+
   if (report.blueprintsMissingIntelligence.length > 0) {
     lines.push('');
     lines.push('## Blueprints Missing Intelligence');
@@ -201,11 +232,26 @@ async function main() {
     try {
       const liveItems = await fetchLiveItems(dir);
       const recommendedItems = await fetchLiveItems(dir, { recommendedOnly: true });
-      byType[type] = toTypeStats(type, repoCounts[type] || 0, liveItems, recommendedItems);
+      const sourceFilteredItems = {
+        authored: await fetchLiveItems(dir, { intelligenceSource: 'authored' }),
+        benchmark: await fetchLiveItems(dir, { intelligenceSource: 'benchmark' }),
+        hybrid: await fetchLiveItems(dir, { intelligenceSource: 'hybrid' }),
+      };
+      byType[type] = toTypeStats(
+        type,
+        repoCounts[type] || 0,
+        liveItems,
+        recommendedItems,
+        sourceFilteredItems,
+      );
       allLiveItems.push(...liveItems.map((item) => ({ ...item, type })));
     } catch (error) {
       failures.push(`${type}: ${error.message}`);
-      byType[type] = toTypeStats(type, repoCounts[type] || 0, [], []);
+      byType[type] = toTypeStats(type, repoCounts[type] || 0, [], [], {
+        authored: [],
+        benchmark: [],
+        hybrid: [],
+      });
     }
   }
 
@@ -243,6 +289,21 @@ async function main() {
     .map(([type, stats]) => ({
       type,
       missingSource: stats.missingSource,
+    }));
+  const sourceFilterMismatches = Object.entries(byType)
+    .filter(([, stats]) =>
+      stats.authored !== stats.authoredViaFilter ||
+      stats.benchmark !== stats.benchmarkViaFilter ||
+      stats.hybrid !== stats.hybridViaFilter,
+    )
+    .map(([type, stats]) => ({
+      type,
+      authored: stats.authored,
+      authoredViaFilter: stats.authoredViaFilter,
+      benchmark: stats.benchmark,
+      benchmarkViaFilter: stats.benchmarkViaFilter,
+      hybrid: stats.hybrid,
+      hybridViaFilter: stats.hybridViaFilter,
     }));
 
   const totals = Object.values(byType).reduce(
@@ -286,6 +347,7 @@ async function main() {
     topRecommendations,
     recommendedFilterMismatches,
     missingSourceByType,
+    sourceFilterMismatches,
     failures,
   };
 
@@ -307,6 +369,10 @@ async function main() {
   }
 
   if (FAIL_ON_FILTER_MISMATCH && recommendedFilterMismatches.length > 0) {
+    process.exitCode = 1;
+  }
+
+  if (FAIL_ON_SOURCE_FILTER_MISMATCH && sourceFilterMismatches.length > 0) {
     process.exitCode = 1;
   }
 }
