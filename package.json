@@ -5,6 +5,8 @@
   "type": "module",
   "description": "Official Decantr registry content — patterns, themes, blueprints, archetypes, shells",
   "scripts": {
+    "registry:audit": "node scripts/audit-registry-drift.js",
+    "registry:sync": "node scripts/sync-to-registry.js",
     "schemas:sync": "node scripts/sync-schemas-from-monorepo.js",
     "validate": "node validate.js"
   },

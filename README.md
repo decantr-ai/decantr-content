@@ -39,7 +39,26 @@ The sync uses `(namespace, type, slug)` as the upsert key. Existing items are up
 node validate.js                          # Validate all content files
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js  # Manual sync to registry
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js --dry-run --report-json=./sync-report.json
+node scripts/audit-registry-drift.js --report-json=./registry-drift-report.json
 ```
+
+## Auditing Live Registry Drift
+
+Use the audit script when you want to compare this repo with the live `@official` namespace before publishing or pruning:
+
+```bash
+node scripts/audit-registry-drift.js
+node scripts/audit-registry-drift.js --report-json=./registry-drift-report.json --summary-markdown=./registry-drift-summary.md
+REGISTRY_URL=https://staging-api.decantr.ai/v1 node scripts/audit-registry-drift.js --fail-on-drift
+```
+
+What it reports:
+- `missing live` — content present in this repo but missing from the live registry
+- `extra live` — content still published live but no longer present in this repo
+- `changed` — content whose live JSON or version does not match the repo source of truth
+- `failures` — fetch or comparison errors during the audit
+
+The audit is read-only and does not require an admin key for public `@official` content.
 
 ## Adding Content
 
@@ -47,6 +66,8 @@ DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js --dry-run --report-json=.
 2. Every item must have an `id` field (used as the slug)
 3. Open a PR — CI validates the JSON
 4. Merge to `main` — CI syncs to the live registry
+
+PRs and scheduled checks can also run the drift audit workflow to surface live-vs-repo mismatches without mutating the registry.
 
 ## Content Schema
 

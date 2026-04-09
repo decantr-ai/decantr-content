@@ -1,1 +1,4 @@
 node_modules/
+registry-drift-report.json
+registry-drift-summary.md
+sync-report.json
