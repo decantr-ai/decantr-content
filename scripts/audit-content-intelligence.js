@@ -52,6 +52,7 @@ const SUMMARY_FIELD_MAP = [
   ['smoke_green', 'smokeGreen'],
   ['build_green', 'buildGreen'],
   ['high_confidence', 'highConfidence'],
+  ['verified_confidence', 'verifiedConfidence'],
 ];
 
 function ensureParentDir(path) {
@@ -165,7 +166,11 @@ function toTypeStats(type, repoCount, liveItems, recommendedItems, sourceFiltere
     recommendedFilterMismatch: recommendedItems.length - recommended,
     smokeGreen: intelligenceItems.filter((item) => item.intelligence?.verification_status === 'smoke-green').length,
     buildGreen: intelligenceItems.filter((item) => item.intelligence?.verification_status === 'build-green').length,
-    highConfidence: intelligenceItems.filter((item) => item.intelligence?.benchmark_confidence === 'high').length,
+    highConfidence: intelligenceItems.filter((item) => {
+      const tier = item.intelligence?.confidence_tier;
+      return tier === 'high' || tier === 'verified';
+    }).length,
+    verifiedConfidence: intelligenceItems.filter((item) => item.intelligence?.confidence_tier === 'verified').length,
     averageQuality: average(qualityScores),
     averageConfidence: average(confidenceScores),
   };
@@ -179,19 +184,19 @@ function buildMarkdownSummary(report) {
     `- Registry: ${report.registryUrl}`,
     `- Namespace: ${report.namespace}`,
     '',
-    '| Type | Repo | Live | With Intelligence | Authored | Benchmark | Hybrid | Recommended | Recommended API | Smoke Green | Build Green | High Confidence | Avg Quality | Avg Confidence |',
-    '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
+    '| Type | Repo | Live | With Intelligence | Authored | Benchmark | Hybrid | Recommended | Recommended API | Smoke Green | Build Green | High Confidence | Verified Confidence | Avg Quality | Avg Confidence |',
+    '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
   ];
 
   for (const [type, stats] of Object.entries(report.byType)) {
     lines.push(
-      `| ${type} | ${stats.repo} | ${stats.live} | ${stats.withIntelligence} | ${stats.authored} | ${stats.benchmark} | ${stats.hybrid} | ${stats.recommended} | ${stats.recommendedViaFilter} | ${stats.smokeGreen} | ${stats.buildGreen} | ${stats.highConfidence} | ${stats.averageQuality ?? '—'} | ${stats.averageConfidence ?? '—'} |`,
+      `| ${type} | ${stats.repo} | ${stats.live} | ${stats.withIntelligence} | ${stats.authored} | ${stats.benchmark} | ${stats.hybrid} | ${stats.recommended} | ${stats.recommendedViaFilter} | ${stats.smokeGreen} | ${stats.buildGreen} | ${stats.highConfidence} | ${stats.verifiedConfidence} | ${stats.averageQuality ?? '—'} | ${stats.averageConfidence ?? '—'} |`,
     );
   }
 
   lines.push('');
   lines.push(
-    `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, authored ${report.totals.authored}, benchmark ${report.totals.benchmark}, hybrid ${report.totals.hybrid}, recommended ${report.totals.recommended}, recommended API ${report.totals.recommendedViaFilter}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}`,
+    `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, authored ${report.totals.authored}, benchmark ${report.totals.benchmark}, hybrid ${report.totals.hybrid}, recommended ${report.totals.recommended}, recommended API ${report.totals.recommendedViaFilter}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}, high confidence ${report.totals.highConfidence}, verified confidence ${report.totals.verifiedConfidence}`,
   );
 
   if (report.hostedSummary) {
@@ -199,7 +204,7 @@ function buildMarkdownSummary(report) {
     lines.push('## Hosted Summary Endpoint');
     lines.push(`- Generated at: ${report.hostedSummary.generated_at}`);
     lines.push(
-      `- Totals: live ${report.hostedSummary.totals.total_public_items}, intelligence ${report.hostedSummary.totals.with_intelligence}, authored ${report.hostedSummary.totals.authored}, benchmark ${report.hostedSummary.totals.benchmark}, hybrid ${report.hostedSummary.totals.hybrid}, recommended ${report.hostedSummary.totals.recommended}, smoke green ${report.hostedSummary.totals.smoke_green}, build green ${report.hostedSummary.totals.build_green}`,
+      `- Totals: live ${report.hostedSummary.totals.total_public_items}, intelligence ${report.hostedSummary.totals.with_intelligence}, authored ${report.hostedSummary.totals.authored}, benchmark ${report.hostedSummary.totals.benchmark}, hybrid ${report.hostedSummary.totals.hybrid}, recommended ${report.hostedSummary.totals.recommended}, smoke green ${report.hostedSummary.totals.smoke_green}, build green ${report.hostedSummary.totals.build_green}, high confidence ${report.hostedSummary.totals.high_confidence}, verified confidence ${report.hostedSummary.totals.verified_confidence}`,
     );
   }
 
@@ -384,6 +389,7 @@ async function main() {
       smokeGreen: acc.smokeGreen + stats.smokeGreen,
       buildGreen: acc.buildGreen + stats.buildGreen,
       highConfidence: acc.highConfidence + stats.highConfidence,
+      verifiedConfidence: acc.verifiedConfidence + stats.verifiedConfidence,
     }),
     {
       repo: 0,
@@ -398,6 +404,7 @@ async function main() {
       smokeGreen: 0,
       buildGreen: 0,
       highConfidence: 0,
+      verifiedConfidence: 0,
     },
   );
 
