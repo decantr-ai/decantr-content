@@ -47,7 +47,7 @@
     "sidebar-main": "Sidebar navigation with main content area for operations reporting"
   },
   "suggested_theme": {
-    "styles": ["clean", "auradecantism"],
+    "ids": ["clean", "auradecantism"],
     "modes": ["light", "auto"]
   },
   "dependencies": {

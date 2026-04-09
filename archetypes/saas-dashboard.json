@@ -102,7 +102,7 @@
     "sidebar-main": "Collapsible sidebar with section-grouped navigation and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "clean",
       "auradecantism"
     ],

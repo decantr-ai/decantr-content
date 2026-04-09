@@ -76,7 +76,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["swiss"],
+    "ids": ["swiss"],
     "modes": ["light", "dark"]
   }
 }

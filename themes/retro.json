@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "retro",
   "name": "Retro",
   "description": "Neobrutalism. Bold borders, offset shadows, sharp corners, snappy motion. Opinionated and distinctive. Everything feels physical and tactile.",
@@ -70,9 +70,9 @@
     "retro-divider": "Thick 2px dashed border separator with warm dark color for section breaks."
   },
   "spatial": {
-    "density_bias": "comfortable",
-    "content_gap_shift": "+1",
-    "section_padding": "generous",
+    "density_bias": 0,
+    "content_gap_shift": 1,
+    "section_padding": "6rem",
     "card_wrapping": "standard"
   },
   "motion": {

@@ -103,7 +103,7 @@
     "sidebar-main": "Sidebar navigation with account switcher and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "clean"
     ],

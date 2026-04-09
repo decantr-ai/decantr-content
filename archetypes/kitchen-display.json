@@ -45,7 +45,7 @@
     "sidebar-main": "Sidebar navigation with main content area for kitchen operations"
   },
   "suggested_theme": {
-    "styles": ["carbon", "clean"],
+    "ids": ["carbon", "clean"],
     "modes": ["dark", "light"]
   },
   "dependencies": {

@@ -83,7 +83,7 @@
     "top-nav-footer": "Top navigation bar with footer for legal and social links"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "luminarum",
       "clean"
     ],

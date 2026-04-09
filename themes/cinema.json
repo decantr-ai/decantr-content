@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "cinema",
   "name": "Cinema",
   "description": "Film and video production theme with deep charcoal background and warm amber highlights. Title-card typography with serif display, film-grain texture, and dramatic framing for cinematic storytelling interfaces.",
@@ -100,7 +100,7 @@
   "spatial": {
     "density_bias": -1,
     "content_gap_shift": 1,
-    "section_padding": "80px",
+    "section_padding": "5rem",
     "card_wrapping": "none",
     "surface_override": null
   },

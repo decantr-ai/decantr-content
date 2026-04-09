@@ -136,7 +136,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "paper"
     ],
     "modes": [

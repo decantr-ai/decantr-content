@@ -141,7 +141,9 @@
     "toggle_shortcut": "Cmd+K opens/closes copilot panel from anywhere",
     "collapsed_state": "When closed, only a floating 'Ask AI' pill button is visible at bottom-right",
     "overlay_vs_push": "Overlay: panel floats over body content. Push: body shrinks to make room for panel",
-    "mobile_behavior": "On mobile, copilot opens as a full-screen bottom sheet instead of a side panel"
+    "mobile_behavior": "On mobile, copilot opens as a full-screen bottom sheet instead of a side panel",
+    "section_label_treatment": "d-label",
+    "section_density": "compact"
   },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { h, text, onMount, onDestroy } from 'decantr/core';\nimport { createSignal } from 'decantr/state';\nimport { css } from 'decantr/css';\nimport { Button, Avatar, icon } from 'decantr/components';",

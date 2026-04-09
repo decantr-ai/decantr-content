@@ -114,6 +114,10 @@
       "note": "Right-positioned navigation panel. Useful for settings nav, docs sidebar, or inspector."
     }
   },
+  "guidance": {
+    "section_label_treatment": "d-label[data-anchor]",
+    "section_density": "compact"
+  },
   "code": {
     "imports": "import { Shell } from 'decantr/components';",
     "example": "Shell({ config: 'sidebar-right' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent)\n)"

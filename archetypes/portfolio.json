@@ -109,7 +109,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "auradecantism",
       "minimal",
       "elegant"

@@ -38,7 +38,7 @@
     "top-nav-footer": "Top navigation and footer wrapping marketing content"
   },
   "suggested_theme": {
-    "styles": ["auradecantism", "clean"],
+    "ids": ["auradecantism", "clean"],
     "modes": ["light", "auto"]
   },
   "dependencies": {

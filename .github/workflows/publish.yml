@@ -4,27 +4,51 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report sync/prune actions without mutating the registry"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
+      - run: npm ci
       - run: node validate.js
 
   publish:
     needs: validate
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
+      - run: npm ci
       - name: Sync content to registry
         env:
           DECANTR_ADMIN_KEY: ${{ secrets.DECANTR_ADMIN_KEY }}
           REGISTRY_URL: ${{ vars.REGISTRY_URL || 'https://api.decantr.ai/v1' }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+          SYNC_REPORT_PATH: ${{ github.workspace }}/sync-report.json
         run: node scripts/sync-to-registry.js
+
+      - name: Upload sync report
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry-sync-report
+          path: sync-report.json
+          if-no-files-found: ignore

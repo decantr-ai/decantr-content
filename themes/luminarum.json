@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "luminarum",
   "name": "Luminarum",
   "description": "Geometric canvas with vibrant faceted color accents. Breathing gradient orbs, outlined cards with colored strokes, particle network details. Tech-forward meets visual candy. Dual dark/light modes: warm charcoal dark, warm off-white light.",
@@ -20,23 +20,74 @@
     "background": "#141414"
   },
   "palette": {
-    "background": { "dark": "#141414", "light": "#FAFAF9" },
-    "surface": { "dark": "#1E1E1E", "light": "#FFFFFF" },
-    "surface-raised": { "dark": "#262626", "light": "#F5F5F4" },
-    "border": { "dark": "#2E2E2E", "light": "#E7E5E4" },
-    "text": { "dark": "#FAFAFA", "light": "#1C1917" },
-    "text-muted": { "dark": "#A1A1AA", "light": "#78716C" },
-    "primary": { "dark": "#FE4474", "light": "#E11D48" },
-    "primary-hover": { "dark": "#FF5C8A", "light": "#BE123C" },
-    "coral": { "dark": "#F58882", "light": "#F58882" },
-    "pink": { "dark": "#FE4474", "light": "#FE4474" },
-    "crimson": { "dark": "#D80F4A", "light": "#D80F4A" },
-    "cyan": { "dark": "#0AF3EB", "light": "#0AF3EB" },
-    "green": { "dark": "#00E0AB", "light": "#00E0AB" },
-    "amber": { "dark": "#FDA303", "light": "#FDA303" },
-    "yellow": { "dark": "#FCD021", "light": "#FCD021" },
-    "orange": { "dark": "#FC8D0D", "light": "#FC8D0D" },
-    "purple": { "dark": "#6500C6", "light": "#6500C6" }
+    "background": {
+      "dark": "#141414",
+      "light": "#FAFAF9"
+    },
+    "surface": {
+      "dark": "#1E1E1E",
+      "light": "#FFFFFF"
+    },
+    "surface-raised": {
+      "dark": "#262626",
+      "light": "#F5F5F4"
+    },
+    "border": {
+      "dark": "#2E2E2E",
+      "light": "#E7E5E4"
+    },
+    "text": {
+      "dark": "#FAFAFA",
+      "light": "#1C1917"
+    },
+    "text-muted": {
+      "dark": "#A1A1AA",
+      "light": "#78716C"
+    },
+    "primary": {
+      "dark": "#FE4474",
+      "light": "#E11D48"
+    },
+    "primary-hover": {
+      "dark": "#FF5C8A",
+      "light": "#BE123C"
+    },
+    "coral": {
+      "dark": "#F58882",
+      "light": "#F58882"
+    },
+    "pink": {
+      "dark": "#FE4474",
+      "light": "#FE4474"
+    },
+    "crimson": {
+      "dark": "#D80F4A",
+      "light": "#D80F4A"
+    },
+    "cyan": {
+      "dark": "#0AF3EB",
+      "light": "#0AF3EB"
+    },
+    "green": {
+      "dark": "#00E0AB",
+      "light": "#00E0AB"
+    },
+    "amber": {
+      "dark": "#FDA303",
+      "light": "#FDA303"
+    },
+    "yellow": {
+      "dark": "#FCD021",
+      "light": "#FCD021"
+    },
+    "orange": {
+      "dark": "#FC8D0D",
+      "light": "#FC8D0D"
+    },
+    "purple": {
+      "dark": "#6500C6",
+      "light": "#6500C6"
+    }
   },
   "modes": [
     "dark",
@@ -85,7 +136,7 @@
   "spatial": {
     "density_bias": 0,
     "content_gap_shift": 0,
-    "section_padding": "120px",
+    "section_padding": "7.5rem",
     "card_wrapping": "minimal",
     "surface_override": null
   },
@@ -238,8 +289,14 @@
         "position": "relative"
       },
       "mode_overrides": {
-        "dark": { "background-color": "#141414", "color": "rgba(255, 255, 255, 0.85)" },
-        "light": { "background-color": "#FAFAF9", "color": "rgba(28, 25, 23, 0.85)" }
+        "dark": {
+          "background-color": "#141414",
+          "color": "rgba(255, 255, 255, 0.85)"
+        },
+        "light": {
+          "background-color": "#FAFAF9",
+          "color": "rgba(28, 25, 23, 0.85)"
+        }
       },
       "pairs_with": [
         "lum-particles",
@@ -260,8 +317,14 @@
         "border-radius": "var(--d-radius, 12px)"
       },
       "mode_overrides": {
-        "dark": { "background": "rgba(255, 255, 255, 0.03)", "border-color": "rgba(255, 255, 255, 0.08)" },
-        "light": { "background": "rgba(0, 0, 0, 0.02)", "border-color": "rgba(0, 0, 0, 0.06)" }
+        "dark": {
+          "background": "rgba(255, 255, 255, 0.03)",
+          "border-color": "rgba(255, 255, 255, 0.08)"
+        },
+        "light": {
+          "background": "rgba(0, 0, 0, 0.02)",
+          "border-color": "rgba(0, 0, 0, 0.06)"
+        }
       },
       "pairs_with": [
         "lum-canvas",
@@ -323,8 +386,12 @@
         "transition": "transform 300ms ease, box-shadow 300ms ease"
       },
       "mode_overrides": {
-        "dark": { "color": "rgba(255, 255, 255, 0.75)" },
-        "light": { "color": "rgba(28, 25, 23, 0.75)" }
+        "dark": {
+          "color": "rgba(255, 255, 255, 0.75)"
+        },
+        "light": {
+          "color": "rgba(28, 25, 23, 0.75)"
+        }
       },
       "pairs_with": [
         "lum-canvas",
@@ -369,8 +436,12 @@
         "padding": "20px"
       },
       "mode_overrides": {
-        "dark": { "background": "#111113" },
-        "light": { "background": "#F5F5F4" }
+        "dark": {
+          "background": "#111113"
+        },
+        "light": {
+          "background": "#F5F5F4"
+        }
       },
       "pairs_with": [
         "lum-canvas",
@@ -397,8 +468,12 @@
         "font-weight": "700"
       },
       "mode_overrides": {
-        "dark": { "color": "#141414" },
-        "light": { "color": "#FFFFFF" }
+        "dark": {
+          "color": "#141414"
+        },
+        "light": {
+          "color": "#FFFFFF"
+        }
       },
       "pairs_with": [
         "lum-card-outlined",
@@ -419,8 +494,12 @@
         "font-weight": "700"
       },
       "mode_overrides": {
-        "dark": { "color": "rgba(255, 255, 255, 0.9)" },
-        "light": { "color": "rgba(28, 25, 23, 0.9)" }
+        "dark": {
+          "color": "rgba(255, 255, 255, 0.9)"
+        },
+        "light": {
+          "color": "rgba(28, 25, 23, 0.9)"
+        }
       },
       "pairs_with": [
         "lum-glass",
@@ -459,8 +538,12 @@
         "margin": "80px 0"
       },
       "mode_overrides": {
-        "dark": { "border-top-color": "rgba(255, 255, 255, 0.1)" },
-        "light": { "border-top-color": "rgba(0, 0, 0, 0.08)" }
+        "dark": {
+          "border-top-color": "rgba(255, 255, 255, 0.1)"
+        },
+        "light": {
+          "border-top-color": "rgba(0, 0, 0, 0.08)"
+        }
       },
       "pairs_with": [
         "lum-canvas",

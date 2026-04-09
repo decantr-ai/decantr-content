@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "carbon-neon",
   "name": "Carbon Neon",
   "description": "Carbon's sleek dark surfaces with vivid neon cyan accent. For mission-control, agent dashboards, and data-intensive interfaces.",
@@ -110,7 +110,7 @@
   "spatial": {
     "density_bias": 0,
     "content_gap_shift": 0,
-    "section_padding": "80px",
+    "section_padding": "5rem",
     "card_wrapping": "minimal",
     "surface_override": null
   },

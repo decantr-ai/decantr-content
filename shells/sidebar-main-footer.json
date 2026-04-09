@@ -144,6 +144,10 @@
       "note": "Persistent footer bar for status indicators or action buttons. Spans main content column only, not sidebar."
     }
   },
+  "guidance": {
+    "section_label_treatment": "d-label[data-anchor]",
+    "section_density": "compact"
+  },
   "code": {
     "imports": "import { Shell } from 'decantr/components';",
     "example": "Shell({ config: 'sidebar-main-footer' },\n  Shell.Header({}, headerContent),\n  Shell.Nav({}, navContent),\n  Shell.Body({}, mainContent),\n  Shell.Footer({}, footerContent)\n)"

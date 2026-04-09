@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "dopamine",
   "name": "Dopamine",
   "description": "Saturated maximalism. Y2K revival. Joyful, loud, electric. Maximum saturation, heavy type, gradient everything. The anti-minimal design language.",
@@ -70,9 +70,9 @@
     "dopamine-shimmer": "Animated shimmer gradient sweeping left to right across element surface for loading or emphasis."
   },
   "spatial": {
-    "density_bias": "comfortable",
-    "content_gap_shift": "+1",
-    "section_padding": "generous",
+    "density_bias": 0,
+    "content_gap_shift": 1,
+    "section_padding": "6rem",
     "card_wrapping": "standard"
   },
   "motion": {

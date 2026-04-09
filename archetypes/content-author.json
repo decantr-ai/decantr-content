@@ -102,7 +102,7 @@
     "sidebar-main": "Sidebar navigation with main content area for authoring"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "editorial",
       "clean"
     ],

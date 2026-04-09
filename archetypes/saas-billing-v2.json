@@ -71,7 +71,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": ["auradecantism"],
+    "ids": ["auradecantism"],
     "modes": ["dark", "light"]
   }
 }

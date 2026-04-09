@@ -93,7 +93,7 @@
     "sidebar-main": "Collapsible sidebar with trace filters and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "neon-dark"
     ],

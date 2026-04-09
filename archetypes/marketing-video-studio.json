@@ -98,7 +98,7 @@
     "top-nav-footer": "Public marketing layout with top navigation bar and footer"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "luminarum",
       "carbon"
     ],

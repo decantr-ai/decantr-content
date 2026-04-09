@@ -114,7 +114,7 @@
     "top-nav-main": "Top navigation bar with main content area for reading"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "editorial",
       "clean"
     ],

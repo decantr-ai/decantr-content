@@ -22,10 +22,16 @@
     "tier": "recommended"
   },
   "components": ["Card", "Badge", "icon", "Text"],
+  "default_preset": "default",
   "presets": {
     "default": {
       "description": "Vertical timeline with alternating sides",
       "layout": {
+        "layout": "stack",
+        "atoms": "_flex _col _gap6 _relative",
+        "slots": {
+          "events": "Vertical sequence of timeline entries alternating around a central connector line"
+        },
         "orientation": "vertical",
         "alternating": true
       }
@@ -33,6 +39,11 @@
     "compact": {
       "description": "Single-side vertical timeline with all entries on one side of the connector line for compact layouts",
       "layout": {
+        "layout": "stack",
+        "atoms": "_flex _col _gap4 _relative",
+        "slots": {
+          "events": "Compact single-sided vertical timeline entries aligned to one connector line"
+        },
         "orientation": "vertical",
         "alternating": false
       }
@@ -40,6 +51,11 @@
     "horizontal": {
       "description": "Horizontal scrolling timeline with entries arranged left-to-right along a connector line",
       "layout": {
+        "layout": "row",
+        "atoms": "_flex _gap6 _overflow[auto]",
+        "slots": {
+          "events": "Horizontally scrolling timeline entries arranged along a shared connector line"
+        },
         "orientation": "horizontal"
       }
     }
@@ -82,6 +98,13 @@
     "connector": "line"
   },
   "visual_brief": "Vertical sequence of timeline entries connected by a thin vertical line. Each entry has a small circle dot on the line, a date or timestamp label, an event title in medium weight, and a description paragraph. Optional media (images, icons) can appear beside entries. The compact preset reduces spacing and hides descriptions, showing only date and title. The horizontal preset arranges entries left-to-right along a horizontal line with dates below and content above. Milestone entries may have a larger dot or distinct icon.",
+  "default_layout": {
+    "layout": "stack",
+    "atoms": "_flex _col _gap6 _relative",
+    "slots": {
+      "events": "Vertical sequence of timeline entries alternating around a central connector line"
+    }
+  },
   "responsive": {
     "mobile": "Vertical timeline only. Line on the left edge with content to the right. Dates above entries. Compact spacing.",
     "tablet": "Standard vertical timeline with comfortable spacing. Content beside the timeline dots.",

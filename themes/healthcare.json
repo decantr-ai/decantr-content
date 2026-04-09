@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "healthcare",
   "name": "Healthcare",
   "description": "Clean, accessible, trust-signaling medical theme. Calming blues and teals on warm white backgrounds. WCAG AAA compliant with full CVD support. Designed for patient portals, clinical dashboards, and health monitoring interfaces.",
@@ -133,7 +133,7 @@
   "spatial": {
     "density_bias": -1,
     "content_gap_shift": 1,
-    "section_padding": "48px",
+    "section_padding": "3rem",
     "card_wrapping": "subtle",
     "surface_override": null
   },

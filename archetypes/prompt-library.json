@@ -114,7 +114,7 @@
     "sidebar-main": "Collapsible sidebar with prompt folder tree and main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon"
     ],
     "modes": [

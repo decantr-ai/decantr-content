@@ -80,7 +80,7 @@
     "top-nav-main": "Top navigation bar with logo, search, cart icon with badge, and account menu"
   },
   "suggested_theme": {
-    "styles": ["auradecantism", "clean"],
+    "ids": ["auradecantism", "clean"],
     "modes": ["light", "auto"]
   },
   "dependencies": {

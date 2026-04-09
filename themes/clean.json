@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "clean",
   "name": "Clean",
   "description": "Professional, understated, universally appropriate. Subtle shadows, smooth motion, rounded corners. The safe default.",
@@ -71,7 +71,7 @@
   "spatial": {
     "density_bias": 0,
     "content_gap_shift": 0,
-    "section_padding": "64px",
+    "section_padding": "4rem",
     "card_wrapping": "standard",
     "surface_override": null
   },

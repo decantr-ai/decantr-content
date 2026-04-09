@@ -22,17 +22,27 @@
     "tier": "recommended"
   },
   "components": ["Card", "Badge", "Avatar", "Text", "icon"],
+  "default_preset": "ranked",
   "presets": {
     "spotlight": {
       "description": "Top 3 highlighted with large cards, rest in compact list",
       "layout": {
-        "top": "cards",
-        "rest": "list"
+        "layout": "grid",
+        "atoms": "_grid _gap4 _md:gc3",
+        "slots": {
+          "top": "Top-three ranked entries rendered as large spotlight cards",
+          "rest": "Remaining entries rendered below as a compact ranked list"
+        }
       }
     },
     "ranked": {
       "description": "Full ranked list with position numbers and progress indicators",
       "layout": {
+        "layout": "stack",
+        "atoms": "_flex _col _gap2",
+        "slots": {
+          "items": "Dense ordered list of ranked entries with position, avatar, name, score, and optional delta"
+        },
         "style": "numbered-list",
         "showChange": true
       }
@@ -40,6 +50,11 @@
     "grid": {
       "description": "Card grid for achievements or badges display",
       "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gap4 _sm:gc2 _xl:gc3",
+        "slots": {
+          "items": "Ranked entries rendered as achievement cards with badge, avatar, name, and score"
+        },
         "style": "grid",
         "columns": 3
       }
@@ -86,6 +101,13 @@
     ]
   },
   "visual_brief": "Ranked vertical list where each row shows a position number (with gold/silver/bronze styling for top 3), a user avatar, display name, and a numeric score on the right. Top-three items in the spotlight preset are enlarged with medal icons and a subtle glow or card treatment. The ranked preset is a dense list with alternating row shading. Grid preset arranges entries as cards in a responsive grid with position badge, avatar, name, and score. Position changes show up/down arrows with green/red coloring.",
+  "default_layout": {
+    "layout": "stack",
+    "atoms": "_flex _col _gap2",
+    "slots": {
+      "items": "Dense ordered list of ranked entries with position, avatar, name, score, and optional delta"
+    }
+  },
   "responsive": {
     "mobile": "Single-column list. Spotlight cards stack vertically. Avatars reduce to 32px. Score values right-aligned.",
     "tablet": "Spotlight top-3 in a horizontal row, remaining entries in a list below. Grid preset uses 2 columns.",

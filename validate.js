@@ -1,16 +1,87 @@
 import { readdirSync, readFileSync } from 'fs';
+import { join } from 'path';
+import Ajv2020 from 'ajv/dist/2020.js';
+import {
+  CONTENT_DIRECTORIES,
+  DIRECTORY_TO_SCHEMA_URL,
+  SCHEMA_FILES,
+} from './scripts/content-contract.js';
 
-const types = ['patterns', 'themes', 'blueprints', 'archetypes', 'shells'];
 let errors = 0;
 let warnings = 0;
 let total = 0;
+
+function fail(msg) {
+  console.error(`  FAIL ${msg}`);
+  errors++;
+}
 
 function warn(msg) {
   console.log(`  WARN ${msg}`);
   warnings++;
 }
 
-for (const type of types) {
+const validRoles = ['primary', 'gateway', 'public', 'auxiliary'];
+
+function loadJson(relativePath) {
+  return JSON.parse(readFileSync(join(process.cwd(), relativePath), 'utf-8'));
+}
+
+function formatSchemaError(error) {
+  const instancePath = error.instancePath || '/';
+  return `${instancePath} ${error.message}`.trim();
+}
+
+const ajv = new Ajv2020({
+  allErrors: true,
+  strict: false,
+  allowUnionTypes: true,
+});
+
+ajv.addSchema(loadJson(join('schemas', SCHEMA_FILES.common)));
+
+const validators = {
+  patterns: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.patterns))),
+  themes: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.themes))),
+  blueprints: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.blueprints))),
+  archetypes: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.archetypes))),
+  shells: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.shells))),
+};
+
+function isRecord(value) {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+}
+
+function isNonEmptyStringArray(value) {
+  return Array.isArray(value) && value.every(item => typeof item === 'string' && item.trim().length > 0);
+}
+
+function isRecordOfNonEmptyStrings(value) {
+  return isRecord(value) && Object.values(value).every(item => typeof item === 'string' && item.trim().length > 0);
+}
+
+function isDependencyMap(value) {
+  return isRecord(value) && Object.values(value).every(group => isRecordOfNonEmptyStrings(group));
+}
+
+function isPatternReference(value) {
+  return typeof value === 'string'
+    || (isRecord(value) && typeof value.pattern === 'string' && value.pattern.trim().length > 0);
+}
+
+function isLayoutGroup(value) {
+  return isRecord(value)
+    && Array.isArray(value.cols)
+    && value.cols.every(item => isPatternReference(item))
+    && (value.at === undefined || (typeof value.at === 'string' && value.at.trim().length > 0))
+    && (value.span === undefined || (isRecord(value.span) && Object.values(value.span).every(item => typeof item === 'number')));
+}
+
+function isLayoutItem(value) {
+  return isPatternReference(value) || isLayoutGroup(value);
+}
+
+for (const type of CONTENT_DIRECTORIES) {
   let files;
   try {
     files = readdirSync(type).filter(f => f.endsWith('.json'));
@@ -23,26 +94,182 @@ for (const type of types) {
     total++;
     try {
       const content = JSON.parse(readFileSync(`${type}/${file}`, 'utf-8'));
+      const expectedSchema = DIRECTORY_TO_SCHEMA_URL[type];
+
+      if (content.$schema !== expectedSchema) {
+        fail(`${type}/${file}: $schema must be "${expectedSchema}"`);
+      }
+
+      const validate = validators[type];
+      if (!validate(content)) {
+        for (const schemaError of validate.errors || []) {
+          fail(`${type}/${file}: schema ${formatSchemaError(schemaError)}`);
+        }
+      }
 
       // --- ERROR checks (fail the build) ---
 
-      if (!content.id && !content.slug) {
-        console.error(`  FAIL ${type}/${file}: missing id or slug`);
-        errors++;
-      }
+      if (!content.id && !content.slug) fail(`${type}/${file}: missing id or slug`);
       if (type === 'archetypes') {
-        const validRoles = ['primary', 'gateway', 'public', 'auxiliary'];
         if (!content.role || !validRoles.includes(content.role)) {
-          console.error(`  FAIL ${type}/${file}: missing or invalid role (must be one of: ${validRoles.join(', ')})`);
-          errors++;
+          fail(`${type}/${file}: missing or invalid role (must be one of: ${validRoles.join(', ')})`);
+        }
+
+        if (!Array.isArray(content.pages) || content.pages.some(page => !isRecord(page)
+          || typeof page.id !== 'string'
+          || page.id.trim().length === 0
+          || typeof page.shell !== 'string'
+          || page.shell.trim().length === 0
+          || !Array.isArray(page.default_layout)
+          || page.default_layout.some(item => !isLayoutItem(item))
+          || (page.patterns !== undefined && (!Array.isArray(page.patterns) || page.patterns.some(item => !isPatternReference(item))))
+        )) {
+          fail(`${type}/${file}: pages must define id, shell, and valid pattern/layout references`);
+        }
+
+        if (content.dependencies !== undefined && !isDependencyMap(content.dependencies)) {
+          fail(`${type}/${file}: dependencies must be an object of dependency maps`);
+        }
+
+        if (content.shells !== undefined && !isRecordOfNonEmptyStrings(content.shells)) {
+          fail(`${type}/${file}: shells must be an object of non-empty descriptions`);
+        }
+
+        if (content.suggested_theme !== undefined) {
+          const suggestedTheme = content.suggested_theme;
+
+          if (!isRecord(suggestedTheme)) {
+            fail(`${type}/${file}: suggested_theme must be an object`);
+          } else {
+            if (Object.hasOwn(suggestedTheme, 'styles')) {
+              fail(`${type}/${file}: suggested_theme.styles is legacy; use suggested_theme.ids`);
+            }
+            if (Object.hasOwn(suggestedTheme, 'id')) {
+              fail(`${type}/${file}: suggested_theme.id is legacy; use suggested_theme.ids`);
+            }
+            if (Object.hasOwn(suggestedTheme, 'mode')) {
+              fail(`${type}/${file}: suggested_theme.mode is legacy; use suggested_theme.modes`);
+            }
+            if (Object.hasOwn(suggestedTheme, 'shape')) {
+              fail(`${type}/${file}: suggested_theme.shape is legacy; use suggested_theme.shapes`);
+            }
+
+            for (const [key, value] of Object.entries(suggestedTheme)) {
+              if (!['ids', 'modes', 'shapes'].includes(key)) {
+                fail(`${type}/${file}: suggested_theme.${key} is not supported`);
+                continue;
+              }
+              if (!isNonEmptyStringArray(value)) {
+                fail(`${type}/${file}: suggested_theme.${key} must be an array of non-empty strings`);
+              }
+            }
+          }
+        }
+
+        if (content.personality !== undefined && !isNonEmptyStringArray(content.personality)) {
+          fail(`${type}/${file}: personality must be an array of non-empty strings when present`);
+        }
+
+        if (content.hero_customization !== undefined && !isRecord(content.hero_customization)) {
+          fail(`${type}/${file}: hero_customization must be an object when present`);
         }
       }
-      if (type === 'blueprints' && content.routes) {
-        const composeIds = (content.compose || []).map(e => typeof e === 'string' ? e : e.archetype);
-        for (const [path, route] of Object.entries(content.routes)) {
+      if (type === 'blueprints') {
+        if (!isRecord(content.theme) || typeof content.theme.id !== 'string' || content.theme.id.trim().length === 0) {
+          fail(`${type}/${file}: theme.id is required`);
+        } else if (Object.hasOwn(content.theme, 'style')) {
+          fail(`${type}/${file}: theme.style is legacy; use theme.id`);
+        }
+
+        if (!isRecord(content.routes)) {
+          fail(`${type}/${file}: routes must be an object`);
+        }
+
+        if (content.compose !== undefined && (!Array.isArray(content.compose) || content.compose.some(entry => !(
+          typeof entry === 'string'
+          || (isRecord(entry)
+            && typeof entry.archetype === 'string'
+            && entry.archetype.trim().length > 0
+            && typeof entry.prefix === 'string'
+            && entry.prefix.trim().length > 0
+            && (entry.role === undefined || validRoles.includes(entry.role))
+          )
+        )))) {
+          fail(`${type}/${file}: compose entries must be strings or { archetype, prefix, role? } objects`);
+        }
+
+        if (content.overrides !== undefined) {
+          const { overrides } = content;
+          if (!isRecord(overrides)) {
+            fail(`${type}/${file}: overrides must be an object`);
+          } else {
+            if (overrides.features_add !== undefined && !isNonEmptyStringArray(overrides.features_add)) {
+              fail(`${type}/${file}: overrides.features_add must be an array of non-empty strings`);
+            }
+            if (overrides.features_remove !== undefined && !Array.isArray(overrides.features_remove)) {
+              fail(`${type}/${file}: overrides.features_remove must be an array`);
+            }
+            if (overrides.pages_remove !== undefined && !Array.isArray(overrides.pages_remove)) {
+              fail(`${type}/${file}: overrides.pages_remove must be an array`);
+            }
+            if (overrides.pages !== undefined && !isRecord(overrides.pages)) {
+              fail(`${type}/${file}: overrides.pages must be an object`);
+            }
+          }
+        }
+
+        if (content.navigation !== undefined) {
+          const { navigation } = content;
+          if (!isRecord(navigation)) {
+            fail(`${type}/${file}: navigation must be an object`);
+          } else {
+            if (navigation.command_palette !== undefined && typeof navigation.command_palette !== 'boolean') {
+              fail(`${type}/${file}: navigation.command_palette must be a boolean`);
+            }
+            if (navigation.hotkeys !== undefined && (!Array.isArray(navigation.hotkeys) || navigation.hotkeys.some(hotkey => !isRecord(hotkey)
+              || typeof hotkey.key !== 'string'
+              || hotkey.key.trim().length === 0
+              || (hotkey.route !== undefined && (typeof hotkey.route !== 'string' || hotkey.route.trim().length === 0))
+              || (hotkey.label !== undefined && (typeof hotkey.label !== 'string' || hotkey.label.trim().length === 0))
+            ))) {
+              fail(`${type}/${file}: navigation.hotkeys must contain objects with a non-empty key`);
+            }
+          }
+        }
+
+        if (content.seo_hints !== undefined) {
+          const { seo_hints: seoHints } = content;
+          if (!isRecord(seoHints)) {
+            fail(`${type}/${file}: seo_hints must be an object`);
+          } else {
+            if (seoHints.schema_org !== undefined && !isNonEmptyStringArray(seoHints.schema_org)) {
+              fail(`${type}/${file}: seo_hints.schema_org must be an array of non-empty strings`);
+            }
+            if (seoHints.meta_priorities !== undefined && !isNonEmptyStringArray(seoHints.meta_priorities)) {
+              fail(`${type}/${file}: seo_hints.meta_priorities must be an array of non-empty strings`);
+            }
+          }
+        }
+
+        if (content.dependencies !== undefined && !isDependencyMap(content.dependencies)) {
+          fail(`${type}/${file}: dependencies must be an object of dependency maps`);
+        }
+
+        if (content.suggested_themes !== undefined && !isNonEmptyStringArray(content.suggested_themes)) {
+          fail(`${type}/${file}: suggested_themes must be an array of non-empty strings`);
+        }
+
+        const composeIds = Array.isArray(content.compose)
+          ? content.compose.map(e => typeof e === 'string' ? e : e.archetype)
+          : [];
+        const routeEntries = isRecord(content.routes) ? Object.entries(content.routes) : [];
+        for (const [path, route] of routeEntries) {
+          if (!isRecord(route)) {
+            fail(`${type}/${file}: route "${path}" must be an object`);
+            continue;
+          }
           if (route.archetype && !composeIds.includes(route.archetype)) {
-            console.error(`  FAIL ${type}/${file}: route "${path}" references archetype "${route.archetype}" not in compose`);
-            errors++;
+            fail(`${type}/${file}: route "${path}" references archetype "${route.archetype}" not in compose`);
           }
         }
       }
@@ -96,8 +323,7 @@ for (const type of types) {
       }
 
     } catch (e) {
-      console.error(`  FAIL ${type}/${file}: invalid JSON - ${e.message}`);
-      errors++;
+      fail(`${type}/${file}: invalid JSON - ${e.message}`);
     }
   }
 }

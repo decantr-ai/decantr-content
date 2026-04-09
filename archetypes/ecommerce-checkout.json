@@ -44,7 +44,7 @@
     "minimal-header": "Minimal header with logo and cart summary, no navigation distractions"
   },
   "suggested_theme": {
-    "styles": ["auradecantism", "clean"],
+    "ids": ["auradecantism", "clean"],
     "modes": ["light"]
   },
   "dependencies": {

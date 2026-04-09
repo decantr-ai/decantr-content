@@ -94,7 +94,7 @@
     "sidebar-main": "Standard sidebar layout for settings pages"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "glass"
     ],

@@ -54,7 +54,7 @@
     "top-nav-footer": "Fixed top navigation with logo and nav links. Footer with legal links and social icons"
   },
   "suggested_theme": {
-    "styles": ["carbon", "clean"],
+    "ids": ["carbon", "clean"],
     "modes": ["dark", "light"]
   },
   "dependencies": {

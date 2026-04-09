@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "liquid-glass",
   "name": "Liquid Glass",
   "description": "Apple-inspired premium glass aesthetic. Refined, dynamic refraction feel. Extreme blur values, dramatic opacity ramp, specular highlights. True black dark mode.",
@@ -69,9 +69,9 @@
     "glass-input": "Translucent input field with frosted background, rounded corners, and blue focus ring with gentle glow."
   },
   "spatial": {
-    "density_bias": "comfortable",
-    "content_gap_shift": "0",
-    "section_padding": "standard",
+    "density_bias": 0,
+    "content_gap_shift": 0,
+    "section_padding": "4rem",
     "card_wrapping": "standard"
   },
   "motion": {

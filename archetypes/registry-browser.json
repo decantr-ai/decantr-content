@@ -2,10 +2,10 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "registry-browser",
   "role": "primary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "decantr_compat": ">=0.10.0",
   "name": "Registry Browser",
-  "description": "Public content browsing for a design registry. Search, filter, and explore patterns, themes, blueprints, archetypes, recipes, and shells.",
+  "description": "Public content browsing for a design registry. Search, filter, and explore patterns, themes, blueprints, archetypes, and shells.",
   "tags": [
     "registry",
     "browser",
@@ -85,8 +85,8 @@
   ],
   "page_briefs": {
     "homepage": "Registry landing with prominent search bar at top, featured/popular content grid below, and registry stats bar at bottom. No hero section \u2014 search is the hero.",
-    "browse": "Search-first browsing page. Search bar with filter chips for content type (patterns, themes, blueprints, etc.) at the top. Below, a card grid of content items showing name, namespace badge, description preview, and tag pills.",
-    "browse-type": "Filtered registry view for a specific content type. Same search and filter bar layout as main browse page, pre-filtered to the selected type. Card grid below with type-specific metadata on each card.",
+    "browse": "Search-first browsing page. Search bar with filter chips for content type (patterns, themes, blueprints, archetypes, shells) at the top. Below, a card grid of content items showing name, namespace badge, description preview, and tag pills.",
+    "browse-type": "Filtered registry view for a specific supported content type. Same search and filter bar layout as main browse page, pre-filtered to the selected type. Card grid below with type-specific metadata on each card.",
     "detail": "Content detail page. Hero card at top with item name, namespace badge, version, description, and tags. Below, a JSON viewer showing the full content schema with syntax highlighting.",
     "profile": "Public profile showing avatar, username, bio, published item count. Below: grid of their published content cards + activity timeline."
   },
@@ -111,7 +111,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "luminarum"
     ],
     "modes": [

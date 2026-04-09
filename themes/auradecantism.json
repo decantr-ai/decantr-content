@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "auradecantism",
   "name": "Auradecantism",
   "description": "Luminous glass aesthetic with purple/cyan/pink palette. Bouncy pill shapes, glass morphism effects, and vibrant gradients.",

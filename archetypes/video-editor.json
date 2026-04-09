@@ -135,7 +135,7 @@
     "sidebar-aside": "Collapsible sidebar with main content area and optional right aside panel"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "neon-dark"
     ],

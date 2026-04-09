@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "editorial",
   "name": "Editorial",
   "description": "Digital print magazine aesthetic. High-contrast, dramatic typography, zero decoration. Content is the design. Ink-on-paper warmth with modern sensibility.",
@@ -70,9 +70,9 @@
     "editorial-dropcap": "Oversized initial letter spanning three lines in bold serif weight to open article sections."
   },
   "spatial": {
-    "density_bias": "comfortable",
-    "content_gap_shift": "+1",
-    "section_padding": "generous",
+    "density_bias": 0,
+    "content_gap_shift": 1,
+    "section_padding": "6rem",
     "card_wrapping": "none"
   },
   "motion": {

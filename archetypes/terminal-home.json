@@ -117,7 +117,7 @@
     }
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "terminal"
     ],
     "modes": [

@@ -54,7 +54,7 @@
     "top-nav-footer": "Fixed top navigation with logo, nav links, and cart icon. Footer with legal links, social icons, and newsletter signup"
   },
   "suggested_theme": {
-    "styles": ["auradecantism", "clean"],
+    "ids": ["auradecantism", "clean"],
     "modes": ["light"]
   },
   "dependencies": {

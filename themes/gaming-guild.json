@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "gaming-guild",
   "name": "Gaming Guild",
   "description": "Immersive guild-hall visual language. Electric indigo + neon emerald palette, glow elevation, smooth motion. Deep indigo surface stack in dark mode. RPG-inspired typography with monospace data readouts and uppercase micro labels.",
@@ -76,7 +76,7 @@
   "spatial": {
     "density_bias": -1,
     "content_gap_shift": 0,
-    "section_padding": "64px",
+    "section_padding": "4rem",
     "card_wrapping": "minimal",
     "surface_override": null
   },

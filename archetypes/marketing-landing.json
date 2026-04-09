@@ -15,10 +15,15 @@
     "single-page"
   ],
   "suggested_theme": {
-    "style": "luminarum",
-    "mode": "dark",
-    "recipe": "luminarum",
-    "shape": "pill"
+    "ids": [
+      "luminarum"
+    ],
+    "modes": [
+      "dark"
+    ],
+    "shapes": [
+      "pill"
+    ]
   },
   "personality": [
     "bold",

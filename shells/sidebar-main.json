@@ -1,7 +1,7 @@
 {
   "id": "sidebar-main",
   "name": "Sidebar + Main",
-  "description": "Collapsible sidebar with header bar and scrollable main content area. Used by saas-dashboard, financial-dashboard, workbench, ecommerce (account pages).",
+  "description": "Collapsible sidebar with header bar and scrollable main content area. Used by saas-dashboard, financial-dashboard, and ecommerce account experiences.",
   "layout": "grid",
   "atoms": "_grid _h[100vh]",
   "config": {
@@ -84,8 +84,9 @@
     "hotkeys": "Navigation hotkeys defined in the essence are keyboard shortcuts. Implement as useEffect keydown event listeners \u2014 do NOT render hotkey text in the sidebar UI.",
     "collapse": "Sidebar collapse toggle should be integrated into the sidebar header area (next to the brand/logo), not floating at the bottom of the sidebar.",
     "breadcrumbs": "For nested routes (e.g., /resource/:id), show a breadcrumb trail above the page heading inside the main content area.",
-    "section_labels": "Dashboard section labels should use the d-label class. Anchor with a left accent border: border-left: 2px solid var(--d-accent); padding-left: 0.5rem.",
-    "section_density": "Dashboard sections use compact spacing. Apply data-density='compact' on d-section elements for tighter vertical rhythm than marketing pages.",
+    "section_labels": "Dashboard section labels use d-label[data-anchor] for accent-bordered headers with density-responsive spacing.",
+    "section_label_treatment": "d-label[data-anchor]",
+    "section_density": "compact",
     "empty_states": "When a section has zero data, show a centered empty state: 48px muted icon + descriptive message + optional CTA button.",
     "page_transitions": "Apply the entrance-fade class (if generated) to the main content area for smooth page transitions."
   },

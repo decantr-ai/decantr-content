@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "paper",
   "name": "Paper",
   "description": "Clean, minimal, content-focused theme with warm whites and soft grays. Inspired by high-end writing apps like iA Writer, Bear, and Notion.",
@@ -150,7 +150,7 @@
   "spatial": {
     "density_bias": 0,
     "content_gap_shift": 0,
-    "section_padding": "64px",
+    "section_padding": "4rem",
     "card_wrapping": "none",
     "surface_override": null
   },

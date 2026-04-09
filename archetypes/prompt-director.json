@@ -97,7 +97,7 @@
     "sidebar-main": "Sidebar navigation with main content area"
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "carbon",
       "neon-dark"
     ],

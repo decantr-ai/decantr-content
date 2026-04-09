@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "studio-dark",
   "name": "Studio Dark",
   "description": "Music production theme with deep purple foundations, cyan waveforms, and magenta highlights. Electric and creative aesthetic for DAW interfaces, mixing consoles, and audio production tools.",
@@ -100,7 +100,7 @@
   "spatial": {
     "density_bias": 1,
     "content_gap_shift": -1,
-    "section_padding": "32px",
+    "section_padding": "2rem",
     "card_wrapping": "none",
     "surface_override": null
   },

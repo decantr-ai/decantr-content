@@ -186,7 +186,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "gaming-guild"
     ],
     "modes": [

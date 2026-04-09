@@ -1,5 +1,5 @@
 {
-  "$schema": "https://decantr.ai/schemas/style-metadata.v1.json",
+  "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "government",
   "name": "Government",
   "description": "Accessible, conservative, high-contrast theme for government and public sector applications. Strong blue primary on pure white backgrounds. WCAG AAA mandatory with 7:1 contrast ratios. Full CVD support, large typography, and 3px focus indicators.",
@@ -130,7 +130,7 @@
   "spatial": {
     "density_bias": -1,
     "content_gap_shift": 1,
-    "section_padding": "48px",
+    "section_padding": "3rem",
     "card_wrapping": "bordered",
     "surface_override": null
   },

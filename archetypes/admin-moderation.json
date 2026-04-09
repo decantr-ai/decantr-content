@@ -77,7 +77,7 @@
     "styles": {}
   },
   "suggested_theme": {
-    "styles": [
+    "ids": [
       "luminarum"
     ],
     "modes": [
