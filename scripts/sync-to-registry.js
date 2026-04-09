@@ -13,6 +13,7 @@
  */
 
 import { readdirSync, readFileSync } from 'fs';
+import { CONTENT_DIRECTORIES, DIRECTORY_TO_CONTENT_TYPE } from './content-contract.js';
 
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
 const ADMIN_KEY = process.env.DECANTR_ADMIN_KEY;
@@ -23,17 +24,10 @@ if (!ADMIN_KEY) {
   process.exit(1);
 }
 
-const TYPE_MAP = {
-  patterns: 'pattern',
-  themes: 'theme',
-  blueprints: 'blueprint',
-  archetypes: 'archetype',
-  shells: 'shell',
-};
-
 // Collect all items first
 const items = [];
-for (const [dir, type] of Object.entries(TYPE_MAP)) {
+for (const dir of CONTENT_DIRECTORIES) {
+  const type = DIRECTORY_TO_CONTENT_TYPE[dir];
   let files;
   try {
     files = readdirSync(dir).filter(f => f.endsWith('.json'));

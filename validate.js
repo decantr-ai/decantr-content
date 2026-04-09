@@ -1,28 +1,15 @@
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import Ajv2020 from 'ajv/dist/2020.js';
+import {
+  CONTENT_DIRECTORIES,
+  DIRECTORY_TO_SCHEMA_URL,
+  SCHEMA_FILES,
+} from './scripts/content-contract.js';
 
-const types = ['patterns', 'themes', 'blueprints', 'archetypes', 'shells'];
 let errors = 0;
 let warnings = 0;
 let total = 0;
-
-const expectedSchemas = {
-  patterns: 'https://decantr.ai/schemas/pattern.v2.json',
-  themes: 'https://decantr.ai/schemas/theme.v1.json',
-  blueprints: 'https://decantr.ai/schemas/blueprint.v1.json',
-  archetypes: 'https://decantr.ai/schemas/archetype.v2.json',
-  shells: 'https://decantr.ai/schemas/shell.v1.json',
-};
-
-const schemaFiles = {
-  common: 'common.v1.json',
-  patterns: 'pattern.v2.json',
-  themes: 'theme.v1.json',
-  blueprints: 'blueprint.v1.json',
-  archetypes: 'archetype.v2.json',
-  shells: 'shell.v1.json',
-};
 
 function fail(msg) {
   console.error(`  FAIL ${msg}`);
@@ -51,14 +38,14 @@ const ajv = new Ajv2020({
   allowUnionTypes: true,
 });
 
-ajv.addSchema(loadJson(join('schemas', schemaFiles.common)));
+ajv.addSchema(loadJson(join('schemas', SCHEMA_FILES.common)));
 
 const validators = {
-  patterns: ajv.compile(loadJson(join('schemas', schemaFiles.patterns))),
-  themes: ajv.compile(loadJson(join('schemas', schemaFiles.themes))),
-  blueprints: ajv.compile(loadJson(join('schemas', schemaFiles.blueprints))),
-  archetypes: ajv.compile(loadJson(join('schemas', schemaFiles.archetypes))),
-  shells: ajv.compile(loadJson(join('schemas', schemaFiles.shells))),
+  patterns: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.patterns))),
+  themes: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.themes))),
+  blueprints: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.blueprints))),
+  archetypes: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.archetypes))),
+  shells: ajv.compile(loadJson(join('schemas', SCHEMA_FILES.shells))),
 };
 
 function isRecord(value) {
@@ -94,7 +81,7 @@ function isLayoutItem(value) {
   return isPatternReference(value) || isLayoutGroup(value);
 }
 
-for (const type of types) {
+for (const type of CONTENT_DIRECTORIES) {
   let files;
   try {
     files = readdirSync(type).filter(f => f.endsWith('.json'));
@@ -107,7 +94,7 @@ for (const type of types) {
     total++;
     try {
       const content = JSON.parse(readFileSync(`${type}/${file}`, 'utf-8'));
-      const expectedSchema = expectedSchemas[type];
+      const expectedSchema = DIRECTORY_TO_SCHEMA_URL[type];
 
       if (content.$schema !== expectedSchema) {
         fail(`${type}/${file}: $schema must be "${expectedSchema}"`);
