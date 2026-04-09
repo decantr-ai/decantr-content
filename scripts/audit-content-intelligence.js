@@ -10,6 +10,7 @@
  *   node scripts/audit-content-intelligence.js --fail-on-missing
  *   node scripts/audit-content-intelligence.js --fail-on-filter-mismatch
  *   node scripts/audit-content-intelligence.js --fail-on-source-filter-mismatch
+ *   node scripts/audit-content-intelligence.js --fail-on-summary-mismatch
  *
  * Environment variables:
  *   REGISTRY_URL        - API base URL (default: https://api.decantr.ai/v1)
@@ -17,6 +18,7 @@
  *   FAIL_ON_MISSING     - Set to "true" to fail when official blueprints have no intelligence metadata
  *   FAIL_ON_FILTER_MISMATCH - Set to "true" to fail when the hosted recommended filter disagrees with metadata counts
  *   FAIL_ON_SOURCE_FILTER_MISMATCH - Set to "true" to fail when hosted source filters disagree with metadata counts
+ *   FAIL_ON_SUMMARY_MISMATCH - Set to "true" to fail when the hosted summary endpoint disagrees with the live crawl
  */
 
 import { mkdirSync, readdirSync, writeFileSync } from 'fs';
@@ -36,6 +38,21 @@ const FAIL_ON_FILTER_MISMATCH =
   args.includes('--fail-on-filter-mismatch') || process.env.FAIL_ON_FILTER_MISMATCH === 'true';
 const FAIL_ON_SOURCE_FILTER_MISMATCH =
   args.includes('--fail-on-source-filter-mismatch') || process.env.FAIL_ON_SOURCE_FILTER_MISMATCH === 'true';
+const FAIL_ON_SUMMARY_MISMATCH =
+  args.includes('--fail-on-summary-mismatch') || process.env.FAIL_ON_SUMMARY_MISMATCH === 'true';
+
+const SUMMARY_FIELD_MAP = [
+  ['total_public_items', 'live'],
+  ['with_intelligence', 'withIntelligence'],
+  ['recommended', 'recommended'],
+  ['authored', 'authored'],
+  ['benchmark', 'benchmark'],
+  ['hybrid', 'hybrid'],
+  ['missing_source', 'missingSource'],
+  ['smoke_green', 'smokeGreen'],
+  ['build_green', 'buildGreen'],
+  ['high_confidence', 'highConfidence'],
+];
 
 function ensureParentDir(path) {
   mkdirSync(dirname(path), { recursive: true });
@@ -93,6 +110,17 @@ async function fetchLiveItems(directory, options = {}) {
   }
 
   return items;
+}
+
+async function fetchHostedSummary() {
+  const searchParams = new URLSearchParams({ namespace: CONTENT_NAMESPACE });
+  const response = await fetch(`${REGISTRY_URL}/intelligence/summary?${searchParams}`);
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch intelligence summary: ${response.status} ${await response.text()}`);
+  }
+
+  return response.json();
 }
 
 function average(values) {
@@ -166,6 +194,15 @@ function buildMarkdownSummary(report) {
     `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, authored ${report.totals.authored}, benchmark ${report.totals.benchmark}, hybrid ${report.totals.hybrid}, recommended ${report.totals.recommended}, recommended API ${report.totals.recommendedViaFilter}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}`,
   );
 
+  if (report.hostedSummary) {
+    lines.push('');
+    lines.push('## Hosted Summary Endpoint');
+    lines.push(`- Generated at: ${report.hostedSummary.generated_at}`);
+    lines.push(
+      `- Totals: live ${report.hostedSummary.totals.total_public_items}, intelligence ${report.hostedSummary.totals.with_intelligence}, authored ${report.hostedSummary.totals.authored}, benchmark ${report.hostedSummary.totals.benchmark}, hybrid ${report.hostedSummary.totals.hybrid}, recommended ${report.hostedSummary.totals.recommended}, smoke green ${report.hostedSummary.totals.smoke_green}, build green ${report.hostedSummary.totals.build_green}`,
+    );
+  }
+
   if (report.recommendedFilterMismatches.length > 0) {
     lines.push('');
     lines.push('## Recommended Filter Mismatches');
@@ -200,6 +237,26 @@ function buildMarkdownSummary(report) {
     }
   }
 
+  if (report.summaryMismatches.length > 0) {
+    lines.push('');
+    lines.push('## Hosted Summary Mismatches');
+    for (const mismatch of report.summaryMismatches) {
+      if (mismatch.scope === 'totals') {
+        lines.push(`- totals.${mismatch.field} — crawl ${mismatch.crawl}, hosted summary ${mismatch.summary}`);
+      } else {
+        lines.push(`- ${mismatch.scope}.${mismatch.field} — crawl ${mismatch.crawl}, hosted summary ${mismatch.summary}`);
+      }
+    }
+  }
+
+  if (report.failures.length > 0) {
+    lines.push('');
+    lines.push('## Failures');
+    for (const failure of report.failures) {
+      lines.push(`- ${failure}`);
+    }
+  }
+
   if (report.blueprintsMissingIntelligence.length > 0) {
     lines.push('');
     lines.push('## Blueprints Missing Intelligence');
@@ -226,6 +283,13 @@ async function main() {
   const byType = {};
   const failures = [];
   const allLiveItems = [];
+  let hostedSummary = null;
+
+  try {
+    hostedSummary = await fetchHostedSummary();
+  } catch (error) {
+    failures.push(`summary: ${error.message}`);
+  }
 
   for (const dir of CONTENT_DIRECTORIES) {
     const type = DIRECTORY_TO_CONTENT_TYPE[dir];
@@ -337,10 +401,50 @@ async function main() {
     },
   );
 
+  const summaryMismatches = [];
+
+  if (hostedSummary) {
+    for (const [summaryField, reportField] of SUMMARY_FIELD_MAP) {
+      if (hostedSummary.totals?.[summaryField] !== totals[reportField]) {
+        summaryMismatches.push({
+          scope: 'totals',
+          field: summaryField,
+          crawl: totals[reportField],
+          summary: hostedSummary.totals?.[summaryField] ?? null,
+        });
+      }
+    }
+
+    for (const [type, stats] of Object.entries(byType)) {
+      const hostedBucket = hostedSummary.by_type?.[type];
+      if (!hostedBucket) {
+        summaryMismatches.push({
+          scope: type,
+          field: 'missing_bucket',
+          crawl: true,
+          summary: false,
+        });
+        continue;
+      }
+
+      for (const [summaryField, reportField] of SUMMARY_FIELD_MAP) {
+        if (hostedBucket[summaryField] !== stats[reportField]) {
+          summaryMismatches.push({
+            scope: type,
+            field: summaryField,
+            crawl: stats[reportField],
+            summary: hostedBucket[summaryField] ?? null,
+          });
+        }
+      }
+    }
+  }
+
   const report = {
     auditedAt: new Date().toISOString(),
     registryUrl: REGISTRY_URL,
     namespace: CONTENT_NAMESPACE,
+    hostedSummary,
     byType,
     totals,
     blueprintsMissingIntelligence,
@@ -348,6 +452,7 @@ async function main() {
     recommendedFilterMismatches,
     missingSourceByType,
     sourceFilterMismatches,
+    summaryMismatches,
     failures,
   };
 
@@ -373,6 +478,10 @@ async function main() {
   }
 
   if (FAIL_ON_SOURCE_FILTER_MISMATCH && sourceFilterMismatches.length > 0) {
+    process.exitCode = 1;
+  }
+
+  if (FAIL_ON_SUMMARY_MISMATCH && summaryMismatches.length > 0) {
     process.exitCode = 1;
   }
 }
