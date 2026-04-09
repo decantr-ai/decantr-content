@@ -8,11 +8,13 @@
  *   node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
  *   node scripts/audit-content-intelligence.js --summary-markdown=./content-intelligence-summary.md
  *   node scripts/audit-content-intelligence.js --fail-on-missing
+ *   node scripts/audit-content-intelligence.js --fail-on-filter-mismatch
  *
  * Environment variables:
  *   REGISTRY_URL        - API base URL (default: https://api.decantr.ai/v1)
  *   CONTENT_NAMESPACE   - Namespace to audit (default: @official)
  *   FAIL_ON_MISSING     - Set to "true" to fail when official blueprints have no intelligence metadata
+ *   FAIL_ON_FILTER_MISMATCH - Set to "true" to fail when the hosted recommended filter disagrees with metadata counts
  */
 
 import { mkdirSync, readdirSync, writeFileSync } from 'fs';
@@ -28,6 +30,8 @@ const SUMMARY_PATH =
   args.find((arg) => arg.startsWith('--summary-markdown='))?.slice('--summary-markdown='.length) || null;
 const FAIL_ON_MISSING =
   args.includes('--fail-on-missing') || process.env.FAIL_ON_MISSING === 'true';
+const FAIL_ON_FILTER_MISMATCH =
+  args.includes('--fail-on-filter-mismatch') || process.env.FAIL_ON_FILTER_MISMATCH === 'true';
 
 function ensureParentDir(path) {
   mkdirSync(dirname(path), { recursive: true });
@@ -47,12 +51,23 @@ function countRepoItems() {
   return repoCounts;
 }
 
-async function fetchLiveItems(directory) {
+async function fetchLiveItems(directory, options = {}) {
+  const { recommendedOnly = false } = options;
   const items = [];
   let offset = 0;
 
   while (true) {
-    const url = `${REGISTRY_URL}/${directory}?namespace=${encodeURIComponent(CONTENT_NAMESPACE)}&limit=100&offset=${offset}`;
+    const searchParams = new URLSearchParams({
+      namespace: CONTENT_NAMESPACE,
+      limit: '100',
+      offset: String(offset),
+    });
+
+    if (recommendedOnly) {
+      searchParams.set('recommended', 'true');
+    }
+
+    const url = `${REGISTRY_URL}/${directory}?${searchParams}`;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -82,7 +97,7 @@ function average(values) {
   return Math.round((total / values.length) * 100) / 100;
 }
 
-function toTypeStats(type, repoCount, liveItems) {
+function toTypeStats(type, repoCount, liveItems, recommendedItems) {
   const intelligenceItems = liveItems.filter((item) => item.intelligence);
   const qualityScores = intelligenceItems
     .map((item) => item.intelligence?.quality_score)
@@ -90,12 +105,15 @@ function toTypeStats(type, repoCount, liveItems) {
   const confidenceScores = intelligenceItems
     .map((item) => item.intelligence?.confidence_score)
     .filter((value) => typeof value === 'number');
+  const recommended = intelligenceItems.filter((item) => item.intelligence?.recommended).length;
 
   return {
     repo: repoCount,
     live: liveItems.length,
     withIntelligence: intelligenceItems.length,
-    recommended: intelligenceItems.filter((item) => item.intelligence?.recommended).length,
+    recommended,
+    recommendedViaFilter: recommendedItems.length,
+    recommendedFilterMismatch: recommendedItems.length - recommended,
     smokeGreen: intelligenceItems.filter((item) => item.intelligence?.verification_status === 'smoke-green').length,
     buildGreen: intelligenceItems.filter((item) => item.intelligence?.verification_status === 'build-green').length,
     highConfidence: intelligenceItems.filter((item) => item.intelligence?.benchmark_confidence === 'high').length,
@@ -112,20 +130,28 @@ function buildMarkdownSummary(report) {
     `- Registry: ${report.registryUrl}`,
     `- Namespace: ${report.namespace}`,
     '',
-    '| Type | Repo | Live | With Intelligence | Recommended | Smoke Green | Build Green | High Confidence | Avg Quality | Avg Confidence |',
-    '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
+    '| Type | Repo | Live | With Intelligence | Recommended | Recommended API | Smoke Green | Build Green | High Confidence | Avg Quality | Avg Confidence |',
+    '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
   ];
 
   for (const [type, stats] of Object.entries(report.byType)) {
     lines.push(
-      `| ${type} | ${stats.repo} | ${stats.live} | ${stats.withIntelligence} | ${stats.recommended} | ${stats.smokeGreen} | ${stats.buildGreen} | ${stats.highConfidence} | ${stats.averageQuality ?? '—'} | ${stats.averageConfidence ?? '—'} |`,
+      `| ${type} | ${stats.repo} | ${stats.live} | ${stats.withIntelligence} | ${stats.recommended} | ${stats.recommendedViaFilter} | ${stats.smokeGreen} | ${stats.buildGreen} | ${stats.highConfidence} | ${stats.averageQuality ?? '—'} | ${stats.averageConfidence ?? '—'} |`,
     );
   }
 
   lines.push('');
   lines.push(
-    `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, recommended ${report.totals.recommended}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}`,
+    `- Totals: repo ${report.totals.repo}, live ${report.totals.live}, intelligence ${report.totals.withIntelligence}, recommended ${report.totals.recommended}, recommended API ${report.totals.recommendedViaFilter}, smoke green ${report.totals.smokeGreen}, build green ${report.totals.buildGreen}`,
   );
+
+  if (report.recommendedFilterMismatches.length > 0) {
+    lines.push('');
+    lines.push('## Recommended Filter Mismatches');
+    for (const mismatch of report.recommendedFilterMismatches) {
+      lines.push(`- ${mismatch.type} — metadata ${mismatch.recommended}, API filter ${mismatch.recommendedViaFilter}`);
+    }
+  }
 
   if (report.blueprintsMissingIntelligence.length > 0) {
     lines.push('');
@@ -158,11 +184,12 @@ async function main() {
     const type = DIRECTORY_TO_CONTENT_TYPE[dir];
     try {
       const liveItems = await fetchLiveItems(dir);
-      byType[type] = toTypeStats(type, repoCounts[type] || 0, liveItems);
+      const recommendedItems = await fetchLiveItems(dir, { recommendedOnly: true });
+      byType[type] = toTypeStats(type, repoCounts[type] || 0, liveItems, recommendedItems);
       allLiveItems.push(...liveItems.map((item) => ({ ...item, type })));
     } catch (error) {
       failures.push(`${type}: ${error.message}`);
-      byType[type] = toTypeStats(type, repoCounts[type] || 0, []);
+      byType[type] = toTypeStats(type, repoCounts[type] || 0, [], []);
     }
   }
 
@@ -187,12 +214,21 @@ async function main() {
     })
     .slice(0, 10);
 
+  const recommendedFilterMismatches = Object.entries(byType)
+    .filter(([, stats]) => stats.recommended !== stats.recommendedViaFilter)
+    .map(([type, stats]) => ({
+      type,
+      recommended: stats.recommended,
+      recommendedViaFilter: stats.recommendedViaFilter,
+    }));
+
   const totals = Object.values(byType).reduce(
     (acc, stats) => ({
       repo: acc.repo + stats.repo,
       live: acc.live + stats.live,
       withIntelligence: acc.withIntelligence + stats.withIntelligence,
       recommended: acc.recommended + stats.recommended,
+      recommendedViaFilter: acc.recommendedViaFilter + stats.recommendedViaFilter,
       smokeGreen: acc.smokeGreen + stats.smokeGreen,
       buildGreen: acc.buildGreen + stats.buildGreen,
       highConfidence: acc.highConfidence + stats.highConfidence,
@@ -202,6 +238,7 @@ async function main() {
       live: 0,
       withIntelligence: 0,
       recommended: 0,
+      recommendedViaFilter: 0,
       smokeGreen: 0,
       buildGreen: 0,
       highConfidence: 0,
@@ -216,6 +253,7 @@ async function main() {
     totals,
     blueprintsMissingIntelligence,
     topRecommendations,
+    recommendedFilterMismatches,
     failures,
   };
 
@@ -233,6 +271,10 @@ async function main() {
   console.log(summaryMarkdown.trimEnd());
 
   if (FAIL_ON_MISSING && blueprintsMissingIntelligence.length > 0) {
+    process.exitCode = 1;
+  }
+
+  if (FAIL_ON_FILTER_MISMATCH && recommendedFilterMismatches.length > 0) {
     process.exitCode = 1;
   }
 }
