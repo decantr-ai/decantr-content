@@ -38,6 +38,7 @@ The sync uses `(namespace, type, slug)` as the upsert key. Existing items are up
 ```bash
 node validate.js                          # Validate all content files
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js  # Manual sync to registry
+DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js --dry-run --report-json=./sync-report.json
 ```
 
 ## Adding Content
