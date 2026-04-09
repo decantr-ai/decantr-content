@@ -17,9 +17,9 @@ shells/         — Page layout containers (sidebar-main, topbar-main, etc.)
 This repo auto-publishes to the live registry on every push to `main`:
 
 1. **Validate** — `node validate.js` checks all JSON files for valid structure
-2. **Sync** — `node scripts/sync-to-registry.js` upserts each item to the registry via `POST /v1/admin/sync`
+2. **Sync** — `node scripts/sync-to-registry.js` reconciles the registry via `POST /v1/admin/sync` and prunes stale `@official` entries via `DELETE /v1/admin/content/:type/:namespace/:slug`
 
-The sync uses `(namespace, type, slug)` as the upsert key. Existing items are updated in-place; new items are created. All items are published under the `@official` namespace with `status: published`.
+The sync uses `(namespace, type, slug)` as the upsert key. Existing items are updated in-place, new items are created, and missing `@official` items are deleted unless `PRUNE_MISSING=false` is set. All items are published under the `@official` namespace with `status: published`.
 
 ### Required GitHub Secrets
 
