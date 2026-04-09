@@ -148,7 +148,7 @@ async function fetchLiveItem(dir, slug) {
 
 function formatChangedReason(live, repo) {
   const reasons = [];
-  if (live?.version !== repo?.version) {
+  if (repo && Object.hasOwn(repo, 'version') && live?.version !== repo?.version) {
     reasons.push('version');
   }
   if (stableStringify(live?.data) !== stableStringify(repo)) {
