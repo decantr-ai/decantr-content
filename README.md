@@ -40,6 +40,7 @@ node validate.js                          # Validate all content files
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js  # Manual sync to registry
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js --dry-run --report-json=./sync-report.json
 node scripts/audit-registry-drift.js --report-json=./registry-drift-report.json
+node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
 ```
 
 ## Auditing Live Registry Drift
@@ -59,6 +60,25 @@ What it reports:
 - `failures` — fetch or comparison errors during the audit
 
 The audit is read-only and does not require an admin key for public `@official` content.
+
+## Auditing Content Intelligence Coverage
+
+Use the content-intelligence audit when you want to measure how much of the live `@official` corpus is carrying benchmark-backed intelligence metadata:
+
+```bash
+node scripts/audit-content-intelligence.js
+node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json --summary-markdown=./content-intelligence-summary.md
+REGISTRY_URL=https://staging-api.decantr.ai/v1 node scripts/audit-content-intelligence.js --fail-on-missing
+```
+
+What it reports:
+- `with intelligence` — live items that expose registry intelligence metadata
+- `recommended` — live items currently marked as recommended references
+- `smoke green` / `build green` — benchmark-backed verification coverage
+- `avg quality` / `avg confidence` — average scores for items that already have intelligence data
+- `blueprints missing intelligence` — official blueprint slugs still missing that metadata entirely
+
+This audit is also read-only and does not require an admin key for public `@official` content.
 
 ## Adding Content
 
