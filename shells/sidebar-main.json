@@ -1,7 +1,7 @@
 {
   "id": "sidebar-main",
   "name": "Sidebar + Main",
-  "description": "Collapsible sidebar with header bar and scrollable main content area. Used by saas-dashboard, financial-dashboard, workbench, ecommerce (account pages).",
+  "description": "Collapsible sidebar with header bar and scrollable main content area. Used by saas-dashboard, financial-dashboard, and ecommerce account experiences.",
   "layout": "grid",
   "atoms": "_grid _h[100vh]",
   "config": {
