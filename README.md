@@ -21,6 +21,12 @@ This repo auto-publishes to the live registry on every push to `main`:
 
 The sync uses `(namespace, type, slug)` as the upsert key. Existing items are updated in-place, new items are created, and missing `@official` items are deleted unless `PRUNE_MISSING=false` is set. All items are published under the `@official` namespace with `status: published`.
 
+Supporting audit workflows also run from GitHub Actions:
+
+- `publish.yml` validates on every push to `main` and supports manual dry-run syncs
+- `registry-drift.yml` audits live `@official` drift on pull requests, on a weekly schedule, and via manual dispatch
+- `content-intelligence.yml` audits live intelligence coverage on pull requests, on a weekly schedule, and via manual dispatch
+
 ### Required GitHub Secrets
 
 | Secret | Description |
@@ -36,11 +42,12 @@ The sync uses `(namespace, type, slug)` as the upsert key. Existing items are up
 ## Local Development
 
 ```bash
-node validate.js                          # Validate all content files
-DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js  # Manual sync to registry
+npm run validate
+DECANTR_ADMIN_KEY=xxx npm run registry:sync
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js --dry-run --report-json=./sync-report.json
-node scripts/audit-registry-drift.js --report-json=./registry-drift-report.json
+npm run registry:audit -- --report-json=./registry-drift-report.json
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
+npm run schemas:sync
 ```
 
 ## Auditing Live Registry Drift
