@@ -1,7 +1,7 @@
 {
   "id": "top-nav-main",
   "name": "Top Nav + Main",
-  "description": "Horizontal navigation bar with full-width main content below. Used by ecommerce (storefront), portfolio, content-site.",
+  "description": "Horizontal navigation shell with a compact sticky header, shared content insets, and a curated page-width rhythm. Used by public browsing, editorial catalog pages, and marketing-style registry surfaces.",
   "layout": "stack",
   "atoms": "_flex _col _h[100vh]",
   "config": {
@@ -66,12 +66,12 @@
       "display": "flex",
       "align": "center",
       "justify": "space-between",
-      "padding": "0 1.5rem",
+      "padding": "0 clamp(1rem, 2vw, 1.5rem)",
       "border": "bottom",
       "background": "var(--d-bg)",
       "sticky": true,
       "left_content": "Brand/logo link",
-      "center_content": "Nav links \u2014 flex with gap 1.5rem",
+      "center_content": "Nav links \u2014 flex with gap 1.5rem on tablet/desktop and gracefully reduced clutter on narrow widths",
       "right_content": "Theme toggle (sun/moon icon, toggles light/dark class on html element) + Search trigger + CTA button or user avatar. Theme toggle uses a simple icon button \u2014 no dropdown.",
       "button_sizing": "Buttons and CTAs in the header must use compact sizing: py-1.5 px-4 text-sm (not the default d-interactive padding). The header is 52px \u2014 buttons should be ~32px tall, not 40px+.",
       "nav_links": "Nav links use text-sm font-medium with no background. Hover: text color transitions to primary. Active: font-semibold or underline-offset-4."
@@ -81,14 +81,16 @@
       "direction": "column",
       "gap": "1rem",
       "overflow_y": "auto",
-      "padding": "1.5rem",
+      "padding": "clamp(1rem, 2vw, 1.5rem)",
       "atoms": "_flex _col _gap4 _p6 _overflow[auto] _flex1",
-      "note": "Full-width scrollable content area below the nav bar."
+      "note": "Scrollable content area below the nav bar. Public registry pages should use a consistent page max-width rhythm inside this region instead of page-local guesses."
     }
   },
   "guidance": {
     "section_label_treatment": "d-label",
-    "section_density": "comfortable"
+    "section_density": "comfortable",
+    "shell_spacing": "Header, body, and footer share the same horizontal inset rhythm. Public pages should feel like one shell system, not separate handcrafted blocks.",
+    "mobile_nav": "Below md, preserve brand + essential actions first and collapse or hide secondary links rather than squeezing the whole nav row."
   },
   "code": {
     "imports": "import { tags } from 'decantr/tags';\nimport { text } from 'decantr/core';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';\nimport { Button, icon } from 'decantr/components';",

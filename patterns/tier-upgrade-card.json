@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "tier-upgrade-card",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "decantr_compat": ">=0.9.0",
   "name": "Tier Upgrade Card",
   "description": "Pricing tier card with plan name, price, feature list, and upgrade CTA button. Used in billing portal and landing page pricing sections.",
@@ -104,13 +104,13 @@
   },
   "visual_brief": "Pricing card for upgrade flows with a header showing the plan name and an optional 'Current Plan' or 'Recommended' badge. Price displayed prominently with monthly billing amount. A short plan description below the price. A feature checklist with checkmark icons lists included features. The CTA button reads 'Upgrade' (or 'Current Plan' in disabled state for the current plan). The highlighted preset adds a primary-color border and a 'Most Popular' ribbon. The horizontal preset arranges plans side by side in a comparison table layout instead of separate cards.",
   "responsive": {
-    "mobile": "Cards stack vertically. CTA buttons full-width. Feature lists fully visible.",
-    "tablet": "Two or three column card comparison. Standard card sizes.",
-    "desktop": "Three-column comparison layout. Highlighted plan slightly elevated. Generous feature list spacing."
+    "mobile": "Cards stack vertically with full-width CTAs and intact feature lists.",
+    "tablet": "Two-column or auto-fit comparison. Cards should never shrink below comfortable reading width.",
+    "desktop": "Auto-fit comparison layout with generous feature spacing. Avoid hardcoded column counts when more plans are present."
   },
   "layout_hints": {
     "card_treatment": "Current plan highlighted with primary border + 'Current' badge. Upgrade options show price, feature list, and Upgrade CTA (primary).",
-    "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color."
+    "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color. Use staged or auto-fit columns, never a rigid four-up grid."
   },
   "composition": {
     "TierUpgradeCard": "Card(d-surface, bordered) > [CardHeader > [PlanName(heading4) + PopularBadge?(d-annotation)] + Price(mono-data, heading2) + Description(text-muted) + FeatureList + CTAButton]",

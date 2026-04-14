@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "user-dashboard",
   "role": "primary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "decantr_compat": ">=0.10.0",
   "name": "User Dashboard",
   "description": "Authenticated user area with content management, API key management, account settings, and activity overview.",
@@ -99,13 +99,13 @@
     }
   ],
   "page_briefs": {
-    "overview": "User home dashboard. KPI cards at top showing published items, downloads, and reputation score. Reputation badge display below. Activity feed at the bottom with recent actions.",
-    "content": "Content management grid. Card grid of user-published content items with thumbnail, title, type badge, status indicator, and date per card.",
-    "content-new": "Content creation page. Metadata form on the left (name, type, description, tags) with a live JSON editor on the right showing the content schema.",
-    "api-keys": "API key management page. Table of API keys with key name, masked prefix, creation date, last-used date, and revoke button per row. Create-key button in the header.",
-    "settings": "Account settings form with profile fields (name, email, avatar), notification preferences, and connected accounts section.",
-    "billing": "Billing overview with current plan tier card, usage stats KPI grid, and upgrade/downgrade options. Invoice history below.",
-    "team": "Team dashboard with member count and role distribution KPI cards at top. Below: member list with avatar, name, role badge, and action menu per row."
+    "overview": "User home dashboard. KPI cards at top showing published items, downloads, and reputation score. Reputation badge below. Activity feed at the bottom. The page should remain readable inside the sidebar shell across desktop, tablet, and drawer-based mobile layouts.",
+    "content": "Content management grid. User-published content cards with concise trust/status treatment and actions that wrap cleanly without crowding the shell.",
+    "content-new": "Content creation page. Form and live contract preview sit side-by-side when space allows, then stack vertically below tablet widths without either pane feeling artificially cramped.",
+    "api-keys": "API key management page. Prefer responsive key cards or rows that can collapse into stacked surfaces on smaller widths instead of holding a rigid multi-column table.",
+    "settings": "Account settings workspace with responsive navigation. Vertical tabs on larger widths, horizontal scrollable tabs or segmented navigation on smaller widths. Forms stay aligned to the shell spacing rhythm.",
+    "billing": "Billing overview with current plan summary, usage stats, and responsive plan comparison cards. Pricing cards should use staged or auto-fit columns, never a fixed four-up comparison grid.",
+    "team": "Team dashboard with member and seat KPIs at top. Member management rows degrade into stacked or card-like compositions on narrow widths. Invite and organization controls stack instead of compressing."
   },
   "features": [
     "auth",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "team-member-row",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "decantr_compat": ">=0.9.0",
   "name": "Team Member Row",
   "description": "Team member display row with avatar, name, email, role badge, join date, and management actions (change role, remove).",
@@ -30,7 +30,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full team member row with avatar, name, email, role badge, joined date, and role-change/remove actions.",
+      "description": "Full team member row with avatar, name, email, role badge, joined date, and role-change/remove actions. The row can wrap into a stacked card-like composition when horizontal space gets tight.",
       "components": [
         "Avatar",
         "Badge",
@@ -102,13 +102,13 @@
   },
   "visual_brief": "Horizontal row displaying a team member with a circular avatar on the left, followed by name (medium weight) and email (muted, smaller text) stacked vertically, a role badge (Owner, Admin, Member) color-coded in the middle, join date in muted text, and action controls on the right (role change dropdown, remove button). Rows are separated by bottom borders. The card preset wraps each member in a bordered card with a vertical layout. The invite preset shows a pending invite row with email, role, and resend/cancel actions.",
   "responsive": {
-    "mobile": "Card preset used — members as stacked cards. Avatar, name, role badge, and actions visible. Join date hidden. Actions as icon buttons.",
-    "tablet": "Standard row layout. All fields visible. Actions as text buttons.",
-    "desktop": "Full row with generous spacing. All information and actions visible inline."
+    "mobile": "Use a stacked card or wrapped row composition. Avatar and identity stay together, role/date/actions drop beneath, and invite/member controls stack instead of compressing.",
+    "tablet": "Standard row layout with wrapped secondary metadata when needed. Actions can remain inline, but should break onto a second line before overflowing.",
+    "desktop": "Full row with generous spacing. All information and actions visible inline without relying on a single non-wrapping strip."
   },
   "layout_hints": {
-    "row_layout": "Avatar (32px circle) + name (font-semibold) + email (text-muted) + role badge (d-annotation: owner/admin/member) + actions dropdown (ghost). Hover: subtle bg.",
-    "invite_form": "Inline invite form: email input + role dropdown + Invite button. Appears above member list."
+    "row_layout": "Avatar (32px circle) + identity block + role/date/actions trail. On narrow widths, let the trail wrap below the identity instead of squeezing the email or control cluster.",
+    "invite_form": "Invite form uses a responsive row: email input + role dropdown + Invite button. Collapse to a stacked form on small screens."
   },
   "composition": {
     "TeamMemberRow": "Row(d-data-row, hoverable) > [Avatar + MemberInfo + RoleBadge(d-annotation) + JoinDate(text-muted) + Actions]",

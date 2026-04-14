@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "search-filter-bar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "decantr_compat": ">=0.9.0",
   "name": "Search Filter Bar",
   "description": "Search input with type and namespace dropdown filters for browsing registry content. Supports real-time search, type tabs, namespace dropdown, and sort controls.",
@@ -98,16 +98,16 @@
       "active-filters": "Active filter badges"
     }
   },
-  "visual_brief": "Two-row filter bar. The first row contains a search input with a magnifying glass icon on the left. The second row contains type filter tabs (All, Patterns, Themes, Blueprints, Shells) rendered as pill-shaped toggles, a namespace dropdown selector, and a sort dropdown (Relevance, Newest, Popular). Active filter selections appear as removable chip badges below the bar. The compact preset combines search and filters into a single row. The with-results-count preset adds a 'Showing N results' label.",
+  "visual_brief": "Two-row filter bar. The first row contains a search input with a magnifying glass icon on the left. The second row contains type filter tabs rendered as pill toggles, with secondary filters and sort controls aligned but not forced into one rigid strip. Active filter selections appear as removable chip badges below the bar. The compact preset combines search and filters into a single row. The with-results-count preset adds a 'Showing N results' label.",
   "responsive": {
-    "mobile": "Search input full-width on its own row. Type tabs become a horizontal scrollable strip. Namespace and sort collapse into a 'Filters' button that opens a bottom sheet.",
-    "tablet": "Search and filters fit in two rows. Type tabs visible. Dropdowns inline.",
-    "desktop": "Single or two row bar with all controls visible. Type tabs, namespace, and sort all inline."
+    "mobile": "Search input full-width on its own row. Type tabs become a horizontal scrollable strip. Secondary controls stack or collapse rather than squeezing into fixed-width selects.",
+    "tablet": "Search and filters fit in two rows. Type tabs remain visible. Dropdowns can sit inline if space allows, otherwise wrap cleanly.",
+    "desktop": "Single or two row bar with all controls visible. Type tabs, namespace, and sort stay aligned without forcing one rigid toolbar width."
   },
   "layout_hints": {
     "search_input": "Full-width search input with magnifying glass icon. On focus: border transitions to accent color. Placeholder: 'Search patterns, themes, blueprints...'",
     "filter_tabs": "Type tabs below search: All, Patterns, Themes, Blueprints, Shells. Active tab uses primary bg with white text (pill shape). Inactive: ghost.",
-    "sort_dropdown": "Right-aligned sort: Relevance, Most Downloaded, Recently Updated, Name A-Z."
+    "sort_dropdown": "Right-aligned sort: Relevance, Most Downloaded, Recently Updated, Name A-Z. Avoid fixed-width controls that crowd the row."
   },
   "composition": {
     "SearchFilterBar": "Row(d-control, full-width) > [SearchInput(d-control, icon: search, real-time) + TypeTabs > Tab(d-interactive)[] + NamespaceSelect(d-control) + SortSelect(d-control)]",

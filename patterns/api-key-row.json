@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "api-key-row",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "decantr_compat": ">=0.9.0",
   "name": "API Key Row",
   "description": "API key display row with masked key value, name, scopes, creation date, last-used timestamp, copy-to-clipboard, and revoke actions.",
@@ -76,12 +76,12 @@
   },
   "visual_brief": "Single horizontal row with a key icon on the far left, followed by the key name in medium-weight text and a masked key value (e.g. 'sk-****...3f2a') in monospace below it. Scope badges (read, write) appear as small colored pills in the middle. Created and last-used dates render in muted small text. Copy and revoke action buttons sit on the far right, with revoke styled as a destructive variant. Rows are separated by bottom borders. The card preset stacks everything vertically inside a bordered card for mobile use.",
   "responsive": {
-    "mobile": "Switches to card preset — stacked vertical layout with full-width copy/revoke buttons. Scope badges wrap to a second line. Dates appear below key info.",
-    "tablet": "Standard row layout maintained. Action buttons use icon-only mode to save horizontal space.",
-    "desktop": "Full row layout with all elements visible inline. Generous horizontal spacing between key info, scopes, dates, and actions."
+    "mobile": "Prefer the card preset — stacked vertical layout with wrapped scope badges and actions that sit beneath the key metadata instead of forcing a rigid table.",
+    "tablet": "Standard row or card-list layout is acceptable, but metadata should wrap before the key row overflows.",
+    "desktop": "Full row layout with clear separation between key info, scopes, dates, and actions."
   },
   "layout_hints": {
-    "row_layout": "Key icon (16px, muted) + key name (font-semibold) + masked value (mono-data, ••••••••) + copy button (ghost) + delete button (ghost, danger on hover). Last used timestamp on far right.",
+    "row_layout": "Key icon (16px, muted) + key name + masked value + scope badges + date metadata + actions. On narrow widths, collapse into stacked cards before the metadata starts crowding.",
     "reveal": "Click masked value to reveal for 5 seconds, then re-mask. Copy button copies full key.",
     "create_form": "Inline form at top: text input for key name + Create button (primary). Appears on 'New API Key' click."
   },

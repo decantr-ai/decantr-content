@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "content-detail-hero",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "decantr_compat": ">=0.9.0",
   "name": "Content Detail Hero",
   "description": "Action-first header section for content detail pages showing name, namespace, concise trust state, quick-start guidance, and type-aware next-step actions before the raw contract payload.",
@@ -92,7 +92,7 @@
     "desktop": "Hero reads as a split composition: descriptive content on the left, quick-start panel on the right, with trust summaries flowing underneath. The page should feel editorial, roomy, and high-confidence."
   },
   "layout_hints": {
-    "hero_layout": "Use a split hero rhythm with narrative on the left and a quick-start rail on the right whenever space allows. Keep the quick-start rail visually distinct using a bordered or treated panel, but avoid drowning the top of the page in chips.",
+    "hero_layout": "Use a split hero rhythm with narrative on the left and a quick-start rail on the right whenever space allows. Keep the quick-start rail visually distinct using a bordered or treated panel, but avoid drowning the top of the page in chips or letting metadata outcompete the next-step actions.",
     "background": "Subtle gradient matching content type color at 5-8% opacity, fading to var(--d-bg). Add a restrained accent glow behind the primary action rail rather than across the whole page.",
     "actions": "Actions are type-aware: blueprints foreground scaffold/start actions, patterns/themes/shells foreground inspect/reference actions. Primary action should read like the next thing a human should do, not just 'copy'.",
     "trust_panels": "Trust summaries should be compact, card-like, and human-readable. Prefer one sentence plus 2-4 supporting facts over long comma-separated evidence dumps."
