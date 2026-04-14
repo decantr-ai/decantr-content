@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "content-detail-hero",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "Content Detail Hero",
-  "description": "Header section for content detail pages showing name, namespace, type, description, version history, and action buttons (copy JSON, use in project).",
+  "description": "Action-first header section for content detail pages showing name, namespace, concise trust state, quick-start guidance, and type-aware next-step actions before the raw contract payload.",
   "dependencies": {
     "patterns": {
       "namespace-badge": "^1.0.0"
@@ -30,7 +30,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full-width hero with content name, namespace badge, type chip, description, version, and action buttons.",
+      "description": "Full-width detail hero with narrative content, a quick-start rail, and compact trust summaries.",
       "components": [
         "Badge",
         "Button",
@@ -42,16 +42,18 @@
         "atoms": "_flex _col _gap4 _py8 _px6 _borderb _bordermuted/20",
         "slots": {
           "breadcrumb": "Breadcrumb navigation: Registry > Type > Namespace > Slug",
-          "badges": "Horizontal row of type Chip and namespace Badge",
-          "title": "Content name with _heading2 styling",
-          "description": "Full description with _body _fgmuted",
-          "meta-row": "Version, author, updated date, download count",
-          "action-group": "Copy JSON Button, Use in Project Button, share icon"
+          "badges": "Minimal badge row for type, namespace, and one primary trust signal",
+          "title": "Content name with _heading2 styling and a mono-data version label",
+          "description": "Concise description explaining what the item does and why it matters",
+          "meta-row": "Version, author, updated date, and tightly scoped tags or capabilities",
+          "quick-start-panel": "Action-first quick-start surface with a primary command, a secondary inspect action, and a short 'what to do next' note",
+          "trust-strip": "Compact row of trust summary cards for registry intelligence and showcase verification",
+          "action-group": "Type-aware CTA buttons such as Start from blueprint, Copy reference, Inspect JSON, or Open showcase"
         }
       }
     },
     "compact": {
-      "description": "Compact hero for inline/modal views with minimal spacing.",
+      "description": "Compact hero for inline or constrained views with one primary next-step action.",
       "components": [
         "Badge",
         "Button",
@@ -64,7 +66,7 @@
           "badges": "Type and namespace badges, inline",
           "title": "Content name with _heading3",
           "description": "Short description with _bodysm _fgmuted",
-          "actions": "Copy and use buttons, compact"
+          "actions": "Primary command and one supporting action, compact"
         }
       }
     }
@@ -74,28 +76,33 @@
     "atoms": "_flex _col _gap4 _py8 _px6 _borderb _bordermuted/20",
     "slots": {
       "breadcrumb": "Breadcrumb navigation",
-      "badges": "Type and namespace badges",
-      "title": "Content name heading",
+      "badges": "Minimal type and namespace badges plus one trust signal",
+      "title": "Content name heading with version",
       "description": "Content description",
-      "meta-row": "Version, author, date",
-      "action-group": "Copy, use, share buttons"
+      "meta-row": "Version, author, date, and concise capability tags",
+      "quick-start-panel": "Action-first quick-start guidance with primary and secondary commands",
+      "trust-strip": "Registry intelligence and showcase verification summaries",
+      "action-group": "Primary and supporting actions"
     }
   },
-  "visual_brief": "Full-width header section for a content detail page. A breadcrumb navigation trail sits at the top. Below it, type and namespace badges render inline. The content name appears as a large heading. A description paragraph follows in standard text. A meta row shows version, author name, and publish date separated by dots. An action button group on the right contains 'Copy JSON', 'Use in Project', and 'Share' buttons. Compact preset reduces vertical spacing and uses a single-line layout for badges and meta.",
+  "visual_brief": "Full-width detail hero that feels like a product launch panel rather than a raw data dump. A breadcrumb trail sits at the top. The first visible row uses only a few high-signal badges: type, namespace, and the strongest trust state. The title is large and paired with a lightweight mono-data version readout. Description copy is editorial and short. Below, a quick-start rail explains exactly what the user can do next and shows one primary command or CTA. Trust information is summarized in compact supporting cards instead of a long wall of chips. On blueprint detail pages, the right side should feel like a 'Start from this' panel. On pattern/theme/shell pages, it should feel like an 'Inspect or use this' panel.",
   "responsive": {
-    "mobile": "Breadcrumb collapses to back-arrow + parent name. Badges and meta stack below the title. Action buttons go full-width stacked at the bottom.",
-    "tablet": "Standard layout. Action buttons align right of the title. Breadcrumb shows full path.",
-    "desktop": "Full layout with action group floating right. All metadata and breadcrumb visible in one comfortable view."
+    "mobile": "Breadcrumb collapses to a short back path. Quick-start becomes a full-width stack below the description. Trust summaries become cards stacked beneath the hero copy. Action buttons go full-width and the metadata row trims to the most useful items.",
+    "tablet": "Hero content and quick-start panel can sit in a 2-row composition, with trust summaries in a two-column strip. Breadcrumb remains visible and action buttons stay grouped.",
+    "desktop": "Hero reads as a split composition: descriptive content on the left, quick-start panel on the right, with trust summaries flowing underneath. The page should feel editorial, roomy, and high-confidence."
   },
   "layout_hints": {
-    "hero_layout": "Full-width section with breadcrumb trail (type > namespace > slug). Large title (heading2) with namespace-badge inline. Metadata row: version, downloads, last updated, compatibility. For themes: live color swatch. For patterns: component count + slot summary.",
-    "background": "Subtle gradient matching content type color at 5-8% opacity, fading to var(--d-bg).",
-    "actions": "Right-aligned action buttons: Install (primary), Preview (ghost), Fork (ghost). Mobile: full-width stacked."
+    "hero_layout": "Use a split hero rhythm with narrative on the left and a quick-start rail on the right whenever space allows. Keep the quick-start rail visually distinct using a bordered or treated panel, but avoid drowning the top of the page in chips.",
+    "background": "Subtle gradient matching content type color at 5-8% opacity, fading to var(--d-bg). Add a restrained accent glow behind the primary action rail rather than across the whole page.",
+    "actions": "Actions are type-aware: blueprints foreground scaffold/start actions, patterns/themes/shells foreground inspect/reference actions. Primary action should read like the next thing a human should do, not just 'copy'.",
+    "trust_panels": "Trust summaries should be compact, card-like, and human-readable. Prefer one sentence plus 2-4 supporting facts over long comma-separated evidence dumps."
   },
   "composition": {
-    "ContentDetailHero": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + BadgeRow + Title(heading2) + Description(text-muted) + MetaRow + ActionGroup]",
-    "BadgeRow": "Row(gap-2) > [TypeChip(d-annotation, color-coded) + NamespaceBadge(d-annotation)]",
-    "MetaRow": "Row(d-data, gap-3) > [Version(mono-data) + Author + PublishDate(text-muted)]",
-    "ActionGroup": "Row(d-interactive, gap-2) > [CopyJSONButton + UseButton(variant: primary) + ShareButton(variant: ghost)]"
+    "ContentDetailHero": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + BadgeRow + HeroSplit > [NarrativeColumn > [Title(heading2) + Description(text-muted) + MetaRow] + QuickStartPanel] + TrustStrip + ActionGroup]",
+    "BadgeRow": "Row(gap-2) > [TypeChip(d-annotation, color-coded) + NamespaceBadge(d-annotation) + TrustChip]",
+    "MetaRow": "Row(d-data, gap-3) > [Version(mono-data) + Author + PublishDate(text-muted) + CapabilityTags]",
+    "QuickStartPanel": "Panel(d-surface, compact) > [Eyebrow + PrimaryCommand + SecondaryAction + UsageGuidance]",
+    "TrustStrip": "Grid(2-col desktop / 1-col mobile) > [RegistryIntelligenceSummary + ShowcaseVerificationSummary]",
+    "ActionGroup": "Row(d-interactive, gap-2) > [PrimaryAction(variant: primary) + SecondaryAction(variant: ghost) + ShowcaseAction(variant: ghost)]"
   }
 }

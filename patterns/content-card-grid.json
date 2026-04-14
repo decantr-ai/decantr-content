@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "content-card-grid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "Content Card Grid",
-  "description": "Responsive grid of registry content cards with type badges, namespace indicators, version info, and quick-action buttons. Used for browsing patterns, themes, blueprints, and other registry items.",
+  "description": "Responsive grid of registry content cards with clear type identity, concise trust signals, and action-forward metadata. Used for browsing patterns, themes, blueprints, and other registry items.",
   "dependencies": {
     "patterns": {
       "namespace-badge": "^1.0.0"
@@ -33,7 +33,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Registry content cards with type badge, namespace indicator, name, description, and version. Grid: 1/2/3 cols at sm/md/lg.",
+      "description": "Registry content cards with minimal badge usage, concise trust summaries, and a clean metadata footer. Grid: 1/2/3 cols at sm/md/lg.",
       "components": [
         "Card",
         "CardHeader",
@@ -47,11 +47,12 @@
         "layout": "grid",
         "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
         "slots": {
-          "card-type-badge": "Type badge (pattern/theme/blueprint) with color-coded variant in CardHeader",
-          "card-namespace": "Namespace badge (@official/@community/@org) inline with type",
+          "card-type-badge": "Primary type badge with color-coded variant in CardHeader",
+          "card-namespace": "Namespace badge inline with the type, but visually quieter than the type",
           "card-title": "Content name with _heading4 styling, clickable link to detail",
           "card-description": "Short description with _bodysm _fgmuted, max 2 lines",
-          "card-meta": "Version number, download count, and updated-at in CardFooter"
+          "card-signal-row": "Compact human-readable trust summary line for recommendation, showcase, or verification state",
+          "card-meta": "Version number, updated-at, and one optional action such as Open showcase"
         }
       }
     },
@@ -105,23 +106,24 @@
       "card-namespace": "Namespace badge (@official/@community/@org)",
       "card-title": "Content name, clickable link",
       "card-description": "Short description, max 2 lines",
-      "card-meta": "Version, download count, updated-at"
+      "card-signal-row": "Concise trust summary line",
+      "card-meta": "Version, updated-at, and optional showcase action"
     }
   },
-  "visual_brief": "Responsive grid of bordered cards, each representing a registry content item. Card header shows a color-coded type badge (pattern in blue, theme in purple, blueprint in green) and a namespace badge (@official, @community). Card body displays the content name as a clickable link heading, a two-line description in muted text, and a meta row with version number, download count icon, and last-updated date. Card footer contains quick-action buttons (copy JSON, use in project). Compact preset reduces card height by hiding description. Editable preset adds edit and delete actions.",
+  "visual_brief": "Responsive grid of bordered cards that feel editorial and selective instead of overloaded. Each card leads with a type badge and a quieter namespace chip. The title and description are the main focus. Trust is conveyed through one compact signal row rather than a cloud of chips. The footer carries version, date, and a single useful action such as opening a showcase. The overall impression should be curated, calm, and high-signal: fewer pills, more hierarchy.",
   "responsive": {
-    "mobile": "Single-column card stack. Cards take full width. Quick actions use icon-only buttons. Description limited to one line.",
-    "tablet": "Two-column grid. Standard card sizes with full descriptions visible.",
-    "desktop": "Three or four column grid depending on container width. Cards show all metadata and actions."
+    "mobile": "Single-column card stack. Cards take full width. Trust summary wraps to a second line if needed. Footer metadata folds naturally without horizontal overflow.",
+    "tablet": "Two-column grid. Standard card sizes with full descriptions visible and one compact trust summary row.",
+    "desktop": "Three or four column grid depending on container width. Cards show title, description, trust summary, and footer metadata without chip overload."
   },
   "layout_hints": {
     "card_treatment": "Each card uses lum-card-outlined: transparent bg, colored border-left (3px) by content type — coral for patterns, amber for themes, cyan for blueprints, green for shells. Hover: border-color intensifies + translateY(-2px) + subtle shadow.",
-    "card_content": "Card shows: type badge (d-annotation) top-left, title (font-semibold), namespace-badge, one-line description, bottom row: version + download count + compatibility badge. Clean vertical stack with gap-2.",
-    "grid_layout": "Responsive grid: 3 columns desktop, 2 tablet, 1 mobile. Gap: 1rem. Equal height cards per row."
+    "card_content": "Keep the top badge row minimal — ideally type, namespace, and at most one additional high-signal badge. Move the rest of the trust story into a small summary line or footer metadata.",
+    "grid_layout": "Responsive grid: 3 columns desktop, 2 tablet, 1 mobile. Gap: 1rem. Equal height cards per row. Avoid badge rows that force horizontal overflow."
   },
   "composition": {
     "ContentCardGrid": "Grid(d-section, responsive: 1/2/3-col) > ContentCard[]",
-    "ContentCard": "Card(d-surface, hoverable) > [CardHeader > [TypeBadge(d-annotation, color-coded) + NamespaceBadge(d-annotation)] + CardBody > [Title(heading4, clickable) + Description(text-muted, line-clamp-2)] + CardFooter > [Version(mono-data) + DownloadCount + UpdatedAt(text-muted)]]",
+    "ContentCard": "Card(d-surface, hoverable) > [CardHeader > [TypeBadge(d-annotation, color-coded) + NamespaceBadge(d-annotation)] + CardBody > [Title(heading4, clickable) + Description(text-muted, line-clamp-2) + SignalRow(text-muted)] + CardFooter > [Version(mono-data) + UpdatedAt(text-muted) + ShowcaseAction(optional)]]",
     "EditableCard": "ContentCard > CardFooter > [EditButton(d-interactive) + DeleteButton(d-interactive, variant: destructive)]"
   }
 }

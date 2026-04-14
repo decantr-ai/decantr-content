@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "registry-browser",
   "role": "primary",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "decantr_compat": ">=0.10.0",
   "name": "Registry Browser",
   "description": "Public content browsing for a design registry. Search, filter, and explore patterns, themes, blueprints, archetypes, and shells.",
@@ -84,11 +84,11 @@
     }
   ],
   "page_briefs": {
-    "homepage": "Registry landing with prominent search bar at top, featured/popular content grid below, and registry stats bar at bottom. No hero section \u2014 search is the hero.",
-    "browse": "Search-first browsing page. Search bar with filter chips for content type (patterns, themes, blueprints, archetypes, shells) at the top. Below, a card grid of content items showing name, namespace badge, description preview, and tag pills.",
-    "browse-type": "Filtered registry view for a specific supported content type. Same search and filter bar layout as main browse page, pre-filtered to the selected type. Card grid below with type-specific metadata on each card.",
-    "detail": "Content detail page. Hero card at top with item name, namespace badge, version, description, and tags. Below, a JSON viewer showing the full content schema with syntax highlighting.",
-    "profile": "Public profile showing avatar, username, bio, published item count. Below: grid of their published content cards + activity timeline."
+    "homepage": "Registry landing with prominent search bar at top, featured content grid below, and a concise registry stats section. Search is the hero, but the page should still feel editorial and curated.",
+    "browse": "Search-first browsing page. The filter bar should stay responsive and high-signal, while cards emphasize name, description, and one concise trust summary instead of a wall of pills.",
+    "browse-type": "Filtered registry view for a specific supported content type. Same search and filter bar layout as main browse page, pre-filtered to the selected type. Cards keep the type-specific identity but stay concise and calm.",
+    "detail": "Content detail page. Hero card at top with item name, namespace, version, concise trust signal, and a quick-start action rail. Below, compact trust summaries and a premium artifact viewer showing the contract JSON.",
+    "profile": "Public profile showing avatar, username, bio, published item count. Below: grid of their published content cards plus activity timeline."
   },
   "features": [
     "search",

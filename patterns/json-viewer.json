@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "json-viewer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "JSON Viewer",
-  "description": "Collapsible JSON viewer with syntax highlighting, line numbers, copy-to-clipboard, and expandable/collapsible nodes. Used for inspecting registry content data on detail pages.",
+  "description": "Artifact viewer for registry contracts with syntax highlighting, line numbers, copy actions, summary metrics, and optional tabs for JSON, commands, and evidence.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -21,8 +21,27 @@
     "Button",
     "icon"
   ],
-  "default_preset": "collapsible",
+  "default_preset": "artifact",
   "presets": {
+    "artifact": {
+      "description": "Premium artifact panel with a toolbar, segmented tab strip, syntax-highlighted JSON, and supporting summary metadata.",
+      "components": [
+        "Button",
+        "icon"
+      ],
+      "layout": {
+        "layout": "stack",
+        "atoms": "_flex _col _gap0 _r3 _overflow[hidden] _border _bordermuted/20",
+        "slots": {
+          "header": "Toolbar row with artifact title, summary badges, and copy-to-clipboard Button",
+          "tabs": "Segmented tab strip for JSON, Commands, and Evidence views",
+          "summary-strip": "Compact metadata row with line count, byte size, schema id, or root key count",
+          "line-numbers": "Gutter column with line numbers, _fgmuted _textxs _mono",
+          "json-content": "Syntax-highlighted JSON with collapsible nodes. Keys in _fgprimary, strings in _fgwarning, numbers in _fgsuccess, booleans in _fgaccent",
+          "footer": "Optional footer with copy confirmation, notes, or schema guidance"
+        }
+      }
+    },
     "collapsible": {
       "description": "Full JSON viewer with collapsible object/array nodes, syntax highlighting, line numbers, and a copy button in the header.",
       "components": [
@@ -54,41 +73,34 @@
           "json-content": "Syntax-highlighted JSON, no line numbers"
         }
       }
-    },
-    "diff": {
-      "description": "Side-by-side or unified diff view for comparing two JSON versions. Additions highlighted in green, deletions in red.",
-      "components": [
-        "Button",
-        "icon"
-      ],
-      "layout": {
-        "layout": "row",
-        "atoms": "_grid _gc2 _gap0 _r3 _overflow[hidden] _border _bordermuted/20",
-        "slots": {
-          "header": "Toolbar with version labels (before/after) and toggle unified/split view",
-          "left-pane": "Previous version JSON with red highlighted deletions",
-          "right-pane": "New version JSON with green highlighted additions"
-        }
-      }
     }
   },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap0 _r3 _overflow[hidden] _border _bordermuted/20",
     "slots": {
-      "header": "Toolbar with title and copy button",
+      "header": "Toolbar with title, summary, and copy button",
+      "tabs": "Segmented tab strip",
       "json-content": "Syntax-highlighted JSON"
     }
   },
-  "visual_brief": "Code viewer panel with a header toolbar containing a title and a copy-to-clipboard button. The body displays syntax-highlighted JSON with color-coded keys (accent color), string values (green), numbers (blue), booleans (orange), and null (muted). Collapsible nodes show expand/collapse chevron icons next to objects and arrays, with an item count badge when collapsed (e.g., '{3}' or '[5]'). Line numbers appear in a left gutter column. The inline preset removes the header and renders JSON inline with reduced formatting. The diff preset highlights additions in green background and removals in red background.",
+  "visual_brief": "A premium contract viewer panel with the feel of a polished shadcn-style code surface, but expressed through Decantr treatments and decorators. The header is compact and editorial: title on the left, a small metadata strip in the middle, and copy actions on the right. Below it, a segmented tab control can switch between JSON, Commands, and Evidence views. The JSON body uses a stronger `lum-code-block` treatment with an accent top border, subdued line-number gutter, and vivid but restrained syntax colors. The whole panel should feel like a trustworthy artifact explorer, not just a raw textarea dump.",
   "layout_hints": {
-    "viewer_treatment": "Use lum-code-block: dark bg (#111113 or var(--d-surface)) with colored top border (2px, accent). Monospace font. Line numbers in text-muted.",
-    "toolbar": "Header bar: title (filename or 'Preview') left, Copy button (ghost) right. Language badge if applicable.",
-    "syntax": "Syntax highlighting using theme accent colors: strings=amber, numbers=cyan, keys=coral, booleans=green."
+    "viewer_treatment": "Use lum-code-block or an equivalent artifact treatment with a dark body, an accent top border, and a compact toolbar. The code panel should feel purposeful and premium, not like a default developer console.",
+    "toolbar": "Header bar: title on the left, summary metrics in the middle, and copy/secondary actions on the right. A small segmented tab strip may sit directly beneath or inside the toolbar.",
+    "syntax": "Syntax highlighting uses theme-accented colors: keys=coral, strings=amber, numbers=cyan, booleans=green, null=muted.",
+    "artifact_summary": "Always surface a few useful stats before the raw JSON: line count, byte size, schema id, root key count, or command availability."
   },
   "responsive": {
-    "mobile": "Full-width viewer with horizontal scroll for deeply nested content. Nodes default to collapsed beyond depth 2. Copy button prominently placed.",
-    "tablet": "Standard viewer width. Nodes expand to depth 3 by default.",
-    "desktop": "Full viewer with comfortable width. All nodes expandable. Horizontal space accommodates deep nesting without scroll."
+    "mobile": "Full-width viewer with horizontal scroll for deeply nested content. Tabs collapse into a compact segmented control. Nodes default to collapsed beyond depth 2 and summary metrics wrap into two rows.",
+    "tablet": "Standard viewer width with a compact tab strip. Nodes expand to depth 3 by default and summary metrics stay visible without overwhelming the header.",
+    "desktop": "Full viewer with comfortable width. Tabs, summary metrics, and copy actions all remain visible. Horizontal space accommodates deep nesting without crowding."
+  },
+  "composition": {
+    "ArtifactViewer": "Panel(lum-code-block, stack) > [Toolbar + Tabs + SummaryStrip + JsonPane + Footer]",
+    "Toolbar": "Row(d-data, compact) > [Title + SummaryBadges + ActionButtons]",
+    "Tabs": "SegmentedControl(d-interactive) > [JsonTab + CommandsTab + EvidenceTab]",
+    "JsonPane": "CodeRegion(mono, syntax-highlighted) > [LineNumbers + JsonTree]",
+    "SummaryStrip": "Row(d-annotation, compact) > [Lines + Bytes + Schema + RootKeys]"
   }
 }
