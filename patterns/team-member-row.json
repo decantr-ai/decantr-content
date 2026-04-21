@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "team-member-row",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "Team Member Row",
-  "description": "Team member display row with avatar, name, email, role badge, join date, and management actions (change role, remove).",
+  "description": "Team collaboration surface row with member identity, role controls, join date, responsive management actions, and an invite flow that can collapse cleanly on narrower widths.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -108,11 +108,13 @@
   },
   "layout_hints": {
     "row_layout": "Avatar (32px circle) + identity block + role/date/actions trail. On narrow widths, let the trail wrap below the identity instead of squeezing the email or control cluster.",
-    "invite_form": "Invite form uses a responsive row: email input + role dropdown + Invite button. Collapse to a stacked form on small screens."
+    "invite_form": "Invite form uses a responsive row: email input + role dropdown + Invite button. Collapse to a stacked form on small screens.",
+    "cta_treatment": "Supporting workspace navigation such as governance links should appear as contextual action bands or compact cards, not as detached button rows."
   },
   "composition": {
     "TeamMemberRow": "Row(d-data-row, hoverable) > [Avatar + MemberInfo + RoleBadge(d-annotation) + JoinDate(text-muted) + Actions]",
     "MemberInfo": "Stack(flex-col) > [Name(font-medium) + Email(text-muted, text-sm)]",
-    "Actions": "Row(d-interactive) > [RoleSelect(d-control) + RemoveButton(variant: destructive, icon-only)]"
+    "Actions": "Row(d-interactive) > [RoleSelect(d-control) + RemoveButton(variant: destructive, icon-only)]",
+    "InviteMemberForm": "ResponsiveRow > [InviteeField + RoleSelect + InviteButton]"
   }
 }

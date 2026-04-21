@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "tier-upgrade-card",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "Tier Upgrade Card",
-  "description": "Pricing tier card with plan name, price, feature list, and upgrade CTA button. Used in billing portal and landing page pricing sections.",
+  "description": "Pricing tier card with plan name, price, feature list, upgrade CTA, and current-plan/recommended emphasis. Used in billing portal and landing page pricing sections.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -109,13 +109,14 @@
     "desktop": "Auto-fit comparison layout with generous feature spacing. Avoid hardcoded column counts when more plans are present."
   },
   "layout_hints": {
-    "card_treatment": "Current plan highlighted with primary border + 'Current' badge. Upgrade options show price, feature list, and Upgrade CTA (primary).",
-    "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color. Use staged or auto-fit columns, never a rigid four-up grid."
+    "card_treatment": "Current plan highlighted with a distinct active treatment and a clear 'Current' badge. Recommended upgrade options should feel stronger than generic cards and should not rely on generic ghost-button treatment for their main CTA.",
+    "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color. Use staged or auto-fit columns, never a rigid four-up grid.",
+    "cta_treatment": "The upgrade/manage action should always read as a decisive billing action. Current-plan state should still preserve a stable button/action slot so the card rhythm does not collapse."
   },
   "composition": {
     "TierUpgradeCard": "Card(d-surface, bordered) > [CardHeader > [PlanName(heading4) + PopularBadge?(d-annotation)] + Price(mono-data, heading2) + Description(text-muted) + FeatureList + CTAButton]",
     "FeatureList": "List > FeatureItem(d-data-row) > [CheckIcon(color: success) + FeatureText][]",
-    "CTAButton": "Button(d-interactive, full-width, variant: highlighted ? primary : ghost)",
+    "CTAButton": "Button(d-interactive, full-width, variant: highlighted ? primary : secondary-strong)",
     "HighlightedCard": "TierUpgradeCard(border-primary, accent-bar-top) > PopularBadge(d-annotation)"
   }
 }

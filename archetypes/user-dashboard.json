@@ -2,10 +2,10 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "user-dashboard",
   "role": "primary",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decantr_compat": ">=0.10.0",
   "name": "User Dashboard",
-  "description": "Authenticated user area with content management, API key management, account settings, and activity overview.",
+  "description": "Authenticated user area with content management, billing, API key management, team governance, account settings, and activity overview.",
   "tags": [
     "dashboard",
     "user",
@@ -56,6 +56,7 @@
     },
     {
       "id": "content-new",
+      "path": "/dashboard/content/new",
       "default_layout": [
         "form",
         "json-viewer"
@@ -81,6 +82,7 @@
     },
     {
       "id": "billing",
+      "path": "/dashboard/billing",
       "default_layout": [
         "tier-upgrade-card",
         "kpi-grid"
@@ -90,12 +92,22 @@
     },
     {
       "id": "team",
+      "path": "/dashboard/team",
       "default_layout": [
         "kpi-grid",
         "team-member-row"
       ],
       "shell": "sidebar-main",
       "notes": "Team overview and member management."
+    },
+    {
+      "id": "governance",
+      "path": "/dashboard/governance",
+      "default_layout": [
+        "org-governance-panel"
+      ],
+      "shell": "sidebar-main",
+      "notes": "Organization governance workspace for approval policy, pending reviews, and audit history."
     }
   ],
   "page_briefs": {
@@ -105,7 +117,8 @@
     "api-keys": "API key management page. Prefer responsive key cards or rows that can collapse into stacked surfaces on smaller widths instead of holding a rigid multi-column table.",
     "settings": "Account settings workspace with responsive navigation. Vertical tabs on larger widths, horizontal scrollable tabs or segmented navigation on smaller widths. Forms stay aligned to the shell spacing rhythm.",
     "billing": "Billing overview with current plan summary, usage stats, and responsive plan comparison cards. Pricing cards should use staged or auto-fit columns, never a fixed four-up comparison grid.",
-    "team": "Team dashboard with member and seat KPIs at top. Member management rows degrade into stacked or card-like compositions on narrow widths. Invite and organization controls stack instead of compressing."
+    "team": "Team dashboard with member and seat KPIs at top. Member management rows degrade into stacked or card-like compositions on narrow widths. Invite and organization controls stack instead of compressing.",
+    "governance": "Organization governance workspace with one strong intro/action panel, policy controls, pending approval review, and a compact audit log. CTA language should feel like purposeful workspace navigation rather than generic button rows."
   },
   "features": [
     "auth",
@@ -120,12 +133,13 @@
       "reputation-badge": "^1.0.0",
       "activity-feed": "^1.0.0",
       "content-card-grid": "^1.0.0",
-      "api-key-row": "^1.0.0",
-      "account-settings": "^1.0.0",
+      "api-key-row": "^1.1.0",
+      "account-settings": "^1.1.0",
       "form": "^1.0.0",
       "json-viewer": "^1.0.0",
-      "tier-upgrade-card": "^1.0.0",
-      "team-member-row": "^1.0.0"
+      "tier-upgrade-card": "^1.1.0",
+      "team-member-row": "^1.1.0",
+      "org-governance-panel": "^1.0.0"
     },
     "styles": {}
   },

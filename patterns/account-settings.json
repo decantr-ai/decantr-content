@@ -1,13 +1,14 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "account-settings",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decantr_compat": ">=1.0.0",
   "name": "Account Settings",
-  "description": "Account management forms with presets for profile, security, preferences, and danger zone (account deletion).",
+  "description": "Account management workspace with responsive settings navigation, grouped forms, and stable save/action zones for profile, security, preferences, and danger-zone flows.",
   "dependencies": {
     "patterns": {
-      "session-manager": "^1.0.0"
+      "session-manager": "^1.0.0",
+      "settings-nav": "^1.0.0"
     },
     "styles": {},
     "requires_core": {
@@ -29,7 +30,7 @@
   "default_preset": "profile",
   "presets": {
     "profile": {
-      "description": "Profile editing with avatar upload, name, email, bio",
+      "description": "Profile editing with settings navigation, avatar upload, name, email, bio, and a stable save zone.",
       "components": [
         "Button",
         "Avatar",
@@ -39,9 +40,10 @@
         "layout": "stack",
         "atoms": "_flex _col _gap8",
         "slots": {
+          "nav": "Responsive settings navigation using vertical tabs on larger widths and horizontal tabs on small screens",
           "avatar": "Avatar with upload/change button",
-          "form": "Name, email, bio inputs with inline edit",
-          "save": "Save changes button"
+          "form": "Name, email, bio inputs grouped in a content panel",
+          "save": "Save changes button in a stable action zone"
         }
       }
     },
@@ -98,7 +100,8 @@
   "layout_hints": {
     "active_state": "Active nav/tab item should have a visible indicator: accent-colored left border (for vertical nav) or bottom border (for horizontal tabs), plus accent text color.",
     "nav_position": "For settings pages, use a vertical tab nav on the left at larger widths. On small screens, switch to a horizontal scrollable tab strip or segmented control without changing the content spacing rhythm.",
-    "spacing": "Nav items have consistent padding. Active item stands out but doesn't shift layout. Content cards should share the same shell inset rhythm as the rest of the dashboard."
+    "spacing": "Nav items have consistent padding. Active item stands out but doesn't shift layout. Content cards should share the same shell inset rhythm as the rest of the dashboard.",
+    "cta_treatment": "Primary save/update actions should sit in a stable action zone and feel distinct from secondary utility buttons such as avatar change, sign out, or cancel."
   },
   "visual_brief": "Settings page with vertical navigation tabs on the left (Profile, Security, Notifications, Danger Zone) and form content on the right. Active tab highlighted with an accent border. On small screens, the nav becomes a horizontal scrollable strip while the forms keep the same comfortable shell spacing. Each settings section is a d-surface card with grouped form fields, section heading, and a stable save action zone.",
   "default_layout": {
@@ -110,8 +113,8 @@
     }
   },
   "composition": {
-    "AccountSettings": "Container(d-section, flex-col) > [SettingsNav(vertical-tabs, d-interactive) + SettingsContent]",
-    "SettingsNav": "TabList(d-control) > Tab(active?: accent-border)[]",
-    "SettingsContent": "Panel(d-surface, flex-col, gap-8) > [AvatarUpload? + FormFields + SaveButton(d-interactive, variant: primary)]"
+    "AccountSettings": "Container(d-section, split) > [SettingsNav + SettingsContent]",
+    "SettingsNav": "SettingsNavPattern(vertical-tabs, responsive)",
+    "SettingsContent": "Panel(d-surface, flex-col, gap-8) > [SectionHeading + AvatarUpload? + FormFields + ActionZone]"
   }
 }

@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "api-key-row",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "API Key Row",
-  "description": "API key display row with masked key value, name, scopes, creation date, last-used timestamp, copy-to-clipboard, and revoke actions.",
+  "description": "API key management surface with responsive key rows/cards, masked key metadata, create-key workflow, copy/revoke actions, and a save-once creation banner.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -83,12 +83,15 @@
   "layout_hints": {
     "row_layout": "Key icon (16px, muted) + key name + masked value + scope badges + date metadata + actions. On narrow widths, collapse into stacked cards before the metadata starts crowding.",
     "reveal": "Click masked value to reveal for 5 seconds, then re-mask. Copy button copies full key.",
-    "create_form": "Inline form at top: text input for key name + Create button (primary). Appears on 'New API Key' click."
+    "create_form": "Inline form at top: text input for key name + scope controls + Create button (primary). Appears on 'New API Key' click.",
+    "creation_banner": "After key creation, surface a prominent one-time reveal banner with copy action and dismissal control. This banner should feel like a temporary alert card, not just a paragraph."
   },
   "composition": {
+    "ApiKeyWorkspace": "Stack > [WorkspaceHeader + CreatePanel? + CreationBanner? + ApiKeyRow[]]",
     "ApiKeyRow": "Row(d-data-row, hoverable) > [KeyIcon + KeyInfo + ScopeBadges + DateInfo + Actions]",
     "KeyInfo": "Stack(flex-col) > [KeyName(font-medium) + MaskedKey(mono-data, text-muted)]",
     "ScopeBadges": "Row(gap-2) > Badge(d-annotation)[]",
-    "Actions": "Row(d-interactive) > [CopyButton(variant: ghost) + RevokeButton(variant: destructive)]"
+    "Actions": "Row(d-interactive) > [CopyButton(variant: ghost) + RevokeButton(variant: destructive)]",
+    "CreationBanner": "AlertCard(d-surface, success-tint) > [BannerTitle + FullKey(mono-data) + CopyAction + DismissAction]"
   }
 }
