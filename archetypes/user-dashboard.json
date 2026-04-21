@@ -112,12 +112,12 @@
   ],
   "page_briefs": {
     "overview": "User home dashboard. KPI cards at top showing published items, downloads, and reputation score. Reputation badge below. Activity feed at the bottom. The page should remain readable inside the sidebar shell across desktop, tablet, and drawer-based mobile layouts.",
-    "content": "Content management grid. User-published content cards with concise trust/status treatment and actions that wrap cleanly without crowding the shell.",
+    "content": "Content management workspace. When a single section contains both a discovery/filter panel and results, they should be grouped through a workspace-region-stack so the search surface and the result grid never visually collide.",
     "content-new": "Content creation page. Form and live contract preview sit side-by-side when space allows, then stack vertically below tablet widths without either pane feeling artificially cramped.",
     "api-keys": "API key management page. Prefer responsive key cards or rows that can collapse into stacked surfaces on smaller widths instead of holding a rigid multi-column table.",
     "settings": "Account settings workspace with responsive navigation. Vertical tabs on larger widths, horizontal scrollable tabs or segmented navigation on smaller widths. Forms stay aligned to the shell spacing rhythm.",
-    "billing": "Billing overview with current plan summary, usage stats, and responsive plan comparison cards. Pricing cards should use staged or auto-fit columns, never a fixed four-up comparison grid.",
-    "team": "Team dashboard with member and seat KPIs at top. Member management rows degrade into stacked or card-like compositions on narrow widths. Invite and organization controls stack instead of compressing.",
+    "billing": "Billing overview with current plan summary, usage stats, and responsive plan comparison cards. KPI regions, entitlement summaries, and plan comparison regions should stack through a workspace-region-stack inside labeled sections. Pricing cards should use staged or auto-fit columns, never a fixed four-up comparison grid.",
+    "team": "Team dashboard with member and seat KPIs at top. When a members section contains both an invite/control surface and a results list or empty state, those children must flow through a workspace-region-stack. Member management rows degrade into stacked or card-like compositions on narrow widths. Invite and organization controls stack instead of compressing.",
     "governance": "Organization governance workspace with one strong intro/action panel, policy controls, pending approval review, and a compact audit log. CTA language should feel like purposeful workspace navigation rather than generic button rows."
   },
   "features": [
@@ -129,10 +129,11 @@
   },
   "dependencies": {
     "patterns": {
-      "kpi-grid": "^1.0.0",
+      "kpi-grid": "^1.1.0",
       "reputation-badge": "^1.0.0",
-      "activity-feed": "^1.0.0",
-      "content-card-grid": "^1.0.0",
+      "activity-feed": "^1.1.0",
+      "content-card-grid": "^1.3.0",
+      "workspace-region-stack": "^1.0.0",
       "api-key-row": "^1.1.0",
       "account-settings": "^1.1.0",
       "form": "^1.0.0",

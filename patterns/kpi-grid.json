@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "kpi-grid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "KPI Grid",
   "description": "A grid of key performance indicator cards showing metrics with labels, values, and trend indicators",
@@ -26,7 +26,7 @@
   "default_preset": "dashboard",
   "presets": {
     "dashboard": {
-      "description": "4-column grid of stat cards with icon, label, value, and change percentage",
+      "description": "4-column grid of stat cards with icon, label, value, and change percentage. This pattern owns the grid and cards, not the surrounding section rhythm.",
       "components": [
         "Card",
         "icon",
@@ -34,7 +34,7 @@
       ],
       "layout": {
         "layout": "grid",
-        "atoms": "_grid _gc2 _lg:gc4 _gap4 _p4",
+        "atoms": "_grid _gc2 _lg:gc4 _gap4",
         "slots": {
           "kpi-card": "Repeated Card with icon, label, value, and trend Badge",
           "icon": "Abstract icon placeholder for each KPI category",
@@ -44,13 +44,13 @@
       }
     },
     "compact": {
-      "description": "Denser 2-row layout with smaller cards, no icons, just label + value + sparkline placeholder",
+      "description": "Denser 2-row layout with smaller cards, no icons, just label + value + sparkline placeholder. Outer region spacing still belongs to the parent workspace layout.",
       "components": [
         "Card"
       ],
       "layout": {
         "layout": "grid",
-        "atoms": "_grid _gc2 _lg:gc4 _gap2 _p2",
+        "atoms": "_grid _gc2 _lg:gc4 _gap2",
         "slots": {
           "kpi-card": "Compact Card with label, value, and sparkline area",
           "value": "Primary metric value with _heading4 styling",
@@ -59,7 +59,7 @@
       }
     }
   },
-  "visual_brief": "Row of four KPI cards in a responsive grid. Each card is a compact surface with an icon in a rounded muted-background circle at top-left, a small muted label below describing the metric, the primary value in large heading2-scale bold text, and a trend badge showing percentage change — green with an up-arrow for positive, red with a down-arrow for negative. Cards have equal height and consistent internal padding (p4). The compact preset removes icons and replaces the trend badge with an inline sparkline chart placeholder. Cards use subtle border or shadow to delineate from the background.",
+  "visual_brief": "Row of KPI cards in a responsive grid. Each card is a compact surface with an icon in a rounded muted-background circle at top-left, a small muted label below describing the metric, the primary value in large heading2-scale bold text, and a trend badge showing percentage change — green with an up-arrow for positive, red with a down-arrow for negative. Cards have equal height and consistent internal padding. The compact preset removes icons and replaces the trend badge with an inline sparkline chart placeholder. Cards use subtle border or shadow to delineate from the background. The grid itself should sit inside a parent workspace region stack rather than pretending to be a full section.",
   "responsive": {
     "mobile": "Two columns (2x2 grid). Card padding reduces to p3. Value text drops to heading3 scale. Icons shrink to 20px. Sparklines in compact preset maintain aspect ratio.",
     "tablet": "Two columns at default, four columns if space allows. Standard padding. Full heading2 values.",
@@ -86,10 +86,10 @@
   "layout_hints": {
     "stat_treatment": "Each KPI uses lum-stat-glow: filled circle in accent/primary color with number inside (dark text). Label below in text-muted. Sparkline trend to the right.",
     "animation": "Counter animation on mount — numbers count from 0 to value over 500ms.",
-    "grid": "4 columns desktop, 2 tablet, 1 mobile. Cards should breathe — generous padding."
+    "grid": "4 columns desktop, 2 tablet, 1 mobile. Cards should breathe, but the parent workspace layout owns any gap before or after the KPI grid."
   },
   "composition": {
-    "KPIGrid": "Grid(d-section, responsive: 2/4-col) > KPICard[]",
+    "KPIGrid": "Grid(d-data, responsive: 2/4-col) > KPICard[]",
     "KPICard": "Card(d-surface, padding) > [Icon(d-annotation, rounded-bg) + Label(text-muted, text-sm) + Value(heading2, mono-data) + TrendBadge(d-annotation, variant: positive|negative)]"
   }
 }

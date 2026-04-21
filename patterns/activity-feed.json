@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "activity-feed",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "Activity Feed",
-  "description": "Chronological list of activity events with avatars, timestamps, and action descriptions",
+  "description": "Chronological list of activity events with avatars, timestamps, and action descriptions. The feed owns its rows and grouping, not the outer section spacing around it.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -128,7 +128,7 @@
   },
   "composition": {
     "ActivityFeed": "Container(d-data, flex-col, full-width) > [DateGroup[] + LoadMore?(d-interactive)]",
-    "DateGroup": "Section > [DateHeader(d-annotation, text-muted) + FeedItem[]]",
+    "DateGroup": "Group(d-data) > [DateHeader(d-annotation, text-muted) + FeedItem[]]",
     "FeedItem": "Row(d-data-row, hoverable) > [Avatar(fallback-initials) + Content(flex-col) > [UserName(font-medium) + ActionText] + Timestamp(mono-data, text-xs, text-muted)]"
   }
 }
