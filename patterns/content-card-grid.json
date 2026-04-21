@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "content-card-grid",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "decantr_compat": ">=0.9.0",
   "name": "Content Card Grid",
-  "description": "Responsive grid of registry content cards with clear type identity, concise trust signals, and action-forward metadata. Used for browsing patterns, themes, blueprints, and other registry items.",
+  "description": "Responsive grid of registry content cards with optional thumbnail media, strong type identity, builder-friendly descriptions, and a clean source/version/date footer. Used for browsing patterns, themes, blueprints, archetypes, and shells.",
   "dependencies": {
     "patterns": {
       "namespace-badge": "^1.0.0"
@@ -33,7 +33,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Registry content cards with minimal badge usage, concise trust summaries, and a clean metadata footer. Grid: 1/2/3 cols at sm/md/lg.",
+      "description": "Registry content cards with optional 16:9 media, one type chip, a 3-line description, and a clean source/version/date footer. Grid: 1/2/3 cols at sm/md/lg.",
       "components": [
         "Card",
         "CardHeader",
@@ -47,12 +47,11 @@
         "layout": "grid",
         "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
         "slots": {
-          "card-type-badge": "Primary type badge with color-coded variant in CardHeader",
-          "card-namespace": "Namespace badge inline with the type, but visually quieter than the type",
-          "card-title": "Content name with _heading4 styling, clickable link to detail",
-          "card-description": "Short description with _bodysm _fgmuted, max 2 lines",
-          "card-signal-row": "Compact human-readable trust summary line for recommendation, showcase, or verification state",
-          "card-meta": "Version number, updated-at, and one optional action such as Open showcase"
+          "card-media": "Optional full-width 16:9 thumbnail image. Only render when the content item has an uploaded registry thumbnail.",
+          "card-title-row": "Title on the left with one color-coded type chip on the right",
+          "card-description": "Short description with _bodysm _fgmuted, max 3 lines",
+          "card-meta": "Friendly source line, version, and publish date",
+          "card-cta": "One optional showcase CTA with external-link affordance"
         }
       }
     },
@@ -75,7 +74,7 @@
       }
     },
     "editable": {
-      "description": "Content cards with edit/delete actions for the user dashboard. Includes status indicator and publish date.",
+      "description": "Dashboard content cards with the same visual hierarchy as public cards, plus status and edit/delete affordances.",
       "components": [
         "Card",
         "CardHeader",
@@ -89,11 +88,12 @@
         "layout": "grid",
         "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
         "slots": {
+          "card-media": "Optional full-width 16:9 thumbnail image",
           "card-status": "Status badge (published/pending/rejected) with color coding",
-          "card-type-badge": "Content type badge",
-          "card-title": "Content name, clickable to edit",
-          "card-description": "Short description, max 2 lines",
-          "card-actions": "Edit and delete Button group in CardFooter"
+          "card-title-row": "Title with one type chip",
+          "card-description": "Short description, max 3 lines",
+          "card-meta": "Friendly source line, version, and publish date",
+          "card-actions": "Edit and delete button group kept visually secondary to the main content"
         }
       }
     }
@@ -102,28 +102,27 @@
     "layout": "grid",
     "atoms": "_grid _gc1 _md:gc2 _lg:gc3 _gap4",
     "slots": {
-      "card-type-badge": "Type badge (pattern/theme/blueprint) with color-coded variant",
-      "card-namespace": "Namespace badge (@official/@community/@org)",
-      "card-title": "Content name, clickable link",
-      "card-description": "Short description, max 2 lines",
-      "card-signal-row": "Concise trust summary line",
-      "card-meta": "Version, updated-at, and optional showcase action"
+      "card-media": "Optional full-width 16:9 thumbnail image",
+      "card-title-row": "Content name, clickable link, and one color-coded type chip",
+      "card-description": "Short description, max 3 lines",
+      "card-meta": "Friendly source line, version, and publish date",
+      "card-cta": "Optional showcase action"
     }
   },
-  "visual_brief": "Responsive grid of bordered cards that feel editorial and selective instead of overloaded. Each card leads with a type badge and a quieter namespace chip. The title and description are the main focus. Trust is conveyed through one compact signal row rather than a cloud of chips. The footer carries version, date, and a single useful action such as opening a showcase. The overall impression should be curated, calm, and high-signal: fewer pills, more hierarchy.",
+  "visual_brief": "Responsive grid of bordered cards that feel editorial, calm, and app-forward. Each card can open with an optional 16:9 screenshot-style thumbnail. The title and description should dominate, with one distinct type chip acting as the only browse-card chip. The footer should feel like a clean authored source line rather than a metadata bucket: source first, then version, then date. If a showcase exists, its CTA should feel obvious and inviting. The overall impression should be curated and useful, not operator-heavy or diagnostic.",
   "responsive": {
-    "mobile": "Single-column card stack. Cards take full width. Trust summary wraps to a second line if needed. Footer metadata folds naturally without horizontal overflow and action links stay readable.",
-    "tablet": "Two-column grid. Standard card sizes with full descriptions visible and one compact trust summary row.",
-    "desktop": "Three or four column grid depending on container width. Cards show title, description, trust summary, and footer metadata without chip overload."
+    "mobile": "Single-column card stack. Cards take full width, thumbnails remain 16:9, descriptions show up to three lines, and the footer/source line wraps naturally without overflow.",
+    "tablet": "Two-column grid. Thumbnails, title, description, and footer all remain readable without crowded chip rows.",
+    "desktop": "Three or four column grid depending on container width. Cards feel airy and selective, with one type chip, generous description room, and a clear showcase CTA when present."
   },
   "layout_hints": {
-    "card_treatment": "Each card uses lum-card-outlined: transparent bg, colored border-left (3px) by content type — coral for patterns, amber for themes, cyan for blueprints, green for shells. Hover: border-color intensifies + translateY(-2px) + subtle shadow.",
-    "card_content": "Keep the top badge row minimal — ideally type, namespace, and at most one additional high-signal badge. Move the rest of the trust story into a small summary line or footer metadata.",
-    "grid_layout": "Responsive grid: 3 columns desktop, 2 tablet, 1 mobile. Gap: 1rem. Equal height cards per row. Avoid badge rows that force horizontal overflow."
+    "card_treatment": "Each card uses lum-card-outlined with a type-linked accent and optional media frame. Hover should feel subtle but premium: border intensifies, card lifts slightly, and shadows deepen without turning noisy.",
+    "card_content": "Do not use browse-card trust chips. Keep only the type chip. The footer should carry the source line first, then version, then date. Showcase CTA should sit clearly below that row when present.",
+    "grid_layout": "Responsive grid: 3 columns desktop, 2 tablet, 1 mobile. Gap: 1rem. Equal-height cards per row. Avoid visual density spikes between cards with thumbnails and cards without thumbnails."
   },
   "composition": {
     "ContentCardGrid": "Grid(d-section, responsive: 1/2/3-col) > ContentCard[]",
-    "ContentCard": "Card(d-surface, hoverable) > [CardHeader > [TypeBadge(d-annotation, color-coded) + NamespaceBadge(d-annotation)] + CardBody > [Title(heading4, clickable) + Description(text-muted, line-clamp-2) + SignalRow(text-muted)] + CardFooter > [Version(mono-data) + UpdatedAt(text-muted) + ShowcaseAction(optional)]]",
-    "EditableCard": "ContentCard > CardFooter > [EditButton(d-interactive) + DeleteButton(d-interactive, variant: destructive)]"
+    "ContentCard": "Card(d-surface, hoverable) > [Thumbnail(optional, 16:9) + TitleRow > [Title(heading4, clickable) + TypeChip(d-annotation, color-coded)] + Description(text-muted, line-clamp-3) + Footer > [SourceLine(mono-data) + Version + PublishDate + ShowcaseAction(optional)]]",
+    "EditableCard": "ContentCard > FooterSecondary > [StatusBadge + EditButton(d-interactive) + DeleteButton(d-interactive, variant: destructive)]"
   }
 }

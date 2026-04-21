@@ -1,10 +1,10 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "search-filter-bar",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "decantr_compat": ">=0.9.0",
   "name": "Search Filter Bar",
-  "description": "Search input with type and namespace dropdown filters for browsing registry content. Supports real-time search, type tabs, namespace dropdown, and sort controls.",
+  "description": "Search-first public registry filter bar with type tabs, a source filter, sort controls, and result count. Designed for builders browsing Decantr content, not for exposing internal registry-intelligence taxonomy.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -32,7 +32,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Full search bar with search input, content type tabs (All/Patterns/Themes/Blueprints/etc.), namespace dropdown, and sort select.",
+      "description": "Full public registry filter bar with search, type tabs, source filter, sort, and result count.",
       "components": [
         "Input",
         "Select",
@@ -44,14 +44,15 @@
         "layout": "stack",
         "atoms": "_flex _col _gap4",
         "slots": {
-          "search-row": "Search Input with icon prefix and clear Button on the right",
-          "filter-row": "Horizontal row: type Chip tabs on left, namespace Select and sort Select on right",
-          "active-filters": "Optional row of active filter Badges with remove (x) action"
+          "search-row": "Search input with icon prefix",
+          "type-row": "Scrollable row of type tabs (All, Patterns, Themes, Blueprints, Archetypes, Shells)",
+          "meta-row": "Result count on the left, source filter and sort on the right",
+          "mobile-filters": "Collapsible mobile filter surface for source and sort"
         }
       }
     },
     "compact": {
-      "description": "Single-row compact search with inline type and namespace dropdowns. No tabs.",
+      "description": "Compact search with inline type and source controls for tighter surfaces.",
       "components": [
         "Input",
         "Select",
@@ -64,12 +65,12 @@
         "slots": {
           "search-input": "Search Input with icon prefix",
           "type-select": "Content type Select dropdown",
-          "namespace-select": "Namespace Select dropdown"
+          "source-select": "Source Select dropdown"
         }
       }
     },
     "with-results-count": {
-      "description": "Search bar with result count summary and active filter pills below.",
+      "description": "Search bar with result count summary for registry browsing.",
       "components": [
         "Input",
         "Select",
@@ -83,8 +84,8 @@
         "atoms": "_flex _col _gap3",
         "slots": {
           "search-row": "Search Input with filters",
-          "results-summary": "Result count text and active filter Badge pills with remove action",
-          "clear-all": "Clear all filters Button when filters are active"
+          "results-summary": "Result count text and source/sort controls",
+          "clear-all": "Optional reset action when filters are active"
         }
       }
     }
@@ -94,23 +95,24 @@
     "atoms": "_flex _col _gap4",
     "slots": {
       "search-row": "Search input with icon",
-      "filter-row": "Type tabs and namespace/sort dropdowns",
-      "active-filters": "Active filter badges"
+      "type-row": "Type tabs",
+      "meta-row": "Result count, source filter, and sort"
     }
   },
-  "visual_brief": "Two-row filter bar. The first row contains a search input with a magnifying glass icon on the left. The second row contains type filter tabs rendered as pill toggles, with secondary filters and sort controls aligned but not forced into one rigid strip. Active filter selections appear as removable chip badges below the bar. The compact preset combines search and filters into a single row. The with-results-count preset adds a 'Showing N results' label.",
+  "visual_brief": "Public registry filter bar with one clear purpose: help builders find the right Decantr starting point quickly. Search is the hero. Type tabs are distinct and color-coded. Source filtering is understandable to humans: Official, Community, Organizations. Sort remains available but visually secondary. The bar should feel premium, breathable, and unambiguous, not like an operator console.",
   "responsive": {
-    "mobile": "Search input full-width on its own row. Type tabs become a horizontal scrollable strip. Secondary controls stack or collapse rather than squeezing into fixed-width selects.",
-    "tablet": "Search and filters fit in two rows. Type tabs remain visible. Dropdowns can sit inline if space allows, otherwise wrap cleanly.",
-    "desktop": "Single or two row bar with all controls visible. Type tabs, namespace, and sort stay aligned without forcing one rigid toolbar width."
+    "mobile": "Search input full-width on its own row. Type tabs become a horizontal scrollable strip. Source and sort move into a collapsible filter surface instead of squeezing the main bar.",
+    "tablet": "Search and filters fit comfortably in stacked rows. Type tabs remain visible. Source filter can stay inline if space allows.",
+    "desktop": "Search, type tabs, source filter, and sort remain visible without feeling like one dense toolbar. Result count stays readable but subdued."
   },
   "layout_hints": {
-    "search_input": "Full-width search input with magnifying glass icon. On focus: border transitions to accent color. Placeholder: 'Search patterns, themes, blueprints...'",
-    "filter_tabs": "Type tabs below search: All, Patterns, Themes, Blueprints, Shells. Active tab uses primary bg with white text (pill shape). Inactive: ghost.",
-    "sort_dropdown": "Right-aligned sort: Relevance, Most Downloaded, Recently Updated, Name A-Z. Avoid fixed-width controls that crowd the row."
+    "search_input": "Full-width search input with magnifying glass icon. Placeholder should explicitly mention Decantr content types and app-starting intent.",
+    "filter_tabs": "Type tabs should use distinct type-linked treatments so all-type browsing is easy to parse at a glance. The patterns icon should read like a puzzle-piece rather than a generic component glyph.",
+    "source_filter": "Use human-facing source language: Official, Community, Organizations. Do not expose authored/benchmark/hybrid intelligence taxonomy here.",
+    "sort_dropdown": "Right-aligned sort with a restrained visual footprint. Keep sort available, but subordinate to search and content-type/source selection."
   },
   "composition": {
-    "SearchFilterBar": "Row(d-control, full-width) > [SearchInput(d-control, icon: search, real-time) + TypeTabs > Tab(d-interactive)[] + NamespaceSelect(d-control) + SortSelect(d-control)]",
-    "ActiveFilters": "Row(gap-2) > Chip(d-annotation, removable)[]"
+    "SearchFilterBar": "Stack > [SearchRow > SearchInput(d-control, icon: search) + TypeRow > TypeTabs(d-interactive)[] + MetaRow > [ResultCount + SourceFilter + SortSelect(d-control)]]",
+    "MobileFilters": "Surface(d-surface) > [SourceFilter + SortSelect]"
   }
 }

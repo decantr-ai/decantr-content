@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "registry-browser",
   "role": "primary",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "decantr_compat": ">=0.10.0",
   "name": "Registry Browser",
   "description": "Public content browsing for a design registry. Search, filter, and explore patterns, themes, blueprints, archetypes, and shells.",
@@ -39,11 +39,10 @@
       "id": "homepage",
       "default_layout": [
         "search-filter-bar",
-        "content-card-grid",
-        "kpi-grid"
+        "content-card-grid"
       ],
       "shell": "top-nav-main",
-      "notes": "Marketing landing for the registry. Hero with search, featured content grid, stats."
+      "notes": "Registry landing for builders. Hero search plus quick-start guidance, featured blueprints, and showcase-forward discovery."
     },
     {
       "id": "browse",
@@ -84,11 +83,11 @@
     }
   ],
   "page_briefs": {
-    "homepage": "Registry landing with prominent search, curated featured content, and concise live registry stats. Search is still the hero, but the page should feel editorial and intentionally spaced at every breakpoint, with one consistent public-shell inset rhythm.",
-    "browse": "Search-first browsing page. The filter bar stays responsive and high-signal: search remains full-width, type tabs can scroll, and secondary controls stack or collapse rather than squeezing. Cards emphasize title, description, and one trust summary instead of badge overload.",
-    "browse-type": "Filtered registry view for a specific supported content type. Same responsive search/filter rhythm as the main browse page, pre-filtered to the selected type. Cards keep type identity without growing denser or noisier.",
-    "detail": "Content detail page. Hero content is intent-first, with quick-start guidance and layered trust surfaces above the artifact viewer. Metadata chips stay subordinate to actions. The JSON/artifact surface keeps a padded frame and consistent x-axis rhythm.",
-    "profile": "Public profile showing avatar, username, bio, and published item count with the same curated shell spacing as the rest of the registry browser. Published content and activity surfaces should stack cleanly and never feel like standalone mini layouts."
+    "homepage": "Registry landing for app-builders. Search remains the hero, but the page should quickly orient users toward official blueprints, quick-start actions, and live showcases rather than analytics. Use one consistent public-shell inset rhythm and keep every section purposeful.",
+    "browse": "Search-first browsing page. The filter bar should expose search, type, source, and sort only. Cards should lead with title, type, description, and source line. Remove operator-facing trust chips from browse entirely and keep the layout calm, editorial, and easy to scan.",
+    "browse-type": "Filtered registry view for a single content type. Same search/source/sort rhythm as the main browse page, pre-filtered to the selected type. Type identity should remain strong without creating visual clutter.",
+    "detail": "Content detail page. Hero content is intent-first, with quick-start guidance, human-readable source identity, and trust surfaces that explain why an item matters. Recommendation, showcase, and verification signals belong here, not on browse cards.",
+    "profile": "Public profile showing avatar, username, bio, and published item count with the same curated shell spacing as the rest of the registry browser. Published content cards should match browse-card hierarchy, including thumbnail, type chip, source line, and simpler metadata."
   },
   "features": [
     "search",
@@ -105,7 +104,6 @@
       "detail-header": "^1.0.0",
       "json-viewer": "^1.0.0",
       "namespace-badge": "^1.0.0",
-      "kpi-grid": "^1.0.0",
       "activity-feed": "^1.0.0"
     },
     "styles": {}
