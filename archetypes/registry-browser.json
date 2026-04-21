@@ -39,10 +39,11 @@
       "id": "homepage",
       "default_layout": [
         "search-filter-bar",
+        "registry-discovery-cta-grid",
         "content-card-grid"
       ],
       "shell": "top-nav-main",
-      "notes": "Registry landing for builders. Hero search plus quick-start guidance, featured blueprints, and showcase-forward discovery."
+      "notes": "Registry landing for builders. Hero search plus a discovery CTA grid, featured blueprints, and showcase-forward discovery."
     },
     {
       "id": "browse",
@@ -83,7 +84,7 @@
     }
   ],
   "page_briefs": {
-    "homepage": "Registry landing for app-builders. Search remains the hero, but the page should quickly orient users toward official blueprints, quick-start actions, and live showcases rather than analytics. Use one consistent public-shell inset rhythm and keep every section purposeful.",
+    "homepage": "Registry landing for app-builders. Search remains the hero, but the page should quickly orient users toward official blueprints, discovery CTA cards, and live showcases rather than analytics. Quick-start actions should be visually strong, clearly interactive, and owned by a dedicated discovery pattern instead of page-local runtime styling. Use one consistent public-shell inset rhythm and keep every section purposeful.",
     "browse": "Search-first browsing page. The filter bar should expose search, type, source, and sort only. Cards should lead with title, type, description, and source line. Remove operator-facing trust chips from browse entirely and keep the layout calm, editorial, and easy to scan.",
     "browse-type": "Filtered registry view for a single content type. Same search/source/sort rhythm as the main browse page, pre-filtered to the selected type. Type identity should remain strong without creating visual clutter.",
     "detail": "Content detail page. Hero content is intent-first, with quick-start guidance, human-readable source identity, and trust surfaces that explain why an item matters. Recommendation, showcase, and verification signals belong here, not on browse cards.",
@@ -99,6 +100,7 @@
   "dependencies": {
     "patterns": {
       "search-filter-bar": "^1.0.0",
+      "registry-discovery-cta-grid": "^1.0.0",
       "content-card-grid": "^1.0.0",
       "content-detail-hero": "^1.0.0",
       "detail-header": "^1.0.0",

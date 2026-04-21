@@ -83,13 +83,13 @@
       "overflow_y": "auto",
       "padding": "clamp(1rem, 2vw, 1.5rem)",
       "atoms": "_flex _col _gap4 _p6 _overflow[auto] _flex1",
-      "note": "Scrollable content area below the nav bar. Public registry pages should use a consistent page max-width rhythm inside this region instead of page-local guesses."
+      "note": "Scrollable content area below the nav bar. Public registry pages should use a consistent page max-width rhythm inside this region instead of page-local guesses. When multiple editorial sections are stacked in the public registry shell, the shell owns inter-section spacing; do not stack shell gap on top of full default d-section padding."
     }
   },
   "guidance": {
     "section_label_treatment": "d-label",
     "section_density": "comfortable",
-    "shell_spacing": "Header, body, and footer share the same horizontal inset rhythm. Public pages should feel like one shell system, not separate handcrafted blocks.",
+    "shell_spacing": "Header, body, and footer share the same horizontal inset rhythm. Public pages should feel like one shell system, not separate handcrafted blocks. Editorial registry surfaces should use a compact shell-owned section rhythm rather than layering shell gap, d-section padding, and sibling section margins all at once.",
     "mobile_nav": "Below md, preserve brand + essential actions first and collapse or hide secondary links rather than squeezing the whole nav row."
   },
   "code": {
