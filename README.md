@@ -135,3 +135,7 @@ Themes include DNA-inference hints (`typography_hints`, `motion_hints`, `radius_
 Legacy note:
 - recipe metadata has been folded into themes and treatment-related fields
 - `recipe` is no longer an active top-level registry content type
+
+## License
+
+This repository is licensed under the MIT License. See [LICENSE](./LICENSE).

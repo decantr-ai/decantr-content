@@ -4,6 +4,13 @@
   "private": true,
   "type": "module",
   "description": "Official Decantr registry content — patterns, themes, blueprints, archetypes, shells",
+  "license": "MIT",
+  "homepage": "https://decantr.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decantr-ai/decantr-content.git"
+  },
+  "author": "Decantr AI",
   "scripts": {
     "registry:audit": "node scripts/audit-registry-drift.js",
     "registry:sync": "node scripts/sync-to-registry.js",
