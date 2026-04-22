@@ -94,5 +94,15 @@
     "traces",
     "service-map",
     "latency-analysis"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "fintech",
+      "carbon",
+      "neon-dark"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
 }

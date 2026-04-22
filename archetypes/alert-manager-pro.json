@@ -140,5 +140,15 @@
     "incidents",
     "rules",
     "on-call"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "fintech",
+      "carbon",
+      "neon-dark"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
 }

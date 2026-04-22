@@ -72,6 +72,11 @@
     "FaderWithMeters": "Container(relative) > [MeterBar(left) + ChannelFader(center) + MeterBar(right)]",
     "PluginSlots": "Stack > PluginSlot*(d-interactive, empty|filled)"
   },
+  "layout_hints": {
+    "channel_priority": "Each strip should read top-to-bottom as one coherent signal path so plugin, pan, mute/solo, fader, and metering feel structurally connected.",
+    "master_emphasis": "The master channel should stand out as the session summary without visually drowning out the individual stem strips.",
+    "scroll_behavior": "When the mixer overflows horizontally, channel width and meter readability should hold steady rather than collapsing into unreadable narrow strips."
+  },
   "accessibility": {
     "role": "region",
     "aria-label": "Multi-stem audio mixer",

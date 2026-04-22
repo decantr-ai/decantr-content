@@ -83,5 +83,16 @@
   "features": [
     "citations",
     "shepardize"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "counsel",
+      "paper",
+      "professional"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

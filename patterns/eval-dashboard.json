@@ -90,6 +90,11 @@
     "tablet": "Metric cards in a 2x2 grid. Test case table shows all columns with horizontal scroll for overflow. Diff view renders inline. Sparklines visible. Confusion matrix fits if categories are few, otherwise scrollable.",
     "desktop": "Full horizontal metric card row (4-5 across). Test case table with all columns visible without scroll. Diff view inline with generous width. Comparison preset shows side-by-side model columns comfortably. Hover tooltips on sparklines showing exact values per data point. Confusion matrix fully visible."
   },
+  "layout_hints": {
+    "metric_priority": "Lead with the health of the evaluation run first, then the case-by-case detail. The user should understand overall quality before they inspect individual failures.",
+    "table_role": "The test-case table is the diagnostic core. Diffs, filters, and comparisons should support it rather than fragmenting the surface.",
+    "comparison_read": "When comparing models, preserve a strong sense of shared inputs and evaluation criteria so the dashboard reads as one experiment."
+  },
   "motion": {
     "micro": {
       "metric-card-hover": "translateY(-2px) + shadow elevation increase 150ms ease-out",

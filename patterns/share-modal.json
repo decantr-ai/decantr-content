@@ -122,6 +122,25 @@
     "tablet": "Centered modal at 520px width. Standard tab navigation. Member list comfortable.",
     "desktop": "Centered modal at 560px width. Full tab layout. Member management with inline role selectors."
   },
+  "layout_hints": {
+    "sharing_priority": "Lead with the current resource context and the simplest sharing action first. Invite, link, and members tabs should feel like different lenses on the same access model, not separate tools.",
+    "tab_role": "Tabs should preserve a stable modal frame while changing only the relevant access workflow underneath.",
+    "member_clarity": "Current access state and pending invites should stay visually distinct so permission management feels trustworthy and easy to audit."
+  },
+  "motion": {
+    "micro": "Tab changes, invite success, and copy-link feedback may sharpen or fade subtly to confirm access actions.",
+    "transitions": "The modal should open and switch tabs smoothly enough to preserve context without feeling like a separate page navigation."
+  },
+  "accessibility": {
+    "role": "dialog",
+    "aria-label": "Share modal",
+    "keyboard": [
+      "Focus should move into the active share flow immediately, with tabs, invite fields, link controls, and member actions reachable in order."
+    ],
+    "announcements": [
+      "Resource name, active tab, pending invite state, and role changes should be communicated semantically so sharing state is understandable without relying on modal layout alone."
+    ]
+  },
   "composition": {
     "ShareModal": "Modal(d-surface, centered) > [Header + Tabs + TabContent]",
     "Header": "Row(space-between) > [Title(heading3) + CloseButton(d-interactive)]",

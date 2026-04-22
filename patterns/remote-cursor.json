@@ -77,5 +77,24 @@
     "mobile": "Cursors render smaller. Name tags use abbreviated first names. Extended preset falls back to minimal to save space.",
     "tablet": "Standard cursor size and name tags.",
     "desktop": "Full cursor visualization with smooth interpolation, name tags, and optional avatar in extended preset."
+  },
+  "layout_hints": {
+    "cursor_priority": "Location comes first, identity second. The cursor itself should remain the primary anchor, with labels supporting it without obscuring the document.",
+    "multi_cursor_readability": "When multiple cursors are present, keep labels compact and offset enough that collaborators do not visually collide into an unreadable cluster.",
+    "mobile_fallback": "On smaller screens, favor positional clarity over rich identity chrome so collaborative awareness remains useful without taking over the document."
+  },
+  "motion": {
+    "micro": "Cursor movement and label emphasis should remain smooth and subtle, reinforcing presence rather than drawing theatrical attention.",
+    "transitions": "Position interpolation should preserve locality and document context; avoid laggy or overshooting motion that makes collaboration feel imprecise."
+  },
+  "accessibility": {
+    "role": "status",
+    "aria-label": "Remote collaborator cursor",
+    "keyboard": [
+      "If collaborator presence is inspectable, keyboard access should move through presence summaries rather than attempting to focus every cursor overlay directly."
+    ],
+    "announcements": [
+      "Collaborator name and active editing position should be exposed semantically so remote presence remains understandable without the visual cursor overlay alone."
+    ]
   }
 }

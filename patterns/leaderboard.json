@@ -112,5 +112,24 @@
     "mobile": "Single-column list. Spotlight cards stack vertically. Avatars reduce to 32px. Score values right-aligned.",
     "tablet": "Spotlight top-3 in a horizontal row, remaining entries in a list below. Grid preset uses 2 columns.",
     "desktop": "Spotlight top-3 prominently displayed. Full list with generous spacing. Grid preset uses 3-4 columns."
+  },
+  "layout_hints": {
+    "rank_priority": "Position and score should be the first read, with avatar and display name supporting that ranking hierarchy.",
+    "spotlight_role": "Top entries may receive stronger treatment, but the ranked list should still feel like one coherent leaderboard rather than two disconnected components.",
+    "delta_signal": "Rank movement indicators should support the ranking read without becoming more visually prominent than the score itself."
+  },
+  "motion": {
+    "micro": "Hovered rows or cards may sharpen slightly, and rank-change indicators may brighten enough to confirm movement.",
+    "transitions": "Sorting or live rank updates should preserve orientation so users can follow position changes without the board feeling unstable."
+  },
+  "accessibility": {
+    "role": "list",
+    "aria-label": "Leaderboard",
+    "keyboard": [
+      "If entries are interactive, focus should move rank by rank in reading order."
+    ],
+    "announcements": [
+      "Rank, player or team name, score, and movement should be exposed semantically so leaderboard meaning does not depend on medal colors or layout treatment alone."
+    ]
   }
 }

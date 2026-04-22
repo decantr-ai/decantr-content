@@ -105,5 +105,16 @@
     "contracts",
     "redlining",
     "diffs"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "counsel",
+      "professional",
+      "paper"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

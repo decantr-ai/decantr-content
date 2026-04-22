@@ -64,6 +64,16 @@
     "tablet": "Two-column grid. Config form opens as a right-side panel (50% width) overlaying the grid. Comfortable card sizes with full icon and text visibility.",
     "desktop": "Three-column grid with generous card spacing. Config form opens as a slide-out panel from the right (400px fixed width) with the grid still visible and dimmed behind. Connection detail can show as a popover or the same slide-out panel."
   },
+  "layout_hints": {
+    "catalog_priority": "Lead with source identity and connection state first. Setup and detail panels should feel like progressive disclosure attached to the selected source rather than a separate admin surface.",
+    "status_clarity": "Connected, disconnected, and error states should remain immediately legible before the user reads any deeper configuration detail.",
+    "panel_attachment": "Config and connection-detail panels should feel physically tied to the selected source card so users never lose track of what they are editing."
+  },
+  "layout_hints": {
+    "catalog_priority": "Lead with source identity and connection state first. Setup and detail panels should feel like progressive disclosure attached to the selected source rather than a separate admin surface.",
+    "status_clarity": "Connected, disconnected, and error states should remain immediately legible before the user reads any deeper configuration detail.",
+    "panel_attachment": "Config and connection-detail panels should feel physically tied to the selected source card so users never lose track of what they are editing."
+  },
   "motion": {
     "micro": {
       "card-hover": "translateY(-2px) + shadow-md + border-color accent/30 150ms ease-out",

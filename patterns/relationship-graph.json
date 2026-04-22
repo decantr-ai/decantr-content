@@ -65,6 +65,11 @@
     "tablet": "Standard graph layout with touch support. Entity nodes at full size. Search overlay visible. Filter panel as a collapsible sidebar. Detail card slides in from the right at 300px width.",
     "desktop": "Full interactive graph with hover tooltips, drag-to-reposition nodes, and smooth force simulation. Search overlay and filter panel visible simultaneously. Detail card opens as a side panel without obscuring the graph. Zoom controls in the corner."
   },
+  "layout_hints": {
+    "graph_priority": "Entity relationships should be readable before peripheral controls. Search, filters, and detail panels support the network read but should not dominate it.",
+    "focus_logic": "When one entity is selected, the graph should clearly pivot around that entity so the user understands why other nodes are being emphasized or dimmed.",
+    "detail_attachment": "The side detail card should feel connected to the selected node and relationship context, not like a generic profile panel detached from the graph."
+  },
   "motion": {
     "micro": {
       "node-hover": "scale(1→1.15) + ring-glow 150ms ease-out",

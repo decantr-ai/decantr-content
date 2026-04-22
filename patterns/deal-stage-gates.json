@@ -51,6 +51,16 @@
     "tablet": "Horizontal layout maintained but gates compress to 140px wide with abbreviated stage names.",
     "desktop": "Full horizontal layout with all stages visible, hover interactions, and full stage names."
   },
+  "layout_hints": {
+    "stage_priority": "Stage progression should be the first read, with approvals and milestone dates supporting that path rather than competing with it.",
+    "connector_role": "Progress connectors must reinforce how far a deal has advanced without becoming louder than the gates themselves.",
+    "mobile_translation": "When stacked vertically, preserve the same stage-by-stage progression so the flow still reads as one gated process."
+  },
+  "layout_hints": {
+    "stage_priority": "Stage progression should be the first read, with approvals and milestone dates supporting that path rather than competing with it.",
+    "connector_role": "Progress connectors must reinforce how far a deal has advanced without becoming louder than the gates themselves.",
+    "mobile_translation": "When stacked vertically, preserve the same stage-by-stage progression so the flow still reads as one gated process."
+  },
   "motion": {
     "micro": {
       "active-gate-pulse": "outline glow 2s ease-in-out infinite on current gate",

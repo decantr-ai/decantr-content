@@ -61,6 +61,44 @@
     "tablet": "Three or four columns depending on content. Bottom bar stays horizontal. Comfortable spacing.",
     "desktop": "Full four-column grid with generous gap6 spacing. Bottom bar horizontal with logo left, social right. Full px6 py8 padding."
   },
+  "layout_hints": {
+    "footer_priority": "Column groupings and utility links should read clearly before social or decorative elements. The footer should feel like a calm endpoint to the page, not a second hero.",
+    "bottom_bar_role": "Brand, copyright, and social actions belong in a restrained support band beneath the primary link grid.",
+    "mobile_translation": "When stacked, preserve the same information hierarchy so the footer remains scannable rather than collapsing into a dense wall of links."
+  },
+  "motion": {
+    "micro": "Links and social icons may brighten or underline subtly on hover and focus.",
+    "transitions": "Footer interactions should feel calm and understated, reinforcing that this is a utility surface rather than a marketing flourish."
+  },
+  "accessibility": {
+    "role": "contentinfo",
+    "aria-label": "Site footer",
+    "keyboard": [
+      "Footer links and social actions should follow a predictable top-to-bottom, left-to-right reading order."
+    ],
+    "announcements": [
+      "Link group headings and their links should be exposed semantically so the footer remains navigable without relying on column layout alone."
+    ]
+  },
+  "layout_hints": {
+    "footer_priority": "Column groupings and utility links should read clearly before social or decorative elements. The footer should feel like a calm endpoint to the page, not a second hero.",
+    "bottom_bar_role": "Brand, copyright, and social actions belong in a restrained support band beneath the primary link grid.",
+    "mobile_translation": "When stacked, preserve the same information hierarchy so the footer remains scannable rather than collapsing into a dense wall of links."
+  },
+  "motion": {
+    "micro": "Links and social icons may brighten or underline subtly on hover and focus.",
+    "transitions": "Footer interactions should feel calm and understated, reinforcing that this is a utility surface rather than a marketing flourish."
+  },
+  "accessibility": {
+    "role": "contentinfo",
+    "aria-label": "Site footer",
+    "keyboard": [
+      "Footer links and social actions should follow a predictable top-to-bottom, left-to-right reading order."
+    ],
+    "announcements": [
+      "Link group headings and their links should be exposed semantically so the footer remains navigable without relying on column layout alone."
+    ]
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap8 _px6 _py8 _borderT",

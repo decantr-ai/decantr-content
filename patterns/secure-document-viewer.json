@@ -51,6 +51,16 @@
     "tablet": "Standard layout with slightly condensed control bar. Touch pinch-to-zoom enabled.",
     "desktop": "Full layout with all controls inline. Keyboard shortcuts for navigation and zoom enabled."
   },
+  "layout_hints": {
+    "document_priority": "The secured document itself is the primary surface. Watermarks, redactions, and audit cues should protect the content without obscuring normal reading more than necessary.",
+    "control_role": "Navigation, zoom, and guarded download controls belong in one compact strip above the page stack, not scattered around the viewer.",
+    "audit_visibility": "Audit and confidentiality signals should stay present and credible without overpowering the legal or review content."
+  },
+  "layout_hints": {
+    "document_priority": "The secured document itself is the primary surface. Watermarks, redactions, and audit cues should protect the content without obscuring normal reading more than necessary.",
+    "control_role": "Navigation, zoom, and guarded download controls belong in one compact strip above the page stack, not scattered around the viewer.",
+    "audit_visibility": "Audit and confidentiality signals should stay present and credible without overpowering the legal or review content."
+  },
   "motion": {
     "micro": {
       "page-change": "scroll-snap 200ms ease-out to new page",

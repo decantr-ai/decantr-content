@@ -89,5 +89,16 @@
   "features": [
     "matters",
     "billing-tracking"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "counsel",
+      "professional",
+      "paper"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

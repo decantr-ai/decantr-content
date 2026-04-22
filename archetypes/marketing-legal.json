@@ -71,5 +71,16 @@
   },
   "features": [
     "marketing"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "counsel",
+      "paper",
+      "editorial"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

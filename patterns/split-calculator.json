@@ -75,6 +75,11 @@
     "PresetButtons": "FlexRow > PresetButton*(d-control, outlined)",
     "TotalBadge": "Pill(d-annotation, state-colored) > [SumText + WarningIcon?]"
   },
+  "layout_hints": {
+    "allocation_priority": "Collaborator identity, role, and percentage share should read as one unit so users can audit ownership splits without scanning in multiple passes.",
+    "validation_prominence": "The running total and invalid-state warning should stay visible as supporting guidance without overpowering the row-by-row editing flow.",
+    "preset_behavior": "Preset actions should feel like quick starting points attached to the current split list, not a detached settings mode."
+  },
   "accessibility": {
     "role": "form",
     "aria-label": "Royalty split calculator",

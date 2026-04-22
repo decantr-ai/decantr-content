@@ -85,6 +85,16 @@
     "AvailabilityGrid": "Grid(d-surface, columns: 7|1) > DayColumn(d-data, sticky-header) > [DayLabel(d-annotation) + TimeSlot(d-interactive)[]]",
     "BookingConfirmation": "Card(d-surface, shadow-md) > [ProviderRow > [Avatar + Name] + Divider + DateLabel(d-data, bold) + TimeRange(d-data) + TimezoneLabel(d-annotation) + DurationBadge(d-annotation) + ConfirmButton(d-interactive, variant: primary, full-width) + CancelLink(d-interactive, text)]"
   },
+  "layout_hints": {
+    "calendar_priority": "Availability and selection state should be clear before provider metadata or secondary controls. The user should immediately understand when they can book.",
+    "confirmation_attachment": "The confirmation card should feel attached to the selected slot and provider rather than like a separate checkout surface.",
+    "mobile_fallback": "On small screens, preserve the same sense of temporal availability even when controls collapse and the grid becomes denser."
+  },
+  "layout_hints": {
+    "calendar_priority": "Availability and selection state should be clear before provider metadata or secondary controls. The user should immediately understand when they can book.",
+    "confirmation_attachment": "The confirmation card should feel attached to the selected slot and provider rather than like a separate checkout surface.",
+    "mobile_fallback": "On small screens, preserve the same sense of temporal availability even when controls collapse and the grid becomes denser."
+  },
   "accessibility": {
     "role": "application",
     "aria-label": "Booking calendar with time slot selection",

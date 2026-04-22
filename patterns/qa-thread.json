@@ -53,6 +53,16 @@
     "tablet": "Sidebar at 320px width. Standard layout with all elements visible.",
     "desktop": "Full sidebar at 380px or dedicated full-page layout. Keyboard shortcuts for navigation and reply."
   },
+  "layout_hints": {
+    "thread_priority": "Question, answer state, and assignee ownership should be visible before attachment or reply controls complicate the thread.",
+    "nesting_role": "Nested answers should feel structurally attached to the parent question so the conversation remains legible under review pressure.",
+    "sidebar_behavior": "In side-panel mode, the thread should feel anchored to the reviewed document rather than like a detached chat pane."
+  },
+  "layout_hints": {
+    "thread_priority": "Question, answer state, and assignee ownership should be visible before attachment or reply controls complicate the thread.",
+    "nesting_role": "Nested answers should feel structurally attached to the parent question so the conversation remains legible under review pressure.",
+    "sidebar_behavior": "In side-panel mode, the thread should feel anchored to the reviewed document rather than like a detached chat pane."
+  },
   "motion": {
     "micro": {
       "status-change": "chip color transition 200ms ease-out + check-icon draw",

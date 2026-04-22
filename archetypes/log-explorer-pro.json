@@ -92,5 +92,15 @@
     "search",
     "structured-queries",
     "context"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "fintech",
+      "carbon",
+      "neon-dark"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
 }

@@ -86,6 +86,11 @@
     "DeliveryDetail": "Panel(d-surface, inset, border-left: status-color, tabbed) > [RequestTab > [HeadersTable(d-data) + PayloadViewer(d-data, syntax-highlight: json)] + ResponseTab > [StatusCode(d-annotation, large) + HeadersTable + PayloadViewer] + TimelineTab > StatusTimeline(d-data, horizontal-steps)]",
     "StatusTimeline": "Row(d-data) > TimelineStep(d-annotation, connected-by-line)[]"
   },
+  "layout_hints": {
+    "delivery_priority": "Delivery state and endpoint identity should be visible before expanded payload detail. The row list is the primary operational surface; request/response panes are secondary inspection layers.",
+    "detail_paneling": "Expanded request, response, and timeline views should remain clearly tied to the active delivery row so debugging context is never lost.",
+    "live_mode": "When new deliveries stream in, preserve row stability and status visibility rather than letting the list jump around unpredictably."
+  },
   "accessibility": {
     "role": "table",
     "aria-label": "Webhook delivery log with payload inspection",

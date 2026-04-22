@@ -96,6 +96,16 @@
     "tablet": "Canvas supports touch pan and pinch zoom. Node palette as a collapsible left drawer (swipe from left edge). Toolbar remains at top. Property panel as a right drawer. Minimap visible in bottom-right. Port touch targets 36px minimum.",
     "desktop": "Full layout with persistent palette sidebar (collapsible), toolbar, minimap, and property panel. Mouse drag to pan, scroll to zoom. Hover states on ports and edges. Keyboard shortcuts fully active. Rubber-band multi-select with click-drag on empty canvas."
   },
+  "layout_hints": {
+    "canvas_priority": "The graph itself is the primary surface. Palette, toolbar, minimap, and property panel should support composition and inspection without competing with node readability.",
+    "node_hierarchy": "Node identity and connection points should be readable before configuration details. The property panel is where deeper editing belongs.",
+    "panel_rhythm": "Palette and property panel should feel like contextual side tools around one shared canvas, not like two separate applications framing it."
+  },
+  "layout_hints": {
+    "canvas_priority": "The graph itself is the primary surface. Palette, toolbar, minimap, and property panel should support composition and inspection without competing with node readability.",
+    "node_hierarchy": "Node identity and connection points should be readable before configuration details. The property panel is where deeper editing belongs.",
+    "panel_rhythm": "Palette and property panel should feel like contextual side tools around one shared canvas, not like two separate applications framing it."
+  },
   "motion": {
     "micro": {
       "port-hover": "scale(1→1.2) + glow(type-color) 150ms ease-out on port hover",

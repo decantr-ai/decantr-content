@@ -98,5 +98,15 @@
     "charts",
     "slo-tracking",
     "real-time"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "fintech",
+      "carbon",
+      "neon-dark"
+    ],
+    "modes": [
+      "dark"
+    ]
+  }
 }

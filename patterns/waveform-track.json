@@ -72,6 +72,11 @@
     "WaveformArea": "Container > [WaveformCanvas + RegionBlock* + BeatGrid + AutomationLane*]",
     "RegionBlock": "Overlay(absolute, d-interactive) > [ClipName + TrimHandles + FadeCurves]"
   },
+  "layout_hints": {
+    "timeline_priority": "Track controls should stay subordinate to the waveform timeline so clip timing, regions, and automation remain the primary editing signal.",
+    "header_density": "Mute, solo, arm, and gain controls should feel compact and studio-like without stealing horizontal space from the editable waveform canvas.",
+    "automation_attachment": "Automation lanes should feel structurally attached to the parent track and preserve timing alignment with the waveform above."
+  },
   "accessibility": {
     "role": "region",
     "aria-label": "Audio track",

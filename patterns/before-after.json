@@ -78,5 +78,24 @@
     "mobile": "Columns stack vertically — 'Without' section on top, 'With' section below. Mockup frames scale to full width. Label headers become more prominent to maintain the comparison narrative.",
     "tablet": "Side-by-side layout maintained with reduced mockup sizes. Gap between columns tightens.",
     "desktop": "Full two-column layout with generous spacing. Mockup frames at comfortable viewing size."
+  },
+  "layout_hints": {
+    "comparison_priority": "The contrast between drift and consistency should be obvious before the user studies individual frames. Column labels and overall left-right logic must stay unmistakable.",
+    "frame_rhythm": "Mockups should line up in a steady comparative rhythm so the viewer understands progression rather than seeing two unrelated stacks of cards.",
+    "mobile_translation": "When stacked, preserve the narrative order clearly so the user still reads the comparison as before-versus-after, not as two separate sections."
+  },
+  "motion": {
+    "micro": "Hovered frames may sharpen slightly and the active comparison side may brighten enough to reinforce the contrast.",
+    "transitions": "Any reveal or scroll-based entry should preserve the comparison frame rather than staggering the two sides independently."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Before and after comparison",
+    "keyboard": [
+      "If frames are interactive, focus should move through the comparison in a predictable without-first, with-second order."
+    ],
+    "announcements": [
+      "Column labels and the intended contrast between inconsistent and consistent states should be exposed semantically, not only through color or position."
+    ]
   }
 }

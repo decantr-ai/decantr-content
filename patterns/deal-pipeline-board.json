@@ -65,6 +65,11 @@
     "tablet": "Two to three columns visible at a time with horizontal scroll. Deal cards at full detail level. Drag-and-drop supported with touch. Stage headers remain sticky.",
     "desktop": "All stage columns visible simultaneously with horizontal scroll if needed. Full drag-and-drop with hover previews. Deal cards show all details including owner avatar and probability bar. Stage headers are sticky during vertical scroll within columns."
   },
+  "layout_hints": {
+    "pipeline_priority": "Stage progression is the primary read. Totals and card details should support the pipeline state rather than compete with the columns.",
+    "card_signal": "Each deal card should make amount, stage aging, and ownership obvious at a glance so movement decisions feel fast and confident.",
+    "mobile_translation": "When drag-and-drop collapses to explicit actions, preserve the same stage logic so mobile users still understand the board as a pipeline."
+  },
   "motion": {
     "micro": {
       "card-hover": "translateY(-2px) + box-shadow increase 150ms ease-out",

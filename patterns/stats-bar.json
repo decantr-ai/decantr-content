@@ -98,5 +98,24 @@
     "mobile": "Stats wrap to a 2x2 grid or become horizontally scrollable. Values remain large. Labels may abbreviate.",
     "tablet": "Single horizontal row with all stats visible. Comfortable spacing.",
     "desktop": "Full horizontal bar with generous spacing between stats. All labels fully spelled out."
+  },
+  "layout_hints": {
+    "summary_priority": "The value is the first read, then the label, then any trend. Keep that hierarchy stable across compact and highlighted variants.",
+    "bar_role": "This pattern is a concise summary surface. It should feel like one horizontal instrumentation band, not a row of unrelated mini-cards.",
+    "highlighted_variant": "When one metric is emphasized, it should still remain visually tied to the rest of the stats bar rather than breaking the row into separate modules."
+  },
+  "motion": {
+    "micro": "Trend arrows or highlighted metrics may sharpen subtly on hover or focus.",
+    "transitions": "Value or trend updates should remain crisp and low-noise so the stats bar continues to feel stable."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Statistics bar",
+    "keyboard": [
+      "If stats are interactive, focus should move through them in the same left-to-right order as the visual bar."
+    ],
+    "announcements": [
+      "Each stat's label, value, and trend should be exposed together so the summary remains understandable without divider lines or color cues."
+    ]
   }
 }

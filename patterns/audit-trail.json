@@ -88,6 +88,11 @@
     "DiffToggle": "Panel(d-data, expandable) > DiffTable(d-data, two-column) > DiffRow(field-label + before-value + after-value)[]",
     "FilterBar": "Row(d-control, flex-wrap) > [ActorFilter(d-control, searchable-dropdown) + ActionTypeFilter(d-control, multi-select-pills) + EntityTypeFilter(d-control, dropdown) + DateRangePicker(d-control) + SearchInput(d-control, text)]"
   },
+  "layout_hints": {
+    "timeline_priority": "Actor, action, target, and time should be readable in one scan before diffs or export tooling enter the picture.",
+    "diff_attachment": "Expanded diffs should feel attached to the specific log entry they explain, not like a detached secondary document.",
+    "filter_role": "Filters and export controls should support forensic inspection without drowning out the chronological audit log itself."
+  },
   "accessibility": {
     "role": "log",
     "aria-label": "Audit trail log with filtering and export",

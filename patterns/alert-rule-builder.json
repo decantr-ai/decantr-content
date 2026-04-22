@@ -83,6 +83,11 @@
       "threshold-glow": "subtle pulse on threshold line when value is near current metric reading"
     }
   },
+  "layout_hints": {
+    "rule_priority": "The user should be able to read rule logic top to bottom before thinking about nested complexity. Group hierarchy and AND/OR relationships must remain unmistakable.",
+    "edit_focus": "Row-level controls should support editing without overpowering the logic structure. Add/remove actions belong at the edge of the builder, not in the center of attention.",
+    "test_feedback": "Rule testing should feel attached to the current rule state, not like a separate diagnostics panel detached from the builder."
+  },
   "composition": {
     "RuleBuilder": "Container(d-section, flex-col, gap-4) > [RuleHeader(d-control) + RuleGroup*(d-surface) + TestSection(d-control)]",
     "RuleHeader": "Row(d-control) > [RuleNameInput + SeverityPills(d-interactive) + ChannelSelector]",

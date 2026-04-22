@@ -90,6 +90,16 @@
     "QuestionGroup": "Fieldset(d-data, flex-col, gap-6) > QuestionRow > [Label(semibold, required-asterisk?) + HelpText?(muted, text-sm) + Input(d-interactive, type-variant) + ConditionalBranch?(expandable) + ValidationError?(d-annotation, red)]",
     "ReviewPanel": "Container(d-surface, flex-col, gap-4) > ReviewSection(d-data, collapsible) > [SectionHeader > [SectionName + EditLink(d-interactive)] + AnswerTable(d-data, two-column) > AnswerRow > [QuestionLabel(muted) + AnswerValue]]"
   },
+  "layout_hints": {
+    "wizard_priority": "Step progress and the current question set should be obvious before secondary save or review chrome. The user should always know where they are in the process.",
+    "conditional_reveal": "Conditional branches should appear as a continuation of the current step, not like a different form dropped into the middle of the wizard.",
+    "review_phase": "Review mode should preserve the same section structure used during intake so users can reconcile answers without rebuilding the form mentally."
+  },
+  "layout_hints": {
+    "wizard_priority": "Step progress and the current question set should be obvious before secondary save or review chrome. The user should always know where they are in the process.",
+    "conditional_reveal": "Conditional branches should appear as a continuation of the current step, not like a different form dropped into the middle of the wizard.",
+    "review_phase": "Review mode should preserve the same section structure used during intake so users can reconcile answers without rebuilding the form mentally."
+  },
   "accessibility": {
     "role": "form",
     "aria-label": "Multi-step intake form wizard",

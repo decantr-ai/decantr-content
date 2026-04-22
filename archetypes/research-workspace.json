@@ -112,5 +112,16 @@
     "case-law",
     "citations",
     "research"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "counsel",
+      "paper",
+      "professional"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }
