@@ -133,5 +133,11 @@
       "auth-flow": ">=1.0.0",
       "settings": ">=1.0.0"
     }
-  }
+  },
+  "suggested_themes": [
+    "editorial",
+    "paper",
+    "clean",
+    "luminarum"
+  ]
 }

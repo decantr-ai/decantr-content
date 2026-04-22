@@ -86,6 +86,11 @@
     "mobile": "Use inline-flow or static-gauge preset. Radial preset requires minimum 160px container. FlowTrack particle count reduced for performance. FeedbackTooltip appears as a bottom sheet on tap rather than hover tooltip.",
     "tablet": "All presets available. Radial preset scales to container. Touch targets for tooltip activation are 44px minimum. Ambient preset works well as a page background on tablet."
   },
+  "layout_hints": {
+    "containment": "This pattern should read as one feedback instrument, not a general dashboard section. Parent layouts own outer spacing; the pattern owns the core/ring/track stack and any tooltip anchoring immediately around it.",
+    "signal_priority": "PulseCore establishes live state first, IntensityRing carries the stable metric read, and MetricDisplay confirms the exact value. FlowTrack should support the interpretation rather than competing with the primary metric.",
+    "ambient_usage": "Ambient preset is a surface treatment, not a layout wrapper. If used behind other content, keep foreground cards and labels on a separate readable layer so the feedback motion never becomes the structural container."
+  },
   "visual_brief": "Bio-mimetic circular visualization with a central PulseCore element that expands and contracts with breathing animation, its frequency mapped to processing state (slow idle pulse, rapid active pulse). Surrounding the core, an IntensityRing provides a clean circular gauge with fill level indicating the current metric value. FlowTrack renders directional particle animations flowing along arc paths to represent throughput. A MetricDisplay overlay shows the numeric value and label. The inline-flow preset linearizes the visualization as a horizontal pulsing bar. The ambient preset uses large subtle background pulses. Static-gauge renders as a simple circular progress ring without animation.",
   "motion": {
     "micro": {

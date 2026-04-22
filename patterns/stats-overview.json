@@ -81,6 +81,11 @@
     "tablet": "Three or four columns depending on stat count. Compact preset stays single row if 4 or fewer items. Standard padding.",
     "desktop": "Full single-row layout with all stats visible. Four columns standard. Highlighted preset shows featured stat at 2x width. Generous gap4 spacing."
   },
+  "layout_hints": {
+    "grid_ownership": "The pattern owns the internal stat grid only. Parent workspace or section patterns should provide the intro copy, surrounding card frame, and larger vertical rhythm.",
+    "card_balance": "Each stat card should keep label, value, and trend tightly grouped so the row scans left-to-right without extra decorative chrome. Trend indicators should support the value, not become a second headline.",
+    "highlighted_variant": "When using the highlighted preset, the featured stat may grow in prominence, but secondary stats should remain aligned as one coherent summary system rather than turning into unrelated cards."
+  },
   "motion": {
     "micro": "Stat values animate with counter effect (number rolls up from 0) over 800ms ease-out on viewport enter. Trend badges fade in after value completes.",
     "transitions": "Value text transitions smoothly on data change with 300ms ease. Trend arrow rotates on direction change."

@@ -79,7 +79,7 @@
     "meta_priorities": ["description", "og:title", "og:image"]
   },
   "navigation": {
-    "command_palette": false,
+    "command_palette": true,
     "hotkeys": [
       { "key": "g h", "route": "/", "label": "Go to Home" },
       { "key": "g b", "route": "/blog", "label": "Go to Blog" },
@@ -92,5 +92,11 @@
       "landing-resources": ">=1.0.0",
       "landing-legal": ">=1.0.0"
     }
-  }
+  },
+  "suggested_themes": [
+    "luminarum",
+    "launchpad",
+    "carbon",
+    "clean"
+  ]
 }

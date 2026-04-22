@@ -78,6 +78,11 @@
     "mobile": "Switches to compact semi-circular mode automatically. Suggestion chips render as a vertically scrollable list below the half-radar rather than on the arc. Touch-friendly chip sizes (min 44px tap target). Confidence arcs simplified to solid fills.",
     "tablet": "Full radial radar with slightly reduced radius. Suggestion chips remain on the outer ring but increase tap target size. Two-column chip overflow if more than 6 suggestions."
   },
+  "layout_hints": {
+    "container_rhythm": "Treat the radar as a single focal visualization region. Parent layouts own section spacing; this pattern owns only its square or semi-circular visualization frame and the immediate chip/action zone around it.",
+    "radial_hierarchy": "Keep radar-center visually dominant, suggestion rings secondary, and action-zone chips tertiary until confidence rises. The outer action ring should feel like the execution boundary, not a second unrelated toolbar.",
+    "compact_fallback": "When the pattern collapses to compact or inline modes, preserve the same semantic order: current query or intent core first, ranked suggestions second, execution affordances last. Do not let chip rows drift away from their associated confidence signal."
+  },
   "visual_brief": "Circular radial display with a glowing center point showing the current input query. Intent suggestion vectors radiate outward as labeled lines with lengths proportional to confidence scores. High-confidence suggestions appear closer to the edge with brighter colors; low-confidence ones are shorter and dimmer. SuggestionChip components sit at the end of each vector as clickable pill labels. The radar has subtle concentric circle gridlines. Compact preset renders as a smaller inline widget. The inline preset displays a horizontal confidence bar instead of the radial layout.",
   "motion": {
     "micro": {

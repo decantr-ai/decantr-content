@@ -92,6 +92,21 @@
       "shell": "centered",
       "archetype": "auth-full"
     },
+    "/mfa-setup": {
+      "page": "mfa-setup",
+      "shell": "centered",
+      "archetype": "auth-full"
+    },
+    "/mfa-verify": {
+      "page": "mfa-verify",
+      "shell": "centered",
+      "archetype": "auth-full"
+    },
+    "/phone-verify": {
+      "page": "phone-verify",
+      "shell": "centered",
+      "archetype": "auth-full"
+    },
     "/about": {
       "page": "about",
       "shell": "top-nav-footer",
