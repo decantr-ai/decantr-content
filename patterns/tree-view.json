@@ -98,5 +98,24 @@
     "mobile": "Tree takes full width. Touch targets enlarged. Deep nesting truncates with horizontal scroll. Checkbox preset uses larger checkboxes.",
     "tablet": "Standard tree layout. Comfortable node spacing for touch.",
     "desktop": "Full tree with all connectors rendered crisply. Keyboard navigation (arrow keys). Comfortable indentation."
+  },
+  "layout_hints": {
+    "hierarchy_priority": "Depth and parent-child relationships should remain obvious before metadata or action affordances. The structure is the primary content.",
+    "selection_clarity": "Expanded, collapsed, and selected states should stay visually distinct so users always know where they are in the tree.",
+    "dense_nesting": "When depth gets large, prefer scroll or truncation strategies that preserve hierarchy over squeezing every node into a flattened list."
+  },
+  "motion": {
+    "micro": "Expand/collapse indicators and selected nodes may sharpen or brighten subtly to confirm navigation state.",
+    "transitions": "Opening branches should feel quick and structural, preserving the user's sense of place within the hierarchy."
+  },
+  "accessibility": {
+    "role": "tree",
+    "aria-label": "Tree view",
+    "keyboard": [
+      "Arrow-key navigation, expansion, selection, and checkbox toggling should remain consistent with standard tree interaction patterns."
+    ],
+    "announcements": [
+      "Node name, depth, expanded state, and selection state should be exposed semantically so the tree remains understandable without ASCII connectors alone."
+    ]
   }
 }

@@ -50,6 +50,16 @@
     "tablet": "2-column grid. Flow preset maintains horizontal layout with wrap. Badges slightly reduced in size.",
     "desktop": "4-column grid with all hover states and badges at full size."
   },
+  "layout_hints": {
+    "shot_priority": "Shot identity, aspect ratio, and duration should be immediately legible. Transition or comparison signals support the shot read rather than replacing it.",
+    "flow_sequence": "The flow preset should emphasize editorial sequence and transition logic, not just spatial adjacency.",
+    "comparison_clarity": "When comparing shots, keep the selected pair visually tied together so users read them as alternatives rather than unrelated cards."
+  },
+  "layout_hints": {
+    "shot_priority": "Shot identity, aspect ratio, and duration should be immediately legible. Transition or comparison signals support the shot read rather than replacing it.",
+    "flow_sequence": "The flow preset should emphasize editorial sequence and transition logic, not just spatial adjacency.",
+    "comparison_clarity": "When comparing shots, keep the selected pair visually tied together so users read them as alternatives rather than unrelated cards."
+  },
   "motion": {
     "micro": {
       "card-hover": "translateY(-2px) + shadow-lift 180ms ease-out",

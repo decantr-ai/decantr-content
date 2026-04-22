@@ -168,7 +168,8 @@
   },
   "guidance": {
     "section_label_treatment": "d-label[data-anchor]",
-    "section_density": "compact"
+    "section_density": "compact",
+    "shell_spacing": "Workspace-aside owns the page-tree navigation width, the shared editor header, the main editor canvas spacing, and the right collaboration rail. Route content should not add extra full-page wrappers or duplicate shell padding; let the document body and collaboration aside stay distinct but coordinated."
   },
   "code": {
     "imports": "Target-specific imports vary. Translate the internal_layout contract into your framework's page tree nav, shared editor header, primary work region, and optional collaboration aside.",

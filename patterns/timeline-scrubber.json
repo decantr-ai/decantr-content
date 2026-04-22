@@ -50,6 +50,16 @@
     "tablet": "Standard layout with slightly reduced track heights (52px video, 40px audio). Touch-drag for scrubber and two-finger pinch for zoom.",
     "desktop": "Full layout with all controls visible and keyboard shortcuts enabled for playback and zoom navigation."
   },
+  "layout_hints": {
+    "playhead_priority": "The scrubber and time ruler should be the dominant orientation anchors. Tracks, keyframes, and markers all support that shared temporal frame.",
+    "track_hierarchy": "Video, audio, and annotation tracks should remain clearly separated so the user always understands what layer they are editing or reviewing.",
+    "zoom_discipline": "As zoom changes, maintain the relationship between ruler, markers, and media blocks instead of letting one layer drift out of sync with the others."
+  },
+  "layout_hints": {
+    "playhead_priority": "The scrubber and time ruler should be the dominant orientation anchors. Tracks, keyframes, and markers all support that shared temporal frame.",
+    "track_hierarchy": "Video, audio, and annotation tracks should remain clearly separated so the user always understands what layer they are editing or reviewing.",
+    "zoom_discipline": "As zoom changes, maintain the relationship between ruler, markers, and media blocks instead of letting one layer drift out of sync with the others."
+  },
   "motion": {
     "micro": {
       "scrubber-drag": "scrubber x-position follows pointer at 60fps with no easing",

@@ -88,5 +88,16 @@
   "features": [
     "scheduling",
     "calendars"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "carbon",
+      "luminarum",
+      "clean"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
 }

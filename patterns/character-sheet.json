@@ -50,6 +50,16 @@
     "tablet": "Standard detail layout with slightly reduced spacing. Grid preset shows 2 columns.",
     "desktop": "Full detail layout with all sections visible. Grid preset shows 3-4 columns."
   },
+  "layout_hints": {
+    "identity_priority": "The character avatar, name, and consistency score should establish identity first. Traits, references, and appearance history deepen that read rather than competing with it.",
+    "reference_role": "Reference imagery should feel like authoritative source material attached to the character, not a separate gallery detached from the core sheet.",
+    "consistency_signal": "Consistency score should read as a focused quality indicator beside the identity cluster, not as a generic KPI widget."
+  },
+  "layout_hints": {
+    "identity_priority": "The character avatar, name, and consistency score should establish identity first. Traits, references, and appearance history deepen that read rather than competing with it.",
+    "reference_role": "Reference imagery should feel like authoritative source material attached to the character, not a separate gallery detached from the core sheet.",
+    "consistency_signal": "Consistency score should read as a focused quality indicator beside the identity cluster, not as a generic KPI widget."
+  },
   "motion": {
     "micro": {
       "avatar-hover": "ring-glow intensify 200ms ease-out",

@@ -112,5 +112,24 @@
     "mobile": "Grid preset uses 2 columns. Block cards take full width if single. Values remain large for readability.",
     "tablet": "Grid uses 3 columns. Standard card sizes.",
     "desktop": "Grid uses 4 columns. Block preset shows full sparkline width. Comfortable spacing."
+  },
+  "layout_hints": {
+    "value_priority": "The metric value is the first read, then trend, then label context. Keep that hierarchy stable across inline, block, and grid variants.",
+    "threshold_clarity": "Color thresholds should support interpretation, but labels and trend indicators must still carry the meaning when color cannot.",
+    "grid_use": "Grid mode should present a family of metrics that still feel related and aligned, not a noisy dashboard of mixed instruments."
+  },
+  "motion": {
+    "micro": "Trend changes and threshold shifts may pulse or brighten subtly to acknowledge important state changes.",
+    "transitions": "Value updates should feel crisp and instrumentation-like rather than decorative or bouncy."
+  },
+  "accessibility": {
+    "role": "status",
+    "aria-label": "Metric gauge",
+    "keyboard": [
+      "If metrics are actionable, focus should move metric by metric in reading order without trapping users in decorative sparkline details."
+    ],
+    "announcements": [
+      "Metric label, current value, unit, and trend should be announced together so the gauge is meaningful beyond color or positioning."
+    ]
   }
 }

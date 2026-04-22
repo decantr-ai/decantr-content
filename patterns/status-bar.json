@@ -73,5 +73,24 @@
     "mobile": "Bar shows only essential items (mode, file name, line/col). Other items accessible via tap-to-expand. Font size slightly reduced.",
     "tablet": "Most items visible. Right-side items may overflow to a menu.",
     "desktop": "Full bar with all items visible in left, center, and right zones."
+  },
+  "layout_hints": {
+    "zone_priority": "Left, center, and right zones should remain stable and purposeful. Users should learn where to look for mode, context, and status without re-reading the bar every time.",
+    "density": "Keep the bar terse and information-rich. Each status item should earn its place and avoid reading like a decorative label cloud.",
+    "overflow_strategy": "On narrow widths, preserve critical mode and file context first and collapse the least essential items."
+  },
+  "motion": {
+    "micro": "Live status changes may brighten or pulse subtly, and clickable items may sharpen on hover or focus.",
+    "transitions": "Realtime updates should feel stable and instrumentation-like rather than flashy or banner-like."
+  },
+  "accessibility": {
+    "role": "status",
+    "aria-label": "Status bar",
+    "keyboard": [
+      "Status items that open menus or actions should be reachable in order without disrupting the primary workflow."
+    ],
+    "announcements": [
+      "Mode, position, encoding, and other state changes should be exposed semantically so the bar remains informative beyond visual placement."
+    ]
   }
 }

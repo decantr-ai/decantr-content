@@ -60,5 +60,24 @@
     "mobile": "Single-column list. Names and descriptions stack vertically per item. Full-width rows.",
     "tablet": "Two-column list if items fit. Comfortable row spacing.",
     "desktop": "Two-column grid with items distributed evenly. Hover effects visible. Full descriptions inline."
+  },
+  "layout_hints": {
+    "scan_priority": "Tool name comes first, then a short supporting description. The color dot and border are just enough to help scan, not enough to become the main content.",
+    "density": "This pattern is meant to be compact and text-forward. Keep rows tight and consistent so the list feels like a curated inventory rather than a card gallery.",
+    "column_balance": "In two-column layouts, maintain even visual weight between columns instead of letting one side become noticeably denser or longer."
+  },
+  "motion": {
+    "micro": "Rows may brighten slightly on hover and focused tool names may sharpen subtly for keyboard users.",
+    "transitions": "Filtering or list updates should preserve the sense of a stable catalog rather than reflowing with flashy animation."
+  },
+  "accessibility": {
+    "role": "list",
+    "aria-label": "Tool list",
+    "keyboard": [
+      "If items are interactive, focus should move tool by tool in reading order without exposing decorative accents as separate stops."
+    ],
+    "announcements": [
+      "Tool name and description should be exposed semantically so the list remains meaningful without relying on colored bullets or borders."
+    ]
   }
 }

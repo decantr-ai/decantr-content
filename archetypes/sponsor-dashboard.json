@@ -88,5 +88,16 @@
   "features": [
     "sponsors",
     "deals"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "carbon",
+      "luminarum",
+      "clean"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
 }

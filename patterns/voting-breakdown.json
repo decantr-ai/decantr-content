@@ -51,6 +51,16 @@
     "tablet": "Standard horizontal layout with condensed labels. Pie preset shows side-by-side.",
     "desktop": "Full layout with all elements visible and hover tooltips on bars showing detailed breakdown."
   },
+  "layout_hints": {
+    "results_priority": "Option labels, percentages, and counts should be readable in one quick scan before comments or demographic slicing deepen the interpretation.",
+    "toggle_role": "Demographic toggles should clearly frame how the data is being sliced without overshadowing the actual vote results.",
+    "comment_support": "Comment snippets are contextual evidence, not the main chart. Keep them visually subordinate to the tally bars."
+  },
+  "layout_hints": {
+    "results_priority": "Option labels, percentages, and counts should be readable in one quick scan before comments or demographic slicing deepen the interpretation.",
+    "toggle_role": "Demographic toggles should clearly frame how the data is being sliced without overshadowing the actual vote results.",
+    "comment_support": "Comment snippets are contextual evidence, not the main chart. Keep them visually subordinate to the tally bars."
+  },
   "motion": {
     "micro": {
       "bar-hover": "bar outline highlight + tooltip fade-in 150ms ease-out",

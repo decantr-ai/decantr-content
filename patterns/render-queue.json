@@ -50,6 +50,16 @@
     "tablet": "Standard list layout with full metadata. Cards preset shows 2 columns.",
     "desktop": "Full layout with all columns visible. Cards preset shows 3-4 columns."
   },
+  "layout_hints": {
+    "queue_priority": "Job status and progress should be the first read, followed by preview and actions. The queue should help operators understand what is blocked, running, or complete at a glance.",
+    "row_consistency": "Queued, active, failed, and complete jobs should preserve the same row structure so status differences feel semantic rather than like different components.",
+    "cards_variant": "Card mode should remain clearly a queue view, not drift into a generic media gallery. Progress and status must stay visible."
+  },
+  "layout_hints": {
+    "queue_priority": "Job status and progress should be the first read, followed by preview and actions. The queue should help operators understand what is blocked, running, or complete at a glance.",
+    "row_consistency": "Queued, active, failed, and complete jobs should preserve the same row structure so status differences feel semantic rather than like different components.",
+    "cards_variant": "Card mode should remain clearly a queue view, not drift into a generic media gallery. Progress and status must stay visible."
+  },
   "motion": {
     "micro": {
       "progress-shimmer": "gradient sweep 1.5s linear infinite during rendering",

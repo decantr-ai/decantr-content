@@ -52,6 +52,16 @@
     "tablet": "Standard card width up to container. All elements inline.",
     "desktop": "Max-width constrained card with full layout and hover interactions on share icons."
   },
+  "layout_hints": {
+    "petition_priority": "Lead with the cause, then signature momentum, then the action to sign. Trust and sharing cues support that primary conversion path.",
+    "progress_role": "The signature counter and progress bar should feel like social proof attached to the petition, not a generic campaign widget.",
+    "featured_variant": "Featured mode may scale the headline and progress treatment up, but it should still preserve the same sign-and-share hierarchy as the standard card."
+  },
+  "layout_hints": {
+    "petition_priority": "Lead with the cause, then signature momentum, then the action to sign. Trust and sharing cues support that primary conversion path.",
+    "progress_role": "The signature counter and progress bar should feel like social proof attached to the petition, not a generic campaign widget.",
+    "featured_variant": "Featured mode may scale the headline and progress treatment up, but it should still preserve the same sign-and-share hierarchy as the standard card."
+  },
   "motion": {
     "micro": {
       "sign-button-hover": "scale(1.02) + shadow-lift 150ms ease-out",

@@ -126,5 +126,24 @@
     "mobile": "Modal takes near-full screen. Shortcuts list scrolls vertically. Key badges remain readable. Search input at top for quick filtering.",
     "tablet": "Centered modal at 520px width. Standard layout with categories.",
     "desktop": "Centered modal at 600px width. Optional two-column layout for dense shortcut lists."
+  },
+  "layout_hints": {
+    "modal_priority": "Lead with the title and search first, then shortcut categories, then individual bindings. The user should find a shortcut quickly rather than admire the modal.",
+    "category_rhythm": "Categories should visually separate shortcut families without overwhelming the key/action pairs themselves.",
+    "terminal_tone": "Even in a terminal theme, the modal should feel readable and instructional before it feels atmospheric."
+  },
+  "motion": {
+    "micro": "Focused key rows and search affordances may sharpen subtly, and the overlay may confirm category filtering without heavy movement.",
+    "transitions": "Modal open and close should feel quick and utility-driven, preserving the sense of an ephemeral help overlay."
+  },
+  "accessibility": {
+    "role": "dialog",
+    "aria-label": "Keyboard shortcuts help",
+    "keyboard": [
+      "Focus should move into the search field or first shortcut row on open, and Escape should reliably close the dialog."
+    ],
+    "announcements": [
+      "Shortcut category, key combination, and action should be announced together so the help content is meaningful beyond visual keycap styling."
+    ]
   }
 }

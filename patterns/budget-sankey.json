@@ -50,6 +50,16 @@
     "tablet": "Full 3-column layout with slightly reduced label typography. Touch tap reveals tooltip.",
     "desktop": "Full flow layout with hover tooltips, highlighted flow interactions, and keyboard navigation through nodes."
   },
+  "layout_hints": {
+    "flow_priority": "The user should understand how money moves before reading every label. Preserve a clear left-to-right narrative from revenue to categories to line items.",
+    "node_balance": "Node labels and totals should support the flow structure without crowding the paths. Let the widths and positions carry the primary meaning.",
+    "mobile_fallback": "Two-column mode should still feel like a real budget flow explanation, not a simplified infographic detached from the full logic."
+  },
+  "layout_hints": {
+    "flow_priority": "The user should understand how money moves before reading every label. Preserve a clear left-to-right narrative from revenue to categories to line items.",
+    "node_balance": "Node labels and totals should support the flow structure without crowding the paths. Let the widths and positions carry the primary meaning.",
+    "mobile_fallback": "Two-column mode should still feel like a real budget flow explanation, not a simplified infographic detached from the full logic."
+  },
   "motion": {
     "micro": {
       "flow-hover": "opacity transition 150ms ease-out + dim siblings",

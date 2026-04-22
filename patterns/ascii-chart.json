@@ -111,5 +111,24 @@
     "mobile": "Chart width scales to container. Character count per row reduces. Sparkline preset preferred for inline metrics. Legend moves below chart.",
     "tablet": "Standard chart dimensions. Side legend if space allows.",
     "desktop": "Full-width charts with generous character grids. Legend renders beside the chart area."
+  },
+  "layout_hints": {
+    "chart_role": "This pattern is a terminal-native data summary. Keep labels, legend, and plot tightly coupled so the user reads it as one instrument rather than as styled text blocks.",
+    "character_density": "Preserve legibility of the character grid before adding extra annotations. On smaller widths, reduce series density rather than cramming more glyphs.",
+    "sparkline_use": "Sparkline mode should act as supportive inline telemetry, not as the primary analytical surface."
+  },
+  "motion": {
+    "micro": "Realtime updates may redraw or pulse subtly to indicate fresh data, but the chart should remain readable and stable.",
+    "transitions": "Data changes should feel like continuous terminal output rather than animated infographic motion."
+  },
+  "accessibility": {
+    "role": "img",
+    "aria-label": "ASCII chart",
+    "keyboard": [
+      "If the chart is interactive, keyboard focus should move to the chart summary or legend rather than each individual glyph."
+    ],
+    "announcements": [
+      "Expose chart title, series names, and key value summaries semantically so the visualization is not dependent on character art alone."
+    ]
   }
 }

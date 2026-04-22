@@ -50,6 +50,16 @@
     "tablet": "2-column grid. Detail sidebar collapses to bottom sheet on scene selection.",
     "desktop": "4-column grid (3-column for detail preset). Full hover interactions and drag reordering enabled."
   },
+  "layout_hints": {
+    "sequence_priority": "Scene order and narrative flow should remain obvious before note detail. The board should feel like a planning surface for sequence, not just a collection of thumbnails.",
+    "detail_attachment": "When a scene is selected, its notes or script should feel attached to that card and not like a separate disconnected editor.",
+    "strip_mode": "The strip preset should reinforce left-to-right narrative progression rather than behaving like a generic horizontal gallery."
+  },
+  "layout_hints": {
+    "sequence_priority": "Scene order and narrative flow should remain obvious before note detail. The board should feel like a planning surface for sequence, not just a collection of thumbnails.",
+    "detail_attachment": "When a scene is selected, its notes or script should feel attached to that card and not like a separate disconnected editor.",
+    "strip_mode": "The strip preset should reinforce left-to-right narrative progression rather than behaving like a generic horizontal gallery."
+  },
   "motion": {
     "micro": {
       "card-hover": "translateY(-2px) + shadow-lift 180ms ease-out",

@@ -59,7 +59,7 @@
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["GovernmentOrganization", "WebSite"], "meta_priorities": ["description", "og:image"] },
   "navigation": {
-    "command_palette": false,
+    "command_palette": true,
     "hotkeys": [
       { "key": "g e", "route": "/engage", "label": "Go to Engage" },
       { "key": "g b", "route": "/budget", "label": "Go to Budget" },

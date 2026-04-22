@@ -82,5 +82,16 @@
   "features": [
     "vod-review",
     "annotations"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "carbon",
+      "luminarum",
+      "clean"
+    ],
+    "modes": [
+      "dark",
+      "light"
+    ]
+  }
 }
