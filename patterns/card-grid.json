@@ -109,19 +109,41 @@
           "card-description": "Short description with _textxs _fgmuted"
         }
       }
+    },
+    "capability": {
+      "description": "Capability cards with icon, title, framing paragraph, and 2-4 supporting capability rows or badges. Grid: 1/2/3 cols with wider cards and calmer vertical rhythm.",
+      "components": [
+        "Card",
+        "CardHeader",
+        "CardBody",
+        "Badge",
+        "icon"
+      ],
+      "layout": {
+        "layout": "grid",
+        "atoms": "_grid _gc1 _md:gc2 _xl:gc3 _gap5",
+        "slots": {
+          "card-icon": "Category icon in a rounded accent-tinted circle or chip.",
+          "card-title": "Capability category title with heading-scale emphasis and room for two lines when needed.",
+          "card-description": "Short framing paragraph explaining the category or practice area.",
+          "card-supporting-list": "Inset vertical stack of 2-4 supporting capability rows, each with a label and optional proficiency badge."
+        }
+      }
     }
   },
-  "visual_brief": "Responsive grid of uniformly-sized cards with consistent gap spacing. Each card is a contained surface with subtle border or shadow, rounded corners (r3), and internal padding. Product preset: top image with fixed aspect ratio, title below in medium-weight text, price in bold heading style, star-rating row with filled/empty star icons, and a full-width add-to-cart button in the card footer. Content preset: thumbnail image, colored category badge, article title, two-line excerpt in muted small text, and an author row with avatar, name, and date. Cards maintain equal height within each row via grid stretch.",
+  "visual_brief": "Responsive grid of uniformly-sized cards with consistent gap spacing. Each card is a contained surface with subtle border or shadow, rounded corners (r3), and internal padding. Product preset: top image with fixed aspect ratio, title below in medium-weight text, price in bold heading style, star-rating row with filled/empty star icons, and a full-width add-to-cart button in the card footer. Content preset: thumbnail image, colored category badge, article title, two-line excerpt in muted small text, and an author row with avatar, name, and date. Capability preset: medium-width cards with a category icon, a strong title, one short framing paragraph, and an inset supporting list for two to four related capabilities or badges. Cards maintain equal height within each row via grid stretch when the preset is intended for comparable content density.",
   "layout_hints": {
     "card_surface": "Each item should feel like one coherent card surface. Do not wrap grid items in an extra shell-level d-surface if the pattern already provides the card treatment.",
     "description_clamp": "Allow enough room for meaningful summary copy. In most content grids, descriptions should get at least two to three lines before truncation.",
     "footer_rhythm": "Meta rows and CTA rows should align consistently across cards. Footers should not jump vertically between items in the same grid.",
-    "hover_behavior": "Use CSS-driven hover lift or media scaling rather than inline event handlers that mutate style values in component code."
+    "hover_behavior": "Use CSS-driven hover lift or media scaling rather than inline event handlers that mutate style values in component code.",
+    "icon_preset_scope": "The icon preset is intentionally compact. Use it for icon + title + short description only, not for longer body copy plus nested capability rows.",
+    "capability_preset_scope": "When a route needs richer category cards with supporting rows or badges, use the capability preset and keep the grid to one, two, or three columns rather than forcing a compact four-up layout."
   },
   "responsive": {
     "mobile": "Single column (1 card per row). Cards go full-width with larger touch targets. Image aspect ratio maintained. Gap reduces to gap3.",
-    "tablet": "Two columns for most presets. Collection preset stays at 2 columns. Gap at gap4. Cards maintain equal height per row.",
-    "desktop": "Three to four columns depending on preset. Product goes up to 4 columns at xl breakpoint. Content stays at 3. Icon preset reaches 4 columns. Full gap4-gap6 spacing."
+    "tablet": "Two columns for most presets. Collection preset stays at 2 columns. Gap at gap4. Cards maintain equal height per row. Capability preset remains at two columns to preserve room for supporting rows.",
+    "desktop": "Three to four columns depending on preset. Product goes up to 4 columns at xl breakpoint. Content stays at 3. Icon preset reaches 4 columns. Capability preset tops out at 3 columns so cards can hold a short paragraph plus supporting items without feeling squeezed."
   },
   "motion": {
     "micro": "Cards lift on hover with translateY(-2px) and increased shadow over 200ms ease. Image within card scales to 1.03 on hover with overflow hidden. Badge pulses subtly on new items.",
@@ -166,6 +188,7 @@
   "composition": {
     "CardGrid": "Grid(d-section, responsive: 1/2/3/4-col) > ProductCard[]",
     "ProductCard": "Card(d-surface, hoverable, lift-on-hover) > [Image(aspect-ratio) + Title(font-medium) + Price(heading4) + RatingRow > [StarIcon[] + CountBadge(d-annotation)] + CTAButton(d-interactive, full-width)]",
-    "ContentCard": "Card(d-surface) > [Thumbnail + CategoryBadge(d-annotation) + Title(heading4) + Excerpt(text-muted) + MetaRow > [AuthorAvatar + AuthorName + Date]]"
+    "ContentCard": "Card(d-surface) > [Thumbnail + CategoryBadge(d-annotation) + Title(heading4) + Excerpt(text-muted) + MetaRow > [AuthorAvatar + AuthorName + Date]]",
+    "CapabilityCard": "Card(d-surface, calmer-width) > [IconChip + Title(heading-scale) + Description(text-muted) + SupportingList(inset-stack) > CapabilityRow*(label + optional proficiency badge)]"
   }
 }

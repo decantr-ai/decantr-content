@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "decantr_compat": ">=1.5.0",
   "name": "Portfolio About",
-  "description": "Bio, skills, and contact pages for a personal portfolio. Professional yet personal presentation with skill badges and a contact form.",
+  "description": "Bio, skills, and contact pages for a personal portfolio. Professional yet personal presentation with capability cards and a split contact surface.",
   "tags": ["portfolio", "about", "bio", "skills", "contact", "2026"],
   "classification": {
     "triggers": {
@@ -35,11 +35,11 @@
       "patterns": [
         {
           "pattern": "card-grid",
-          "preset": "icon",
-          "as": "skill-grid"
+          "preset": "capability",
+          "as": "skill-capabilities"
         }
       ],
-      "default_layout": ["skill-grid"],
+      "default_layout": ["skill-capabilities"],
       "shell": "top-nav-main"
     },
     {
@@ -47,18 +47,18 @@
       "patterns": [
         {
           "pattern": "contact-form",
-          "preset": "standard",
-          "as": "contact"
+          "preset": "split",
+          "as": "contact-split"
         }
       ],
-      "default_layout": ["contact"],
+      "default_layout": ["contact-split"],
       "shell": "top-nav-main"
     }
   ],
   "page_briefs": {
     "about": "Brand hero with a strong personal photo, concise bio text, and a CTA to view work or get in touch. Clean layout with confident typography. Personal but professional tone.",
-    "skills": "Icon card grid displaying skill areas. Each card has an icon, skill name, and brief proficiency description. Cards are grouped by category (design, development, tools, etc.).",
-    "contact-page": "Clean contact form with name, email, and message fields. Optional social links displayed alongside. Minimal and inviting, encouraging visitors to reach out."
+    "skills": "Capability card grid displaying skill areas in one to three medium-width columns. Each card has a category icon, a strong title, a short framing paragraph, and a compact supporting list of two to four focused capabilities or proficiency badges. The page should feel editorial and airy, not like a dense dashboard widget wall.",
+    "contact-page": "Split contact surface with the primary form in the dominant column and a narrower companion panel for contact details, response expectations, and social links. The details panel stays top-aligned and compact rather than stretching to the full height of the form."
   },
   "features": ["contact-form", "social-links"],
   "shells": {
@@ -74,6 +74,6 @@
   },
   "suggested_theme": {
     "ids": ["auradecantism"],
-    "modes": ["dark", "light"]
+    "modes": ["dark"]
   }
 }

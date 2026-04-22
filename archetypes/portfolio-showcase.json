@@ -66,6 +66,6 @@
   },
   "suggested_theme": {
     "ids": ["auradecantism"],
-    "modes": ["dark", "light"]
+    "modes": ["dark"]
   }
 }
