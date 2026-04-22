@@ -80,6 +80,25 @@
     "tablet": "Metrics in a single row. Breakdowns side by side. Comparison table with horizontal scroll.",
     "desktop": "Full dashboard grid with all sections visible. Charts and tables at comfortable sizes."
   },
+  "layout_hints": {
+    "financial_story": "The pattern should read from summary health to income/expense explanation to property comparison. Preserve a clear story of profitability rather than a loose collection of finance widgets.",
+    "breakdown_role": "Income and expense panels should feel like explanatory companions to NOI and cash flow, not independent dashboards fighting for attention.",
+    "comparison_discipline": "Property-level comparisons belong after portfolio context is established so users can move from aggregate health into individual asset performance."
+  },
+  "motion": {
+    "micro": "Metric cards and chart controls may respond crisply on hover and focus, with restrained value or chart reveal behavior.",
+    "transitions": "Date-range or filter changes should preserve a sense of continuity in the financial story rather than making values feel unstable."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Profit and loss dashboard",
+    "keyboard": [
+      "Filters, summary cards, breakdown charts, and comparison surfaces should remain keyboard reachable in reading order."
+    ],
+    "announcements": [
+      "Portfolio-level revenue, expenses, NOI, and comparison context should be exposed semantically so the dashboard remains interpretable beyond chart visuals."
+    ]
+  },
   "composition": {
     "PnlDashboard": "Container(d-section, flex-col, gap-6) > [Header + SummaryCards + Breakdowns + PropertyComparison + Projections?]",
     "Header": "Row(d-control) > [Title + PropertyFilter(d-control) + DateRange(d-control) + ExportButton(d-interactive)]",

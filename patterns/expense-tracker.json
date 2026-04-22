@@ -98,6 +98,25 @@
     "tablet": "Table layout maintained with horizontal scroll for extra columns. Category bar fits in one row.",
     "desktop": "Full table with all columns visible. Category summary bar spans the top. Comfortable spacing."
   },
+  "layout_hints": {
+    "ledger_priority": "Lead with expense totals and category scanability, then the underlying records. Users should quickly understand where money is going before they inspect individual receipts.",
+    "form_transition": "Create and edit flows should feel like a continuation of the ledger, not a different application. Preserve category and property context around the form when possible.",
+    "summary_role": "The summary chart or category pills should support the table rather than compete with it as a separate analytics dashboard."
+  },
+  "motion": {
+    "micro": "Category filters and add-expense actions may sharpen slightly on hover. Status or receipt states may brighten enough to confirm selection or upload completion.",
+    "transitions": "Date-range and category filtering should preserve confidence in the ledger by updating smoothly without reordering the whole experience unexpectedly."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Expense tracker",
+    "keyboard": [
+      "Header actions, filters, category summaries, and expense records should remain reachable in a logical order."
+    ],
+    "announcements": [
+      "Expense amount, category, property, and receipt state should be exposed semantically so the ledger remains interpretable without color badges or table styling alone."
+    ]
+  },
   "composition": {
     "ExpenseTracker": "Container(d-section, flex-col, gap-4) > [Header + Filters + CategorySummary + ExpenseTable]",
     "Header": "Row(d-control, space-between) > [Title + DateRange(d-control) + AddButton(d-interactive)]",

@@ -110,6 +110,25 @@
     "tablet": "Standard card width. All elements in a comfortable layout. Pay button inline.",
     "desktop": "Card or inline banner. All information on one or two lines. Pay button on the right."
   },
+  "layout_hints": {
+    "urgency_priority": "The current payment state should be instantly legible before the user reads supporting details. Amount and due status must dominate the first scan.",
+    "banner_role": "This pattern is a contextual prompt, not a full financial dashboard. Keep it concise and attach it closely to the payment or tenant context it refers to.",
+    "state_translation": "Upcoming, due, overdue, and paid variants should all preserve the same structural rhythm so the status shift feels semantic rather than like a different component."
+  },
+  "motion": {
+    "micro": "Status tint and CTA may sharpen slightly on hover. Overdue states may carry a restrained emphasis, but the reminder should remain calm and actionable.",
+    "transitions": "State changes from upcoming to due or paid should feel clear and affirmative without becoming alarming or flashy."
+  },
+  "accessibility": {
+    "role": "status",
+    "aria-label": "Rent reminder",
+    "keyboard": [
+      "If a pay action is present, it should be reachable immediately after the reminder content in reading order."
+    ],
+    "announcements": [
+      "Due state, amount, and payment timing should be announced together so urgency is understandable without relying on color alone."
+    ]
+  },
   "composition": {
     "RentReminder": "Card(d-surface, tint: status) > [StatusIcon(color: status) + ReminderContent + PayAction]",
     "ReminderContent": "Stack(flex-col) > [Title(font-medium) + DueDate(d-annotation, mono-data) + Amount(heading3, mono-data) + Property?(text-muted)]",

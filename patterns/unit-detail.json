@@ -69,6 +69,25 @@
     "tablet": "Standard layout. Specs and tenant info side by side. Tabs in a row.",
     "desktop": "Full layout with specs, tenant card, and tabs all comfortably displayed."
   },
+  "layout_hints": {
+    "header_priority": "Lead with unit identity, occupancy state, and the most important operational actions. The user should understand whether the unit is occupied and healthy before reading deep history.",
+    "tab_discipline": "Rent history, maintenance, and documents are secondary exploration surfaces. Keep the active tab state strong and the shared unit context stable above them.",
+    "vacancy_translation": "When a unit is vacant, preserve the same structural rhythm as occupied states while swapping tenant context for a clear vacancy action path."
+  },
+  "motion": {
+    "micro": "Header actions and tab states may sharpen slightly on hover and focus. Vacancy or maintenance status indicators may draw gentle emphasis when needed.",
+    "transitions": "Switching between tabs should preserve the sense of remaining on the same unit, not feeling like a full page jump."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Unit detail",
+    "keyboard": [
+      "Header actions should precede tab controls, and tab panels should follow a predictable reading order."
+    ],
+    "announcements": [
+      "Unit identity, status, tenant context, and active tab should be communicated semantically so the page remains understandable without relying on visual arrangement alone."
+    ]
+  },
   "composition": {
     "UnitDetail": "Container(d-section, flex-col, gap-6) > [Header + Specs + CurrentTenant? + TabContent]",
     "Header": "Row(d-surface, space-between) > [UnitNumber(heading2) + StatusBadge(d-annotation) + ActionButtons(d-interactive)]",

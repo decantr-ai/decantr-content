@@ -66,6 +66,25 @@
     "tablet": "Standard form layout. Payment methods and upcoming payments visible together.",
     "desktop": "Comfortable form width. All sections visible. Payment methods in a clean list."
   },
+  "layout_hints": {
+    "setup_priority": "Lead with current payment readiness first: autopay state, active method, and next charge. Deeper method management should sit just below that primary understanding.",
+    "method_clarity": "Masked account identity, default state, and next payment context should be tightly grouped so users trust what will be charged and when.",
+    "mobile_sequence": "On small screens, keep autopay state, current method, and manual pay fallback in one simple vertical sequence rather than scattering them."
+  },
+  "motion": {
+    "micro": "Autopay toggles and payment-method selection may confirm state changes with restrained visual feedback.",
+    "transitions": "Adding or switching methods should feel trustworthy and deliberate, especially around sensitive payment information."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Tenant payment setup",
+    "keyboard": [
+      "Autopay controls, payment methods, and upcoming payment actions should proceed in a clear top-to-bottom order."
+    ],
+    "announcements": [
+      "Autopay state, default method, and next payment timing should be communicated semantically so the setup remains understandable without card or badge styling alone."
+    ]
+  },
   "composition": {
     "TenantPaymentSetup": "Container(d-section, flex-col, gap-6) > [PaymentMethods + AutopayToggle + UpcomingPayment]",
     "PaymentMethods": "Section(d-surface) > [MethodCard(d-surface, selectable)[] + AddMethodButton(d-interactive)]",

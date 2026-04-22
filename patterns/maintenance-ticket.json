@@ -123,6 +123,25 @@
     "tablet": "Standard layout with comfortable spacing. Photo gallery shows 2-3 thumbnails per row.",
     "desktop": "Full layout with details and timeline side by side. Photo gallery in a grid. All actions visible in a toolbar."
   },
+  "layout_hints": {
+    "ticket_priority": "Lead with the current state of the issue first: status, priority, property context, and the reported problem. Timeline, photos, and internal actions should deepen that understanding rather than compete with it.",
+    "create_vs_view": "Creation mode should emphasize clarity and reassurance for the reporter, while view/edit modes should emphasize operational tracking and ownership.",
+    "timeline_role": "Status history is supporting evidence of progress. Keep it structurally attached to the ticket rather than letting it feel like a separate activity feed."
+  },
+  "motion": {
+    "micro": "Status actions, attachments, and timeline states may sharpen slightly on hover or focus to clarify available controls.",
+    "transitions": "State changes and timeline expansion should feel direct and service-oriented rather than lively or decorative."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Maintenance ticket",
+    "keyboard": [
+      "Header actions, ticket fields, attachments, and timeline items should be reachable in a logical top-to-bottom order."
+    ],
+    "announcements": [
+      "Ticket title, status, priority, and property context should be exposed semantically so the repair state remains understandable without badge color alone."
+    ]
+  },
   "composition": {
     "MaintenanceTicket": "Container(d-section, flex-col, gap-4) > [Header + Details + PhotoGallery? + StatusTimeline + Assignment? + Actions]",
     "Header": "Row(d-surface) > [TicketID(mono-data) + Title + StatusBadge(d-annotation, color-coded) + PriorityBadge(d-annotation)]",

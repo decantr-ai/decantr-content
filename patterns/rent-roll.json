@@ -80,6 +80,25 @@
     "tablet": "Table with horizontal scroll if needed. Summary visible above. Comfortable row height.",
     "desktop": "Full table with all columns visible. Summary bar at top. Sticky header row."
   },
+  "layout_hints": {
+    "collection_priority": "Lead with expected, collected, and outstanding totals first, then the unit-by-unit ledger. Users should understand collection health before diving into individual rows.",
+    "row_discipline": "Each unit row should make rent status, balance, and occupancy state easy to scan without relying on color alone.",
+    "summary_role": "The summary bar supports the table as a high-level read, but the table remains the authoritative rent-roll record."
+  },
+  "motion": {
+    "micro": "Summary metrics and status badges may sharpen subtly on hover or focus. Export and month controls should respond crisply.",
+    "transitions": "Month or property changes should update the roll smoothly enough to preserve confidence in the ledger and totals."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Rent roll",
+    "keyboard": [
+      "Summary controls and the rent table should remain keyboard navigable in a predictable order."
+    ],
+    "announcements": [
+      "Expected rent, collected totals, balances, and payment status should be exposed semantically so the roll remains understandable without visual table formatting alone."
+    ]
+  },
   "composition": {
     "RentRoll": "Container(d-section, flex-col, gap-4) > [Header + SummaryMetrics + UnitTable + Totals]",
     "Header": "Row(d-control) > [Title + MonthSelector(d-control) + PropertyFilter(d-control) + ExportButton(d-interactive)]",

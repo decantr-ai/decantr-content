@@ -107,6 +107,25 @@
     "tablet": "Single-column feed with comfortable card widths. Filters visible in a row.",
     "desktop": "Feed constrained to a centered content column (680px). Grid preset uses two or three columns."
   },
+  "layout_hints": {
+    "feed_priority": "Author identity and content body come first, then engagement and gating states. The feed should feel editorial and sequential rather than like a dashboard of unrelated cards.",
+    "gate_discipline": "Locked or tier-gated items should preserve the same post hierarchy as unlocked posts so monetization reads as part of the feed, not a separate widget.",
+    "filter_role": "Filter tabs should act as a lightweight mode selector above the stream, not as a second navigation system."
+  },
+  "motion": {
+    "micro": "Feed cards, engagement controls, and gated overlays may respond subtly on hover and focus, while likes or unlock affordances may confirm interaction without breaking reading flow.",
+    "transitions": "Filter changes and content loading should preserve chronological continuity, with gentle entry or fade behavior rather than abrupt masonry reshuffles."
+  },
+  "accessibility": {
+    "role": "feed",
+    "aria-label": "Content feed",
+    "keyboard": [
+      "Feed items and their main actions should follow a clear top-to-bottom order, with comment and unlock actions reachable after the content."
+    ],
+    "announcements": [
+      "Author, timestamp, content type, and gated state should be exposed semantically so each post remains understandable without visual overlays alone."
+    ]
+  },
   "composition": {
     "ContentFeed": "Container(d-section, flex-col, centered) > [FilterTabs(d-control) + PostList + LoadMore?(d-interactive)]",
     "PostList": "List(flex-col, gap-6) > PostCard[]",

@@ -102,6 +102,25 @@
     "tablet": "Two-column card grid. Summary in a row. Filters visible. Table view has horizontal scroll.",
     "desktop": "Three-column card grid or full-width table. All summary, filters, and pagination visible."
   },
+  "layout_hints": {
+    "portfolio_priority": "Lead with portfolio-wide scanability first: summary metrics, active filters, then the properties themselves. The user should understand the state of the portfolio before diving into any one asset.",
+    "view_modes": "Cards, table, and map should preserve the same property hierarchy and filter context rather than feeling like unrelated screens.",
+    "toolbar_rhythm": "Search, filters, and add-property actions belong in one operational header band. Parent pages should not wrap this pattern in another competing control bar."
+  },
+  "motion": {
+    "micro": "View toggles and property cards may sharpen or lift subtly on hover. Filter chips or selectors should respond crisply without stealing attention from the portfolio items.",
+    "transitions": "Changing between card, table, and map modes should preserve orientation and current filter state rather than redrawing the whole surface abruptly."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Property portfolio",
+    "keyboard": [
+      "Header controls, filters, and property items should follow a predictable top-to-bottom, left-to-right order."
+    ],
+    "announcements": [
+      "Portfolio summaries, active filters, and individual property identity should be exposed semantically so the collection remains understandable beyond its visual layout."
+    ]
+  },
   "composition": {
     "PropertyGrid": "Container(d-section, flex-col, gap-6) > [Header + PortfolioSummary + Filters + PropertyItems + Pagination]",
     "Header": "Row(d-control, space-between) > [Title + AddPropertyButton(d-interactive) + ViewToggle(d-interactive)]",

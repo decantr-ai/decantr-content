@@ -91,6 +91,25 @@
     "tablet": "Standard layout with 32px avatars. Actions appear on hover/tap.",
     "desktop": "Full layout with 36px avatars, hover actions, and generous content width for code blocks."
   },
+  "layout_hints": {
+    "message_priority": "Lead with sender role and content first, with timestamp and actions clearly secondary. The bubble should feel like a communication artifact rather than a generic card.",
+    "role_clarity": "User, assistant, and system variants should preserve a stable reading pattern while making authorship obvious at a glance.",
+    "action_reveal": "Hover or long-press actions should support the message without disrupting the conversational flow or changing bubble geometry dramatically."
+  },
+  "motion": {
+    "micro": "Hover actions, copy affordances, and reaction states may fade or sharpen in gently around the message bubble.",
+    "transitions": "Streaming or appended assistant content should feel readable and calm, preserving message continuity rather than performing dramatic reveal animations."
+  },
+  "accessibility": {
+    "role": "article",
+    "aria-label": "Chat message",
+    "keyboard": [
+      "Message actions should be reachable after the message content in a predictable order."
+    ],
+    "announcements": [
+      "Sender role, timestamp, and message content should be exposed semantically so conversation flow remains understandable without relying on alignment alone."
+    ]
+  },
   "composition": {
     "ChatMessage": "Row(d-surface, align: role) > [Avatar? + MessageBody + Timestamp?(mono-data, text-xs)]",
     "MessageBody": "Bubble(d-surface, variant: role) > [SenderName?(font-bold, text-sm) + Content(markdown) + CodeBlock?(syntax-highlight, copy-button)]",

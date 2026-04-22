@@ -75,6 +75,25 @@
     "tablet": "Metrics in a row. Two-column card grid for vacant units.",
     "desktop": "Full dashboard panel with metrics bar, unit cards in a grid, and detailed pipeline indicators."
   },
+  "layout_hints": {
+    "vacancy_priority": "Lead with the cost and urgency of vacancy first: count, rate, days vacant, and lost revenue. Unit-level and applicant detail should support that portfolio read.",
+    "pipeline_context": "Applicant pipeline indicators should feel attached to each vacant unit so leasing momentum is easy to interpret at a glance.",
+    "dashboard_role": "This pattern is an operational monitoring surface. Keep the metrics and unit cards tightly coupled rather than letting the panel sprawl into separate analytics blocks."
+  },
+  "motion": {
+    "micro": "Vacancy status and pipeline indicators may brighten subtly on hover and focus, especially when a unit needs attention.",
+    "transitions": "Leasing-stage or vacancy-state changes should feel clear and professional, reinforcing operational continuity rather than gamified motion."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Vacancy tracker",
+    "keyboard": [
+      "Summary metrics, vacant unit rows or cards, and leasing actions should be reachable in a stable top-to-bottom order."
+    ],
+    "announcements": [
+      "Vacancy counts, days vacant, and applicant pipeline context should be exposed semantically so urgency is understandable without color or chart treatment alone."
+    ]
+  },
   "composition": {
     "VacancyTracker": "Container(d-section, flex-col, gap-4) > [MetricsRow + VacantUnitList + ApplicantPipeline?]",
     "MetricsRow": "Grid(d-data, responsive: 2/4-col) > [VacancyRate(d-surface, mono-data) + AvgDaysVacant(d-surface) + LostRevenue(d-surface, color: destructive)]",

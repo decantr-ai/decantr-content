@@ -86,6 +86,25 @@
     "tablet": "Two-column card grid or table with horizontal scroll. Filters visible.",
     "desktop": "Three-column card grid or full-width table. All summary, filters, and pagination visible."
   },
+  "layout_hints": {
+    "directory_priority": "Lead with tenant discoverability first: search, filters, and status summary, then the actual records. The pattern should help managers answer who is active, at risk, or needs attention quickly.",
+    "card_vs_table": "Card and table modes should preserve the same core tenant fields so switching views changes density, not meaning.",
+    "bulk_workflow": "If bulk actions are present, keep them clearly downstream of selection so the directory still reads as a stable list before it becomes an action surface."
+  },
+  "motion": {
+    "micro": "Search focus, row hover, and selection states may sharpen slightly. Bulk-selection or filter states may brighten enough to confirm changes without overwhelming the list.",
+    "transitions": "Filtering, sorting, and pagination should preserve list orientation and avoid dramatic layout jumps."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Tenant directory",
+    "keyboard": [
+      "Search, filters, summary controls, and tenant items should remain reachable in one clear reading order."
+    ],
+    "announcements": [
+      "Tenant identity, unit context, and status should be exposed semantically so both card and table variants remain understandable without visual styling alone."
+    ]
+  },
   "composition": {
     "TenantDirectory": "Container(d-section, flex-col, gap-4) > [Header + Filters + SummaryStats? + TenantList + Pagination]",
     "Header": "Row(d-control, space-between) > [Title + AddTenantButton(d-interactive) + ViewToggle(d-interactive)]",

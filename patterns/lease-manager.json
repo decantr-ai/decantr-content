@@ -97,6 +97,25 @@
     "tablet": "Standard layout with terms in a comfortable grid. Documents and actions visible without scrolling.",
     "desktop": "Full layout with generous spacing. Terms, documents, and actions all visible in a single view."
   },
+  "layout_hints": {
+    "contract_priority": "Lease identity and current legal state come first, followed by financial terms, documents, and lifecycle actions. The pattern should feel like a contractual control surface, not a generic settings form.",
+    "document_role": "Lease documents and amendments should feel like authoritative supporting material attached to the current lease state rather than just a file list.",
+    "summary_consistency": "Overview, edit, and summary variants should preserve the same lease vocabulary so moving between read and write modes does not shift the mental model."
+  },
+  "motion": {
+    "micro": "Action buttons and status affordances may sharpen slightly on hover. Amendment or document rows may reveal controls subtly when focused.",
+    "transitions": "Entering edit mode or expanding amendment history should preserve the sense of one evolving lease record rather than swapping to a separate tool."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Lease manager",
+    "keyboard": [
+      "Lease actions, term fields, and document rows should be reachable in the same top-to-bottom order in both overview and edit states."
+    ],
+    "announcements": [
+      "Lease status, dates, rent, and document context should be exposed semantically so the record remains understandable without relying on badge color or layout grouping alone."
+    ]
+  },
   "composition": {
     "LeaseManager": "Container(d-section, flex-col, gap-4) > [Header + Parties + Terms + Documents + Actions]",
     "Header": "Row(d-surface) > [LeaseID(mono-data) + StatusBadge(d-annotation)]",

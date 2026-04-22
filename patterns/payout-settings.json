@@ -98,6 +98,25 @@
     "tablet": "Method cards in a 2x2 grid. Standard form layout. History table visible.",
     "desktop": "Method cards in a single row. Account and schedule sections side by side. Full history table."
   },
+  "layout_hints": {
+    "payout_priority": "Lead with current payout method and schedule first so creators immediately understand how and when they get paid. History and deeper configuration are secondary.",
+    "trust_clarity": "Masked account identity, next payout timing, and payout state should stay visible and calm to reinforce confidence in the setup.",
+    "readonly_translation": "Readonly mode should preserve the same structural hierarchy as edit mode so reviewing payout settings never feels like a different component."
+  },
+  "motion": {
+    "micro": "Method selection and reveal toggles may confirm state changes subtly without making financial settings feel playful.",
+    "transitions": "Switching payout methods or schedules should feel deliberate and trustworthy, especially around sensitive banking information."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Payout settings",
+    "keyboard": [
+      "Method selection, account fields, schedule controls, and payout history should follow a clear top-to-bottom order."
+    ],
+    "announcements": [
+      "Current payout method, schedule, and payout status should be exposed semantically so the setup remains understandable without relying on card or badge styling alone."
+    ]
+  },
   "composition": {
     "PayoutSettings": "Container(d-section, flex-col, gap-6) > [MethodSelect + BankForm + ScheduleSection + PayoutHistory?]",
     "MethodSelect": "Row(d-control) > RadioCard(d-surface, icon, selectable)[]",

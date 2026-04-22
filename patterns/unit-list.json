@@ -74,6 +74,25 @@
     "tablet": "Two-column card grid or table with horizontal scroll.",
     "desktop": "Three-column card grid or full-width table with all columns visible."
   },
+  "layout_hints": {
+    "inventory_priority": "The user should be able to scan occupancy, rent, and tenant state for each unit quickly. Unit identity and status come first; detailed specs support that read.",
+    "grid_vs_table": "Card and table variants should preserve the same core fields so switching views does not change the mental model of the unit inventory.",
+    "summary_rhythm": "Keep the summary counts closely tied to the unit collection, not floating as a separate analytics block."
+  },
+  "motion": {
+    "micro": "Clickable cards or rows may lift or sharpen slightly on hover. Status badges may brighten subtly when filtered or selected.",
+    "transitions": "View or filter changes should maintain orientation within the unit list so users do not lose track of current inventory context."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Unit list",
+    "keyboard": [
+      "Header actions, summary controls, and unit items should follow a straightforward reading order."
+    ],
+    "announcements": [
+      "Unit number, occupancy state, tenant context, and rent should be exposed semantically so the inventory remains understandable in both card and table modes."
+    ]
+  },
   "composition": {
     "UnitList": "Grid(d-section, responsive: 1/2/3-col) > UnitCard[]",
     "UnitCard": "Card(d-surface, hoverable) > [UnitNumber(heading4) + SpecsRow > [Beds + Baths + SqFt(mono-data)] + TenantName?(font-medium) + Rent(mono-data) + StatusBadge(d-annotation, color: occupancy)]"

@@ -100,6 +100,25 @@
     "tablet": "Table with horizontal scroll. Search and primary filters visible. Checkboxes and bulk actions functional.",
     "desktop": "Full table with all columns visible. Filters, search, and bulk actions in a single toolbar row."
   },
+  "layout_hints": {
+    "list_priority": "Subscriber identity, tier, and lifecycle state should be easy to scan before bulk actions or export workflows enter the picture.",
+    "selection_discipline": "Bulk action controls should only rise in prominence once selection exists. Until then, the table remains the primary surface.",
+    "card_translation": "Card mode should preserve the same subscriber hierarchy as the table so mobile users do not lose account or tier context."
+  },
+  "motion": {
+    "micro": "Selected rows, status badges, and bulk actions may brighten subtly to confirm state changes.",
+    "transitions": "Filtering, sorting, and pagination should preserve orientation and list trust, especially for managers working through large subscriber sets."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Subscriber list",
+    "keyboard": [
+      "Search, filters, row selection, and per-subscriber actions should be reachable in a clear operational order."
+    ],
+    "announcements": [
+      "Subscriber name, tier, joined date, and status should be exposed semantically so both table and card variants remain understandable without relying on badge styling alone."
+    ]
+  },
   "composition": {
     "SubscriberList": "Container(d-section, flex-col, gap-4) > [Toolbar + SubscriberTable + Pagination + BulkActions?]",
     "Toolbar": "Row(d-control) > [SearchInput(d-control) + TierFilter(d-control) + StatusFilter(d-control) + ExportButton(d-interactive)]",

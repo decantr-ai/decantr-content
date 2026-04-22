@@ -104,6 +104,25 @@
     "tablet": "Standard drop zone size. File list shows medium thumbnails with inline progress.",
     "desktop": "Large drop zone with generous padding. File list shows large thumbnails and detailed file info."
   },
+  "layout_hints": {
+    "dropzone_priority": "The primary affordance is the upload target itself. Supporting file previews and action rows should reinforce confidence in what has been selected, not compete with the dropzone.",
+    "progress_clarity": "Upload state, file identity, and error or retry status should stay tightly grouped for each file so the user can resolve issues without scanning the whole surface.",
+    "single_vs_multi": "Single-file flows should emphasize preview and replacement, while multi-file flows should emphasize queue state and per-file progress."
+  },
+  "motion": {
+    "micro": "Drop targets may brighten on drag-over, and upload rows may sharpen or pulse subtly while active.",
+    "transitions": "File entry, progress updates, and completion states should feel confidence-building and calm, especially during longer uploads."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Content uploader",
+    "keyboard": [
+      "Browse, remove, retry, and upload actions should remain reachable in a straightforward order after the dropzone."
+    ],
+    "announcements": [
+      "Selected files, upload progress, completion, and error states should be exposed semantically so the workflow remains understandable without drag feedback alone."
+    ]
+  },
   "composition": {
     "ContentUploader": "Container(d-section, flex-col, gap-4) > [Dropzone + FileList + Actions]",
     "Dropzone": "Zone(d-surface, dashed-border, drop-target) > [CloudIcon + InstructionText + BrowseButton?(d-interactive)]",

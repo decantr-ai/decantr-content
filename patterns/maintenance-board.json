@@ -93,6 +93,25 @@
     "tablet": "Three visible columns with horizontal scroll for the rest. Cards at comfortable size for touch.",
     "desktop": "All columns visible in horizontal scroll or fixed layout. Drag-and-drop fully functional. Cards show all metadata."
   },
+  "layout_hints": {
+    "workflow_priority": "Status columns are the primary structure. Search, filters, and summary counts support triage but should never compete with the board itself.",
+    "card_signal": "Each ticket card should make priority, property, and current owner obvious at a glance so the board remains operationally useful under load.",
+    "mobile_translation": "When drag-and-drop collapses on mobile, preserve the same workflow semantics through explicit status actions instead of faking a tiny board."
+  },
+  "motion": {
+    "micro": "Dragged cards, hovered columns, and active filters may sharpen or lift slightly to confirm manipulation.",
+    "transitions": "Column moves and status changes should feel direct and workmanlike, reinforcing board continuity rather than playful motion."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Maintenance board",
+    "keyboard": [
+      "Column navigation, ticket focus, and non-drag status changes should remain operable by keyboard."
+    ],
+    "announcements": [
+      "Ticket title, priority, property, and status should be exposed semantically so the board remains understandable without color-only column meaning."
+    ]
+  },
   "composition": {
     "MaintenanceBoard": "Container(d-section, flex-col) > [Header + FilterBar(d-control) + KanbanColumns]",
     "Header": "Row(d-control, space-between) > [Title + SearchInput(d-control) + AddTicketButton(d-interactive)]",

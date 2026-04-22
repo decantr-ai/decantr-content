@@ -92,6 +92,25 @@
     "tablet": "Standard layout with scrollable tab bar. Gallery shows 3-4 thumbnails. Content area comfortable width.",
     "desktop": "Full layout with all tabs visible. Gallery shows full thumbnail row. Content area can show side-by-side panels within tabs."
   },
+  "layout_hints": {
+    "asset_priority": "Lead with the property's identity and health first: address, status, and key metrics. Tabs should deepen that understanding without displacing the core property context.",
+    "gallery_role": "Photos should support recognition and context, not take over the page. Keep the gallery clearly subordinate to the operational summary.",
+    "tabbed_depth": "Overview, units, financials, documents, and maintenance should feel like one connected asset record, not separate microsites."
+  },
+  "motion": {
+    "micro": "Photo thumbnails, actions, and tab states may sharpen subtly on hover and focus.",
+    "transitions": "Tab and gallery interactions should preserve place and asset identity rather than creating abrupt mode switches."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Property detail",
+    "keyboard": [
+      "Header actions, gallery controls, and tabs should appear before deeper property panels in keyboard order."
+    ],
+    "announcements": [
+      "Property name, status, address, and active tab context should be exposed semantically so the asset record remains understandable without relying on visual tab structure."
+    ]
+  },
   "composition": {
     "PropertyDetail": "Container(d-section, flex-col, gap-6) > [Header + Gallery + MetricsRow + TabContent]",
     "Header": "Row(d-surface, space-between) > [PropertyName(heading2) + Address(text-muted) + StatusBadge(d-annotation) + ActionButtons(d-interactive)]",

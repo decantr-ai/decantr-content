@@ -116,6 +116,25 @@
     "tablet": "Two-column card grid. Standard card proportions.",
     "desktop": "Three-column grid or list layout. Cards at comfortable size with all details visible."
   },
+  "layout_hints": {
+    "identity_priority": "Lead with tenant identity and current standing first, then property and lease context. Action buttons should support that understanding, not fight for attention.",
+    "variant_role": "Standard, compact, contact, and self variants should all preserve the same core tenant identity while changing emphasis based on workflow.",
+    "status_visibility": "Payment or lease standing should be visible without overwhelming the card. Keep status, contact, and unit context tightly grouped."
+  },
+  "motion": {
+    "micro": "Action buttons and status affordances may sharpen slightly on hover. Contact-focused variants may emphasize quick actions a bit more when focused.",
+    "transitions": "Card selection or status updates should feel steady and professional rather than social-feed-like."
+  },
+  "accessibility": {
+    "role": "group",
+    "aria-label": "Tenant summary",
+    "keyboard": [
+      "Tenant actions should be reachable after the core identity and status information in a predictable order."
+    ],
+    "announcements": [
+      "Tenant name, unit, lease context, and standing should be exposed semantically so the card remains informative beyond visual badges and layout."
+    ]
+  },
   "composition": {
     "TenantCard": "Card(d-surface, hoverable) > [Avatar(large) + TenantInfo + PaymentStatus + Actions]",
     "TenantInfo": "Stack(flex-col) > [Name(font-medium) + Property(text-muted) + Unit(text-muted) + LeaseEnd(d-annotation)]",

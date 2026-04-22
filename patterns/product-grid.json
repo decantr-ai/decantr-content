@@ -106,6 +106,25 @@
     "tablet": "Two-column grid. Filters visible in a row. Sort inline.",
     "desktop": "Three to four column grid. All filter and sort controls visible in the toolbar. Masonry layout effective at this width."
   },
+  "layout_hints": {
+    "catalog_priority": "Lead with discovery controls first, then the products themselves. The toolbar should support browsing without visually overpowering the merchandise.",
+    "view_consistency": "Grid, list, and masonry variants should preserve the same product identity and pricing hierarchy so mode switching changes density, not meaning.",
+    "empty_state_role": "No-results states should feel like browsing guidance, not a dead end. Keep them in the same rhythm as the catalog rather than replacing the whole surface with a different layout."
+  },
+  "motion": {
+    "micro": "Cards, filters, and load-more affordances may sharpen or lift subtly on hover and focus.",
+    "transitions": "Sorting, filtering, and view changes should preserve catalog continuity and avoid noisy reshuffles that break scanability."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Product catalog",
+    "keyboard": [
+      "Toolbar controls should precede products, and each product should expose one clear primary interaction target."
+    ],
+    "announcements": [
+      "Product identity, pricing, availability, and active filters should be exposed semantically so the catalog remains understandable beyond grid layout alone."
+    ]
+  },
   "composition": {
     "ProductGrid": "Container(d-section, flex-col, gap-6) > [Toolbar + ItemGrid + LoadMore?]",
     "Toolbar": "Row(d-control) > [FilterDropdowns > Select(d-control)[] + SortSelect(d-control) + ViewToggle(d-interactive)]",
