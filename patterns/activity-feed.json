@@ -97,6 +97,19 @@
     "micro": "Feed item rows highlight on hover with subtle background transition over 150ms. Action buttons in detailed preset scale on hover.",
     "transitions": "New activity items slide in from the top with 300ms ease-out translateY(-10px) to translateY(0) plus opacity 0 to 1. Staggered by 80ms per item when multiple arrive. Load-more items fade in from below."
   },
+  "accessibility": {
+    "role": "feed",
+    "aria-label": "Activity feed",
+    "keyboard": [
+      "Tab moves through feed items and inline actions in chronological order.",
+      "Load-more controls remain reachable after the newest visible group."
+    ],
+    "announcements": [
+      "New activity items should be announced without rereading the full feed.",
+      "Date group headers should remain semantically distinct from entries."
+    ],
+    "focus_management": "Do not steal focus when new events arrive. Preserve the reader's current position unless they explicitly choose to jump to the latest item."
+  },
   "default_layout": {
     "layout": "column",
     "atoms": "_flex _col _gap2 _w[100%]",

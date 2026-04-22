@@ -90,6 +90,11 @@
     ],
     "screen_reader": "aria-label on table describes content. aria-sort on sortable headers. Live region announces sort changes and selection count. Pagination uses nav with aria-label."
   },
+  "layout_hints": {
+    "toolbar_balance": "Search, filters, and bulk actions should feel like one operational control band, not several detached widgets.",
+    "row_density": "Keep row spacing scannable and consistent. Dense data tables should still preserve a clear visual rhythm and avoid accidental crowding.",
+    "mobile_fallback": "The card-list fallback should keep label-value semantics clear instead of becoming a generic stack of text."
+  },
   "default_layout": {
     "layout": "column",
     "atoms": "_flex _col _gap4 _w[100%] _overflow[auto]",

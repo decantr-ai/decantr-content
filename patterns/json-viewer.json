@@ -96,6 +96,23 @@
     "tablet": "Standard viewer width with a compact tab strip. Nodes expand to depth 3 by default and summary metrics stay visible without overwhelming the header.",
     "desktop": "Full viewer with comfortable width. Tabs, summary metrics, and copy actions all remain visible. Horizontal space accommodates deep nesting without crowding."
   },
+  "motion": {
+    "micro": "Copy actions, tab switches, and collapsible node toggles may animate subtly over 120-180ms. Avoid flashy motion inside code surfaces.",
+    "transitions": "Tab and artifact-state changes should cross-fade or slide minimally so the viewer remains trustworthy and stable."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "JSON contract viewer",
+    "keyboard": [
+      "Tab moves through tabs, copy actions, and expandable nodes.",
+      "Arrow keys may navigate tree nodes when the JSON body is rendered as an interactive tree."
+    ],
+    "announcements": [
+      "Copy success and tab changes should be announced clearly.",
+      "Artifact summary metrics should be available before the raw JSON body."
+    ],
+    "focus_management": "Keep focus stable when switching tabs or copying values, and do not drop keyboard users into the middle of a deep JSON tree unexpectedly."
+  },
   "composition": {
     "ArtifactViewer": "Panel(lum-code-block, stack, padded-frame) > [Toolbar + Tabs + SummaryStrip + JsonPane + Footer]",
     "Toolbar": "Row(d-data, compact) > [Title + SummaryBadges + ActionButtons]",

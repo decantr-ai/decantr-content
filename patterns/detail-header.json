@@ -100,10 +100,30 @@
     ]
   },
   "visual_brief": "Page header area with a breadcrumb navigation trail at the top, followed by a title row containing a large heading on the left and action buttons on the right. Below the title, a subtitle or description paragraph in muted text. An optional status badge appears inline next to the title. The profile preset adds an avatar to the left of the title. All elements are separated by consistent vertical spacing with a subtle bottom border below the entire header block.",
+  "layout_hints": {
+    "shell_alignment": "Treat detail-header as a section that sits inside the shell rhythm. It should not recreate shell-level page-width wrappers or duplicate breadcrumb bars already owned by the shell.",
+    "action_balance": "Action controls should support the title rather than overpower it. Keep the title as the primary visual anchor and use compact buttons for secondary actions.",
+    "status_badge": "Status indicators should read as supporting metadata and wrap gracefully below the title on narrow widths."
+  },
   "responsive": {
     "mobile": "Breadcrumb collapses to back arrow with parent name. Action buttons move below the title and stack full-width. Status badge wraps below the title on its own line.",
     "tablet": "Standard layout. Actions remain inline right of title. Breadcrumb shows full path.",
     "desktop": "Full header with all elements comfortably positioned. Generous whitespace above and below."
+  },
+  "motion": {
+    "micro": "Action buttons may use subtle hover and focus transitions. Status badges should remain visually stable rather than animate heavily.",
+    "transitions": "Detail headers can fade up softly with the page container, but avoid dramatic motion that competes with the title hierarchy."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Detail header",
+    "keyboard": [
+      "Tab moves through breadcrumbs and action buttons in reading order."
+    ],
+    "announcements": [
+      "The page title should be announced before supporting metadata and actions."
+    ],
+    "focus_management": "If a route change lands at a detail header, keep the heading reachable as an early focus destination and ensure breadcrumb links remain semantically distinct from actions."
   },
   "composition": {
     "DetailHeader": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + TitleRow + Subtitle?(text-muted)]",

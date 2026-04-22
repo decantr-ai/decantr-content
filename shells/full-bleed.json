@@ -85,11 +85,12 @@
   },
   "guidance": {
     "section_label_treatment": "d-label",
-    "section_density": "spacious"
+    "section_density": "spacious",
+    "shell_spacing": "Full-bleed shell owns floating header offsets and section stack rhythm. Pages should not add extra shell-width wrappers unless a route contract explicitly calls for a local reading measure or content column."
   },
   "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';",
-    "example": "function FullBleed({ children }) {\n  const { div, header, main, nav: navEl } = tags;\n\n  return div({ class: css('_flex _col') },\n    // Floating nav (absolute positioned over hero)\n    header({ class: css('_fixed _top0 _left0 _wfull _flex _aic _jcsb _px8 _py4 _z[40]') },\n      link({ href: '/', class: css('_heading5 _nounder _fgfg') }, 'Brand'),\n      navEl({ class: css('_flex _aic _gap6') })\n    ),\n    // Content sections \u2014 each section is full viewport height or auto\n    main({ class: css('_flex _col') },\n      ...children\n    )\n  );\n}"
+    "imports": "Target-specific imports vary. Translate the internal_layout contract into your framework's floating header, route outlet, and full-bleed section stack.",
+    "example": "FullBleedShell(root) -> FloatingHeader(brand, nav links, compact actions) + SectionStack(full-width sections with natural document scroll)"
   },
   "$schema": "https://decantr.ai/schemas/shell.v1.json"
 }

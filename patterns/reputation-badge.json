@@ -89,5 +89,20 @@
     "mobile": "Compact preset preferred. Badge renders inline at standard body text size.",
     "tablet": "Standard badge with icon, score, and label visible.",
     "desktop": "Full badge with progress indicator. Large preset with tooltip on hover."
+  },
+  "motion": {
+    "micro": "Level indicators and progress cues may brighten or animate softly on hover, but the badge should remain calm and compact.",
+    "transitions": "Score and level updates should cross-fade or count smoothly over 150-220ms without causing layout shift."
+  },
+  "accessibility": {
+    "role": "status",
+    "aria-label": "Reputation badge",
+    "keyboard": [
+      "If the badge exposes a tooltip or breakdown, keyboard users should be able to reveal it via focus and dismiss it via Escape."
+    ],
+    "announcements": [
+      "Score and trust level should be announced together rather than relying on color or iconography alone."
+    ],
+    "focus_management": "If the badge is interactive, preserve focus on the badge trigger when tooltips or detail popovers close."
   }
 }

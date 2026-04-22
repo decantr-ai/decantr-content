@@ -69,9 +69,31 @@
     }
   },
   "visual_brief": "Vertically stacked form with a header (title and short description), input fields for name, email, department dropdown, subject, and a multiline message textarea. An optional file attachment area with a paperclip icon sits below the textarea. A honeypot field is hidden from visual display. The submit button is primary-colored at the bottom. Success state replaces the form with a checkmark icon and confirmation message. Compact preset removes the department dropdown and attachment area. An optional contact-info sidebar shows phone, email, and address.",
+  "layout_hints": {
+    "field_grouping": "Keep related fields in a stable vertical rhythm and avoid splitting short contact forms into overly wide multi-column arrangements.",
+    "submit_zone": "The primary submit action should feel anchored to the end of the form, not float disconnected from the field stack.",
+    "success_state": "Success confirmation should replace or clearly supersede the form state so the user understands the submission is complete."
+  },
   "responsive": {
     "mobile": "Full-width form with stacked fields. Submit button goes full-width. Contact info section moves below the form. File attachment uses native file picker.",
     "tablet": "Form centered at 500px max-width. Contact info appears beside the form if space allows.",
     "desktop": "Form at 500px max-width centered or beside a contact info panel. Generous padding and spacing."
+  },
+  "motion": {
+    "micro": "Inputs and submit actions use calm hover and focus transitions. Attachment zones may highlight softly on drag-over.",
+    "transitions": "Validation and success states should fade or expand gently over 180-250ms without shifting the whole layout abruptly."
+  },
+  "accessibility": {
+    "role": "form",
+    "aria-label": "Contact form",
+    "keyboard": [
+      "Tab moves through fields, attachment controls, and submit actions in order.",
+      "Enter should submit only when the submit button or an intentional submit control is active."
+    ],
+    "announcements": [
+      "Validation errors should be announced with field-specific explanations.",
+      "Successful submission should be announced clearly."
+    ],
+    "focus_management": "Move focus to the first invalid field on failed validation, and move focus to the success confirmation heading or message after successful submission."
   }
 }

@@ -72,10 +72,31 @@
     }
   },
   "visual_brief": "Full-width call-to-action section with generous vertical padding (py12) and centered content. A bold heading2-scale headline sits at top, followed by a supporting paragraph in muted text constrained to 640px max-width for readability. Two CTA buttons arranged horizontally below — the primary button filled with brand color, the secondary as a ghost/outlined variant. The section background can carry a subtle gradient, pattern, or elevated surface treatment to stand out from adjacent content sections. The split preset places text and CTA on the left with an illustration or image on the right. The banner preset is a compact horizontal bar with accent background tint, text on the left and a single button on the right.",
+  "layout_hints": {
+    "shell_rhythm": "CTA sections should feel like a deliberate break in the page rhythm, but they still inherit the shell-owned width and spacing system. Do not add extra page wrappers around them.",
+    "cta_priority": "The primary CTA must be visually dominant, but secondary CTAs should still feel aligned and intentional rather than like an afterthought.",
+    "background_treatment": "Use a distinct but controlled background treatment so the CTA reads as a purposeful moment, not as a random card dropped into the page."
+  },
   "responsive": {
     "mobile": "Standard preset: content stacks vertically, full-width. CTA buttons stack vertically at full width. Split preset becomes single column with image below text. Banner preset wraps text and button vertically.",
     "tablet": "Standard stays centered. Split preset activates two-column grid. Banner remains horizontal. Padding adjusts to py8.",
     "desktop": "Full layout as designed. Standard centered with generous spacing. Split shows two-column with image. Banner compact and horizontal with accent background."
+  },
+  "motion": {
+    "micro": "CTA buttons may lift or brighten subtly on hover and focus, but the section itself should remain visually stable.",
+    "transitions": "CTA sections can fade or reveal softly with the page flow over 200-300ms, avoiding large parallax or attention-seeking animation.",
+    "ambient": "Background gradients or highlights may breathe very subtly, but should never distract from the headline and CTA group."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Call to action section",
+    "keyboard": [
+      "Tab moves through the CTA buttons in visual order."
+    ],
+    "announcements": [
+      "Headline and supporting copy should be announced before CTA buttons so the user understands the action context."
+    ],
+    "focus_management": "Do not trap focus in CTA groups. Buttons should remain easy to reach after preceding page content in normal reading order."
   },
   "default_layout": {
     "layout": "hero",

@@ -105,11 +105,28 @@
     "tablet": "Search and filters fit comfortably in stacked rows. Type tabs remain visible. Source filter can stay inline if space allows.",
     "desktop": "Search, type tabs, source filter, and sort remain visible without feeling like one dense toolbar. Result count stays readable but subdued."
   },
+  "motion": {
+    "micro": "Tabs, chips, and filter controls may animate lightly on hover and selection, but search remains the dominant visual action.",
+    "transitions": "Filter-surface expansion, chip removal, and result-state updates should animate over 150-240ms without making the bar feel operator-heavy."
+  },
   "layout_hints": {
     "search_input": "Full-width search input with magnifying glass icon. Placeholder should explicitly mention Decantr content types and app-starting intent.",
     "filter_tabs": "Type tabs should use distinct type-linked treatments so all-type browsing is easy to parse at a glance. The patterns icon should read like a puzzle-piece rather than a generic component glyph.",
     "source_filter": "Use human-facing source language: Official, Community, Organizations. Do not expose authored/benchmark/hybrid intelligence taxonomy here.",
     "sort_dropdown": "Right-aligned sort with a restrained visual footprint. Keep sort available, but subordinate to search and content-type/source selection."
+  },
+  "accessibility": {
+    "role": "search",
+    "aria-label": "Search and filter bar",
+    "keyboard": [
+      "Tab moves from search input to tabs to source and sort controls in logical order.",
+      "Arrow keys may move between tab-style filters when implemented as a tab list."
+    ],
+    "announcements": [
+      "Active filters, source selection, and sort changes should be announced clearly.",
+      "Result count updates should remain available without depending on purely visual placement."
+    ],
+    "focus_management": "Opening mobile filter surfaces should move focus into the filter panel and return it to the invoking control on close."
   },
   "composition": {
     "SearchFilterBar": "Stack > [SearchRow > SearchInput(d-control, icon: search) + TypeRow > TypeTabs(d-interactive)[] + MetaRow > [ResultCount + SourceFilter + SortSelect(d-control)]]",

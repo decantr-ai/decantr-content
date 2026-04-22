@@ -51,10 +51,25 @@
     "tablet": "Two-column layout when space allows. Cards keep even height and a clear action zone at the bottom.",
     "desktop": "Three-column editorial grid with balanced card height, stronger hover treatment, and CTA rails aligned along the bottom edge."
   },
+  "motion": {
+    "micro": "Discovery cards may lift slightly and brighten their accent treatment on hover. CTA rails should respond clearly on hover and focus with a directional sense of momentum.",
+    "transitions": "Grid cards may reveal with a short stagger or fade-up sequence, but the surface should still feel curated rather than animated for its own sake."
+  },
   "layout_hints": {
     "card_structure": "Use one visual lane per card: icon + eyebrow at the top, narrative in the middle, action rail at the bottom. Avoid chip clouds, diagnostics, or inline metadata.",
     "cta_treatment": "CTA rails should be explicit actions with iconography and supporting hint copy. Prefer directional arrow or external-link affordances over plain text-only links.",
     "tone_mapping": "Each discovery card can use its own accent family so the user can quickly parse blueprint-first vs showcase-first vs registry-wide exploration."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Registry discovery actions",
+    "keyboard": [
+      "Tab moves through discovery CTAs in card order."
+    ],
+    "announcements": [
+      "Card title, supporting narrative, and CTA intent should be available without relying on color or hover effects."
+    ],
+    "focus_management": "Each discovery card should expose a clear focusable CTA rather than forcing keyboard users to parse the whole card surface as one unlabeled block."
   },
   "composition": {
     "RegistryDiscoveryCtaGrid": "Grid(1/2/3-col responsive) > DiscoveryCard[]",

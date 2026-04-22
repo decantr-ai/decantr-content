@@ -90,11 +90,12 @@
   },
   "guidance": {
     "section_label_treatment": "d-label",
-    "section_density": "comfortable"
+    "section_density": "comfortable",
+    "shell_spacing": "Minimal-header owns the narrow work-column rhythm and the body inset. Route content should fill the provided centered column rather than layering an extra max-width wrapper on top."
   },
   "code": {
-    "imports": "import { tags } from 'decantr/tags';\nimport { css } from 'decantr/css';\nimport { link } from 'decantr/router';\nimport { icon } from 'decantr/components';",
-    "example": "function MinimalHeader({ brand, children }) {\n  const { div, header, main } = tags;\n\n  return div({ class: css('_flex _col _h[100vh]') },\n    // Slim header\n    header({ class: css('_flex _aic _jcc _py3 _borderB') },\n      link({ href: '/', class: css('_flex _aic _gap2 _nounder _fgfg') },\n        icon('arrow-left'),\n        brand\n      )\n    ),\n    // Centered main content\n    main({ class: css('_flex _col _aic _overflow[auto] _flex1 _py8') },\n      div({ class: css('_w[720px] _mw[100%] _px4 _flex _col _gap6') },\n        ...children\n      )\n    )\n  );\n}"
+    "imports": "Target-specific imports vary. Translate the internal_layout contract into your framework's compact header bar and single scrollable body region.",
+    "example": "MinimalHeaderShell(root) -> Header(title, minimal actions) + Body(shared insets, sole scroll container)"
   },
   "$schema": "https://decantr.ai/schemas/shell.v1.json"
 }

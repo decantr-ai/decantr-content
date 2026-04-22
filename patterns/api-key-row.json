@@ -80,11 +80,28 @@
     "tablet": "Standard row or card-list layout is acceptable, but metadata should wrap before the key row overflows.",
     "desktop": "Full row layout with clear separation between key info, scopes, dates, and actions."
   },
+  "motion": {
+    "micro": "Copy and revoke controls may brighten or lift subtly on hover and focus, but the row itself should remain operational and stable.",
+    "transitions": "Reveal, creation-banner, and revoked-state changes should animate softly over 150-220ms without shifting the table rhythm."
+  },
   "layout_hints": {
     "row_layout": "Key icon (16px, muted) + key name + masked value + scope badges + date metadata + actions. On narrow widths, collapse into stacked cards before the metadata starts crowding.",
     "reveal": "Click masked value to reveal for 5 seconds, then re-mask. Copy button copies full key.",
     "create_form": "Inline form at top: text input for key name + scope controls + Create button (primary). Appears on 'New API Key' click.",
     "creation_banner": "After key creation, surface a prominent one-time reveal banner with copy action and dismissal control. This banner should feel like a temporary alert card, not just a paragraph."
+  },
+  "accessibility": {
+    "role": "row",
+    "aria-label": "API key entry",
+    "keyboard": [
+      "Tab moves through reveal, copy, revoke, and scope controls in row order.",
+      "Keyboard users should be able to reveal and copy keys without relying on hover-only UI."
+    ],
+    "announcements": [
+      "One-time key creation and reveal states should be announced clearly.",
+      "Revocation outcomes should be announced explicitly."
+    ],
+    "focus_management": "Keep focus on the row or invoked action after copy or reveal events so the user does not lose context."
   },
   "composition": {
     "ApiKeyWorkspace": "Stack > [WorkspaceHeader + CreatePanel? + CreationBanner? + ApiKeyRow[]]",

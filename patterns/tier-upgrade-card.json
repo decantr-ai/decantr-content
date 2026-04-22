@@ -108,10 +108,26 @@
     "tablet": "Two-column or auto-fit comparison. Cards should never shrink below comfortable reading width.",
     "desktop": "Auto-fit comparison layout with generous feature spacing. Avoid hardcoded column counts when more plans are present."
   },
+  "motion": {
+    "micro": "Highlighted or recommended plans may use subtle border and shadow emphasis on hover, while current-plan states remain calm and stable.",
+    "transitions": "Billing-state and current-plan changes should animate softly over 150-220ms without causing the comparison grid to shift."
+  },
   "layout_hints": {
     "card_treatment": "Current plan highlighted with a distinct active treatment and a clear 'Current' badge. Recommended upgrade options should feel stronger than generic cards and should not rely on generic ghost-button treatment for their main CTA.",
     "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color. Use staged or auto-fit columns, never a rigid four-up grid.",
     "cta_treatment": "The upgrade/manage action should always read as a decisive billing action. Current-plan state should still preserve a stable button/action slot so the card rhythm does not collapse."
+  },
+  "accessibility": {
+    "role": "article",
+    "aria-label": "Upgrade tier card",
+    "keyboard": [
+      "Tab moves through the plan CTA and any supporting links in card order."
+    ],
+    "announcements": [
+      "Current plan and recommended-plan states should be announced semantically rather than through color alone.",
+      "Feature availability should be conveyed in text, not only in checkmark icons."
+    ],
+    "focus_management": "Keep focus on the active plan CTA or selected comparison state when billing controls update."
   },
   "composition": {
     "TierUpgradeCard": "Card(d-surface, bordered) > [CardHeader > [PlanName(heading4) + PopularBadge?(d-annotation)] + Price(mono-data, heading2) + Description(text-muted) + FeatureList + CTAButton]",

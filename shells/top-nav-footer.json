@@ -67,7 +67,8 @@
     "section_labels": "Section overline labels use d-label for uppercase, accent-colored headers with density-responsive spacing.",
     "section_label_treatment": "d-label",
     "section_density": "comfortable",
-    "cta_sections": "CTA sections at the bottom of marketing pages should stand out visually \u2014 subtle background gradient or glass effect, not just a plain card."
+    "cta_sections": "CTA sections at the bottom of marketing pages should stand out visually \u2014 subtle background gradient or glass effect, not just a plain card.",
+    "shell_spacing": "Header, body sections, and footer should feel like one coherent public shell. Let the shell own horizontal inset rhythm and footer spacing instead of layering extra page-local wrappers."
   },
   "internal_layout": {
     "root": {

@@ -52,10 +52,30 @@
     }
   },
   "visual_brief": "Settings panel showing active login sessions. The current session is highlighted at the top with a 'Current Session' badge, showing device name (e.g., 'MacBook Pro — Chrome'), location, and last active time. Below, a list of other sessions, each showing device icon (desktop/mobile/tablet), browser name, location (city, country), last active timestamp, and a 'Revoke' button on the right. A 'Sign Out All Other Sessions' destructive button sits at the bottom of the list. Sessions with suspicious activity show a warning icon.",
+  "layout_hints": {
+    "current_session_priority": "The current session should be visually distinct and always feel anchored above the revocable session list.",
+    "destructive_spacing": "Revoke actions and the sign-out-everywhere action need clear separation from passive session metadata so they do not read like inline labels.",
+    "suspicious_state": "Suspicious-session states should be obvious through icon, text, and treatment rather than relying on color alone."
+  },
   "responsive": {
     "mobile": "Sessions stack as full-width cards. Device info and location on separate lines. Revoke button full-width per session. Sign Out All button at the bottom.",
     "tablet": "Standard list layout. Device info and location inline. Revoke buttons on the right.",
     "desktop": "Full list with all information inline per row. Comfortable spacing between sessions."
+  },
+  "motion": {
+    "micro": "Hover and focus states on revoke controls may brighten subtly, but session rows should otherwise remain stable and administrative.",
+    "transitions": "Revoked-session removal and warning-state changes should animate softly over 150-220ms without collapsing the entire list abruptly."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Session manager",
+    "keyboard": [
+      "Tab moves through current-session controls, row-level revoke actions, and sign-out-everywhere actions in order."
+    ],
+    "announcements": [
+      "Current session, suspicious activity, and revoke outcomes should be announced clearly."
+    ],
+    "focus_management": "After revoking a session, preserve focus on the next logical row action or the bulk sign-out control."
   },
   "composition": {
     "SessionManager": "Container(d-section, flex-col, gap-4) > [CurrentSession + OtherSessions + RevokeAllButton?]",

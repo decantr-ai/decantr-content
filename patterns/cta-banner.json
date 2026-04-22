@@ -69,9 +69,30 @@
     ]
   },
   "visual_brief": "Full-viewport-width banner with a multi-stop gradient background (flowing from primary through accent colors). A bold, large headline centered in the banner delivers the conversion message. Below the headline, a single line of supporting subtext in slightly lighter weight. A prominent pill-shaped action button (rounded-full, primary contrast colors) sits centered below the text. The dark preset uses a dark solid background instead of gradient. Generous vertical padding (py-16 to py-24) creates breathing room.",
+  "layout_hints": {
+    "single_focus": "CTA banner should resolve to one obvious action. Avoid secondary utility controls inside the banner unless the route explicitly requires them.",
+    "contrast": "Keep the button and text contrast extremely strong against the gradient background so the section remains legible in both dark and light-adjacent contexts.",
+    "section_break": "Use the banner as a clear conversion moment near the end of a narrative flow, not as a generic filler block."
+  },
   "responsive": {
     "mobile": "Text scales down slightly. Button goes full-width with generous padding. Vertical padding reduces. Headline may wrap to two lines.",
     "tablet": "Standard centered layout. Button at natural width. Comfortable padding.",
     "desktop": "Full impact — large headline, generous whitespace, button with hover scale effect."
+  },
+  "motion": {
+    "micro": "Button hover and press states may use a compact lift or brightness change. Background gradients should remain stable instead of constantly shifting.",
+    "transitions": "Banner entrances should feel premium but restrained: fade-up or soft scale over 220-320ms.",
+    "ambient": "If the gradient breathes, keep the animation very low amplitude so the CTA remains readable and calm."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Call to action banner",
+    "keyboard": [
+      "Tab should move directly to the primary CTA."
+    ],
+    "announcements": [
+      "Headline and value proposition should be announced before the CTA control."
+    ],
+    "focus_management": "The primary action should be the first interactive target inside the banner and should receive a visible focus treatment that still contrasts against the banner background."
   }
 }

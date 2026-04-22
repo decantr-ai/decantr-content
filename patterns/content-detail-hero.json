@@ -98,6 +98,21 @@
     "source_line": "Source identity should prioritize the human-facing publisher while preserving the registry scope, for example @official/decantr or @org:acme/alice.",
     "trust_panels": "Trust summaries should be compact, card-like, and human-readable. Prefer one sentence plus 2-4 supporting facts over long comma-separated evidence dumps."
   },
+  "motion": {
+    "micro": "Primary actions and trust-summary cards may use subtle hover elevation and accent transitions, but the hero should remain calm and editorial.",
+    "transitions": "Hero content and quick-start rail can fade up together over 220-320ms. Trust cards may stagger lightly beneath the hero rather than popping in abruptly."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Content detail hero",
+    "keyboard": [
+      "Tab moves from breadcrumb to primary actions to supporting trust cards in a predictable order."
+    ],
+    "announcements": [
+      "Title, source identity, and primary action context should be available before supporting trust summaries."
+    ],
+    "focus_management": "Keep the primary next-step action early in the focus order without skipping the page title and source identity."
+  },
   "composition": {
     "ContentDetailHero": "Section(d-section, flex-col, gap-4, border-bottom) > [Breadcrumb + BadgeRow + HeroSplit > [NarrativeColumn > [Title(heading2) + Description(text-muted) + MetaRow] + QuickStartPanel] + TrustStrip + ActionGroup]",
     "BadgeRow": "Row(gap-2) > [TypeChip(d-annotation, color-coded) + TrustChip]",

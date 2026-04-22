@@ -65,6 +65,21 @@
     "tablet": "Two columns at default, four columns if space allows. Standard padding. Full heading2 values.",
     "desktop": "Four-column single row. Full layout with icons, values, and trend badges. Comfortable gap4 spacing between cards."
   },
+  "motion": {
+    "micro": "Cards may softly elevate on hover, and trend indicators may brighten or pulse subtly when values improve.",
+    "transitions": "Counter animations and KPI entry reveals should remain short and restrained so the grid still reads like instrumentation, not spectacle."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "KPI grid",
+    "keyboard": [
+      "Tab moves through interactive KPI cards and any embedded actions in reading order."
+    ],
+    "announcements": [
+      "Metric label, value, and trend should be conveyed semantically and not rely on color alone."
+    ],
+    "focus_management": "If KPI cards are actionable, focused cards should receive a clear outline or selected treatment equivalent to hover."
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc2 _lg:gc4 _gap4 _p4",

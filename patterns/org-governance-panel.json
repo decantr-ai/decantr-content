@@ -58,10 +58,25 @@
     "tablet": "Header and audit controls may use split rows, but decision controls still break cleanly before feeling compressed.",
     "desktop": "Workspace header can use a split layout with context on the left and org selector / CTA rail on the right. Policy, approvals, and audit remain visually compact without feeling dense."
   },
+  "motion": {
+    "micro": "Policy toggles, approval actions, and audit filter controls may animate softly over 150-200ms, but the workspace should remain composed and administrative.",
+    "transitions": "Approval queues and audit log filters should update with light cross-fades or row reveals instead of abrupt reflows."
+  },
   "layout_hints": {
     "cta_treatment": "Header actions should read like strong workspace transitions, not secondary ghost text. Use icon-led CTA rails or compact button groups with one clear primary action.",
     "policy_rows": "Each rule should have explanatory copy on the left and the control on the right. On narrow widths, the control drops beneath the copy without losing alignment.",
     "audit_filters": "Filters belong in a compact action band. Avoid ad hoc select sizing and preserve consistent x-axis insets across title, filters, and log entries."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Organization governance panel",
+    "keyboard": [
+      "Tab moves through policy rows, approval actions, and audit filters in operational order."
+    ],
+    "announcements": [
+      "Policy changes, approval outcomes, and audit filter updates should be announced clearly."
+    ],
+    "focus_management": "When filters or decisions update the panel, keep focus on the initiating control or move it to the refreshed heading so the operator keeps context."
   },
   "composition": {
     "OrgGovernancePanel": "Stack > [WorkspaceHeader + KpiStrip? + PolicyPanel + ApprovalPanel + AuditPanel]",

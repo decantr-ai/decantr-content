@@ -107,10 +107,31 @@
     ]
   },
   "visual_brief": "Contenteditable block-based document area occupying the main content region. Each block (paragraph, heading, list, image, code) is a discrete editable unit. A floating formatting toolbar appears on text selection. Typing '/' at the start of a block opens a slash command menu. Remote collaborator cursors appear as colored caret lines with name labels. Remote selections render as colored highlights. The top area may include a document title field. Minimal preset hides all chrome except the content. Presentation preset uses larger type sizes and hides editing UI.",
+  "layout_hints": {
+    "editing_focus": "The editor surface should feel like one primary work plane. Floating toolbars, slash menus, and collaborator overlays should support that plane without fragmenting it.",
+    "overlay_discipline": "Selection toolbars, cursors, and slash menus should not obscure the active text block more than necessary.",
+    "document_measure": "Keep the editable column at a comfortable reading and writing width even when the surrounding workspace is wide."
+  },
   "responsive": {
     "mobile": "Full-width editor with bottom-fixed formatting toolbar above the keyboard. Slash menu takes full width. Remote cursors show abbreviated names.",
     "tablet": "Standard editor layout. Floating toolbar near selection. Comfortable block spacing.",
     "desktop": "Full editor with generous margins. Floating toolbar tracks selection precisely. All collaboration indicators visible."
+  },
+  "motion": {
+    "micro": "Selection toolbar, slash menu, and collaborator cursor states may animate softly over 120-180ms.",
+    "transitions": "Block insertions, slash-menu reveals, and comment-entry states should feel smooth and responsive without turning the editor into a motion-heavy surface."
+  },
+  "accessibility": {
+    "role": "application",
+    "aria-label": "Document editor",
+    "keyboard": [
+      "Tab moves between title, editor tooling, and contextual editing controls.",
+      "Slash-menu and formatting controls should remain keyboard navigable."
+    ],
+    "announcements": [
+      "Formatting changes, collaborator presence, and structural insertions should be announced in a concise way."
+    ],
+    "focus_management": "Do not steal focus from the active editor block when collaboration indicators update. Floating controls should return focus to the editor after action completion."
   },
   "composition": {
     "DocEditor": "Container(d-section, flex-col, full-height, relative) > [CursorsLayer + SelectionsLayer + ContentArea + FloatingToolbar? + SlashMenu? + MentionPopup?]",

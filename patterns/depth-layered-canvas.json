@@ -78,6 +78,15 @@
     "tablet": "Reduce parallax intensity to 50%. Two visible planes (midground + foreground). Background becomes a static backdrop. DepthSlider available but simplified."
   },
   "visual_brief": "Three-plane spatial layout using CSS perspective and preserve-3d transforms. Background layer sits deepest with ambient gradients or data visualizations, rendered with blur and slow parallax. Midground layer holds the primary content cards and panels at normal focus. Foreground layer contains interactive controls, tooltips, and floating action elements at the closest depth. A depth slider control on the edge lets users adjust focal plane. Layers shift on scroll with different parallax rates. The flat-fallback preset collapses all layers to a standard stacked layout for reduced-motion preference.",
+  "layout_hints": {
+    "depth_hierarchy": "Keep background, midground, and foreground responsibilities visually distinct. Do not let every layer become equally busy or equally interactive.",
+    "flat_fallback": "The reduced-motion and mobile fallback should still preserve content ordering and task intent, not just remove the 3D transforms.",
+    "overlay_balance": "Foreground controls should feel anchored and usable without crowding the main focal content."
+  },
+  "motion": {
+    "micro": "Depth controls and focal states may animate softly as layers gain or lose focus.",
+    "transitions": "Parallax and focal-plane shifts should feel smooth and spatial, but never induce motion sickness or obscure content state."
+  },
   "composition": {
     "DepthLayeredCanvas": "Container(d-section, perspective, preserve-3d, full) > [BackgroundLayer + MidgroundLayer + ForegroundLayer + DepthControls?]",
     "BackgroundLayer": "SpatialLayer(d-surface, z-back, blur, parallax: 0.3x)",

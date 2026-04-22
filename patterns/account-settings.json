@@ -104,6 +104,30 @@
     "cta_treatment": "Primary save/update actions should sit in a stable action zone and feel distinct from secondary utility buttons such as avatar change, sign out, or cancel."
   },
   "visual_brief": "Settings page with vertical navigation tabs on the left (Profile, Security, Notifications, Danger Zone) and form content on the right. Active tab highlighted with an accent border. On small screens, the nav becomes a horizontal scrollable strip while the forms keep the same comfortable shell spacing. Each settings section is a d-surface card with grouped form fields, section heading, and a stable save action zone.",
+  "responsive": {
+    "mobile": "Collapse the workspace to a single column with a horizontal scrollable tab strip or segmented control above the active section. Keep the content max-width comfortable and place save or destructive actions close to the relevant field group.",
+    "tablet": "Allow either a narrow left settings rail or a horizontal tab strip depending on width. Preserve stable action zones and avoid overly wide form rows.",
+    "desktop": "Use a clear split between navigation and content with enough gap to keep settings work readable. Do not let profile or preferences forms stretch edge-to-edge."
+  },
+  "motion": {
+    "micro": "Active nav indicators, save confirmations, and destructive warning states may animate softly over 150-200ms.",
+    "transitions": "Switching between settings sections should cross-fade or slide minimally so the workspace still feels stable and operational.",
+    "ambient": "Avoid decorative ambient motion in settings surfaces. Keep movement functional and low-noise."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Account settings workspace",
+    "keyboard": [
+      "Tab moves through settings navigation, fields, and actions in source order.",
+      "Arrow keys may move between tab-style navigation items when rendered as a tab list.",
+      "Enter or Space activates save, cancel, and destructive confirmation actions."
+    ],
+    "announcements": [
+      "Announce settings section changes such as 'Security settings selected'.",
+      "Announce save success, validation errors, and destructive confirmations clearly."
+    ],
+    "focus_management": "When changing settings sections, move focus to the section heading or first field. Keep destructive actions visually separated and reachable without trapping focus."
+  },
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _col _gap8",

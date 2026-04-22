@@ -106,10 +106,26 @@
     "tablet": "Standard row layout with wrapped secondary metadata when needed. Actions can remain inline, but should break onto a second line before overflowing.",
     "desktop": "Full row with generous spacing. All information and actions visible inline without relying on a single non-wrapping strip."
   },
+  "motion": {
+    "micro": "Role pills and row actions may animate subtly on hover and focus, but the row should still read like calm administrative data.",
+    "transitions": "Invite, resend, and member-update states should fade or expand gently over 150-220ms without disrupting the list rhythm."
+  },
   "layout_hints": {
     "row_layout": "Avatar (32px circle) + identity block + role/date/actions trail. On narrow widths, let the trail wrap below the identity instead of squeezing the email or control cluster.",
     "invite_form": "Invite form uses a responsive row: email input + role dropdown + Invite button. Collapse to a stacked form on small screens.",
     "cta_treatment": "Supporting workspace navigation such as governance links should appear as contextual action bands or compact cards, not as detached button rows."
+  },
+  "accessibility": {
+    "role": "row",
+    "aria-label": "Team member row",
+    "keyboard": [
+      "Tab moves through role controls, invite actions, and remove controls in row order."
+    ],
+    "announcements": [
+      "Role changes, invite sends, and removals should be announced clearly.",
+      "Pending-invite state should be distinguishable from active-member state semantically, not just visually."
+    ],
+    "focus_management": "After member actions, preserve focus on the affected row or the next logical row-level action."
   },
   "composition": {
     "TeamMemberRow": "Row(d-data-row, hoverable) > [Avatar + MemberInfo + RoleBadge(d-annotation) + JoinDate(text-muted) + Actions]",

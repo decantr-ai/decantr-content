@@ -85,9 +85,30 @@
     }
   },
   "visual_brief": "Long-form legal document layout with a sticky table of contents sidebar on the left and the prose content area on the right. The TOC auto-generates from heading hierarchy with indented sub-sections, highlighting the current section on scroll. The prose area uses comfortable reading typography — constrained line length, generous line height, numbered section headers, and proper paragraph spacing. A header shows the document title and 'Last updated' date. Footer contains contact information and version history link. The document is print-friendly with clean page breaks.",
+  "layout_hints": {
+    "measure": "Keep prose readable with a constrained content column and do not let legal copy stretch edge-to-edge across the viewport.",
+    "toc_behavior": "The table of contents is supportive chrome, not the hero. It should collapse cleanly on smaller screens without obscuring the legal text.",
+    "print_rhythm": "Headings, paragraphs, and section breaks should preserve a sober, stable rhythm in both screen and print contexts."
+  },
   "responsive": {
     "mobile": "TOC collapses into a dropdown menu at the top. Prose takes full width with comfortable reading margins. Sections stack with clear heading hierarchy.",
     "tablet": "TOC as a collapsible left drawer. Prose area takes remaining width with comfortable reading column.",
     "desktop": "Full two-column layout — sticky TOC sidebar on the left (220px), prose content on the right with max-width for readability."
+  },
+  "motion": {
+    "micro": "TOC highlight changes and smooth-scroll anchors should feel restrained and utility-first.",
+    "transitions": "Collapsible category sections and TOC drawers may animate over 180-220ms, but legal reading surfaces should avoid decorative motion."
+  },
+  "accessibility": {
+    "role": "document",
+    "aria-label": "Legal document",
+    "keyboard": [
+      "Tab moves through the table of contents and in-document links in source order.",
+      "Keyboard users should be able to reach section headings and jump links without losing context."
+    ],
+    "announcements": [
+      "Document title, effective date, and section headings should be available through semantic heading structure."
+    ],
+    "focus_management": "When TOC links are activated, move focus to the destination heading or ensure the destination heading is programmatically associated with the jump target."
   }
 }

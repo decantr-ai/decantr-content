@@ -120,6 +120,22 @@
     "card_content": "Do not use browse-card trust chips. Keep only the type chip. The footer should carry the source line first, then version, then date. Showcase CTA should sit clearly below that row when present.",
     "grid_layout": "Responsive grid: 3 columns desktop, 2 tablet, 1 mobile. Gap: 1rem. Equal-height cards per row. Avoid visual density spikes between cards with thumbnails and cards without thumbnails. Parent workspace layout owns any spacing between this grid and sibling filters, intros, or empty-state lead surfaces."
   },
+  "motion": {
+    "micro": "Cards may lift slightly and intensify their border treatment on hover. Showcase CTAs should respond clearly on hover and focus without overwhelming the card.",
+    "transitions": "Filter and sort changes should cross-fade or stagger cards in gently over 180-260ms. Thumbnail appearance should feel polished but restrained."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Content card grid",
+    "keyboard": [
+      "Tab should move through cards and showcase CTAs in reading order.",
+      "If the whole card is clickable, expose one clear primary interaction target."
+    ],
+    "announcements": [
+      "Card title, source line, and showcase availability should be available to assistive technology without depending on hover."
+    ],
+    "focus_management": "Focused cards should receive an obvious treatment equivalent to hover, and nested CTAs should remain distinct from the card container."
+  },
   "composition": {
     "ContentCardGrid": "Grid(d-data, responsive: 1/2/3-col) > ContentCard[]",
     "ContentCard": "Card(d-surface, hoverable) > [Thumbnail(optional, 16:9) + TitleRow > [Title(heading4, clickable) + TypeChip(d-annotation, color-coded)] + Description(text-muted, line-clamp-3) + Footer > [SourceLine(mono-data) + Version + PublishDate + ShowcaseAction(optional)]]",

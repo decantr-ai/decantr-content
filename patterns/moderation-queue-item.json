@@ -95,10 +95,26 @@
     "tablet": "Standard card layout. Buttons side by side in the footer.",
     "desktop": "Full card with content preview visible. Buttons inline in footer. Feedback textarea expandable."
   },
+  "motion": {
+    "micro": "Approve and reject controls may use clear hover/focus transitions, while status borders may brighten subtly when an item is selected.",
+    "transitions": "Expand/collapse of previews and feedback surfaces should animate over 160-240ms without making the moderation queue feel noisy."
+  },
   "layout_hints": {
     "card_layout": "Bordered card: type badge (d-annotation) + title + namespace + submitted-by + submitted-at. Right side: Approve (primary) + Reject (danger ghost) action buttons.",
     "status_indicator": "Left border colored by status: pending=amber, approved=green, rejected=red.",
     "density": "Compact cards — this is an admin worklist, not a showcase. Minimal vertical padding."
+  },
+  "accessibility": {
+    "role": "article",
+    "aria-label": "Moderation queue item",
+    "keyboard": [
+      "Tab moves through preview, approve, reject, and feedback controls in order."
+    ],
+    "announcements": [
+      "Moderation status and decision outcomes should be announced clearly.",
+      "Collapsed preview state changes should be announced when expanded."
+    ],
+    "focus_management": "After moderation actions, keep focus on the affected row or feedback control so the reviewer can continue operating without losing queue context."
   },
   "composition": {
     "ModerationQueueItem": "Card(d-surface, bordered) > [Header + SubmitterRow + ContentPreview + AdminNotes? + ActionBar]",

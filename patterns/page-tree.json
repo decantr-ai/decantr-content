@@ -103,10 +103,32 @@
     ]
   },
   "visual_brief": "Sidebar navigation tree with nested page items. Each item shows a document icon, page title, and an expand/collapse chevron for nested children. Indentation increases per nesting level with a thin vertical guide line. Hovering a page reveals action icons (three-dot menu for rename, duplicate, delete). A 'Favorites' section at the top shows pinned pages with a star icon. A search input at the very top filters pages by name. A 'New Page' button at the bottom (or a plus icon at the top) creates new pages. The compact preset reduces row height and font size. The flat preset removes nesting and shows all pages in a flat alphabetical list.",
+  "layout_hints": {
+    "tree_hierarchy": "Nested structure should remain obvious through indentation, guide lines, and expand/collapse affordances. Do not flatten the mental model just to save horizontal space.",
+    "action_reveal": "Row actions should feel contextual and low-noise. They may reveal on hover or focus, but must remain reachable for keyboard users.",
+    "editor_context": "The tree is a navigation and structure surface, not a content card list. Keep row density operational and calm."
+  },
   "responsive": {
     "mobile": "Page tree renders as a full-screen drawer or sheet. Larger touch targets for tree items. Drag-to-reorder uses long-press. Actions in swipe menus.",
     "tablet": "Sidebar at 260px width. Standard row heights. Drag-to-reorder functional.",
     "desktop": "Sidebar at 280px width with comfortable spacing. Full keyboard navigation. Drag-and-drop reordering."
+  },
+  "motion": {
+    "micro": "Expand/collapse chevrons, hover states, and pinned/favorite toggles may animate subtly over 120-180ms.",
+    "transitions": "Nested branch expansion, drag-reorder previews, and drawer transitions should feel smooth and structured rather than flashy."
+  },
+  "accessibility": {
+    "role": "tree",
+    "aria-label": "Page tree",
+    "keyboard": [
+      "Arrow keys expand, collapse, and move between tree items.",
+      "Enter activates the focused page."
+    ],
+    "announcements": [
+      "Expanded and collapsed branch states should be announced clearly.",
+      "Pinned or favorite state changes should be announced semantically."
+    ],
+    "focus_management": "When a branch expands or collapses, keep focus on the controlling tree item rather than jumping to a different depth unexpectedly."
   },
   "composition": {
     "PageTree": "Panel(d-section, flex-col) > [SearchInput(d-control) + FavoritesSection? + TreeList + NewPageButton(d-interactive)]",
