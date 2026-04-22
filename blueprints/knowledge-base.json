@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "decantr_compat": ">=1.5.0",
   "name": "Knowledge Base",
-  "description": "Warm, reading-optimized documentation platform with AI-powered search, changelog, interactive API reference, and community-friendly knowledge sharing.",
+  "description": "Warm, reading-optimized public documentation platform with AI-powered search, changelog, interactive API reference, and community-friendly knowledge sharing.",
   "tags": [
     "docs",
     "knowledge",
@@ -19,9 +19,7 @@
     "search-hub",
     "changelog-center",
     "api-reference",
-    "marketing-docs",
-    "auth-flow",
-    "settings"
+    "marketing-docs"
   ],
   "theme": {
     "mode": "light",
@@ -56,7 +54,6 @@
     "ai-search",
     "changelog",
     "api-reference",
-    "auth",
     "marketing",
     "seo",
     "toc",
@@ -67,21 +64,6 @@
       "page": "home",
       "shell": "top-nav-footer",
       "archetype": "marketing-docs"
-    },
-    "/login": {
-      "page": "login",
-      "shell": "centered",
-      "archetype": "auth-flow"
-    },
-    "/register": {
-      "page": "register",
-      "shell": "centered",
-      "archetype": "auth-flow"
-    },
-    "/forgot-password": {
-      "page": "forgot-password",
-      "shell": "centered",
-      "archetype": "auth-flow"
     },
     "/docs": {
       "page": "docs",
@@ -117,11 +99,6 @@
       "page": "api-ref-endpoint",
       "shell": "three-column-browser",
       "archetype": "api-reference"
-    },
-    "/settings": {
-      "page": "settings",
-      "shell": "sidebar-main",
-      "archetype": "settings"
     }
   },
   "overrides": {
@@ -176,9 +153,7 @@
       "search-hub": ">=1.0.0",
       "changelog-center": ">=1.0.0",
       "api-reference": ">=1.0.0",
-      "marketing-docs": ">=1.0.0",
-      "auth-flow": ">=1.0.0",
-      "settings": ">=1.0.0"
+      "marketing-docs": ">=1.0.0"
     }
   },
   "suggested_themes": [

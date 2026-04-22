@@ -16,9 +16,7 @@
   "compose": [
     "portfolio-showcase",
     "portfolio-about",
-    "portfolio-blog",
-    "auth-flow",
-    "settings"
+    "portfolio-blog"
   ],
   "theme": {
     "id": "auradecantism",
@@ -51,10 +49,14 @@
     "contact-form",
     "gallery",
     "markdown",
-    "auth",
     "keyboard-shortcuts"
   ],
   "routes": {
+    "/": {
+      "shell": "full-bleed",
+      "archetype": "portfolio-showcase",
+      "page": "projects"
+    },
     "/projects": {
       "shell": "full-bleed",
       "archetype": "portfolio-showcase",
@@ -89,26 +91,6 @@
       "shell": "top-nav-main",
       "archetype": "portfolio-blog",
       "page": "blog-post"
-    },
-    "/login": {
-      "shell": "centered",
-      "archetype": "auth-flow",
-      "page": "login"
-    },
-    "/register": {
-      "shell": "centered",
-      "archetype": "auth-flow",
-      "page": "register"
-    },
-    "/forgot-password": {
-      "shell": "centered",
-      "archetype": "auth-flow",
-      "page": "forgot-password"
-    },
-    "/settings": {
-      "shell": "sidebar-main",
-      "archetype": "settings",
-      "page": "settings"
     }
   },
   "overrides": {},
@@ -116,9 +98,7 @@
     "archetypes": {
       "portfolio-showcase": ">=1.0.0",
       "portfolio-about": ">=1.0.0",
-      "portfolio-blog": ">=1.0.0",
-      "auth-flow": ">=1.0.0",
-      "settings": ">=1.0.0"
+      "portfolio-blog": ">=1.0.0"
     }
   },
   "navigation": {

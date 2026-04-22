@@ -17,6 +17,56 @@
     "accent": "#4ade80",
     "background": "#f0f4f9"
   },
+  "palette": {
+    "background": {
+      "light": "#F0F4F9",
+      "dark": "#0E1624"
+    },
+    "surface": {
+      "light": "rgba(255,255,255,0.72)",
+      "dark": "rgba(19, 30, 48, 0.62)"
+    },
+    "surface-raised": {
+      "light": "rgba(255,255,255,0.86)",
+      "dark": "rgba(28, 41, 64, 0.78)"
+    },
+    "border": {
+      "light": "rgba(102, 132, 166, 0.22)",
+      "dark": "rgba(133, 171, 214, 0.20)"
+    },
+    "text": {
+      "light": "#10253D",
+      "dark": "#E8F2FF"
+    },
+    "text-muted": {
+      "light": "#5D708A",
+      "dark": "#A9BDD8"
+    },
+    "primary": {
+      "light": "#0EA5E9",
+      "dark": "#38BDF8"
+    },
+    "primary-hover": {
+      "light": "#0284C7",
+      "dark": "#67D3FF"
+    },
+    "secondary": {
+      "light": "#22D3EE",
+      "dark": "#67E8F9"
+    },
+    "secondary-hover": {
+      "light": "#06B6D4",
+      "dark": "#A5F3FC"
+    },
+    "accent": {
+      "light": "#22C55E",
+      "dark": "#4ADE80"
+    },
+    "accent-hover": {
+      "light": "#16A34A",
+      "dark": "#86EFAC"
+    }
+  },
   "modes": [
     "light",
     "dark"

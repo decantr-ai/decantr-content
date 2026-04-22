@@ -126,19 +126,20 @@
           "card-icon": "Category icon in a rounded accent-tinted circle or chip.",
           "card-title": "Capability category title with heading-scale emphasis and room for two lines when needed.",
           "card-description": "Short framing paragraph explaining the category or practice area.",
-          "card-supporting-list": "Inset vertical stack of 2-4 supporting capability rows, each with a label and optional proficiency badge."
+          "card-supporting-list": "Calm vertical list of 2-4 supporting capability rows, each with a label and optional proficiency badge. Use divider-separated rows or a subtle list grouping, not nested mini-cards."
         }
       }
     }
   },
-  "visual_brief": "Responsive grid of uniformly-sized cards with consistent gap spacing. Each card is a contained surface with subtle border or shadow, rounded corners (r3), and internal padding. Product preset: top image with fixed aspect ratio, title below in medium-weight text, price in bold heading style, star-rating row with filled/empty star icons, and a full-width add-to-cart button in the card footer. Content preset: thumbnail image, colored category badge, article title, two-line excerpt in muted small text, and an author row with avatar, name, and date. Capability preset: medium-width cards with a category icon, a strong title, one short framing paragraph, and an inset supporting list for two to four related capabilities or badges. Cards maintain equal height within each row via grid stretch when the preset is intended for comparable content density.",
+  "visual_brief": "Responsive grid of uniformly-sized cards with consistent gap spacing. Each card is a contained surface with subtle border or shadow, rounded corners (r3), and internal padding. Product preset: top image with fixed aspect ratio, title below in medium-weight text, price in bold heading style, star-rating row with filled/empty star icons, and a full-width add-to-cart button in the card footer. Content preset: thumbnail image, colored category badge, article title, two-line excerpt in muted small text, and an author row with avatar, name, and date. Capability preset: medium-width cards with a category icon, a strong title, one short framing paragraph, and a calm supporting list for two to four related capabilities or badges. The supporting list should feel integrated into the same card surface through spacing, dividers, or a subtle grouping rhythm rather than through a second bordered panel or a stack of mini-cards. Cards maintain equal height within each row via grid stretch when the preset is intended for comparable content density.",
   "layout_hints": {
     "card_surface": "Each item should feel like one coherent card surface. Do not wrap grid items in an extra shell-level d-surface if the pattern already provides the card treatment.",
     "description_clamp": "Allow enough room for meaningful summary copy. In most content grids, descriptions should get at least two to three lines before truncation.",
     "footer_rhythm": "Meta rows and CTA rows should align consistently across cards. Footers should not jump vertically between items in the same grid.",
     "hover_behavior": "Use CSS-driven hover lift or media scaling rather than inline event handlers that mutate style values in component code.",
     "icon_preset_scope": "The icon preset is intentionally compact. Use it for icon + title + short description only, not for longer body copy plus nested capability rows.",
-    "capability_preset_scope": "When a route needs richer category cards with supporting rows or badges, use the capability preset and keep the grid to one, two, or three columns rather than forcing a compact four-up layout."
+    "capability_preset_scope": "When a route needs richer category cards with supporting rows or badges, use the capability preset and keep the grid to one, two, or three columns rather than forcing a compact four-up layout.",
+    "nested_surface_avoidance": "Capability cards should read as one card surface. Avoid creating a card within a card or wrapping each supporting row in its own mini-panel unless a route explicitly asks for nested grouping."
   },
   "responsive": {
     "mobile": "Single column (1 card per row). Cards go full-width with larger touch targets. Image aspect ratio maintained. Gap reduces to gap3.",
@@ -189,6 +190,6 @@
     "CardGrid": "Grid(d-section, responsive: 1/2/3/4-col) > ProductCard[]",
     "ProductCard": "Card(d-surface, hoverable, lift-on-hover) > [Image(aspect-ratio) + Title(font-medium) + Price(heading4) + RatingRow > [StarIcon[] + CountBadge(d-annotation)] + CTAButton(d-interactive, full-width)]",
     "ContentCard": "Card(d-surface) > [Thumbnail + CategoryBadge(d-annotation) + Title(heading4) + Excerpt(text-muted) + MetaRow > [AuthorAvatar + AuthorName + Date]]",
-    "CapabilityCard": "Card(d-surface, calmer-width) > [IconChip + Title(heading-scale) + Description(text-muted) + SupportingList(inset-stack) > CapabilityRow*(label + optional proficiency badge)]"
+    "CapabilityCard": "Card(d-surface, calmer-width) > [IconChip + Title(heading-scale) + Description(text-muted) + SupportingList(divider-separated or subtly grouped) > CapabilityRow*(label + optional proficiency badge)]"
   }
 }

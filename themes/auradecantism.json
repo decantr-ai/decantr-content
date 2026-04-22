@@ -19,6 +19,42 @@
     "background": "#0F0A1A"
   },
   "palette": {
+    "background": {
+      "dark": "#0F0A1A"
+    },
+    "surface": {
+      "dark": "#181328"
+    },
+    "surface-raised": {
+      "dark": "#211A35"
+    },
+    "border": {
+      "dark": "#3A3154"
+    },
+    "text": {
+      "dark": "#F5F0FF"
+    },
+    "text-muted": {
+      "dark": "#B9B1D0"
+    },
+    "primary": {
+      "dark": "#A855F7"
+    },
+    "primary-hover": {
+      "dark": "#C084FC"
+    },
+    "secondary": {
+      "dark": "#0EA5E9"
+    },
+    "secondary-hover": {
+      "dark": "#38BDF8"
+    },
+    "accent": {
+      "dark": "#EC4899"
+    },
+    "accent-hover": {
+      "dark": "#F472B6"
+    },
     "purple": "#A855F7",
     "cyan": "#0EA5E9",
     "pink": "#EC4899",

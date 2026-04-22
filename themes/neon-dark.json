@@ -50,6 +50,9 @@
       "light": "#00B8D4"
     }
   },
+  "modes": [
+    "dark"
+  ],
   "tokens": {
     "base": {
       "success": "#00E676",
