@@ -18,7 +18,7 @@
     "user-dashboard",
     "admin-moderation",
     {
-      "archetype": "auth-flow",
+      "archetype": "auth-gateway",
       "prefix": "auth",
       "role": "gateway"
     }
@@ -90,7 +90,7 @@
     "/login": {
       "page": "login",
       "shell": "centered",
-      "archetype": "auth-flow"
+      "archetype": "auth-gateway"
     },
     "/dashboard": {
       "page": "overview",
@@ -127,8 +127,18 @@
       "shell": "sidebar-main",
       "archetype": "user-dashboard"
     },
+    "/dashboard/governance": {
+      "page": "governance",
+      "shell": "sidebar-main",
+      "archetype": "user-dashboard"
+    },
     "/admin/moderation": {
       "page": "moderation-queue",
+      "shell": "sidebar-main",
+      "archetype": "admin-moderation"
+    },
+    "/admin/moderation/:id": {
+      "page": "moderation-detail",
       "shell": "sidebar-main",
       "archetype": "admin-moderation"
     }
