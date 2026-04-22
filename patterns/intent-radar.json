@@ -27,27 +27,27 @@
       "description": "Full radial radar centered in a modal or dedicated panel — shows all intent vectors with confidence arcs and pulsing suggestion rings",
       "layout": {
         "layout": "spatial",
-        "atoms": "_flex _aic _jcc _relative _aspect-square"
+        "atoms": "_flex _aic _jcc _rel _aspectsquare"
       }
     },
     "compact": {
       "description": "Semi-circular radar (180° arc) for bottom-sheet or sidebar placement — intent vectors fan upward from a flat base edge, suggestions appear as a horizontal chip row below the arc",
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _aic _relative"
+        "atoms": "_flex _col _aic _rel"
       }
     },
     "inline": {
       "description": "Minimal horizontal bar variant — confidence scores render as a horizontal gradient strip with suggestion chips in a scrollable row, no radial geometry — for tight inline placements like chat input companions",
       "layout": {
         "layout": "row",
-        "atoms": "_flex _aic _gap3 _px4 _py2 _borderB"
+        "atoms": "_flex _aic _gap3 _px4 _py2 _bb[1px_solid_var(--d-border)]"
       }
     }
   },
   "default_layout": {
     "layout": "spatial",
-    "atoms": "_flex _aic _jcc _relative _aspect-square",
+    "atoms": "_flex _aic _jcc _rel _aspectsquare",
     "slots": {
       "radar-center": "The focal point of the radial display. Renders as a glowing circle (40–56px diameter) at the exact center of the radar. Shows the current input query text or a microphone/search icon when idle. Pulses gently with a ring animation when the system is interpreting intent. Color shifts from neutral (idle) to primary (active) to accent (confident match found). Acts as the origin point from which all intent vectors radiate.",
       "intent-vector": "Repeating slot — one per detected intent category. Each vector is a line segment radiating from radar-center outward at an angle determined by the intent's semantic category (e.g., 'create' at 0°, 'search' at 90°, 'navigate' at 180°, 'configure' at 270°). Length corresponds to confidence score (0–1 maps to 0%–100% of radar radius). Line thickness also scales with confidence (1px at low, 3px at high). The vector terminates in a small labeled dot showing the intent category name. Vectors animate smoothly when confidence values update — growing, shrinking, or rotating as the user types. Color is category-coded using theme accent palette.",

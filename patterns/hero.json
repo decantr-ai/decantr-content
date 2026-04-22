@@ -34,7 +34,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _flexCol _itemsCenter _textCenter _gap6 _py16 _px6",
+        "atoms": "_flex _col _aic _textc _gap6 _py16 _px6",
         "slots": {
           "headline": "Primary heading, typically h1 with _heading1",
           "description": "Supporting paragraph with _body _muted",
@@ -52,7 +52,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_relative _wfull _h[400px] _overflow[hidden] _r4",
+        "atoms": "_rel _wfull _h[400px] _overhidden _r4",
         "slots": {
           "image": "Full-bleed background cover image with gradient overlay",
           "top-bar": "Absolute top row: back button (left) + action buttons (right)",
@@ -73,7 +73,7 @@
       ],
       "layout": {
         "layout": "hero",
-        "atoms": "_flex _col _aic _tc _gap8 _py24 _px6 _minh[100vh] _jcc _relative",
+        "atoms": "_flex _col _aic _textc _gap8 _py24 _px6 _minh[100vh] _jcc _rel",
         "slots": {
           "badge": "Optional announcement pill (Badge) above headline",
           "media": "Optional logo or illustration with d-float + aura-glow-strong animation",
@@ -92,7 +92,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _aic _tc _gap8 _py24 _px6 _minh[100vh] _jcc _relative",
+        "atoms": "_flex _col _aic _textc _gap8 _py24 _px6 _minh[100vh] _jcc _rel",
         "slots": {
           "decoration": "Absolute-positioned aura-orb elements for ambient background",
           "headline": "Display-size heading with d-heading-hero (gradient-only class)",
@@ -111,7 +111,7 @@
       ],
       "layout": {
         "layout": "row",
-        "atoms": "_grid _gc1 _lg:gc2 _gap8 _py24 _px6 _minh[100vh] _aic _relative",
+        "atoms": "_grid _gc1 _lg:gc2 _gap8 _py24 _px6 _minh[100vh] _aic _rel",
         "slots": {
           "media": "Logo, illustration, or image \u2014 centered in its grid cell",
           "badge": "Optional announcement pill (Badge) above headline",
@@ -132,7 +132,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_relative _wfull _h[300px] _overflow[hidden] _r4",
+        "atoms": "_rel _wfull _h[300px] _overhidden _r4",
         "slots": {
           "image": "Full-bleed background cover image with gradient overlay",
           "top-actions": "Absolute top-right: edit and delete action Buttons",
@@ -148,7 +148,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _aic _tc _gap4 _py12 _px6",
+        "atoms": "_flex _col _aic _textc _gap4 _py12 _px6",
         "slots": {
           "illustration": "Large icon or illustration placeholder",
           "title": "Empty state heading with _heading4",
@@ -192,7 +192,7 @@
   },
   "default_layout": {
     "layout": "stack",
-    "atoms": "_flex _flexCol _itemsCenter _textCenter _gap6 _py16 _px6",
+    "atoms": "_flex _col _aic _textc _gap6 _py16 _px6",
     "slots": {
       "headline": "Primary heading, typically h1 with _heading1",
       "description": "Supporting paragraph with _body _muted",

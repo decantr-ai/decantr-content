@@ -43,7 +43,7 @@
       "description": "Full-container background treatment. PulseCore is the entire container background with subtle radial-gradient pulsing. Color shifts across the background surface. No explicit ring or track — the entire area breathes. Metric values shown via FeedbackTooltip on hover only. Designed for ambient awareness without demanding attention.",
       "layout": {
         "layout": "stack",
-        "atoms": "_relative _full"
+        "atoms": "_rel _wfull _hfull"
       }
     },
     "static-gauge": {

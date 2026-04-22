@@ -28,7 +28,7 @@
       "description": "Vertical timeline with alternating sides",
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _relative",
+        "atoms": "_flex _col _gap6 _rel",
         "slots": {
           "events": "Vertical sequence of timeline entries alternating around a central connector line"
         },
@@ -40,7 +40,7 @@
       "description": "Single-side vertical timeline with all entries on one side of the connector line for compact layouts",
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap4 _relative",
+        "atoms": "_flex _col _gap4 _rel",
         "slots": {
           "events": "Compact single-sided vertical timeline entries aligned to one connector line"
         },
@@ -52,7 +52,7 @@
       "description": "Horizontal scrolling timeline with entries arranged left-to-right along a connector line",
       "layout": {
         "layout": "row",
-        "atoms": "_flex _gap6 _overflow[auto]",
+        "atoms": "_flex _gap6 _overauto",
         "slots": {
           "events": "Horizontally scrolling timeline entries arranged along a shared connector line"
         },
@@ -105,7 +105,7 @@
   },
   "default_layout": {
     "layout": "stack",
-    "atoms": "_flex _col _gap6 _relative",
+    "atoms": "_flex _col _gap6 _rel",
     "slots": {
       "events": "Vertical sequence of timeline entries alternating around a central connector line"
     }

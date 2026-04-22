@@ -30,7 +30,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Logo and welcome title",
           "form": "Email and password inputs",
@@ -49,7 +49,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Logo and create account title",
           "form": "Name, email, password inputs with strength indicator",
@@ -68,7 +68,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Title and instructions",
           "form": "Email input",
@@ -85,7 +85,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Title",
           "form": "New password and confirm password inputs",
@@ -101,7 +101,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _aic _gap6 _p8 _tc",
+        "atoms": "_flex _col _aic _gap6 _p8 _textc",
         "slots": {
           "icon": "Mail icon",
           "message": "Verification instructions",
@@ -117,7 +117,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Setup instructions",
           "qr": "QR code image for authenticator app",
@@ -134,7 +134,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Enter code prompt",
           "form": "6-digit code input",
@@ -150,7 +150,7 @@
       ],
       "layout": {
         "layout": "stack",
-        "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+        "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
         "slots": {
           "header": "Verification prompt",
           "form": "SMS code input",
@@ -161,7 +161,7 @@
   },
   "default_layout": {
     "layout": "stack",
-    "atoms": "_flex _col _gap6 _p8 _maxw[400px] _wfull",
+    "atoms": "_flex _col _gap6 _p8 _mw[400px] _wfull",
     "slots": {
       "header": "Logo, title, subtitle",
       "form": "Form inputs",

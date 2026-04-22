@@ -3,7 +3,7 @@
   "name": "Centered",
   "description": "Centered card on a background. Used for auth flows (login, register, forgot password) across all archetypes.",
   "layout": "center",
-  "atoms": "_flex _center _h[100vh] _bgmuted",
+  "atoms": "_flex _aic _jcc _h[100vh] _bgmuted",
   "config": {
     "regions": [
       "body"
@@ -36,7 +36,7 @@
     "shell_spacing": "Centered shell owns viewport centering, outer padding, and maximum-width rhythm. Route components should render the card contents only and must not add nested full-height centering wrappers."
   },
   "internal_layout": {
-    "root": { "display": "flex", "align": "center", "justify": "center", "min_height": "100vh", "background": "var(--d-bg)", "atoms": "_flex _center _minh[100vh]" },
+    "root": { "display": "flex", "align": "center", "justify": "center", "min_height": "100vh", "background": "var(--d-bg)", "atoms": "_flex _aic _jcc _minh[100vh]" },
     "body": { "width": "100%", "max_width_auth": "28rem", "max_width_wide": "36rem", "padding": "1.5rem", "treatment": "d-surface", "border_radius": "var(--d-radius-lg)", "note": "Single centered card. No sidebar, no header. Auth forms use 28rem, wider content 36rem." }
   },
   "code": {

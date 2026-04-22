@@ -28,7 +28,7 @@
       ],
       "layout": {
         "layout": "hero",
-        "atoms": "_py25 _px6 _text[center] _relative _z1",
+        "atoms": "_py[100px] _px6 _textc _rel _z[1]",
         "slots": {
           "headline": "Bold heading with _fs[2.2rem] _fw700 _fgdark _mb3 _ls[-0.02em]. Direct, action-oriented text like 'Ready to Build Something Great?'",
           "subtext": "Supporting paragraph with _fs[1.1rem] _fgdark/70 _mb8. Brief value proposition or urgency statement.",
@@ -43,7 +43,7 @@
       ],
       "layout": {
         "layout": "hero",
-        "atoms": "_py25 _px6 _text[center] _relative _z1 _bgdark",
+        "atoms": "_py[100px] _px6 _textc _rel _z[1] _bgbg",
         "slots": {
           "headline": "Bold heading with _fs[2.2rem] _fw700 _fgprimary _mb3 _ls[-0.02em]. Uses the brand accent color.",
           "subtext": "Supporting paragraph with _fs[1.1rem] _fgmuted _mb8.",
@@ -54,7 +54,7 @@
   },
   "default_layout": {
     "layout": "hero",
-    "atoms": "_py25 _px6 _text[center] _relative _z1",
+    "atoms": "_py[100px] _px6 _textc _rel _z[1]",
     "slots": {
       "headline": "Bold, conversion-focused headline",
       "subtext": "Supporting value proposition text",

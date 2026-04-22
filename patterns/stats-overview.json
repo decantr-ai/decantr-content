@@ -50,7 +50,7 @@
       ],
       "layout": {
         "layout": "row",
-        "atoms": "_flex _aic _jcsb _gap4 _px4 _py3 _borderB",
+        "atoms": "_flex _aic _jcsb _gap4 _px4 _py3 _bb[1px_solid_var(--d-border)]",
         "slots": {
           "stat-item": "Inline stat: _flex _col _aic",
           "value": "Metric value with _heading4",

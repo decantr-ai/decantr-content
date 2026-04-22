@@ -33,7 +33,7 @@
       ],
       "layout": {
         "layout": "row",
-        "atoms": "_flex _aic _jcsb _px6 _py3 _borderB",
+        "atoms": "_flex _aic _jcsb _px6 _py3 _bb[1px_solid_var(--d-border)]",
         "slots": {
           "logo": "Brand logo or wordmark, left-aligned",
           "links": "Horizontal navigation links with _flex _gap4",
@@ -91,7 +91,7 @@
   },
   "default_layout": {
     "layout": "row",
-    "atoms": "_flex _aic _jcsb _px6 _py3 _borderB",
+    "atoms": "_flex _aic _jcsb _px6 _py3 _bb[1px_solid_var(--d-border)]",
     "slots": {
       "logo": "Brand logo or name",
       "links": "Navigation links",
