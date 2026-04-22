@@ -4,22 +4,19 @@
   "version": "1.0.0",
   "decantr_compat": ">=1.5.0",
   "name": "Content Site",
-  "description": "Reading-first content site with article browser, author dashboard, newsletter archive, and marketing landing. Multi-archetype composition optimized for long-form consumption, editorial workflow, and subscriber growth.",
+  "description": "Reading-first public content site with article browser, newsletter archive, and marketing landing. Multi-archetype composition optimized for long-form consumption, editorial discovery, and subscriber growth.",
   "tags": ["content", "editorial", "articles", "blog", "newsletter", "reading", "2026"],
   "compose": [
     "content-reader",
-    "content-author",
     "content-newsletter",
-    "marketing-content",
-    "auth-flow",
-    "settings"
+    "marketing-content"
   ],
   "theme": {
     "mode": "light",
     "shape": "sharp",
     "id": "editorial"
   },
-  "personality": "Reading-first content site optimized for long-form consumption. Generous line-height, comfortable measure (65-75 characters), and a clear typographic hierarchy that makes scanning effortless. Article cards feature bold headlines with subtle metadata. The reading view strips away distractions — just text, well-set. Author dashboard is functional and focused. Newsletter archive is clean and browsable. Think Substack meets Medium's typography. Lucide icons. Dark mode available for night reading.",
+  "personality": "Reading-first public content site optimized for long-form consumption. Generous line-height, comfortable measure (65-75 characters), and a clear typographic hierarchy that makes scanning effortless. Article cards feature bold headlines with subtle metadata. The reading view strips away distractions — just text, well-set. Newsletter archive is clean and browsable. Think Substack meets Medium's typography. Lucide icons. Dark mode available for night reading.",
   "voice": {
     "tone": "Clear and editorial. Respects the reader's time.",
     "cta_verbs": ["Read", "Subscribe", "Browse", "Share", "Bookmark", "Explore"],
@@ -33,7 +30,6 @@
     "analytics",
     "rss",
     "bookmarks",
-    "auth",
     "newsletter",
     "dark-mode"
   ],
@@ -58,21 +54,6 @@
       "shell": "top-nav-main",
       "archetype": "content-reader"
     },
-    "/drafts": {
-      "page": "drafts",
-      "shell": "sidebar-main",
-      "archetype": "content-author"
-    },
-    "/drafts/:id": {
-      "page": "editor",
-      "shell": "sidebar-main",
-      "archetype": "content-author"
-    },
-    "/published": {
-      "page": "published",
-      "shell": "sidebar-main",
-      "archetype": "content-author"
-    },
     "/subscribe": {
       "page": "subscribe",
       "shell": "minimal-header",
@@ -82,26 +63,6 @@
       "page": "archive",
       "shell": "minimal-header",
       "archetype": "content-newsletter"
-    },
-    "/login": {
-      "page": "login",
-      "shell": "centered",
-      "archetype": "auth-flow"
-    },
-    "/register": {
-      "page": "register",
-      "shell": "centered",
-      "archetype": "auth-flow"
-    },
-    "/forgot-password": {
-      "page": "forgot-password",
-      "shell": "centered",
-      "archetype": "auth-flow"
-    },
-    "/settings": {
-      "page": "settings",
-      "shell": "sidebar-main",
-      "archetype": "settings"
     }
   },
   "overrides": {
@@ -120,18 +81,14 @@
       { "key": "g h", "route": "/", "label": "Go to Home" },
       { "key": "g a", "route": "/articles", "label": "Go to Articles" },
       { "key": "g c", "route": "/categories", "label": "Go to Categories" },
-      { "key": "g d", "route": "/drafts", "label": "Go to Drafts" },
       { "key": "g n", "route": "/newsletter", "label": "Go to Newsletter" }
     ]
   },
   "dependencies": {
     "archetypes": {
       "content-reader": ">=1.0.0",
-      "content-author": ">=1.0.0",
       "content-newsletter": ">=1.0.0",
-      "marketing-content": ">=1.0.0",
-      "auth-flow": ">=1.0.0",
-      "settings": ">=1.0.0"
+      "marketing-content": ">=1.0.0"
     }
   },
   "suggested_themes": [
