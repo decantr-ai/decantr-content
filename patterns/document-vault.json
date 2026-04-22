@@ -93,6 +93,26 @@
     "tablet": "Two-panel layout — sidebar and document list. Preview opens as a slide-over.",
     "desktop": "Full three-panel layout with resizable sidebar. Preview pane docked on the right."
   },
+  "layout_hints": {
+    "three_panel_role": "The pattern owns folder navigation, document list, and preview rhythm as one integrated workspace. Parent pages should not add competing sidebars around it.",
+    "document_priority": "Lead with document identity, status, and recency. Deep metadata or version history should stay in the preview or secondary disclosure layer.",
+    "tenant_variant": "Tenant-facing variants should feel more focused and lighter-weight than operator-facing vault views, with fewer controls and clearer download affordances."
+  },
+  "motion": {
+    "micro": "Preview panes may fade or slide in gently, and hovered document rows may elevate or sharpen slightly for clarity.",
+    "transitions": "Folder navigation and preview changes should preserve orientation within the vault rather than reflowing the whole surface abruptly."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Document vault",
+    "keyboard": [
+      "Tab through folder navigation, search, document rows, and preview actions in a predictable left-to-right order.",
+      "Expandable folders and version history disclosures should use standard button semantics."
+    ],
+    "announcements": [
+      "Document name, status, date, and access state should be exposed semantically so the vault remains navigable without visual preview."
+    ]
+  },
   "composition": {
     "DocumentVault": "Container(d-section, split-3-panel) > [FolderSidebar + DocumentList + PreviewPane?]",
     "FolderSidebar": "Panel(d-surface, flex-col) > [TreeNode(expandable)[] + NewFolderButton?(d-interactive)]",

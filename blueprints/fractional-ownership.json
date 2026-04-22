@@ -56,7 +56,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "FinancialProduct"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g b", "route": "/browse", "label": "Go to Browse" },
+      { "key": "g p", "route": "/portfolio", "label": "Go to Portfolio" },
+      { "key": "g m", "route": "/market", "label": "Go to Market" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "asset-browser": ">=1.0.0",

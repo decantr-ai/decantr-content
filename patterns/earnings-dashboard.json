@@ -96,6 +96,25 @@
     "tablet": "KPIs in a single row. Charts render at full container width. Transactions table with horizontal scroll if needed.",
     "desktop": "Full dashboard grid. KPIs span the top. Charts and tier breakdown side by side. Transactions table with all columns visible."
   },
+  "layout_hints": {
+    "summary_first": "Lead with headline earnings metrics, then trend visualization, then transaction detail. The dashboard should tell a financial story from top to bottom rather than feeling like a loose pile of widgets.",
+    "chart_balance": "Revenue chart and tier breakdown should feel related but not equal in weight if one is clearly the primary insight surface.",
+    "trust_rhythm": "Keep totals, dates, and transaction states legible and conservative. This is a financial dashboard, so stability and clarity matter more than visual spectacle."
+  },
+  "motion": {
+    "micro": "KPI values and charts may reveal with restrained count-up or fade-in behavior, while export or range controls should respond crisply on hover and focus.",
+    "transitions": "Date-range changes should animate smoothly enough to preserve context without making revenue interpretation feel unstable."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Earnings dashboard",
+    "keyboard": [
+      "Header controls, KPI cards, charts, and transaction surfaces should remain keyboard reachable in reading order."
+    ],
+    "announcements": [
+      "Revenue totals, trend directions, and date-range changes should be exposed semantically so the dashboard remains understandable beyond visual chart treatments."
+    ]
+  },
   "composition": {
     "EarningsDashboard": "Container(d-section, flex-col, gap-6) > [KPIRow + RevenueChart + TierBreakdown + TransactionsTable + PayoutStatus?]",
     "KPIRow": "Grid(d-data, 4-col) > KPICard(d-surface)[]",

@@ -55,7 +55,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "WebApplication"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g s", "route": "/session", "label": "Go to Session" },
+      { "key": "g t", "route": "/tracks", "label": "Go to Tracks" },
+      { "key": "g r", "route": "/rooms", "label": "Go to Rooms" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "music-workspace": ">=1.0.0",

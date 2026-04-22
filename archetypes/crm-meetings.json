@@ -80,5 +80,16 @@
     "ai-recap",
     "transcription",
     "action-items"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "luminarum",
+      "clean",
+      "carbon"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

@@ -70,5 +70,16 @@
     "ai-insights",
     "forecasting",
     "analytics"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "luminarum",
+      "clean",
+      "carbon"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

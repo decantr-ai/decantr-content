@@ -81,5 +81,16 @@
   "features": [
     "marketing",
     "seo"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "luminarum",
+      "clean",
+      "launchpad"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

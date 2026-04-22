@@ -79,6 +79,25 @@
     "tablet": "Two-column grid activates. Mixed preset large chart still spans full width, smaller charts go side by side below. Chart height at 200px.",
     "desktop": "Full two-column grid. Mixed preset spans correctly. Wide preset shows horizontal scrollable row. Charts at full minimum height with comfortable legend spacing."
   },
+  "layout_hints": {
+    "grid_ownership": "This pattern owns the chart-card grid only. Parent dashboards should provide larger section framing, filters, or explanatory copy outside the chart grid itself.",
+    "chart_balance": "Keep chart titles, value context, and legends tightly associated with each chart so the grid reads as one analytical block instead of a collage of unrelated cards.",
+    "mixed_variant": "When one primary chart spans extra width, secondary charts should remain visually subordinate but rhythmically aligned beneath it."
+  },
+  "motion": {
+    "micro": "Chart cards may brighten their border or surface slightly on hover, and legends may fade in cleanly with the chart content.",
+    "transitions": "Chart data should animate in a restrained way that preserves readability. Filters or time-range changes should cross-fade or morph smoothly rather than jarringly re-rendering the whole grid."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Chart grid",
+    "keyboard": [
+      "If cards or legends are interactive, tab through each chart card and its controls in reading order."
+    ],
+    "announcements": [
+      "Chart title, metric intent, and key legend information should be exposed semantically rather than relying on color alone."
+    ]
+  },
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gc1 _lg:gc2 _gap4",

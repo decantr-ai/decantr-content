@@ -63,6 +63,11 @@
     "tablet": "Standard layout with slightly narrower label area. Span detail opens inline. Filter bar fully visible. Comfortable touch targets on span rows.",
     "desktop": "Full waterfall with generous label area showing service name, operation, and duration. Hover effects active. Span detail expands inline with full metadata. Filter bar shows all controls in a single row."
   },
+  "layout_hints": {
+    "axis_priority": "The time axis and span alignment must remain visually trustworthy. Labels, bars, and detail panels should all reinforce the temporal read rather than acting like separate widgets.",
+    "detail_discipline": "Expanded span details should feel attached to their parent row and should not break the user's sense of trace hierarchy.",
+    "filter_rhythm": "Keep the filter bar compact and clearly upstream of the waterfall so it reads as a control strip, not as another data panel."
+  },
   "motion": {
     "micro": {
       "span-hover": "opacity 0.7→1 + background-tint 150ms ease-out on hovered span, opacity 1→0.3 on non-related spans",

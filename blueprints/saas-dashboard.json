@@ -139,6 +139,11 @@
       "archetype": "auth-full",
       "page": "mfa-verify"
     },
+    "/phone-verify": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "phone-verify"
+    },
     "/settings/profile": {
       "shell": "sidebar-aside",
       "archetype": "settings-full",

@@ -68,7 +68,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Restaurant", "Organization"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g f", "route": "/floor", "label": "Go to Floor" },
+      { "key": "g k", "route": "/kitchen", "label": "Go to Kitchen" },
+      { "key": "g i", "route": "/inventory", "label": "Go to Inventory" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "restaurant-floor": ">=1.0.0",

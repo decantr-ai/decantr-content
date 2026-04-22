@@ -102,6 +102,20 @@
         "unit-detail"
       ],
       "shell": "sidebar-main"
+    },
+    {
+      "id": "documents",
+      "patterns": [
+        {
+          "pattern": "document-vault",
+          "preset": "list",
+          "as": "documents"
+        }
+      ],
+      "default_layout": [
+        "documents"
+      ],
+      "shell": "sidebar-main"
     }
   ],
   "page_briefs": {
@@ -109,7 +123,8 @@
     "detail": "Property detail view with hero image, address, description, and key stats. Tabbed sections below for units, financials, and maintenance. Map embed in the sidebar.",
     "create": "Multi-step property creation form with address fields, property type selector, photo upload area, unit configuration, and financial defaults.",
     "units": "Unit grid showing unit cards with unit number, floor plan type, square footage, rent amount, and occupancy status badge. Add-unit button above the grid.",
-    "unit-detail": "Unit detail view with floor plan info, current tenant card if occupied, lease summary, rent history table, and maintenance ticket list."
+    "unit-detail": "Unit detail view with floor plan info, current tenant card if occupied, lease summary, rent history table, and maintenance ticket list.",
+    "documents": "Property document vault showing leases, inspection reports, insurance certificates, and uploaded files. Folder navigation on the left, document list in the center, and preview or metadata on the right."
   },
   "features": [
     "crud",
@@ -125,6 +140,7 @@
       "property-grid": "^1.0.0",
       "property-detail": "^1.0.0",
       "property-card": "^1.0.0",
+      "document-vault": "^1.0.0",
       "unit-list": "^1.0.0",
       "unit-detail": "^1.0.0"
     },

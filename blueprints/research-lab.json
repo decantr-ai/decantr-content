@@ -58,7 +58,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "ResearchProject"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g n", "route": "/notebook", "label": "Go to Notebook" },
+      { "key": "g e", "route": "/experiments", "label": "Go to Experiments" },
+      { "key": "g d", "route": "/datasets", "label": "Go to Datasets" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "lab-notebook": ">=1.0.0",

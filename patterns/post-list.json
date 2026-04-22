@@ -117,5 +117,24 @@
     "mobile": "Full-width post items. Cards preset uses vertical card layout with image on top. Excerpts limited to one line.",
     "tablet": "Standard list or card layout with comfortable spacing.",
     "desktop": "Posts in a centered content column. Cards preset shows image on the left with text on the right."
+  },
+  "layout_hints": {
+    "editorial_priority": "Lead with headline, then supporting metadata, then excerpt. Category or badge treatments should support the read, not become the loudest element.",
+    "list_rhythm": "Rows should maintain a steady editorial cadence with consistent title alignment and restrained separators.",
+    "cards_variant": "When using cards, preserve the same reading order as the list view so the pattern still feels editorial rather than marketing-heavy."
+  },
+  "motion": {
+    "micro": "Headline links and featured badges may respond subtly on hover, and card variants may lift slightly when interactive.",
+    "transitions": "List filtering, pagination, or feed refresh should cross-fade or stagger items gently without disrupting scan flow."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Post list",
+    "keyboard": [
+      "Post titles or cards should present one clear primary interaction target in reading order."
+    ],
+    "announcements": [
+      "Title, author, date, and excerpt context should be available semantically so each post preview remains understandable without card styling."
+    ]
   }
 }

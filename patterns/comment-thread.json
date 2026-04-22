@@ -118,6 +118,26 @@
     "tablet": "Sidebar preset renders as a right panel at 320px width. Inline preset uses a popover.",
     "desktop": "Standard sidebar or inline popover layout. Full avatars and comfortable spacing."
   },
+  "layout_hints": {
+    "thread_role": "The thread should feel attached to the referenced content first and like a discussion surface second. Anchor cues, indentation, and resolve state should preserve that relationship.",
+    "reply_hierarchy": "Primary comment, replies, and thread actions should read in a clear top-to-bottom progression. Resolve controls should be easy to find without visually dominating the discussion.",
+    "inline_vs_sidebar": "Inline threads should stay compact and context-tethered, while sidebar threads may breathe more and show a fuller reply composer."
+  },
+  "motion": {
+    "micro": "Resolve state, hover actions, and reply affordances may fade or sharpen in gently as attention moves through the thread.",
+    "transitions": "Opening, collapsing, or resolving threads should feel calm and collaborative rather than abrupt or chatty."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Comment thread",
+    "keyboard": [
+      "Thread messages, reply composer, and resolve actions should follow a predictable reading order.",
+      "Resolved and reopened states should remain clear to keyboard and assistive-technology users."
+    ],
+    "announcements": [
+      "Author, timestamp, reply depth, and resolution state should be communicated semantically, not only through indentation or color."
+    ]
+  },
   "composition": {
     "CommentThread": "Container(d-surface, flex-col) > [AnchorLine? + CommentList + ReplyInput + ThreadActions]",
     "CommentList": "List(flex-col, gap-3) > Comment[]",

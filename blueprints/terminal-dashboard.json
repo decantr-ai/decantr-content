@@ -128,6 +128,11 @@
       "archetype": "legal",
       "page": "terms"
     },
+    "/cookies": {
+      "shell": "top-nav-footer",
+      "archetype": "legal",
+      "page": "cookies"
+    },
     "/login": {
       "shell": "centered",
       "archetype": "auth-full",
@@ -137,6 +142,36 @@
       "shell": "centered",
       "archetype": "auth-full",
       "page": "register"
+    },
+    "/forgot-password": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "forgot-password"
+    },
+    "/reset-password": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "reset-password"
+    },
+    "/verify-email": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "verify-email"
+    },
+    "/mfa-setup": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "mfa-setup"
+    },
+    "/mfa-verify": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "mfa-verify"
+    },
+    "/phone-verify": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "phone-verify"
     },
     "/app": {
       "shell": "terminal-split",

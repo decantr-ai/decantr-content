@@ -56,7 +56,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "SportsTeam"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g t", "route": "/team", "label": "Go to Team" },
+      { "key": "g s", "route": "/scrims", "label": "Go to Scrims" },
+      { "key": "g v", "route": "/vods", "label": "Go to VODs" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "team-operations": ">=1.0.0",

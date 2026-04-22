@@ -91,6 +91,11 @@
     "tablet": "Stacked layout default with option to switch to side-by-side. Top bar in single row with compressed sliders. History as a slide-over drawer from left. Comparison mode shows 2 response panels (not 3).",
     "desktop": "Full side-by-side layout with draggable divider. Top bar in single row with full slider controls. History sidebar collapsible. Comparison mode supports 2-3 response panels. Keyboard shortcuts fully active. Hover tooltips on all controls."
   },
+  "layout_hints": {
+    "editor_priority": "The prompt editor and run loop are the primary focus. Token counters, sliders, and history should support iteration without crowding the act of writing and evaluating prompts.",
+    "comparison_mode": "When multiple response panels are visible, keep the shared prompt context obvious so the user reads the comparison as one experiment rather than separate chats.",
+    "control_rhythm": "Top-bar controls should feel compact and tool-like. Preserve a clear separation between experiment controls, editor canvas, and response surfaces."
+  },
   "motion": {
     "micro": {
       "run-button-hover": "shadow elevation increase + slight scale(1.02) 120ms ease-out",

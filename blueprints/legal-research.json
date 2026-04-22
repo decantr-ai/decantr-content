@@ -57,7 +57,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "WebApplication"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g r", "route": "/research", "label": "Go to Research" },
+      { "key": "g c", "route": "/contracts", "label": "Go to Contracts" },
+      { "key": "g m", "route": "/matters", "label": "Go to Matters" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "research-workspace": ">=1.0.0",

@@ -152,6 +152,11 @@
       "archetype": "legal",
       "page": "terms"
     },
+    "/cookies": {
+      "shell": "top-nav-footer",
+      "archetype": "legal",
+      "page": "cookies"
+    },
     "/login": {
       "shell": "centered",
       "archetype": "auth-full",
@@ -186,6 +191,11 @@
       "shell": "centered",
       "archetype": "auth-full",
       "page": "mfa-verify"
+    },
+    "/phone-verify": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "phone-verify"
     },
     "/dashboard": {
       "shell": "sidebar-main",
@@ -222,6 +232,11 @@
       "archetype": "tenant-manager",
       "page": "list"
     },
+    "/tenants/new": {
+      "shell": "sidebar-main",
+      "archetype": "tenant-manager",
+      "page": "create"
+    },
     "/tenants/:id": {
       "shell": "sidebar-main",
       "archetype": "tenant-manager",
@@ -242,10 +257,20 @@
       "archetype": "pm-financials",
       "page": "expenses"
     },
+    "/financials/payments": {
+      "shell": "sidebar-main",
+      "archetype": "pm-financials",
+      "page": "payments"
+    },
     "/maintenance": {
       "shell": "sidebar-main",
       "archetype": "maintenance-center",
       "page": "board"
+    },
+    "/maintenance/new": {
+      "shell": "sidebar-main",
+      "archetype": "maintenance-center",
+      "page": "create"
     },
     "/maintenance/:id": {
       "shell": "sidebar-main",
@@ -266,6 +291,11 @@
       "shell": "top-nav-main",
       "archetype": "tenant-payments",
       "page": "overview"
+    },
+    "/tenant-portal/payments/setup": {
+      "shell": "top-nav-main",
+      "archetype": "tenant-payments",
+      "page": "setup"
     },
     "/tenant-portal/maintenance": {
       "shell": "top-nav-main",

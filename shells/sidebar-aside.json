@@ -150,7 +150,8 @@
   },
   "guidance": {
     "section_label_treatment": "d-label[data-anchor]",
-    "section_density": "compact"
+    "section_density": "compact",
+    "shell_spacing": "Sidebar-aside owns the global navigation rhythm, the main scrollable work column, and the denser right-hand inspector lane. Pages should not add extra full-page wrappers or duplicate shell padding; let the sidebar and aside stay independently scrollable from the main body."
   },
   "code": {
     "imports": "import { Shell } from 'decantr/components';",

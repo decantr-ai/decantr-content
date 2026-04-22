@@ -116,5 +116,26 @@
     "mobile": "Full-width log view. Controls collapse into a top bar with a filter toggle button. Log entries use smaller font. Search is a full-width overlay.",
     "tablet": "Standard layout with controls visible. Comfortable font size for log entries.",
     "desktop": "Full log stream with controls bar, search, and stats visible. Wide view accommodates long log messages without wrapping."
+  },
+  "layout_hints": {
+    "terminal_frame": "The pattern owns the terminal-like frame, controls header, and scrolling stream region. Parent layouts should not wrap it in another faux-terminal shell.",
+    "signal_hierarchy": "Lead with the live stream, then controls, then secondary counters. Stats should support stream interpretation, not compete with the entries.",
+    "line_density": "Entries should align in a stable rhythm with timestamp, level, source, and message fields that scan quickly during live updates."
+  },
+  "motion": {
+    "micro": "New entries may fade or slide in subtly at the bottom, and paused state indicators may brighten clearly when active.",
+    "transitions": "Auto-scroll should feel steady and predictable. Filter changes should dim or reveal entries without causing the whole stream frame to jump."
+  },
+  "accessibility": {
+    "role": "log",
+    "aria-label": "Live log stream",
+    "aria-live": "polite",
+    "keyboard": [
+      "Tab through stream controls, search, and any copy/export actions before entering the log viewport.",
+      "If the log viewport itself is focusable, arrow keys and Page Up/Page Down should preserve readable navigation through entries."
+    ],
+    "announcements": [
+      "New entries, pause state, and active filters should be exposed in a way that does not overwhelm assistive technology with every visual update."
+    ]
   }
 }

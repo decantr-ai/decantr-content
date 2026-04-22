@@ -98,6 +98,25 @@
     "tablet": "Table with horizontal scroll for extra columns. Date range filter visible in the header.",
     "desktop": "Full table with all columns visible. Summary row and filters always visible."
   },
+  "layout_hints": {
+    "financial_priority": "Keep collected totals, date range, and current payment status easy to scan first. Secondary metadata like method or payer should support that read, not compete with it.",
+    "table_discipline": "The pattern owns the payments table and filter rhythm. Parent finance pages should place broader KPI framing above it rather than nesting this inside another table-like shell.",
+    "mobile_translation": "When collapsing to cards, keep date, amount, and status grouped in a way that still feels like a ledger rather than a generic feed."
+  },
+  "motion": {
+    "micro": "Summary values or status badges may brighten subtly on hover and filter interactions may clarify the active state without distracting from the ledger.",
+    "transitions": "Date-range or filter changes should cross-fade rows or update totals smoothly so the payment history still feels stable and trustworthy."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Payment history",
+    "keyboard": [
+      "Tab through filters, export actions, and then the payment rows or cards in reading order."
+    ],
+    "announcements": [
+      "Amount, date, status, and payer/property context should be exposed semantically so payment records remain understandable without table styling alone."
+    ]
+  },
   "composition": {
     "PaymentHistory": "Container(d-section, flex-col, gap-4) > [Header + Filters? + SummaryRow? + PaymentTable]",
     "Header": "Row(d-control, space-between) > [Title + DateRangePicker(d-control) + ExportButton(d-interactive)]",

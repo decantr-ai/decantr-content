@@ -109,6 +109,11 @@
       "archetype": "auth-flow",
       "page": "register"
     },
+    "/forgot-password": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "forgot-password"
+    },
     "/settings": {
       "shell": "sidebar-main",
       "archetype": "settings",

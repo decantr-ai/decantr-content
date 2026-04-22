@@ -57,7 +57,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "WebApplication"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g e", "route": "/emissions", "label": "Go to Emissions" },
+      { "key": "g s", "route": "/suppliers", "label": "Go to Suppliers" },
+      { "key": "g r", "route": "/reports", "label": "Go to Reports" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "emissions-dashboard": ">=1.0.0",

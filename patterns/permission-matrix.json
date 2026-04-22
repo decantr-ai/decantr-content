@@ -95,6 +95,25 @@
     "tablet": "Standard matrix with horizontal scroll if more than 4 roles. Touch-friendly checkbox sizes.",
     "desktop": "Full matrix grid with all roles and permissions visible. Sticky left column for permission names. Sticky header row for role names."
   },
+  "layout_hints": {
+    "matrix_priority": "Role headers and permission groupings should make the matrix legible before the user starts toggling controls. Preserve strong row/column orientation cues at all times.",
+    "change_visibility": "Unsaved or changed cells should be noticeable but not visually louder than the permission structure itself.",
+    "mobile_translation": "When the matrix collapses into role-by-role sections, preserve the same permission grouping and naming so users do not lose conceptual continuity."
+  },
+  "motion": {
+    "micro": "Permission toggles may confirm changes with subtle state transitions, and unsaved indicators may fade in gently when cells change.",
+    "transitions": "Role switching or expanding granular categories should preserve orientation rather than redrawing the matrix abruptly."
+  },
+  "accessibility": {
+    "role": "table",
+    "aria-label": "Permission matrix",
+    "keyboard": [
+      "Keyboard users should be able to move predictably through role headers, permission rows, and toggle cells without losing row/column context."
+    ],
+    "announcements": [
+      "Role, permission name, and checked state should be exposed together so matrix navigation is understandable without relying on visual alignment."
+    ]
+  },
   "composition": {
     "PermissionMatrix": "Container(d-section) > [MatrixTable + AddRoleButton?(d-interactive)]",
     "MatrixTable": "Table(d-data, full-width) > [HeaderRow > RoleHeader[] + CategoryGroup[]]",

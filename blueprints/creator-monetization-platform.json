@@ -170,6 +170,11 @@
       "archetype": "legal",
       "page": "terms"
     },
+    "/cookies": {
+      "shell": "top-nav-footer",
+      "archetype": "legal",
+      "page": "cookies"
+    },
     "/login": {
       "shell": "centered",
       "archetype": "auth-full",
@@ -204,6 +209,11 @@
       "shell": "centered",
       "archetype": "auth-full",
       "page": "mfa-verify"
+    },
+    "/phone-verify": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "phone-verify"
     },
     "/creator/:username": {
       "shell": "top-nav-main",

@@ -102,6 +102,11 @@
       "archetype": "auth-flow",
       "page": "register"
     },
+    "/forgot-password": {
+      "shell": "centered",
+      "archetype": "auth-flow",
+      "page": "forgot-password"
+    },
     "/apps": {
       "shell": "sidebar-main",
       "archetype": "cloud-infrastructure",

@@ -64,6 +64,11 @@
     "tablet": "Standard force-directed layout with touch support. Detail panel slides in from the right at reduced width (280px). Service nodes show icon and name. Edge particles render at reduced density.",
     "desktop": "Full interactive map with hover effects, animated edge particles, and side detail panel. Zoom controls in the top-right corner. Legend always visible. Generous node sizing with icons, names, and health indicators."
   },
+  "layout_hints": {
+    "map_ownership": "This pattern owns the topology canvas, overlays, and detail-panel anchoring. Parent dashboards should frame it as one observability surface rather than wrapping it in extra competing panels.",
+    "node_priority": "Service health and dependency structure should be readable before fine-grained metrics. The detail panel is where deeper analytics belong.",
+    "overlay_rhythm": "Legend, controls, and detail panel should feel like supporting map chrome. Keep them visually lighter than the node graph itself."
+  },
   "motion": {
     "micro": {
       "node-hover": "scale(1→1.05) + elevation increase + border-color shift 150ms ease-out",

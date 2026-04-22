@@ -97,5 +97,24 @@
     "mobile": "Columns stack vertically — media on top, text content below. CTA buttons go full-width stacked. Gradient orbs scale down or simplify.",
     "tablet": "Side-by-side layout maintained with tighter proportions. Media area shrinks to 40% width.",
     "desktop": "Full split layout with generous whitespace. Media at one-third, content at two-thirds. Orbs animate at full size."
+  },
+  "layout_hints": {
+    "narrative_split": "The media side should support the value proposition, not compete with it. Preserve a clear left-right hierarchy where one side establishes proof or brand and the other carries the decision-making copy.",
+    "cta_rhythm": "Primary and secondary actions should read as one compact decision cluster below the core message rather than stretching the hero vertically.",
+    "mobile_stack": "When stacked, keep media, heading, supporting copy, and CTAs in a confident narrative order so the hero still feels intentional on small screens."
+  },
+  "motion": {
+    "micro": "CTAs and media elements may float or sharpen subtly on hover, but the hero should remain composed and premium rather than restless.",
+    "transitions": "Hero entry and background orbs should move slowly and confidently, reinforcing atmosphere without distracting from copy."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Split hero section",
+    "keyboard": [
+      "Primary and secondary hero actions should be easy to reach in order after the main message."
+    ],
+    "announcements": [
+      "Heading, supporting message, and the relationship between media and CTA context should be understandable without relying on visual split composition alone."
+    ]
   }
 }

@@ -62,6 +62,11 @@
     "tablet": "Standard layout. Bar has comfortable width with values to the right. Radial gauge at natural size. Breakdown legend is a horizontal row.",
     "desktop": "Full layout with generous spacing. Multiple usage meters can sit side by side in a grid. Radial gauge fits well in dashboard card layouts. Upgrade prompt aligns below the meter with max-width constraint."
   },
+  "layout_hints": {
+    "meter_role": "Treat this as one self-contained quota instrument. Parent pricing or billing sections own the surrounding narrative and comparison layout.",
+    "threshold_readability": "The current value, threshold markers, and quota context should read in one quick scan without forcing the user to decode color alone.",
+    "prompt_discipline": "Upgrade prompts should appear as supportive escalation below the meter rather than hijacking the entire surface."
+  },
   "motion": {
     "micro": {
       "bar-hover": "bar height 8px→10px + shadow-sm 150ms ease-out",

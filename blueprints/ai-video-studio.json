@@ -59,7 +59,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "WebApplication"], "meta_priorities": ["description", "og:image", "twitter:card"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g e", "route": "/editor", "label": "Go to Editor" },
+      { "key": "g p", "route": "/projects", "label": "Go to Projects" },
+      { "key": "g r", "route": "/renders", "label": "Go to Renders" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "video-editor": ">=1.0.0",

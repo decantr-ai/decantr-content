@@ -82,7 +82,8 @@
   },
   "guidance": {
     "section_label_treatment": "d-label",
-    "section_density": "compact"
+    "section_density": "compact",
+    "shell_spacing": "Terminal-split owns the status bar, split pane rhythm, resize dividers, and hotkey footer. Route content should live directly inside the panes with minimal internal guttering rather than introducing card chrome or extra scroll containers that fight the shell."
   },
   "code": {
     "imports": "Target-specific imports vary. Translate the internal_layout contract into your framework's status bar, resizable split panes, and hotkey footer display.",

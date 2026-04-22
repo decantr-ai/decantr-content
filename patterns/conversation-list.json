@@ -76,6 +76,25 @@
     "tablet": "Sidebar panel at 280px width. Standard row heights.",
     "desktop": "Sidebar panel at 300px width with comfortable spacing. Full dates visible. Hover actions on each row."
   },
+  "layout_hints": {
+    "list_priority": "The active conversation and unread state should be immediately legible. Search and new-chat actions support the list but should not compete with it visually.",
+    "row_density": "Keep row metadata concise so titles remain dominant and the sidebar does not become noisy. Compact mode should still preserve active-state clarity.",
+    "mobile_translation": "On small screens, treat the list as its own route-level selection surface rather than a cramped embedded sidebar."
+  },
+  "motion": {
+    "micro": "Active rows may sharpen or lift slightly, and unread indicators may pulse gently only when newly changed.",
+    "transitions": "Search filtering and conversation switching should feel immediate and stable, with no heavy motion that disrupts scan flow."
+  },
+  "accessibility": {
+    "role": "navigation",
+    "aria-label": "Conversation list",
+    "keyboard": [
+      "Conversation rows and their overflow actions should follow a predictable top-to-bottom order."
+    ],
+    "announcements": [
+      "Unread state, active conversation, title, and recency should be exposed semantically so the list remains understandable without hover or color cues."
+    ]
+  },
   "composition": {
     "ConversationList": "Panel(d-surface, flex-col, full-height) > [SearchInput(d-control, icon: search) + NewChatButton(d-interactive, variant: primary) + ItemList]",
     "ItemList": "List(flex-col, scrollable) > ConversationItem[]",

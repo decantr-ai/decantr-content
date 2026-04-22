@@ -93,6 +93,26 @@
     "tablet": "Standard hero proportions. Tabs fit in a single row. Content area has comfortable margins.",
     "desktop": "Full-width hero with generous cover image. Content area centered with max-width constraint. All tabs visible."
   },
+  "layout_hints": {
+    "hero_priority": "Lead with creator identity, subscribe intent, and social proof in the hero. The rest of the page should feel like a structured deepening of that first impression.",
+    "tab_rhythm": "Tabs should act as the structural switch between content modes, not as decorative navigation. Keep the active tab visually obvious and the tab content frame stable.",
+    "embed_scope": "Embed mode should behave like a focused conversion unit. Strip away broad profile storytelling and preserve only the identity, subscriber signal, and clear CTA."
+  },
+  "motion": {
+    "micro": "Subscribe CTA and tab hover states may sharpen slightly, while hero metrics or follower counts may reveal with a restrained fade or count-up.",
+    "transitions": "Tab changes should preserve orientation with soft fades or slides rather than jarring full-surface swaps."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Creator profile",
+    "keyboard": [
+      "Tab through hero actions, then tablist, then the currently active panel content.",
+      "Tabs should support standard arrow-key navigation and clearly expose the active panel relationship."
+    ],
+    "announcements": [
+      "Creator name, subscriber context, and active tab state should be available semantically and not rely on visual prominence alone."
+    ]
+  },
   "composition": {
     "CreatorProfile": "Container(d-section, flex-col) > [Hero + TabBar(d-control) + TabContent]",
     "Hero": "Section(full-width) > [CoverImage + Avatar(large) + CreatorName(heading2) + Bio(text-muted) + Stats + SubscribeCTA(d-interactive)]",

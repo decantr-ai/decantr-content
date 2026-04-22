@@ -73,5 +73,16 @@
     "email",
     "ai-compose",
     "categorization"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "luminarum",
+      "clean",
+      "carbon"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }

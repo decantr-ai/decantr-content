@@ -58,7 +58,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["GovernmentOrganization", "WebSite"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": false, "hotkeys": [] },
+  "navigation": {
+    "command_palette": false,
+    "hotkeys": [
+      { "key": "g e", "route": "/engage", "label": "Go to Engage" },
+      { "key": "g b", "route": "/budget", "label": "Go to Budget" },
+      { "key": "g r", "route": "/requests", "label": "Go to Requests" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "engagement-hub": ">=1.0.0",

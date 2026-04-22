@@ -55,7 +55,14 @@
   },
   "overrides": { "features_add": [], "features_remove": [], "pages": {}, "pages_remove": [] },
   "seo_hints": { "schema_org": ["Organization", "WebApplication"], "meta_priorities": ["description", "og:image"] },
-  "navigation": { "command_palette": true, "hotkeys": [] },
+  "navigation": {
+    "command_palette": true,
+    "hotkeys": [
+      { "key": "g d", "route": "/deal", "label": "Go to Deal" },
+      { "key": "g f", "route": "/documents", "label": "Go to Documents" },
+      { "key": "g i", "route": "/investors", "label": "Go to Investors" }
+    ]
+  },
   "dependencies": {
     "archetypes": {
       "deal-workspace": ">=1.0.0",

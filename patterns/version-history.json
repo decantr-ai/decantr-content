@@ -108,6 +108,26 @@
     "tablet": "Sidebar at 320px width with timeline and inline preview. Compare mode uses a bottom sheet.",
     "desktop": "Sidebar with timeline, adjacent preview panel, and inline diff view. Full author details and change summaries visible."
   },
+  "layout_hints": {
+    "timeline_priority": "Lead with chronology and authorship. Restore or compare actions should feel secondary until a version is actively selected.",
+    "preview_attachment": "The selected version preview or diff should feel attached to the highlighted entry so users never lose track of which revision they are viewing.",
+    "compact_mode": "Compact mode should keep the current version and recent named checkpoints most visible rather than trying to render the full timeline density."
+  },
+  "motion": {
+    "micro": "Selected entries may sharpen or glow subtly, and restore/compare actions may acknowledge focus clearly without distracting from the timeline.",
+    "transitions": "Entry selection, preview swaps, and compare-mode toggles should preserve the sense of chronological navigation rather than feeling like unrelated modal jumps."
+  },
+  "accessibility": {
+    "role": "region",
+    "aria-label": "Version history",
+    "keyboard": [
+      "Timeline entries should be keyboard navigable in chronological order, with clear focus and selected state.",
+      "Restore and compare actions should be exposed without requiring pointer hover."
+    ],
+    "announcements": [
+      "Version author, timestamp, and change summary should be announced together so revision choice remains understandable without visual grouping."
+    ]
+  },
   "composition": {
     "VersionHistory": "Panel(d-section, flex-col) > [VersionList + DiffView?]",
     "VersionList": "List(d-data, flex-col) > VersionEntry[]",

@@ -147,6 +147,11 @@
       "archetype": "legal",
       "page": "terms"
     },
+    "/cookies": {
+      "shell": "top-nav-footer",
+      "archetype": "legal",
+      "page": "cookies"
+    },
     "/login": {
       "shell": "centered",
       "archetype": "auth-full",
@@ -181,6 +186,11 @@
       "shell": "centered",
       "archetype": "auth-full",
       "page": "mfa-verify"
+    },
+    "/phone-verify": {
+      "shell": "centered",
+      "archetype": "auth-full",
+      "page": "phone-verify"
     },
     "/home": {
       "shell": "sidebar-main",
@@ -231,6 +241,11 @@
       "shell": "sidebar-main",
       "archetype": "settings-full",
       "page": "preferences"
+    },
+    "/profile/account": {
+      "shell": "sidebar-main",
+      "archetype": "settings-full",
+      "page": "danger"
     }
   },
   "seo_hints": {

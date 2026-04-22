@@ -114,6 +114,25 @@
     "tablet": "Two-column layout maintained. Summary panel is narrower. Payment form takes majority width.",
     "desktop": "Standard two-column layout with comfortable spacing. Summary card is sticky within its column on scroll."
   },
+  "layout_hints": {
+    "decision_priority": "Users should understand what they are buying and what they will pay before they commit. Keep the summary and total obvious before the form asks for too much detail.",
+    "form_confidence": "Payment inputs should feel linear and reassuring. Validation, promo codes, and plan comparison belong in clear secondary zones rather than crowding the primary submit path.",
+    "mobile_sequence": "On mobile, keep the order summary, core payment form, and final CTA in one confident top-to-bottom flow rather than scattering confirmation details."
+  },
+  "motion": {
+    "micro": "Payment method selection, promo application, and summary updates may animate subtly to confirm state changes without introducing anxiety.",
+    "transitions": "Step changes or success states should feel reassuring and deliberate, never like the user is being rushed through a purchase."
+  },
+  "accessibility": {
+    "role": "form",
+    "aria-label": "Checkout flow",
+    "keyboard": [
+      "Form controls, payment method selection, promo entry, and the final submit action should follow a predictable top-to-bottom order."
+    ],
+    "announcements": [
+      "Price totals, payment errors, and selected billing method should be exposed semantically so checkout remains trustworthy without visual hierarchy alone."
+    ]
+  },
   "composition": {
     "CheckoutFlow": "Grid(d-section, 2-col, responsive: stack) > [PaymentForm + OrderSummary]",
     "PaymentForm": "Form(d-surface, flex-col) > [MethodSelect > Radio(d-control)[] + CardInputs > [NumberInput + ExpiryInput + CVCInput] + BillingAddress + SubmitButton(d-interactive, variant: primary, full-width)]",

@@ -85,5 +85,25 @@
     "mobile": "Panes stack vertically (no side-by-side splitting). Tab-based switching between panes instead of simultaneous view. No drag handles.",
     "tablet": "Horizontal split available. Drag handles have larger touch targets (24px hit area). Quad preset unavailable.",
     "desktop": "Full split pane with all presets. Keyboard shortcuts for resizing. Drag handles at standard size."
+  },
+  "layout_hints": {
+    "pane_ownership": "The pattern owns pane boundaries, dividers, and resize affordances. Child pages or viewers should not add their own competing split structures unless explicitly nested by the contract.",
+    "focus_hierarchy": "One pane should always feel primary and the others supportive. Resize handles should reinforce that relationship rather than turning the layout into an undifferentiated grid.",
+    "mobile_fallback": "When the split collapses on mobile, preserve pane semantics through tabs or stacked sections rather than pretending simultaneous multi-pane editing is still available."
+  },
+  "motion": {
+    "micro": "Resize handles may brighten or thicken slightly on hover and focus so the drag affordance is obvious.",
+    "transitions": "Pane resizing should feel direct and continuous. Collapsing or resetting panes should animate just enough to preserve orientation without adding theatrical motion."
+  },
+  "accessibility": {
+    "role": "group",
+    "aria-label": "Split pane layout",
+    "keyboard": [
+      "Focusable resize handles should expose arrow-key resizing in addition to pointer drag.",
+      "Pane order and active pane state should remain clear when navigating by keyboard."
+    ],
+    "announcements": [
+      "Resize handles and pane labels should communicate orientation and current size changes to assistive technology when adjusted."
+    ]
   }
 }

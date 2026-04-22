@@ -79,6 +79,11 @@
     "tablet": "Standard inline layout. Picker opens as a popover positioned above. 6-column emoji grid. Tap to toggle reactions.",
     "desktop": "Full layout with hover states on chips. Picker opens as a popover. Hovering a chip shows a tooltip listing the first 5 users who reacted. Keyboard navigation fully supported."
   },
+  "layout_hints": {
+    "bar_role": "The reaction bar is a lightweight engagement affordance that should sit close to the content it belongs to without overshadowing the main thread or post body.",
+    "chip_density": "Keep chips compact and readable. Ownership state, count, and add affordance should all remain scannable even when many reactions accumulate.",
+    "picker_anchor": "The picker should feel physically attached to the add button or reaction rail. On mobile, the bottom-sheet translation should preserve that same semantic relationship."
+  },
   "motion": {
     "micro": {
       "chip-hover": "background lighten + translateY(-1px) 120ms ease-out",

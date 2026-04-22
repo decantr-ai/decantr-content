@@ -184,5 +184,16 @@
     "deals",
     "ai-enrichment",
     "forecasting"
-  ]
+  ],
+  "suggested_theme": {
+    "ids": [
+      "luminarum",
+      "clean",
+      "carbon"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ]
+  }
 }
