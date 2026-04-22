@@ -74,7 +74,7 @@
       "center_content": "Nav links \u2014 flex with gap 1.5rem on tablet/desktop and gracefully reduced clutter on narrow widths",
       "right_content": "Theme toggle (sun/moon icon, toggles light/dark class on html element) + Search trigger + CTA button or user avatar. Theme toggle uses a simple icon button \u2014 no dropdown.",
       "button_sizing": "Buttons and CTAs in the header must use compact sizing: py-1.5 px-4 text-sm (not the default d-interactive padding). The header is 52px \u2014 buttons should be ~32px tall, not 40px+.",
-      "nav_links": "Nav links use text-sm font-medium with no background. Hover: text color transitions to primary. Active: font-semibold or underline-offset-4."
+      "nav_links": "Nav links use text-sm font-medium with no background. Hover: text color transitions to primary. Active: font-semibold or underline-offset-4. Keep the visible label to the route name itself — if hotkeys are declared in the essence, treat them as keyboard bindings or command-palette hints, not inline nav text."
     },
     "body": {
       "flex": "1",
@@ -90,7 +90,8 @@
     "section_label_treatment": "d-label",
     "section_density": "comfortable",
     "shell_spacing": "Header, body, and footer share the same horizontal inset rhythm. Public pages should feel like one shell system, not separate handcrafted blocks. Editorial registry surfaces should use a compact shell-owned section rhythm rather than layering shell gap, d-section padding, and sibling section margins all at once.",
-    "mobile_nav": "Below md, preserve brand + essential actions first and collapse or hide secondary links rather than squeezing the whole nav row."
+    "mobile_nav": "Below md, preserve brand + essential actions first and collapse or hide secondary links rather than squeezing the whole nav row.",
+    "hotkeys": "When navigation hotkeys are declared in the essence, implement them as keyboard shortcuts or command-palette affordances. Do not append hotkey text to the persistent top navigation unless the route contract explicitly asks for visible shortcut hints."
   },
   "code": {
     "imports": "Target-specific imports vary. Translate the internal_layout contract into your framework's sticky top navigation, compact action cluster, and shared body inset rhythm.",

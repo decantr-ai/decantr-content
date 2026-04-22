@@ -73,6 +73,7 @@
       "atoms": "_fixed _top0 _left0 _wfull _flex _aic _jcsb _px8 _py4 _z[40]",
       "left_content": "Brand/logo link",
       "right_content": "Nav links \u2014 flex with gap 1.5rem",
+      "nav_links": "If navigation links are surfaced in the floating header, keep the visible label to the route name itself. Treat any declared hotkeys as keyboard bindings or command-palette hints rather than inline nav text.",
       "note": "Floating nav overlays hero. No border, transparent background.",
       "button_sizing": "Buttons in the header use compact sizing: py-1.5 px-3 text-sm (~32px tall). The header is a tight 52px bar \u2014 default d-interactive padding is too large here."
     },
@@ -86,7 +87,8 @@
   "guidance": {
     "section_label_treatment": "d-label",
     "section_density": "spacious",
-    "shell_spacing": "Full-bleed shell owns floating header offsets and section stack rhythm. Pages should not add extra shell-width wrappers unless a route contract explicitly calls for a local reading measure or content column."
+    "shell_spacing": "Full-bleed shell owns floating header offsets and section stack rhythm. Pages should not add extra shell-width wrappers unless a route contract explicitly calls for a local reading measure or content column.",
+    "hotkeys": "When navigation hotkeys are declared in the essence, implement them as keyboard shortcuts or command-palette affordances. Do not append hotkey text to the floating header navigation unless the route contract explicitly asks for visible shortcut hints."
   },
   "code": {
     "imports": "Target-specific imports vary. Translate the internal_layout contract into your framework's floating header, route outlet, and full-bleed section stack.",
