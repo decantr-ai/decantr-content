@@ -93,7 +93,7 @@
       "default_layout": [
         {
           "pattern": "hero",
-          "preset": "standard",
+          "preset": "section-primary",
           "as": "marketplace-hero"
         },
         {
