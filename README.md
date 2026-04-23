@@ -41,14 +41,24 @@ Supporting audit workflows also run from GitHub Actions:
 
 ## Local Development
 
+For contributors (no credentials required):
+
 ```bash
-npm run validate
+npm install
+npm run validate                                                                 # validate every JSON file against the schemas
+npm run registry:audit -- --report-json=./registry-drift-report.json             # read-only diff against the live registry
+node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
+```
+
+For maintainers only (requires an admin key for `api.decantr.ai`):
+
+```bash
 DECANTR_ADMIN_KEY=xxx npm run registry:sync
 DECANTR_ADMIN_KEY=xxx node scripts/sync-to-registry.js --dry-run --report-json=./sync-report.json
-npm run registry:audit -- --report-json=./registry-drift-report.json
-node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
-npm run schemas:sync
+npm run schemas:sync                                                             # requires a sibling decantr-monorepo checkout
 ```
+
+External contributors can verify their changes with `npm run validate` and the read-only audit scripts; the admin sync runs automatically in CI on merge to `main`. To run your own registry instance, see [How Publishing Works](#how-publishing-works) and provision your own `DECANTR_ADMIN_KEY` for the API server.
 
 ## Auditing Live Registry Drift
 
@@ -70,7 +80,9 @@ The audit is read-only and does not require an admin key for public `@official` 
 
 ## Auditing Content Intelligence Coverage
 
-Use the content-intelligence audit when you want to measure how much of the live `@official` corpus is carrying registry intelligence metadata, how that metadata is sourced, and whether the hosted recommended filter agrees with the underlying scores:
+Registry "intelligence metadata" is a per-item bundle of quality, confidence, provenance (`authored` / `benchmark` / `hybrid`), and verification signals attached to live `@official` content. The hosted API can filter and summarize on those fields. This audit cross-checks coverage and catches drift between the per-item metadata and the hosted summary endpoint.
+
+Use it when you want to measure how much of the live `@official` corpus carries that metadata, how it is sourced, and whether the hosted recommended filter agrees with the underlying scores:
 
 ```bash
 node scripts/audit-content-intelligence.js
