@@ -57,8 +57,8 @@
     }
   ],
   "page_briefs": {
-    "moderation-queue": "Dense but readable admin list view with a responsive search/filter header. Queue items should wrap naturally and keep decision actions accessible without forcing everything into one horizontal strip.",
-    "moderation-detail": "Detail layout with content hero, artifact viewer, and moderation actions. Two-column when space allows, single-column below tablet widths. Action bars and metadata should stay compact but never cramped."
+    "moderation-queue": "Dense but readable admin list view with a responsive search/filter header. Queue items should wrap naturally and keep decision actions accessible without forcing everything into one horizontal strip. Admin access, navigation visibility, and queue actions should all agree with one shared admin capability source instead of scattered page-level checks.",
+    "moderation-detail": "Detail layout with content hero, artifact viewer, and moderation actions. Two-column when space allows, single-column below tablet widths. Action bars and metadata should stay compact but never cramped. Admin shell state should match the same identity and capability model used by the broader authenticated workspace."
   },
   "features": [
     "auth",
