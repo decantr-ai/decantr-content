@@ -1,3 +1,8 @@
+// Maintainer-only utility. Refreshes the vendored copies in `schemas/` from a
+// sibling `decantr-monorepo` checkout. External contributors do not need to run
+// this — the vendored schemas are committed to this repo and `npm run validate`
+// uses them as-is.
+
 import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';

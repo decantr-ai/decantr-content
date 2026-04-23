@@ -19,8 +19,5 @@
   },
   "devDependencies": {
     "ajv": "^8.17.1"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.100.1"
   }
 }
