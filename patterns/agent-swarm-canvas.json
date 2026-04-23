@@ -95,8 +95,23 @@
     ]
   },
   "responsive": {
-    "mobile": "Canvas remains spatial but disables drag-to-connect (use tap-to-select then tap-target-to-connect two-step flow). Minimap hidden. Control bar simplifies to zoom + play/pause. Agent nodes render at minimum 64px width with truncated labels.",
-    "tablet": "Full spatial canvas with minimap collapsed by default (toggle via control bar). Touch gestures: two-finger pan, pinch-to-zoom. Connection drag uses long-press to initiate."
+    "mobile": {
+      "layout": "flex-column",
+      "columns": 1,
+      "hide_components": ["connection-lines", "minimap", "zoom-controls"],
+      "horizontal_scroll": false,
+      "notes": "Below 768px the spatial swarm canvas is too cramped to render usefully. Stack agent nodes vertically as a simple status list — each card shows node name, status ring, and one-line summary. Hide decorative SVG connection lines, the minimap, and the zoom control bar. No drag-to-connect; a tap opens a detail sheet."
+    },
+    "tablet": {
+      "layout": "grid",
+      "columns": 2,
+      "hide_components": ["minimap"],
+      "notes": "Two-column card grid at tablet viewports. Minimap hidden by default but available from the control bar. Touch gestures: tap-to-select; long-press-then-tap-target to create a connection."
+    },
+    "desktop": {
+      "layout": "grid",
+      "notes": "Full spatial canvas with absolute-positioned agent nodes, SVG connection lines, pan+zoom, minimap, and drag-to-connect. This is the canonical layout that delivers the 'mission control' personality directive."
+    }
   },
   "motion": {
     "micro": {

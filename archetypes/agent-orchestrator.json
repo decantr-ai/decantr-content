@@ -118,6 +118,27 @@
     "real-time",
     "websockets"
   ],
+  "navigation_items": [
+    {
+      "label": "Agents",
+      "route": "/agents",
+      "icon": "bot",
+      "hotkey": "g a",
+      "active_match": "^/agents(?:/|$)"
+    },
+    {
+      "label": "Marketplace",
+      "route": "/marketplace",
+      "icon": "shopping-bag",
+      "hotkey": "g m"
+    },
+    {
+      "label": "Config",
+      "route": "/agents/config",
+      "icon": "settings",
+      "active_match": "^/agents/config"
+    }
+  ],
   "shells": {
     "sidebar-main": "Collapsible sidebar with agent navigation tree and main content area"
   },

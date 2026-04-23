@@ -95,6 +95,27 @@
     "analytics",
     "observability"
   ],
+  "navigation_items": [
+    {
+      "label": "Model Overview",
+      "route": "/transparency",
+      "icon": "cpu",
+      "hotkey": "g t",
+      "active_match": "^/transparency$"
+    },
+    {
+      "label": "Inference Log",
+      "route": "/transparency/inference",
+      "icon": "activity",
+      "active_match": "^/transparency/inference"
+    },
+    {
+      "label": "Confidence",
+      "route": "/transparency/confidence",
+      "icon": "gauge",
+      "active_match": "^/transparency/confidence"
+    }
+  ],
   "shells": {
     "sidebar-main": "Sidebar navigation with main content area for data exploration"
   },
