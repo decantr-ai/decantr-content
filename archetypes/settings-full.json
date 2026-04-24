@@ -111,6 +111,19 @@
     "theme-toggle",
     "account-deletion"
   ],
+  "directives": [
+    "Settings pages use the blueprint's primary shell (`sidebar-main` or `top-nav-main` depending on blueprint). Sidebar nav shows settings sub-pages as `d-nav-link` entries.",
+    "Forms use `d-surface` cards with `d-control` inputs. Each settings section is a distinct `d-surface` — do NOT nest one d-surface inside another.",
+    "Dangerous actions (delete account, revoke all sessions) use `d-interactive[data-variant=\"danger\"]` + `d-annotation[data-status=\"warning\"]` for the warning text. A confirmation dialog uses `d-modal` + `d-modal-panel[data-size=\"sm\"]`.",
+    "Theme toggle is a compact `d-icon-btn[data-size=\"sm\"]` in the shell header AND a labeled control in settings/preferences. State flows through the document root `data-theme` attribute, not through inline styles.",
+    "MFA toggle rendering: use `d-step-chip[data-step-state=\"done|pending\"]` for completed/pending MFA methods. Session list rows use `d-data` table family."
+  ],
+  "navigation_items": [
+    { "label": "Profile", "route": "/settings/profile", "icon": "user" },
+    { "label": "Security", "route": "/settings/security", "icon": "shield-check" },
+    { "label": "Preferences", "route": "/settings/preferences", "icon": "sliders-horizontal" },
+    { "label": "Danger zone", "route": "/settings/danger", "icon": "alert-triangle" }
+  ],
   "shells": {
     "inherit": "Inherits shell from parent archetype or app context"
   },

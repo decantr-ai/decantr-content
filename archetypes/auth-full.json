@@ -165,6 +165,13 @@
     "email-verification",
     "password-reset"
   ],
+  "directives": [
+    "Use `d-shell[data-layout=\"centered\"]` + `d-shell-centered-card` for all auth pages — NOT a hand-rolled centering wrapper.",
+    "Auth bypass for dev: `localStorage.decantr_authenticated = 'true'` gates protected routes. The login/register pages accept ANY credentials (no real backend) and set the flag before redirecting to the blueprint's authenticated entry route.",
+    "OAuth provider buttons MUST use real icons from lucide-react (Github, Chrome, Mail) — no inline SVGs or emoji stand-ins.",
+    "MFA code inputs render as a single `d-control` with `inputMode=\"numeric\"` and `autoComplete=\"one-time-code\"` + `maxLength=6`, not 6 separate digit boxes.",
+    "Error + success states use `d-annotation[data-status=\"error|success\"]` above the form, never inline red/green text."
+  ],
   "shells": {
     "centered": "Centered card layout for focused auth forms"
   },

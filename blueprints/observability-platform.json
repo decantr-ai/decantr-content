@@ -210,7 +210,30 @@
     ]
   },
   "navigation": {
-    "command_palette": true,
+    "command_palette": {
+      "trigger": "Cmd+K",
+      "placeholder": "Search metrics, logs, traces, or jump to...",
+      "width": "640px",
+      "styling": "modal",
+      "commands": [
+        { "id": "nav.metrics", "label": "Metrics overview", "section": "Navigation", "hotkey": "g m", "route": "/metrics" },
+        { "id": "nav.logs", "label": "Log explorer", "section": "Navigation", "hotkey": "g l", "route": "/logs" },
+        { "id": "nav.traces", "label": "Trace explorer", "section": "Navigation", "hotkey": "g t", "route": "/traces" },
+        { "id": "nav.alerts", "label": "Alerts", "section": "Navigation", "hotkey": "g a", "route": "/alerts" },
+        { "id": "logs.search", "label": "Search logs...", "section": "Logs", "action": "focusLogSearch" },
+        { "id": "traces.search", "label": "Search traces by ID...", "section": "Traces", "action": "focusTraceSearch" },
+        { "id": "alerts.new", "label": "Create new alert rule", "section": "Alerts", "action": "openNewAlertDialog" },
+        { "id": "alerts.silence", "label": "Silence alert...", "section": "Alerts", "action": "openSilenceDialog" },
+        { "id": "theme.toggle", "label": "Toggle theme mode", "section": "Settings", "action": "toggleThemeMode" },
+        { "id": "auth.signout", "label": "Sign out", "section": "Account", "action": "signOut" }
+      ]
+    },
+    "hotkey_semantics": {
+      "chord_window_ms": 900,
+      "input_guard": true,
+      "modifier_suppression": true,
+      "match_case": false
+    },
     "hotkeys": [
       {
         "key": "g m",
@@ -231,6 +254,15 @@
         "key": "g a",
         "route": "/alerts",
         "label": "Go to Alerts"
+      },
+      {
+        "key": "?",
+        "action": "openShortcutsHelp",
+        "label": "Show keyboard shortcuts",
+        "semantics": {
+          "input_guard": true,
+          "modifier_suppression": false
+        }
       }
     ]
   },
