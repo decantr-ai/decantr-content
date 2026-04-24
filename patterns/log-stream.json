@@ -126,6 +126,13 @@
     "micro": "New entries may fade or slide in subtly at the bottom, and paused state indicators may brighten clearly when active.",
     "transitions": "Auto-scroll should feel steady and predictable. Filter changes should dim or reveal entries without causing the whole stream frame to jump."
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "hover-reveal",
+    "scroll-reveal",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "log",
     "aria-label": "Live log stream",

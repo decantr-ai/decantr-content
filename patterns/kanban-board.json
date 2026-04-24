@@ -113,6 +113,15 @@
       "drop-zone-pulse": "Active drop target background pulses between transparent and accent-tinted, 1s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "lift-hover",
+    "stagger-children",
+    "animate-on-mount",
+    "status-pulse",
+    "keyboard-navigation"
+  ],
   "composition": {
     "KanbanBoard": "Board(d-section, horizontal-scroll, full-height) > Column*",
     "Column": "Column(d-surface, flex-col, fixed-width) > [ColumnHeader + CardList(scrollable) + AddCardButton]",

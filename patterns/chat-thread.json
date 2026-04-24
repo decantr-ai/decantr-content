@@ -91,6 +91,13 @@
     "scroll-to-bottom": "FAB fades in (opacity 0 to 1, 150ms) and translates up 8px when scroll position exceeds one viewport height from bottom. Reverse on dismiss.",
     "auto-scroll": "When a new message arrives and the user is within 100px of the bottom, smooth-scroll to the new message over 300ms ease-in-out."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "scroll-reveal",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "log",
     "aria-label": "Chat conversation",

@@ -89,6 +89,13 @@
       "request-loading": "send button spinner rotation continuous while request is in flight"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "click-select",
+    "inline-edit",
+    "hover-reveal",
+    "keyboard-navigation"
+  ],
   "composition": {
     "APIExplorer": "Container(d-section, flex-row) > [EndpointList(d-surface) > EndpointItem*(d-interactive)] + EndpointDetail(d-surface) > [DescriptionSection + ParameterTable(d-data) + RequestBuilder(d-interactive) + ResponseViewer(d-data) + CodeSnippet(d-data)]",
     "EndpointList": "Sidebar(d-surface, fixed-width, scrollable) > [SearchInput(d-control) + ResourceGroup* > EndpointItem*]",

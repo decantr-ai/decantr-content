@@ -122,6 +122,14 @@
       "drag-preview": "Translucent event preview chip during drag creation pulses opacity 0.3→0.5→0.3, 1.5s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "click-select",
+    "drag-reorder",
+    "hover-tooltip",
+    "keyboard-navigation",
+    "animate-on-mount",
+    "real-time-updates"
+  ],
   "composition": {
     "CalendarView": "Container(d-section, flex-col, full-height) > [NavigationBar + ViewContent]",
     "NavigationBar": "Bar(d-surface, flex-row, sticky-top) > [PrevButton + PeriodLabel + TodayButton + NextButton + ViewSwitcher]",
