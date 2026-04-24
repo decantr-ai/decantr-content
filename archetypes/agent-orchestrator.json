@@ -93,7 +93,7 @@
       "default_layout": [
         {
           "pattern": "hero",
-          "preset": "standard",
+          "preset": "section-primary",
           "as": "marketplace-hero"
         },
         {
@@ -117,6 +117,33 @@
     "orchestration",
     "real-time",
     "websockets"
+  ],
+  "directives": [
+    "Header is 52px sticky. Use `d-interactive[data-size=sm]` for all header action buttons (~32px tall, not 40px+).",
+    "Hotkey chords (e.g., `g a`) bind keyboard only — never render them as visible nav labels.",
+    "Auth bypass for dev: `localStorage.decantr_authenticated = 'true'` gates protected routes. Accept any credentials on the login page and redirect to `/agents`.",
+    "Swarm canvas nodes hide minimap + zoom controls below `_mdmax:` (< 768px) and collapse to a vertical status list per the pattern's structured responsive field."
+  ],
+  "navigation_items": [
+    {
+      "label": "Agents",
+      "route": "/agents",
+      "icon": "bot",
+      "hotkey": "g a",
+      "active_match": "^/agents(?:/|$)"
+    },
+    {
+      "label": "Marketplace",
+      "route": "/marketplace",
+      "icon": "shopping-bag",
+      "hotkey": "g m"
+    },
+    {
+      "label": "Config",
+      "route": "/agents/config",
+      "icon": "settings",
+      "active_match": "^/agents/config"
+    }
   ],
   "shells": {
     "sidebar-main": "Collapsible sidebar with agent navigation tree and main content area"

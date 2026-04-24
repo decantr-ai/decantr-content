@@ -223,8 +223,16 @@ for (const type of CONTENT_DIRECTORIES) {
           if (!isRecord(navigation)) {
             fail(`${type}/${file}: navigation must be an object`);
           } else {
-            if (navigation.command_palette !== undefined && typeof navigation.command_palette !== 'boolean') {
-              fail(`${type}/${file}: navigation.command_palette must be a boolean`);
+            // command_palette accepts boolean (legacy "enabled?" flag) or a
+            // structured CommandPaletteContract object. The full shape is
+            // validated by AJV against common.v1.json#/$defs/commandPaletteContract;
+            // this custom check just gates out string/number/array.
+            if (
+              navigation.command_palette !== undefined &&
+              typeof navigation.command_palette !== 'boolean' &&
+              !isRecord(navigation.command_palette)
+            ) {
+              fail(`${type}/${file}: navigation.command_palette must be a boolean or a structured contract object`);
             }
             if (navigation.hotkeys !== undefined && (!Array.isArray(navigation.hotkeys) || navigation.hotkeys.some(hotkey => !isRecord(hotkey)
               || typeof hotkey.key !== 'string'

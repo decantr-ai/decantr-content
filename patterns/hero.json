@@ -122,6 +122,23 @@
         }
       }
     },
+    "section-primary": {
+      "description": "Compact content-dense hero for primary section pages (NOT marketing landing). Short vertical height (~120-180px), leaves most above-fold real estate for the content below. Eyebrow + headline + optional subtitle + inline CTAs — no full-bleed media, splash, or minimum-viewport-height directive. Use for /marketplace, /agents, /transparency, and other in-app primary routes where the user already knows they're in the product.",
+      "components": [
+        "Button",
+        "Badge"
+      ],
+      "layout": {
+        "layout": "stack",
+        "atoms": "_flex _col _gap3 _py8 _px6",
+        "slots": {
+          "eyebrow": "Short all-caps monospace label with section context (e.g., 'AGENT MARKETPLACE'). Use d-label[data-anchor] when the theme ships that treatment.",
+          "headline": "h2-to-h3 weight heading. NOT display-size. One line preferred — the content below is the main event, not this.",
+          "description": "Optional one-sentence subtitle with _textsm _fgmuted. Omit entirely if the headline is self-sufficient.",
+          "cta-group": "Horizontal Button group inline with the headline row. Primary CTA + at most one secondary. Do not stack CTAs vertically in this preset."
+        }
+      }
+    },
     "image-overlay-compact": {
       "description": "Compact full-bleed image with overlay for collection headers. Shorter height, fewer slots.",
       "components": [
