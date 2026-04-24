@@ -69,6 +69,12 @@
     "micro": "Only degraded or actively incidenting services may pulse subtly. Healthy rows should remain still and readable.",
     "transitions": "Status changes may cross-fade or animate color carefully, but avoid noisy blinking patterns."
   },
+  "interactions": [
+    "status-pulse",
+    "real-time-updates",
+    "hover-reveal",
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Service status board",

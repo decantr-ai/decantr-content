@@ -82,6 +82,15 @@
       "error-pulse": "border-left color pulse red 2s ease-in-out infinite on error spans"
     }
   },
+  "interactions": [
+    "hover-tooltip",
+    "hover-reveal",
+    "click-select",
+    "status-pulse",
+    "animate-on-mount",
+    "real-time-updates",
+    "keyboard-navigation"
+  ],
   "composition": {
     "TraceWaterfall": "TraceContainer(d-section, flex-col) > [FilterBar(d-control) + TimeAxis(d-annotation) + SpanList]",
     "FilterBar": "Row(d-control) > [ServiceFilter + DurationSlider + ErrorToggle + SearchInput]",

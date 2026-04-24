@@ -150,6 +150,13 @@
     "micro": "Cards lift on hover with translateY(-2px) and increased shadow over 200ms ease. Image within card scales to 1.03 on hover with overflow hidden. Badge pulses subtly on new items.",
     "transitions": "Cards entering viewport fade up from 15px below with staggered 100ms delay per card, 300ms duration. Load-more appends new cards with the same stagger animation."
   },
+  "interactions": [
+    "lift-hover",
+    "stagger-children",
+    "animate-on-mount",
+    "click-select",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Card grid",

@@ -88,6 +88,12 @@
     "micro": "Chart cards may brighten their border or surface slightly on hover, and legends may fade in cleanly with the chart content.",
     "transitions": "Chart data should animate in a restrained way that preserves readability. Filters or time-range changes should cross-fade or morph smoothly rather than jarringly re-rendering the whole grid."
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-tooltip",
+    "stagger-children",
+    "real-time-updates"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Chart grid",
