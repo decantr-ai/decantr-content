@@ -87,6 +87,13 @@
     "testimonials",
     "feature-grid"
   ],
+  "directives": [
+    "Marketing home uses `d-shell` (default top-nav-footer layout) + `d-shell-header` + `d-shell-body` + `d-shell-footer`. Do not hand-roll a page-level wrapper.",
+    "Hero on `/` uses the `hero/brand` preset (full-viewport minimum height, radial gradient, dual CTAs). In-app primary section pages like `/marketplace` use `hero/section-primary` (compact, no splash).",
+    "CTA banner uses `d-cta-banner` treatment with `d-interactive[data-variant=\"dark\"]` for the pill button. Do not hand-roll gradient stops or raw-hex colors.",
+    "Pricing toggle state lives in component local state, not global. Tier cards use `carbon-card` with a highlighted variant for the recommended tier (accent border + `aura-glow` when present).",
+    "Marketing footer is a narrow `d-shell-footer` with link groups. Do not create a full-bleed marketing footer with 6 columns unless the blueprint explicitly requests it."
+  ],
   "shells": {
     "top-nav-footer": "Top navigation with hero and footer for marketing pages"
   },
