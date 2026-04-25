@@ -116,6 +116,10 @@
       "auto-badge-pulse": "the 'A' badge on density control has a subtle opacity oscillation (0.7→1→0.7) over 3s ease-in-out infinite to indicate auto mode is actively monitoring"
     }
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount"
+  ],
   "composition": {
     "AdaptiveDensityPanel": "Section(d-section, rounded-xl, border, bg-surface) > [Header(flex, border-b) > [Title? + DensityControl] + ContentRegion(flex-col, density-responsive) > [Content* + OverflowIndicator?] + FocusMask?]",
     "DensityControl": "SegmentedControl(inline-flex, rounded-full, border) > [CompactSegment + ComfortableSegment + SpaciousSegment] + AutoBadge?(12px, circle, accent)",

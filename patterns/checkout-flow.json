@@ -123,6 +123,13 @@
     "micro": "Payment method selection, promo application, and summary updates may animate subtly to confirm state changes without introducing anxiety.",
     "transitions": "Step changes or success states should feel reassuring and deliberate, never like the user is being rushed through a purchase."
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation",
+    "click-select",
+    "focus-trap"
+  ],
   "accessibility": {
     "role": "form",
     "aria-label": "Checkout flow",

@@ -114,6 +114,11 @@
     "transitions": "Switching between settings sections should cross-fade or slide minimally so the workspace still feels stable and operational.",
     "ambient": "Avoid decorative ambient motion in settings surfaces. Keep movement functional and low-noise."
   },
+  "interactions": [
+    "inline-edit",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Account settings workspace",

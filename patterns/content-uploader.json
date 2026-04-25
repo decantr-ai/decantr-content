@@ -113,6 +113,11 @@
     "micro": "Drop targets may brighten on drag-over, and upload rows may sharpen or pulse subtly while active.",
     "transitions": "File entry, progress updates, and completion states should feel confidence-building and calm, especially during longer uploads."
   },
+  "interactions": [
+    "drag-reorder",
+    "animate-on-mount",
+    "click-select"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Content uploader",

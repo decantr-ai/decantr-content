@@ -108,6 +108,11 @@
     "micro": "Inputs and submit actions use calm hover and focus transitions. Attachment zones may highlight softly on drag-over.",
     "transitions": "Validation and success states should fade or expand gently over 180-250ms without shifting the whole layout abruptly."
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "form",
     "aria-label": "Contact form",

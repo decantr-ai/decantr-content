@@ -112,6 +112,13 @@
       "active-ring-pulse": "Active step circle's outer ring shadow pulses opacity 0.1→0.2→0.1 slowly, 3s ease-in-out infinite, providing a subtle breathing effect"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "click-select",
+    "keyboard-navigation",
+    "focus-trap"
+  ],
   "composition": {
     "OnboardingWizard": "Wizard(d-section, centered, max-width) > [StepIndicator + ProgressBar + StepContent + NavigationButtons] | CompletionScreen",
     "StepIndicator": "Indicator(flex-row, centered) > StepCircle*(numbered|checked|upcoming) + ConnectingLine*(filled|unfilled)",

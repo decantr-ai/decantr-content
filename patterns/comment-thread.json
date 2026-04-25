@@ -127,6 +127,13 @@
     "micro": "Resolve state, hover actions, and reply affordances may fade or sharpen in gently as attention moves through the thread.",
     "transitions": "Opening, collapsing, or resolving threads should feel calm and collaborative rather than abrupt or chatty."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "inline-edit",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Comment thread",

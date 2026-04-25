@@ -187,6 +187,11 @@
     "transitions": "State changes between login, register, reset, and MFA should cross-fade or slide minimally over 180-250ms.",
     "ambient": "Do not add decorative ambient motion inside auth forms beyond a gentle entrance treatment."
   },
+  "interactions": [
+    "animate-on-mount",
+    "keyboard-navigation",
+    "inline-edit"
+  ],
   "accessibility": {
     "role": "form",
     "aria-label": "Authentication form",

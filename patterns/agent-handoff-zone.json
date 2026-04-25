@@ -81,6 +81,11 @@
     "tablet": "Standard horizontal layout maintained. Context preview starts collapsed to save space. Approval buttons remain inline. Touch targets for approve/reject increased to 48px minimum height."
   },
   "visual_brief": "Horizontal two-card layout with source agent on the left and target agent on the right, connected by an animated transfer beam. Each agent card shows avatar, name, role label, and status badge with a colored left/right border accent. A collapsible context-preview panel sits below the cards displaying transferred data sections. A horizontal status timeline runs underneath with dot-connected steps. Approval action buttons (Approve, Reject) anchor at the bottom. Compact preset collapses to a single row with inline avatars and an arrow between them.",
+  "interactions": [
+    "drag-nodes",
+    "animate-on-mount",
+    "status-pulse"
+  ],
   "composition": {
     "AgentHandoffZone": "Container(d-section, flex-col, gap-6) > [AgentRow + ContextPreview + StatusTimeline + ApprovalActions?]",
     "AgentRow": "Row(d-surface, gap-6) > [AgentCard(source, accent-left) + HandoffAnimation(animated) + AgentCard(target, accent-right)]",

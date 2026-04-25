@@ -96,6 +96,11 @@
       "sync-indicator": "subtle gutter-line glow pulse 2s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "hover-reveal",
+    "click-select",
+    "scroll-reveal"
+  ],
   "composition": {
     "ContractDiff": "Section(d-section) > [ChangeCount(header) + ClauseNav(sidebar) + DiffPane[](d-surface) > [LineNumber + ChangeMarker + [AdditionText | DeletionText | NormalText]]]",
     "DiffPane": "ScrollContainer(sync-scroll) > DocumentText(serif) > Line[] > [Gutter + ChangeMarker? + TextContent]",

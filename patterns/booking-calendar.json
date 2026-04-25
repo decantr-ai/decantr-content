@@ -79,6 +79,12 @@
       "skeleton-shimmer": "background-position sweep left→right 1.5s ease-in-out infinite during loading"
     }
   },
+  "interactions": [
+    "click-select",
+    "drag-reorder",
+    "keyboard-navigation",
+    "animate-on-mount"
+  ],
   "composition": {
     "BookingCalendar": "Container(d-section, flex-col, gap-4) > [ControlsBar(d-control) > [ProviderSelector?(d-control, horizontal-scroll) + DatePicker(d-control) + TimezoneSelector(d-control, dropdown)] + AvailabilityGrid(d-surface, grid: week|day) > TimeSlot(d-interactive, selectable, state: available|unavailable|selected)* + BookingConfirmation?(d-surface, elevation-md, conditional: slot-selected)]",
     "ProviderSelector": "Row(d-control, horizontal-scroll) > ProviderCard(d-interactive, selectable) > [Avatar(d-annotation, circle) + Name(d-data) + Role(d-annotation, muted)]",

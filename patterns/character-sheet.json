@@ -73,6 +73,11 @@
       "score-low-warning": "pulse red glow 2s ease-in-out infinite when score < 60"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "click-select"
+  ],
   "composition": {
     "CharacterSheet": "Root(d-surface, stack) > [CharacterAvatar + CharacterHeader + ConsistencyScore + TraitChip* + ReferenceGallery + AppearanceLog]",
     "TraitChips": "FlexRow(wrap) > TraitChip*(d-annotation, data-category)",

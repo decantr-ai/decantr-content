@@ -90,6 +90,12 @@
     "micro": "Result hover, selection, and shortcut emphasis may animate subtly over 120-180ms.",
     "transitions": "Palette open, close, and result filtering should feel immediate but polished: fade and slight scale or slide over 150-220ms."
   },
+  "interactions": [
+    "animate-on-mount",
+    "keyboard-navigation",
+    "focus-trap",
+    "click-select"
+  ],
   "accessibility": {
     "role": "dialog",
     "aria-label": "Command palette",

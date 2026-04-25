@@ -102,6 +102,11 @@
     "micro": "Primary actions and trust-summary cards may use subtle hover elevation and accent transitions, but the hero should remain calm and editorial.",
     "transitions": "Hero content and quick-start rail can fade up together over 220-320ms. Trust cards may stagger lightly beneath the hero rather than popping in abruptly."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "glow-hover"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Content detail hero",

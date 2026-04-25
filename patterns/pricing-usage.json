@@ -90,6 +90,11 @@
     "micro": "Tier highlights, calculator feedback, and toggle states may animate over 150-220ms, but pricing should remain calm and trustworthy.",
     "transitions": "Billing toggle and calculator updates should cross-fade or count smoothly without causing card reflow shocks."
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Usage pricing section",

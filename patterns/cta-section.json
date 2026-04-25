@@ -87,6 +87,11 @@
     "transitions": "CTA sections can fade or reveal softly with the page flow over 200-300ms, avoiding large parallax or attention-seeking animation.",
     "ambient": "Background gradients or highlights may breathe very subtly, but should never distract from the headline and CTA group."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "glow-hover"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Call to action section",
