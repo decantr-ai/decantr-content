@@ -89,7 +89,7 @@
     }
   },
   "typography": {
-    "scale": 1.333,
+    "scale": "modular",
     "heading_weight": 800,
     "body_weight": 400,
     "display": "'Orbitron', 'Inter', ui-sans-serif, sans-serif",
