@@ -89,6 +89,11 @@
     },
     "ambient": {}
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-tooltip",
+    "real-time-updates"
+  ],
   "composition": {
     "SparklineCell": "Container(inline-flex, align-center, gap-2) > [Sparkline(svg) + TrendIndicator + ValueLabel]",
     "Sparkline": "SVG(80x24, viewBox, no-axes) > [Path(bezier|bars|area) + EndpointDot?]",

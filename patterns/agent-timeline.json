@@ -100,6 +100,14 @@
       "new-event": "slide-in-from-top + fade 400ms ease-out"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "status-pulse",
+    "real-time-updates",
+    "hover-reveal",
+    "scroll-reveal"
+  ],
   "composition": {
     "AgentTimeline": "Container(d-section, flex-col, gap-4) > [TimelineSummary + FilterBar + EventList]",
     "TimelineSummary": "Card(d-surface, sticky) > [AgentName + ModelId + Status(d-annotation) + EventCounts(d-data) + ElapsedTime(mono-data) + TokenUsage]",

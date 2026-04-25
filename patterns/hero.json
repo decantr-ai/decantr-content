@@ -197,6 +197,13 @@
     "micro": "CTA buttons scale subtly on hover (scale 1.02). Badge shimmer on announcement pill.",
     "transitions": "Hero entrance: headline fades up from 20px below with 600ms ease-out. Subtext follows 150ms later. CTAs follow 300ms after subtext. Decorative orbs drift slowly with infinite CSS animation. Brand preset media floats with gentle vertical oscillation."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scale-hover",
+    "glow-hover",
+    "float-idle"
+  ],
   "layout_hints": {
     "container": "none",
     "note": "Hero sections should NOT wrap content in d-surface cards. The hero IS the section. Use d-section for spacing.",

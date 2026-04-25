@@ -98,6 +98,13 @@
       "pulse-ring": "scale(1→1.3) + opacity(1→0) 2s ease-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-tooltip",
+    "status-pulse",
+    "click-select",
+    "live-simulation"
+  ],
   "composition": {
     "IntentRadar": "Display(d-section, spatial, aspect-square) > [SuggestionRings + IntentVectors + RadarCenter + ActionZone]",
     "RadarCenter": "Core(d-interactive, glowing, pulsing: interpreting) > [QueryText | SearchIcon]",

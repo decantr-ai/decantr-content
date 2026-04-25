@@ -80,6 +80,13 @@
     "micro": "Row hover highlights with 150ms background-color transition. Sort arrow rotates 180deg on direction change with 200ms ease. Checkbox scales briefly on check (scale 1.1 for 100ms).",
     "transitions": "Rows entering from filter/search fade in with 200ms opacity transition. Bulk-selected rows highlight with a slide-in left-border accent over 150ms."
   },
+  "interactions": [
+    "keyboard-navigation",
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "Table uses semantic <table>, <thead>, <tbody>, <th>, <td> elements. Sort buttons are <button> inside <th> with aria-sort attribute.",
     "keyboard": [

@@ -106,6 +106,13 @@
       "data-stream": "translateY scroll-like 1s linear infinite on live data"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "status-pulse",
+    "live-simulation",
+    "hover-tooltip",
+    "real-time-updates"
+  ],
   "composition": {
     "NeuralFeedbackLoop": "Container(d-section, centered) > [PulseCore + IntensityRing + MetricDisplay + DetailTooltip?]",
     "PulseCore": "Core(d-data, radial-gradient, pulsing: frequency-mapped, color-shift: metric)",

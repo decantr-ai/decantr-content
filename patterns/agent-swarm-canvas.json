@@ -128,6 +128,17 @@
       "status-glow": "border-color pulse matching status 2s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "click-connect",
+    "hover-tooltip",
+    "status-pulse",
+    "animate-on-mount",
+    "live-simulation"
+  ],
   "composition": {
     "AgentSwarmCanvas": "Viewport(d-section, spatial, full-bleed) > [CanvasLayer + StatusOverlay + ControlBar + Minimap?]",
     "CanvasLayer": "Canvas(zoomable, pannable) > [AgentNode[] + ConnectionPath[]]",

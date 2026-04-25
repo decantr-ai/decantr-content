@@ -122,6 +122,12 @@
     "micro": "Trend changes and threshold shifts may pulse or brighten subtly to acknowledge important state changes.",
     "transitions": "Value updates should feel crisp and instrumentation-like rather than decorative or bouncy."
   },
+  "interactions": [
+    "animate-on-mount",
+    "status-pulse",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "accessibility": {
     "role": "status",
     "aria-label": "Metric gauge",
