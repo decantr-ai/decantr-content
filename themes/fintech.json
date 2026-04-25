@@ -81,7 +81,7 @@
     }
   },
   "typography": {
-    "scale": 1.15,
+    "scale": "modular",
     "heading_weight": 600,
     "body_weight": 400,
     "display": "'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif",

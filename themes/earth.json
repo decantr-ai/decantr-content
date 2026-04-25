@@ -101,7 +101,7 @@
     }
   },
   "typography": {
-    "scale": 1.3,
+    "scale": "modular",
     "heading_weight": 700,
     "body_weight": 400,
     "display": "'Lora', 'Georgia', serif",
