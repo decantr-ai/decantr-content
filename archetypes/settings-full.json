@@ -115,8 +115,9 @@
     "Settings pages use the blueprint's primary shell (`sidebar-main` or `top-nav-main` depending on blueprint). Sidebar nav shows settings sub-pages as `d-nav-link` entries.",
     "Forms use `d-surface` cards with `d-control` inputs. Each settings section is a distinct `d-surface` — do NOT nest one d-surface inside another.",
     "Dangerous actions (delete account, revoke all sessions) use `d-interactive[data-variant=\"danger\"]` + `d-annotation[data-status=\"warning\"]` for the warning text. A confirmation dialog uses `d-modal` + `d-modal-panel[data-size=\"sm\"]`.",
-    "Theme toggle is a compact `d-icon-btn[data-size=\"sm\"]` in the shell header AND a labeled control in settings/preferences. State flows through the document root `data-theme` attribute, not through inline styles.",
-    "MFA toggle rendering: use `d-step-chip[data-step-state=\"done|pending\"]` for completed/pending MFA methods. Session list rows use `d-data` table family."
+    "Theme toggle is a compact `d-icon-btn[data-size=\"sm\"]` in the shell header AND a labeled control in settings/preferences. State flows through the document root `data-mode` attribute, not through inline styles. Persist user choice to `localStorage.setItem('decantr_theme_mode', mode)` and hydrate via `document.documentElement.setAttribute('data-mode', localStorage.getItem('decantr_theme_mode') ?? 'dark')` BEFORE React mounts (place in index.html or a sync top-level script) — avoids flash-of-wrong-theme.",
+    "MFA toggle rendering: use `d-step-chip[data-step-state=\"done|pending\"]` for completed/pending MFA methods. Session list rows use `d-data` table family.",
+    "Breadcrumbs (when present in the shell header) derive from the current route + the scaffold-pack route table — do NOT hand-map breadcrumbs in each settings page. Use a small helper that reads `window.location.pathname`, splits on `/`, and looks up labels from the navigation_items list. This keeps breadcrumbs in sync when routes change."
   ],
   "navigation_items": [
     { "label": "Profile", "route": "/settings/profile", "icon": "user" },

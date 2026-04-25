@@ -122,7 +122,9 @@
     "Header is 52px sticky. Use `d-interactive[data-size=sm]` for all header action buttons (~32px tall, not 40px+).",
     "Hotkey chords (e.g., `g a`) bind keyboard only — never render them as visible nav labels.",
     "Auth bypass for dev: `localStorage.decantr_authenticated = 'true'` gates protected routes. Accept any credentials on the login page and redirect to `/agents`.",
-    "Swarm canvas nodes hide minimap + zoom controls below `_mdmax:` (< 768px) and collapse to a vertical status list per the pattern's structured responsive field."
+    "Swarm canvas nodes hide minimap + zoom controls below `_mdmax:` (< 768px) and collapse to a vertical status list per the pattern's structured responsive field.",
+    "Swarm canvas drag-vs-click threshold: only engage drag once pointermove distance from pointerdown exceeds 4px. Below the threshold, treat as a click (selects the node). Apply `cursor: grab` on node default, `cursor: grabbing` only after drag engages. Without this threshold, every click registers as a drag and selection becomes impossible.",
+    "Pan-background applies to canvas BACKGROUND only — not nodes. Nodes get pointerdown/pointermove for drag. Canvas background gets its own pointerdown/pointermove that translates the viewport transform. Wire the two via `e.stopPropagation()` from the node handler so the canvas pan doesn't fire when dragging a node."
   ],
   "navigation_items": [
     {

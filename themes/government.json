@@ -113,9 +113,7 @@
   "typography": {
     "scale": 1.25,
     "heading_weight": 700,
-    "body_weight": 400,
-    "display": "'Source Sans Pro', ui-sans-serif, system-ui, sans-serif",
-    "body": "'Source Sans Pro', ui-sans-serif, system-ui, sans-serif"
+    "body_weight": 400
   },
   "decantr_compat": ">=1.5.0",
   "source": "core",
@@ -146,19 +144,7 @@
       "hover": "100ms",
       "entrance": "0ms",
       "modal": "150ms",
-      "page": "0ms",
-      "instant": "80ms",
-      "fast": "150ms",
-      "base": "250ms",
-      "slow": "400ms",
-      "slower": "600ms",
-      "stagger": "60ms"
-    },
-    "easings": {
-      "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
-      "easeOut": "cubic-bezier(0, 0, 0.2, 1)",
-      "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
-      "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+      "page": "0ms"
     }
   },
   "effects": {
@@ -453,28 +439,6 @@
         "Textarea inputs",
         "Date inputs"
       ]
-    }
-  },
-  "elevation": {
-    "1": {
-      "light": "0 1px 2px rgba(0,0,0,0.06)",
-      "dark": "0 1px 2px rgba(0,0,0,0.45)"
-    },
-    "2": {
-      "light": "0 2px 4px rgba(0,0,0,0.08)",
-      "dark": "0 2px 4px rgba(0,0,0,0.55)"
-    },
-    "3": {
-      "light": "0 4px 12px rgba(0,0,0,0.10)",
-      "dark": "0 4px 12px rgba(0,0,0,0.60)"
-    },
-    "4": {
-      "light": "0 8px 24px rgba(0,0,0,0.14)",
-      "dark": "0 8px 24px rgba(0,0,0,0.65)"
-    },
-    "5": {
-      "light": "0 16px 48px rgba(0,0,0,0.18)",
-      "dark": "0 16px 48px rgba(0,0,0,0.70)"
     }
   }
 }

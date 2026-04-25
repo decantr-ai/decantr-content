@@ -144,21 +144,7 @@
     "preference": "subtle",
     "reduce_motion": true,
     "entrance": "lum-fade-up",
-    "micro": "smooth",
-    "durations": {
-      "instant": "80ms",
-      "fast": "150ms",
-      "base": "250ms",
-      "slow": "400ms",
-      "slower": "600ms",
-      "stagger": "60ms"
-    },
-    "easings": {
-      "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
-      "easeOut": "cubic-bezier(0, 0, 0.2, 1)",
-      "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
-      "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)"
-    }
+    "micro": "smooth"
   },
   "effects": {
     "enabled": true,
@@ -290,9 +276,7 @@
   "typography": {
     "scale": "modular",
     "heading_weight": 600,
-    "body_weight": 400,
-    "display": "'Inter Display', 'Inter', ui-sans-serif, sans-serif",
-    "body": "'Inter', ui-sans-serif, sans-serif"
+    "body_weight": 400
   },
   "decorator_definitions": {
     "lum-canvas": {
@@ -570,28 +554,6 @@
         "Content breaks",
         "Page section transitions"
       ]
-    }
-  },
-  "elevation": {
-    "1": {
-      "light": "0 1px 2px rgba(0,0,0,0.06)",
-      "dark": "0 1px 2px rgba(0,0,0,0.4)"
-    },
-    "2": {
-      "light": "0 2px 6px rgba(0,0,0,0.08)",
-      "dark": "0 2px 8px rgba(255, 255, 255, 0.06)"
-    },
-    "3": {
-      "light": "0 6px 16px rgba(0,0,0,0.10)",
-      "dark": "0 4px 16px rgba(255, 255, 255, 0.08)"
-    },
-    "4": {
-      "light": "0 12px 32px rgba(0,0,0,0.14)",
-      "dark": "0 8px 28px rgba(255, 255, 255, 0.12)"
-    },
-    "5": {
-      "light": "0 24px 64px rgba(0,0,0,0.18)",
-      "dark": "0 16px 48px rgba(255, 255, 255, 0.16)"
     }
   }
 }
