@@ -170,7 +170,9 @@
     "Auth bypass for dev: `localStorage.decantr_authenticated = 'true'` gates protected routes. The login/register pages accept ANY credentials (no real backend) and set the flag before redirecting to the blueprint's authenticated entry route.",
     "OAuth provider buttons MUST use real icons from lucide-react (Github, Chrome, Mail) — no inline SVGs or emoji stand-ins.",
     "MFA code inputs render as a single `d-control` with `inputMode=\"numeric\"` and `autoComplete=\"one-time-code\"` + `maxLength=6`, not 6 separate digit boxes.",
-    "Error + success states use `d-annotation[data-status=\"error|success\"]` above the form, never inline red/green text."
+    "Error + success states use `d-annotation[data-status=\"error|success\"]` above the form, never inline red/green text.",
+    "Route guards compose with route elements, not shell outlets — wrap protected route components in a `<RequireAuth>` HOC/wrapper that checks the auth flag before rendering. Do NOT render the entire shell unconditionally and gate inside its outlet — that produces a reauth flash. Redirect happens before any protected page mounts.",
+    "MFA setup pages render the QR code via `d-qr-placeholder` (CSS-only). MFA verify pages use the single-control `d-control` numeric input. Phone-verify pages use a separate `d-control[type=\"tel\"]` with country-code prefix in a `d-step-chip` to its left. These three pages share an archetype but have distinct rendering — never collapse them into one component."
   ],
   "shells": {
     "centered": "Centered card layout for focused auth forms"
