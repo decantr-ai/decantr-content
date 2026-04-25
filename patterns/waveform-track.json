@@ -66,6 +66,11 @@
       "armed-recording-pulse": "arm button red pulse 1s ease-in-out infinite when recording"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "composition": {
     "WaveformTrack": "Root(d-surface, flex-row) > [TrackHeader + WaveformArea]",
     "TrackHeader": "Column(d-control) > [TrackName + MuteSoloArm + GainSlider]",

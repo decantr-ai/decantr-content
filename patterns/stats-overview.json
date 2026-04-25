@@ -90,6 +90,9 @@
     "micro": "Stat values animate with counter effect (number rolls up from 0) over 800ms ease-out on viewport enter. Trend badges fade in after value completes.",
     "transitions": "Value text transitions smoothly on data change with 300ms ease. Trend arrow rotates on direction change."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Key statistics",

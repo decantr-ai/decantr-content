@@ -122,6 +122,11 @@
       "success-submit": "fade-out form + fade-in success message 300ms ease-out"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "form",
     "aria-label": "Form",

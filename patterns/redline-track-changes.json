@@ -100,6 +100,9 @@
       "unresolved-pulse": "unresolved comment bubble subtle ring-pulse 3s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "RedlineTrackChanges": "Section(d-section) > [VersionTimeline(header) + DocumentPane(main) > [Paragraph[] > InlineChange[](author-colored) > [AuthorBadge + ChangeText + AcceptRejectControls]] + CommentMargin > CommentBubble[](d-annotation) > [AuthorBadge + Timestamp + CommentBody + ReplyThread + ResolveToggle]]",
     "DocumentPane": "Article(serif, margin-sized) > Paragraph[]",

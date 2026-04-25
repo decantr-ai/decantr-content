@@ -100,6 +100,11 @@
       "synchronized-shimmer": "all skeleton elements share identical animation-delay: 0ms so the shimmer wave sweeps across the entire layout uniformly"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "status-pulse"
+  ],
   "composition": {
     "SkeletonGroup": "Container(d-surface, flex, gap) > [SkeletonBlock | SkeletonCircle | SkeletonLine]*",
     "SkeletonBlock": "Rect(d-muted, rounded-lg, shimmer-gradient, aspect-ratio: configurable)",

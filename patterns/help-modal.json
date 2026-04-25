@@ -136,6 +136,12 @@
     "micro": "Focused key rows and search affordances may sharpen subtly, and the overlay may confirm category filtering without heavy movement.",
     "transitions": "Modal open and close should feel quick and utility-driven, preserving the sense of an ephemeral help overlay."
   },
+  "interactions": [
+    "animate-on-mount",
+    "focus-trap",
+    "keyboard-navigation",
+    "click-select"
+  ],
   "accessibility": {
     "role": "dialog",
     "aria-label": "Keyboard shortcuts help",

@@ -100,6 +100,12 @@
     "micro": "Copy actions, tab switches, and collapsible node toggles may animate subtly over 120-180ms. Avoid flashy motion inside code surfaces.",
     "transitions": "Tab and artifact-state changes should cross-fade or slide minimally so the viewer remains trustworthy and stable."
   },
+  "interactions": [
+    "hover-reveal",
+    "click-select",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "JSON contract viewer",

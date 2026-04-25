@@ -87,6 +87,14 @@
     "micro": "Depth controls and focal states may animate softly as layers gain or lose focus.",
     "transitions": "Parallax and focal-plane shifts should feel smooth and spatial, but never induce motion sickness or obscure content state."
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount"
+  ],
   "composition": {
     "DepthLayeredCanvas": "Container(d-section, perspective, preserve-3d, full) > [BackgroundLayer + MidgroundLayer + ForegroundLayer + DepthControls?]",
     "BackgroundLayer": "SpatialLayer(d-surface, z-back, blur, parallax: 0.3x)",

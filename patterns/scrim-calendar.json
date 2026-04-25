@@ -98,6 +98,12 @@
       "now-line": "current time horizontal line subtle pulse 3s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "click-select",
+    "drag-reorder",
+    "keyboard-navigation",
+    "animate-on-mount"
+  ],
   "composition": {
     "ScrimCalendar": "Section(d-section) > [Toolbar(week-nav + view-switcher) + CalendarGrid > [TimeAxis > TimeSlot[] + DayColumns > ScrimBlock[](d-interactive) > [TeamLogo + OpponentName + MapChip[] + AvailabilityStatus + PlayerAvailabilityDots]] + NowLine]",
     "CalendarGrid": "Grid(time-x-day) > [TimeColumn + DayColumn[]]",

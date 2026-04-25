@@ -95,6 +95,16 @@
     "micro": "Hover, drag-handle, and dock-target states may brighten subtly to reinforce affordance.",
     "transitions": "Docking, undocking, and expansion should animate smoothly over 180-260ms with predictable easing."
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount",
+    "glow-hover",
+    "live-simulation"
+  ],
   "composition": {
     "HolographicControlBar": "Bar(d-control, glassmorphic, backdrop-blur, floating) > [DragHandle(grip-pattern) + ActionGroup[] + DockIndicator?]",
     "ActionGroup": "Group(d-interactive, gap-2, divider) > IconButton[]",

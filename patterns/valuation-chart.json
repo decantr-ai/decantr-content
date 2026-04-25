@@ -110,6 +110,11 @@
       "current-value-pulse": "ValueCallout subtle scale 1.0 to 1.02 to 1.0 on data refresh 600ms ease-out"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-tooltip",
+    "real-time-updates"
+  ],
   "composition": {
     "ValuationChart": "Section(d-section, d-surface) > [ChartCanvas + ValueCallout]",
     "ChartCanvas": "SVG(responsive, viewBox) > [GridLines + AxisLabels + PriceLine + ConfidenceBand? + ProjectionDashed? + BenchmarkLine[] + EventMarker[] + CrosshairTooltip]",

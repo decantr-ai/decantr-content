@@ -114,6 +114,12 @@
       "overdue-reservation-shake": "amber reservation chip subtle shake every 5s if guest late >15min"
     }
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "composition": {
     "TableMap": "Section(d-section, spatial, full-bleed) > [FloorCanvas + CapacityChart + Legend + PanZoomControls]",
     "FloorCanvas": "Canvas(d-surface, zoomable, pannable) > [WallOutline[] + DoorMarker[] + SectionLabel[] + TableShape[]]",

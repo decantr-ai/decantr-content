@@ -104,6 +104,12 @@
     "micro": "Permission toggles may confirm changes with subtle state transitions, and unsaved indicators may fade in gently when cells change.",
     "transitions": "Role switching or expanding granular categories should preserve orientation rather than redrawing the matrix abruptly."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "table",
     "aria-label": "Permission matrix",

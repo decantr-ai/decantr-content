@@ -119,6 +119,9 @@
     "micro": "Status tint and CTA may sharpen slightly on hover. Overdue states may carry a restrained emphasis, but the reminder should remain calm and actionable.",
     "transitions": "State changes from upcoming to due or paid should feel clear and affirmative without becoming alarming or flashy."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "status",
     "aria-label": "Rent reminder",

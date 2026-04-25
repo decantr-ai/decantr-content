@@ -101,6 +101,9 @@
     "micro": "Photo thumbnails, actions, and tab states may sharpen subtly on hover and focus.",
     "transitions": "Tab and gallery interactions should preserve place and asset identity rather than creating abrupt mode switches."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Property detail",

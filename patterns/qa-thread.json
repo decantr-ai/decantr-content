@@ -76,6 +76,12 @@
       "pending-pulse": "status chip amber pulse 2s ease-in-out infinite on pending threads"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "hover-reveal"
+  ],
   "composition": {
     "QAThread": "Root(d-section, stack) > QuestionCard*(d-surface)",
     "QuestionCard": "Card > [AskerInfo + StatusChip + QuestionText + AttachmentChip* + AssigneeAvatars + AnswerCard* + ResolveButton? + ReplyComposer?]",

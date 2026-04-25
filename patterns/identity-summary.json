@@ -91,6 +91,10 @@
     "micro": "Any hover or focus feedback should stay restrained. Identity surfaces should feel editorial and stable, not animated like a dashboard tile.",
     "transitions": "If biography or metadata rows appear progressively, use a gentle fade or rise over 180-220ms without disturbing the overall panel rhythm."
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Identity summary",

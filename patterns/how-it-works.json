@@ -82,6 +82,11 @@
     "micro": "Step connector lines draw in from left to right with 400ms ease as each step enters viewport.",
     "transitions": "Steps stagger in on section enter with fade-up (translateY(12px) to 0) at 300ms ease, 120ms stagger delay per step."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "list",
     "aria-label": "How it works",

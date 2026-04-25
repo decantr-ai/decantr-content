@@ -115,6 +115,9 @@
       "timer-seconds": "seconds digit subtle brightness pulse 1s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "KdsTicketRail": "Section(d-section, rail, dark-bg) > [StationHeader[]? + OrderTicket[]]",
     "OrderTicket": "Surface(d-surface, data-interactive, data-priority?) > [OrderHeader + ItemRow[] + PriorityFlag? + BumpButton]",

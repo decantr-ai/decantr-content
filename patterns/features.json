@@ -83,6 +83,11 @@
     "micro": "Feature cards lift on hover with translateY(-2px) and subtle shadow increase over 200ms ease.",
     "transitions": "Cards stagger in on section enter with fade-up (translateY(12px) to 0) at 300ms ease, 80ms stagger delay per card."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Features",

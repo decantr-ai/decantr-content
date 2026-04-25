@@ -132,6 +132,9 @@
     "micro": "Status actions, attachments, and timeline states may sharpen slightly on hover or focus to clarify available controls.",
     "transitions": "State changes and timeline expansion should feel direct and service-oriented rather than lively or decorative."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Maintenance ticket",

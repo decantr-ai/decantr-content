@@ -115,6 +115,12 @@
     "micro": "Cards, filters, and load-more affordances may sharpen or lift subtly on hover and focus.",
     "transitions": "Sorting, filtering, and view changes should preserve catalog continuity and avoid noisy reshuffles that break scanability."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Product catalog",

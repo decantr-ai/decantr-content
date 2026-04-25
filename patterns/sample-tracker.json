@@ -110,6 +110,9 @@
       "expiry-countdown": "ExpiryBadge text updates live as days elapse"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "SampleTracker": "Section(d-section) > [SampleGrid | FreezerGrid | CustodyTimeline]",
     "SampleCard": "Surface(d-surface, data-interactive) > [BarcodeDisplay + SampleName + LocationTag + ExpiryBadge + CustodyLogPreview + StatusIcon]",

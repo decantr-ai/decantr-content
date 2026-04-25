@@ -108,6 +108,12 @@
       "subtitle-text-cycle": "old line slides up + fades out, new line slides up from below, 250ms ease-out"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "scroll-reveal"
+  ],
   "composition": {
     "TranscriptStream": "Section(d-section, flex-col, overflow-y-auto, scroll-smooth) > TranscriptSegment*(d-surface?) > [...content] + LiveCursor",
     "TranscriptSegment": "Row(flex, items-start, gap-2) > [SpeakerLabel + TranscriptText(inline spans) + TimestampBadge + ConfidenceIndicator?]",

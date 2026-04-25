@@ -75,6 +75,13 @@
       "progress-bar-shimmer": "subtle gradient sweep 3s linear infinite when progress > 0 and < 100"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children",
+    "scale-hover"
+  ],
   "composition": {
     "PetitionCard": "Card(d-surface, stack) > [AuthorInfo + CountdownChip? + PetitionTitle + Description + SignatureProgress + SignButton + ShareBar + TrustBadge*]",
     "SignatureProgress": "Module > [CounterText + ProgressBar(animated-fill)]",

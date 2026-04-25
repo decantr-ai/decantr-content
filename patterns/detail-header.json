@@ -114,6 +114,12 @@
     "micro": "Action buttons may use subtle hover and focus transitions. Status badges should remain visually stable rather than animate heavily.",
     "transitions": "Detail headers can fade up softly with the page container, but avoid dramatic motion that competes with the title hierarchy."
   },
+  "interactions": [
+    "hover-reveal",
+    "keyboard-navigation",
+    "animate-on-mount",
+    "click-select"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Detail header",

@@ -101,6 +101,11 @@
     },
     "ambient": {}
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "scale-hover"
+  ],
   "composition": {
     "ReactionBar": "Row(d-interactive, flex, wrap, gap-2) > ReactionChip*(d-interactive) + AddButton(d-interactive)",
     "ReactionChip": "Pill(d-surface, border: accent-if-owned, rounded-full, h-28) > [Emoji(text-base) + Count(mono-data, tabular-nums, text-xs)]",

@@ -125,6 +125,12 @@
     "micro": "Action buttons and status affordances may sharpen slightly on hover. Contact-focused variants may emphasize quick actions a bit more when focused.",
     "transitions": "Card selection or status updates should feel steady and professional rather than social-feed-like."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "group",
     "aria-label": "Tenant summary",

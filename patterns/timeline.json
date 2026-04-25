@@ -119,6 +119,12 @@
     "micro": "Connector highlights and milestone accents may animate softly on hover and focus.",
     "transitions": "New entries or progressive reveals should fade or slide in gently without making the chronology feel unstable."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "list",
     "aria-label": "Timeline",

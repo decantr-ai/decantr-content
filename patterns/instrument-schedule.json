@@ -112,6 +112,12 @@
       "maintenance-shimmer": "hatching pattern subtle diagonal-sweep 4s linear infinite"
     }
   },
+  "interactions": [
+    "click-select",
+    "drag-reorder",
+    "keyboard-navigation",
+    "animate-on-mount"
+  ],
   "composition": {
     "InstrumentSchedule": "Section(d-section, overflow-x-auto) > [TimeAxis + InstrumentRow[] + NowIndicator + Legend]",
     "InstrumentRow": "Row(d-row, data-instrument) > [InstrumentHeader + TimeRail > [TimeBlock[] + MaintenanceSlot[] + FreeSlot[]]]",

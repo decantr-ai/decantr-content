@@ -83,6 +83,9 @@
     "tablet": "Standard layout maintained. Comparison table fits without scrolling for up to 5 columns. Grid cards use 2-column layout.",
     "desktop": "Full layout with side-by-side sections possible. Comparison table shows all columns. Breakdown cards use 3-4 column grid."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "StatsDetail": "Container(d-section, flex-col, gap-6) > [Header + Distribution + Percentiles + ComparisonTable + BreakdownCards?]",
     "Header": "Row(flex, justify-between, align-baseline) > [MetricValue(text-2xl, font-bold) + TrendBadge(d-annotation)]",

@@ -96,6 +96,9 @@
       "flow-animation": "dash-offset drift 4s linear infinite on all flow-lines"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "SupplyChainMap": "Section(d-section, full-bleed) > MapCanvas > [CountryLayer + FlowLine[] + SupplierPin[](d-interactive) + EmissionBadge[] + TierRing[]] + DetailCard? + Legend + MapControls",
     "MapCanvas": "Viewport(zoomable, pannable) > ProjectionLayer",

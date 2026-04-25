@@ -102,6 +102,12 @@
     "micro": "Preview panes may fade or slide in gently, and hovered document rows may elevate or sharpen slightly for clarity.",
     "transitions": "Folder navigation and preview changes should preserve orientation within the vault rather than reflowing the whole surface abruptly."
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "keyboard-navigation",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Document vault",

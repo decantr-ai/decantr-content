@@ -74,6 +74,9 @@
     "micro": "Cards may lift or sharpen their border on hover. Status indicators may pulse subtly only when in degraded or deploying states.",
     "transitions": "Filtering or sorting should cross-fade or stagger cards in gently without disrupting scanability."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Service catalog",

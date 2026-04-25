@@ -66,6 +66,9 @@
     "micro": "Hover and focus states on revoke controls may brighten subtly, but session rows should otherwise remain stable and administrative.",
     "transitions": "Revoked-session removal and warning-state changes should animate softly over 150-220ms without collapsing the entire list abruptly."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Session manager",

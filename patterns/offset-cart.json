@@ -96,6 +96,9 @@
       "checkout-pulse": "subtle button glow on checkout CTA 2.5s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "OffsetCart": "Section(d-section) > [ProjectGrid > OffsetProject[](d-interactive) + CartSidebar > TotalImpact]",
     "OffsetProject": "Card(d-surface, data-interactive) > [ProjectImage + ProjectInfo > [ProjectName + Location + CertificationChip[] + PriceLabel + ImpactBadge] + TonnageSelector + AddToCartButton]",

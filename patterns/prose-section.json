@@ -77,6 +77,12 @@
     "transitions": "Section-level entrance may use a subtle fade-up or staggered reveal of prose blocks over 200-300ms, never a dramatic slide or parallax.",
     "ambient": "Avoid ornamental ambient motion inside the prose section itself; let surrounding page treatments carry atmosphere."
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "keyboard-navigation",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Editorial prose section",

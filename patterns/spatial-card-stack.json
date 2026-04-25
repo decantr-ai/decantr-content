@@ -116,6 +116,12 @@
       "idle-float": "front card subtle translateY oscillation (±2px) over 4s ease-in-out infinite — gentle floating effect when not interacting"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "composition": {
     "SpatialCardStack": "Section(d-section, perspective-1000, flex-col, items-center) > [CardStackContainer + StackControls + DepthIndicator]",
     "CardStackContainer": "Div(relative, preserve-3d) > [DepthCard*(d-surface, absolute, depth-transformed) + GestureZone(invisible-overlay)]",

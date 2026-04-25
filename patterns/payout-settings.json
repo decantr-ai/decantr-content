@@ -107,6 +107,9 @@
     "micro": "Method selection and reveal toggles may confirm state changes subtly without making financial settings feel playful.",
     "transitions": "Switching payout methods or schedules should feel deliberate and trustworthy, especially around sensitive banking information."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Payout settings",

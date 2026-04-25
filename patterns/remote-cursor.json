@@ -87,6 +87,9 @@
     "micro": "Cursor movement and label emphasis should remain smooth and subtle, reinforcing presence rather than drawing theatrical attention.",
     "transitions": "Position interpolation should preserve locality and document context; avoid laggy or overshooting motion that makes collaboration feel imprecise."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "status",
     "aria-label": "Remote collaborator cursor",

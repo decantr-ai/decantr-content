@@ -99,6 +99,12 @@
     "micro": "TOC highlight changes and smooth-scroll anchors should feel restrained and utility-first.",
     "transitions": "Collapsible category sections and TOC drawers may animate over 180-220ms, but legal reading surfaces should avoid decorative motion."
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "keyboard-navigation",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "document",
     "aria-label": "Legal document",

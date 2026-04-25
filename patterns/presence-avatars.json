@@ -107,6 +107,10 @@
     "micro": "Presence state changes and hover emphasis may brighten or pulse subtly, especially for active collaborators.",
     "transitions": "Entries joining or leaving should animate gently enough to preserve the sense of live collaboration without making the avatar rail jitter."
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "group",
     "aria-label": "Presence avatars",

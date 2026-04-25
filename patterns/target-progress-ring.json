@@ -90,6 +90,11 @@
       "on-track-glow": "subtle drop-shadow pulse 3s ease-in-out infinite when status is on-track"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "status-pulse"
+  ],
   "composition": {
     "TargetProgressRing": "Surface(d-surface) > [RingCanvas > [RingSegment(background) + RingSegment(progress) + PacingTick] + CenterStack > [CurrentValue(mono-xl) + TargetLabel] + YearLabel]",
     "RingCanvas": "SVG(viewBox-square, aspect-1) > ArcLayer",

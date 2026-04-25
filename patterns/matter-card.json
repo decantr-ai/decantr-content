@@ -96,6 +96,12 @@
       "overdue-pulse": "deadline chip background pulse when overdue 2s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "composition": {
     "MatterCard": "Card(d-surface, data-interactive) > [Header > [MatterTitle > [MatterNumber(mono) + MatterTitle] + StatusBadge] + ClientInfo + BudgetBar + DeadlineChip + Footer > [TaskCount + AssigneeAvatars]]",
     "MatterTitle": "Stack > [MatterNumber(mono-xs) + TitleText(bold)]",

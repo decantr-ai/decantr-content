@@ -73,6 +73,9 @@
       "queued-pulse": "opacity 0.6 to 0.9 pulse 2s ease-in-out infinite for queued jobs"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "RenderQueue": "Root(d-section, stack) > RenderJob*(d-interactive)",
     "RenderJob": "Row(d-surface) > [ThumbnailPreview + JobInfo + ProgressBar + StatusBadge + ActionCluster]",

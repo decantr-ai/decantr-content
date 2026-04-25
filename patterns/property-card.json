@@ -99,6 +99,12 @@
     "tablet": "Two-column card grid. Standard card proportions with photo.",
     "desktop": "Three-column grid or larger. Cards at comfortable size with all metrics inline."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "composition": {
     "PropertyCard": "Card(d-surface, hoverable) > [Image(aspect-ratio: 16/9) + Content > [Address(font-medium) + TypeBadge(d-annotation) + MetricsRow + StatusBadge(d-annotation)] + Actions(d-interactive)]",
     "MetricsRow": "Row(d-data, gap-3) > [UnitCount(mono-data) + OccupancyRate(mono-data, color: level) + Revenue(mono-data)]"

@@ -74,6 +74,9 @@
       "live-update-pulse": "subtle counter tick animation when live results update"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "VotingBreakdown": "Root(d-data, stack) > [DemographicToggle + TotalSummary + VoteBarRow* + CommentSnippet*]",
     "VoteBarRow": "Row(d-row) > [OptionLabel + BarFill(animated) + PercentageText]",

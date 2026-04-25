@@ -62,6 +62,9 @@
     "micro": "Policy toggles, approval actions, and audit filter controls may animate softly over 150-200ms, but the workspace should remain composed and administrative.",
     "transitions": "Approval queues and audit log filters should update with light cross-fades or row reveals instead of abrupt reflows."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "layout_hints": {
     "cta_treatment": "Header actions should read like strong workspace transitions, not secondary ghost text. Use icon-led CTA rails or compact button groups with one clear primary action.",
     "policy_rows": "Each rule should have explanatory copy on the left and the control on the right. On narrow widths, the control drops beneath the copy without losing alignment.",

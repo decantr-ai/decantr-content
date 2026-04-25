@@ -94,6 +94,9 @@
     "micro": "Level indicators and progress cues may brighten or animate softly on hover, but the badge should remain calm and compact.",
     "transitions": "Score and level updates should cross-fade or count smoothly over 150-220ms without causing layout shift."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "status",
     "aria-label": "Reputation badge",

@@ -86,6 +86,14 @@
       "connection-pulse": "subtle opacity pulse on edges of selected entity 3s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount"
+  ],
   "composition": {
     "RelationshipGraph": "Container(d-section, spatial) > [SearchOverlay(d-control) + FilterPanel?(d-surface)] + GraphCanvas > EntityNode*(d-interactive) + RelationshipEdge* + DetailCard?(d-surface)",
     "GraphCanvas": "Canvas(d-data, pannable, zoomable, dot-grid-bg) > [RelationshipEdge* + EntityNode*]",

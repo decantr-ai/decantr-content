@@ -113,6 +113,11 @@
       "generating-indicator": "run button has a subtle pulse glow during generation, 1.5s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "composition": {
     "Playground": "Section(d-section, flex-col, h-full) > [TopBar > [ModelSelector(d-control) + ParameterSliders(d-control) + TokenCounter(d-data, mono-data) + SaveButton(d-interactive)] + MainArea]",
     "MainArea": "Row(d-section, flex, h-full) > [HistoryList?(d-surface, collapsible) + PromptEditor(d-surface, monospace) + RunButton(d-interactive, accent) + ResponsePanel(d-surface, markdown)]",

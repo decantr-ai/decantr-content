@@ -89,6 +89,13 @@
     "micro": "Metric cards and chart controls may respond crisply on hover and focus, with restrained value or chart reveal behavior.",
     "transitions": "Date-range or filter changes should preserve a sense of continuity in the financial story rather than making values feel unstable."
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Profit and loss dashboard",

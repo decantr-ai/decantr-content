@@ -98,6 +98,13 @@
       "streak-glow": "streak indicator team-color glow pulse 2s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "composition": {
     "ScoreboardLive": "Section(d-section) > [MainBar > [TeamSection(left) > [TeamLogo + TeamTricode + TeamScore(mono-xl) + StreakIndicator?] + CenterBlock > [MapLabel + GameTimer(mono-xl) + RoundLabel] + TeamSection(right) > [TeamScore(mono-xl) + TeamTricode + TeamLogo + StreakIndicator?]] + EventTicker(marquee) + ViewerCount(top-right, d-annotation) > [LiveDot + ViewerLabel(mono)]]",
     "TeamLogo": "Image(team-branded, tricode-adjacent) > [LogoImg + TeamTricode(mono)]",

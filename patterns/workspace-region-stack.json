@@ -65,6 +65,9 @@
     "section_role": "Use this when a single section label introduces multiple children such as a KPI grid followed by a summary card, or a filter panel followed by results.",
     "anti_pattern": "Do not place multiple unwrapped sibling panels directly under a d-section and expect d-section to create child spacing. That responsibility belongs here."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "WorkspaceRegionStack": "Stack(d-data, full-width) > RegionChild[]"
   }

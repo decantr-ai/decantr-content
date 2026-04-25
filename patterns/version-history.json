@@ -117,6 +117,9 @@
     "micro": "Selected entries may sharpen or glow subtly, and restore/compare actions may acknowledge focus clearly without distracting from the timeline.",
     "transitions": "Entry selection, preview swaps, and compare-mode toggles should preserve the sense of chronological navigation rather than feeling like unrelated modal jumps."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Version history",

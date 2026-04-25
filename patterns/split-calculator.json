@@ -68,6 +68,9 @@
       "invalid-total-pulse": "total badge red pulse 1.5s ease-in-out infinite when sum ≠ 100%"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "SplitCalculator": "Root(d-surface, stack) > [SplitRow* + TotalBadge + PresetButtons + AddRowButton]",
     "SplitRow": "Row(d-interactive) > [DragHandle + CollaboratorAvatar + NameAndRole + PercentageInput + RemoveButton?]",

@@ -112,6 +112,14 @@
       "shimmer-loading": "gradient-sweep left-to-right 1.5s ease-in-out infinite on skeleton"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children",
+    "glow-hover",
+    "live-simulation"
+  ],
   "composition": {
     "GenerativeCardGrid": "Grid(d-section, auto-fill, responsive) > [PreviewCard[] + EmptyState?]",
     "PreviewCard": "Card(d-surface, hoverable, lift-on-hover) > [SkeletonPreview | Preview + GenerationBadge(d-annotation, top-right) + PromptTag(d-data, line-clamp-2) + ActionBar]",
