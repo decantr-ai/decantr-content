@@ -83,7 +83,9 @@
   "typography": {
     "scale": "modular",
     "heading_weight": 700,
-    "body_weight": 400
+    "body_weight": 400,
+    "display": "'Inter', ui-sans-serif, system-ui, sans-serif",
+    "body": "'Inter', ui-sans-serif, system-ui, sans-serif"
   },
   "decantr_compat": ">=1.5.0",
   "source": "core",
@@ -114,7 +116,19 @@
       "hover": "100ms",
       "entrance": "250ms",
       "modal": "200ms",
-      "page": "300ms"
+      "page": "300ms",
+      "instant": "80ms",
+      "fast": "150ms",
+      "base": "250ms",
+      "slow": "400ms",
+      "slower": "600ms",
+      "stagger": "60ms"
+    },
+    "easings": {
+      "ease": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "easeOut": "cubic-bezier(0, 0, 0.2, 1)",
+      "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+      "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)"
     }
   },
   "effects": {
@@ -395,6 +409,28 @@
         "Beat markers",
         "Pattern editors"
       ]
+    }
+  },
+  "elevation": {
+    "1": {
+      "light": "0 1px 2px rgba(0,0,0,0.06)",
+      "dark": "0 1px 2px rgba(0,0,0,0.45)"
+    },
+    "2": {
+      "light": "0 2px 4px rgba(0,0,0,0.08)",
+      "dark": "0 2px 4px rgba(0,0,0,0.55)"
+    },
+    "3": {
+      "light": "0 4px 12px rgba(0,0,0,0.10)",
+      "dark": "0 4px 12px rgba(0,0,0,0.60)"
+    },
+    "4": {
+      "light": "0 8px 24px rgba(0,0,0,0.14)",
+      "dark": "0 8px 24px rgba(0,0,0,0.65)"
+    },
+    "5": {
+      "light": "0 16px 48px rgba(0,0,0,0.18)",
+      "dark": "0 16px 48px rgba(0,0,0,0.70)"
     }
   }
 }
