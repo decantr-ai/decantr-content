@@ -91,6 +91,12 @@
     "micro": "Carousel slides transition with 400ms ease translateX. Auto-play advances every 5s.",
     "transitions": "Testimonial cards fade in on section enter with 300ms ease. Carousel dot indicators pulse on active transition."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal",
+    "drag-reorder"
+  ],
   "accessibility": {
     "role": "region",
     "aria-roledescription": "carousel",

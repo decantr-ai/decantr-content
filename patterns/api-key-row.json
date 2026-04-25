@@ -84,6 +84,11 @@
     "micro": "Copy and revoke controls may brighten or lift subtly on hover and focus, but the row itself should remain operational and stable.",
     "transitions": "Reveal, creation-banner, and revoked-state changes should animate softly over 150-220ms without shifting the table rhythm."
   },
+  "interactions": [
+    "inline-edit",
+    "click-select",
+    "hover-reveal"
+  ],
   "layout_hints": {
     "row_layout": "Key icon (16px, muted) + key name + masked value + scope badges + date metadata + actions. On narrow widths, collapse into stacked cards before the metadata starts crowding.",
     "reveal": "Click masked value to reveal for 5 seconds, then re-mask. Copy button copies full key.",

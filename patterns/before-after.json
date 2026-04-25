@@ -88,6 +88,10 @@
     "micro": "Hovered frames may sharpen slightly and the active comparison side may brighten enough to reinforce the contrast.",
     "transitions": "Any reveal or scroll-based entry should preserve the comparison frame rather than staggering the two sides independently."
   },
+  "interactions": [
+    "drag-reorder",
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Before and after comparison",

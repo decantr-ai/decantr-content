@@ -109,6 +109,11 @@
       "quality-pending-pulse": "pending QualityIndicator dot pulse 1.5s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount"
+  ],
   "composition": {
     "DatasetCard": "Surface(d-surface, article) > [DatasetHeader + StatsRow + AuthorBlock + SchemaTree + LicenseChip + TagsChips + SamplePreview? + ActionsFooter]",
     "DatasetHeader": "Header(d-annotation) > [DatasetTitle + VersionTag + QualityIndicator + Description]",

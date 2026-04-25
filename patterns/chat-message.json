@@ -100,6 +100,10 @@
     "micro": "Hover actions, copy affordances, and reaction states may fade or sharpen in gently around the message bubble.",
     "transitions": "Streaming or appended assistant content should feel readable and calm, preserving message continuity rather than performing dramatic reveal animations."
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "article",
     "aria-label": "Chat message",

@@ -93,6 +93,11 @@
       "error-glow": "box-shadow red/10 pulse 2s ease-in-out infinite on error status cards"
     }
   },
+  "interactions": [
+    "inline-edit",
+    "click-select",
+    "animate-on-mount"
+  ],
   "composition": {
     "DataSourceConnector": "Container(d-section, flex-col, gap-4) > [SearchBar?(d-control) + CategoryTabs?(d-control) + SourceCatalog(d-surface, grid: responsive)] > SourceCard(d-interactive, hover-elevate)* > [SourceIcon(d-annotation, centered, 48px) + SourceName(d-data, semibold) + SourceDescription(d-annotation, muted) + ConnectionStatus(d-annotation, dot + label)] + ConfigForm?(d-surface, slide-panel)",
     "SourceCatalog": "Grid(d-surface, responsive-columns) > SourceCard(d-interactive)[] + AddCustomCard(d-interactive, dashed-border)",

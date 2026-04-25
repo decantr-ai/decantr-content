@@ -110,6 +110,10 @@
       "error-pulse": "box-shadow pulse with red glow 2s ease-in-out infinite on error toasts"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "composition": {
     "ToastContainer": "Container(fixed, top-right, z-200, flex-col, gap-2) > Toast*",
     "Toast": "Card(d-surface, border-left: severity-color, shadow, max-w-380) > [ToastIcon(severity-color) + ContentStack + ToastAction?(d-interactive) + DismissButton(ghost) + ProgressBar(absolute-bottom)]",

@@ -116,6 +116,12 @@
     "micro": "Feed cards, engagement controls, and gated overlays may respond subtly on hover and focus, while likes or unlock affordances may confirm interaction without breaking reading flow.",
     "transitions": "Filter changes and content loading should preserve chronological continuity, with gentle entry or fade behavior rather than abrupt masonry reshuffles."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal",
+    "lift-hover"
+  ],
   "accessibility": {
     "role": "feed",
     "aria-label": "Content feed",

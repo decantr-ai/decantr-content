@@ -118,6 +118,11 @@
       "measurement-endpoint-idle": "subtle opacity oscillation (0.7→1→0.7) 3s ease-in-out infinite when not being dragged"
     }
   },
+  "interactions": [
+    "hover-tooltip",
+    "animate-on-mount",
+    "pan-background"
+  ],
   "composition": {
     "ARAnnotation": "Canvas(d-section, relative, overflow-hidden, rounded-lg) > [ImageLayer + SVGOverlay + AnnotationLayer + ZoomControls]",
     "ImageLayer": "Img(absolute, inset-0, w-full, h-full, object-contain, pointer-events-none)",

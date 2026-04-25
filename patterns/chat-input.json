@@ -85,6 +85,11 @@
     "attachment-add": "New attachment thumbnails scale from 0.8 to 1.0 with 150ms ease-out. Remove animation scales to 0.8 and fades out over 120ms.",
     "mentions-popup": "Dropdown slides down from the cursor position with 150ms ease-out and fades in. Dismiss reverses the animation."
   },
+  "interactions": [
+    "inline-edit",
+    "keyboard-navigation",
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "form",
     "aria-label": "Chat input",

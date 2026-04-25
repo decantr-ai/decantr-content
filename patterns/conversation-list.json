@@ -85,6 +85,12 @@
     "micro": "Active rows may sharpen or lift slightly, and unread indicators may pulse gently only when newly changed.",
     "transitions": "Search filtering and conversation switching should feel immediate and stable, with no heavy motion that disrupts scan flow."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "real-time-updates",
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "navigation",
     "aria-label": "Conversation list",

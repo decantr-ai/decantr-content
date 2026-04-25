@@ -105,6 +105,11 @@
     },
     "ambient": {}
   },
+  "interactions": [
+    "hover-reveal",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "composition": {
     "ComparisonGrid": "Container(d-data, overflow-x-auto, rounded-lg) > Table(full-width)",
     "ColumnHeader": "HeaderRow(d-header, sticky-top) > [FeatureLabel + ProductHeader*(plan-name, price, CTA?)]",

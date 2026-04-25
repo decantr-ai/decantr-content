@@ -86,6 +86,13 @@
       "stale-deal-pulse": "subtle red border pulse on deals that have been in a stage past their expected duration, 3s infinite"
     }
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "lift-hover",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "composition": {
     "PipelineBoard": "Board(d-section, flex-row, gap-4, overflow-x-auto) > StageColumn*(d-surface)",
     "StageColumn": "Column(d-surface, flex-col, fixed-width, droppable) > [StageHeader(d-annotation) > [StageName + DealCount(d-annotation) + TotalValue(d-data)] + CardList(d-data, scrollable) > DealCard*]",

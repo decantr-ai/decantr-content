@@ -100,6 +100,14 @@
       "active-path": "dash-offset drift 3s linear infinite on focused-path edges"
     }
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount"
+  ],
   "composition": {
     "CitationGraph": "Section(d-section, full-bleed) > [FilterPanel(left) + GraphCanvas > [CitationNode[](d-interactive) + CitationEdge[]] + DepthIndicator(top-right) + Legend]",
     "GraphCanvas": "Viewport(zoomable, pannable) > [EdgeLayer + NodeLayer + LabelLayer]",

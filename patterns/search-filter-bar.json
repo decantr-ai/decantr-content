@@ -109,6 +109,12 @@
     "micro": "Tabs, chips, and filter controls may animate lightly on hover and selection, but search remains the dominant visual action.",
     "transitions": "Filter-surface expansion, chip removal, and result-state updates should animate over 150-240ms without making the bar feel operator-heavy."
   },
+  "interactions": [
+    "inline-edit",
+    "animate-on-mount",
+    "keyboard-navigation",
+    "hover-reveal"
+  ],
   "layout_hints": {
     "search_input": "Full-width search input with magnifying glass icon. Placeholder should explicitly mention Decantr content types and app-starting intent.",
     "filter_tabs": "Type tabs should use distinct type-linked treatments so all-type browsing is easy to parse at a glance. The patterns icon should read like a puzzle-piece rather than a generic component glyph.",

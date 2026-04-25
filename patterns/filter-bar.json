@@ -121,6 +121,11 @@
     "micro": "Filter chips, toggles, and dropdown affordances may animate softly on hover and selection over 120-180ms.",
     "transitions": "Expanded filter panels and chip removals should animate over 150-240ms without making the bar feel noisy."
   },
+  "interactions": [
+    "inline-edit",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "search",
     "aria-label": "Filter bar",

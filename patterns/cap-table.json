@@ -104,6 +104,11 @@
       "totals-pulse": "subtle background shimmer on totals-footer when values update 400ms ease-out"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "click-select"
+  ],
   "composition": {
     "CapTable": "Surface(d-surface, card) > [TableHeader + ShareholderRow[] + TotalsFooter + PieSummary?]",
     "ShareholderRow": "Row(d-row, data-interactive) > [Name + ShareClassBadge + SharesCell + PercentageBar + VestingChip]",

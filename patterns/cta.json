@@ -82,6 +82,11 @@
     "micro": "CTA button pulses with subtle scale(1.02) and shadow increase on idle after 3s, 1.5s duration loop. Button brightens on hover over 150ms.",
     "transitions": "Section content fades up (translateY(16px) to 0, opacity 0 to 1) on viewport enter with 400ms ease."
   },
+  "interactions": [
+    "animate-on-mount",
+    "glow-hover",
+    "scale-hover"
+  ],
   "accessibility": {
     "role": "complementary",
     "aria-label": "Call to action",

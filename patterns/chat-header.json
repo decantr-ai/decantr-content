@@ -82,6 +82,10 @@
     "micro": "Action icons, status pills, and title-edit affordances may animate subtly on hover and focus over 120-180ms.",
     "transitions": "Overflow menu reveal and title-edit mode changes should animate softly without shifting the overall header layout."
   },
+  "interactions": [
+    "hover-reveal",
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Chat header",

@@ -110,6 +110,11 @@
       "glow-breathe": "shadow opacity 8%→15%→8% 4s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "status-pulse",
+    "real-time-updates",
+    "animate-on-mount"
+  ],
   "composition": {
     "AmbientStatusRing": "Wrapper(inline-flex|block, items-center) > [StatusRing(svg|div, animated, state-driven) + StateLabel?(text-xs, state-colored) + DetailTooltip?(d-annotation, on-hover)]",
     "StatusRing": "SVG(viewBox, circle, stroke-animated) | Div(rounded-full|rounded-bar, bg-state-color, animated)",

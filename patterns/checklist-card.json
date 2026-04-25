@@ -74,6 +74,11 @@
     "micro": "Completed items may fade into a calmer state, and progress bars may animate in gently on load.",
     "transitions": "Checklist completion should feel affirmative but restrained, especially in enterprise and compliance contexts."
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Checklist progress",

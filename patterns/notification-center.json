@@ -116,6 +116,13 @@
       "toast-progress": "Toast auto-dismiss progress: a thin 2px accent bar at the bottom shrinks from 100%→0% width over 5s linear, showing time remaining before auto-dismiss"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "stagger-children",
+    "hover-reveal",
+    "click-select"
+  ],
   "composition": {
     "NotificationCenter": "Anchor(d-interactive) > [BellButton + UnreadBadge?] + Dropdown?(d-surface, floating)",
     "Dropdown": "Popover(d-surface, anchored, shadow-xl) > [Header + CategoryTabs + NotificationList + PreferencesFooter]",

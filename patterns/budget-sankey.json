@@ -73,6 +73,11 @@
       "flow-active": "subtle gradient animation along path 4s linear infinite suggesting money movement"
     }
   },
+  "interactions": [
+    "hover-tooltip",
+    "animate-on-mount",
+    "click-select"
+  ],
   "composition": {
     "BudgetSankey": "Root(d-section, stack) > [ColumnHeaders + SankeyCanvas]",
     "SankeyCanvas": "SVG(viewBox) > [NodeBlock* + FlowLine* + FlowLabel*]",

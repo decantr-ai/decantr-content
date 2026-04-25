@@ -97,6 +97,10 @@
     },
     "ambient": {}
   },
+  "interactions": [
+    "hover-reveal",
+    "keyboard-navigation"
+  ],
   "composition": {
     "BreadcrumbNav": "Nav(role=navigation, aria-label=Breadcrumb) > BreadcrumbList(ol)",
     "BreadcrumbList": "List(ol, inline-flex, nowrap) > [BreadcrumbItem + Separator]* + BreadcrumbItem(current)",

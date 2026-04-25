@@ -84,6 +84,11 @@
     "transitions": "Banner entrances should feel premium but restrained: fade-up or soft scale over 220-320ms.",
     "ambient": "If the gradient breathes, keep the animation very low amplitude so the CTA remains readable and calm."
   },
+  "interactions": [
+    "animate-on-mount",
+    "glow-hover",
+    "scale-hover"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Call to action banner",

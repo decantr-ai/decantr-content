@@ -81,6 +81,12 @@
       "new-entry-highlight": "background-color accent/5 → transparent 2s ease-out on new entry arrival"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-reveal",
+    "click-select",
+    "scroll-reveal"
+  ],
   "composition": {
     "AuditTrail": "Container(d-section, flex-col) > [FilterBar(d-control) + ExportButton(d-interactive, icon: download)] + AuditLog(d-data, timeline-vertical)",
     "AuditLog": "Timeline(d-data, vertical-line) > AuditEntry(d-interactive, expandable)[]",

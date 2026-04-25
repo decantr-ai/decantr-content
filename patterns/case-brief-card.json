@@ -96,6 +96,11 @@
       "highlighted-fact": "subtle background glow on linked fact when annotation hovered 2s ease-in-out"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount"
+  ],
   "composition": {
     "CaseBriefCard": "Card(d-surface) > [Header > [CaseCitation(mono) + BadgeRow > [CourtBadge + OutcomeBadge + DateChip]] + HoldingSummary(italic-quote) + KeyFacts > FactBullet[] + AnnotationMargin?]",
     "CaseCitation": "Text(mono, prominent) > CitationString",

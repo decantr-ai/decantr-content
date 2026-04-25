@@ -102,6 +102,11 @@
     "micro": "Subscribe CTA and tab hover states may sharpen slightly, while hero metrics or follower counts may reveal with a restrained fade or count-up.",
     "transitions": "Tab changes should preserve orientation with soft fades or slides rather than jarring full-surface swaps."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "hover-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Creator profile",

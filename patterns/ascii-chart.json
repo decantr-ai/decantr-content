@@ -121,6 +121,10 @@
     "micro": "Realtime updates may redraw or pulse subtly to indicate fresh data, but the chart should remain readable and stable.",
     "transitions": "Data changes should feel like continuous terminal output rather than animated infographic motion."
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates"
+  ],
   "accessibility": {
     "role": "img",
     "aria-label": "ASCII chart",
