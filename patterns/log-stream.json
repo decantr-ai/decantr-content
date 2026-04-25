@@ -120,7 +120,9 @@
   "layout_hints": {
     "terminal_frame": "The pattern owns the terminal-like frame, controls header, and scrolling stream region. Parent layouts should not wrap it in another faux-terminal shell.",
     "signal_hierarchy": "Lead with the live stream, then controls, then secondary counters. Stats should support stream interpretation, not compete with the entries.",
-    "line_density": "Entries should align in a stable rhythm with timestamp, level, source, and message fields that scan quickly during live updates."
+    "line_density": "Entries should align in a stable rhythm with timestamp, level, source, and message fields that scan quickly during live updates.",
+    "live_vs_indexed_separation": "When a log explorer renders BOTH a live stream AND a separate searchable historical table, they MUST be visually separated by either: (a) a section eyebrow (\"LIVE STREAM\" + \"INDEXED LOGS\") with explicit headings, OR (b) a tab toggle at the top of the region letting the user choose Live | Indexed. Rendering both views stacked without separation is confusing — users see two log lists and cannot tell why they differ. Section eyebrows + accent left-border are the canonical separator.",
+    "timestamp_continuity": "When live entries (current timestamps) sit above historical entries (older timestamps) in the SAME stream, insert a \"— now —\" or \"— latest —\" annotation row between the two epochs. Sub-second timestamps jumping from 15:25:33 to 10:42:18 with no break is jarring and reads as a bug."
   },
   "motion": {
     "micro": "New entries may fade or slide in subtly at the bottom, and paused state indicators may brighten clearly when active.",

@@ -51,7 +51,8 @@
         }
       ],
       "default_layout": [
-        "chart-grid",
+        "filter-bar",
+        "kpi-grid",
         "data-table"
       ],
       "shell": "sidebar-main"
@@ -104,5 +105,9 @@
     "modes": [
       "dark"
     ]
-  }
+  },
+  "directives": [
+    "Trace explorer KPIs (the kpi-grid on /traces) MUST show trace-specific metrics — average trace duration, p99 latency, error rate, traces/second. Do NOT reuse the metrics dashboard KPIs (requests/sec, SLO budget). Trace explorer is for investigating individual request paths; its KPIs should reflect trace-level aggregates.",
+    "Trace data-table columns (in order): Trace ID (mono link) · Root span (METHOD /path) · Service (chip) · Duration · Spans · Status (ok|error pill) · Started (timestamp). Status uses d-annotation with data-status=\"error|success\"."
+  ]
 }

@@ -79,7 +79,10 @@
   "layout_hints": {
     "result_priority": "Search input is the hero. Results should read like a decisive command list, not a generic menu. Category grouping must support scanning without dominating the surface.",
     "overlay_balance": "The palette should feel compact and intentional. Do not let preview panels, badges, or secondary metadata turn it into a cluttered dialog.",
-    "shortcut_visibility": "Keyboard hints should support command discovery, but should not overpower the command label and description."
+    "shortcut_visibility": "Keyboard hints should support command discovery, but should not overpower the command label and description.",
+    "required_wrapping": "The d-palette element MUST be rendered inside d-modal[data-align=\"top\"] with a d-modal-backdrop sibling. Without the d-modal wrapper the palette renders as a top-level full-width strip pinned to the viewport. The d-modal provides positioning + max-width centering; d-modal-backdrop provides scrim + click-to-close. This is non-negotiable.",
+    "section_grouping": "Commands MUST be grouped into sections via d-palette-section eyebrow rows. The blueprint provides `navigation.command_palette.commands` with explicit `section` strings (e.g., \"Navigation\", \"Account\") — honor them. A flat alphabetical list is wrong.",
+    "row_anatomy": "Each d-palette-row has 3 slots: [Lucide icon (16px) | label (text-sm) | d-kbd hotkey (right-aligned mono)]. The hotkey slot can be empty for commands without bindings, but the slot rhythm must be preserved for visual alignment."
   },
   "responsive": {
     "mobile": "Palette takes full screen width with slight horizontal margin. Results list fills available height. No keyboard shortcut badges shown. Touch-optimized row heights.",

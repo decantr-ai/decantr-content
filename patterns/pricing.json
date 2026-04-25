@@ -46,7 +46,7 @@
           "tiers": "Horizontal row of tier Cards: _grid _gc1 _md:gc3 _gap4 _aic",
           "tier-card": "Individual Card: plan name (_heading4), price (_heading1 _fontmono), billing period, feature checklist, CTA Button",
           "feature-list": "Checklist of features with checkmark icons and _textsm",
-          "cta": "Full-width Button per tier \u2014 primary variant for recommended, ghost for others"
+          "cta": "Full-width Button per tier — primary variant for recommended, ghost for others"
         }
       }
     },
@@ -129,6 +129,9 @@
   "layout_hints": {
     "recommended_treatment": "The recommended/popular tier card should be visually elevated: scale(1.02) or extra top padding, a primary-colored top border (3px solid var(--d-primary)), and the Popular badge using d-annotation[data-status=info]. The other tier cards should be subtly muted in comparison.",
     "card_glow": "For neon/glow themes, the recommended tier gets a subtle box-shadow glow: 0 0 30px rgba(var(--d-primary-rgb), 0.15). This draws the eye without being garish.",
-    "toggle_treatment": "The annual/monthly toggle should be a pill-style toggle with the active option using var(--d-primary) background. Show the savings percentage (\"Save 20%\") as a small accent-colored badge next to the annual option."
+    "toggle_treatment": "The annual/monthly toggle should be a pill-style toggle with the active option using var(--d-primary) background. Show the savings percentage (\"Save 20%\") as a small accent-colored badge next to the annual option.",
+    "popular_tier": "The \"Popular\" tier accent is rendered as a small chip pinned to the card top-edge via `position: absolute; top: -10px; left: 50%; transform: translateX(-50%)`. It MUST sit cleanly attached (or fully inside) — never floating in the gap above the card border or clipping through it. The featured tier ALSO gets a 2px accent border on ALL sides (not just top), and a slight lift via d-elevate[data-level=\"3\"] to differentiate from sibling tiers.",
+    "cta_consistency": "All pricing tier CTAs MUST be consistent button treatments — never mix \"filled accent button\" on one tier with \"plain centered text\" on others. The featured tier is `d-interactive[data-variant=\"primary\"]`, sibling tiers are `d-interactive[data-variant=\"ghost\"]`. Same shape and weight; primary draws the eye but the visual class is consistent.",
+    "toggle_overload": "Monthly | Annual toggle should NOT use BOTH a full accent background on the active tab AND an inset success chip (\"-20%\"). Pick one accent. Recommendation: subtle d-step-chip[data-step-state=\"active\"] for the active tab + `Save 20%` text below the toggle in d-caption muted. Cleaner."
   }
 }
