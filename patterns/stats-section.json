@@ -70,6 +70,9 @@
     "micro": "Counters may animate in gently on reveal, and dividers or accents may fade into place.",
     "transitions": "Entry should feel polished and confidence-building, not playful or hyperactive."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Key platform statistics",

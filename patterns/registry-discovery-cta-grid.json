@@ -55,6 +55,13 @@
     "micro": "Discovery cards may lift slightly and brighten their accent treatment on hover. CTA rails should respond clearly on hover and focus with a directional sense of momentum.",
     "transitions": "Grid cards may reveal with a short stagger or fade-up sequence, but the surface should still feel curated rather than animated for its own sake."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "layout_hints": {
     "card_structure": "Use one visual lane per card: icon + eyebrow at the top, narrative in the middle, action rail at the bottom. Avoid chip clouds, diagnostics, or inline metadata.",
     "cta_treatment": "CTA rails should be explicit actions with iconography and supporting hint copy. Prefer directional arrow or external-link affordances over plain text-only links.",

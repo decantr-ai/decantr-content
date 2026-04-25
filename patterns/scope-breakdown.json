@@ -95,6 +95,9 @@
       "trend-pulse": "subtle trend-indicator opacity 0.8 to 1.0 3s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "ScopeBreakdown": "Section(d-section) > ScopeCard[](d-surface, data-interactive) > [ScopeName + TotalEmissions(mono-lg) + PercentChange + TrendIndicator + CategoryList > EmissionBar[]]",
     "ScopeCard": "Surface(rounded, colored-header) > [Header(ScopeName + ScopeBadge) + Body(Total + Change) + Footer(ExpandToggle)]",

@@ -107,6 +107,9 @@
     "micro": "Summary values or status badges may brighten subtly on hover and filter interactions may clarify the active state without distracting from the ledger.",
     "transitions": "Date-range or filter changes should cross-fade rows or update totals smoothly so the payment history still feels stable and trustworthy."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Payment history",

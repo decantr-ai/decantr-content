@@ -70,6 +70,10 @@
     "micro": "Links and social icons may brighten or underline subtly on hover and focus.",
     "transitions": "Footer interactions should feel calm and understated, reinforcing that this is a utility surface rather than a marketing flourish."
   },
+  "interactions": [
+    "hover-reveal",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "contentinfo",
     "aria-label": "Site footer",

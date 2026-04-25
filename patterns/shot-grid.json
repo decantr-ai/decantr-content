@@ -73,6 +73,12 @@
       "transition-arrow-pulse": "opacity 0.6 to 1 pulse 3s ease-in-out infinite on active flow"
     }
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "composition": {
     "ShotGrid": "Root(d-section, grid) > ShotCard*(d-interactive)",
     "ShotCard": "Card(d-surface) > [ShotThumbnail + AspectBadge + ShotNumber + DurationChip]",

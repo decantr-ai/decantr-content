@@ -119,6 +119,11 @@
     "micro": "Collapsible sections expand/collapse with 250ms ease height transition. Validation errors shake the invalid field with a 300ms horizontal oscillation (translateX +/-4px).",
     "transitions": "Section content fades in on expand with 200ms ease. Step transitions in creation preset cross-fade over 250ms."
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "responsive": {
     "mobile": "Collapse all sections to a single column. Section titles stack above fields, actions become full-width when helpful, and dense structured layouts reduce to simple vertical groups.",
     "tablet": "Preserve the section rhythm while allowing field groups to split into two columns only when labels and controls still read clearly.",

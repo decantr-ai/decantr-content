@@ -109,6 +109,12 @@
     "micro": "Selected rows or sortable headers may sharpen subtly to confirm focus or interaction state.",
     "transitions": "Sorting, pagination, and row selection should remain crisp and terminal-like without introducing modern card-style motion."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "table",
     "aria-label": "Retro data table",

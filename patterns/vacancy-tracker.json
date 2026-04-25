@@ -84,6 +84,9 @@
     "micro": "Vacancy status and pipeline indicators may brighten subtly on hover and focus, especially when a unit needs attention.",
     "transitions": "Leasing-stage or vacancy-state changes should feel clear and professional, reinforcing operational continuity rather than gamified motion."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Vacancy tracker",

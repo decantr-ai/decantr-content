@@ -107,6 +107,11 @@
     "micro": "CTAs and media elements may float or sharpen subtly on hover, but the hero should remain composed and premium rather than restless.",
     "transitions": "Hero entry and background orbs should move slowly and confidently, reinforcing atmosphere without distracting from copy."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Split hero section",

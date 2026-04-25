@@ -102,6 +102,11 @@
     "micro": "Dragged cards, hovered columns, and active filters may sharpen or lift slightly to confirm manipulation.",
     "transitions": "Column moves and status changes should feel direct and workmanlike, reinforcing board continuity rather than playful motion."
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Maintenance board",

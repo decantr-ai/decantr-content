@@ -127,6 +127,9 @@
       "reaction-float": "Emoji rises from tile bottom-center, drifts upward 120px with sinusoidal X offset (amplitude 20px, period 1s), scales 1.0→1.3, opacity 1.0→0, duration 2s ease-out"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "VideoRoom": "Room(d-section, full-viewport, dark-always) > [VideoArea + ControlsBar + ReactionOverlay + ChatSidebar? + ParticipantList?]",
     "VideoArea": "Grid(d-surface[dark], responsive-grid) > ParticipantTile* | SpeakerView | ScreenShareView",

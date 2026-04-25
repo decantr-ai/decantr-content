@@ -112,6 +112,12 @@
     "micro": "Highlighted or recommended plans may use subtle border and shadow emphasis on hover, while current-plan states remain calm and stable.",
     "transitions": "Billing-state and current-plan changes should animate softly over 150-220ms without causing the comparison grid to shift."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "layout_hints": {
     "card_treatment": "Current plan highlighted with a distinct active treatment and a clear 'Current' badge. Recommended upgrade options should feel stronger than generic cards and should not rely on generic ghost-button treatment for their main CTA.",
     "comparison": "Feature comparison as checklist — checkmarks for included, dashes for excluded. Premium features in accent color. Use staged or auto-fit columns, never a rigid four-up grid.",

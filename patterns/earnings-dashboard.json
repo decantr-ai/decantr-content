@@ -105,6 +105,13 @@
     "micro": "KPI values and charts may reveal with restrained count-up or fade-in behavior, while export or range controls should respond crisply on hover and focus.",
     "transitions": "Date-range changes should animate smoothly enough to preserve context without making revenue interpretation feel unstable."
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Earnings dashboard",

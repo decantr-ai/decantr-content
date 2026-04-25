@@ -120,6 +120,14 @@
       "locate-active": "accent border-color pulse 2s ease-in-out infinite when GPS tracking"
     }
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount"
+  ],
   "composition": {
     "MapView": "Viewport(d-section, full-bleed) > [MapCanvas + Pin*(d-interactive) + ClusterBubble* + InfoCard?(d-surface) + SearchRadius? + MapControls + ListToggle]",
     "MapCanvas": "TileLayer(zoomable, pannable, vector|raster)",

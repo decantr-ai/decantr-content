@@ -107,6 +107,9 @@
     "micro": "Category filters and add-expense actions may sharpen slightly on hover. Status or receipt states may brighten enough to confirm selection or upload completion.",
     "transitions": "Date-range and category filtering should preserve confidence in the ledger by updating smoothly without reordering the whole experience unexpectedly."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Expense tracker",

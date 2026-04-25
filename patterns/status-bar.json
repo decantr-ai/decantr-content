@@ -83,6 +83,11 @@
     "micro": "Live status changes may brighten or pulse subtly, and clickable items may sharpen on hover or focus.",
     "transitions": "Realtime updates should feel stable and instrumentation-like rather than flashy or banner-like."
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "status-pulse"
+  ],
   "accessibility": {
     "role": "status",
     "aria-label": "Status bar",

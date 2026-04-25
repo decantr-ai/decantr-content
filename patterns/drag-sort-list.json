@@ -102,6 +102,13 @@
       "indicator-glow": "box-shadow pulse on accent 1.5s ease-in-out infinite while drag active"
     }
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount",
+    "hover-reveal",
+    "stagger-children"
+  ],
   "composition": {
     "SortableList": "Container(d-section, role=listbox) > SortableItem*",
     "SortableItem": "Row(d-interactive, flex, align-center) > [DragHandle + Content(flex-1) + Actions?]",

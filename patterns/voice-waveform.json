@@ -105,6 +105,11 @@
       "silence-idle": "bars drift to random 2–4px heights with slow (2s) easing to avoid perfectly static appearance"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "composition": {
     "VoiceWaveform": "Section(d-section, inline-flex, items-center, gap-2) > [VoiceIndicator + WaveformCanvas(svg|canvas, animated) + MuteToggle?]",
     "WaveformCanvas": "SVG(viewBox, preserveAspectRatio) > AmplitudeBar*(rect|line, animated-height) + FrequencyDisplay?",

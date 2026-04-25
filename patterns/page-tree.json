@@ -117,6 +117,10 @@
     "micro": "Expand/collapse chevrons, hover states, and pinned/favorite toggles may animate subtly over 120-180ms.",
     "transitions": "Nested branch expansion, drag-reorder previews, and drawer transitions should feel smooth and structured rather than flashy."
   },
+  "interactions": [
+    "animate-on-mount",
+    "click-select"
+  ],
   "accessibility": {
     "role": "tree",
     "aria-label": "Page tree",

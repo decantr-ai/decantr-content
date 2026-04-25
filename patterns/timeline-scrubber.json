@@ -73,6 +73,12 @@
       "playhead-playing": "scrubber advances continuously at playback rate with subtle glow pulse"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "scroll-reveal"
+  ],
   "composition": {
     "TimelineScrubber": "Root(d-section, stack) > [TimeRuler + TrackStack + ZoomControls]",
     "TrackStack": "Container > TrackRow*(d-surface) > [TrackHeader + TrackContent > (FrameThumbnails | Waveform) + KeyframeDot* + SceneMarker*]",

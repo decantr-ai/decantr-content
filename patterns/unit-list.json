@@ -83,6 +83,12 @@
     "micro": "Clickable cards or rows may lift or sharpen slightly on hover. Status badges may brighten subtly when filtered or selected.",
     "transitions": "View or filter changes should maintain orientation within the unit list so users do not lose track of current inventory context."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Unit list",

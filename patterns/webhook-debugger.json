@@ -79,6 +79,9 @@
       "pending-spinner": "rotate(0→360deg) 1s linear infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "WebhookDebugger": "Container(d-section, flex-col) > [EndpointFilter(d-control) + DeliveryLog(d-data)]",
     "DeliveryLog": "Table(d-data, sortable, scrollable) > DeliveryRow(d-row, expandable)[]",

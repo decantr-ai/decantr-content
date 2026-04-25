@@ -56,6 +56,11 @@
       }
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "focus-trap",
+    "click-select"
+  ],
   "layout_hints": {
     "direction": "horizontal",
     "note": "For 3-5 steps, use a HORIZONTAL layout with connecting lines or arrows between numbered circles. Center the entire row within the section. For 6+ steps, use a 2-column grid. NEVER use a left-aligned vertical list for ≤5 steps.",

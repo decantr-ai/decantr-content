@@ -114,6 +114,11 @@
       "stale-data-warning": "MarketInfo border flash amber when data >5s stale"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "focus-trap",
+    "keyboard-navigation"
+  ],
   "composition": {
     "TradeModal": "Modal(d-surface, backdrop-blur, max-w-480) > [Header + DirectionToggle + OrderTypeTab[] + QuantityInput + PriceInput? + MarketInfo + EstimatedTotal + FeeBreakdown + OrderPreview + ValidationWarnings? + ConfirmButton]",
     "DirectionToggle": "Toggle(d-control, data-direction) > [BuySegment + SellSegment]",

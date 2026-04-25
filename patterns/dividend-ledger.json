@@ -103,6 +103,11 @@
       "upcoming-pulse": "ScheduledBadge border glow 1.5s ease-in-out infinite on unpaid dividends"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "composition": {
     "DividendLedger": "Surface(d-surface, card) > [TableHeader + YearGroupHeader[]? + DividendRow[] + TotalFooter]",
     "DividendRow": "Row(d-row, data-interactive) > [DeclarationBadge + ExDateBadge + PayDateBadge + AmountCell + TotalCell + TaxTreatmentChip + ScheduledBadge?]",

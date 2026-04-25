@@ -114,6 +114,13 @@
       "hint-idle-reappear": "after 5s user idle, hints fade back in at 0.3 opacity"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "focus-trap",
+    "keyboard-navigation",
+    "glow-hover",
+    "live-simulation"
+  ],
   "composition": {
     "GestureControlOverlay": "Overlay(fixed|absolute, backdrop, z-50) > [ContentCard(d-surface, centered) + DismissButton]",
     "ContentCard": "Surface(rounded-2xl, shadow-2xl, max-w-sm, overflow-hidden) > [AnimationArea + LabelArea + FooterBar]",

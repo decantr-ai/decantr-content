@@ -74,6 +74,9 @@
       "current-gate-glow": "border-shadow pulse matching primary color 2s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "DealStageGates": "Root(d-section, flex-row) > [StageGate + ProgressConnector]*",
     "StageGate": "Card(d-surface, data-interactive, data-state) > [GateIcon + StageName + PercentageLabel + ApproverAvatars + ApprovalBadge?]",

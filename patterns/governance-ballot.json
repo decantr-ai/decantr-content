@@ -109,6 +109,11 @@
       "deadline-countdown": "pulse timer display when <24h remaining 1s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "scale-hover"
+  ],
   "composition": {
     "GovernanceBallot": "Surface(d-surface, form, max-w-640) > [QuorumProgress + ProposalHeader + VoteOption[] + WeightSlider[]? + RationaleBox + VotingPower + SubmitVote]",
     "ProposalHeader": "Section(d-annotation) > [ProposalNumber + ProposalTitle + ProposalSummary + ProposerIdentity + DeadlineCountdown + TypeChip]",

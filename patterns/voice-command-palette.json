@@ -112,6 +112,9 @@
       "processing-sweep": "width oscillation 20%→80%→20% 1.5s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "VoiceCommandPalette": "Dialog(d-surface, fixed|inline, z-50) > [VoiceInput + CommandSuggestions + ProcessingIndicator? + ResultPreview? + HotkeyHint]",
     "VoiceInput": "Section(flex-col, gap-3, p-6) > [WaveformPreview(48-bar, animated) + Transcript(text-lg, live-updating)]",

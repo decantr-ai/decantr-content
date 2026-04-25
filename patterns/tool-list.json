@@ -70,6 +70,12 @@
     "micro": "Rows may brighten slightly on hover and focused tool names may sharpen subtly for keyboard users.",
     "transitions": "Filtering or list updates should preserve the sense of a stable catalog rather than reflowing with flashy animation."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "list",
     "aria-label": "Tool list",

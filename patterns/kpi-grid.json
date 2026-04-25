@@ -69,6 +69,14 @@
     "micro": "Cards may softly elevate on hover, and trend indicators may brighten or pulse subtly when values improve.",
     "transitions": "Counter animations and KPI entry reveals should remain short and restrained so the grid still reads like instrumentation, not spectacle."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "KPI grid",

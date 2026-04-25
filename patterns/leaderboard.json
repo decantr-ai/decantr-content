@@ -122,6 +122,13 @@
     "micro": "Hovered rows or cards may sharpen slightly, and rank-change indicators may brighten enough to confirm movement.",
     "transitions": "Sorting or live rank updates should preserve orientation so users can follow position changes without the board feeling unstable."
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "list",
     "aria-label": "Leaderboard",

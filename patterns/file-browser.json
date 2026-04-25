@@ -127,6 +127,12 @@
       "drag-ghost": "File count badge follows cursor with 50ms position lerp for smooth trailing effect"
     }
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "keyboard-navigation"
+  ],
   "composition": {
     "FileBrowser": "Browser(d-section, flex-row, full-height) > [FolderTree?(d-surface) + MainArea(flex-col, flex-1) + PreviewPanel?(d-surface)]",
     "MainArea": "Area(flex-col) > [BreadcrumbBar + ActionBar + FileList(scrollable)]",

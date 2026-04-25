@@ -73,6 +73,11 @@
       "thumbnail-load": "skeleton shimmer 1.5s linear infinite until loaded"
     }
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount"
+  ],
   "composition": {
     "SceneStoryboard": "Root(d-section, grid) > SceneCard*(d-interactive)",
     "SceneCard": "Card(d-surface) > [SceneThumbnail + SceneNumberOverlay + DurationBadge + DragHandle + SceneNotes]",

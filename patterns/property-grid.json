@@ -111,6 +111,12 @@
     "micro": "View toggles and property cards may sharpen or lift subtly on hover. Filter chips or selectors should respond crisply without stealing attention from the portfolio items.",
     "transitions": "Changing between card, table, and map modes should preserve orientation and current filter state rather than redrawing the whole surface abruptly."
   },
+  "interactions": [
+    "lift-hover",
+    "click-select",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Property portfolio",

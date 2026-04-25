@@ -71,6 +71,11 @@
     "micro": "Logo opacity may lift slightly on hover or focus when the marks are interactive.",
     "transitions": "Marquee motion should be slow, linear, and unobtrusive. Static variants may fade in gently with the rest of the page."
   },
+  "interactions": [
+    "animate-on-mount",
+    "stagger-children",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Partner and customer logos",

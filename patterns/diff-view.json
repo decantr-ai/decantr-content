@@ -104,6 +104,11 @@
     "micro": "Active hunks or focused lines may brighten subtly, and copied or expanded hunks may acknowledge interaction with restrained feedback.",
     "transitions": "Expanding context, switching between split and unified views, and jumping between hunks should preserve orientation without flashy animation."
   },
+  "interactions": [
+    "hover-reveal",
+    "click-select",
+    "scroll-reveal"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Diff view",

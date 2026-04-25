@@ -112,6 +112,9 @@
     "micro": "Lock states, CTA focus, and overlay emphasis may sharpen subtly, but the gate should not feel manipulative or overly animated.",
     "transitions": "Unlock prompts and teaser fades should feel premium and clear, preserving trust while still communicating exclusivity."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Unlock gate",

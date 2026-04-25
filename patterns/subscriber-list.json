@@ -109,6 +109,12 @@
     "micro": "Selected rows, status badges, and bulk actions may brighten subtly to confirm state changes.",
     "transitions": "Filtering, sorting, and pagination should preserve orientation and list trust, especially for managers working through large subscriber sets."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Subscriber list",

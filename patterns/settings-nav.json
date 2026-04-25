@@ -94,6 +94,10 @@
       "page_switch": "Content panel cross-fades on nav item selection (0.15s ease)"
     }
   },
+  "interactions": [
+    "hover-reveal",
+    "keyboard-navigation"
+  ],
   "io": {
     "consumes": ["active-route", "nav-items", "badge-counts"],
     "produces": ["navigation-event"],

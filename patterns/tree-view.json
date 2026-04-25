@@ -108,6 +108,9 @@
     "micro": "Expand/collapse indicators and selected nodes may sharpen or brighten subtly to confirm navigation state.",
     "transitions": "Opening branches should feel quick and structural, preserving the user's sense of place within the hierarchy."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "tree",
     "aria-label": "Tree view",

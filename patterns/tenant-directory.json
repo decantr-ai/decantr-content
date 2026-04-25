@@ -95,6 +95,9 @@
     "micro": "Search focus, row hover, and selection states may sharpen slightly. Bulk-selection or filter states may brighten enough to confirm changes without overwhelming the list.",
     "transitions": "Filtering, sorting, and pagination should preserve list orientation and avoid dramatic layout jumps."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Tenant directory",

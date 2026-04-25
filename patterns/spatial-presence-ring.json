@@ -89,6 +89,10 @@
     "micro": "Status dots and active participant states may pulse subtly to show presence without turning the ring into a constant animation source.",
     "transitions": "Segment reflow and detail reveal should animate smoothly over 180-260ms while preserving the ring's overall stability."
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-reveal"
+  ],
   "composition": {
     "SpatialPresenceRing": "Container(d-section, centered) > [RingTrack + CenterContent]",
     "RingTrack": "Ring(d-data, circular) > PresenceSegment[]",

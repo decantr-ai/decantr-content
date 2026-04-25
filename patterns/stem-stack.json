@@ -66,6 +66,9 @@
       "peak-hold": "peak dot holds for 1.5s then decays"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "StemStack": "Root(d-section, flex-row) > [StemChannel* + MasterChannel(d-surface, emphasized)]",
     "StemChannel": "Strip(d-surface, vertical) > [PluginSlot* + PanKnob + MuteSoloButton + FaderWithMeters + StemLabel]",

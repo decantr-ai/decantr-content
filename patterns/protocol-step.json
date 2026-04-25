@@ -111,6 +111,9 @@
       "running-shimmer": "timer digits subtle brightness pulse 2s ease-in-out infinite while running"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "ProtocolStep": "Surface(d-surface, border-left-accent) > [StepHeader + ReagentList + EquipmentChip[] + SafetyBadge[] + TimerDisplay? + NotesBox? + CompletionCheck]",
     "StepHeader": "Row(d-row) > [StepNumber + StepAction]",

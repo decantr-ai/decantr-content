@@ -101,6 +101,9 @@
     "micro": "Prompt focus, completions, and active pane state may brighten subtly to confirm input readiness.",
     "transitions": "Command execution and output streaming should feel like continuous terminal flow rather than chunked UI animation."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "application",
     "aria-label": "Terminal emulator",

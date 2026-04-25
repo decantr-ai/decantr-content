@@ -121,6 +121,11 @@
     "micro": "Selection toolbar, slash menu, and collaborator cursor states may animate softly over 120-180ms.",
     "transitions": "Block insertions, slash-menu reveals, and comment-entry states should feel smooth and responsive without turning the editor into a motion-heavy surface."
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "application",
     "aria-label": "Document editor",

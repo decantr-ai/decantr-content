@@ -96,6 +96,14 @@
     "tablet": "Maximum 2-column grid. Focus-expand uses 60/40 split instead of 70/30. TransitionBorder drag handles enlarged for touch (48px hit target). ContextBadge displayed as a dismissible toast rather than inline badge."
   },
   "visual_brief": "CSS Grid container with named zones that animate between configurations. In the balanced preset, zones are evenly distributed in a 2x2 or 3-column grid. Focus-expand preset enlarges one zone to take two-thirds of the space while others shrink. Merged preset combines adjacent zones into a single large panel. Split preset divides a zone into two sub-panels. Zone boundaries show subtle transition borders that animate during layout changes. Each zone has a small label badge in the corner indicating its role (primary, gateway, auxiliary). The stacked-fallback preset arranges all zones in a single column.",
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount"
+  ],
   "composition": {
     "MorphingTopology": "Grid(d-section, animated-template) > [ZonePanel[] + TransitionBorder[] + LayoutControls?]",
     "ZonePanel": "Panel(d-surface, grid-area: dynamic, scrollable) > [ZoneLabel(d-annotation) + ContextBadge?(d-annotation) + Content]",

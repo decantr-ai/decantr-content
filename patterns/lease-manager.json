@@ -106,6 +106,9 @@
     "micro": "Action buttons and status affordances may sharpen slightly on hover. Amendment or document rows may reveal controls subtly when focused.",
     "transitions": "Entering edit mode or expanding amendment history should preserve the sense of one evolving lease record rather than swapping to a separate tool."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Lease manager",

@@ -110,6 +110,12 @@
       "unsigned-pulse": "SignatureBlock subtle amber tint pulse 2s ease-in-out infinite when entry unsigned"
     }
   },
+  "interactions": [
+    "click-select",
+    "animate-on-mount",
+    "keyboard-navigation",
+    "hover-reveal"
+  ],
   "composition": {
     "NotebookEntry": "Surface(d-surface, document, border-left-accent) > [EntryHeader + RichContent + TimestampChain + ReviewerNote[]? + SignatureBlock]",
     "EntryHeader": "Header(d-annotation) > [DateBadge + ExperimentIdChip + AuthorAvatar + EntryTitle]",

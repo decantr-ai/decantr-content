@@ -131,6 +131,11 @@
     "micro": "Tab changes, invite success, and copy-link feedback may sharpen or fade subtly to confirm access actions.",
     "transitions": "The modal should open and switch tabs smoothly enough to preserve context without feeling like a separate page navigation."
   },
+  "interactions": [
+    "animate-on-mount",
+    "focus-trap",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "dialog",
     "aria-label": "Share modal",

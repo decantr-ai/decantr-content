@@ -110,6 +110,9 @@
     "micro": "Role pills and row actions may animate subtly on hover and focus, but the row should still read like calm administrative data.",
     "transitions": "Invite, resend, and member-update states should fade or expand gently over 150-220ms without disrupting the list rhythm."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "layout_hints": {
     "row_layout": "Avatar (32px circle) + identity block + role/date/actions trail. On narrow widths, let the trail wrap below the identity instead of squeezing the email or control cluster.",
     "invite_form": "Invite form uses a responsive row: email input + role dropdown + Invite button. Collapse to a stacked form on small screens.",

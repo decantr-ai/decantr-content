@@ -83,6 +83,9 @@
       "critical-pulse": "box-shadow glow scale(1→1.05→1) + opacity(0.6→1→0.6) 2s ease-in-out infinite when usage >=90%"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "UsageMeter": "Container(d-surface, flex-col, gap-3) > [PeriodSelector(d-control, segmented) + UsageBar(d-data, threshold-color) > [FilledBar(d-data, animated-width, color: threshold) + ThresholdMarker(d-annotation, caret-below)* + ValueLabel(d-data, mono)] + UpgradePrompt?(d-interactive, conditional: usage>80%)]",
     "UsageBar": "Track(d-data, rounded-full, h-2) > [Fill(color: threshold, width: percentage) + ThresholdMarker(d-annotation, position: absolute)*]",

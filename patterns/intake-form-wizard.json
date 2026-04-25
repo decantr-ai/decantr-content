@@ -83,6 +83,14 @@
       "required-asterisk-pulse": "opacity 0.6→1→0.6 2s ease-in-out infinite on validation error"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation",
+    "click-select",
+    "focus-trap",
+    "stagger-children"
+  ],
   "composition": {
     "IntakeWizard": "Container(d-section, grid: sidebar+main) > [ProgressSidebar(d-surface, sticky, flex-col) + FormStep(d-surface, card, centered, max-w-600) > QuestionGroup(d-data, flex-col, gap-6)* > [Question(d-data) > [Label(required?) + HelpText? + Input(d-interactive) + ValidationMsg?]] + NavigationRow > [BackButton?(d-interactive, secondary) + ContinueButton(d-interactive, primary)]] + ReviewPanel?(d-surface, conditional: final-step) + SaveIndicator(d-annotation, position: absolute, top-right)",
     "ProgressSidebar": "Nav(d-surface, sticky, flex-col, gap-2) > StepItem(d-annotation, status: completed|current|upcoming) > [StatusCircle(color: status) + SectionLabel(weight: status)]",

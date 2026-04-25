@@ -72,6 +72,10 @@
     "micro": "Link hover underline slides in from left with 200ms ease. Dropdown chevron rotates 180deg on open. Active link indicator transitions position with 250ms ease.",
     "transitions": "Mobile menu slides in from right with 300ms ease-out transform. Backdrop fades in over 200ms. Dropdown menus fade in and translate down 4px over 200ms. Sticky header shadow transitions in over 150ms on scroll."
   },
+  "interactions": [
+    "hover-reveal",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "navigation",
     "aria-label": "Main navigation",

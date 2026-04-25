@@ -80,6 +80,10 @@
     "micro": "Hovered or active key slots may brighten slightly to acknowledge interaction without looking like conventional buttons.",
     "transitions": "The bar should feel stable and ever-present; avoid animated reflow unless shortcut sets genuinely change."
   },
+  "interactions": [
+    "hover-reveal",
+    "keyboard-navigation"
+  ],
   "accessibility": {
     "role": "toolbar",
     "aria-label": "Hotkey bar",

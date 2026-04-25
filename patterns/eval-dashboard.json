@@ -112,6 +112,13 @@
       "live-sparkline": "sparkline extends with new data points appended smoothly, 500ms ease-out per new point"
     }
   },
+  "interactions": [
+    "drag-reorder",
+    "click-select",
+    "animate-on-mount",
+    "real-time-updates",
+    "hover-tooltip"
+  ],
   "composition": {
     "EvalDashboard": "Section(d-section, flex-col, gap-6) > [MetricCard*(d-surface) > [Label(d-annotation, uppercase) + Value(font-bold, text-2xl) + Delta(color: improvement) + Sparkline(d-data, mini)] + TestCaseTable(d-data) > [HeaderRow(sticky) + Row*(d-row) > [Input(truncatable) + Expected(truncatable) + Actual(truncatable) + ScoreBar(d-data, color: score) + DiffToggle(d-interactive)]]",
     "MetricCard": "Card(d-surface, rounded-xl, p-5, shadow-sm) > [Label(d-annotation) + Value(d-data, mono-data, text-2xl) + Delta(text-sm, color: direction) + Sparkline(svg, 60x24)]",

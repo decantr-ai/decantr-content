@@ -126,6 +126,14 @@
       "dot-grid-breathe": "subtle opacity oscillation 0.1→0.15 on dot grid, 4s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "drag-nodes",
+    "pan-background",
+    "zoom-scroll",
+    "click-select",
+    "hover-tooltip",
+    "animate-on-mount"
+  ],
   "composition": {
     "Canvas": "Section(d-section, infinite-pan, dot-grid-bg) > [Toolbar(d-surface, sticky-top) + NodePalette?(d-surface, left-sidebar)] + Node*(d-interactive) > [NodeHeader(color-stripe: type) + NodeBody? + NodePort*(left|right)] + Edge*(svg-bezier, animated-dash) + Minimap(d-surface, bottom-right)",
     "Node": "Card(d-interactive, draggable, rounded-lg, shadow, border-top: type-color) > [Header(icon + label) + Body?(name + description) + InputPorts(left-edge) + OutputPorts(right-edge)]",

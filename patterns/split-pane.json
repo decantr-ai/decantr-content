@@ -95,6 +95,9 @@
     "micro": "Resize handles may brighten or thicken slightly on hover and focus so the drag affordance is obvious.",
     "transitions": "Pane resizing should feel direct and continuous. Collapsing or resetting panes should animate just enough to preserve orientation without adding theatrical motion."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "group",
     "aria-label": "Split pane layout",

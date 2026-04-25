@@ -96,6 +96,11 @@
       "flow-pulse": "subtle dash-offset drift 8s linear infinite on active flows"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "hover-tooltip",
+    "real-time-updates"
+  ],
   "composition": {
     "EmissionsSankey": "Section(d-section) > SankeyCanvas > [SourceNode[] + FlowPath[](animated) + CategoryNode[] + TargetMarker] + LegendBox",
     "SankeyCanvas": "SVG(viewBox-responsive) > [Background(grid) + NodeLayer + FlowLayer + OverlayLayer]",

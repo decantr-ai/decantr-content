@@ -78,6 +78,9 @@
     "micro": "Header actions and tab states may sharpen slightly on hover and focus. Vacancy or maintenance status indicators may draw gentle emphasis when needed.",
     "transitions": "Switching between tabs should preserve the sense of remaining on the same unit, not feeling like a full page jump."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Unit detail",

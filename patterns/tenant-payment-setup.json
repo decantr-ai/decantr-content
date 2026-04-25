@@ -75,6 +75,9 @@
     "micro": "Autopay toggles and payment-method selection may confirm state changes with restrained visual feedback.",
     "transitions": "Adding or switching methods should feel trustworthy and deliberate, especially around sensitive payment information."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Tenant payment setup",

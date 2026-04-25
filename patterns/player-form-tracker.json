@@ -96,6 +96,11 @@
       "hot-streak": "streak badge subtle glow pulse when streak >= 3 wins 2s ease-in-out infinite"
     }
   },
+  "interactions": [
+    "animate-on-mount",
+    "inline-edit",
+    "keyboard-navigation"
+  ],
   "composition": {
     "PlayerFormTracker": "Surface(d-surface) > PlayerCard[](d-interactive) > [Header > [PlayerAvatar + [PlayerHandle + RoleBadge]] + FormSparkline + StatRow[] > [StatLabel + StatValue(mono) + TrendArrow + MetricBar] + Footer > [MoodIndicator + StreakBadge]]",
     "FormSparkline": "Chart(horizontal, area-fill) > [TrendLine + AreaFill(trend-colored) + DataPoints(hover-only)]",

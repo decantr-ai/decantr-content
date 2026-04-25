@@ -99,6 +99,9 @@
       "playhead-pulse": "timeline playhead subtle glow pulse 2s ease-in-out infinite while playing"
     }
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "composition": {
     "VodAnnotator": "Section(d-section) > [VideoPlayer(16:9) > [VideoElement + DrawingOverlay + PlaybackControls] + AnnotationTimeline > MarkerFlag[] + TagChipRail > TagChip[] + AnnotationList > AnnotationEntry[] > [Timestamp + TagBadge + AuthorAvatar + NoteText + ReplayButton]]",
     "VideoPlayer": "Player(aspect-16-9) > [Video + Overlays + Controls(scrub, play, speed, vol, fs)]",

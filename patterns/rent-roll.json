@@ -89,6 +89,9 @@
     "micro": "Summary metrics and status badges may sharpen subtly on hover or focus. Export and month controls should respond crisply.",
     "transitions": "Month or property changes should update the roll smoothly enough to preserve confidence in the ledger and totals."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Rent roll",

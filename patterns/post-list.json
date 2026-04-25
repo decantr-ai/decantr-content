@@ -127,6 +127,12 @@
     "micro": "Headline links and featured badges may respond subtly on hover, and card variants may lift slightly when interactive.",
     "transitions": "List filtering, pagination, or feed refresh should cross-fade or stagger items gently without disrupting scan flow."
   },
+  "interactions": [
+    "click-select",
+    "hover-reveal",
+    "animate-on-mount",
+    "stagger-children"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Post list",

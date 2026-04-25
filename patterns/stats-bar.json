@@ -108,6 +108,9 @@
     "micro": "Trend arrows or highlighted metrics may sharpen subtly on hover or focus.",
     "transitions": "Value or trend updates should remain crisp and low-noise so the stats bar continues to feel stable."
   },
+  "interactions": [
+    "animate-on-mount"
+  ],
   "accessibility": {
     "role": "region",
     "aria-label": "Statistics bar",
