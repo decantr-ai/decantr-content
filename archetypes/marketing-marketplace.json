@@ -108,5 +108,12 @@
       "dark",
       "light"
     ]
-  }
+  },
+  "directives": [
+    "Hero MUST be visually rich, NOT just headline + stats. Compose: eyebrow + headline + subtitle + dual CTA + supporting media (one of: 2-3 listing card previews to the right of the copy, OR a stylized map snippet, OR a 3-card trust-strip showing 'verified hosts' / 'instant book' / 'review-backed'). A marketplace landing page with no listing imagery feels empty.",
+    "Featured listings section: 3-card carousel or grid \u2014 each card uses the same anatomy as the browse-page cards (image + title + location + rating + price). The marketing context is showcase: prefer cards with high ratings + good photos + variety of categories.",
+    "Social proof: dedicated section with 3-4 user testimonial cards + (optionally) trust stats ('4.9 avg', '14k spots', '38 cities'). Avoid presenting trust stats as the ONLY supporting content \u2014 they should accent testimonials, not replace them.",
+    "Final CTA banner: re-iterates the dual buyer/seller positioning ('Find your next stay' + 'Become a host'). Both CTAs are equal weight on the page.",
+    "About page: hero with mission statement + visual (team or map) + 3-4 value cards + leadership grid (avatar + name + role) + final CTA. Do NOT ship an about page with just a wall of text \u2014 marketplace trust depends on a face."
+  ]
 }
