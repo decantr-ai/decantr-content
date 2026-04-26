@@ -96,18 +96,9 @@
     "focus_management": "On overlay open, focus moves to MessageButton (the recommended primary action). Focus is trapped within the overlay (Tab cycles only between the two buttons). On overlay close, focus returns to the previously-focused element (typically the swipe deck card or action button)."
   },
   "responsive": {
-    "mobile": {
-      "layout": "stack",
-      "notes": "Avatars 80×80 instead of 96. Headline text-3xl. Action pair stacks vertically (flex-col, gap-3) on viewports under 360px wide."
-    },
-    "tablet": {
-      "layout": "stack",
-      "notes": "Default sizes. All animations active."
-    },
-    "desktop": {
-      "layout": "stack",
-      "notes": "Default sizes. Confetti uses higher particle count (60). Burst gradient extends further from center."
-    }
+    "mobile": "Stack layout. Avatars 80×80 instead of 96. Headline text-3xl. Action pair stacks vertically (flex-col, gap-3) on viewports under 360px wide.",
+    "tablet": "Stack layout. Default sizes (96×96 avatars, text-4xl headline). All animations active.",
+    "desktop": "Stack layout. Default sizes. Confetti uses higher particle count (60). Burst gradient extends further from center."
   },
   "motion": {
     "micro": {

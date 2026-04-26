@@ -94,18 +94,9 @@
     "focus_management": "When the card becomes the active (front) card in the deck stack, focus moves to it automatically. The card has tabindex=0; cards behind have tabindex=-1. Screen reader users can navigate cards via Tab and act via Enter."
   },
   "responsive": {
-    "mobile": {
-      "layout": "stack",
-      "notes": "Card width 90vw (max 320px). Aspect ratio 3/4. Photo, gradient, and text all scale proportionally. Multi-photo thumbnails reduce to 28×28 on narrow screens."
-    },
-    "tablet": {
-      "layout": "stack",
-      "notes": "Card width fixed at 320px. All elements at default sizes."
-    },
-    "desktop": {
-      "layout": "stack",
-      "notes": "Card width 320px. Hover state on the card adds a subtle parallax tilt (rotateY ±2deg following mouse position) — handled by parent spatial-card-stack ambient motion."
-    }
+    "mobile": "Card width 90vw (max 320px). Aspect ratio 3/4. Photo, gradient, and text all scale proportionally. Multi-photo thumbnails reduce to 28×28 on narrow screens. Stack layout.",
+    "tablet": "Card width fixed at 320px. All elements at default sizes. Stack layout.",
+    "desktop": "Card width 320px. Hover state on the card adds a subtle parallax tilt (rotateY ±2deg following mouse position) — handled by parent spatial-card-stack ambient motion. Stack layout."
   },
   "motion": {
     "micro": {

@@ -84,18 +84,9 @@
     "focus_management": "Roving tabindex — only the active tab is in the tab order (tabindex=0); inactive tabs are tabindex=-1 and become reachable via arrow keys. On tab activation via click/Enter, focus moves to the new active tab and the page navigates."
   },
   "responsive": {
-    "mobile": {
-      "layout": "flex-row",
-      "notes": "Full viewport width. Sticky bottom with safe-area inset. Tap targets 56×56 minimum."
-    },
-    "tablet": {
-      "layout": "flex-row",
-      "notes": "Same as mobile — the mobile-tab-bar shell caps at 480px regardless of viewport."
-    },
-    "desktop": {
-      "layout": "flex-row",
-      "notes": "Stays sticky at the bottom of the centered 480px column. Same icon and label sizing — desktop visitors see a mobile-app-like floating column."
-    }
+    "mobile": "Full viewport width. Sticky bottom with safe-area-inset-bottom padding. Tap targets 56×56 minimum. Flex-row layout.",
+    "tablet": "Same as mobile — the mobile-tab-bar shell caps at 480px regardless of viewport. Flex-row layout.",
+    "desktop": "Stays sticky at the bottom of the centered 480px column. Same icon and label sizing — desktop visitors see a mobile-app-like floating column. Flex-row layout."
   },
   "motion": {
     "micro": {

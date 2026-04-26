@@ -85,24 +85,9 @@
     "focus_management": "Each tile is a focusable link. The new-match indicator is announced via aria-label suffix when data-new=true. Focus ring uses the swipecircle-pill decorator's primary color outline."
   },
   "responsive": {
-    "mobile": {
-      "layout": "grid",
-      "columns": 3,
-      "gap": "8px",
-      "notes": "3-column grid on narrow viewports. Avatar 64×64. Reduced padding (12px)."
-    },
-    "tablet": {
-      "layout": "grid",
-      "columns": 4,
-      "gap": "12px",
-      "notes": "4-column grid. Default avatar size 80×80."
-    },
-    "desktop": {
-      "layout": "grid",
-      "columns": 5,
-      "gap": "16px",
-      "notes": "5-column grid in the 480px max-width app column. Hover state active (lift + glow)."
-    }
+    "mobile": "3-column grid on narrow viewports (gap 8px). Avatar 64×64. Reduced padding (12px).",
+    "tablet": "4-column grid (gap 12px). Default avatar size 80×80.",
+    "desktop": "5-column grid in the 480px max-width app column (gap 16px). Hover state active (lift + glow)."
   },
   "motion": {
     "micro": {

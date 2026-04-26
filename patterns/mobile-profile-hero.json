@@ -104,18 +104,9 @@
     "focus_management": "Initial focus on page load goes to the InfoStack heading (NameAge). When the more-menu opens, focus moves into the menu items. When the menu closes, focus returns to MoreMenuButton."
   },
   "responsive": {
-    "mobile": {
-      "layout": "stack",
-      "notes": "Cover 45vh capped 360px. Avatar 96×96. ActionRow buttons stack as flex-row with proportional widths. Single-column layout (this is the mobile-default)."
-    },
-    "tablet": {
-      "layout": "stack",
-      "notes": "Same as mobile — the mobile-tab-bar shell caps at 480px regardless of viewport. Hero proportions preserved."
-    },
-    "desktop": {
-      "layout": "stack",
-      "notes": "Same as mobile/tablet inside the 480px column. Hover states active on action buttons (lift + shadow)."
-    }
+    "mobile": "Stack layout. Cover 45vh capped 360px. Avatar 96×96. ActionRow buttons stack as flex-row with proportional widths. Single-column layout (this is the mobile-default).",
+    "tablet": "Stack layout. Same as mobile — the mobile-tab-bar shell caps at 480px regardless of viewport. Hero proportions preserved.",
+    "desktop": "Stack layout. Same as mobile/tablet inside the 480px column. Hover states active on action buttons (lift + shadow)."
   },
   "motion": {
     "micro": {

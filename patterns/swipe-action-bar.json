@@ -90,21 +90,9 @@
     "focus_management": "Each button is independently tabbable (tabindex=0). Buttons announce action verb + accessible-name (e.g., 'Pass on Maya'). Hotkey listeners scoped to the page (or active swipe deck) — should respect input_guard so they don't fire while user is typing in a chat input or form field elsewhere on the page."
   },
   "responsive": {
-    "mobile": {
-      "layout": "flex-row",
-      "gap": "20px",
-      "notes": "Slightly tighter gap on narrow viewports to keep the bar in thumb reach. All button sizes preserved."
-    },
-    "tablet": {
-      "layout": "flex-row",
-      "gap": "24px",
-      "notes": "Default gaps. Comfortable spacing."
-    },
-    "desktop": {
-      "layout": "flex-row",
-      "gap": "24px",
-      "notes": "Hover states active (lift + shadow). Hotkey indicators may render as tiny labels below the buttons (text-xs, muted) for first-time users."
-    }
+    "mobile": "Flex-row with gap 20px — slightly tighter on narrow viewports to keep the bar in thumb reach. All button sizes preserved (60px primary, 48px secondary).",
+    "tablet": "Flex-row with gap 24px. Default gaps. Comfortable spacing.",
+    "desktop": "Flex-row with gap 24px. Hover states active (lift + shadow). Hotkey indicators may render as tiny labels below the buttons (text-xs, muted) for first-time users."
   },
   "motion": {
     "micro": {

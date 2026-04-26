@@ -86,21 +86,9 @@
     "focus_management": "Each chip is independently tabbable (tabindex=0). The selection state is announced via aria-pressed='true|false' on each chip button. The count indicator uses aria-live='polite' so screen readers announce changes after each toggle."
   },
   "responsive": {
-    "mobile": {
-      "layout": "flex-row",
-      "gap": "8px",
-      "notes": "Wrapping grid with chips sized to content. On narrow screens, chips wrap naturally to multiple rows. Tap target min 44×44 (achieved via padding)."
-    },
-    "tablet": {
-      "layout": "flex-row",
-      "gap": "10px",
-      "notes": "Same as mobile with slightly more breathing room."
-    },
-    "desktop": {
-      "layout": "flex-row",
-      "gap": "12px",
-      "notes": "More chips per row visible. Hover states active."
-    }
+    "mobile": "Wrapping flex-row grid with chips sized to content (gap 8px). On narrow screens, chips wrap naturally to multiple rows. Tap target min 44×44 (achieved via padding).",
+    "tablet": "Same as mobile with slightly more breathing room (gap 10px).",
+    "desktop": "More chips per row visible (gap 12px). Hover states active."
   },
   "motion": {
     "micro": {
