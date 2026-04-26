@@ -157,5 +157,13 @@
       "dark",
       "light"
     ]
-  }
+  },
+  "directives": [
+    "Seller dashboard MUST be data-rich but NOT intimidating. Lead with 4-card KPI grid (active listings, upcoming bookings, occupancy %, this-month revenue), then secondary surfaces (recent activity feed, alerts). Avoid wall-of-numbers density \u2014 the seller is often a non-technical operator.",
+    "Listings table on /seller/listings: each row shows thumbnail + title + city + status (active/draft/paused) + nights-booked-this-month + Edit link. Make 'Add new listing' the primary action button at the top right of the table.",
+    "Listing edit form MUST be a SECTIONED form (form-sections pattern), grouped: Basics (title, description, category) \u2192 Location \u2192 Details (sleeps, bedrooms, amenities) \u2192 Pricing \u2192 Photos \u2192 Availability rules. Save state must be visible: dirty changes show 'Unsaved' chip; on save, briefly show 'Saved 12s ago' annotation.",
+    "Analytics: cap at 4 KPI tiles + 4 charts. Each chart must have title + value + delta-from-prior-period + sparkline preview before drilling. Do NOT render a 12-tile metric wall \u2014 that's enterprise-dashboard, not seller-tool.",
+    "Reviews on /seller/reviews: every review row shows star rating + reviewer name + date + first 2 lines + 'Reply' action. Replied reviews get a small annotation: 'You replied 3d ago'. Pending replies are visually pulled forward.",
+    "Sidebar nav must include: Overview, Listings, Analytics, Reviews, Messages \u2014 and a sign-out at bottom. The nav is the seller's surface; don't hide critical destinations behind a settings cog."
+  ]
 }

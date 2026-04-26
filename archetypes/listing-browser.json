@@ -70,13 +70,13 @@
           "as": "header"
         },
         {
-          "pattern": "comparison-table",
-          "preset": "highlight",
+          "pattern": "card-grid",
+          "preset": "feature",
           "as": "details"
         },
         {
-          "pattern": "calendar-view",
-          "preset": "week",
+          "pattern": "booking-calendar",
+          "preset": "week-view",
           "as": "availability"
         }
       ],
@@ -110,7 +110,7 @@
   ],
   "page_briefs": {
     "browse": "Full-width browse view with a sticky search and filter bar at the top. Below, a responsive card grid displays listing thumbnails, prices, and ratings. A toggle switches between grid and map view, where pins represent listing locations with hover previews.",
-    "listing-detail": "Immersive listing detail page with a large image gallery header, title, price, and host info. Scrolling reveals a comparison-style feature table with highlighted attributes, followed by a weekly calendar showing availability slots and a booking CTA.",
+    "listing-detail": "Immersive listing detail page with a large image gallery header, title, location, host info, and rating. Below the header, a responsive feature/amenity card grid surfaces the listing's anchor attributes (sleeps, bedrooms, amenities, accessibility tags). Scrolling reveals a date-range availability calendar showing nightly availability — NOT 15-minute time slots — plus a sticky booking widget with a 'Reserve' primary CTA, dates, guests, and total price breakdown.",
     "search": "Focused search results page with the search filter bar pre-populated from the query. Results render as a product card grid with sort controls and pagination. Faceted filters on the left narrow by category, price range, and rating."
   },
   "features": [
@@ -128,11 +128,20 @@
       "card-grid": "^1.0.0",
       "map-view": "^1.0.0",
       "detail-header": "^1.0.0",
-      "comparison-table": "^1.0.0",
-      "calendar-view": "^1.0.0"
+      "booking-calendar": "^1.0.0"
     },
     "styles": {}
   },
+  "directives": [
+    "Listing cards on /browse and /search MUST show all five anchor fields: image area + title + location + rating (stars + count) + price (per night/day/hour as the listing implies). Cards with only title+host+price look unfinished — five fields is the marketplace floor.",
+    "Listing card image area: aim for ~16:9 aspect ratio capped at 200px tall on the grid view. The image should be a defined slot, NOT a giant block that dominates the card. Title + meta below should account for ~40% of card height so the card reads as a card, not a colored tile.",
+    "When a listing has no real image, render a SUBTLE placeholder: a low-saturation themed gradient with a small location pin or category icon centered (or in a corner). Do NOT ship raw saturated linear-gradient blocks as 'temporary images' — they read as broken.",
+    "Listing-detail availability MUST be date-range / nightly availability oriented (check-in/check-out, available nights highlighted, booked nights muted). Do NOT use workshop/session-style 15-minute time slots. If a listing IS session-bookable (a workshop, a class, a gear-rental hour) the page should declare that variant explicitly via a directive override.",
+    "Listing-detail booking widget MUST be sticky on viewport scroll within the listing-detail body. Reserve CTA, date inputs, guest count, and computed total price stay in view as the user reads the listing.",
+    "Listing-detail comparison-table is OPTIONAL. Only render when the registry can supply 2-3 ACTUAL comparable spaces from the same category and city. Do NOT inject a comparison-table on every detail page by default — it adds visual noise and surfaces 'recommended' badges over column headers awkwardly when the layout doesn't have room.",
+    "Browse / search shells: image-gallery feature is declared on the archetype. Treat as 'image-forward' UX — at minimum honor the image-area-on-card directive above; if a real image-gallery pattern is composed, it MUST live above-the-fold, not in a sidebar.",
+    "Empty state copy on browse / search: warm and inviting, NOT 'No results.' Match blueprint voice (e.g., 'Nothing in that range yet — try widening the dates or zooming the map.')."
+  ],
   "suggested_theme": {
     "ids": [
       "carbon"

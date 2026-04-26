@@ -94,5 +94,13 @@
       "dark",
       "light"
     ]
-  }
+  },
+  "directives": [
+    "Layout: left rail (20rem on desktop, full-width on mobile) holds the conversation list; right pane holds the active thread. Below md breakpoint, the rail becomes a back-button-on-thread pattern \u2014 list view OR thread view, never both side-by-side.",
+    "Conversation list rows: host/buyer avatar (32px) + name + listing title (small, muted) + last message preview (1 line, truncated) + timestamp (relative: '2m', '3h', 'Mon'). Unread conversations get a bold name + a small accent dot. Selected conversation has a left accent border + filled background.",
+    "Active thread: messages anchor to bottom, scroll up to history. Buyer messages right-aligned, host messages left-aligned, with avatars on the side. Each message bubble shows time on hover (NOT permanently \u2014 keeps the thread clean).",
+    "Listing context bar at the top of the thread: thumbnail + title + dates (if booking is in progress) + 'View listing' link + 'View booking' link. This anchors what the conversation is ABOUT \u2014 without it, threads feel disconnected from the marketplace.",
+    "Composer: anchored at the bottom \u2014 text input + send button + (optional) attach-image button. Pressing Enter sends; Shift+Enter inserts newline. Empty composer disables the send button rather than allowing empty messages.",
+    "Empty state for the inbox: 'No conversations yet \u2014 message a host from a listing to start one.' Not 'No messages.'"
+  ]
 }
