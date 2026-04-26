@@ -216,12 +216,14 @@
   ],
   "design_constraints": {
     "mode": "light",
-    "max_width_app": "480px",
-    "photo_aspect": "3/4",
-    "tab_bar_height": "64px",
-    "header_height": "52px",
-    "swipe_threshold": "30%",
-    "card_size": "320x420"
+    "effects": {
+      "max_width_app": "480px",
+      "photo_aspect": "3/4",
+      "tab_bar_height": "64px",
+      "header_height": "52px",
+      "swipe_threshold": "30%",
+      "card_size": "320x420"
+    }
   },
   "responsive_strategy": {
     "default": "mobile-first",
