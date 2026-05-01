@@ -10,6 +10,16 @@ on:
         required: false
         default: false
         type: boolean
+      prune_missing:
+        description: "Include stale official content pruning in the sync plan"
+        required: false
+        default: false
+        type: boolean
+      confirm_prune:
+        description: "Confirm non-dry-run pruning after reviewing a dry-run report"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   validate:
@@ -39,9 +49,13 @@ jobs:
       - run: npm ci
       - name: Sync content to registry
         env:
+          DECANTR_CONTENT_SYNC_TOKEN: ${{ secrets.DECANTR_CONTENT_SYNC_TOKEN }}
+          DECANTR_CONTENT_PRUNE_TOKEN: ${{ secrets.DECANTR_CONTENT_PRUNE_TOKEN }}
           DECANTR_ADMIN_KEY: ${{ secrets.DECANTR_ADMIN_KEY }}
           REGISTRY_URL: ${{ vars.REGISTRY_URL || 'https://api.decantr.ai/v1' }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+          PRUNE_MISSING: ${{ github.event_name == 'workflow_dispatch' && inputs.prune_missing || 'false' }}
+          CONFIRM_PRUNE: ${{ github.event_name == 'workflow_dispatch' && inputs.confirm_prune || 'false' }}
           SYNC_REPORT_PATH: ${{ github.workspace }}/sync-report.json
         run: node scripts/sync-to-registry.js
 
