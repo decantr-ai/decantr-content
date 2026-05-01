@@ -1,11 +1,17 @@
 import { readdirSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { basename, join } from 'path';
 import Ajv2020 from 'ajv/dist/2020.js';
 import {
   CONTENT_DIRECTORIES,
   DIRECTORY_TO_SCHEMA_URL,
   SCHEMA_FILES,
+  isIgnoredLocalContentFile,
 } from './scripts/content-contract.js';
+import {
+  CERTIFICATION_TIERS,
+  getContentCertification,
+  lintDangerousScaffoldingPolicy,
+} from './scripts/content-certification.js';
 
 let errors = 0;
 let warnings = 0;
@@ -84,7 +90,7 @@ function isLayoutItem(value) {
 for (const type of CONTENT_DIRECTORIES) {
   let files;
   try {
-    files = readdirSync(type).filter(f => f.endsWith('.json'));
+    files = readdirSync(type).filter(f => f.endsWith('.json') && !isIgnoredLocalContentFile(f));
   } catch {
     console.log(`  Warning: directory ${type}/ not found`);
     continue;
@@ -110,6 +116,22 @@ for (const type of CONTENT_DIRECTORIES) {
       // --- ERROR checks (fail the build) ---
 
       if (!content.id && !content.slug) fail(`${type}/${file}: missing id or slug`);
+      const expectedId = basename(file, '.json');
+      if (content.id !== expectedId) {
+        fail(`${type}/${file}: id must match filename (${expectedId})`);
+      }
+
+      const certification = getContentCertification(content);
+      if (!CERTIFICATION_TIERS.includes(certification.tier)) {
+        fail(`${type}/${file}: certification.tier must be one of: ${CERTIFICATION_TIERS.join(', ')}`);
+      }
+      const policyFindings = lintDangerousScaffoldingPolicy(content);
+      if (policyFindings.length > 0 && certification.tier === 'enterprise') {
+        fail(`${type}/${file}: enterprise content contains unsafe scaffolding policy: ${policyFindings.join(', ')}`);
+      } else if (policyFindings.length > 0) {
+        warn(`${type}/${file}: non-enterprise policy finding(s): ${policyFindings.join(', ')}`);
+      }
+
       if (type === 'archetypes') {
         if (!content.role || !validRoles.includes(content.role)) {
           fail(`${type}/${file}: missing or invalid role (must be one of: ${validRoles.join(', ')})`);

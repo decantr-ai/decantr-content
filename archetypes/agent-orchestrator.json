@@ -170,5 +170,9 @@
       "nav-header": ">=1.0.0"
     },
     "styles": {}
+  },
+  "certification": {
+    "tier": "demo",
+    "rationale": "Contains dev auth-bypass guidance and must not ship in enterprise artifact sets until rewritten with production-safe auth guidance."
   }
 }

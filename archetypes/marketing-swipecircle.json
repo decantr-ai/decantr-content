@@ -165,11 +165,21 @@
     "styles": {}
   },
   "suggested_theme": {
-    "ids": ["swipecircle"],
-    "modes": ["light"],
-    "shapes": ["pill"]
+    "ids": [
+      "swipecircle"
+    ],
+    "modes": [
+      "light"
+    ],
+    "shapes": [
+      "pill"
+    ]
   },
   "personality": [
     "Photo-first marketing splash that feels more like a friendly welcome than a sales pitch. Pill-shaped CTAs, coral primaries with violet hover, warm off-white surfaces, soft peach accents, and real-looking swipe-card/photo mockups. Tagline 'Rate. Connect. Vibe.' is large but never clipped or overlapped. Testimonials read like text messages from friends, not LinkedIn endorsements. Buttons feel tactile with bouncy spring transitions. Hinge-meets-Dribbble vibe — never thirsty, never enterprise."
-  ]
+  ],
+  "certification": {
+    "tier": "demo",
+    "rationale": "Contains demo-mode auth guidance backed by localStorage; excluded from enterprise artifact sets."
+  }
 }

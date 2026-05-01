@@ -449,11 +449,21 @@
     "styles": {}
   },
   "suggested_theme": {
-    "ids": ["swipecircle"],
-    "modes": ["light"],
-    "shapes": ["pill"]
+    "ids": [
+      "swipecircle"
+    ],
+    "modes": [
+      "light"
+    ],
+    "shapes": [
+      "pill"
+    ]
   },
   "personality": [
     "Mobile-first social discovery primary archetype. Photo-centric swipe deck dominates the visual hierarchy with bouncy spring physics and tactile gestural feedback. Coral primaries pop against warm peach backgrounds; violet match accents punctuate moments of joy. Bottom-tab-bar persists for always-available navigation. Match moments feel celebratory with the coral-to-violet burst overlay; chats feel intimate with rounded swipecircle-bubble messages. Empty states encourage rather than scold. Designed to feel native on iPhone but elegantly scaled in the 480px-wide centered desktop column."
-  ]
+  ],
+  "certification": {
+    "tier": "demo",
+    "rationale": "Contains demo-mode localStorage session guidance; excluded from enterprise artifact sets."
+  }
 }

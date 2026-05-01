@@ -191,5 +191,9 @@
       "dark",
       "light"
     ]
+  },
+  "certification": {
+    "tier": "demo",
+    "rationale": "Contains dev auth-bypass guidance and accept-any-credentials instructions; excluded from enterprise artifact sets until rewritten."
   }
 }

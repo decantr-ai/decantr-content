@@ -30,3 +30,9 @@ export const SCHEMA_FILES = {
   archetypes: 'archetype.v2.json',
   shells: 'shell.v1.json',
 };
+
+export const IGNORED_LOCAL_CONTENT_PREFIXES = ['recipefork'];
+
+export function isIgnoredLocalContentFile(fileName) {
+  return IGNORED_LOCAL_CONTENT_PREFIXES.some((prefix) => fileName.startsWith(prefix));
+}

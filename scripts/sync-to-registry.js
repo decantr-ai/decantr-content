@@ -11,27 +11,58 @@
  *
  * Environment variables:
  *   REGISTRY_URL     - API base URL (default: https://api.decantr.ai/v1)
- *   DECANTR_ADMIN_KEY - Admin key for the sync endpoint (required)
+ *   DECANTR_CONTENT_SYNC_TOKEN - Scoped service token for the sync endpoint (preferred)
+ *   DECANTR_CONTENT_PRUNE_TOKEN - Scoped service token for the prune endpoint (preferred)
+ *   DECANTR_ADMIN_KEY - Legacy admin key fallback
+ *   CONTENT_CERTIFICATION_TIER - Tier to sync: enterprise, demo, experimental, all (default: enterprise)
  *   PRUNE_MISSING    - Set to "false" to skip deleting stale @official items (default: true)
+ *   CONFIRM_PRUNE    - Must be "true" for non-dry-run pruning
  *   DRY_RUN          - Set to "true" to report actions without mutating the registry
  *   SYNC_REPORT_PATH - Write a JSON report to this path
  */
 
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
-import { CONTENT_DIRECTORIES, DIRECTORY_TO_CONTENT_TYPE } from './content-contract.js';
+import {
+  CONTENT_DIRECTORIES,
+  DIRECTORY_TO_CONTENT_TYPE,
+  isIgnoredLocalContentFile,
+} from './content-contract.js';
+import {
+  CERTIFICATION_TIERS,
+  getContentCertification,
+  lintDangerousScaffoldingPolicy,
+} from './content-certification.js';
 
 const args = process.argv.slice(2);
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
-const ADMIN_KEY = process.env.DECANTR_ADMIN_KEY;
+const SYNC_TOKEN = process.env.DECANTR_CONTENT_SYNC_TOKEN || process.env.DECANTR_ADMIN_KEY;
+const PRUNE_TOKEN = process.env.DECANTR_CONTENT_PRUNE_TOKEN || process.env.DECANTR_ADMIN_KEY;
 const CONCURRENCY = 20;
 const SHOULD_PRUNE = process.env.PRUNE_MISSING !== 'false';
+const CONFIRM_PRUNE = args.includes('--confirm-prune') || process.env.CONFIRM_PRUNE === 'true';
 const IS_DRY_RUN = args.includes('--dry-run') || process.env.DRY_RUN === 'true';
+const CONTENT_CERTIFICATION_TIER = process.env.CONTENT_CERTIFICATION_TIER || 'enterprise';
 const REPORT_PATH = process.env.SYNC_REPORT_PATH
   || args.find(arg => arg.startsWith('--report-json='))?.slice('--report-json='.length)
   || null;
 
-if (!ADMIN_KEY) {
-  console.error('Error: DECANTR_ADMIN_KEY environment variable is required');
+if (!['all', ...CERTIFICATION_TIERS].includes(CONTENT_CERTIFICATION_TIER)) {
+  console.error(`Error: CONTENT_CERTIFICATION_TIER must be one of: all, ${CERTIFICATION_TIERS.join(', ')}`);
+  process.exit(1);
+}
+
+if (!IS_DRY_RUN && !SYNC_TOKEN) {
+  console.error('Error: DECANTR_CONTENT_SYNC_TOKEN or DECANTR_ADMIN_KEY environment variable is required');
+  process.exit(1);
+}
+
+if (!IS_DRY_RUN && SHOULD_PRUNE && !CONFIRM_PRUNE) {
+  console.error('Error: pruning official content requires --confirm-prune or CONFIRM_PRUNE=true. Run --dry-run first and review the report.');
+  process.exit(1);
+}
+
+if (!IS_DRY_RUN && SHOULD_PRUNE && !PRUNE_TOKEN) {
+  console.error('Error: DECANTR_CONTENT_PRUNE_TOKEN or DECANTR_ADMIN_KEY environment variable is required when pruning');
   process.exit(1);
 }
 
@@ -39,6 +70,8 @@ if (!ADMIN_KEY) {
 const items = [];
 const repoSlugsByType = new Map();
 const statsByType = new Map();
+let skippedByCertification = 0;
+const policyFailures = [];
 
 function ensureTypeStats(type) {
   if (!statsByType.has(type)) {
@@ -56,7 +89,7 @@ for (const dir of CONTENT_DIRECTORIES) {
   let files;
   const slugs = new Set();
   try {
-    files = readdirSync(dir).filter(f => f.endsWith('.json'));
+    files = readdirSync(dir).filter(f => f.endsWith('.json') && !isIgnoredLocalContentFile(f));
   } catch {
     repoSlugsByType.set(type, slugs);
     continue;
@@ -70,6 +103,16 @@ for (const dir of CONTENT_DIRECTORIES) {
         console.error(`  SKIP ${path}: missing id or slug`);
         continue;
       }
+      const certification = getContentCertification(item);
+      const policyFindings = lintDangerousScaffoldingPolicy(item);
+      if (policyFindings.length > 0 && certification.tier === 'enterprise') {
+        policyFailures.push(`${path}: unsafe enterprise policy (${policyFindings.join(', ')})`);
+        continue;
+      }
+      if (CONTENT_CERTIFICATION_TIER !== 'all' && certification.tier !== CONTENT_CERTIFICATION_TIER) {
+        skippedByCertification++;
+        continue;
+      }
       slugs.add(slug);
       items.push({ path, type, item });
       ensureTypeStats(type).repo += 1;
@@ -80,7 +123,15 @@ for (const dir of CONTENT_DIRECTORIES) {
   repoSlugsByType.set(type, slugs);
 }
 
-console.log(`${IS_DRY_RUN ? 'Dry-run sync' : 'Syncing'} ${items.length} items to ${REGISTRY_URL} (concurrency: ${CONCURRENCY})`);
+if (policyFailures.length > 0) {
+  console.error('Error: unsafe enterprise-certified content cannot be synced:');
+  for (const failure of policyFailures) {
+    console.error(`  - ${failure}`);
+  }
+  process.exit(1);
+}
+
+console.log(`${IS_DRY_RUN ? 'Dry-run sync' : 'Syncing'} ${items.length} ${CONTENT_CERTIFICATION_TIER}-tier item(s) to ${REGISTRY_URL} (concurrency: ${CONCURRENCY}; skipped ${skippedByCertification})`);
 
 let succeeded = 0;
 let failed = 0;
@@ -98,7 +149,10 @@ async function syncItem({ path, type, item }) {
   try {
     const res = await fetch(`${REGISTRY_URL}/admin/sync`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_KEY },
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Content-Sync-Token': SYNC_TOKEN,
+      },
       body: JSON.stringify({ type, item }),
     });
     if (!res.ok) {
@@ -175,7 +229,7 @@ async function pruneMissingContent() {
         `${REGISTRY_URL}/admin/content/${type}/%40official/${encodeURIComponent(slug)}`,
         {
           method: 'DELETE',
-          headers: { 'X-Admin-Key': ADMIN_KEY },
+          headers: { 'X-Content-Prune-Token': PRUNE_TOKEN },
         }
       );
 
@@ -211,9 +265,12 @@ if (SHOULD_PRUNE) {
 const report = {
   dryRun: IS_DRY_RUN,
   pruneMissing: SHOULD_PRUNE,
+  pruneConfirmed: CONFIRM_PRUNE,
   registryUrl: REGISTRY_URL,
+  certificationTier: CONTENT_CERTIFICATION_TIER,
   totals: {
     repoItems: items.length,
+    skippedByCertification,
     synced: succeeded,
     pruned,
     failed,
