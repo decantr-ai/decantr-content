@@ -187,7 +187,7 @@
     ],
     "focus_management": "CTA button is the primary focus target"
   },
-  "visual_brief": "Full-width section dominating the viewport with a bold, large-scale headline centered or left-aligned depending on preset. Generous vertical padding (4-6rem top/bottom) creates breathing room. Subtext sits beneath the headline in muted, lighter-weight type with relaxed line-height. One or two CTA buttons are arranged horizontally with equal height \u2014 the primary filled, the secondary ghost-outlined. Optional media (illustration, screenshot, or ambient gradient) appears below or beside the content. Brand preset fills the entire viewport height with decorative floating orbs in the background. Split preset uses a two-column grid with content on one side and media on the other.",
+  "visual_brief": "Full-width section dominating the viewport with a bold, large-scale headline centered or left-aligned depending on preset. Generous vertical padding (4-6rem top/bottom) creates breathing room. Subtext sits beneath the headline in muted, lighter-weight type with relaxed line-height. One or two CTA buttons are arranged horizontally with equal height \u2014 the primary filled, the secondary ghost-outlined. Optional media (illustration, screenshot, product image, photo, or restrained ambient treatment) appears below or beside the content. Brand preset fills the first viewport with clear brand/product/place signal and real supporting media when available. Split preset uses a two-column grid with content on one side and media on the other.",
   "responsive": {
     "mobile": "Single column, stacked vertically. Headline drops to heading2 scale. CTAs stack full-width. Padding reduces to py8 px4. Media goes below content at full width. Min-height removed on brand/vision presets.",
     "tablet": "Content remains centered or stacked. Headline at heading1 scale. CTAs stay horizontal. Split preset still single-column. Padding at py12 px6.",
@@ -195,7 +195,7 @@
   },
   "motion": {
     "micro": "CTA buttons scale subtly on hover (scale 1.02). Badge shimmer on announcement pill.",
-    "transitions": "Hero entrance: headline fades up from 20px below with 600ms ease-out. Subtext follows 150ms later. CTAs follow 300ms after subtext. Decorative orbs drift slowly with infinite CSS animation. Brand preset media floats with gentle vertical oscillation."
+    "transitions": "Hero entrance: headline fades up from 20px below with 600ms ease-out. Subtext follows 150ms later. CTAs follow 300ms after subtext. Brand preset media may float gently with vertical oscillation when it does not obscure or compete with the copy."
   },
   "interactions": [
     "animate-on-mount",

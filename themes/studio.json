@@ -240,7 +240,7 @@
       "intent": "Use as the root page background to establish the warm, creative atmosphere. The off-white warmth differentiates this from cold corporate themes.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FAF9F7)",
-        "color": "var(--d-fg, #1C1917)",
+        "color": "var(--d-text, #1C1917)",
         "min-height": "100vh"
       },
       "pairs_with": [

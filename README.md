@@ -2,6 +2,8 @@
 
 Official content for the Decantr design intelligence registry. This repo is the source of truth for all `@official` namespace content served by `api.decantr.ai`.
 
+This content enriches registry-backed blueprint, archetype, pattern, theme, and shell flows. It is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis and generated contract files without connecting to the official registry. Offline blueprint/theme enrichment should point the CLI at this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
+
 ## Structure
 
 ```

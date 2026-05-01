@@ -368,7 +368,7 @@
       "intent": "Use as the root background for the full page. The radial gradient creates a subtle spotlight effect that draws focus to the center content.",
       "suggested_properties": {
         "background": "radial-gradient(ellipse at 50% 30%, rgba(192, 132, 252, 0.08), var(--d-bg, #0F0B1E) 70%)",
-        "color": "var(--d-fg, #F8F0FF)",
+        "color": "var(--d-text, #F8F0FF)",
         "min-height": "100vh"
       },
       "pairs_with": [
@@ -390,7 +390,7 @@
         "border": "2px solid var(--d-border, #3D2E60)",
         "border-radius": "12px",
         "padding": "12px 16px",
-        "color": "var(--d-fg, #F8F0FF)",
+        "color": "var(--d-text, #F8F0FF)",
         "transition": "border-color 200ms ease, box-shadow 200ms ease"
       },
       "pairs_with": [

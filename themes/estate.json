@@ -271,7 +271,7 @@
       "intent": "Use as the root page background for property management dashboards. The warm tone conveys trust and professionalism.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FDFBF7)",
-        "color": "var(--d-fg, #1A1A1F)",
+        "color": "var(--d-text, #1A1A1F)",
         "min-height": "100vh"
       },
       "pairs_with": [

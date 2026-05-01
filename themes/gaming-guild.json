@@ -171,7 +171,7 @@
       "intent": "Use as the root page background to create the immersive dark guild-hall atmosphere. The grid pattern adds a subtle HUD aesthetic.",
       "suggested_properties": {
         "background-color": "#0A0A0F",
-        "color": "var(--d-fg, #E8EDF5)",
+        "color": "var(--d-text, #E8EDF5)",
         "min-height": "100vh"
       },
       "pairs_with": [

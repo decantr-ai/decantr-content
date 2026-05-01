@@ -299,7 +299,7 @@
       "description": "Particle network background. Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root. Dark: #141414, Light: #FAFAF9.",
       "intent": "Use as the foundational page background to create the geometric canvas. The particle network adds depth and tech-forward energy.",
       "suggested_properties": {
-        "background-color": "var(--d-background, #141414)",
+        "background-color": "var(--d-bg, #141414)",
         "color": "var(--d-text, rgba(255, 255, 255, 0.85))",
         "min-height": "100vh",
         "position": "relative"
@@ -474,7 +474,7 @@
       "intent": "Use for numbered badges and step indicators. The filled circle with contrasting text creates a bold, readable counter.",
       "suggested_properties": {
         "background": "var(--lum-card-color, #FDA303)",
-        "color": "var(--d-background, #141414)",
+        "color": "var(--d-bg, #141414)",
         "border-radius": "50%",
         "width": "40px",
         "height": "40px",

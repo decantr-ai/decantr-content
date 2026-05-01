@@ -274,7 +274,7 @@
       "intent": "Use as the root background to create the warm, paper-like reading environment. The cream tone reduces eye strain for long-form content.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FDFCFA)",
-        "color": "var(--d-fg, #1A1918)",
+        "color": "var(--d-text, #1A1918)",
         "min-height": "100vh"
       },
       "pairs_with": [

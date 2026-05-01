@@ -148,7 +148,7 @@
       "intent": "Use as the root page background for the most neutral, universally appropriate foundation. Zero personality, maximum clarity.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FFFFFF)",
-        "color": "var(--d-fg, #111111)",
+        "color": "var(--d-text, #111111)",
         "min-height": "100vh"
       },
       "pairs_with": [

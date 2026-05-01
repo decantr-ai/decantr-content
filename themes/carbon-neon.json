@@ -247,7 +247,7 @@
       "intent": "Use as the root page background. Identical to carbon but serves as the dark canvas for neon accent pops.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #18181B)",
-        "color": "var(--d-fg, #FAFAFA)",
+        "color": "var(--d-text, #FAFAFA)",
         "min-height": "100vh"
       },
       "pairs_with": [

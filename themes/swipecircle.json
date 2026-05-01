@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "swipecircle",
   "name": "SwipeCircle",
-  "description": "Warm coral-rose consumer social theme with peach undertones and violet match-accent. Pill-shaped everything, soft drop shadows replacing harsh borders, photo-first card surfaces with bottom gradient overlays. Bouncy spring micro-interactions reward every tap. Hinge meets BeReal meets a Dribbble shot — premium consumer dating-app vibe.",
+  "description": "Warm coral-rose consumer social theme with violet match accents, off-white editorial surfaces, and photo-first card moments. Pill-shaped CTAs, soft drop shadows replacing harsh borders, and bottom-gradient photo overlays create a premium consumer dating-app feel without turning every surface peach. Bouncy spring micro-interactions reward every tap.",
   "tags": [
     "light",
     "warm",
@@ -14,16 +14,16 @@
     "bouncy",
     "2026"
   ],
-  "personality": "warm + playful + photo-centric + bouncy + intimate + rewarding",
+  "personality": "warm + playful + photo-centric + bouncy + intimate + rewarding + balanced white space",
   "seed": {
     "primary": "#FF4D6D",
     "secondary": "#8B5CF6",
     "accent": "#FFB199",
-    "background": "#FFF5F2"
+    "background": "#FFFBFA"
   },
   "palette": {
     "background": {
-      "light": "#FFF5F2",
+      "light": "#FFFBFA",
       "dark": "#1F0E14"
     },
     "surface": {
@@ -31,7 +31,7 @@
       "dark": "#2A1620"
     },
     "surface-raised": {
-      "light": "#FFE9E1",
+      "light": "#FFF0EA",
       "dark": "#3A1F2C"
     },
     "border": {
@@ -213,7 +213,7 @@
       "card_style": "swipecircle-card"
     },
     "marketing": {
-      "description": "Splash with photo-first hero, gradient orbs, pill CTAs, and warm peach scroll surface. Friendly, not corporate.",
+      "description": "Splash with photo-first hero, swipe-card/photo mockups, pill CTAs, warm off-white scroll surface, and coral/violet accents. Friendly, not corporate. Avoid ambient blobs/orbs or a single solid peach hero slab.",
       "shell": "top-nav-footer",
       "effects": ["swipecircle-pill", "swipecircle-card"]
     }
@@ -301,6 +301,10 @@
       "description": "Pill-shaped CTA with coral fill, white text, scale-on-hover. Tactile spring transitions. The signature button shape.",
       "intent": "Use for ALL primary CTAs. The pill shape signals approachability over enterprise sharpness. The spring scale on press provides satisfying haptic-like feedback.",
       "suggested_properties": {
+        "display": "inline-flex",
+        "align-items": "center",
+        "justify-content": "center",
+        "gap": "0.5rem",
         "background": "var(--d-primary, #FF4D6D)",
         "color": "#FFFFFF",
         "border": "none",
@@ -309,6 +313,8 @@
         "font-weight": "600",
         "font-size": "15px",
         "letter-spacing": "0.01em",
+        "line-height": "1",
+        "text-decoration": "none",
         "transform": "scale(1)",
         "transition": "transform 180ms cubic-bezier(0.34, 1.56, 0.64, 1), background 180ms ease-out"
       },

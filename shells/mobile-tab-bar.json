@@ -94,7 +94,7 @@
       "desktop": {
         "max_width": "480px",
         "centered": true,
-        "side_treatment": "Optional decorative gradient orbs in the off-column space (handled by the page or theme background, NOT the shell)",
+        "side_treatment": "Optional quiet off-column background tint or neutral gutter treatment handled by the page or theme background, NOT the shell. Avoid decorative orb/blob layers.",
         "notes": "Column floats centered with 480px max-width. The shell does not add side rails — the surrounding page background fills the gutters."
       }
     }

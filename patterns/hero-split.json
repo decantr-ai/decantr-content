@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "decantr_compat": ">=1.0.0",
   "name": "Hero Split",
-  "description": "Split hero section with media (logo or image) on one side and text with CTAs on the other. Supports breathing gradient orbs background, pill-shaped buttons, and responsive stacking. The split layout places emphasis on brand identity alongside a clear value proposition.",
+  "description": "Split hero section with media (logo, screenshot, product image, or photo mockup) on one side and text with CTAs on the other. Supports pill-shaped buttons, responsive stacking, and subtle background tinting when the theme calls for it. The split layout places emphasis on brand identity alongside a clear value proposition.",
   "dependencies": {
     "patterns": {},
     "styles": {},
@@ -24,7 +24,7 @@
   "default_preset": "standard",
   "presets": {
     "standard": {
-      "description": "Media on left (1/3 width) with logo or image, content on right (2/3 width) with title, tagline, and pill CTA buttons. Background features breathing gradient orbs with blur. Responsive: stacks vertically on mobile with media on top.",
+      "description": "Media on left (1/3 width) with logo or image, content on right (2/3 width) with title, tagline, and pill CTA buttons. Background stays calm and supports the media; avoid decorative orb/blob layers. Responsive: stacks vertically on mobile with media on top.",
       "components": [
         "Button",
         "Image"
@@ -41,7 +41,7 @@
       }
     },
     "reversed": {
-      "description": "Content on left (2/3 width) with title, tagline, and CTA buttons. Media on right (1/3 width) with image or illustration. Same breathing orb background. Good for right-handed visual emphasis.",
+      "description": "Content on left (2/3 width) with title, tagline, and CTA buttons. Media on right (1/3 width) with image or illustration. Good for right-handed visual emphasis.",
       "components": [
         "Button",
         "Image"
@@ -92,11 +92,11 @@
       "cta-click"
     ]
   },
-  "visual_brief": "Two-column section with a media area (logo or hero image) taking roughly one-third width on the left and a text content area on the right. The text area contains a large primary heading with accent-colored punctuation, a supporting tagline paragraph with accent-colored inline spans, and a row of pill-shaped CTA buttons (primary filled, secondary outlined). Background features breathing gradient orbs with slow animation. Reversed preset flips the columns. Centered preset stacks both columns vertically with centered alignment.",
+  "visual_brief": "Two-column section with a media area (logo, hero image, product screenshot, or photo mockup) taking roughly one-third width on the left and a text content area on the right. The text area contains a large primary heading with accent-colored punctuation, a supporting tagline paragraph with accent-colored inline spans, and a row of pill-shaped CTA buttons (primary filled, secondary outlined). Background treatment should stay restrained and never compete with the actual media. Reversed preset flips the columns. Centered preset stacks both columns vertically with centered alignment.",
   "responsive": {
-    "mobile": "Columns stack vertically — media on top, text content below. CTA buttons go full-width stacked. Gradient orbs scale down or simplify.",
+    "mobile": "Columns stack vertically — media on top, text content below. CTA buttons go full-width stacked. Decorative background layers should be removed or reduced to a simple tint.",
     "tablet": "Side-by-side layout maintained with tighter proportions. Media area shrinks to 40% width.",
-    "desktop": "Full split layout with generous whitespace. Media at one-third, content at two-thirds. Orbs animate at full size."
+    "desktop": "Full split layout with generous whitespace. Media at one-third, content at two-thirds."
   },
   "layout_hints": {
     "narrative_split": "The media side should support the value proposition, not compete with it. Preserve a clear left-right hierarchy where one side establishes proof or brand and the other carries the decision-making copy.",
@@ -105,7 +105,7 @@
   },
   "motion": {
     "micro": "CTAs and media elements may float or sharpen subtly on hover, but the hero should remain composed and premium rather than restless.",
-    "transitions": "Hero entry and background orbs should move slowly and confidently, reinforcing atmosphere without distracting from copy."
+    "transitions": "Hero entry should move slowly and confidently, reinforcing atmosphere without distracting from copy."
   },
   "interactions": [
     "animate-on-mount",

@@ -374,7 +374,7 @@
       "intent": "Use as the root background and for section containers. The warm white creates a calming, clinical environment that reduces anxiety.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FAFAF8)",
-        "color": "var(--d-fg, #0F172A)",
+        "color": "var(--d-text, #0F172A)",
         "min-height": "100vh"
       },
       "pairs_with": [

@@ -218,7 +218,7 @@
       "intent": "Use as the root page background to establish the clean, developer-focused foundation. Sets a neutral canvas for content.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #18181B)",
-        "color": "var(--d-fg, #FAFAFA)",
+        "color": "var(--d-text, #FAFAFA)",
         "min-height": "100vh"
       },
       "pairs_with": [

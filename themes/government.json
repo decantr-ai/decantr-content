@@ -395,7 +395,7 @@
       "intent": "Use as the root page background. Pure white provides the highest possible contrast with dark text, meeting WCAG AAA requirements for government accessibility standards.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FFFFFF)",
-        "color": "var(--d-fg, #111827)",
+        "color": "var(--d-text, #111827)",
         "min-height": "100vh"
       },
       "pairs_with": [

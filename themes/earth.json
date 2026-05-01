@@ -371,7 +371,7 @@
       "intent": "Use as the root page background. The warm cream creates a natural, paper-like foundation that evokes organic materials and reduces screen fatigue.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #FEFCE8)",
-        "color": "var(--d-fg, #1A2E0A)",
+        "color": "var(--d-text, #1A2E0A)",
         "min-height": "100vh"
       },
       "pairs_with": [

@@ -135,7 +135,7 @@
         "border-left": "4px solid var(--d-secondary, #C41E3A)",
         "padding-left": "24px",
         "margin": "48px 0",
-        "color": "var(--d-fg, #1A1A1A)"
+        "color": "var(--d-text, #1A1A1A)"
       },
       "pairs_with": [
         "editorial-card",
@@ -172,7 +172,7 @@
         "font-size": "11px",
         "text-transform": "uppercase",
         "letter-spacing": "0.1em",
-        "color": "var(--d-fg-muted, #6B665E)"
+        "color": "var(--d-text-muted, #6B665E)"
       },
       "pairs_with": [
         "editorial-card",

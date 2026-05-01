@@ -71,6 +71,12 @@
     "empty-states",
     "keyboard-shortcuts"
   ],
+  "directives": [
+    "Public marketing route `/` must be visually polished on desktop and mobile: hero headline fully visible, CTA in normal document flow, photo/card mockup present, no fixed footer, no overlapping banner, and no full-page peach slab without real visual content.",
+    "Use warm off-white surfaces as the base and reserve coral/violet for CTAs, active states, match moments, and small accents. Avoid one-note pink/peach screens where every panel, hero, card, and background belongs to the same hue family.",
+    "Keyboard shortcuts are behavior, not marketing copy. Do not display shortcut hints on the public marketing page. On app routes, implement shortcuts as hidden keyboard listeners or compact command affordances only where useful.",
+    "Do not render Decantr implementation notes, pattern names, guard prose, or scaffold labels as visible UI."
+  ],
   "routes": {
     "/": {
       "shell": "top-nav-footer",

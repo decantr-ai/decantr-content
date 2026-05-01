@@ -166,7 +166,7 @@
       "intent": "Use as the foundational page background. The subtle texture adds depth while maintaining the clean SaaS aesthetic.",
       "suggested_properties": {
         "background-color": "var(--d-bg, #F9F9FD)",
-        "color": "var(--d-fg, #1A1530)",
+        "color": "var(--d-text, #1A1530)",
         "min-height": "100vh"
       },
       "pairs_with": [

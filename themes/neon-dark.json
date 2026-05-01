@@ -154,7 +154,7 @@
         "background": "var(--d-surface, #12121A)",
         "border": "1px solid var(--d-border, #2A2A3A)",
         "border-radius": "6px",
-        "color": "var(--d-fg, #E8E8F0)",
+        "color": "var(--d-text, #E8E8F0)",
         "transition": "border-color 100ms ease, box-shadow 100ms ease"
       },
       "pairs_with": [
