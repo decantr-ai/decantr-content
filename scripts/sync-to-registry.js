@@ -37,6 +37,8 @@ const args = process.argv.slice(2);
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
 const SYNC_TOKEN = process.env.DECANTR_CONTENT_SYNC_TOKEN || process.env.DECANTR_ADMIN_KEY;
 const PRUNE_TOKEN = process.env.DECANTR_CONTENT_PRUNE_TOKEN || process.env.DECANTR_ADMIN_KEY;
+const SYNC_TOKEN_HEADER = process.env.DECANTR_CONTENT_SYNC_TOKEN ? 'X-Content-Sync-Token' : 'X-Admin-Key';
+const PRUNE_TOKEN_HEADER = process.env.DECANTR_CONTENT_PRUNE_TOKEN ? 'X-Content-Prune-Token' : 'X-Admin-Key';
 const CONCURRENCY = 20;
 const SHOULD_PRUNE = process.env.PRUNE_MISSING !== 'false';
 const CONFIRM_PRUNE = args.includes('--confirm-prune') || process.env.CONFIRM_PRUNE === 'true';
@@ -151,7 +153,7 @@ async function syncItem({ path, type, item }) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Content-Sync-Token': SYNC_TOKEN,
+        [SYNC_TOKEN_HEADER]: SYNC_TOKEN,
       },
       body: JSON.stringify({ type, item }),
     });
@@ -229,7 +231,7 @@ async function pruneMissingContent() {
         `${REGISTRY_URL}/admin/content/${type}/%40official/${encodeURIComponent(slug)}`,
         {
           method: 'DELETE',
-          headers: { 'X-Content-Prune-Token': PRUNE_TOKEN },
+          headers: { [PRUNE_TOKEN_HEADER]: PRUNE_TOKEN },
         }
       );
 
