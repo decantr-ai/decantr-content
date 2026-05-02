@@ -165,24 +165,7 @@
     ]
   },
   "navigation": {
-    "command_palette": {
-      "trigger": "Cmd+K",
-      "placeholder": "Type a command or search...",
-      "width": "640px",
-      "styling": "modal",
-      "commands": [
-        { "id": "nav.agents", "label": "Go to Agents", "section": "Navigation", "hotkey": "g a", "route": "/agents" },
-        { "id": "nav.marketplace", "label": "Go to Marketplace", "section": "Navigation", "hotkey": "g m", "route": "/marketplace" },
-        { "id": "nav.transparency", "label": "Go to Transparency", "section": "Navigation", "hotkey": "g t", "route": "/transparency" },
-        { "id": "agent.new", "label": "Deploy new agent", "section": "Agents", "action": "openNewAgentDialog" },
-        { "id": "agent.config", "label": "Open agent config", "section": "Agents", "route": "/agents/config" },
-        { "id": "marketplace.search", "label": "Search marketplace...", "section": "Marketplace", "action": "focusMarketplaceSearch" },
-        { "id": "transparency.inference", "label": "Open inference log", "section": "Transparency", "route": "/transparency/inference" },
-        { "id": "transparency.confidence", "label": "Open confidence explorer", "section": "Transparency", "route": "/transparency/confidence" },
-        { "id": "theme.toggle", "label": "Toggle theme mode", "section": "Settings", "action": "toggleThemeMode" },
-        { "id": "auth.signout", "label": "Sign out", "section": "Account", "action": "signOut" }
-      ]
-    },
+    "command_palette": true,
     "hotkey_semantics": {
       "chord_window_ms": 900,
       "input_guard": true,
@@ -208,11 +191,7 @@
       {
         "key": "?",
         "action": "openShortcutsHelp",
-        "label": "Show keyboard shortcuts",
-        "semantics": {
-          "input_guard": true,
-          "modifier_suppression": false
-        }
+        "label": "Show keyboard shortcuts"
       }
     ]
   },
