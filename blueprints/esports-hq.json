@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "decantr_compat": ">=1.5.0",
   "name": "Esports HQ",
-  "description": "Professional esports team operations with roster tracking, scrim scheduling, VOD review, sponsor dashboards, and full auth with marketing landing.",
+  "description": "Professional esports matchday command platform with live roster tracking, scrim scheduling, VOD review, sponsor dashboards, full auth, and an immersive broadcast-style public homepage.",
   "tags": ["esports", "gaming", "team-ops", "competitive", "2026"],
   "compose": [
     "team-operations",
@@ -20,7 +20,7 @@
     "shape": "rounded",
     "id": "gaming-guild"
   },
-  "personality": "Professional esports team operations hub with vibrant neon-accented rosters and live scoreboards. Player form trackers show sparklines of K/D ratios, win rates, and self-reported mood indicators. Scrim calendars map team availability to opponent windows. VOD review interface with frame-by-frame annotations and drawing tools. Sponsor dashboards track activation metrics. Think Overwatch League backstage. Lucide icons. Competitive.",
+  "personality": "Professional esports matchday command platform with a cinematic live-broadcast public homepage and operational app surfaces behind auth. The homepage should feel like a premium arena command room: full-bleed dark stage, neon cyan/acid/red accents, huge italic match headline, live telemetry, 5v5 roster proof, vertical match update reel, angular CTAs, subtle radar ambience, and no generic card-heavy SaaS scaffolding. Auth and app surfaces remain practical for coaches, analysts, players, and managers: player form trackers, scrim calendars, frame-by-frame VOD review, and sponsor activation metrics. Lucide icons. Competitive, polished, and production-ready.",
   "voice": {
     "tone": "Competitive and operational. Speaks to coaches, analysts, players, managers.",
     "cta_verbs": ["Scrim", "Review", "Draft", "Bench", "Rotate", "Analyze"],
@@ -31,7 +31,7 @@
   },
   "features": ["roster", "scrims", "vods", "sponsors", "auth", "mfa", "oauth", "marketing", "seo"],
   "routes": {
-    "/": { "page": "home", "shell": "top-nav-footer", "archetype": "marketing-esports" },
+    "/": { "page": "home", "shell": "immersive-stage", "archetype": "marketing-esports" },
     "/login": { "page": "login", "shell": "centered", "archetype": "auth-full" },
     "/register": { "page": "register", "shell": "centered", "archetype": "auth-full" },
     "/forgot-password": { "page": "forgot-password", "shell": "centered", "archetype": "auth-full" },
@@ -73,7 +73,34 @@
       "marketing-esports": ">=1.0.0",
       "auth-full": ">=1.0.0",
       "settings-full": ">=1.0.0"
+    },
+    "patterns": {
+      "esports-matchday-command": ">=1.0.0"
+    },
+    "shells": {
+      "immersive-stage": ">=1.0.0"
     }
   },
-  "suggested_themes": ["gaming-guild", "neo-tokyo", "neon-cyber", "carbon-neon", "dopamine"]
+  "design_constraints": {
+    "public_home": {
+      "style": "cinematic full-bleed esports broadcast stage",
+      "required_pattern": "esports-matchday-command/broadcast-home",
+      "required_shell": "immersive-stage",
+      "avoid": [
+        "generic SaaS hero plus card grid",
+        "chip-heavy hero badges",
+        "bottom horizontal marquees",
+        "mascot or controller hero graphics",
+        "nested cards in the first viewport",
+        "pill-only CTA treatment"
+      ]
+    }
+  },
+  "responsive_strategy": {
+    "public_home": {
+      "desktop": "Two-column first viewport: match copy and telemetry on the left, 5v5 roster panel with vertical update reel on the right.",
+      "mobile": "Single-column flow: headline, lede, telemetry, CTAs, then roster panel. Headline must resize without clipping and the VS tag must remain legible."
+    }
+  },
+  "suggested_themes": ["gaming-guild", "neon-cyber", "carbon-neon", "neo-tokyo", "dopamine"]
 }
