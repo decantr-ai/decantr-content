@@ -32,8 +32,10 @@ import {
   getContentCertification,
   lintDangerousScaffoldingPolicy,
 } from './content-certification.js';
+import { emitContentTelemetry } from './telemetry.js';
 
 const args = process.argv.slice(2);
+const startedAt = Date.now();
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
 const SYNC_TOKEN = process.env.DECANTR_CONTENT_SYNC_TOKEN || process.env.DECANTR_ADMIN_KEY;
 const PRUNE_TOKEN = process.env.DECANTR_CONTENT_PRUNE_TOKEN || process.env.DECANTR_ADMIN_KEY;
@@ -289,10 +291,38 @@ if (REPORT_PATH) {
 
 console.log(`\n\nSync complete: ${succeeded} ${IS_DRY_RUN ? 'planned' : 'synced'}, ${pruned} ${IS_DRY_RUN ? 'planned prune(s)' : 'pruned'}, ${failed} failed (of ${items.length} repo items)`);
 
+await emitPublishTelemetry(report, Date.now() - startedAt);
+
 if (failures.length > 0) {
   console.log('\nFailed items:');
   for (const f of failures) {
     console.log(`  - ${f}`);
   }
   process.exit(1);
+}
+
+async function emitPublishTelemetry(syncReport, durationMs) {
+  const entries = Object.entries(syncReport.byType);
+  const fallbackEntries = entries.length > 0
+    ? entries
+    : [['pattern', { repo: 0, synced: 0, pruned: 0 }]];
+
+  await Promise.all(fallbackEntries.map(([contentType, stats]) => emitContentTelemetry({
+    name: 'content.publish.completed',
+    properties: {
+      contentType,
+      success: syncReport.totals.failed === 0,
+      durationMs,
+      dryRun: syncReport.dryRun,
+      errorCode: syncReport.totals.failed > 0 ? 'content_sync_failed' : undefined,
+      itemCount: stats.synced ?? 0,
+      namespace: '@official',
+      plannedPruneCount: syncReport.plannedPrunes.length,
+      prunedCount: stats.pruned ?? 0,
+      registrySource: 'official',
+      repoItemCount: stats.repo ?? 0,
+      skippedByCertification: syncReport.totals.skippedByCertification,
+      visibility: 'public',
+    },
+  })));
 }

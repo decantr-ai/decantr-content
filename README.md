@@ -40,6 +40,15 @@ Supporting audit workflows also run from GitHub Actions:
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `REGISTRY_URL` | `https://api.decantr.ai/v1` | API base URL |
+| `DECANTR_TELEMETRY_ENDPOINT` | `https://api.decantr.ai/v1/telemetry/events` | Optional override for privacy-filtered content CI telemetry |
+| `DECANTR_TELEMETRY_DISABLED` | unset | Set to `true` to disable content validation and publish telemetry |
+
+Content CI emits privacy-filtered Decantr telemetry from GitHub Actions:
+
+- `content.validation.completed` from `validate.js`
+- `content.publish.completed` from `scripts/sync-to-registry.js`
+
+Local runs do not emit telemetry unless `DECANTR_TELEMETRY_ENABLED=true` is set.
 
 ## Local Development
 

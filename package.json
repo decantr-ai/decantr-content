@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "ajv": "^8.17.1"
+  },
+  "dependencies": {
+    "@decantr/telemetry": "0.1.0"
   }
 }
