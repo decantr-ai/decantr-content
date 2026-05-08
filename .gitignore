@@ -1,4 +1,7 @@
 node_modules/
+content-health-report.json
+content-health-summary.md
+content-health.md
 registry-drift-report.json
 registry-drift-summary.md
 sync-report.json

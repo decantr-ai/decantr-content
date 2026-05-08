@@ -20,7 +20,7 @@ shells/         — Page layout containers (sidebar-main, topbar-main, etc.)
 
 Changes are validated in CI and published by Decantr maintainers after they land on `main`.
 
-CI checks every content file with `node validate.js`. Public contributors do not need registry credentials to validate or propose content changes.
+CI checks every content file with `node validate.js` and runs Decantr Content Health with `npm run content:health`. Public contributors do not need registry credentials to validate or propose content changes.
 
 ## Local Development
 
@@ -29,11 +29,30 @@ For contributors (no credentials required):
 ```bash
 npm install
 npm run validate                                                                 # validate every JSON file against the schemas
+npm run content:health                                                           # local content health report, fails only on blocking errors
 npm run registry:audit -- --report-json=./registry-drift-report.json             # read-only diff against the live registry
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
 ```
 
 External contributors can verify their changes with `npm run validate` and the read-only audit scripts. Registry publishing is handled by Decantr maintainers.
+
+## Auditing Content Health
+
+Use Content Health when you want a repo-local quality report before opening or merging a content PR:
+
+```bash
+npm run content:health
+npm run content:health:json
+```
+
+What it reports:
+- invalid or duplicate content records
+- stale ids or filename mismatches
+- missing hard references that block registry correctness
+- missing softer archetype layout or suggested-theme references that maintainers can triage over time
+- content guidance coverage for patterns, themes, blueprints, and archetypes
+
+The CI gate uses `--fail-on error`, so existing warning-level reference drift stays visible in the GitHub summary without blocking unrelated content fixes. Use a finding's prompt command, such as `decantr content-health --prompt <finding-id>`, to produce a scoped remediation prompt for an AI coding assistant.
 
 ## Auditing Live Registry Drift
 
