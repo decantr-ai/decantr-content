@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "registry-platform",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Registry Platform",
   "description": "Content registry with browsing, publishing, user management, team collaboration, and admin moderation. Dogfooded UI for the Decantr design intelligence platform.",
   "tags": [

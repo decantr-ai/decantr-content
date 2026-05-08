@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "kanban-board",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Kanban Board",
   "description": "Drag-and-drop column board with swimlanes, card previews, and column limits for visual project workflow management.",
   "category": "project-management",

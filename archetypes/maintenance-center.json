@@ -3,7 +3,7 @@
   "id": "maintenance-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Maintenance Center",
   "description": "Maintenance ticket management with Kanban board view, ticket details, and ticket creation for property repairs.",
   "tags": [

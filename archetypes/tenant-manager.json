@@ -3,7 +3,7 @@
   "id": "tenant-manager",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Tenant Manager",
   "description": "Tenant management screens including directory, detail view with lease and payment history, and tenant onboarding.",
   "tags": [

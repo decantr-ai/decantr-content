@@ -3,7 +3,7 @@
   "id": "cloud-infrastructure",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Cloud Infrastructure",
   "description": "Infrastructure management pages: apps, deployments, teams, services, tokens, usage monitoring, status, and compliance",
   "tags": [

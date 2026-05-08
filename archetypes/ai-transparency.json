@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "ai-transparency",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Transparency",
   "description": "AI model observability and transparency dashboard for inspecting inference logs, confidence distributions, and neural feedback cycles across deployed models.",
   "tags": [

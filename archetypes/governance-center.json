@@ -3,7 +3,7 @@
   "id": "governance-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Governance Center",
   "description": "DAO-style governance surface for fractional asset holders. Members review active proposals, cast weighted votes, and follow discussion activity.",
   "tags": [

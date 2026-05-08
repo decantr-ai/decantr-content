@@ -3,7 +3,7 @@
   "id": "sponsor-dashboard",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sponsor Dashboard",
   "description": "Auxiliary esports sponsor surface for managing brand partnerships, tracking deal value, impressions, and activation metrics across sponsors.",
   "tags": [

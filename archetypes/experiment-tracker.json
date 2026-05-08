@@ -3,7 +3,7 @@
   "id": "experiment-tracker",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Experiment Tracker",
   "description": "Experiment lifecycle management for a research lab. Researchers track planned, in-progress, and completed experiments with protocols and timelines.",
   "tags": [

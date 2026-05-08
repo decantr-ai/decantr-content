@@ -1,5 +1,7 @@
 {
   "id": "terminal-split",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Terminal Split",
   "description": "Terminal-style layout with status bar, resizable split panes, and hotkey bar. Optimized for CLI tool interfaces with monospace typography and ASCII borders.",
   "layout": "grid",

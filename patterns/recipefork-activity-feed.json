@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-activity-feed",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Activity Feed",
   "description": "Recipefork-flavored community activity rail with publish, fork, follow, comment, reaction, and cookbook events rendered as linked preview cards.",
   "dependencies": {

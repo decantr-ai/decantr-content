@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "observability-platform",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Observability Platform",
   "description": "Data-dense monitoring command center with metrics dashboards, log exploration, distributed tracing, alert management, and full auth. Built for SREs and platform engineers.",
   "tags": [

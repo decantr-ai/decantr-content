@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "earnings-dashboard",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Earnings Dashboard",
   "description": "Revenue analytics dashboard with KPIs, charts, tier breakdown, and recent transactions. Date range filtering and export capabilities.",
   "dependencies": {

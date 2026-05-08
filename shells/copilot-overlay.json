@@ -1,5 +1,7 @@
 {
   "id": "copilot-overlay",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Copilot Overlay",
   "description": "Main content area with a collapsible AI copilot side panel. Right-side drawer overlays or pushes body content. When collapsed, a floating pill button ('Ask AI') remains visible. Used for AI-assisted workflows where copilot can reference body content.",
   "layout": "grid",

@@ -3,7 +3,7 @@
   "id": "landing-legal",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Landing Legal",
   "description": "Legal pages for a product landing site including privacy policy and terms of service. Clean prose layouts for legal content.",
   "tags": [

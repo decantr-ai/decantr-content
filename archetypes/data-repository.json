@@ -3,7 +3,7 @@
   "id": "data-repository",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Data Repository",
   "description": "Research dataset library for a scientific lab. Scientists publish, browse, and inspect structured datasets produced by experiments.",
   "tags": [

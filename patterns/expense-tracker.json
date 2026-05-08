@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "expense-tracker",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Expense Tracker",
   "description": "Property expense management with category breakdown, receipt upload, recurring expenses, and budget tracking.",
   "dependencies": {

@@ -3,7 +3,7 @@
   "id": "property-manager",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Property Manager",
   "description": "Property CRUD and management screens including property list, detail view, create/edit forms, and unit management.",
   "tags": [

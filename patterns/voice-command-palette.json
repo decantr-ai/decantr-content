@@ -2,7 +2,7 @@
   "id": "voice-command-palette",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Voice Command Palette",
   "description": "Voice-activated command interface with real-time waveform visualization, live transcription, contextual suggestion chips, and processing feedback — a voice-first alternative to traditional command palettes.",
   "category": "voice",

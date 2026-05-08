@@ -2,7 +2,7 @@
   "id": "scope-breakdown",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Scope Breakdown",
   "description": "A structured breakdown of Scope 1, 2, and 3 emissions with drill-down category detail, year-over-year change indicators, and multiple visualization modes.",
   "category": "climate",

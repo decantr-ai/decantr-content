@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "command-rail",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Command Rail",
   "description": "Horizontal or stacked rail of short command snippets for CLI-driven workflows. Used to expose init, refresh, health, publish, or registry commands near the content they affect.",
   "dependencies": {

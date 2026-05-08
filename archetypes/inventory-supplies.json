@@ -3,7 +3,7 @@
   "id": "inventory-supplies",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Inventory & Supplies",
   "description": "Restaurant inventory and purchasing workspace. Tracks ingredients, par levels, usage, and purchase orders across suppliers.",
   "tags": ["restaurant", "inventory", "supplies", "purchasing", "ingredients", "2026"],

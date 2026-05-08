@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-cooking-tips-display",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Cooking Tips Display",
   "description": "Display card for recipe-specific cooking tips on Recipefork detail pages, replacing generic static tips with author-provided notes.",
   "dependencies": {

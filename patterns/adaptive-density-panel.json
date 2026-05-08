@@ -2,7 +2,7 @@
   "id": "adaptive-density-panel",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Adaptive Density Panel",
   "description": "Self-adjusting container panel that smoothly transitions between information density levels — auto mode uses viewport width and user behavior to determine optimal density, with manual compact/comfortable/spacious overrides.",
   "category": "ambient",

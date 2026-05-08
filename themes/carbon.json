@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "carbon",
+  "version": "1.0.0",
   "name": "Carbon",
   "description": "Neutral-cool grayscale theme with slate undertones. Developer-tool aesthetic inspired by Claude, VS Code, and Devin AI. Soft muted blue accent.",
   "tags": [
@@ -83,7 +84,7 @@
       }
     }
   },
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "carbon-canvas": "Background color using theme background token. Clean, minimal foundation.",

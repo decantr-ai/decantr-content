@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "paper",
+  "version": "1.0.0",
   "name": "Paper",
   "description": "Clean, minimal, content-focused theme with warm whites and soft grays. Inspired by high-end writing apps like iA Writer, Bear, and Notion.",
   "tags": [
@@ -132,7 +133,7 @@
       }
     }
   },
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "paper-canvas": "Warm cream background in light mode, soft charcoal in dark. Clean foundation for content.",

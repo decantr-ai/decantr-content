@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "climate-dashboard",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Climate Dashboard",
   "description": "Carbon accounting and emissions dashboard with Scope 1/2/3 tracking, supply chain mapping, offset marketplace, regulatory reporting, and full auth with marketing landing.",
   "tags": ["climate", "esg", "sustainability", "carbon", "csrd", "2026"],

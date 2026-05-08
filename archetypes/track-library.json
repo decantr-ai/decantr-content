@@ -3,7 +3,7 @@
   "id": "track-library",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Track Library",
   "description": "Producer track catalog with searchable table of finished and in-progress tracks plus a per-track detail view with waveform preview and version history.",
   "tags": [

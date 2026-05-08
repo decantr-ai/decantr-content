@@ -3,7 +3,7 @@
   "id": "changelog-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Changelog Center",
   "description": "Versioned changelog with chronological release feed and individual release note pages. Tracks product evolution with migration guides and version diffs.",
   "tags": [

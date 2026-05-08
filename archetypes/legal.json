@@ -3,7 +3,7 @@
   "id": "legal",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Legal",
   "description": "Legal pages including privacy policy, terms of service, and cookie policy with sticky TOC and print-friendly layout.",
   "tags": [

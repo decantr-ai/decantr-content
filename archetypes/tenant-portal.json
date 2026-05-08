@@ -3,7 +3,7 @@
   "id": "tenant-portal",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Tenant Portal",
   "description": "Tenant self-service portal home with lease summary, rent reminders, recent maintenance tickets, and quick actions.",
   "tags": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/shell.v1.json",
   "id": "canvas-overlay",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Canvas Overlay",
   "description": "Full-bleed spatial shell with a primary canvas, floating toolbar overlays, and presence/status surfaces that sit above the canvas without consuming layout width.",
   "layout": "stack",

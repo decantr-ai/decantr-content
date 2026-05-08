@@ -3,7 +3,7 @@
   "id": "trace-viewer",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Trace Viewer",
   "description": "Agent execution trace viewer for inspecting request waterfalls, step timelines, and replaying agent interactions with full observability.",
   "tags": [

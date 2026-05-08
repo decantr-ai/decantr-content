@@ -2,7 +2,7 @@
   "id": "timeline-scrubber",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Timeline Scrubber",
   "description": "Horizontal multi-track timeline with draggable scrubber handle, scene markers, keyframe dots, and zoom controls for video/audio editing workflows.",
   "category": "media",

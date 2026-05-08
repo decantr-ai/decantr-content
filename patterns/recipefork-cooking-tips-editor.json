@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-cooking-tips-editor",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Cooking Tips Editor",
   "description": "Reusable cooking tips editor for both Simple Mode and Chef Mode recipes, supporting optional bullet-style tips with ordering and removal controls.",
   "dependencies": {

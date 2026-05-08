@@ -2,7 +2,7 @@
   "id": "gesture-control-overlay",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Gesture Control Overlay",
   "description": "Visual guide showing available touch and gesture controls as an animated overlay — supports step-by-step tutorial, subtle contextual hints, and full gesture reference grid.",
   "category": "spatial",

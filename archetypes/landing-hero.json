@@ -3,7 +3,7 @@
   "id": "landing-hero",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Landing Hero",
   "description": "High-impact product landing page with split hero, feature sections, how-it-works flow, pricing, testimonials, and conversion-optimized CTAs. Full-bleed scroll experience designed to convert visitors.",
   "tags": [

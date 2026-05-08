@@ -3,7 +3,7 @@
   "id": "marketing-docs",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Documentation Landing",
   "description": "Marketing landing page for a documentation platform. Features a search hero, feature highlights, and calls to action driving visitors into the knowledge base.",
   "tags": [

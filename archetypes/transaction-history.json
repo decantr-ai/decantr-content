@@ -3,7 +3,7 @@
   "id": "transaction-history",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Transaction History",
   "description": "Financial transaction ledger with filterable data tables, sparkline trend indicators, and transaction detail views.",
   "tags": ["finance", "transactions", "ledger", "history", "filtering", "2026"],

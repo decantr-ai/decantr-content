@@ -2,7 +2,7 @@
   "id": "offset-cart",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Offset Cart",
   "description": "A carbon offset marketplace cart with browsable project cards, tonnage selectors, certification badges, and a running impact summary sidebar.",
   "category": "climate",

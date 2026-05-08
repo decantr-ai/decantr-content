@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "fractional-ownership",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Fractional Ownership",
   "description": "Fractional asset ownership platform with browsable asset listings, cap tables, secondary market order books, governance voting, and full auth with marketing landing.",
   "tags": ["fractional", "ownership", "rwa", "tokenization", "finance", "2026"],

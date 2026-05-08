@@ -3,7 +3,7 @@
   "id": "fan-storefront",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Fan Storefront",
   "description": "Public creator storefront for fans. Browse content, view tiers, and subscribe to creators.",
   "tags": [

@@ -1,5 +1,7 @@
 {
   "id": "full-bleed",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Full Bleed",
   "description": "No persistent navigation. Scroll-driven hero-first layout. Used by portfolio landing pages.",
   "layout": "stack",

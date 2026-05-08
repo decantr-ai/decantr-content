@@ -1,5 +1,7 @@
 {
   "id": "centered",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Centered",
   "description": "Centered card on a background. Used for auth flows (login, register, forgot password) across all archetypes.",
   "layout": "center",

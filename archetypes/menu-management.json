@@ -3,7 +3,7 @@
   "id": "menu-management",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Menu Management",
   "description": "Menu editor and engineering workspace. Manages menus, sections, items, pricing, modifiers, and profitability analysis.",
   "tags": ["restaurant", "menu", "pricing", "engineering", "profitability", "2026"],

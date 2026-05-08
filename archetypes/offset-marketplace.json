@@ -3,7 +3,7 @@
   "id": "offset-marketplace",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Offset Marketplace",
   "description": "Carbon offset marketplace for browsing verified projects, reviewing details, and completing offset purchases with cart-based checkout.",
   "tags": [

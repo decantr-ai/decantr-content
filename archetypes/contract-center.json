@@ -3,7 +3,7 @@
   "id": "contract-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Contract Center",
   "description": "Auxiliary contract management surface for browsing the contract library, reviewing redlined documents with tracked changes, and comparing versions side-by-side.",
   "tags": [

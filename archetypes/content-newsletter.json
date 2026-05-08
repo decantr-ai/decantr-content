@@ -3,7 +3,7 @@
   "id": "content-newsletter",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Content Newsletter",
   "description": "Newsletter signup and archive experience. Landing-style subscribe page with hero and contact form, plus a browsable archive of past newsletters.",
   "tags": [

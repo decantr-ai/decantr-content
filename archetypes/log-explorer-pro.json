@@ -3,7 +3,7 @@
   "id": "log-explorer-pro",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Log Explorer Pro",
   "description": "Advanced log search and analysis interface with streaming log viewer, structured query filters, and contextual log detail inspection.",
   "tags": [

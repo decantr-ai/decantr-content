@@ -3,7 +3,7 @@
   "id": "marketing-platform",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing Platform",
   "description": "Platform marketing landing page with hero, feature showcase, pricing tiers, testimonials, and documentation hub for multi-tenant SaaS products.",
   "tags": [

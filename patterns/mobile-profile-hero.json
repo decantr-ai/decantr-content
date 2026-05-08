@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "mobile-profile-hero",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Mobile Profile Hero",
   "description": "Large photo header for mobile profile pages. Full-bleed cover photo (40-50vh), circular avatar overlapping the cover bottom edge, name+age+bio stack, and a row of action buttons (Edit on own profile / Message+Like+Report on other). Sticky-scroll behavior: avatar shrinks as user scrolls down. Differs from storefront-hero (desktop-leaning, wider proportions) by being mobile-optimized with portrait photo and thumb-friendly action sizing.",
   "category": "hero",

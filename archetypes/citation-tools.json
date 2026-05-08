@@ -3,7 +3,7 @@
   "id": "citation-tools",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Citation Tools",
   "description": "Auxiliary citation management surface for organizing a citation library and running Shepardize-style validity checks with visual citation graphs.",
   "tags": [

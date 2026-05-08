@@ -3,7 +3,7 @@
   "id": "deal-workspace",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Deal Workspace",
   "description": "Private equity deal workspace with dashboard, stage gate tracking, and per-stage detail views. Core interface for managing active M&A and investment transactions through structured stage progression.",
   "tags": [

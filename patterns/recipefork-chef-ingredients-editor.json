@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-chef-ingredients-editor",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Chef Ingredients Editor",
   "description": "Structured ingredient editor for Recipefork recipes with quantity, unit, ingredient, preparation, autosuggest helpers, and recipe scaling behavior. This is the canonical ingredient authoring surface used by Chef Mode and the standardized simple-mode ingredient flow.",
   "dependencies": {

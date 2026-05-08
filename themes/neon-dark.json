@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "neon-dark",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Neon Dark",
   "description": "High-contrast dark theme with electric neon accents. For agent dashboards, cyber UIs, and spatial interfaces.",
   "category": "dark",

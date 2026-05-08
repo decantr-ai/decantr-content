@@ -1,5 +1,7 @@
 {
   "id": "three-column-browser",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Three-Column Browser",
   "description": "Three-column browse layout with navigation tree, item list, and detail preview. Classic mail/file-browser pattern. Used for email clients, file managers, documentation browsers, and any master-detail-detail interface.",
   "layout": "grid",

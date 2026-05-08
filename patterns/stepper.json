@@ -2,7 +2,7 @@
   "id": "stepper",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Stepper",
   "description": "A step indicator for multi-step workflows showing numbered circles connected by lines, with distinct visual states for completed, active, and upcoming steps.",
   "category": "progress",

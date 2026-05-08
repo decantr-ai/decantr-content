@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "account-settings",
   "version": "1.1.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Account Settings",
   "description": "Account management workspace with responsive settings navigation, grouped forms, and stable save/action zones for profile, security, preferences, and danger-zone flows.",
   "dependencies": {

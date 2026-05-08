@@ -1,5 +1,7 @@
 {
   "id": "chat-portal",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Chat Portal",
   "description": "AI chatbot layout with collapsible conversation sidebar and anchored input. Used by ai-chatbot archetype for chat-first applications.",
   "layout": "grid",

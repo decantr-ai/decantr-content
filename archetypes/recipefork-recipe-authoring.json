@@ -3,7 +3,7 @@
   "id": "recipefork-recipe-authoring",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Recipe Authoring",
   "description": "Dual-mode recipe authoring workspace for Recipefork with Simple Mode and Chef Mode editing, drafts, hydrated editing, a shared structured ingredient editor, safe simple-to-chef conversion, hierarchical instruction groups, optional plating presentation, inline cookbook assignment, cooking tips, and rich recipe stories.",
   "tags": [

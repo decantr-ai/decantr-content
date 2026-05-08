@@ -3,7 +3,7 @@
   "id": "listing-browser",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Listing Browser",
   "description": "Browse and search marketplace listings with grid, map, and detail views. Core discovery interface for two-sided marketplaces.",
   "tags": [

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "payment-history",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Payment History",
   "description": "Payment records table with date range filtering, export, and receipt generation. Supports tenant, property, and portfolio views.",
   "dependencies": {

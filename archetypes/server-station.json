@@ -3,7 +3,7 @@
   "id": "server-station",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Server Station",
   "description": "Server-facing shift workspace. Tracks active tables, shift performance, sales, and tips across the current shift.",
   "tags": ["restaurant", "server", "shift", "tips", "waitstaff", "2026"],

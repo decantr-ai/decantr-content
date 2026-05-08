@@ -3,7 +3,7 @@
   "id": "investment-tracker",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Investment Tracker",
   "description": "Investment holdings tracker with position tables, sparkline price trends, performance charts, and individual holding detail views.",
   "tags": ["finance", "investments", "holdings", "stocks", "portfolio", "tracking", "2026"],

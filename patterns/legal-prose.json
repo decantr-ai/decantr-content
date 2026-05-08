@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "legal-prose",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Legal Prose",
   "description": "Styled legal documents with auto-generated TOC, smooth scroll navigation, collapsible sections, and print-friendly layout.",
   "dependencies": {

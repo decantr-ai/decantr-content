@@ -2,7 +2,7 @@
   "id": "valuation-chart",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Valuation Chart",
   "description": "A time-series valuation chart that renders historical price data with optional projection, confidence bands, benchmark overlays, and annotated event markers for critical moments like funding rounds or product launches.",
   "category": "finance",

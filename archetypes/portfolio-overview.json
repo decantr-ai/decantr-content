@@ -3,7 +3,7 @@
   "id": "portfolio-overview",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Portfolio Overview",
   "description": "Financial portfolio dashboard with net worth KPIs, allocation charts, and asset data tables. Primary view for wealth management and investment tracking.",
   "tags": ["finance", "portfolio", "dashboard", "kpi", "allocations", "investments", "2026"],

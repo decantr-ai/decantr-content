@@ -3,7 +3,7 @@
   "id": "prompt-library",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Prompt Library",
   "description": "Version-controlled prompt library for authoring, searching, comparing, and testing prompts with full diff history and evaluation results.",
   "tags": [

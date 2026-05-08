@@ -3,7 +3,7 @@
   "id": "content-site",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Content Site",
   "description": "Blog, magazine, or documentation site with article listings, categories, and search",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "kitchen-display",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Kitchen Display System",
   "description": "Kitchen display system (KDS) for restaurant ticket routing. Horizontal ticket rail with station-specific views and fire timers.",
   "tags": ["restaurant", "kitchen", "kds", "tickets", "bump-bar", "2026"],

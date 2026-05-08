@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "comment-thread",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Comment Thread",
   "description": "Inline or sidebar comment discussions with reply threading, @mentions, reactions, and resolve functionality.",
   "dependencies": {

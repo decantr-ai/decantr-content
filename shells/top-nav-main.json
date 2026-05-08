@@ -1,5 +1,7 @@
 {
   "id": "top-nav-main",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Top Nav + Main",
   "description": "Horizontal navigation shell with a compact sticky header, shared content insets, and a curated page-width rhythm. Used by public browsing, editorial catalog pages, and marketing-style registry surfaces.",
   "layout": "stack",

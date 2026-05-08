@@ -3,7 +3,7 @@
   "id": "event-discovery",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Event Discovery",
   "description": "Event browsing and discovery interface with search, calendar, map, and detail views. Core exploration surface for event and community platforms.",
   "tags": [

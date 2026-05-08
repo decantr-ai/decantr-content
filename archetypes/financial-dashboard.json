@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "financial-dashboard",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Financial Dashboard",
   "description": "Financially-focused dashboard with portfolio overview, P&L tracking, transaction tables, reporting charts, and account settings.",
   "tags": [

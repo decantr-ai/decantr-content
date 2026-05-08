@@ -3,7 +3,7 @@
   "id": "marketing-fractional",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing — Fractional Ownership",
   "description": "Public marketing landing page for a fractional ownership platform. Explains tokenized investing, trust signals, and drives visitors to sign up and browse assets.",
   "tags": [

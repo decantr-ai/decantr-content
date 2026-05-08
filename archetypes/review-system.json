@@ -3,7 +3,7 @@
   "id": "review-system",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Review System",
   "description": "Review submission flow for marketplace transactions. Allows buyers to rate, write text reviews, and upload photos after a completed booking.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "saas-billing-v2",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "SaaS Billing",
   "description": "Billing management with plan selection, usage meters, invoice history, and payment management for SaaS products.",
   "tags": ["saas", "billing", "pricing", "invoices", "payments", "2026"],

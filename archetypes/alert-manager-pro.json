@@ -3,7 +3,7 @@
   "id": "alert-manager-pro",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Alert Manager Pro",
   "description": "Alert and incident management interface with active alert views, rule builder, incident timelines, and war-room detail pages for coordinated response.",
   "tags": [

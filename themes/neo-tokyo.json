@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "neo-tokyo",
+  "version": "1.0.0",
   "name": "Neo Tokyo",
   "description": "Anime/manga-inspired theme with vibrant gradients, sakura pink, and energetic motion. Bouncy spring animations, pill shapes, and gradient borders create an expressive, youthful aesthetic. Supports both dark midnight and warm cream modes.",
   "tags": [
@@ -95,7 +96,7 @@
     "display": "'Orbitron', 'Inter', ui-sans-serif, sans-serif",
     "body": "'Inter', ui-sans-serif, system-ui, sans-serif"
   },
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "neo-card": "Gradient border card with inner glow effect. Vibrant pink-to-purple border, subtle radial inner glow on hover.",

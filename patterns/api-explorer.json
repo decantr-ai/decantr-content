@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "api-explorer",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "API Explorer",
   "description": "Interactive API documentation with a browsable endpoint list, parameter tables, a try-it-out request builder with editable JSON bodies, live response viewer, and multi-language code snippet generation.",
   "category": "developer",

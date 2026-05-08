@@ -3,7 +3,7 @@
   "id": "ai-chatbot",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Chatbot",
   "description": "AI chatbot interface with conversation sidebar, message thread, and anchored input. Core interface for chat-first AI applications.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "saas-overview",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "SaaS Overview",
   "description": "KPI dashboard overview with activity feed, chart grid, and quick actions. The primary landing surface for SaaS dashboard users.",
   "tags": ["saas", "dashboard", "kpi", "overview", "activity", "2026"],

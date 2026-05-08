@@ -3,7 +3,7 @@
   "id": "pm-financials",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Property Management Financials",
   "description": "Property management financial analytics including P&L overview, rent roll, expense tracking, and payment history for real estate portfolios.",
   "tags": [

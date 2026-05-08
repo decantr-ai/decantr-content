@@ -3,7 +3,7 @@
   "id": "marketing-ai-studio",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Studio Marketing",
   "description": "Marketing landing page for the AI Agent Studio, showcasing features, workflow demos, pricing tiers, and conversion CTAs.",
   "tags": [

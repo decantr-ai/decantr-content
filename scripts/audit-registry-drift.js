@@ -18,7 +18,11 @@
 
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { dirname } from 'path';
-import { CONTENT_DIRECTORIES, DIRECTORY_TO_CONTENT_TYPE } from './content-contract.js';
+import {
+  CONTENT_DIRECTORIES,
+  DIRECTORY_TO_CONTENT_TYPE,
+  isIgnoredLocalContentFile,
+} from './content-contract.js';
 
 const args = process.argv.slice(2);
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
@@ -43,7 +47,7 @@ function loadRepoItems() {
     const slugs = new Set();
 
     try {
-      const files = readdirSync(dir).filter(file => file.endsWith('.json'));
+      const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isIgnoredLocalContentFile(file));
       for (const file of files) {
         const path = `${dir}/${file}`;
         try {

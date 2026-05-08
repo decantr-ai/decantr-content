@@ -3,7 +3,7 @@
   "id": "auth-flow-enterprise",
   "role": "gateway",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Enterprise Auth Flow",
   "description": "Enterprise authentication flow with SSO, MFA, org creation during registration, and team invitation acceptance for multi-tenant SaaS platforms.",
   "tags": [

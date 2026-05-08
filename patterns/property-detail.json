@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "property-detail",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Property Detail",
   "description": "Full property view with details, gallery, metrics, units, financials, documents, and maintenance history.",
   "dependencies": {

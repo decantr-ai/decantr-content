@@ -2,7 +2,7 @@
   "id": "agent-handoff-zone",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Agent Handoff Zone",
   "description": "A transition portal for agent-to-agent context transfer that visualizes the source agent, target agent, transferred context summary, animated handoff progress, and an approval workflow for human-in-the-loop oversight.",
   "category": "agentic",

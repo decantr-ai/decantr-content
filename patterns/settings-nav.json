@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "settings-nav",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Settings Nav",
   "description": "Vertical navigation list for settings and preferences pages with grouped sections, active state highlighting, icons, and badges. Collapses to horizontal tabs on mobile.",
   "category": "navigation",

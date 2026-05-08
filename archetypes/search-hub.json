@@ -3,7 +3,7 @@
   "id": "search-hub",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Search Hub",
   "description": "AI-powered search interface with semantic results, filters, and highlighting. Provides intelligent search across knowledge base content.",
   "tags": [

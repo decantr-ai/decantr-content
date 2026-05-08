@@ -3,7 +3,7 @@
   "id": "dashboard-core",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Dashboard Core",
   "description": "Overview and analytics pages with KPIs, charts, and data tables",
   "tags": [

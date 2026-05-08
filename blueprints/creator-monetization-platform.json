@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "creator-monetization-platform",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Monetization Platform",
   "description": "Complete creator monetization platform with dual-shell architecture. Creator dashboard for content, subscribers, and earnings management. Fan storefront for browsing and purchasing. Patreon/Gumroad-style.",
   "tags": [

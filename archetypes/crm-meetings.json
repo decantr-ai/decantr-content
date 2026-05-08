@@ -3,7 +3,7 @@
   "id": "crm-meetings",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "CRM Meetings",
   "description": "Meeting management interface with calendar views, AI-generated recaps, transcription, and automatic action item extraction linked to CRM contacts and deals.",
   "tags": [

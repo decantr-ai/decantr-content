@@ -13,10 +13,17 @@ const monorepoRoot = process.env.DECANTR_MONOREPO_DIR
   ? resolve(process.env.DECANTR_MONOREPO_DIR)
   : resolve(repoRoot, '..', 'decantr-monorepo');
 const registrySchemaDir = join(monorepoRoot, 'packages', 'registry', 'schema');
+const essenceSchemaDir = join(monorepoRoot, 'packages', 'essence-spec', 'schema');
 const targetDir = join(repoRoot, 'schemas');
 
 if (!existsSync(registrySchemaDir)) {
   console.error(`Registry schema source not found: ${registrySchemaDir}`);
+  console.error('Set DECANTR_MONOREPO_DIR to a Decantr monorepo checkout and try again.');
+  process.exit(1);
+}
+
+if (!existsSync(essenceSchemaDir)) {
+  console.error(`Essence schema source not found: ${essenceSchemaDir}`);
   console.error('Set DECANTR_MONOREPO_DIR to a Decantr monorepo checkout and try again.');
   process.exit(1);
 }
@@ -27,4 +34,7 @@ for (const file of readdirSync(registrySchemaDir).filter(name => name.endsWith('
   copyFileSync(join(registrySchemaDir, file), join(targetDir, file));
 }
 
+copyFileSync(join(essenceSchemaDir, 'essence.v4.json'), join(targetDir, 'essence.v4.json'));
+
 console.log(`Synced registry schemas from ${registrySchemaDir}`);
+console.log(`Synced Essence V4 schema from ${essenceSchemaDir}`);

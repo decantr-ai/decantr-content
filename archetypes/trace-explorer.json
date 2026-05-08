@@ -3,7 +3,7 @@
   "id": "trace-explorer",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Trace Explorer",
   "description": "Distributed tracing viewer with trace search, latency histograms, full waterfall visualization, and service topology mapping.",
   "tags": [

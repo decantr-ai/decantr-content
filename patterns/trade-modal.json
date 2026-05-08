@@ -2,7 +2,7 @@
   "id": "trade-modal",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Trade Modal",
   "description": "A trade execution modal for buying or selling securities with order-type selection, quantity/price inputs, live market info, estimated total calculation, fee breakdown, and order-preview confirmation before execution.",
   "category": "finance",

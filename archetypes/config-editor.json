@@ -3,7 +3,7 @@
   "id": "config-editor",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Config Editor",
   "description": "Configuration file editor with tree navigation, diff view, and terminal integration. For managing app configuration in a terminal interface.",
   "tags": [

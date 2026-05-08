@@ -3,7 +3,7 @@
   "id": "workspace-home",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Workspace Home",
   "description": "Dashboard for collaborative workspace with recent documents, shared items, and activity feed. Landing page after login.",
   "tags": [

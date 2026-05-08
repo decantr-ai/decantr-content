@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "carbon-ai-portal",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Carbon AI Portal",
   "description": "Complete AI chatbot platform with auth, marketing, settings, and legal pages. Sleek developer-tool aesthetic with neutral-cool grays and soft muted blue accent.",
   "tags": [

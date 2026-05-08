@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "storefront-hero",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Storefront Hero",
   "description": "Creator landing page banner with cover image, avatar, bio, social links, and subscribe CTA. The first impression for fans.",
   "dependencies": {

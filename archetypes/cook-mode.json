@@ -3,7 +3,7 @@
   "id": "cook-mode",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Cook Mode",
   "description": "Distraction-free step-by-step cooking interface with large text, step navigation, and minimal chrome for hands-free kitchen use.",
   "tags": ["cooking", "step-by-step", "cook-mode", "hands-free", "kitchen", "2026"],

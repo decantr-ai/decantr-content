@@ -3,7 +3,7 @@
   "id": "asset-browser",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Asset Browser",
   "description": "Primary discovery surface for a fractional ownership platform. Investors browse tokenized assets, filter by class and yield, and drill into detailed valuation, cap table, and dividend history.",
   "tags": [

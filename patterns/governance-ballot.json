@@ -2,7 +2,7 @@
   "id": "governance-ballot",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Governance Ballot",
   "description": "A governance voting ballot for shareholder resolutions or DAO proposals, featuring proposal context, single/multi/weighted vote options, rationale capture, voting-power disclosure, and quorum progress tracking.",
   "category": "finance",

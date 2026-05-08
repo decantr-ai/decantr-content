@@ -3,7 +3,7 @@
   "id": "research-workspace",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Research Workspace",
   "description": "Primary legal research workspace for searching case law, inspecting case detail with citation graphs, and drafting research memos side-by-side with supporting briefs.",
   "tags": [

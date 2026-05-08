@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "property-card",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Property Card",
   "description": "Single property overview card with key metrics including address, unit count, occupancy rate, and monthly revenue.",
   "dependencies": {

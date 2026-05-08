@@ -3,7 +3,7 @@
   "id": "team-workspace",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Team Workspace",
   "description": "Team member management and permission configuration. Data table of members with role badges and a permission matrix for fine-grained access control.",
   "tags": ["team", "members", "permissions", "roles", "workspace", "2026"],

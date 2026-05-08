@@ -1,5 +1,7 @@
 {
   "id": "minimal-header",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Minimal Header",
   "description": "Slim header with centered content below. Used for checkout flows, focused task pages.",
   "layout": "stack",

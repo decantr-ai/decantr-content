@@ -3,7 +3,7 @@
   "id": "health-records",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Health Records",
   "description": "Health records vault for browsing, viewing, and managing patient documents including lab results, imaging, and intake forms.",
   "tags": [

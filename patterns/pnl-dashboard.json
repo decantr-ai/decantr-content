@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "pnl-dashboard",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "P&L Dashboard",
   "description": "Profit & loss analytics dashboard with gross income, expenses, NOI, cash flow, breakdowns by category, property comparison, and projections.",
   "dependencies": {

@@ -3,7 +3,7 @@
   "id": "marketing-pipeline",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Pipeline Studio Landing",
   "description": "Public marketing landing page for a data pipeline studio. Vision hero, feature highlights, how-it-works walkthrough, pricing tiers, and call-to-action.",
   "tags": [

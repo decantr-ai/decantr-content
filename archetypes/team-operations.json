@@ -3,7 +3,7 @@
   "id": "team-operations",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Team Operations",
   "description": "Primary esports team operations surface with team overview dashboard, player roster, and individual player profiles tracking form and activity.",
   "tags": [

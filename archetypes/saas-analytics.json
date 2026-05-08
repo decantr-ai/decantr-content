@@ -3,7 +3,7 @@
   "id": "saas-analytics",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "SaaS Analytics",
   "description": "Deep analytics with charts, sparklines, and usage meters. Detailed breakdowns of product metrics, user behavior, and resource consumption.",
   "tags": ["saas", "analytics", "charts", "usage", "metrics", "2026"],

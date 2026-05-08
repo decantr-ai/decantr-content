@@ -2,7 +2,7 @@
   "id": "sparkline-cell",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sparkline Cell",
   "description": "An inline mini-chart designed for table cells, showing trend data over time as a compact SVG sparkline with trend indicator and value label.",
   "category": "data-visualization",

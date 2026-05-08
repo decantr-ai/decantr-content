@@ -26,6 +26,12 @@ jobs:
       - name: Generate content health JSON
         run: npm run content:health:json
 
+      - name: Audit intentional warning suppressions
+        run: npm run content:health:suppressions
+
+      - name: Certify registry V2 readiness
+        run: npm run registry:v2-certify
+
       - name: Audit content health
         run: npm run content:health
 
@@ -44,4 +50,6 @@ jobs:
           path: |
             content-health-report.json
             content-health-summary.md
+            registry-v2-certification-report.json
+            registry-v2-certification-summary.md
           if-no-files-found: ignore

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "bottom-tab-bar",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Bottom Tab Bar",
   "description": "Mobile-first fixed-bottom tab navigator with 4-5 icon+label items. The primary navigation affordance for mobile consumer apps. Active tab signaled via color shift, icon scale, and an underline dot. Sticky on desktop within the centered column. Pairs with the mobile-tab-bar shell.",
   "category": "navigation",

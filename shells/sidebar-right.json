@@ -1,5 +1,7 @@
 {
   "id": "sidebar-right",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Right Sidebar",
   "description": "Main content with a right-side navigation panel. Useful for settings, documentation sidebars, or inspector layouts.",
   "layout": "grid",

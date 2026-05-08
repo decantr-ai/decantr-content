@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "product-card",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Product Card",
   "description": "Single product/post display card with thumbnail, price, type indicator, and actions. Used within product grids.",
   "dependencies": {

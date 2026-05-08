@@ -3,7 +3,7 @@
   "id": "organizer-dashboard",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Organizer Dashboard",
   "description": "Event organizer management hub with event editing, attendee management, revenue analytics, and performance dashboards.",
   "tags": [

@@ -2,7 +2,7 @@
   "id": "render-queue",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Render Queue",
   "description": "Queue of AI generation jobs displaying status, progress, thumbnails, and cancel/retry actions for video and image rendering workflows.",
   "category": "media",

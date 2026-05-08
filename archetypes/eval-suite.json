@@ -3,7 +3,7 @@
   "id": "eval-suite",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Eval Suite",
   "description": "Model evaluation test suite for running, reviewing, and comparing evaluation results with per-test breakdowns and regression detection.",
   "tags": [

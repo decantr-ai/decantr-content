@@ -3,7 +3,7 @@
   "id": "marketing-video-studio",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing - AI Video Studio",
   "description": "Public-facing landing page for an AI video studio product. Communicates vision, showcases features and workflow, presents pricing tiers, and drives signups with social proof.",
   "tags": [

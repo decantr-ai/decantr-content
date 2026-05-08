@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "tenant-card",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Tenant Card",
   "description": "Tenant profile summary card with photo, contact info, property/unit, lease details, and payment status.",
   "dependencies": {

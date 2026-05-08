@@ -3,7 +3,7 @@
   "id": "portfolio-blog",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Portfolio Blog",
   "description": "Blog listing and post detail pages for a portfolio site. Comfortable reading typography with breadcrumb navigation.",
   "tags": ["portfolio", "blog", "writing", "articles", "content", "2026"],

@@ -2,7 +2,7 @@
   "id": "scrim-calendar",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Scrim Calendar",
   "description": "A team scrimmage scheduling calendar showing opponent matchups, map plans, time slots, player availability, and confirmation status across weeks or months.",
   "category": "esports",

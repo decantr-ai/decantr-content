@@ -3,7 +3,7 @@
   "id": "api-console",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "API Console",
   "description": "Interactive API documentation, key management, and webhook configuration console for developer-facing SaaS platforms.",
   "tags": [

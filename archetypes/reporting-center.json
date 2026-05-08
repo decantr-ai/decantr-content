@@ -3,7 +3,7 @@
   "id": "reporting-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Reporting Center",
   "description": "Climate disclosure reporting workspace for CSRD and compliance reports with list browsing and guided report building.",
   "tags": [

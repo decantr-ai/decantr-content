@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "ai-video-studio",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Video Studio",
   "description": "Professional AI video production studio with multi-track timeline, character consistency library, prompt director, render queue, and full auth with marketing landing.",
   "tags": ["ai", "video", "studio", "generation", "film", "2026"],

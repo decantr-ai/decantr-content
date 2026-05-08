@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/shell.v1.json",
   "id": "recipefork-top-nav",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Top Nav",
   "description": "Shared Recipefork application shell with sticky top nav, compact utility actions, and a wide scrollable content region below. Mirrors the current app's persistent nav model across public and authenticated product routes.",
   "layout": "stack",

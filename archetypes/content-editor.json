@@ -3,7 +3,7 @@
   "id": "content-editor",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Content Editor",
   "description": "Content creation and editing interface for publishing patterns, themes, blueprints, and other registry items.",
   "tags": [

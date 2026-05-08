@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "esports-hq",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Esports HQ",
   "description": "Professional esports matchday command platform with live roster tracking, scrim scheduling, VOD review, sponsor dashboards, full auth, and an immersive broadcast-style public homepage.",
   "tags": ["esports", "gaming", "team-ops", "competitive", "2026"],

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "permission-matrix",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Permission Matrix",
   "description": "Role-based access control grid showing permissions by role. Used for workspace settings and team management.",
   "dependencies": {

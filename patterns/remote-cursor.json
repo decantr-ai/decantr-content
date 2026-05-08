@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "remote-cursor",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Remote Cursor",
   "description": "Real-time cursor indicator for collaborators with name label and smooth interpolation. Shows where other users are editing.",
   "dependencies": {

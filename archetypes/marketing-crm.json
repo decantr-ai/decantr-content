@@ -3,7 +3,7 @@
   "id": "marketing-crm",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "CRM Marketing",
   "description": "Public marketing landing page for the AI-native CRM. Showcases AI-powered sales features, pipeline management, pricing, and customer testimonials with strong conversion CTAs.",
   "tags": [

@@ -1,5 +1,7 @@
 {
   "id": "sidebar-main-footer",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sidebar + Main + Footer",
   "description": "Sidebar layout with a persistent footer bar. Used for apps needing status bars or action footers.",
   "layout": "grid",

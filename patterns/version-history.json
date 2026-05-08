@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "version-history",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Version History",
   "description": "Document revision timeline with version preview, diff view, and restore functionality. Shows auto-saves and named checkpoints.",
   "dependencies": {

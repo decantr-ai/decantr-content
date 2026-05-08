@@ -3,7 +3,7 @@
   "id": "marketing-civic",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing Civic",
   "description": "Public marketing surface for civic engagement platforms with landing and about pages. Positions the platform to municipal buyers and citizen communities.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "creator-content",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Content",
   "description": "Content management for creators. Upload, organize, and manage posts, media, and products.",
   "tags": [

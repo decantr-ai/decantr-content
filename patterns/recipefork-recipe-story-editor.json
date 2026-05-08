@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-recipe-story-editor",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Recipe Story Editor",
   "description": "Expandable optional rich-text story editor for recipe narratives, family context, and cooking notes. Mirrors Recipefork's optional story flow with toolbar and sanitization-aware output expectations.",
   "dependencies": {

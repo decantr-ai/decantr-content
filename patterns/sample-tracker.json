@@ -2,7 +2,7 @@
   "id": "sample-tracker",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sample Tracker",
   "description": "A laboratory sample inventory tracker rendering biological or chemical samples with barcode identifiers, storage location tags, expiry countdowns, chain-of-custody logs, and status indicators across grid, freezer-map, or timeline views.",
   "category": "science",

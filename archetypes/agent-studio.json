@@ -3,7 +3,7 @@
   "id": "agent-studio",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Agent Studio",
   "description": "Core agent building workspace for designing, configuring, and testing AI agents with a three-panel editor, tool management, and live preview.",
   "tags": [

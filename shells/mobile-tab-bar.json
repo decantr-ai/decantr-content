@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/shell.v1.json",
   "id": "mobile-tab-bar",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Mobile Tab Bar",
   "description": "Mobile-first app shell with sticky compact header, single-scroll body, and fixed bottom tab-bar. The first shell in Decantr's catalog optimized for mobile-portrait consumer apps. Desktop scales gracefully to a 480px-wide centered column. Use for: dating apps, social discovery, swipe feeds, anywhere a bottom tab navigator is the primary navigation affordance.",
   "root": "_relative _flex _flex-col _w-full _min-h-dvh _max-w-screen-md _mx-auto _bg-background _text-text",

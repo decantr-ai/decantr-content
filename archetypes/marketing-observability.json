@@ -3,7 +3,7 @@
   "id": "marketing-observability",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Observability Platform Marketing",
   "description": "Public marketing landing page for the observability platform. Showcases product vision, feature highlights, pricing tiers, testimonials, and call-to-action sections.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "workspace-settings",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Workspace Settings",
   "description": "Team workspace configuration including general settings, member management, permissions, and billing.",
   "tags": [

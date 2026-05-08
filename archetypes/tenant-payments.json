@@ -3,7 +3,7 @@
   "id": "tenant-payments",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Tenant Payments",
   "description": "Tenant payment management including rent reminders, payment history, and autopay setup configuration.",
   "tags": [

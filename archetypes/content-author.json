@@ -3,7 +3,7 @@
   "id": "content-author",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Content Author",
   "description": "Author and editor dashboard for managing drafts, editing articles, and viewing published content. Functional workspace focused on writing productivity.",
   "tags": [

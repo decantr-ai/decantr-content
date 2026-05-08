@@ -3,7 +3,7 @@
   "id": "doc-browser",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Documentation Browser",
   "description": "Full documentation reading experience with navigable doc tree, content pane, and table of contents. Core interface for knowledge base platforms.",
   "tags": [

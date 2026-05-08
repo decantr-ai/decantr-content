@@ -3,7 +3,7 @@
   "id": "investor-portal",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Investor Portal",
   "description": "Investor management portal tracking NDA status, access history, and document activity per investor. Centralizes the bidder and limited-partner roster for deal rooms.",
   "tags": [

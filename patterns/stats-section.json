@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "stats-section",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Stats Section",
   "description": "Marketing-oriented statistics section with large headline metrics, supporting labels, and optional narrative framing.",
   "dependencies": {

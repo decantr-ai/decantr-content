@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "studio",
+  "version": "1.0.0",
   "name": "Studio",
   "description": "Warm, creative theme with coral accents and rich purple premium highlights. Friendly, approachable, premium but not cold. Inspired by Figma, Framer, Gumroad.",
   "tags": [
@@ -95,7 +96,7 @@
       }
     }
   },
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "studio-canvas": "Warm background using theme background token. Friendly, inviting foundation.",

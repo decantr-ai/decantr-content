@@ -3,7 +3,7 @@
   "id": "auth-full",
   "role": "gateway",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Auth Full",
   "description": "Complete authentication flow with login, register, forgot password, reset password, email verification, and MFA setup/verify.",
   "tags": [

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "org-governance-panel",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Org Governance Panel",
   "description": "Organization governance workspace for managing approval policy, reviewing pending packages, and scanning the audit trail inside a shared dashboard shell.",
   "dependencies": {

@@ -2,7 +2,7 @@
   "id": "morphing-topology",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Morphing Topology",
   "description": "A layout that reshapes its zone structure based on AI-detected user context. Zones expand, collapse, merge, and split using animated CSS grid-template changes driven by application state. Integrates with Decantr's composition topology system: zones map to archetype roles (primary, gateway, public, auxiliary), and transitions between zone configurations are smooth and meaningful. For adaptive dashboards, context-aware workspaces, and AI-orchestrated interfaces that reorganize around what the user is doing.",
   "category": "generative",

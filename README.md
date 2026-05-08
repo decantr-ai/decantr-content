@@ -20,7 +20,7 @@ shells/         — Page layout containers (sidebar-main, topbar-main, etc.)
 
 Changes are validated in CI and published by Decantr maintainers after they land on `main`.
 
-CI checks every content file with `node validate.js` and runs Decantr Content Health with `npm run content:health`. Public contributors do not need registry credentials to validate or propose content changes.
+CI checks every content file with `node validate.js`, runs Decantr Content Health, audits intentional warning suppressions, and certifies the active registry catalog against the Decantr V2 / Essence V4 product boundary. Public contributors do not need registry credentials to validate or propose content changes.
 
 ## Local Development
 
@@ -29,7 +29,9 @@ For contributors (no credentials required):
 ```bash
 npm install
 npm run validate                                                                 # validate every JSON file against the schemas
+npm run registry:v2-certify                                                      # prove active blueprints compile to Essence v4
 npm run content:health                                                           # local content health report, fails only on blocking errors
+npm run content:health:json && npm run content:health:suppressions                # fail if a warning is new or no longer intentionally suppressed
 npm run registry:audit -- --report-json=./registry-drift-report.json             # read-only diff against the live registry
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
 ```
@@ -53,6 +55,24 @@ What it reports:
 - content guidance coverage for patterns, themes, blueprints, and archetypes
 
 The CI gate uses `--fail-on error`, so existing warning-level reference drift stays visible in the GitHub summary without blocking unrelated content fixes. Use a finding's prompt command, such as `decantr content-health --prompt <finding-id>`, to produce a scoped remediation prompt for an AI coding assistant.
+
+Warning-level debt is also tracked in [`content-health-suppressions.json`](./content-health-suppressions.json). New Content Health warning IDs fail CI until they are fixed or deliberately added to that baseline with a rationale. Stale suppressions fail too, so the baseline shrinks as content quality improves.
+
+## Decantr V2 Certification
+
+Decantr V2 uses Essence `4.0.0` as the active app contract. Registry content keeps its own schema versions (`pattern.v2.json`, `archetype.v2.json`, `blueprint.v1.json`, etc.), but every active published item must declare:
+
+```json
+"decantr_compat": ">=2.0.0"
+```
+
+Run the V2 certification gate before release-sensitive content changes:
+
+```bash
+npm run registry:v2-certify
+```
+
+The certifier builds Essence V4 candidates from every active blueprint and its composed archetypes, resolves inherited shells to concrete blueprint route shells, validates against [`schemas/essence.v4.json`](./schemas/essence.v4.json), and writes local report artifacts. Files ignored by the publish pipeline, such as `recipefork*` local content, are reported as ignored rather than certified.
 
 ## Auditing Live Registry Drift
 
@@ -100,6 +120,7 @@ Each content type has specific required fields. All items should include:
 - `description` — brief description
 
 This repo keeps vendored copies of the canonical registry schemas in [`schemas/`](./schemas):
+- `schemas/essence.v4.json`
 - `schemas/pattern.v2.json`
 - `schemas/theme.v1.json`
 - `schemas/blueprint.v1.json`

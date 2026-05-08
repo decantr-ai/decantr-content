@@ -2,7 +2,7 @@
   "id": "qa-thread",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Q&A Thread",
   "description": "Threaded question and answer conversation attached to documents with status tracking, assignments, document attachments, and resolution workflow.",
   "category": "document",

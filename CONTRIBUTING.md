@@ -11,10 +11,11 @@ git clone https://github.com/decantr-ai/decantr-content.git
 cd decantr-content
 npm install
 npm run validate
+npm run registry:v2-certify
 npm run content:health
 ```
 
-`npm run validate` and `npm run content:health` run offline and require no credentials. They are the core checks CI runs on every PR.
+`npm run validate`, `npm run registry:v2-certify`, and `npm run content:health` run offline and require no credentials. They are the core checks CI runs on every PR.
 
 For quick setup help, showcase feedback, or live discussion about content ideas, join the [Decantr Discord](https://discord.gg/WeDpBd4xFU). Keep proposed registry content changes, bugs, and durable decisions in GitHub issues, PRs, or docs.
 
@@ -34,6 +35,7 @@ For quick setup help, showcase feedback, or live discussion about content ideas,
 - **`id` field must equal the filename** (without `.json`). It becomes the slug in the registry.
 - **`$schema` must point at the canonical URL** for the content type (see `schemas/`).
 - **`version` is semver** (`"1.0.0"`).
+- **`decantr_compat` must be `">=2.0.0"` for active `@official` content.** Content item versions describe the registry item itself; Decantr compatibility describes the product line that may consume it.
 - **No comments.** JSON does not allow them.
 
 ## Quality bars
@@ -66,16 +68,18 @@ CI passes on schema validity, but the validator also emits warnings. Items that 
 Two read-only audit scripts run without credentials:
 
 ```bash
+npm run registry:v2-certify
+npm run content:health:json && npm run content:health:suppressions
 npm run registry:audit -- --report-json=./registry-drift-report.json
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
 ```
 
-These compare the local repo against `api.decantr.ai` and surface what would change when your PR lands.
+The V2 certifier proves active blueprints compile to Essence `4.0.0`; the suppression audit proves current Content Health warnings are intentional. The registry and intelligence audits compare the local repo against `api.decantr.ai` and surface what would change when your PR lands.
 
 ## What not to PR
 
 - New top-level directories or new content types — those require a maintainer-coordinated schema change first.
-- Edits to `schemas/` directly. Those are vendored from the canonical registry schema source by maintainers.
+- Edits to `schemas/` directly. Those are vendored from the canonical Decantr schema sources by maintainers.
 - Changes to `validate.js` that loosen the contract — tighten freely, loosen only with a maintainer-led discussion.
 
 ## Code of conduct

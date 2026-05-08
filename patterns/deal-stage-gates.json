@@ -2,7 +2,7 @@
   "id": "deal-stage-gates",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Deal Stage Gates",
   "description": "Horizontal stage gate tracker for deal and project progression with approval checkpoints, approver avatars, and milestone date tracking.",
   "category": "workflow",

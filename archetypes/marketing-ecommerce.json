@@ -3,7 +3,7 @@
   "id": "marketing-ecommerce",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "E-Commerce Marketing Landing",
   "description": "Public marketing landing page for an e-commerce storefront with hero, feature highlights, social proof, and conversion CTAs.",
   "tags": ["marketing", "landing", "ecommerce", "public", "seo", "2026"],

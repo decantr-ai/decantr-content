@@ -3,7 +3,7 @@
   "id": "metrics-overview-dashboard",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Metrics Overview Dashboard",
   "description": "Top-level observability dashboard with KPI summaries, real-time charts, and service health maps. Primary entry point for platform-wide metrics monitoring.",
   "tags": [

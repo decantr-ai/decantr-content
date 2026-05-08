@@ -3,7 +3,7 @@
   "id": "restaurant-floor",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Restaurant Floor",
   "description": "Live floor map and reservations workspace for front-of-house staff. Real-time table status, reservation calendar, and guest seating.",
   "tags": ["restaurant", "floor", "reservations", "seating", "hospitality", "2026"],

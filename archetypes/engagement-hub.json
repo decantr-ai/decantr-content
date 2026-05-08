@@ -3,7 +3,7 @@
   "id": "engagement-hub",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Engagement Hub",
   "description": "Citizen engagement hub with dashboards, petitions, voting, and threaded comments. Primary entry point for civic participation platforms enabling residents to track and influence local decisions.",
   "tags": [

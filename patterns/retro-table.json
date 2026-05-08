@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "retro-table",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Retro Table",
   "description": "ASCII-bordered data tables with box-drawing characters for terminal-style displays.",
   "dependencies": {

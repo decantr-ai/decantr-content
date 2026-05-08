@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "financial-dashboard",
   "version": "2.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Financial Dashboard",
   "description": "Personal finance dashboard with portfolio overview, transaction history, budget planning, investment tracking, marketing landing, and full auth and settings.",
   "tags": [

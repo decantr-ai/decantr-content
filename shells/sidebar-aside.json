@@ -1,5 +1,7 @@
 {
   "id": "sidebar-aside",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sidebar + Aside",
   "description": "Three-column layout with left navigation and right inspector/detail panel. Used for admin dashboards, email clients, IDE-style apps.",
   "layout": "grid",

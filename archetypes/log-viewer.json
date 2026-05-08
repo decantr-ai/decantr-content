@@ -3,7 +3,7 @@
   "id": "log-viewer",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Log Viewer",
   "description": "Dedicated log streaming interface with filtering, search, and real-time updates. Focus view for log analysis and monitoring.",
   "tags": [

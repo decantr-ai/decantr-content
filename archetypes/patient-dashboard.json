@@ -3,7 +3,7 @@
   "id": "patient-dashboard",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Patient Dashboard",
   "description": "Patient overview dashboard with appointments, vitals tracking, and medication management. Central hub for health and wellness portal users.",
   "tags": [

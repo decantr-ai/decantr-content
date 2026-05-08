@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "status-bar",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Status Bar",
   "description": "Terminal-style status line with real-time indicators, mode display, and clickable sections.",
   "dependencies": {

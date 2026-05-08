@@ -3,7 +3,7 @@
   "id": "marketing-events",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Events Marketing",
   "description": "Public-facing marketing and landing page for an event and community platform. Highlights featured events, testimonials, and sign-up CTAs.",
   "tags": [

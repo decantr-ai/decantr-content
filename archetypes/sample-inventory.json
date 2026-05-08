@@ -3,7 +3,7 @@
   "id": "sample-inventory",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sample Inventory",
   "description": "Biological and chemical sample inventory management with chain-of-custody tracking. Researchers locate, log, and audit every sample in the lab.",
   "tags": [

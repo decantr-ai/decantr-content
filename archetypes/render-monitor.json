@@ -3,7 +3,7 @@
   "id": "render-monitor",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Render Monitor",
   "description": "Observe every render job in flight: queue, progress, GPU utilization, and live log streaming for diagnosing failed or slow video generations.",
   "tags": [

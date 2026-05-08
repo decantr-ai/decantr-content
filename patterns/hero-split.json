@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "hero-split",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Hero Split",
   "description": "Split hero section with media (logo, screenshot, product image, or photo mockup) on one side and text with CTAs on the other. Supports pill-shaped buttons, responsive stacking, and subtle background tinting when the theme calls for it. The split layout places emphasis on brand identity alongside a clear value proposition.",
   "dependencies": {

@@ -2,7 +2,7 @@
   "id": "character-sheet",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Character Sheet",
   "description": "Character consistency tracker for AI video production with reference images, trait tags, appearance log, and consistency scoring across generated frames.",
   "category": "media",

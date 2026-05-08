@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "intake-form-wizard",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Intake Form Wizard",
   "description": "Multi-step healthcare intake form with conditional branching, progress sidebar, auto-save, file upload, section review, and conversational single-question mode.",
   "category": "healthcare",

@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "fintech",
+  "version": "1.0.0",
   "name": "Fintech",
   "description": "Data-dense dark-mode financial terminal optimized for real-time market data. Deep dark backgrounds with indigo and cyan accents. Monospace numbers, tight spacing, and minimal motion for professional trading and analytics interfaces.",
   "tags": [
@@ -87,7 +88,7 @@
     "display": "'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif",
     "body": "'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif"
   },
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "fin-card": "Dark card with 1px border, no shadow. Minimal surface separation for data-dense layouts.",

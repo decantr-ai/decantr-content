@@ -3,7 +3,7 @@
   "id": "recipefork-cookbooks",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Cookbooks",
   "description": "Cookbook management and cookbook detail views for Recipefork, including creation, visibility state, owner-only editing, public cookbook viewing, and recipe collection browsing.",
   "tags": [

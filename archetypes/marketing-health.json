@@ -3,7 +3,7 @@
   "id": "marketing-health",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Health & Wellness Landing",
   "description": "Public marketing landing page for a health and wellness portal. Split hero, feature highlights, patient testimonials, and call-to-action sections.",
   "tags": [

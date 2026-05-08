@@ -3,7 +3,7 @@
   "id": "about-hybrid",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "About Hybrid",
   "description": "About page combining hero, company story, team grid, values, and call-to-action sections.",
   "tags": [

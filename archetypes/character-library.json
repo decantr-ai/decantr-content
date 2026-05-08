@@ -3,7 +3,7 @@
   "id": "character-library",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Character Library",
   "description": "Manage reusable AI character references with persistent identity, appearance details, and consistency tracking across video scenes.",
   "tags": [

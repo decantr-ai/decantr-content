@@ -3,7 +3,7 @@
   "id": "appointment-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Appointment Center",
   "description": "Appointment management hub with list view, booking flow, and appointment details with telehealth join capability.",
   "tags": [

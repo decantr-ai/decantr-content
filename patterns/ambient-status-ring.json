@@ -2,7 +2,7 @@
   "id": "ambient-status-ring",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Ambient Status Ring",
   "description": "Always-on status indicator that conveys system state through color, motion, and shape — available as a circular ring, dot, horizontal bar, or ambient background glow.",
   "category": "ambient",

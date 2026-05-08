@@ -3,7 +3,7 @@
   "id": "fan-checkout",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Fan Checkout",
   "description": "Purchase and subscription checkout flow for fans. Complete payment for subscriptions and one-time purchases.",
   "tags": [

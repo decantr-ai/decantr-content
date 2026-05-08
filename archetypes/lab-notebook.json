@@ -3,7 +3,7 @@
   "id": "lab-notebook",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Lab Notebook",
   "description": "Primary authoring surface for a scientific research lab. Researchers maintain an electronic lab notebook with hierarchical page tree, rich entries, and checklist protocols.",
   "tags": [

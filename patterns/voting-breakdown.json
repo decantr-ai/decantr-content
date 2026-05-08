@@ -2,7 +2,7 @@
   "id": "voting-breakdown",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Voting Breakdown",
   "description": "Vote tally breakdown with demographic slicing, comment distribution, and proportional visualizations for civic decisions and polling.",
   "category": "civic",

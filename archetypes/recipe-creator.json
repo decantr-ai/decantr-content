@@ -3,7 +3,7 @@
   "id": "recipe-creator",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipe Creator",
   "description": "Recipe creation editor with sectioned forms, drag-and-drop ingredient and step ordering, and a personal recipe management table.",
   "tags": ["recipes", "creator", "editor", "form", "content-creation", "2026"],

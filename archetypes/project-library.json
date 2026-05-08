@@ -3,7 +3,7 @@
   "id": "project-library",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Project Library",
   "description": "Browse, filter, and manage video projects and starter templates. Entry point for opening existing work and kicking off new productions from curated blueprints.",
   "tags": [

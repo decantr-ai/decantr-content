@@ -3,7 +3,7 @@
   "id": "portfolio-about",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Portfolio About",
   "description": "Bio, skills, and contact pages for a personal portfolio. Professional yet personal presentation with an editorial identity summary, capability cards, and a split contact surface.",
   "tags": ["portfolio", "about", "bio", "skills", "contact", "2026"],
