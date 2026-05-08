@@ -3,7 +3,7 @@
   "id": "crm-intelligence",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "CRM Intelligence",
   "description": "AI-generated sales intelligence dashboard with win/loss analysis, revenue forecasting, relationship mapping, and actionable insights derived from CRM data.",
   "tags": [

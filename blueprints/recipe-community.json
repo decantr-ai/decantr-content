@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "recipe-community",
   "version": "2.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipe Community",
   "description": "Warm, appetite-driven recipe community with browsing, cook mode, recipe creation, social features, and a marketing landing page. Multi-archetype composition with full auth and settings.",
   "tags": [

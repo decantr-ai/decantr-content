@@ -3,7 +3,7 @@
   "id": "portfolio-showcase",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Portfolio Showcase",
   "description": "Project grid and detail views for portfolio work. Grid-first showcase routes with strong atmosphere, generous whitespace, and large imagery that lets the work shine without redundant hero containers.",
   "tags": ["portfolio", "showcase", "projects", "creative", "gallery", "2026"],

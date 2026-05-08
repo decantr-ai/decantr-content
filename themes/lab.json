@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "lab",
+  "version": "1.0.0",
   "name": "Lab",
   "description": "Scientific research theme with pristine white surfaces, cyan accents, and IBM Plex Mono data displays. Precise 8px grid alignment and technical iconography for research, data, and laboratory interfaces.",
   "tags": [
@@ -91,7 +92,7 @@
     "display": "'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace",
     "body": "'Inter', ui-sans-serif, sans-serif"
   },
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "lab-panel": "White panels with precise 1px borders and sharp corners. Clean container for data and controls.",

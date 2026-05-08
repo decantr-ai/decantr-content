@@ -2,6 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "post-list",
   "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Post List",
   "description": "Chronological list of posts, articles, or news items with author, date, and preview.",
   "tags": [

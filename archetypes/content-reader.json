@@ -3,7 +3,7 @@
   "id": "content-reader",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Content Reader",
   "description": "Article reading experience with browsable article listings, full article detail view, and category navigation. Optimized for long-form consumption with generous typography and effortless scanning.",
   "tags": [

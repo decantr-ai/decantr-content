@@ -3,7 +3,7 @@
   "id": "pipeline-builder",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Pipeline Builder",
   "description": "Visual data pipeline builder with drag-and-drop canvas, pipeline list, and configuration for scheduling and retry policies.",
   "tags": [

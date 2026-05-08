@@ -3,7 +3,7 @@
   "id": "marketing-copilot",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Copilot Landing",
   "description": "Marketing landing page showcasing an AI copilot product. Features a split hero with live demo, feature breakdown, how-it-works flow, and conversion CTAs.",
   "tags": [

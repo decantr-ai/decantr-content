@@ -2,7 +2,7 @@
   "id": "cap-table",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Cap Table",
   "description": "An ownership capitalization table that surfaces shareholders, share classes, fully-diluted percentages, vesting status, and dilution events across funding rounds with an inset pie summary for at-a-glance ownership distribution.",
   "category": "finance",

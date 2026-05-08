@@ -3,7 +3,7 @@
   "id": "marketing-finance",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Finance Marketing Landing",
   "description": "Public marketing landing page for a financial dashboard product with hero, feature highlights, social proof, and conversion CTAs.",
   "tags": ["marketing", "landing", "finance", "public", "seo", "2026"],

@@ -3,7 +3,7 @@
   "id": "order-fulfillment",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Order Fulfillment",
   "description": "Admin order processing and shipping management with data tables, Kanban pipeline boards, order detail views, and fulfillment action forms.",
   "tags": ["orders", "fulfillment", "shipping", "admin", "kanban", "ecommerce", "2026"],

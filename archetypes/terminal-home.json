@@ -3,7 +3,7 @@
   "id": "terminal-home",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Terminal Home",
   "description": "Main terminal dashboard view with split panes, log streaming, metrics, and command input. Core interface for CLI-style developer tools.",
   "tags": [

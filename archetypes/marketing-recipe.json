@@ -3,7 +3,7 @@
   "id": "marketing-recipe",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipe Community Marketing",
   "description": "Public marketing landing page for the recipe community platform with hero, featured recipes, testimonials, and conversion CTAs.",
   "tags": ["marketing", "landing", "recipes", "food", "public", "seo", "2026"],

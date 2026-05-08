@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "share-modal",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Share Modal",
   "description": "Invite collaborators and manage document sharing. Includes email invite, shareable link, and current collaborators management.",
   "dependencies": {

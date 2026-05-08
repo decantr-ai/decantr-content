@@ -3,7 +3,7 @@
   "id": "recipe-social",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipe Social",
   "description": "Social features for the recipe community: activity feed, emoji reactions, recipe collections, and creator profiles with follow functionality.",
   "tags": ["social", "community", "feed", "collections", "profiles", "reactions", "2026"],

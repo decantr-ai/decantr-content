@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "chat-input",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Chat Input",
   "description": "Message composition area with auto-growing textarea, file attachments, mentions autocomplete, and keyboard shortcuts.",
   "dependencies": {

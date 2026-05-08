@@ -3,7 +3,7 @@
   "id": "instrument-booking",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Instrument Booking",
   "description": "Shared instrument reservation system for research labs. Researchers see availability calendars for lab equipment and book time slots.",
   "tags": [

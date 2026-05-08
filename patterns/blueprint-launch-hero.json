@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "blueprint-launch-hero",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Blueprint Launch Hero",
   "description": "First-viewport registry hero for blueprint discovery pages. It introduces Decantr's blueprint catalog with a strong product signal, concise positioning, search or browse actions, and a compact proof row for counts, freshness, or workflow coverage.",
   "dependencies": {

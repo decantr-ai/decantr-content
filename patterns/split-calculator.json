@@ -2,7 +2,7 @@
   "id": "split-calculator",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Split Calculator",
   "description": "Royalty split calculator for music collaborators with percentage allocation, role tagging, preset splits, and validation that totals equal 100%.",
   "category": "music",

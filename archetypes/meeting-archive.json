@@ -3,7 +3,7 @@
   "id": "meeting-archive",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Meeting Archive",
   "description": "Public archive of government meetings with searchable records, calendar browsing, and per-meeting timelines of votes and agenda items. Provides citizens long-term access to council and committee proceedings.",
   "tags": [

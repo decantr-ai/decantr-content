@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "product-grid",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Product Grid",
   "description": "Purchasable items/posts grid with filtering, sorting, and multiple view modes. Used for creator content libraries.",
   "dependencies": {

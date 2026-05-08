@@ -3,7 +3,7 @@
   "id": "creator-tiers",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Tiers",
   "description": "Subscription tier management for creators. Create, edit, and organize membership tiers.",
   "tags": [

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "unlock-gate",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Unlock Gate",
   "description": "Paywall/tier gate component that blurs or hides content and prompts subscription. Shows required tier and quick subscribe flow.",
   "dependencies": {

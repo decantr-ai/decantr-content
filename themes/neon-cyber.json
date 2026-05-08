@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "neon-cyber",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Neon Cyber",
   "description": "Cyberpunk aesthetic with vivid neon accents on pure dark backgrounds. High-energy, high-contrast, data-dense.",
   "tags": [

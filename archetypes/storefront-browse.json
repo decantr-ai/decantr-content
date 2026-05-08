@@ -3,7 +3,7 @@
   "id": "storefront-browse",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Storefront Browse",
   "description": "Product browsing experience with search, filtering, product detail pages, and shopping cart. Core storefront interface for e-commerce applications.",
   "tags": ["ecommerce", "storefront", "browse", "products", "cart", "shopping", "2026"],

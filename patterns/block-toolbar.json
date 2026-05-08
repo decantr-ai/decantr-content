@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "block-toolbar",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Block Toolbar",
   "description": "Floating formatting toolbar that appears on text selection. Provides quick access to text formatting, links, and comments.",
   "dependencies": {

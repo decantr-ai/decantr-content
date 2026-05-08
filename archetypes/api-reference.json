@@ -3,7 +3,7 @@
   "id": "api-reference",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "API Reference",
   "description": "Interactive API reference with endpoint browser, try-it-out console, and multi-language code snippets. Built for developer-facing knowledge bases.",
   "tags": [

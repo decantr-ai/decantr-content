@@ -3,7 +3,7 @@
   "id": "metrics-monitor",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Metrics Monitor",
   "description": "System metrics dashboard with ASCII charts, gauges, and real-time updates. Terminal-style monitoring interface.",
   "tags": [

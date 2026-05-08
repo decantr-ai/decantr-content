@@ -2,7 +2,7 @@
   "id": "instrument-schedule",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Instrument Schedule",
   "description": "A laboratory instrument booking calendar displaying reservations across multiple instruments over time, with user attribution, maintenance windows, availability status, and quick-book interactions on free slots.",
   "category": "science",

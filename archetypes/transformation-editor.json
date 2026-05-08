@@ -3,7 +3,7 @@
   "id": "transformation-editor",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Transformation Editor",
   "description": "SQL and code transformation editor with split-pane layout for writing queries alongside live data preview.",
   "tags": [

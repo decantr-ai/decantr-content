@@ -2,7 +2,7 @@
   "id": "drag-sort-list",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Drag Sort List",
   "description": "A vertically reorderable list with drag handles, keyboard reordering support, and animated position indicators for intuitive item rearrangement.",
   "category": "interaction",

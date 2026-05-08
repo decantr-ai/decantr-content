@@ -3,7 +3,7 @@
   "id": "cloud-marketing",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Cloud Marketing",
   "description": "Marketing landing page for cloud and infrastructure platforms",
   "tags": [

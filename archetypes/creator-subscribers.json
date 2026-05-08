@@ -3,7 +3,7 @@
   "id": "creator-subscribers",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Subscribers",
   "description": "Fan and subscriber management for creators. View, filter, and engage with your audience.",
   "tags": [

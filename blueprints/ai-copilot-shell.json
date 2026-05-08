@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "ai-copilot-shell",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Copilot Shell",
   "description": "Minimal, unobtrusive AI assistant shell that enhances any workflow with a sleek side-panel copilot, smart suggestions, and configurable AI settings.",
   "tags": [

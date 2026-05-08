@@ -2,7 +2,7 @@
   "id": "spatial-presence-ring",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Spatial Presence Ring",
   "description": "A circular or arc display showing nearby agents and users with live status indicators. Ring segments represent participants, expanding on hover or focus to reveal details. Segments are distributed evenly around the ring with smooth reflow when participants join or leave. For collaborative workspaces, multiplayer agent UIs, and real-time presence-aware interfaces.",
   "category": "spatial",

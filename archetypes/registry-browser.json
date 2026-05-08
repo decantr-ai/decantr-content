@@ -3,7 +3,7 @@
   "id": "registry-browser",
   "role": "primary",
   "version": "1.1.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Registry Browser",
   "description": "Public content browsing for a design registry. Search, filter, and explore patterns, themes, blueprints, archetypes, and shells.",
   "tags": [

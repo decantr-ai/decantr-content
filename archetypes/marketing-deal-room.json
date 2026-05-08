@@ -3,7 +3,7 @@
   "id": "marketing-deal-room",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing Deal Room",
   "description": "Public marketing landing page for deal-room software positioning trust, security, and workflow velocity. Primary acquisition surface for enterprise sales.",
   "tags": [

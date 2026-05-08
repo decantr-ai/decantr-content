@@ -3,7 +3,7 @@
   "id": "recipe-browser",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipe Browser",
   "description": "Browse and search recipes with filterable card grid and rich recipe detail pages with step-by-step instructions.",
   "tags": ["recipes", "browse", "search", "food", "cooking", "2026"],

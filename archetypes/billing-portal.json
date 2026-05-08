@@ -3,7 +3,7 @@
   "id": "billing-portal",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Billing Portal",
   "description": "Subscription and billing management with tier comparison, upgrade flow, and Stripe billing portal integration.",
   "tags": [

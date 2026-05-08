@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "creator-profile",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Profile",
   "description": "Public creator page layout with hero, tiers, content feed, and about section. Tab-based navigation.",
   "dependencies": {

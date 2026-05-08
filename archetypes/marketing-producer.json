@@ -3,7 +3,7 @@
   "id": "marketing-producer",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Producer Studio Marketing",
   "description": "Public marketing landing page for a music producer studio product with vision hero, feature rundown, pricing, and testimonials.",
   "tags": [

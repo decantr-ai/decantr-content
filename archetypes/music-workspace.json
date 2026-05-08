@@ -3,7 +3,7 @@
   "id": "music-workspace",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Music Workspace",
   "description": "Music producer session workspace with multi-track waveform editing, stem stacking, and split-pane arrangement for audio production flows.",
   "tags": [

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "stats-detail",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Stats Detail",
   "description": "Detailed statistical breakdown panel showing confidence distributions, percentile bars, metric comparisons, and drill-down tables for quantitative analysis.",
   "category": "data",

@@ -3,7 +3,7 @@
   "id": "order-management",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Order Management",
   "description": "Customer-facing order history and tracking. Lists past orders with status, and provides detailed order views with delivery timeline.",
   "tags": ["ecommerce", "orders", "tracking", "history", "timeline", "2026"],

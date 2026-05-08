@@ -1,5 +1,7 @@
 {
   "id": "top-nav-sidebar",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Top Nav + Sidebar",
   "description": "Full-width header spanning both columns, with left sidebar navigation below. Combines top branding with sidebar navigation depth.",
   "layout": "grid",

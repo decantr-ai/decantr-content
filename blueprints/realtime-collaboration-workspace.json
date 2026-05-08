@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "realtime-collaboration-workspace",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Real-Time Collaboration Workspace",
   "description": "Complete collaboration platform with live presence, remote cursors, inline comments, and hierarchical pages. Notion/Linear-style productivity workspace with warm, content-focused design.",
   "tags": [

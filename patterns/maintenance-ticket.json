@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "maintenance-ticket",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Maintenance Ticket",
   "description": "Repair request form and display. Supports create (tenant-facing), view, and edit modes with photo upload and status tracking.",
   "dependencies": {

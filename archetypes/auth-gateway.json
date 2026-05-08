@@ -3,7 +3,7 @@
   "id": "auth-gateway",
   "role": "gateway",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Authentication Gateway",
   "description": "Single-route authentication entry for products that consolidate sign-in, registration, and recovery into one adaptable gateway screen.",
   "tags": [

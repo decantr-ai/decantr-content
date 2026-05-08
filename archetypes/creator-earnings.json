@@ -3,7 +3,7 @@
   "id": "creator-earnings",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Earnings",
   "description": "Revenue analytics and payout management for creators. Full earnings dashboard and payout configuration.",
   "tags": [

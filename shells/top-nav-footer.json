@@ -1,5 +1,7 @@
 {
   "id": "top-nav-footer",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Top Nav + Footer",
   "description": "Horizontal nav with main content and a persistent footer. Used for marketing sites, documentation with ToC footer.",
   "layout": "stack",

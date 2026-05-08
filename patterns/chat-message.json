@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "chat-message",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Chat Message",
   "description": "Single message bubble for user or AI responses. Supports markdown rendering, code blocks, attachments, reactions, and edit mode.",
   "dependencies": {

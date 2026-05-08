@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "filter-bar",
   "version": "1.0.0",
-  "decantr_compat": ">=0.9.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Filter Bar",
   "description": "Search input and filter controls for filtering page content. Sits above data-consuming patterns like data-table, card-grid, and activity-feed.",
   "dependencies": {

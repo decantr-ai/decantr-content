@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "split-pane",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Split Pane",
   "description": "Resizable terminal panes with keyboard and mouse controls for multi-panel layouts.",
   "dependencies": {

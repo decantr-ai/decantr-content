@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "chat-thread",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Chat Thread",
   "description": "Full message thread container with scrollable messages, typing indicator, pagination, and auto-scroll behavior.",
   "dependencies": {

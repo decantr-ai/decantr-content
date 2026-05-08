@@ -3,7 +3,7 @@
   "id": "video-editor",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "AI Video Editor",
   "description": "Core timeline-based editing workspace for AI-generated video projects. Combines multi-track timeline, scene storyboard, and render queue for end-to-end video production.",
   "tags": [

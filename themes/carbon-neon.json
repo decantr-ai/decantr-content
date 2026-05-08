@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "carbon-neon",
+  "version": "1.0.0",
   "name": "Carbon Neon",
   "description": "Carbon's sleek dark surfaces with vivid neon cyan accent. For mission-control, agent dashboards, and data-intensive interfaces.",
   "tags": [
@@ -93,7 +94,7 @@
       }
     }
   },
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "carbon-canvas": "Background color using theme background token. Clean, minimal foundation.",

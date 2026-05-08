@@ -3,7 +3,7 @@
   "id": "audit-center",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Audit Center",
   "description": "Compliance audit trail with searchable event log, retention policies, export capabilities, and notification configuration for enterprise governance.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "ownership-dashboard",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Ownership Dashboard",
   "description": "Authenticated investor workspace for managing fractional holdings. Shows portfolio KPIs, cap tables per asset, and distribution history with performance charts.",
   "tags": [

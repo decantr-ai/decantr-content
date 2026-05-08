@@ -3,7 +3,7 @@
   "id": "document-editor",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Document Editor",
   "description": "Real-time collaborative document editing with presence indicators, remote cursors, inline comments, and version history.",
   "tags": [

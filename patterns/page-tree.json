@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "page-tree",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Page Tree",
   "description": "Hierarchical page navigation with drag-and-drop reordering, inline rename, and nested page support. Used in workspace sidebars.",
   "dependencies": {

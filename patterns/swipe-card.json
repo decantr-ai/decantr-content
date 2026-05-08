@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "swipe-card",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Swipe Card",
   "description": "Photo-first profile card content rendered inside the front position of spatial-card-stack's deck preset. Full-bleed photo with bottom gradient overlay carrying name, age, distance, bio, and interest tags. Supports a stack of additional thumbnail photos for multi-photo profiles. Designed to be tactile, polaroid-feeling, and instantly readable at swipe-speed.",
   "category": "card",

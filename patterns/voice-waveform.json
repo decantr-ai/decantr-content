@@ -2,7 +2,7 @@
   "id": "voice-waveform",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Voice Waveform",
   "description": "Live audio visualization showing speech amplitude as an animated waveform — supports bar, sine wave, circular, and minimal display modes for real-time voice feedback.",
   "category": "voice",

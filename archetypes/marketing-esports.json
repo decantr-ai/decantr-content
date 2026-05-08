@@ -3,7 +3,7 @@
   "id": "marketing-esports",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Esports Marketing",
   "description": "Public esports homepage surface for a live matchday command product with a full-bleed broadcast hero, roster proof, telemetry, and cinematic conversion path.",
   "tags": [

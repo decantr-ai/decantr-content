@@ -2,7 +2,7 @@
   "id": "table-map",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Table Map",
   "description": "A restaurant floor-plan table map visualizing venue layout with tables positioned spatially, status color coding, party-size indicators, reservation chips, and section labels for host-stand seating and reservation management.",
   "category": "restaurant",

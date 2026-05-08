@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "alert-rule-builder",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Alert Rule Builder",
   "description": "Visual condition builder for creating alert rules, filters, or automation triggers using nested AND/OR logic groups with metric selectors, operators, threshold sliders, and live rule testing.",
   "category": "configuration",

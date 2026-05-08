@@ -3,7 +3,7 @@
   "id": "customer-loyalty",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Customer Loyalty",
   "description": "Customer relationship and loyalty program management. Tracks guest history, preferences, tier status, and rewards.",
   "tags": ["restaurant", "customers", "loyalty", "rewards", "crm", "2026"],

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "form",
   "version": "1.0.0",
-  "decantr_compat": ">=0.9.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Form",
   "description": "Structured form with labeled field groups, validation states, and action buttons",
   "dependencies": {

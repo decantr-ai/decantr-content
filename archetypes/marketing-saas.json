@@ -3,7 +3,7 @@
   "id": "marketing-saas",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing SaaS",
   "description": "SaaS marketing landing page with hero, features, how-it-works timeline, pricing, testimonials, and CTA sections.",
   "tags": [

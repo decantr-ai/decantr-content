@@ -3,7 +3,7 @@
   "id": "admin-overview",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Admin Overview Dashboard",
   "description": "Store operations dashboard with KPIs, sales charts, activity feed, and quick action cards. Central hub for e-commerce administrators.",
   "tags": ["admin", "dashboard", "kpi", "overview", "ecommerce", "2026"],

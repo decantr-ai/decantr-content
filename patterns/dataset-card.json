@@ -2,7 +2,7 @@
   "id": "dataset-card",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Dataset Card",
   "description": "A scientific dataset metadata card surfacing schema structure, quality indicators, size statistics, licensing, version, and a sample preview for discoverability in data catalogs and research data management systems.",
   "category": "science",

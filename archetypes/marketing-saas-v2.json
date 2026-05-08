@@ -3,7 +3,7 @@
   "id": "marketing-saas-v2",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "SaaS Marketing Landing",
   "description": "Public marketing landing page for SaaS products with hero, features, pricing, testimonials, and conversion CTAs.",
   "tags": ["marketing", "landing", "saas", "public", "seo", "2026"],

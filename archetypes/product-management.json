@@ -3,7 +3,7 @@
   "id": "product-management",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Product Management",
   "description": "Product catalog CRUD and inventory management with data tables, edit forms, and Kanban-style inventory boards for e-commerce admin operations.",
   "tags": ["products", "inventory", "crud", "catalog", "admin", "ecommerce", "2026"],

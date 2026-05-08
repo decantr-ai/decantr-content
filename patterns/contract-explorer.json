@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "contract-explorer",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Contract Explorer",
   "description": "Interactive inspector for Decantr contract artifacts such as essence files, execution packs, Project Health reports, schema snippets, and remediation prompts.",
   "dependencies": {

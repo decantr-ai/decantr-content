@@ -3,7 +3,7 @@
   "id": "auth-flow",
   "role": "gateway",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Authentication Flow",
   "description": "Login, registration, and password recovery with OAuth support",
   "tags": [

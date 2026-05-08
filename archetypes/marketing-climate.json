@@ -3,7 +3,7 @@
   "id": "marketing-climate",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Climate Dashboard Marketing",
   "description": "Public marketing landing page for a climate dashboard product with vision hero, feature highlights, testimonials, and primary CTA.",
   "tags": [

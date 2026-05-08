@@ -3,7 +3,7 @@
   "id": "vod-review",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "VOD Review",
   "description": "Auxiliary esports VOD review surface for browsing a library of match recordings and annotating frames with coaching notes and timestamps.",
   "tags": [

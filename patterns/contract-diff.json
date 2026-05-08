@@ -2,7 +2,7 @@
   "id": "contract-diff",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Contract Diff",
   "description": "A side-by-side contract comparison view with synchronized scrolling, inline change markers, addition and deletion highlighting, and a clause navigation sidebar.",
   "category": "legal",

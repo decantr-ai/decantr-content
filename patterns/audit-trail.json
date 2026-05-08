@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "audit-trail",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Audit Trail",
   "description": "Chronological audit log displaying actor, action, entity, and timestamp with diff inspection, advanced filtering, search, and CSV export for compliance workflows.",
   "category": "compliance",

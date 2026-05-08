@@ -3,7 +3,7 @@
   "id": "user-dashboard",
   "role": "primary",
   "version": "1.1.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "User Dashboard",
   "description": "Authenticated user area with content management, billing, API key management, team governance, account settings, and activity overview. The shell and page surfaces should all read from one coherent workspace state for identity, entitlements, and active organization.",
   "tags": [

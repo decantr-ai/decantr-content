@@ -3,7 +3,7 @@
   "id": "customer-management",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Customer Management",
   "description": "Customer relationship management for e-commerce with customer list, profile detail views, activity feeds, and purchase history.",
   "tags": ["customers", "crm", "profiles", "admin", "ecommerce", "2026"],

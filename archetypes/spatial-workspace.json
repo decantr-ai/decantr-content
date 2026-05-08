@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "spatial-workspace",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Spatial Workspace",
   "description": "Immersive spatial workspace with depth-layered canvases, holographic controls, and real-time presence indicators for collaborative creative work.",
   "tags": [

@@ -2,7 +2,7 @@
   "id": "depth-layered-canvas",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Depth-Layered Canvas",
   "description": "A true z-axis spatial layout with foreground, midground, and background layers using CSS perspective and transform-style: preserve-3d. Layers stack along the depth axis with parallax scrolling and focal-plane blur effects. For immersive dashboards, data landscapes, and spatial storytelling where information lives at different visual depths.",
   "category": "spatial",

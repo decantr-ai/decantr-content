@@ -3,7 +3,7 @@
   "id": "marketing-devtool",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing DevTool",
   "description": "Developer tool landing page with terminal-styled hero, feature highlights, and ASCII art elements. Marketing page that maintains the terminal aesthetic.",
   "tags": [

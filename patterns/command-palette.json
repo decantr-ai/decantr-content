@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "command-palette",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Command Palette",
   "description": "Cmd+K style command search overlay with fuzzy search, categories, and keyboard navigation.",
   "dependencies": {

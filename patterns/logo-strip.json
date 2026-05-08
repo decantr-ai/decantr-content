@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "logo-strip",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Logo Strip",
   "description": "Scrolling or static partner logo strip used for trust-building sections on marketing pages.",
   "dependencies": {

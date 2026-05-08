@@ -3,7 +3,7 @@
   "id": "tool-registry",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Tool Registry",
   "description": "Centralized registry of agent tools with JSON schema editing, interactive test playground, and usage analytics.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "document-vault",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Document Vault",
   "description": "Secure document repository for deal rooms with watermarked viewing, granular access audit, and inline Q&A threads. Provides due-diligence document management with full audit trail.",
   "tags": [

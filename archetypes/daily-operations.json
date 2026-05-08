@@ -3,7 +3,7 @@
   "id": "daily-operations",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Daily Operations",
   "description": "Daily operations dashboard and reporting for restaurant managers. Covers, sales, labor, and P&L at a glance.",
   "tags": ["restaurant", "operations", "dashboard", "reports", "pnl", "2026"],

@@ -2,7 +2,7 @@
   "id": "secure-document-viewer",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Secure Document Viewer",
   "description": "Secure document viewing surface with watermark overlay, download guards, redaction display, and audit trail indicators for confidential document workflows.",
   "category": "document",

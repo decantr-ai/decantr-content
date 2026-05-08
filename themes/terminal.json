@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "terminal",
+  "version": "1.0.0",
   "name": "Terminal",
   "description": "Pure terminal aesthetic with CRT-inspired phosphor green/amber on black. Monospace only, ASCII borders, optional scanline effects. Dark mode only.",
   "tags": [
@@ -78,7 +79,7 @@
     "display": "'JetBrains Mono', 'Fira Code', ui-monospace, monospace",
     "body": "'JetBrains Mono', 'Fira Code', ui-monospace, monospace"
   },
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "term-canvas": "Pure black background (#000000) for CRT authenticity. No gradients, no textures.",

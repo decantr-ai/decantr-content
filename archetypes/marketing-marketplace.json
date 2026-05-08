@@ -3,7 +3,7 @@
   "id": "marketing-marketplace",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketplace Marketing",
   "description": "Public-facing marketing and landing pages for a two-sided marketplace. Showcases featured listings, categories, testimonials, and conversion CTAs.",
   "tags": [

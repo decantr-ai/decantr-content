@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "cloud-platform",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Cloud Platform",
   "description": "Full cloud infrastructure platform with marketing landing, app management, team collaboration, service catalog, deploy logs, usage monitoring, billing, and auth",
   "tags": [

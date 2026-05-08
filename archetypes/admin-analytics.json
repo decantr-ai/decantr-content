@@ -3,7 +3,7 @@
   "id": "admin-analytics",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Admin Analytics",
   "description": "Revenue and sales analytics for e-commerce administrators with KPI dashboards, trend charts, and inline sparkline data tables.",
   "tags": ["analytics", "revenue", "charts", "kpi", "admin", "ecommerce", "2026"],

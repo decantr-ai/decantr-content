@@ -3,7 +3,7 @@
   "id": "matter-management",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Matter Management",
   "description": "Auxiliary matter management surface for tracking legal matters across lifecycle stages, inspecting matter detail with activity and billing context.",
   "tags": [

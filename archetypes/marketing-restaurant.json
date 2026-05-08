@@ -3,7 +3,7 @@
   "id": "marketing-restaurant",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Restaurant Marketing",
   "description": "Public-facing marketing landing page for the restaurant operations platform. Hero, features, testimonials, and conversion CTA.",
   "tags": ["restaurant", "marketing", "landing", "public", "hospitality", "2026"],

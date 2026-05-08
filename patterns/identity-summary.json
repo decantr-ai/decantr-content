@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "identity-summary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Identity Summary",
   "description": "Profile or author summary surface with a compact media anchor, name/title stack, supporting bio, metadata rows, and optional action links.",
   "category": "profile",

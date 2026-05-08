@@ -3,7 +3,7 @@
   "id": "secondary-market",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Secondary Market",
   "description": "Peer-to-peer trading surface for fractional asset tokens. Investors view order books, place buy and sell orders, and watch live price action.",
   "tags": [

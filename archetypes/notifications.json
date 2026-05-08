@@ -3,7 +3,7 @@
   "id": "notifications",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Notifications",
   "description": "Notification inbox and alert management",
   "tags": [

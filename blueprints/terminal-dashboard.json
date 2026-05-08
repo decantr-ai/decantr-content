@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "terminal-dashboard",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Terminal Dashboard",
   "description": "CLI-style terminal dashboard for developer tools. Retro-modern terminal aesthetic with phosphor green/amber, ASCII borders, split panes, and optional CRT effects. Dark mode only.",
   "tags": [

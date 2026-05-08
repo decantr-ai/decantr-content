@@ -3,7 +3,7 @@
   "id": "community-feed",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Community Feed",
   "description": "Social community feed with posts, discussions, reactions, comments, and a member directory. Drives engagement and connection in event and community platforms.",
   "tags": [

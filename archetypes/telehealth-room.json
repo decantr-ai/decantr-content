@@ -3,7 +3,7 @@
   "id": "telehealth-room",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Telehealth Room",
   "description": "Video consultation room for telehealth appointments with speaker-focused layout, session controls, and provider notes.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "marketing-creator",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing Creator",
   "description": "Platform marketing landing page for creator monetization. Attract creators with features, pricing, and testimonials.",
   "tags": [

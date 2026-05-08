@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "session-manager",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Session Manager",
   "description": "Active sessions panel showing current device, other sessions with device info, location, last active, and revoke controls.",
   "dependencies": {

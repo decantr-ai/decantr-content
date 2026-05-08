@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "relationship-graph",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Relationship Graph",
   "description": "Network graph visualizing entity relationships such as contacts, companies, and deals with force-directed, radial, and timeline layout presets, labeled edges, and interactive exploration.",
   "category": "data-visualization",

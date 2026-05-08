@@ -3,7 +3,7 @@
   "id": "ecommerce",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "E-commerce Store",
   "description": "Online store with product catalog, search, detail pages, and cart",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "marketing-landing",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing Landing Page",
   "description": "Product marketing landing page with hero, problem/solution visualization, feature showcase, social proof, and conversion-focused CTAs. Single-page scroll layout for SaaS, developer tools, and tech products.",
   "tags": [

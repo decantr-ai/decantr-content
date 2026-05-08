@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "luminarum",
+  "version": "1.0.0",
   "name": "Luminarum",
   "description": "Geometric canvas with vibrant faceted color accents. Breathing gradient orbs, outlined cards with colored strokes, particle network details. Tech-forward meets visual candy. Dual dark/light modes: warm charcoal dark, warm off-white light.",
   "tags": [
@@ -118,7 +119,7 @@
       }
     }
   },
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "lum-canvas": "Particle network background (dark: #141414, light: #FAFAF9). Scattered small dots and thin connecting lines in brand colors at low opacity. Apply to page root.",

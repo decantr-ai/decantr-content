@@ -3,7 +3,7 @@
   "id": "collaboration-hub",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Collaboration Hub",
   "description": "Producer collaborator directory and royalty split management surface with contributor cards and split calculators.",
   "tags": [

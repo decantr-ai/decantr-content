@@ -3,7 +3,7 @@
   "id": "marketing-productivity",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing Productivity",
   "description": "Marketing landing page for productivity and collaboration tools. Features hero, feature grid, collaboration showcase, pricing, and testimonials.",
   "tags": [

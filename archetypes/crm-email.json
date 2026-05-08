@@ -3,7 +3,7 @@
   "id": "crm-email",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "CRM Email",
   "description": "AI-assisted email interface integrated with the CRM. Features smart inbox with auto-categorization and an AI-powered compose experience for personalized outreach.",
   "tags": [

@@ -2,7 +2,7 @@
   "id": "scoreboard-live",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Scoreboard Live",
   "description": "A live match scoreboard with team logos, real-time score, game timer, event ticker, momentum streak indicator, and viewer count for broadcast surfaces.",
   "category": "esports",

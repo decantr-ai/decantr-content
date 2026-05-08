@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "recipefork",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork",
   "description": "Neutral shadcn-inspired recipe product theme with clean slate tokens, restrained surfaces, and photography-first presentation. Designed for Vercel-hosted Next.js recipe products that need both simple and advanced authoring flows.",
   "tags": [

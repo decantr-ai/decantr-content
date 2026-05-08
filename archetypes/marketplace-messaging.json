@@ -3,7 +3,7 @@
   "id": "marketplace-messaging",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketplace Messaging",
   "description": "Dedicated message center for marketplace buyer-seller communication with conversation list and threaded chat views.",
   "tags": [

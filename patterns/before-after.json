@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "before-after",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Before After",
   "description": "Side-by-side comparison section showing two states: without and with the product. Visualizes drift and inconsistency on one side versus consistency and alignment on the other. Useful for demonstrating value through contrast, with browser-frame mockups or card-based layouts.",
   "dependencies": {

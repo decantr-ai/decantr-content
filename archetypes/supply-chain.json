@@ -3,7 +3,7 @@
   "id": "supply-chain",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Supply Chain",
   "description": "Supplier directory and per-supplier emissions profile with tier tracking and geographic mapping for supply chain climate programs.",
   "tags": [

@@ -1,6 +1,8 @@
 {
   "$schema": "https://decantr.ai/schemas/shell.v1.json",
   "id": "immersive-stage",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Immersive Stage",
   "description": "Full-bleed public shell for cinematic launch, game, venue, and live-event homepages where the first viewport is a designed stage rather than a standard stacked marketing page.",
   "layout": "stack",

@@ -3,7 +3,7 @@
   "id": "job-monitor",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Job Monitor",
   "description": "Pipeline job run monitoring with run history, step-by-step trace waterfall, live log streaming, and performance KPIs.",
   "tags": [

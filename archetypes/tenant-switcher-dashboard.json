@@ -3,7 +3,7 @@
   "id": "tenant-switcher-dashboard",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Tenant Switcher Dashboard",
   "description": "Org-scoped dashboard with tenant switching, KPI overview, team management, and organization settings for multi-tenant SaaS platforms.",
   "tags": [

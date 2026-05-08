@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "toast-notification",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Toast Notification",
   "description": "Transient notification toast with auto-dismiss timer, severity-colored stripe, stacking behavior, and optional action buttons. Slides in from top-right and auto-removes after a configurable duration with a shrinking progress bar.",
   "category": "system",

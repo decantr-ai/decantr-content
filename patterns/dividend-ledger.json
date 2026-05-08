@@ -2,7 +2,7 @@
   "id": "dividend-ledger",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Dividend Ledger",
   "description": "A dividend payment history ledger that records declaration dates, ex-dates, payment dates, per-share amounts, total payouts, and tax treatment classifications across an investor's entire dividend income timeline.",
   "category": "finance",

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "match-celebration",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Match Celebration",
   "description": "Full-screen celebratory overlay that appears when two users match. A coral-to-violet radial burst, two avatars meeting in the center with a heart pop between them, an 'It's a Match!' headline, and two CTAs (Send Message / Keep Swiping). Optional auto-dismiss after 3-4s. Designed to be a magic moment — the dopamine pop that rewards the swipe loop.",
   "category": "overlay",

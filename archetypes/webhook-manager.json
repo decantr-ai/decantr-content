@@ -3,7 +3,7 @@
   "id": "webhook-manager",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Webhook Manager",
   "description": "Webhook endpoint configuration, event filtering, delivery monitoring, and retry management for platform integrations.",
   "tags": [

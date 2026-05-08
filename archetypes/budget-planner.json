@@ -3,7 +3,7 @@
   "id": "budget-planner",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Budget Planner",
   "description": "Budget planning and tracking with budget vs actual comparisons, category charts, and compact spending data tables.",
   "tags": ["finance", "budget", "planning", "comparison", "spending", "2026"],

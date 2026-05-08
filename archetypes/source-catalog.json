@@ -3,7 +3,7 @@
   "id": "source-catalog",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Source Catalog",
   "description": "Data source management with browsable connector catalog, setup wizards, and active connection monitoring.",
   "tags": [

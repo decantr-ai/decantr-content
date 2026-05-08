@@ -2,7 +2,7 @@
   "id": "target-progress-ring",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Target Progress Ring",
   "description": "A circular progress visualization showing current achievement against a reduction target with nested ring segments, center value, and status color coding.",
   "category": "climate",

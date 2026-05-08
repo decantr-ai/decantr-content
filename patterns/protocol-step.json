@@ -2,7 +2,7 @@
   "id": "protocol-step",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Protocol Step",
   "description": "A lab-protocol step card rendering a numbered procedural step with action description, reagent list with volumes and concentrations, required equipment chips, timing controls, safety indicators, and completion confirmation checkbox.",
   "category": "science",

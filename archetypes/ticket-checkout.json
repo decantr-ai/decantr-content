@@ -3,7 +3,7 @@
   "id": "ticket-checkout",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Ticket Checkout",
   "description": "Ticket selection and checkout flow for events. Guides users through tier selection, attendee info, and payment in a focused, distraction-free interface.",
   "tags": [

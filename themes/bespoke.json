@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "bespoke",
+  "version": "1.0.0",
   "name": "Bespoke",
   "description": "Premium private equity and M&A theme with deep navy foundations and gold accents. Serif display typography, minimal motion, and quiet luxury aesthetic for authoritative financial and advisory interfaces.",
   "tags": [
@@ -78,7 +79,7 @@
     "display": "'Inter', ui-sans-serif, system-ui, sans-serif",
     "body": "'Inter', ui-sans-serif, system-ui, sans-serif"
   },
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "source": "core",
   "decorators": {
     "bespoke-card": "Gold-bordered cards with deep navy background and generous interior padding for premium content presentation.",

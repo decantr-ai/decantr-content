@@ -3,7 +3,7 @@
   "id": "service-requests",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Service Requests",
   "description": "Citizen service request system with submission forms, map pin placement, kanban tracking, and status timelines. Enables residents to report issues and track resolution.",
   "tags": [

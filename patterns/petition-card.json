@@ -2,7 +2,7 @@
   "id": "petition-card",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Petition Card",
   "description": "Petition signature card with progress toward goal, share actions, trust signals, and countdown for civic engagement platforms.",
   "category": "civic",

@@ -3,7 +3,7 @@
   "id": "marketing-content",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Content Marketing Landing",
   "description": "Marketing landing page for a content site with hero, feature highlights, testimonials, and call-to-action sections. Public-facing entry point designed to attract readers and subscribers.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "copilot-workspace",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Copilot Workspace",
   "description": "Main application workspace with an AI copilot overlay. Features a toggleable copilot panel that provides context-aware suggestions and chat alongside the primary work surface.",
   "tags": [

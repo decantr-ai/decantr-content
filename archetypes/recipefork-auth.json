@@ -3,7 +3,7 @@
   "id": "recipefork-auth",
   "role": "gateway",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Auth",
   "description": "Recipefork's shared-shell authentication entry surface. The auth card lives inside the product navbar shell rather than switching to a detached centered-only auth layout.",
   "tags": [

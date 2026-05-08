@@ -3,7 +3,7 @@
   "id": "seller-dashboard",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Seller Dashboard",
   "description": "Seller management hub with listing management, performance analytics, earnings tracking, and review monitoring for marketplace sellers.",
   "tags": [

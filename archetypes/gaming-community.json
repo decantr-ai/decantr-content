@@ -3,7 +3,7 @@
   "id": "gaming-community",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Gaming Community",
   "description": "Guild hub, news feed, hall of fame, and member profiles for social gaming communities",
   "tags": [

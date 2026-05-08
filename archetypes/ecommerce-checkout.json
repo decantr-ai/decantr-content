@@ -3,7 +3,7 @@
   "id": "ecommerce-checkout",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "E-Commerce Checkout",
   "description": "Multi-step checkout flow with shipping, payment, and order confirmation. Minimal chrome for a focused, distraction-free purchase experience.",
   "tags": ["ecommerce", "checkout", "payment", "shipping", "stepper", "2026"],

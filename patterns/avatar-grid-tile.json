@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "avatar-grid-tile",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Avatar Grid Tile",
   "description": "Square card with a circular avatar inside, name underneath, and an optional new-match dot indicator. The repeating tile inside a matches-grid layout. Differs from card-grid (rectangular content cards) and presence-avatars (horizontal stack of presence indicators) by combining a square card surface with a circular photo and a single-line name — optimized for grid-of-people displays.",
   "category": "card",

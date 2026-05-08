@@ -3,7 +3,7 @@
   "id": "budget-transparency",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Budget Transparency",
   "description": "Public budget transparency dashboard with sankey visualizations, category drill-down, and expenditure tables. Exposes municipal budget flows to citizens in navigable detail.",
   "tags": [

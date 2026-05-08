@@ -3,7 +3,7 @@
   "id": "emissions-dashboard",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Emissions Dashboard",
   "description": "Climate emissions tracking dashboard with scope 1/2/3 breakdown, Sankey flows, and reduction target progress rings.",
   "tags": [

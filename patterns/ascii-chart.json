@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "ascii-chart",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "ASCII Chart",
   "description": "ASCII and braille character-based charts for terminal-style data visualization.",
   "dependencies": {

@@ -3,7 +3,7 @@
   "id": "fan-library",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Fan Library",
   "description": "Fan's purchased and subscribed content library. View all unlocked content and manage subscriptions.",
   "tags": [

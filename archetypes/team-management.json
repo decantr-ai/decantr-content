@@ -3,7 +3,7 @@
   "id": "team-management",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=0.10.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Team Management",
   "description": "Organization and team management for Team-tier users. Manage members, roles, invitations, and shared org content.",
   "tags": [

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "eval-dashboard",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Eval Dashboard",
   "description": "Model evaluation metrics grid with test case results and multi-model comparison. Displays aggregate metrics (accuracy, latency, cost, pass rate) with sparkline trends, a detailed test case table with color-coded scores, and side-by-side model diff views.",
   "category": "ai-tools",

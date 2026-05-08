@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "property-management-portal",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Property Management Portal",
   "description": "Complete property management platform for real estate investors and property owners. Includes portfolio dashboard, property/unit management, tenant management, financial tracking (P&L, rent roll, expenses), maintenance ticketing, and a self-service tenant portal.",
   "tags": [

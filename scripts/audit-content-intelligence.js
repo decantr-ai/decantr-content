@@ -23,7 +23,11 @@
 
 import { mkdirSync, readdirSync, writeFileSync } from 'fs';
 import { dirname } from 'path';
-import { CONTENT_DIRECTORIES, DIRECTORY_TO_CONTENT_TYPE } from './content-contract.js';
+import {
+  CONTENT_DIRECTORIES,
+  DIRECTORY_TO_CONTENT_TYPE,
+  isIgnoredLocalContentFile,
+} from './content-contract.js';
 
 const args = process.argv.slice(2);
 const REGISTRY_URL = process.env.REGISTRY_URL || 'https://api.decantr.ai/v1';
@@ -64,7 +68,9 @@ function countRepoItems() {
 
   for (const dir of CONTENT_DIRECTORIES) {
     try {
-      repoCounts[DIRECTORY_TO_CONTENT_TYPE[dir]] = readdirSync(dir).filter((file) => file.endsWith('.json')).length;
+      repoCounts[DIRECTORY_TO_CONTENT_TYPE[dir]] = readdirSync(dir).filter((file) => (
+        file.endsWith('.json') && !isIgnoredLocalContentFile(file)
+      )).length;
     } catch {
       repoCounts[DIRECTORY_TO_CONTENT_TYPE[dir]] = 0;
     }

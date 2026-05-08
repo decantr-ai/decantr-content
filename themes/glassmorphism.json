@@ -1,6 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/theme.v1.json",
   "id": "glassmorphism",
+  "version": "1.0.0",
   "name": "Glassmorphism",
   "description": "Stormy blue frosted glass aesthetic. Dark glass surfaces with blue-tinted borders, sky-blue primary, cyan accents, and atmospheric gradient backgrounds.",
   "tags": [
@@ -76,7 +77,7 @@
     "rounded",
     "pill"
   ],
-  "decantr_compat": ">=0.9.0",
+  "decantr_compat": ">=2.0.0",
   "source": "community",
   "decorators": {
     "glass-backdrop": "Dark gradient background with subtle noise texture.",

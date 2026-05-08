@@ -2,7 +2,7 @@
   "id": "spatial-card-stack",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Spatial Card Stack",
   "description": "Z-axis stacked cards with depth parallax and gesture-based navigation — supports swipeable deck, fanned arc, 3D carousel, and chronological timeline stack layouts.",
   "category": "spatial",

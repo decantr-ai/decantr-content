@@ -1,5 +1,7 @@
 {
   "id": "sidebar-main",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Sidebar + Main",
   "description": "Responsive sidebar shell with a desktop split layout, a compact sticky header, and an overlay drawer below the md breakpoint. Used by dashboards, account workspaces, and admin operations surfaces.",
   "layout": "grid",

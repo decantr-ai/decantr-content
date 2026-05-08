@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "mention-popup",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Mention Popup",
   "description": "@mention autocomplete for collaborators. Triggered by @ character with type-ahead filtering and keyboard navigation.",
   "dependencies": {

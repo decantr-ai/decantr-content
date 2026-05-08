@@ -2,7 +2,7 @@
   "id": "case-brief-card",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Case Brief Card",
   "description": "A case brief summary card displaying Bluebook citation, court, outcome, holding summary, key facts, and optional research annotation margin.",
   "category": "legal",

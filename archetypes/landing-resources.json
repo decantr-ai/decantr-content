@@ -3,7 +3,7 @@
   "id": "landing-resources",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Landing Resources",
   "description": "Resources and blog section for a product landing site. Provides SEO depth with blog posts, guides, and resource listings that support the main product narrative.",
   "tags": [

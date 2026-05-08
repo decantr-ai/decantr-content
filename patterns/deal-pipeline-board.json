@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "deal-pipeline-board",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Deal Pipeline Board",
   "description": "Sales pipeline Kanban board specialized for deal management with stage columns, deal cards showing amounts and close probability, drag-to-advance functionality, and value aggregation per stage.",
   "category": "crm",

@@ -3,7 +3,7 @@
   "id": "copilot-settings",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Copilot Settings",
   "description": "Configuration interface for AI copilot preferences, model selection, permissions, and behavior tuning. Auxiliary archetype for copilot-powered applications.",
   "tags": [

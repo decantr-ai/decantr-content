@@ -3,7 +3,7 @@
   "id": "marketing-research",
   "role": "public",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Marketing — Research Lab",
   "description": "Public marketing home page for a scientific research lab. Introduces the lab, its research focus, and drives visitors toward publications and collaboration.",
   "tags": [

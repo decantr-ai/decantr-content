@@ -3,7 +3,7 @@
   "id": "creator-dashboard",
   "role": "primary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Creator Dashboard",
   "description": "Creator admin dashboard home with earnings summary, recent activity, and quick actions.",
   "tags": [

@@ -3,7 +3,7 @@
   "id": "buyer-dashboard",
   "role": "auxiliary",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Buyer Dashboard",
   "description": "Buyer account hub with bookings, saved favorites, and messaging. Centralizes the buyer experience in a two-sided marketplace.",
   "tags": [

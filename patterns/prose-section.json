@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "prose-section",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Prose Section",
   "description": "Long-form editorial or company-story section with comfortable reading width, optional supporting media, and a stable narrative rhythm for marketing and about pages.",
   "dependencies": {

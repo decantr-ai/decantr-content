@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "agent-marketplace",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Agent Marketplace",
   "description": "Full agent marketplace platform for discovering, deploying, and monitoring autonomous agent swarms. Combines orchestration dashboard, auth, marketing landing, and AI transparency views.",
   "tags": [

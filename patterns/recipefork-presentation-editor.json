@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-presentation-editor",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Presentation Editor",
   "description": "Optional Chef Mode plating presentation editor for Recipefork with three intent states: AI-generated plating steps, manual plating steps, or no plating instructions, plus a readiness checklist that gates AI generation until the recipe has enough context to plate.",
   "dependencies": {

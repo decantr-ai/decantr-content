@@ -1,5 +1,7 @@
 {
   "id": "workspace-aside",
+  "version": "1.0.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Workspace Aside",
   "description": "Three-column layout for collaborative editing with page tree navigation, document editor body, and comment/activity sidebar. Used by document-editor archetype for real-time collaboration.",
   "layout": "grid",

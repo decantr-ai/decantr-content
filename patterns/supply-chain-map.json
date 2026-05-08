@@ -2,7 +2,7 @@
   "id": "supply-chain-map",
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "version": "1.0.0",
-  "decantr_compat": ">=1.5.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Supply Chain Map",
   "description": "A geographic supply chain visualization mapping suppliers, material flows, and emissions intensity across tiers of a company's upstream value chain.",
   "category": "climate",
