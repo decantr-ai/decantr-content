@@ -15,6 +15,8 @@ npm run validate
 
 `npm run validate` runs offline and requires no credentials. It is the same check CI runs on every PR.
 
+For quick setup help, showcase feedback, or live discussion about content ideas, join the [Decantr Discord](https://discord.gg/WeDpBd4xFU). Keep proposed registry content changes, bugs, and durable decisions in GitHub issues, PRs, or docs.
+
 ## Content types
 
 | Directory | Purpose | Schema |
