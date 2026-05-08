@@ -71,8 +71,8 @@ These compare the local repo against `api.decantr.ai` and surface what would cha
 
 ## What not to PR
 
-- New top-level directories or new content types — those require a schema change in `decantr-monorepo` first.
-- Edits to `schemas/` directly. Those are vendored from `decantr-monorepo` via `npm run schemas:sync`.
+- New top-level directories or new content types — those require a maintainer-coordinated schema change first.
+- Edits to `schemas/` directly. Those are vendored from the canonical registry schema source by maintainers.
 - Changes to `validate.js` that loosen the contract — tighten freely, loosen only with a maintainer-led discussion.
 
 ## Code of conduct
