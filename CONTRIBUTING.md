@@ -11,9 +11,10 @@ git clone https://github.com/decantr-ai/decantr-content.git
 cd decantr-content
 npm install
 npm run validate
+npm run content:health
 ```
 
-`npm run validate` runs offline and requires no credentials. It is the same check CI runs on every PR.
+`npm run validate` and `npm run content:health` run offline and require no credentials. They are the core checks CI runs on every PR.
 
 For quick setup help, showcase feedback, or live discussion about content ideas, join the [Decantr Discord](https://discord.gg/WeDpBd4xFU). Keep proposed registry content changes, bugs, and durable decisions in GitHub issues, PRs, or docs.
 
@@ -50,7 +51,7 @@ CI passes on schema validity, but the validator also emits warnings. Items that 
 ## Adding content
 
 1. Pick the right directory and copy the closest existing file as a starting point — schemas are easier to mimic than to read cold.
-2. Edit the JSON. Keep ids unique, run `npm run validate` until clean.
+2. Edit the JSON. Keep ids unique, run `npm run validate` and `npm run content:health` until blocking errors are clean.
 3. Open a PR. The CI workflow (`Audit Registry Drift`) will diff your changes against the live registry and post a summary comment.
 4. A maintainer reviews and merges. The `Publish to Registry` workflow auto-syncs `main` to `api.decantr.ai`.
 

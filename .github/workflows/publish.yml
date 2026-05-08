@@ -31,7 +31,9 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - run: npm ci
-      - run: node validate.js
+      - run: npm run validate
+      - name: Audit content health
+        run: npm run content:health
 
   publish:
     needs: validate
