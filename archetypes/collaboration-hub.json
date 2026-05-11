@@ -2,86 +2,66 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "collaboration-hub",
   "role": "auxiliary",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "decantr_compat": ">=2.0.0",
   "name": "Collaboration Hub",
-  "description": "Producer collaborator directory and royalty split management surface with contributor cards and split calculators.",
-  "tags": [
-    "collaboration",
-    "royalties",
-    "splits",
-    "team",
-    "music"
-  ],
+  "description": "Producer collaboration and royalty operations surface with contributor presence, credits, split validation, signatures, and payout readiness.",
+  "visual_brief": "Music operations workspace for credits, presence, and splits. The interface should feel like label-ready production tooling: contributor rows, role badges, signed/pending states, split meters, payout readiness, and clear validation totals. Use operational density, calm dark surfaces, and unmistakable valid/invalid states. It should not resemble generic team cards or CRM people lists.",
+  "responsive": {
+    "mobile": "Split meters pin above stacked contributor forms. Contributor rows become compact cards with master/publishing percentages and signature state visible.",
+    "tablet": "Validation summary and contributor list stack; ledger moves below.",
+    "desktop": "Validation totals, contributor rows, split meters, and ledger can be visible together with table-like alignment."
+  },
+  "accessibility": {
+    "landmarks": ["main"],
+    "keyboard": ["Tab moves through percentage inputs", "Enter commits edited percentages", "Esc cancels edit"],
+    "notes": "Announce split totals and invalid states; color cannot be the only indicator of pending or invalid signatures."
+  },
+  "tags": ["collaboration", "royalties", "splits", "team", "music", "credits"],
   "classification": {
     "triggers": {
-      "primary": [
-        "collaborators",
-        "royalty splits",
-        "co-writers",
-        "music team"
-      ],
-      "secondary": [
-        "splits",
-        "contributors",
-        "credits"
-      ],
+      "primary": ["collaborators", "royalty splits", "co-writers", "music team", "producer splits"],
+      "secondary": ["splits", "contributors", "credits", "payouts", "signatures"],
       "negative": []
     },
     "implies": [],
     "weight": 1,
     "tier": "recommended"
   },
+  "directives": [
+    "Collaboration pages should read as music ops surfaces, not generic team management.",
+    "Split validation must be visually unambiguous and practical."
+  ],
   "pages": [
     {
       "id": "collaborators",
       "patterns": [
-        {
-          "pattern": "card-grid",
-          "preset": "content",
-          "as": "grid"
-        },
-        {
-          "pattern": "team-member-row",
-          "preset": "standard",
-          "as": "members"
-        }
+        { "pattern": "card-grid", "preset": "content", "as": "grid" },
+        { "pattern": "team-member-row", "preset": "standard", "as": "members" },
+        { "pattern": "session-inspector", "preset": "aside", "as": "presence" }
       ],
-      "default_layout": [
-        "card-grid",
-        "team-member-row"
-      ],
+      "default_layout": ["card-grid", "team-member-row", "session-inspector"],
       "shell": "sidebar-main"
     },
     {
       "id": "splits",
       "patterns": [
-        {
-          "pattern": "split-calculator",
-          "preset": "standard",
-          "as": "calculator"
-        },
-        {
-          "pattern": "data-table",
-          "preset": "standard",
-          "as": "ledger"
-        }
+        { "pattern": "producer-split-workbench", "preset": "workbench", "as": "workbench" },
+        { "pattern": "data-table", "preset": "standard", "as": "ledger" }
       ],
-      "default_layout": [
-        "split-calculator",
-        "data-table"
+      "default_layout": ["producer-split-workbench", "data-table"],
+      "directives": [
+        "Use the split workbench as the primary surface; the ledger is supporting history.",
+        "Show master and publishing totals, signed/pending state, and payout readiness."
       ],
       "shell": "sidebar-main"
     }
   ],
   "page_briefs": {
-    "collaborators": "Producer collaborator directory. A card grid surfaces each collaborator with avatar, role, active projects, and contact action. Below, a flat list of team-member rows shows recent activity and invite status for quick ops on the full roster.",
-    "splits": "Royalty split workspace. The split calculator takes the track and contributors and computes percentage shares with publishing, master, and writer breakdowns. Below, a ledger-style data table lists all finalized splits across the catalog with signing status and payout routing."
+    "collaborators": "Producer collaborator directory with role, active session, contribution count, split status, and presence. It should feel connected to current music sessions rather than corporate team cards.",
+    "splits": "Royalty split workbench for the active track. Master and publishing meters validate to 100%, contributor rows show roles/signatures/payout readiness, and a ledger lists finalized splits."
   },
-  "features": [
-    "collaboration",
-    "royalties"
-  ],
+  "features": ["collaboration", "royalties", "credits", "split-validation", "signatures"],
   "shells": {
     "sidebar-main": "Left navigation sidebar with primary content column"
   },
@@ -89,18 +69,14 @@
     "patterns": {
       "card-grid": "^1.0.0",
       "team-member-row": "^1.0.0",
-      "split-calculator": "^1.0.0",
+      "session-inspector": "^1.0.0",
+      "producer-split-workbench": "^1.0.0",
       "data-table": "^1.0.0"
     },
     "styles": {}
   },
   "suggested_theme": {
-    "ids": [
-      "carbon"
-    ],
-    "modes": [
-      "dark",
-      "light"
-    ]
+    "ids": ["studio-dark", "carbon-neon"],
+    "modes": ["dark"]
   }
 }

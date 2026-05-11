@@ -2,104 +2,85 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "session-rooms",
   "role": "auxiliary",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "decantr_compat": ">=2.0.0",
   "name": "Session Rooms",
-  "description": "Live producer session rooms for real-time co-creation with voice, video, and chat.",
-  "tags": [
-    "live-sessions",
-    "voice",
-    "video",
-    "rooms",
-    "music"
-  ],
+  "description": "Live producer rooms for co-production with shared transport, voice presence, cue markers, take queue, room chat, and synchronized session state.",
+  "visual_brief": "Live studio room surface, not a generic meeting UI. The room should foreground synchronized session state: shared transport, current cue, take queue, room latency, voice activity, participant roles, and the track being edited. Participant visuals are compact and utility-driven. Chat is present but subordinate to the shared session.",
+  "responsive": {
+    "mobile": "Stage first, then horizontal participant strip. Chat, cue markers, and take queue are tabs. Shared transport remains reachable.",
+    "tablet": "Stage and shared transport stay primary; participant and chat rails may stack.",
+    "desktop": "Stage, participant presence, shared transport, cue queue, and chat preview can be visible without feeling like a video-call clone."
+  },
+  "accessibility": {
+    "landmarks": ["main", "complementary"],
+    "keyboard": ["Space toggles shared playback", "V mutes voice", "C focuses chat", "Q adds a cue marker"],
+    "notes": "Announce active speaker, room latency changes, and new cue markers."
+  },
+  "tags": ["live-sessions", "voice", "rooms", "music", "co-production", "collaboration"],
   "classification": {
     "triggers": {
-      "primary": [
-        "session rooms",
-        "live rooms",
-        "co-producing",
-        "live collab"
-      ],
-      "secondary": [
-        "voice chat",
-        "video session",
-        "jam rooms"
-      ],
+      "primary": ["session rooms", "live rooms", "co-producing", "live collab", "studio room"],
+      "secondary": ["voice chat", "video session", "jam rooms", "shared transport"],
       "negative": []
     },
     "implies": [],
     "weight": 1,
     "tier": "recommended"
   },
+  "directives": [
+    "Live rooms should feel like synchronized co-production, not generic video conferencing.",
+    "Shared transport, latency, cue markers, and take queue must be visible."
+  ],
   "pages": [
     {
       "id": "rooms",
       "patterns": [
-        {
-          "pattern": "card-grid",
-          "preset": "content",
-          "as": "rooms"
-        },
-        {
-          "pattern": "activity-feed",
-          "preset": "compact",
-          "as": "feed"
-        }
+        { "pattern": "live-room-stage", "preset": "compact", "as": "room-preview" },
+        { "pattern": "card-grid", "preset": "content", "as": "rooms" },
+        { "pattern": "activity-feed", "preset": "compact", "as": "feed" }
       ],
-      "default_layout": [
-        "card-grid",
-        "activity-feed"
-      ],
+      "default_layout": ["live-room-stage", "card-grid", "activity-feed"],
       "shell": "sidebar-main"
     },
     {
       "id": "room-detail",
       "patterns": [
-        {
-          "pattern": "video-room",
-          "preset": "speaker",
-          "as": "stage"
-        },
-        {
-          "pattern": "chat-thread",
-          "preset": "standard",
-          "as": "chat"
-        }
+        { "pattern": "live-room-stage", "preset": "room", "as": "stage" },
+        { "pattern": "daw-transport-bar", "preset": "studio", "as": "shared-transport" },
+        { "pattern": "chat-thread", "preset": "standard", "as": "chat" }
       ],
       "default_layout": [
-        "video-room",
+        "live-room-stage",
+        "daw-transport-bar",
         "chat-thread"
+      ],
+      "directives": [
+        "The stage should prioritize shared session state, participants, cue markers, and take queue; chat is secondary."
       ],
       "shell": "sidebar-main"
     }
   ],
   "page_briefs": {
-    "rooms": "Browse surface for live producer rooms. A card grid shows each active room with host, participants, topic, and join action. A compact activity feed runs alongside showing who started rooms, who joined, and recent session highlights.",
-    "room-detail": "Active room stage. A speaker-focused video room highlights the current speaker with participant tiles and raise-hand controls. A persistent chat thread runs down the right with messages, reactions, and shared track links for the live session."
+    "rooms": "Browse active and scheduled production rooms. Each room preview shows host, participants, BPM/key, shared track, latency, status, and join action. A compact feed shows recent joins, cues, and completed takes.",
+    "room-detail": "Active live room stage. Shared transport and session state anchor the room, participant tiles show voice/edit status, cue markers and take queue guide recording, and chat supports coordination without overpowering the music workflow."
   },
-  "features": [
-    "live-sessions",
-    "voice-chat"
-  ],
+  "features": ["live-sessions", "voice-chat", "shared-transport", "take-queue", "cue-markers"],
   "shells": {
     "sidebar-main": "Left navigation sidebar with primary content column"
   },
   "dependencies": {
     "patterns": {
+      "live-room-stage": "^1.0.0",
       "card-grid": "^1.0.0",
       "activity-feed": "^1.0.0",
-      "video-room": "^1.0.0",
+      "daw-transport-bar": "^1.0.0",
       "chat-thread": "^1.0.0"
     },
     "styles": {}
   },
   "suggested_theme": {
-    "ids": [
-      "carbon"
-    ],
-    "modes": [
-      "dark"
-    ]
+    "ids": ["studio-dark", "carbon-neon"],
+    "modes": ["dark"]
   }
 }

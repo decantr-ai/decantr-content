@@ -2,104 +2,88 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "track-library",
   "role": "auxiliary",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "decantr_compat": ">=2.0.0",
   "name": "Track Library",
-  "description": "Producer track catalog with searchable table of finished and in-progress tracks plus a per-track detail view with waveform preview and version history.",
-  "tags": [
-    "music",
-    "tracks",
-    "library",
-    "versions",
-    "catalog"
-  ],
+  "description": "Producer track and stem catalog with waveform previews, searchable production metadata, version history, and quick-open session context.",
+  "visual_brief": "Premium production crate, not an admin table. Track rows should scan like a music tool: waveform preview, BPM/key chips, status, collaborator initials, version count, last bounce, and quick-open session action. Use compact rows, quiet borders, subtle selected states, and one accent color for active/hover affordance. Avoid generic card grids unless each card contains real audio/product signal.",
+  "responsive": {
+    "mobile": "Search stays visible. Filters become horizontal chips. Track rows stack waveform first, then metadata, then status/actions.",
+    "tablet": "Use two-column detail/list where space allows; keep waveform previews readable.",
+    "desktop": "Dense list or table with aligned metadata columns, waveform previews, version state, and quick actions visible."
+  },
+  "accessibility": {
+    "landmarks": ["main"],
+    "keyboard": ["Arrow keys move through stems or tracks", "Enter opens selected track", "A adds selected stem to session"],
+    "notes": "Treat waveform previews as decorative unless interactive; label preview and open actions clearly."
+  },
+  "tags": ["music", "tracks", "library", "versions", "catalog", "stems"],
   "classification": {
     "triggers": {
-      "primary": [
-        "track library",
-        "song catalog",
-        "music files",
-        "tracks list"
-      ],
-      "secondary": [
-        "versions",
-        "revisions",
-        "track manager"
-      ],
+      "primary": ["track library", "song catalog", "music files", "tracks list", "stem library"],
+      "secondary": ["versions", "revisions", "track manager", "sample crate"],
       "negative": []
     },
     "implies": [],
     "weight": 1,
     "tier": "recommended"
   },
+  "directives": [
+    "The library should feel like a production crate, not a generic admin table.",
+    "Every track or stem row needs audio-specific metadata and waveform preview where practical."
+  ],
   "pages": [
     {
       "id": "tracks",
       "patterns": [
-        {
-          "pattern": "data-table",
-          "preset": "standard",
-          "as": "table"
-        },
-        {
-          "pattern": "search-filter-bar",
-          "preset": "standard",
-          "as": "search"
-        }
+        { "pattern": "stem-browser", "preset": "library", "as": "browser" },
+        { "pattern": "data-table", "preset": "standard", "as": "catalog" },
+        { "pattern": "search-filter-bar", "preset": "standard", "as": "filters" }
       ],
-      "default_layout": [
-        "search-filter-bar",
-        "data-table"
+      "default_layout": ["search-filter-bar", "stem-browser", "data-table"],
+      "directives": [
+        "Prioritize waveform previews, BPM, key, status, collaborators, and last bounce over generic table columns."
       ],
       "shell": "sidebar-main"
     },
     {
       "id": "track-detail",
       "patterns": [
-        {
-          "pattern": "waveform-track",
-          "preset": "track",
-          "as": "waveform"
-        },
-        {
-          "pattern": "version-history",
-          "preset": "sidebar",
-          "as": "versions"
-        }
+        { "pattern": "daw-transport-bar", "preset": "studio", "as": "transport" },
+        { "pattern": "arrangement-canvas", "preset": "preview", "as": "arrangement-preview" },
+        { "pattern": "version-history", "preset": "sidebar", "as": "versions" },
+        { "pattern": "session-inspector", "preset": "aside", "as": "inspector" }
       ],
       "default_layout": [
-        "waveform-track",
-        "version-history"
+        "daw-transport-bar",
+        { "cols": ["arrangement-canvas", "version-history"], "at": "lg", "span": { "arrangement-canvas": 8, "version-history": 4 } },
+        "session-inspector"
       ],
       "shell": "sidebar-main"
     }
   ],
   "page_briefs": {
-    "tracks": "Searchable browse surface for the producer's track catalog. Top area holds a filter bar with genre, status, BPM, and key facets plus a search field. Below, a dense data table lists tracks with title, duration, BPM, last-edited, collaborators, and status columns.",
-    "track-detail": "Detail view for a single track. Hero area plays the rendered waveform with transport controls and region markers. A version history panel lists each saved revision with timestamps, authors, and notes so producers can compare and restore prior takes."
+    "tracks": "Searchable producer crate. Search and facets filter by status, BPM, key, collaborator, genre, and usage. The main browser shows dense waveform preview rows with current mix status, contributors, version count, and quick-open session action.",
+    "track-detail": "Track review surface with compact transport, read-only arrangement preview, version timeline, bounce notes, and inspector details for selected version/stem."
   },
-  "features": [
-    "track-management",
-    "versions"
-  ],
+  "features": ["track-management", "versions", "stem-browser", "waveform-preview"],
   "shells": {
-    "sidebar-main": "Left navigation sidebar with primary content column"
+    "sidebar-main": "Responsive left navigation sidebar with primary content column"
   },
   "dependencies": {
     "patterns": {
+      "stem-browser": "^1.0.0",
       "data-table": "^1.0.0",
       "search-filter-bar": "^1.0.0",
-      "waveform-track": "^1.0.0",
-      "version-history": "^1.0.0"
+      "daw-transport-bar": "^1.0.0",
+      "arrangement-canvas": "^1.0.0",
+      "version-history": "^1.0.0",
+      "session-inspector": "^1.0.0"
     },
     "styles": {}
   },
   "suggested_theme": {
-    "ids": [
-      "carbon"
-    ],
-    "modes": [
-      "dark"
-    ]
+    "ids": ["studio-dark", "carbon-neon"],
+    "modes": ["dark"]
   }
 }
