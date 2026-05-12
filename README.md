@@ -28,6 +28,7 @@ For contributors (no credentials required):
 
 ```bash
 npm install
+npm run schemas:sync                                                             # refresh vendored schemas from a sibling decantr-monorepo checkout
 npm run validate                                                                 # validate every JSON file against the schemas
 npm run registry:v2-certify                                                      # prove active blueprints compile to Essence v4
 npm run content:health                                                           # local content health report, fails only on blocking errors
@@ -55,6 +56,8 @@ What it reports:
 - content guidance coverage for patterns, themes, blueprints, and archetypes
 
 The CI gate uses `--fail-on error`, so existing warning-level reference drift stays visible in the GitHub summary without blocking unrelated content fixes. Use a finding's prompt command, such as `decantr content-health --prompt <finding-id>`, to produce a scoped remediation prompt for an AI coding assistant.
+
+This repo tracks the current Decantr 2.x CLI and telemetry package versions so Content Health, registry certification, and publish telemetry stay aligned with the monorepo reliability layer. When Decantr adds or changes public schemas, run `npm run schemas:sync` from this repo and commit the vendored schema copies with the content change.
 
 Warning-level debt is also tracked in [`content-health-suppressions.json`](./content-health-suppressions.json). New Content Health warning IDs fail CI until they are fixed or deliberately added to that baseline with a rationale. Stale suppressions fail too, so the baseline shrinks as content quality improves.
 
