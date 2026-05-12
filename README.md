@@ -18,9 +18,11 @@ shells/         — Page layout containers (sidebar-main, topbar-main, etc.)
 
 ## Publishing
 
-Changes are validated in CI and published by Decantr maintainers after they land on `main`.
+Changes are validated in CI on PRs and again after they land on `main`. A push to `main` does not mutate the hosted registry by default.
 
 CI checks every content file with `node validate.js`, runs Decantr Content Health, audits intentional warning suppressions, and certifies the active registry catalog against the Decantr V2 / Essence V4 product boundary. Public contributors do not need registry credentials to validate or propose content changes.
+
+Registry sync is a separate maintainer-controlled step through the `Publish to Registry` workflow. Manual dispatch defaults to `dry_run: true`; a live sync requires an explicit non-dry-run dispatch with scoped registry credentials.
 
 ## Local Development
 
@@ -110,7 +112,8 @@ This audit is also read-only and does not require registry credentials for publi
 1. Create a new JSON file in the appropriate directory
 2. Every item must have an `id` field (used as the slug)
 3. Open a PR — CI validates the JSON
-4. Merge to `main` — maintainers publish the update to the live registry
+4. Merge to `main` — CI validates the repo source of truth without publishing
+5. Maintainers publish the update to the live registry through an explicit non-dry-run registry sync
 
 PRs and scheduled checks can also run the drift audit workflow to surface live-vs-repo mismatches without mutating the registry.
 
