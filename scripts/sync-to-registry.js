@@ -7,6 +7,7 @@
  * Usage:
  *   node scripts/sync-to-registry.js
  *   node scripts/sync-to-registry.js --dry-run
+ *   node scripts/sync-to-registry.js --prune-missing --dry-run
  *   node scripts/sync-to-registry.js --report-json=./sync-report.json
  *
  * Environment variables:
@@ -15,7 +16,7 @@
  *   DECANTR_CONTENT_PRUNE_TOKEN - Scoped service token for the prune endpoint (preferred)
  *   DECANTR_ADMIN_KEY - Legacy admin key fallback
  *   CONTENT_CERTIFICATION_TIER - Tier to sync: enterprise, demo, experimental, all (default: enterprise)
- *   PRUNE_MISSING    - Set to "false" to skip deleting stale @official items (default: true)
+ *   PRUNE_MISSING    - Set to "true" to include stale @official pruning (default: false)
  *   CONFIRM_PRUNE    - Must be "true" for non-dry-run pruning
  *   DRY_RUN          - Set to "true" to report actions without mutating the registry
  *   SYNC_REPORT_PATH - Write a JSON report to this path
@@ -42,7 +43,7 @@ const PRUNE_TOKEN = process.env.DECANTR_CONTENT_PRUNE_TOKEN || process.env.DECAN
 const SYNC_TOKEN_HEADER = process.env.DECANTR_CONTENT_SYNC_TOKEN ? 'X-Content-Sync-Token' : 'X-Admin-Key';
 const PRUNE_TOKEN_HEADER = process.env.DECANTR_CONTENT_PRUNE_TOKEN ? 'X-Content-Prune-Token' : 'X-Admin-Key';
 const CONCURRENCY = 20;
-const SHOULD_PRUNE = process.env.PRUNE_MISSING !== 'false';
+const SHOULD_PRUNE = args.includes('--prune-missing') || process.env.PRUNE_MISSING === 'true';
 const CONFIRM_PRUNE = args.includes('--confirm-prune') || process.env.CONFIRM_PRUNE === 'true';
 const IS_DRY_RUN = args.includes('--dry-run') || process.env.DRY_RUN === 'true';
 const CONTENT_CERTIFICATION_TIER = process.env.CONTENT_CERTIFICATION_TIER || 'enterprise';

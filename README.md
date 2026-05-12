@@ -22,7 +22,7 @@ Changes are validated in CI on PRs and again after they land on `main`. A push t
 
 CI checks every content file with `node validate.js`, runs Decantr Content Health, audits intentional warning suppressions, and certifies the active registry catalog against the Decantr V2 / Essence V4 product boundary. Public contributors do not need registry credentials to validate or propose content changes.
 
-Registry sync is a separate maintainer-controlled step through the `Publish to Registry` workflow. Manual dispatch defaults to `dry_run: true`; a live sync requires an explicit non-dry-run dispatch with scoped registry credentials.
+Registry sync is a separate maintainer-controlled step through the `Publish to Registry` workflow. Manual dispatch defaults to `dry_run: true`; a live sync requires an explicit non-dry-run dispatch with scoped registry credentials. Stale live-content pruning is opt-in through `prune_missing` / `PRUNE_MISSING=true` and should only run after reviewing a dry-run report.
 
 ## Local Development
 
