@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Climate Dashboard",
   "description": "Carbon accounting and emissions dashboard with Scope 1/2/3 tracking, supply chain mapping, offset marketplace, regulatory reporting, and full auth with marketing landing.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "climate-dashboard",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": ["climate", "esg", "sustainability", "carbon", "csrd", "2026"],
   "compose": [
     "emissions-dashboard",

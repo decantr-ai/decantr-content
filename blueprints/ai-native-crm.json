@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "AI-Native CRM",
   "description": "Intelligent CRM with AI enrichment at every touch. Pipeline management, email composer, meeting recaps, and AI-driven insights for modern sales teams.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "ai-native-crm",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "crm",
     "sales",

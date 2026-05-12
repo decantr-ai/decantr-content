@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Retro Launch Campaign",
   "description": "Campaign-style product launch funnel with premium retro arcade visual language, physical product-theater hero, preorder or waitlist conversion, reward cartridges, stretch goals, prototype demos, maker story, updates, press kit, checkout, and post-conversion sharing.",
+  "blueprint_portfolio": {
+    "visibility": "labs",
+    "maturity": "experimental",
+    "rationale": "Interesting direction for advanced users, but not yet a default recommendation because the public positioning or scaffold proof needs more tightening.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "retro-launch-campaign",
+      "notes": "Visible through Labs; promote after clearer product positioning and evidence-backed scaffold quality."
+    }
+  },
   "tags": [
     "campaign",
     "launch",

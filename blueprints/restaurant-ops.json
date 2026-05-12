@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Restaurant Ops",
   "description": "Warm restaurant operations hub with floor maps, kitchen display system, menu engineering, inventory, server stations, customer loyalty, daily operations, and full auth with marketing landing.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "supported-contract",
+    "rationale": "High-signal product composition that expands the registry beyond demos and remains valuable as a default discovery option.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "restaurant-ops",
+      "notes": "Showcase-backed candidate; promote to certified after evidence bundle and browser verification are attached."
+    }
+  },
   "tags": ["restaurant", "hospitality", "pos", "kds", "operations", "2026"],
   "compose": [
     "restaurant-floor",

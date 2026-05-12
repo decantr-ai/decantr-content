@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Agent Studio",
   "description": "Precision engineering studio for building, testing, and deploying AI agents. Combines agent builder, prompt library, tool registry, eval suite, trace viewer, and full auth with marketing landing.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "certified-flagship",
+    "rationale": "Flagship blueprint with a maintained showcase capsule, thumbnail asset, and smoke-green shortlist verification suitable for first-run discovery.",
+    "artifact": {
+      "status": "certified",
+      "showcase": "agent-studio",
+      "notes": "Certified Artifact Contract V0: showcase capsule plus shortlist verification report are available in the Decantr monorepo."
+    }
+  },
   "tags": [
     "ai",
     "agents",

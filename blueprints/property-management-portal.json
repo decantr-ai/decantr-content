@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Property Management Portal",
   "description": "Complete property management platform for real estate investors and property owners. Includes portfolio dashboard, property/unit management, tenant management, financial tracking (P&L, rent roll, expenses), maintenance ticketing, and a self-service tenant portal.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "supported-contract",
+    "rationale": "High-signal product composition that expands the registry beyond demos and remains valuable as a default discovery option.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "property-management-portal",
+      "notes": "Showcase-backed candidate; promote to certified after evidence bundle and browser verification are attached."
+    }
+  },
   "tags": [
     "property-management",
     "real-estate",

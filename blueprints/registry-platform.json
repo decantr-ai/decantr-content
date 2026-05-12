@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Registry Platform",
   "description": "Content registry with browsing, publishing, user management, team collaboration, and admin moderation. Dogfooded UI for the Decantr design intelligence platform.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "certified-flagship",
+    "rationale": "Flagship blueprint with a maintained showcase capsule, thumbnail asset, and smoke-green shortlist verification suitable for first-run discovery.",
+    "artifact": {
+      "status": "certified",
+      "showcase": "registry-platform",
+      "notes": "Certified Artifact Contract V0: showcase capsule plus shortlist verification report are available in the Decantr monorepo."
+    }
+  },
   "tags": [
     "registry",
     "platform",

@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Fractional Ownership",
   "description": "Fractional asset ownership platform with browsable asset listings, cap tables, secondary market order books, governance voting, and full auth with marketing landing.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "fractional-ownership",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": ["fractional", "ownership", "rwa", "tokenization", "finance", "2026"],
   "compose": [
     "asset-browser",

@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Data Pipeline Studio",
   "description": "Technical data engineering workspace with visual pipeline builder, source catalog, transformation editor, job monitoring, and terminal-inspired aesthetics. Built for data engineers.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "certified-flagship",
+    "rationale": "Flagship blueprint with a maintained showcase capsule, thumbnail asset, and smoke-green shortlist verification suitable for first-run discovery.",
+    "artifact": {
+      "status": "certified",
+      "showcase": "data-pipeline-studio",
+      "notes": "Certified Artifact Contract V0: showcase capsule plus shortlist verification report are available in the Decantr monorepo."
+    }
+  },
   "tags": [
     "data",
     "etl",

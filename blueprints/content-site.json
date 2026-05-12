@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Content Site",
   "description": "Reading-first public content site with article browser, newsletter archive, and marketing landing. Multi-archetype composition optimized for long-form consumption, editorial discovery, and subscriber growth.",
+  "blueprint_portfolio": {
+    "visibility": "labs",
+    "maturity": "experimental",
+    "rationale": "Interesting direction for advanced users, but not yet a default recommendation because the public positioning or scaffold proof needs more tightening.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "content-site",
+      "notes": "Visible through Labs; promote after clearer product positioning and evidence-backed scaffold quality."
+    }
+  },
   "tags": ["content", "editorial", "articles", "blog", "newsletter", "reading", "2026"],
   "compose": [
     "content-reader",

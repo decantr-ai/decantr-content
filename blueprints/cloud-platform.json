@@ -5,6 +5,17 @@
   "decantr_compat": ">=2.0.0",
   "name": "Cloud Platform",
   "description": "Full cloud infrastructure platform with marketing landing, app management, team collaboration, service catalog, deploy logs, usage monitoring, billing, and auth",
+  "blueprint_portfolio": {
+    "visibility": "hidden",
+    "maturity": "fold-candidate",
+    "rationale": "Kept addressable by slug for compatibility, but folded out of public browsing because a newer blueprint carries the same job-to-be-done more clearly.",
+    "recommended_alternative": "multi-tenant-platform",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "cloud-platform",
+      "notes": "Prefer multi-tenant-platform in public discovery unless this slug is requested directly."
+    }
+  },
   "tags": [
     "cloud",
     "infrastructure",

@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Creator Monetization Platform",
   "description": "Complete creator monetization platform with dual-shell architecture. Creator dashboard for content, subscribers, and earnings management. Fan storefront for browsing and purchasing. Patreon/Gumroad-style.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "supported-contract",
+    "rationale": "High-signal product composition that expands the registry beyond demos and remains valuable as a default discovery option.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "creator-monetization-platform",
+      "notes": "Showcase-backed candidate; promote to certified after evidence bundle and browser verification are attached."
+    }
+  },
   "tags": [
     "creator",
     "monetization",

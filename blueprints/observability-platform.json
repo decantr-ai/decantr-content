@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Observability Platform",
   "description": "Data-dense monitoring command center with metrics dashboards, log exploration, distributed tracing, alert management, and full auth. Built for SREs and platform engineers.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "certified-flagship",
+    "rationale": "Flagship blueprint with a maintained showcase capsule, thumbnail asset, and smoke-green shortlist verification suitable for first-run discovery.",
+    "artifact": {
+      "status": "certified",
+      "showcase": "observability-platform",
+      "notes": "Certified Artifact Contract V0: showcase capsule plus shortlist verification report are available in the Decantr monorepo."
+    }
+  },
   "tags": [
     "observability",
     "monitoring",

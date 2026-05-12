@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Deal Room",
   "description": "Secure private equity deal room with document vault, Q&A workflow, investor portal, stage-gated deal workspace, and full auth with marketing landing.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "deal-room",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": ["pe", "ma", "deal-room", "due-diligence", "finance", "2026"],
   "compose": [
     "deal-workspace",

@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "SwipeCircle",
   "description": "Mobile-first swipe-based social rating community with card-stack discovery, matching, chat, and profiles. The first Decantr blueprint built around a card-stack swipe loop on a mobile-tab-bar shell. Hinge meets BeReal meets a Dribbble shot — premium consumer dating-app vibe.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "swipecircle",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "mobile",
     "social",

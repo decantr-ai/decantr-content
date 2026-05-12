@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Terminal Dashboard",
   "description": "CLI-style terminal dashboard for developer tools. Retro-modern terminal aesthetic with phosphor green/amber, ASCII borders, split panes, and optional CRT effects. Dark mode only.",
+  "blueprint_portfolio": {
+    "visibility": "labs",
+    "maturity": "experimental",
+    "rationale": "Interesting direction for advanced users, but not yet a default recommendation because the public positioning or scaffold proof needs more tightening.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "terminal-dashboard",
+      "notes": "Visible through Labs; promote after clearer product positioning and evidence-backed scaffold quality."
+    }
+  },
   "tags": [
     "terminal",
     "cli",

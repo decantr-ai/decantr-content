@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Recipe Community",
   "description": "Warm, appetite-driven recipe community with browsing, cook mode, recipe creation, social features, and a marketing landing page. Multi-archetype composition with full auth and settings.",
+  "blueprint_portfolio": {
+    "visibility": "labs",
+    "maturity": "experimental",
+    "rationale": "Interesting community-commerce direction, but it stays in Labs until the registry has a published flagship recipe blueprint to recommend beside it.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "recipe-community",
+      "notes": "Visible through Labs; promote after the recipe-domain positioning and scaffold proof are tightened."
+    }
+  },
   "tags": [
     "recipes",
     "food",

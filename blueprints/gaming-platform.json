@@ -5,6 +5,17 @@
   "decantr_compat": ">=2.0.0",
   "name": "Gaming Platform",
   "description": "Gaming community hub with profiles, leaderboards, and game catalog",
+  "blueprint_portfolio": {
+    "visibility": "hidden",
+    "maturity": "fold-candidate",
+    "rationale": "Kept addressable by slug for compatibility, but folded out of public browsing because a newer blueprint carries the same job-to-be-done more clearly.",
+    "recommended_alternative": "esports-hq",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "gaming-platform",
+      "notes": "Prefer esports-hq in public discovery unless this slug is requested directly."
+    }
+  },
   "tags": [
     "gaming",
     "community",

@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Agent Marketplace",
   "description": "Full agent marketplace platform for discovering, deploying, and monitoring autonomous agent swarms. Combines orchestration dashboard, auth, marketing landing, and AI transparency views.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "agent-marketplace",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "agents",
     "marketplace",

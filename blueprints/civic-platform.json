@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Civic Platform",
   "description": "Accessible civic engagement platform with petitions, budget transparency, council meeting archives, service requests, and full auth with marketing landing.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "civic-platform",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": ["civic", "government", "community", "voting", "transparency", "2026"],
   "compose": [
     "engagement-hub",

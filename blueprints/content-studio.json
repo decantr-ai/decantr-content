@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Content Studio",
   "description": "Private editorial workspace for managing drafts, writing articles, reviewing published content, and maintaining account settings.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "content-studio",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "content",
     "editorial",

@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Spatial Collaboration",
   "description": "Immersive collaborative workspace combining spatial depth-layered canvases with real-time presence, auth, and public-facing about pages.",
+  "blueprint_portfolio": {
+    "visibility": "labs",
+    "maturity": "experimental",
+    "rationale": "Interesting direction for advanced users, but not yet a default recommendation because the public positioning or scaffold proof needs more tightening.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "spatial-collaboration",
+      "notes": "Visible through Labs; promote after clearer product positioning and evidence-backed scaffold quality."
+    }
+  },
   "tags": [
     "spatial",
     "collaboration",

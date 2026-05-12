@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Multi-Tenant Platform",
   "description": "Enterprise-grade multi-tenant platform console with organization switching, API management, usage billing, webhooks, and audit logging. Built for trust and scale.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "supported-contract",
+    "rationale": "High-signal product composition that expands the registry beyond demos and remains valuable as a default discovery option.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "multi-tenant-platform",
+      "notes": "Showcase-backed candidate; promote to certified after evidence bundle and browser verification are attached."
+    }
+  },
   "tags": [
     "platform",
     "multi-tenant",

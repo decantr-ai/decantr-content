@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Real-Time Collaboration Workspace",
   "description": "Complete collaboration platform with live presence, remote cursors, inline comments, and hierarchical pages. Notion/Linear-style productivity workspace with warm, content-focused design.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "certified-flagship",
+    "rationale": "Flagship blueprint with a maintained showcase capsule, thumbnail asset, and smoke-green shortlist verification suitable for first-run discovery.",
+    "artifact": {
+      "status": "certified",
+      "showcase": "realtime-collaboration-workspace",
+      "notes": "Certified Artifact Contract V0: showcase capsule plus shortlist verification report are available in the Decantr monorepo."
+    }
+  },
   "tags": [
     "collaboration",
     "realtime",

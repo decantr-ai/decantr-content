@@ -30,6 +30,26 @@ function warn(msg) {
 }
 
 const validRoles = ['primary', 'gateway', 'public', 'auxiliary'];
+const BLUEPRINT_PORTFOLIO_VISIBILITIES = ['featured', 'public', 'labs', 'hidden'];
+const BLUEPRINT_PORTFOLIO_MATURITIES = [
+  'certified-flagship',
+  'supported-contract',
+  'experimental',
+  'fold-candidate',
+  'legacy-hidden',
+];
+const BLUEPRINT_ARTIFACT_STATUSES = ['none', 'planned', 'candidate', 'certified'];
+
+let blueprintIds = new Set();
+try {
+  blueprintIds = new Set(
+    readdirSync('blueprints')
+      .filter(file => file.endsWith('.json') && !isIgnoredLocalContentFile(file))
+      .map(file => basename(file, '.json')),
+  );
+} catch {
+  blueprintIds = new Set();
+}
 
 function loadJson(relativePath) {
   return JSON.parse(readFileSync(join(process.cwd(), relativePath), 'utf-8'));
@@ -87,6 +107,10 @@ function isLayoutGroup(value) {
 
 function isLayoutItem(value) {
   return isPatternReference(value) || isLayoutGroup(value);
+}
+
+function isNonEmptyString(value) {
+  return typeof value === 'string' && value.trim().length > 0;
 }
 
 for (const type of CONTENT_DIRECTORIES) {
@@ -199,6 +223,54 @@ for (const type of CONTENT_DIRECTORIES) {
         }
       }
       if (type === 'blueprints') {
+        const portfolio = content.blueprint_portfolio;
+        if (!isRecord(portfolio)) {
+          fail(`${type}/${file}: blueprint_portfolio is required`);
+        } else {
+          if (!BLUEPRINT_PORTFOLIO_VISIBILITIES.includes(portfolio.visibility)) {
+            fail(`${type}/${file}: blueprint_portfolio.visibility must be one of: ${BLUEPRINT_PORTFOLIO_VISIBILITIES.join(', ')}`);
+          }
+          if (!BLUEPRINT_PORTFOLIO_MATURITIES.includes(portfolio.maturity)) {
+            fail(`${type}/${file}: blueprint_portfolio.maturity must be one of: ${BLUEPRINT_PORTFOLIO_MATURITIES.join(', ')}`);
+          }
+          if (!isNonEmptyString(portfolio.rationale)) {
+            fail(`${type}/${file}: blueprint_portfolio.rationale must be a non-empty string`);
+          }
+
+          const alternative = portfolio.recommended_alternative;
+          if ((portfolio.visibility === 'hidden' || portfolio.maturity === 'fold-candidate' || portfolio.maturity === 'legacy-hidden') && !isNonEmptyString(alternative)) {
+            fail(`${type}/${file}: blueprint_portfolio.recommended_alternative is required for hidden, fold-candidate, or legacy-hidden blueprints`);
+          }
+          if (isNonEmptyString(alternative)) {
+            if (alternative === content.id) {
+              fail(`${type}/${file}: blueprint_portfolio.recommended_alternative must not point to itself`);
+            } else if (!blueprintIds.has(alternative)) {
+              fail(`${type}/${file}: blueprint_portfolio.recommended_alternative must point to an existing blueprint id`);
+            }
+          }
+
+          const artifact = portfolio.artifact;
+          if (!isRecord(artifact)) {
+            fail(`${type}/${file}: blueprint_portfolio.artifact is required`);
+          } else {
+            if (!BLUEPRINT_ARTIFACT_STATUSES.includes(artifact.status)) {
+              fail(`${type}/${file}: blueprint_portfolio.artifact.status must be one of: ${BLUEPRINT_ARTIFACT_STATUSES.join(', ')}`);
+            }
+            if (artifact.showcase !== undefined && !isNonEmptyString(artifact.showcase)) {
+              fail(`${type}/${file}: blueprint_portfolio.artifact.showcase must be a non-empty string when present`);
+            }
+            if (artifact.notes !== undefined && !isNonEmptyString(artifact.notes)) {
+              fail(`${type}/${file}: blueprint_portfolio.artifact.notes must be a non-empty string when present`);
+            }
+            if (artifact.status === 'certified' && portfolio.maturity !== 'certified-flagship') {
+              fail(`${type}/${file}: blueprint_portfolio.artifact.status=certified requires maturity=certified-flagship`);
+            }
+            if (portfolio.maturity === 'certified-flagship' && artifact.status !== 'certified') {
+              fail(`${type}/${file}: blueprint_portfolio.maturity=certified-flagship requires artifact.status=certified`);
+            }
+          }
+        }
+
         if (!isRecord(content.theme) || typeof content.theme.id !== 'string' || content.theme.id.trim().length === 0) {
           fail(`${type}/${file}: theme.id is required`);
         } else if (Object.hasOwn(content.theme, 'style')) {

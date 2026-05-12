@@ -22,6 +22,8 @@ Changes are validated in CI on PRs and again after they land on `main`. A push t
 
 CI checks every content file with `node validate.js`, runs Decantr Content Health, audits intentional warning suppressions, and certifies the active registry catalog against the Decantr V2 / Essence V4 product boundary. Public contributors do not need registry credentials to validate or propose content changes.
 
+Every active blueprint must include `blueprint_portfolio` metadata. Public registry users only see the simple sets: `All`, `Featured`, `Certified`, and opt-in `Labs`. Maintainer-only maturity labels can fold overlapping legacy slugs out of browse/search while keeping those slugs directly addressable for compatibility.
+
 Registry sync is a separate maintainer-controlled step through the `Publish to Registry` workflow. Manual dispatch defaults to `dry_run: true`; a live sync requires an explicit non-dry-run dispatch with scoped registry credentials. Stale live-content pruning is opt-in through `prune_missing` / `PRUNE_MISSING=true` and should only run after reviewing a dry-run report.
 
 ## Local Development
@@ -124,6 +126,8 @@ Each content type has specific required fields. All items should include:
 - `version` — semver version string
 - `name` — human-readable name
 - `description` — brief description
+
+Blueprints additionally require `blueprint_portfolio.visibility`, `blueprint_portfolio.maturity`, a non-empty rationale, and an artifact status. Hidden or folded blueprints must declare a valid `recommended_alternative` that points to a published blueprint in this repo.
 
 This repo keeps vendored copies of the canonical registry schemas in [`schemas/`](./schemas):
 - `schemas/essence.v4.json`

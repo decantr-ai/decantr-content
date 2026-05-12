@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "eCommerce Admin",
   "description": "Admin dashboard for store operations with product management, order fulfillment, customer relationships, inventory tracking, and sales analytics.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "ecommerce-admin",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "ecommerce",
     "admin",

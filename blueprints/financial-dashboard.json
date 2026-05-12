@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Financial Dashboard",
   "description": "Personal finance dashboard with portfolio overview, transaction history, budget planning, investment tracking, marketing landing, and full auth and settings.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "financial-dashboard",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "finance",
     "dashboard",

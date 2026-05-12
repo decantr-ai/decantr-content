@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Producer Studio",
   "description": "Commercial-grade DAW-first browser production studio with immersive arrangement canvas, mixer console, stem crate, live rooms, royalty split workbench, auth, and public cockpit preview.",
+  "blueprint_portfolio": {
+    "visibility": "featured",
+    "maturity": "certified-flagship",
+    "rationale": "Flagship blueprint with a maintained showcase capsule, thumbnail asset, and smoke-green shortlist verification suitable for first-run discovery.",
+    "artifact": {
+      "status": "certified",
+      "showcase": "producer-studio",
+      "notes": "Certified Artifact Contract V0: showcase capsule plus shortlist verification report are available in the Decantr monorepo."
+    }
+  },
   "tags": ["music", "production", "daw", "collaboration", "audio", "mixer", "2026"],
   "compose": [
     "music-workspace",

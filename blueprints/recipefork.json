@@ -5,6 +5,16 @@
   "decantr_compat": ">=2.0.0",
   "name": "Recipefork",
   "description": "Full Recipefork product blueprint for a Vercel-hosted recipe platform with Supabase-backed auth, social feed, public and private recipes, cookbooks, AI kitchen utilities, dynamic cooking tips, and a hard-blocker Chef Mode authoring workflow with optional plating presentation.",
+  "blueprint_portfolio": {
+    "visibility": "public",
+    "maturity": "supported-contract",
+    "rationale": "Supported registry blueprint that remains useful in All without being promoted as a flagship default.",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "recipefork",
+      "notes": "Showcase-backed candidate; certification requires artifact evidence beyond registry availability."
+    }
+  },
   "tags": [
     "recipes",
     "supabase",

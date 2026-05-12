@@ -5,6 +5,17 @@
   "decantr_compat": ">=2.0.0",
   "name": "Carbon AI Portal",
   "description": "Complete AI chatbot platform with auth, marketing, settings, and legal pages. Sleek developer-tool aesthetic with neutral-cool grays and soft muted blue accent.",
+  "blueprint_portfolio": {
+    "visibility": "hidden",
+    "maturity": "fold-candidate",
+    "rationale": "Kept addressable by slug for compatibility, but folded out of public browsing because a newer blueprint carries the same job-to-be-done more clearly.",
+    "recommended_alternative": "agent-studio",
+    "artifact": {
+      "status": "candidate",
+      "showcase": "carbon-ai-portal",
+      "notes": "Prefer agent-studio in public discovery unless this slug is requested directly."
+    }
+  },
   "tags": [
     "ai",
     "chatbot",
