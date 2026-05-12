@@ -58,6 +58,49 @@ function uniq(values) {
   return [...new Set(values.filter(value => typeof value === 'string' && value.trim().length > 0))];
 }
 
+function serializeConstraintValue(value) {
+  if (value === undefined || value === null) return null;
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value);
+
+  try {
+    return JSON.stringify(value);
+  } catch {
+    return String(value);
+  }
+}
+
+function sanitizeDesignConstraints(designConstraints) {
+  if (!isRecord(designConstraints)) return null;
+
+  const constraints = {};
+  const effects = {};
+
+  for (const [key, value] of Object.entries(designConstraints)) {
+    if (key === 'effects' && isRecord(value)) {
+      for (const [effectKey, effectValue] of Object.entries(value)) {
+        const serialized = serializeConstraintValue(effectValue);
+        if (serialized) effects[effectKey] = serialized;
+      }
+      continue;
+    }
+
+    const serialized = serializeConstraintValue(value);
+    if (!serialized) continue;
+
+    if (key === 'mode' && typeof value === 'string') constraints.mode = value;
+    else if (key === 'typography' && typeof value === 'string') constraints.typography = value;
+    else if (key === 'borders' && typeof value === 'string') constraints.borders = value;
+    else if (key === 'corners' && typeof value === 'string') constraints.corners = value;
+    else if (key === 'shadows' && typeof value === 'string') constraints.shadows = value;
+    else effects[key] = serialized;
+  }
+
+  if (Object.keys(effects).length > 0) constraints.effects = effects;
+
+  return Object.keys(constraints).length > 0 ? constraints : null;
+}
+
 function addFinding(severity, file, message, evidence = []) {
   findings.push({ severity, file, message, evidence });
 }
@@ -410,6 +453,9 @@ function buildEssenceForBlueprint(blueprintRecord, collections) {
 
   const navigation = sanitizeNavigation(blueprint.navigation);
   if (navigation) essence.meta.navigation = navigation;
+
+  const constraints = sanitizeDesignConstraints(blueprint.design_constraints);
+  if (constraints) essence.dna.constraints = constraints;
 
   return essence;
 }
