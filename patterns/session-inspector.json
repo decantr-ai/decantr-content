@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "session-inspector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=2.0.0",
   "name": "Session Inspector",
   "description": "Contextual inspector panel for producer sessions showing selected stem metadata, automation values, collaborator presence, comments, export readiness, and split status.",
@@ -19,7 +19,7 @@
       "layout": { "layout": "stack", "atoms": "_flex _flex-col _gap-3 _bg-surface _border-t _p-4" }
     }
   },
-  "visual_brief": "A dense right-side production inspector with compact modules rather than big cards. It shows selected stem/region, automation parameters, plugin chain summary, collaborator cursors, comments, export readiness checks, and split validation. Use small headings, tokenized chips, status dots, monospace values, separators, and inline actions so it feels like a serious utility panel. Avoid marketing copy, oversized empty states, and decorative card nesting.",
+  "visual_brief": "A dense right-side production inspector with compact modules rather than big cards. It shows selected stem/region, automation parameters, plugin chain summary, collaborator cursors, comments, export readiness checks, and split validation. It can also act as a desktop sidecar for track crate, collaborator ops, room monitor, and settings guardrail routes when those pages need production context. Use small headings, tokenized chips, status dots, monospace values, separators, and inline actions so it feels like a serious utility panel. Avoid marketing copy, oversized empty states, sparse wide panels, and decorative card nesting.",
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _flex-col _gap-4 _bg-bg _border-l _p-4",
@@ -46,7 +46,7 @@
       "alternate_pattern_id": "session-inspector",
         "notes": "Render as a tab panel or bottom sheet opened from selected stem/status controls. Keep selected item, readiness, and collaborator state visible before long notes."
       },
-    "desktop": "Right aside stays visible for active sessions and can collapse to icon rail."
+    "desktop": "Right aside stays visible for active sessions and can collapse to icon rail. On secondary desktop routes, use inspector-like sidecars to prevent sparse card-only layouts."
   },
   "accessibility": {
     "role": "complementary",
@@ -56,6 +56,7 @@
   },
   "layout_hints": {
     "density": "Favor concise stacked utility rows over marketing cards.",
+    "desktop_sidecar": "A sidecar should carry real state: queue, readiness, latency, voice sync, export checks, or selected-item metadata.",
     "contextuality": "Inspector content must reflect the selected track, region, or room state."
   }
 }

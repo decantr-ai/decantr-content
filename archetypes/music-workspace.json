@@ -2,11 +2,11 @@
   "$schema": "https://decantr.ai/schemas/archetype.v2.json",
   "id": "music-workspace",
   "role": "primary",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "decantr_compat": ">=2.0.0",
   "name": "Music Workspace",
   "description": "DAW-first producer session workspace with transport, arrangement canvas, mixer console, stem crate, and contextual session inspector.",
-  "visual_brief": "Premium authenticated DAW workspace. The session route should look like an instrument-grade product surface: dark neutral shell, crisp sidebar, sticky studio header, compact transport rail, beat-grid arrangement canvas, right inspector, and horizontal mixer console. Visual hierarchy starts with playback and the current arrangement, not dashboard cards. Use one dominant cyan interaction accent, amber playhead/readiness, magenta only for armed/remote collaborator states, and tabular mono data for timecode, BPM, key, dB, latency, and split percentages. Dense is good; cramped, decorative, or generic SaaS is not.",
+  "visual_brief": "Premium authenticated DAW workspace. The session route should look like an instrument-grade product surface: dark neutral shell, crisp sidebar, exact active navigation, sticky studio header, compact transport rail, beat-grid arrangement canvas, right inspector, and horizontal mixer console. Visual hierarchy starts with playback and the current arrangement, not dashboard cards. Use one dominant cyan interaction accent, amber playhead/readiness, magenta only for armed/remote collaborator states, and tabular mono data for timecode, BPM, key, dB, latency, and split percentages. Dense is good; cramped, decorative, or generic SaaS is not.",
   "responsive": {
     "mobile": "Top studio header plus compact transport, then segmented tabs for Arrange, Mixer, Inspect, and Stems. Arrangement uses horizontal timeline scroll with fixed-height stem rows. Mixer uses fixed-width channel strips in horizontal scroll. Inspector and crate render as tab panels or bottom sheets.",
     "tablet": "Arrangement remains primary; inspector collapses or stacks below; mixer can be horizontal scroll. Keep transport visible above the active panel.",
@@ -36,7 +36,8 @@
   "navigation_items": [
     { "label": "Session", "route": "/session", "icon": "SlidersHorizontal", "hotkey": "g s", "active_match": "/session" },
     { "label": "Tracks", "route": "/tracks", "icon": "Library", "hotkey": "g t", "active_match": "/tracks" },
-    { "label": "Splits", "route": "/collab/splits", "icon": "Percent", "hotkey": "g p", "active_match": "/collab" },
+    { "label": "Collaborators", "route": "/collab", "icon": "UserCircle", "hotkey": "g c", "active_match": "/collab" },
+    { "label": "Splits", "route": "/collab/splits", "icon": "Percent", "hotkey": "g p", "active_match": "/collab/splits" },
     { "label": "Rooms", "route": "/rooms", "icon": "Radio", "hotkey": "g r", "active_match": "/rooms" }
   ],
   "pages": [
@@ -57,6 +58,7 @@
       ],
       "directives": [
         "Render a complete production cockpit on desktop: transport, arrangement, mixer, inspector, and stem crate.",
+        "Keep desktop nav active states exact enough that /collab and /collab/splits cannot both appear selected.",
         "On mobile, keep transport sticky and switch arrangement, mixer, inspector, and crate through tabs."
       ],
       "shell": "sidebar-aside"
@@ -90,8 +92,8 @@
       "daw-transport-bar": "^1.0.0",
       "arrangement-canvas": "^1.0.0",
       "mixer-console": "^1.0.0",
-      "session-inspector": "^1.0.0",
-      "stem-browser": "^1.0.0"
+      "session-inspector": "^1.1.0",
+      "stem-browser": "^1.1.0"
     },
     "styles": {}
   },

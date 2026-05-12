@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "stem-browser",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=2.0.0",
   "name": "Stem Browser",
   "description": "Producer stem and sample browser with waveform previews, BPM/key facets, tags, usage status, drag-ready assets, and version metadata.",
@@ -19,7 +19,7 @@
       "layout": { "layout": "stack", "atoms": "_flex _flex-col _gap-2 _w-full" }
     }
   },
-  "visual_brief": "A dense production asset browser attached to the DAW, not a generic data table. Top search combines BPM, key, type, mood, owner, and usage filters. Rows show stem name, waveform mini-preview, duration, BPM/key, tags, owner, status, version count, and drag/add affordance. Active or used stems have clear badges. Use compact alignment, scroll-area behavior, and stable row height so producers can scan like a sample crate.",
+  "visual_brief": "A dense production asset browser attached to the DAW, not a generic data table or sparse card list. Top search combines BPM, key, type, mood, owner, and usage filters. Rows show stem name, waveform mini-preview, duration, BPM/key, tags, owner, status, version count, last bounce, and drag/add affordance. Desktop implementations should pair the browser with a compact queue, selected-track inspector, or session sidecar so wide viewports feel intentionally composed. Active or used stems have clear badges. Use compact alignment, scroll-area behavior, and stable row height so producers can scan like a sample crate.",
   "default_layout": {
     "layout": "stack",
     "atoms": "_flex _flex-col _gap-3 _w-full",
@@ -42,7 +42,7 @@
   "interactions": ["hover-tooltip", "drag-reorder", "click-select", "keyboard-navigation"],
   "responsive": {
       "mobile": "Facets collapse into horizontal chips, rows stack metadata below the waveform, and drag affordance becomes an add button. Keep waveform mini-previews wide enough to remain useful.",
-    "desktop": "Use dense rows with facets visible and waveform mini-previews aligned for scanning."
+    "desktop": "Use dense rows with facets visible, waveform mini-previews aligned for scanning, and a supporting queue or inspector sidecar on wide routes."
   },
   "accessibility": {
     "role": "listbox",
@@ -52,6 +52,7 @@
   },
   "layout_hints": {
     "scan_density": "Rows should support fast scanning across BPM, key, usage, and waveform shape.",
-    "audio_identity": "Every row needs an audio-specific visual signal, preferably a mini waveform."
+    "audio_identity": "Every row needs an audio-specific visual signal, preferably a mini waveform.",
+    "desktop_fill": "Avoid isolated rows floating in a large empty desktop viewport; use a sidecar or selected-item panel."
   }
 }

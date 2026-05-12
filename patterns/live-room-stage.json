@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "live-room-stage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decantr_compat": ">=2.0.0",
   "name": "Live Room Stage",
   "description": "Live co-production room stage combining voice presence, shared transport, room participants, chat highlights, takes, and synchronized playback state.",
@@ -19,7 +19,7 @@
       "layout": { "layout": "stack", "atoms": "_flex _flex-col _gap-3 _w-full" }
     }
   },
-  "visual_brief": "A live studio room, not a generic video call. The main stage shows current speaker or shared session state, participant presence, talk/mute state, latency, role badges, cue markers, and take queue. A shared transport strip shows everyone locked to the same playhead. Chat is present but visually subordinate to session state. The surface should feel like remote co-production software: calm, precise, and music-aware.",
+  "visual_brief": "A live studio room, not a generic video call. The main stage shows current speaker or shared session state, participant presence, talk/mute state, latency, role badges, cue markers, and take queue. A shared transport strip shows everyone locked to the same playhead. Browser-card previews must show host, cue, status, participants, BPM, key, and latency as separated chips or aligned columns; never concatenate room metadata. Chat is present but visually subordinate to session state. The surface should feel like remote co-production software: calm, precise, and music-aware.",
   "default_layout": {
     "layout": "grid",
     "atoms": "_grid _gap-4 _w-full",
@@ -47,7 +47,7 @@
   "interactions": ["real-time-updates", "status-pulse", "hover-reveal", "keyboard-navigation"],
   "responsive": {
     "mobile": "Stage first, participant strip horizontally scrolls, chat and take queue become tabs.",
-    "desktop": "Stage and session sync dominate; chat remains a side rail."
+    "desktop": "Stage and session sync dominate; chat remains a side rail. Room browser layouts can pair preview cards with a monitor sidecar for latency, armed takes, next cue, and master bus status."
   },
   "accessibility": {
     "role": "region",
@@ -57,6 +57,7 @@
   },
   "layout_hints": {
     "session_first": "Shared audio session state should visually outrank generic video chat.",
-    "presence": "Participant state must show voice, edit, and sync status clearly."
+    "presence": "Participant state must show voice, edit, and sync status clearly.",
+    "metadata_spacing": "BPM, key, and latency should render as individual chips with gap, separator, or aligned columns."
   }
 }

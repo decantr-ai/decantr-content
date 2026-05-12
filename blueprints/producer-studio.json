@@ -1,7 +1,7 @@
 {
   "$schema": "https://decantr.ai/schemas/blueprint.v1.json",
   "id": "producer-studio",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "decantr_compat": ">=2.0.0",
   "name": "Producer Studio",
   "description": "Commercial-grade DAW-first browser production studio with immersive arrangement canvas, mixer console, stem crate, live rooms, royalty split workbench, auth, and public cockpit preview.",
@@ -23,7 +23,7 @@
   "personality": [
     "Commercial-grade browser DAW cockpit for producers, mix engineers, songwriters, and labels. The first visual signal is the product itself: transport, arrangement grid, waveform regions, automation curves, mixer meters, stem crate, session inspector, collaborators, room latency, and split validation. Think Ableton/Logic/Splice quality translated into a shadcn/Tailwind 4 product language: disciplined dark neutral surfaces, crisp borders, tactile controls, Geist-like typography, tabular mono data, precise alignment, restrained elevation, and one dominant cyan accent with amber/magenta used only for audio/status meaning. It must feel ready to sell, not like a generated SaaS demo."
   ],
-  "visual_brief": "First viewport is an immersive DAW environment, not a split marketing hero. Use a full-bleed studio canvas with a compact nav, product-name headline, and a large cockpit object that includes a titlebar, live status, transport, beat-grid arrangement, collaborator cursors, inspector, and mixer meters. Desktop app routes use a shadcn-style operational shell with sidebar, sticky header, transport rail, dense canvas, tabular mono values, and restrained cards. Mobile routes use a purpose-built studio shell: compact transport, segmented panel tabs, bottom navigation, horizontal timeline scroll, and bottom-sheet inspector behavior. Avoid stock gradients, decorative blobs, nested card stacks, oversized generic headings, and equal-weight accent colors.",
+  "visual_brief": "First viewport is an immersive DAW environment, not a split marketing hero. Use a full-bleed studio canvas with a compact nav, product-name headline, and a large cockpit object that includes a titlebar, live status, transport, beat-grid arrangement, collaborator cursors, inspector, and mixer meters. Desktop app routes use a shadcn-style operational shell with one clear left navigation model, exact active states, sticky studio header, transport rail, dense canvas, tabular mono values, room latency chips, and operational sidecars. Secondary desktop routes must be as product-specific as the session page: track crate with waveform rows and queue sidecar, collaborator ops board, split workbench with signature timeline and distribution gates, room monitor with cue traffic and patchbay health, and live-room console. Mobile routes use a purpose-built studio shell: compact transport, segmented panel tabs, bottom navigation, horizontal timeline scroll, and bottom-sheet inspector behavior. Avoid stock gradients, decorative blobs, nested card stacks, oversized generic headings, ambiguous active nav, concatenated metadata, and equal-weight accent colors.",
   "voice": {
     "tone": "Creative, technical, and studio-literate. Speaks to producers, engineers, writers, and labels without marketing fluff.",
     "cta_verbs": ["Record", "Bounce", "Master", "Mix", "Collab", "Drop", "Review"],
@@ -99,13 +99,13 @@
     "palette": "Dark neutral studio canvas with cyan as the primary interaction/status accent. Amber is reserved for playhead/readiness, magenta for armed/remote collaborator states, red for destructive/recording. Never let cyan, magenta, amber, green, and orange compete equally.",
     "typography": "Use a tight product typography system: large display type only for the public product name, compact app headings in authenticated routes, and tabular monospace for timecode, BPM, key, dB, latency, and percentages.",
     "spacing": "Use a consistent 4px/8px rhythm. Keep DAW controls compact and aligned, but give major surfaces enough breathing room that dense does not become cramped.",
-    "composition": "Prefer un-nested operational panels, table-like alignment, segmented controls, toolbars, and scroll areas over decorative cards. The cockpit should read as one coherent instrument.",
+    "composition": "Prefer un-nested operational panels, table-like alignment, segmented controls, toolbars, sidecars, and scroll areas over decorative cards. The cockpit should read as one coherent instrument. Desktop route chrome should have one obvious active section; do not highlight Splits for the Collaborators route or otherwise allow overlapping active nav states.",
     "mobile": "Mobile is not a squeezed desktop. Use compact controls, bottom nav, segmented panel switching, horizontal timeline scroll, and inspector/crate sheets or tabs."
   },
   "responsive_strategy": {
     "mobile": "Public home opens with the compact cockpit before long copy. Authenticated routes use a top studio header, compact transport, segmented tabs for Arrange/Mixer/Inspect/Stems, bottom navigation, and horizontal timeline scroll. No fixed desktop sidebars or clipped tab labels.",
     "tablet": "Keep transport pinned, arrangement primary, and expose mixer/inspector through split panels or tabs. Navigation may be a drawer or compact rail.",
-    "desktop": "Full DAW cockpit: sidebar, sticky studio header, transport, arrangement canvas, mixer console, stem crate, right inspector, and live collaborator state visible together with professional alignment."
+    "desktop": "Full DAW cockpit: sidebar, sticky studio header, transport, arrangement canvas, mixer console, stem crate, right inspector, and live collaborator state visible together with professional alignment. The /tracks, /collab, /collab/splits, /rooms, /rooms/:id, and settings routes should use dense production surfaces with sidecars, lower status panels, and explicit metadata spacing instead of sparse generic card grids."
   },
   "seo_hints": {
     "schema_org": ["Organization", "WebApplication", "SoftwareApplication"],
@@ -116,6 +116,7 @@
     "hotkeys": [
       { "key": "g s", "route": "/session", "label": "Go to Session" },
       { "key": "g t", "route": "/tracks", "label": "Go to Tracks" },
+      { "key": "g c", "route": "/collab", "label": "Go to Collaborators" },
       { "key": "g p", "route": "/collab/splits", "label": "Go to Splits" },
       { "key": "g r", "route": "/rooms", "label": "Go to Rooms" },
       { "key": "space", "action": "toggle-playback", "label": "Toggle Playback" }
@@ -123,11 +124,11 @@
   },
   "dependencies": {
     "archetypes": {
-      "music-workspace": ">=2.0.0",
-      "track-library": ">=2.0.0",
-      "collaboration-hub": ">=2.0.0",
-      "session-rooms": ">=2.0.0",
-      "marketing-producer": ">=2.0.0",
+      "music-workspace": ">=2.1.0",
+      "track-library": ">=2.1.0",
+      "collaboration-hub": ">=2.1.0",
+      "session-rooms": ">=2.1.0",
+      "marketing-producer": ">=2.1.0",
       "auth-full": ">=1.0.0",
       "settings-full": ">=1.0.0"
     },
@@ -135,10 +136,10 @@
       "daw-transport-bar": ">=1.0.0",
       "arrangement-canvas": ">=1.0.0",
       "mixer-console": ">=1.0.0",
-      "session-inspector": ">=1.0.0",
-      "stem-browser": ">=1.0.0",
+      "session-inspector": ">=1.1.0",
+      "stem-browser": ">=1.1.0",
       "producer-split-workbench": ">=1.0.0",
-      "live-room-stage": ">=1.0.0"
+      "live-room-stage": ">=1.1.0"
     }
   },
   "suggested_themes": ["studio-dark", "carbon-neon", "neon-cyber", "terminal"]
