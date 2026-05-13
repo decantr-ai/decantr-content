@@ -2,7 +2,7 @@
 
 Official content for the Decantr design intelligence registry. This repo is the source of truth for all `@official` namespace content served by `api.decantr.ai`.
 
-This content enriches registry-backed blueprint, archetype, pattern, theme, and shell flows. It is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis and generated contract files without connecting to the official registry. Offline blueprint/theme enrichment can point the CLI at a local checkout of this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
+This content enriches registry-backed blueprint, archetype, pattern, theme, and shell flows. It is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis and generated contract files without connecting to the official registry. Brownfield project-owned pattern packs created by `decantr codify` live in the app repo under `.decantr/local-patterns.json`; they are intentionally separate from this official registry corpus. Offline blueprint/theme enrichment can point the CLI at a local checkout of this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
 
 Join the [Decantr Discord](https://discord.gg/WeDpBd4xFU) for quick setup help, showcase feedback, and live content discussion. GitHub issues and PRs remain the canonical path for bugs, feature requests, and proposed registry content changes.
 
@@ -36,6 +36,7 @@ npm run schemas:sync                                                            
 npm run validate                                                                 # validate every JSON file against the schemas
 npm run registry:v2-certify                                                      # prove active blueprints compile to Essence v4
 npm run content:health                                                           # local content health report, fails only on blocking errors
+npx @decantr/cli content check                                                    # same Content Health workflow through the 2.7 CLI namespace
 npm run content:health:json && npm run content:health:suppressions                # fail if a warning is new or no longer intentionally suppressed
 npm run registry:audit -- --report-json=./registry-drift-report.json             # read-only diff against the live registry
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
@@ -50,6 +51,7 @@ Use Content Health when you want a repo-local quality report before opening or m
 ```bash
 npm run content:health
 npm run content:health:json
+npx @decantr/cli content check
 ```
 
 What it reports:
