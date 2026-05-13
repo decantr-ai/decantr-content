@@ -159,6 +159,14 @@
       "card-grid": "content"
     }
   },
+  "decorators": {
+    "recipefork-surface": "Clean recipe product canvas with soft slate text, white surfaces, and quiet dark mode support.",
+    "recipefork-nav": "Blurred utility navigation with compact controls and a restrained border.",
+    "recipefork-card": "Subtle bordered card with light hover lift and no heavy shadow.",
+    "recipefork-input": "shadcn-style input control with clear focus ring and muted placeholder styling.",
+    "recipefork-photo": "Large image presentation surface with soft overlay gradient for food photography.",
+    "recipefork-editor": "Quiet rich-text editor treatment with dashed border and soft accent background."
+  },
   "decorator_definitions": {
     "recipefork-surface": {
       "description": "Clean recipe product canvas with soft slate text, white surfaces, and quiet dark mode support.",
