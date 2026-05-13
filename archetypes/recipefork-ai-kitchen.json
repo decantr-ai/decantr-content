@@ -40,19 +40,13 @@
       "id": "chat",
       "patterns": [
         {
-          "pattern": "chat-thread",
+          "pattern": "recipefork-kitchen-chat",
           "preset": "standard",
-          "as": "kitchen-thread"
-        },
-        {
-          "pattern": "chat-input",
-          "preset": "standard",
-          "as": "kitchen-input"
+          "as": "kitchen-chat"
         }
       ],
       "default_layout": [
-        "kitchen-thread",
-        "kitchen-input"
+        "kitchen-chat"
       ],
       "shell": "recipefork-top-nav"
     },
@@ -60,19 +54,13 @@
       "id": "generate",
       "patterns": [
         {
-          "pattern": "content-uploader",
-          "preset": "single",
-          "as": "photo-upload"
-        },
-        {
-          "pattern": "detail-header",
-          "preset": "standard",
-          "as": "generated-recipe-preview"
+          "pattern": "recipefork-photo-generator",
+          "preset": "split",
+          "as": "photo-generator"
         }
       ],
       "default_layout": [
-        "photo-upload",
-        "generated-recipe-preview"
+        "photo-generator"
       ],
       "shell": "recipefork-top-nav"
     }
@@ -89,10 +77,8 @@
   ],
   "dependencies": {
     "patterns": {
-      "chat-thread": ">=1.0.0",
-      "chat-input": ">=1.0.0",
-      "content-uploader": ">=1.0.0",
-      "detail-header": ">=1.0.0"
+      "recipefork-kitchen-chat": ">=1.0.0",
+      "recipefork-photo-generator": ">=1.0.0"
     },
     "styles": {}
   },
