@@ -49,8 +49,8 @@
           "as": "feed-filters"
         },
         {
-          "pattern": "card-grid",
-          "preset": "content",
+          "pattern": "recipefork-recipe-card",
+          "preset": "feed",
           "as": "recipe-grid"
         },
         {
@@ -83,7 +83,7 @@
   "dependencies": {
     "patterns": {
       "filter-bar": ">=1.0.0",
-      "card-grid": ">=1.0.0",
+      "recipefork-recipe-card": ">=1.0.0",
       "recipefork-activity-feed": ">=1.0.0"
     },
     "styles": {}

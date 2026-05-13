@@ -140,6 +140,9 @@
       "chat-thread",
       "chat-input",
       "content-uploader",
+      "recipefork-kitchen-chat",
+      "recipefork-photo-generator",
+      "recipefork-recipe-card",
       "detail-header",
       "card-grid"
     ],
@@ -149,6 +152,9 @@
     ],
     "default_presets": {
       "content-uploader": "single",
+      "recipefork-kitchen-chat": "standard",
+      "recipefork-photo-generator": "split",
+      "recipefork-recipe-card": "feed",
       "detail-header": "standard",
       "card-grid": "content"
     }
