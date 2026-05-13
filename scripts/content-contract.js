@@ -31,7 +31,7 @@ export const SCHEMA_FILES = {
   shells: 'shell.v1.json',
 };
 
-export const IGNORED_LOCAL_CONTENT_PREFIXES = ['recipefork'];
+export const IGNORED_LOCAL_CONTENT_PREFIXES = [];
 
 export function isIgnoredLocalContentFile(fileName) {
   return IGNORED_LOCAL_CONTENT_PREFIXES.some((prefix) => fileName.startsWith(prefix));

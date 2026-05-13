@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-kitchen-chat",
   "version": "1.0.0",
-  "decantr_compat": ">=2.6.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Kitchen Chat",
   "description": "AI cooking assistant chat for RecipeFork-style apps. Covers persistent conversation history, recipe-aware responses, ingredient constraints, image references, and save/fork actions from assistant output.",
   "tags": [

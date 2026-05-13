@@ -79,7 +79,7 @@ Run the V2 certification gate before release-sensitive content changes:
 npm run registry:v2-certify
 ```
 
-The certifier builds Essence V4 candidates from every active blueprint and its composed archetypes, resolves inherited shells to concrete blueprint route shells, validates against [`schemas/essence.v4.json`](./schemas/essence.v4.json), and writes local report artifacts. Files ignored by the publish pipeline, such as `recipefork*` local content, are reported as ignored rather than certified.
+The certifier builds Essence V4 candidates from every active blueprint and its composed archetypes, resolves inherited shells to concrete blueprint route shells, validates against [`schemas/essence.v4.json`](./schemas/essence.v4.json), and writes local report artifacts. Files ignored by the publish pipeline are reported as ignored rather than certified; currently all first-party content in this repo is eligible for certification and publish.
 
 ## Auditing Live Registry Drift
 

@@ -2,7 +2,7 @@
   "$schema": "https://decantr.ai/schemas/pattern.v2.json",
   "id": "recipefork-photo-generator",
   "version": "1.0.0",
-  "decantr_compat": ">=2.6.0",
+  "decantr_compat": ">=2.0.0",
   "name": "Recipefork Photo Generator",
   "description": "Photo-to-recipe generation surface for AI food apps. Combines image upload/drop zone, preview, prompt/context controls, generation status, and generated recipe result panel.",
   "tags": [
