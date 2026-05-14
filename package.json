@@ -22,7 +22,7 @@
     "validate": "node validate.js"
   },
   "devDependencies": {
-    "@decantr/cli": "2.4.1",
+    "@decantr/cli": "2.9.0",
     "ajv": "^8.17.1"
   },
   "dependencies": {
