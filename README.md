@@ -36,7 +36,7 @@ npm run schemas:sync                                                            
 npm run validate                                                                 # validate every JSON file against the schemas
 npm run registry:v2-certify                                                      # prove active blueprints compile to Essence v4
 npm run content:health                                                           # local content health report, fails only on blocking errors
-npx @decantr/cli content check                                                    # same Content Health workflow through the 2.7 CLI namespace
+npx @decantr/cli content check                                                    # same Content Health workflow through the current CLI namespace
 npm run content:health:json && npm run content:health:suppressions                # fail if a warning is new or no longer intentionally suppressed
 npm run registry:audit -- --report-json=./registry-drift-report.json             # read-only diff against the live registry
 node scripts/audit-content-intelligence.js --report-json=./content-intelligence-report.json
@@ -61,9 +61,9 @@ What it reports:
 - missing softer archetype layout or suggested-theme references that maintainers can triage over time
 - content guidance coverage for patterns, themes, blueprints, and archetypes
 
-The CI gate uses `--fail-on error`, so existing warning-level reference drift stays visible in the GitHub summary without blocking unrelated content fixes. Use a finding's prompt command, such as `decantr content-health --prompt <finding-id>`, to produce a scoped remediation prompt for an AI coding assistant.
+The CI gate uses `--fail-on error`, so existing warning-level reference drift stays visible in the GitHub summary without blocking unrelated content fixes. Use a finding's prompt command, such as `decantr content check --prompt <finding-id>`, to produce a scoped remediation prompt for an AI coding assistant.
 
-This repo tracks the current Decantr 2.x CLI and telemetry package versions so Content Health, registry certification, and publish telemetry stay aligned with the monorepo reliability layer. When Decantr adds or changes public schemas, run `npm run schemas:sync` from this repo and commit the vendored schema copies with the content change.
+This repo tracks the current Decantr 2.x CLI and telemetry package versions so Content Health, registry certification, and publish telemetry stay aligned with the monorepo reliability layer. Content Health is the content-author lane; app/workspace commands such as `decantr doctor` and `decantr ci` belong in end-user app repos, not this official content corpus. When Decantr adds or changes public schemas, run `npm run schemas:sync` from this repo and commit the vendored schema copies with the content change.
 
 Warning-level debt is also tracked in [`content-health-suppressions.json`](./content-health-suppressions.json). New Content Health warning IDs fail CI until they are fixed or deliberately added to that baseline with a rationale. Stale suppressions fail too, so the baseline shrinks as content quality improves.
 

@@ -17,6 +17,8 @@ npm run content:health
 
 `npm run validate`, `npm run registry:v2-certify`, and `npm run content:health` run offline and require no credentials. They are the core checks CI runs on every PR.
 
+This repo uses Decantr as a content-author workflow, not as an app Brownfield attach target. Use `npm run content:health` or `decantr content check` here. Use app/workspace commands such as `decantr doctor`, `decantr task`, `decantr verify`, and `decantr ci` in the downstream application repositories that consume this registry content.
+
 For quick setup help, showcase feedback, or live discussion about content ideas, join the [Decantr Discord](https://discord.gg/WeDpBd4xFU). Keep proposed registry content changes, bugs, and durable decisions in GitHub issues, PRs, or docs.
 
 ## Content types
