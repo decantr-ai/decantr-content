@@ -44,6 +44,21 @@ node scripts/audit-content-intelligence.js --report-json=./content-intelligence-
 
 External contributors can verify their changes with `npm run validate` and the read-only audit scripts. Registry publishing is handled by Decantr maintainers.
 
+## Release Stewardship
+
+This repo does not publish an npm package. Its maintainer release lane is registry readiness plus Decantr CLI alignment:
+
+```bash
+npm run validate
+npm run registry:v2-certify
+npm run content:health:json
+npm run content:health:suppressions
+npm run registry:audit -- --report-json=./registry-drift-report.json --summary-markdown=./registry-drift-summary.md
+npm run release:closeout
+```
+
+`npm run release:closeout` checks that the repo is clean, `@decantr/cli` and `@decantr/telemetry` are exact-pinned, the lockfile matches those pins, the expected schema copies exist, and a sibling `decantr-monorepo` checkout uses the same CLI version when present. Live registry sync remains an explicit maintainer workflow; run the `Publish to Registry` workflow in dry-run mode before any non-dry-run sync or prune.
+
 ## Auditing Content Health
 
 Use Content Health when you want a repo-local quality report before opening or merging a content PR:

@@ -18,11 +18,13 @@
     "registry:audit": "node scripts/audit-registry-drift.js",
     "registry:v2-certify": "node scripts/certify-registry-v2.js --report-json=registry-v2-certification-report.json --summary-markdown=registry-v2-certification-summary.md",
     "registry:sync": "node scripts/sync-to-registry.js",
+    "release:closeout": "node scripts/audit-release-closeout.js",
+    "release:closeout:json": "node scripts/audit-release-closeout.js --json",
     "schemas:sync": "node scripts/sync-schemas-from-monorepo.js",
     "validate": "node validate.js"
   },
   "devDependencies": {
-    "@decantr/cli": "2.9.0",
+    "@decantr/cli": "2.9.6",
     "ajv": "^8.17.1"
   },
   "dependencies": {
