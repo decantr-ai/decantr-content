@@ -1,8 +1,10 @@
 # Contributing to decantr-content
 
-Thanks for helping grow the Decantr design intelligence registry.
+Thanks for helping grow Decantr's official certified vocabulary.
 
-This repo is the source of truth for `@official` namespace content. Every JSON file here is the input that the AI reads when scaffolding a Decantr-powered project — small wording or schema changes meaningfully change what gets generated.
+This repo is the source of truth for `@official` namespace content: patterns, themes, shells, archetypes, and starter-kit blueprints that can enrich Decantr contracts and agent context. Decantr itself is AI Frontend Governance for codebases touched by AI agents; this content corpus feeds the Contract / Context / Evidence loop, but it is not the product center, a UI framework, a component library, or a registry marketplace.
+
+Every JSON file here can influence what an agent sees when a project opts into official vocabulary, so small wording or schema changes matter. Brownfield app repos can also adopt Decantr without this corpus by using project-owned contracts, local law, style bridges, typed graph artifacts, Project Health, and evidence generated from the app itself.
 
 ## Quick start
 
@@ -18,11 +20,11 @@ npm run release:closeout
 
 `npm run validate`, `npm run registry:v2-certify`, and `npm run content:health` run offline and require no credentials. They are the core checks CI runs on every PR.
 
-`npm run release:closeout` is the maintainer closeout gate. It checks exact Decantr package pins, lockfile alignment, vendored schema presence, local git cleanliness, and optional sibling monorepo CLI parity before registry publish work is called complete.
+`npm run release:closeout` is the maintainer closeout gate. It checks exact Decantr package pins, lockfile alignment, vendored schema presence, local git cleanliness, and optional sibling monorepo CLI parity before registry publish work is called complete. During a Decantr `next` cut, keep the pins on published packages until the prerelease exists on npm, then move the pins and rerun closeout as part of the content release lane.
 
-This repo uses Decantr as a content-author workflow, not as an app Brownfield attach target. Use `npm run content:health` or `decantr content check` here. Use app/workspace commands such as `decantr doctor`, `decantr task`, `decantr verify`, and `decantr ci` in the downstream application repositories that consume this registry content.
+This repo uses Decantr as a content-author workflow, not as an app Brownfield attach target. Use `npm run content:health` or `decantr content check` here. Use app/workspace commands such as `decantr doctor`, `decantr task`, `decantr verify`, and `decantr ci` in downstream application repositories that consume Decantr or official vocabulary.
 
-For quick setup help, showcase feedback, or live discussion about content ideas, join the [Decantr Discord](https://discord.gg/WeDpBd4xFU). Keep proposed registry content changes, bugs, and durable decisions in GitHub issues, PRs, or docs.
+For quick setup help, showcase feedback, or live discussion about content ideas, join the [Decantr Discord](https://discord.gg/WeDpBd4xFU). Keep proposed content changes, bugs, and durable decisions in GitHub issues, PRs, or docs.
 
 ## Content types
 
@@ -59,8 +61,9 @@ CI passes on schema validity, but the validator also emits warnings. Items that 
 
 1. Pick the right directory and copy the closest existing file as a starting point — schemas are easier to mimic than to read cold.
 2. Edit the JSON. Keep ids unique, run `npm run validate` and `npm run content:health` until blocking errors are clean.
-3. Open a PR. The CI workflow (`Audit Registry Drift`) will diff your changes against the live registry and post a summary comment.
-4. A maintainer reviews and merges. The `Publish to Registry` workflow auto-syncs `main` to `api.decantr.ai`.
+3. Open a PR. CI validates the content and the `Audit Registry Drift` workflow can diff your changes against the live registry.
+4. A maintainer reviews and merges. Merging to `main` validates the repo source of truth; it does not publish by itself.
+5. Maintainers run the `Publish to Registry` workflow only when they intend to sync live content. Manual dispatch defaults to dry-run, and a live sync requires an explicit non-dry-run dispatch with scoped credentials.
 
 ## Editing existing content
 

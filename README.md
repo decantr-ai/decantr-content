@@ -1,17 +1,17 @@
 # Decantr Content
 
-Official content for the Decantr design intelligence registry. This repo is the source of truth for all `@official` namespace content served by `api.decantr.ai`.
+Official certified vocabulary for Decantr. This repo is the source of truth for all `@official` namespace patterns, themes, shells, archetypes, and starter-kit blueprints served by `api.decantr.ai`.
 
-This content enriches registry-backed blueprint, archetype, pattern, theme, and shell flows. It is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis and generated contract files without connecting to the official registry. Brownfield project-owned local law created by `decantr codify --from-audit` lives in the app repo under `.decantr/local-patterns.json` and `.decantr/rules.json`; it is intentionally separate from this official registry corpus. Offline blueprint/theme enrichment can point the CLI at a local checkout of this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
+This content enriches vocabulary-backed starter-kit, archetype, pattern, theme, and shell flows. It is not the Decantr product center and it is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis, typed contracts, Project Health, and generated graph/context files without connecting to the official vocabulary service. Brownfield project-owned local law created by `decantr codify --from-audit` lives in the app repo under `.decantr/local-patterns.json` and `.decantr/rules.json`; it is intentionally separate from this official corpus. Offline starter-kit/theme enrichment can point the CLI at a local checkout of this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
 
 Join the [Decantr Discord](https://discord.gg/WeDpBd4xFU) for quick setup help, showcase feedback, and live content discussion. GitHub issues and PRs remain the canonical path for bugs, feature requests, and proposed registry content changes.
 
 ## Structure
 
 ```
-patterns/       — UI section components (hero, kpi-grid, chat-thread, etc.)
+patterns/       — Certified UI vocabulary (hero, kpi-grid, chat-thread, etc.)
 themes/         — Color palettes, modes, treatment metadata, and DNA-inference hints
-blueprints/     — Complete app compositions (saas-dashboard, etc.)
+blueprints/     — Starter-kit app compositions (saas-dashboard, etc.)
 archetypes/     — App-level templates (ai-chatbot, saas-dashboard, etc.)
 shells/         — Page layout containers (sidebar-main, topbar-main, etc.)
 ```
@@ -57,7 +57,7 @@ npm run registry:audit -- --report-json=./registry-drift-report.json --summary-m
 npm run release:closeout
 ```
 
-`npm run release:closeout` checks that the repo is clean, `@decantr/cli` and `@decantr/telemetry` are exact-pinned, the lockfile matches those pins, the expected schema copies exist, and a sibling `decantr-monorepo` checkout uses the same CLI version when present. Live registry sync remains an explicit maintainer workflow; run the `Publish to Registry` workflow in dry-run mode before any non-dry-run sync or prune.
+`npm run release:closeout` checks that the repo is clean, `@decantr/cli` and `@decantr/telemetry` are exact-pinned, the lockfile matches those pins, the expected schema copies exist, and a sibling `decantr-monorepo` checkout uses the same CLI version when present. During the Decantr 3 prerelease cut, this repo should stay pinned to the latest published 2.x packages until `3.0.0-next.x` exists on npm; move the pins and rerun closeout only after that publish is intentional. Live registry sync remains an explicit maintainer workflow; run the `Publish to Registry` workflow in dry-run mode before any non-dry-run sync or prune.
 
 ## Auditing Content Health
 
@@ -78,7 +78,7 @@ What it reports:
 
 The CI gate uses `--fail-on error`, so existing warning-level reference drift stays visible in the GitHub summary without blocking unrelated content fixes. Use a finding's prompt command, such as `decantr content check --prompt <finding-id>`, to produce a scoped remediation prompt for an AI coding assistant.
 
-This repo tracks the current Decantr 2.x CLI and telemetry package versions so Content Health, registry certification, and publish telemetry stay aligned with the monorepo reliability layer. Content Health is the content-author lane; app/workspace commands such as `decantr doctor` and `decantr ci` belong in end-user app repos, not this official content corpus. When Decantr adds or changes public schemas, run `npm run schemas:sync` from this repo and commit the vendored schema copies with the content change.
+This repo tracks the current published Decantr CLI and telemetry package versions so Content Health, registry certification, and publish telemetry stay aligned with the monorepo reliability layer. The Decantr 3 content branch can update docs and vocabulary language before package pins move, but the package pins should not point at unpublished `next` versions. Content Health is the content-author lane; app/workspace commands such as `decantr doctor` and `decantr ci` belong in end-user app repos, not this official content corpus. When Decantr adds or changes public schemas, run `npm run schemas:sync` from this repo and commit the vendored schema copies with the content change.
 
 Warning-level debt is also tracked in [`content-health-suppressions.json`](./content-health-suppressions.json). New Content Health warning IDs fail CI until they are fixed or deliberately added to that baseline with a rationale. Stale suppressions fail too, so the baseline shrinks as content quality improves.
 
