@@ -20,6 +20,16 @@ on:
         required: false
         default: false
         type: boolean
+      content_certification_tier:
+        description: "Content tier to sync: enterprise, demo, experimental, or all"
+        required: false
+        default: "enterprise"
+        type: choice
+        options:
+          - enterprise
+          - demo
+          - experimental
+          - all
 
 jobs:
   validate:
@@ -55,6 +65,7 @@ jobs:
           DECANTR_CONTENT_PRUNE_TOKEN: ${{ secrets.DECANTR_CONTENT_PRUNE_TOKEN }}
           DECANTR_ADMIN_KEY: ${{ secrets.DECANTR_ADMIN_KEY }}
           REGISTRY_URL: ${{ vars.REGISTRY_URL || 'https://api.decantr.ai/v1' }}
+          CONTENT_CERTIFICATION_TIER: ${{ inputs.content_certification_tier }}
           DRY_RUN: ${{ inputs.dry_run }}
           PRUNE_MISSING: ${{ inputs.prune_missing }}
           CONFIRM_PRUNE: ${{ inputs.confirm_prune }}

@@ -24,7 +24,7 @@ CI checks every content file with `node validate.js`, runs Decantr Content Healt
 
 Every active blueprint must include `blueprint_portfolio` metadata. Public registry users only see the simple sets: `All`, `Featured`, `Certified`, and opt-in `Labs`. Maintainer-only maturity labels can fold overlapping legacy slugs out of browse/search while keeping those slugs directly addressable for compatibility.
 
-Registry sync is a separate maintainer-controlled step through the `Publish to Registry` workflow. Manual dispatch defaults to `dry_run: true`; a live sync requires an explicit non-dry-run dispatch with scoped registry credentials. Stale live-content pruning is opt-in through `prune_missing` / `PRUNE_MISSING=true` and should only run after reviewing a dry-run report.
+Registry sync is a separate maintainer-controlled step through the `Publish to Registry` workflow. Manual dispatch defaults to `dry_run: true` and `content_certification_tier: enterprise`; a live sync requires an explicit non-dry-run dispatch with scoped registry credentials. Use `content_certification_tier: all` only when demo or experimental content is intentionally part of the sync. Stale live-content pruning is opt-in through `prune_missing` / `PRUNE_MISSING=true` and should only run after reviewing a dry-run report.
 
 ## Local Development
 
