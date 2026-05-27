@@ -57,7 +57,7 @@ npm run registry:audit -- --report-json=./registry-drift-report.json --summary-m
 npm run release:closeout
 ```
 
-`npm run release:closeout` checks that the repo is clean, `@decantr/cli` and `@decantr/telemetry` are exact-pinned, the lockfile matches those pins, the expected schema copies exist, and a sibling `decantr-monorepo` checkout uses the same CLI version when present. During the Decantr 3 prerelease cut, this repo should stay pinned to the latest published 2.x packages until `3.0.0-next.x` exists on npm; move the pins and rerun closeout only after that publish is intentional. Live registry sync remains an explicit maintainer workflow; run the `Publish to Registry` workflow in dry-run mode before any non-dry-run sync or prune.
+`npm run release:closeout` checks that the repo is clean, `@decantr/cli` and `@decantr/telemetry` are exact-pinned, the lockfile matches those pins, the expected schema copies exist, and a sibling `decantr-monorepo` checkout uses the same CLI version when present. This repo should stay pinned to the current published Decantr stable line so Content Health and registry certification exercise the same public CLI users install. Live registry sync remains an explicit maintainer workflow; run the `Publish to Registry` workflow in dry-run mode before any non-dry-run sync or prune.
 
 ## Auditing Content Health
 
