@@ -6,6 +6,8 @@ This repo is the source of truth for `@official` namespace content: patterns, th
 
 Every JSON file here can influence what an agent sees when a project opts into official vocabulary, so small wording or schema changes matter. Brownfield app repos can also adopt Decantr without this corpus by using project-owned contracts, local law, style bridges, typed graph artifacts, Project Health, and evidence generated from the app itself.
 
+Project-specific `behavior_obligations` are intentionally not part of the official content schemas in v1. Content authors should use the existing accessibility, responsive, motion, composition, component, and preset fields for reusable guidance. Downstream apps own their accepted behavior obligations in `.decantr/local-patterns.json`, where Decantr can surface them through task context, graph LocalRule nodes, Project Health, and repair prompts.
+
 ## Quick start
 
 ```bash
@@ -89,6 +91,7 @@ The V2 certifier proves active blueprints compile to Essence `4.0.0`; the suppre
 - New top-level directories or new content types — those require a maintainer-coordinated schema change first.
 - Edits to `schemas/` directly. Those are vendored from the canonical Decantr schema sources by maintainers.
 - Changes to `validate.js` that loosen the contract — tighten freely, loosen only with a maintainer-led discussion.
+- New `behavior_obligations` fields in registry JSON. Keep those app-local unless a future maintainer-led schema change explicitly promotes them.
 
 ## Code of conduct
 

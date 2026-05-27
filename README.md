@@ -2,7 +2,7 @@
 
 Official certified vocabulary for Decantr. This repo is the source of truth for all `@official` namespace patterns, themes, shells, archetypes, and starter-kit blueprints served by `api.decantr.ai`.
 
-This content enriches vocabulary-backed starter-kit, archetype, pattern, theme, and shell flows. It is not the Decantr product center and it is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis, typed contracts, Project Health, and generated graph/context files without connecting to the official vocabulary service. Brownfield project-owned local law created by `decantr codify --from-audit` lives in the app repo under `.decantr/local-patterns.json` and `.decantr/rules.json`; it is intentionally separate from this official corpus. Offline starter-kit/theme enrichment can point the CLI at a local checkout of this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
+This content enriches vocabulary-backed starter-kit, archetype, pattern, theme, and shell flows. It is not the Decantr product center and it is not required for brownfield attach or contract-only Decantr adoption: those CLI paths can run from local project analysis, typed contracts, Project Health, and generated graph/context files without connecting to the official vocabulary service. Brownfield project-owned local law created by `decantr codify --from-audit` lives in the app repo under `.decantr/local-patterns.json` and `.decantr/rules.json`; it is intentionally separate from this official corpus. Official patterns may include accessibility and interaction guidance through existing schema fields, but project-specific `behavior_obligations` remain app-local law in consuming repositories and are not a `decantr-content` schema field in v1. Offline starter-kit/theme enrichment can point the CLI at a local checkout of this repo with `DECANTR_CONTENT_DIR=/path/to/decantr-content` or use an equivalent local cache/custom content source.
 
 Join the [Decantr Discord](https://discord.gg/WeDpBd4xFU) for quick setup help, showcase feedback, and live content discussion. GitHub issues and PRs remain the canonical path for bugs, feature requests, and proposed registry content changes.
 
@@ -157,6 +157,8 @@ This repo keeps vendored copies of the canonical registry schemas in [`schemas/`
 `validate.js` enforces both the expected `$schema` URL and the local schema contract for each content type.
 
 Themes include DNA-inference hints (`typography_hints`, `motion_hints`, `radius_hints`) used by the CLI to generate Essence v4 defaults during `decantr init`.
+
+Project-specific behavior obligations are deliberately not part of these content schemas. Use existing pattern accessibility, responsive, motion, composition, and voice fields for official guidance. Consuming apps can accept their own `.decantr/local-patterns.json` `behavior_obligations` when local source evidence supports form-control or confirmation-dialog obligations.
 
 Legacy note:
 - recipe metadata has been folded into themes and treatment-related fields
